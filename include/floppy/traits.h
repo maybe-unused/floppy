@@ -79,7 +79,7 @@ namespace floppy::traits
   template <typename T>
   struct singleton : public pin<T>
   {
-    /// \brief Returns \i mutable \i pointer to the singleton instance.
+    /// \brief Returns <i>mutable pointer</i> to the singleton instance.
     /// \return Mutable pointer to the singleton instance.
     /// \see ptr
     [[nodiscard]] static auto ptr_mut() noexcept -> T* {
@@ -87,17 +87,17 @@ namespace floppy::traits
       return &instance;
     }
 
-    /// \brief Returns \i pointer to the singleton instance.
+    /// \brief Returns <i>pointer</i> to the singleton instance.
     /// \return Pointer to the singleton instance.
     /// \see ptr_mut
     [[nodiscard]] static inline auto ptr() noexcept -> T const* { return ptr_mut(); }
 
-    /// \brief Returns \i constant \i reference to the singleton instance.
+    /// \brief Returns <i>constant reference</i> to the singleton instance.
     /// \return Constant reference to the singleton instance.
     /// \see ref_mut
     [[nodiscard]] static inline auto ref() noexcept -> T const& { return *ptr(); }
 
-    /// \brief Returns \i mutable \i reference to the singleton instance.
+    /// \brief Returns <i>mutable reference</i> to the singleton instance.
     /// \return Mutable reference to the singleton instance.
     /// \see ref
     [[nodiscard]] static inline auto ref_mut() noexcept -> T& { return *ptr_mut(); }
