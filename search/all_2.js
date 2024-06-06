@@ -10,6 +10,7 @@ var searchData=
   ['compaq_7',['compaq',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939ea16ad5892d13a0b7c9220684e52a548b1',1,'floppy::platform']]],
   ['compiler_8',['compiler',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939e',1,'floppy::platform']]],
   ['convex_9',['convex',['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5ab9e9dd1fa31d98cf8eb1b96e735550ba',1,'floppy::platform']]],
-  ['cuda_10',['cuda',['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5a39466fe22b062a34cfe09f3cc8c24868',1,'floppy::platform']]],
-  ['cygwin_11',['cygwin',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663ab8a4b4dbf3ef27d58f49352e3110161d',1,'floppy::platform']]]
+  ['critical_5fmessage_10',['critical_message',['../d8/de5/namespacefloppy_1_1print__helpers.html#abdcc54d31693c73090e4e02f31872ebd',1,'floppy::print_helpers']]],
+  ['cuda_11',['cuda',['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5a39466fe22b062a34cfe09f3cc8c24868',1,'floppy::platform']]],
+  ['cygwin_12',['cygwin',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663ab8a4b4dbf3ef27d58f49352e3110161d',1,'floppy::platform']]]
 ];

@@ -5,6 +5,8 @@ var searchData=
   ['floppy_3a_3aliterals_2',['literals',['../d4/dc3/namespacefloppy_1_1literals.html',1,'floppy']]],
   ['floppy_3a_3ameta_3',['meta',['../db/d67/namespacefloppy_1_1meta.html',1,'floppy']]],
   ['floppy_3a_3aplatform_4',['platform',['../dd/d95/namespacefloppy_1_1platform.html',1,'floppy']]],
-  ['floppy_3a_3aranges_5',['ranges',['../df/dd6/namespacefloppy_1_1ranges.html',1,'floppy']]],
-  ['floppy_3a_3atypes_6',['types',['../dd/d72/namespacefloppy_1_1types.html',1,'floppy']]]
+  ['floppy_3a_3aprint_5fhelpers_5',['print_helpers',['../d8/de5/namespacefloppy_1_1print__helpers.html',1,'floppy']]],
+  ['floppy_3a_3aranges_6',['ranges',['../df/dd6/namespacefloppy_1_1ranges.html',1,'floppy']]],
+  ['floppy_3a_3artti_7',['rtti',['../dc/d09/namespacefloppy_1_1rtti.html',1,'floppy']]],
+  ['floppy_3a_3atypes_8',['types',['../dd/d72/namespacefloppy_1_1types.html',1,'floppy']]]
 ];

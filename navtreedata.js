@@ -25,10 +25,8 @@
 var NAVTREE =
 [
   [ "Floppy", "index.html", [
+    [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
-      [ "Changelog", "index.html#autotoc_md1", null ],
-      [ "Dependencies", "index.html#autotoc_md2", null ],
-      [ "Licensing", "index.html#autotoc_md3", null ],
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],

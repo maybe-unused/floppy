@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unreachable_0',['unreachable',['../d3/d05/namespacefloppy.html#abb16b244632f4ab5f6fd117e5a75473e',1,'floppy']]]
+  ['operator_3c_3c_0',['operator&lt;&lt;',['../d3/d05/namespacefloppy.html#addcab788066267803ed3875e35a0042f',1,'floppy']]]
 ];

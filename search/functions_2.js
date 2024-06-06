@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['file_5fname_0',['file_name',['../d5/d44/structfloppy_1_1source__location.html#a8f1c9c6c6060cef15dda6a2ef11384d2',1,'floppy::source_location']]],
-  ['function_5fname_1',['function_name',['../d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644',1,'floppy::source_location']]]
+  ['demangle_0',['demangle',['../dc/d09/namespacefloppy_1_1rtti.html#a08fd2a4a9646fdfd50c5b45102ba8a24',1,'floppy::rtti']]]
 ];

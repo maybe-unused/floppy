@@ -126,7 +126,11 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:dd/d95/namespacefloppy_1_1platform" id="r_dd/d95/namespacefloppy_1_1platform"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d95/namespacefloppy_1_1platform.html">platform</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/de5/namespacefloppy_1_1print__helpers" id="r_d8/de5/namespacefloppy_1_1print__helpers"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/namespacefloppy_1_1print__helpers.html">print_helpers</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:df/dd6/namespacefloppy_1_1ranges" id="r_df/dd6/namespacefloppy_1_1ranges"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd6/namespacefloppy_1_1ranges.html">ranges</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d09/namespacefloppy_1_1rtti" id="r_dc/d09/namespacefloppy_1_1rtti"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d09/namespacefloppy_1_1rtti.html">rtti</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:dd/d72/namespacefloppy_1_1types" id="r_dd/d72/namespacefloppy_1_1types"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html">types</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,6 +192,29 @@ Functions</h2></td></tr>
 <tr class="memitem:addcab788066267803ed3875e35a0042f" id="r_addcab788066267803ed3875e35a0042f"><td class="memTemplParams" colspan="2">template&lt;class E , class T &gt; </td></tr>
 <tr class="memitem:addcab788066267803ed3875e35a0042f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#addcab788066267803ed3875e35a0042f">operator&lt;&lt;</a> (std::basic_ostream&lt; E, T &gt; &amp;os, <a class="el" href="../../d5/d44/structfloppy_1_1source__location.html">source_location</a> const &amp;loc) -&gt; std::basic_ostream&lt; E, T &gt; &amp;</td></tr>
 <tr class="separator:addcab788066267803ed3875e35a0042f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a778dde2b29125b63c1101d454f3e76" id="r_a6a778dde2b29125b63c1101d454f3e76"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a778dde2b29125b63c1101d454f3e76">panic</a> (std::string_view message, <a class="el" href="../../d5/d44/structfloppy_1_1source__location.html">source_location</a> location=source_location::current()) -&gt; void</td></tr>
+<tr class="separator:a6a778dde2b29125b63c1101d454f3e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bbd17556e1675c4a05316d9f6743342" id="r_a0bbd17556e1675c4a05316d9f6743342"><td class="memTemplParams" colspan="2">template&lt;concepts::num T, concepts::num U&gt; </td></tr>
+<tr class="memitem:a0bbd17556e1675c4a05316d9f6743342"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0bbd17556e1675c4a05316d9f6743342">narrow_cast</a> (U &amp;&amp;u) noexcept -&gt; T</td></tr>
+<tr class="separator:a0bbd17556e1675c4a05316d9f6743342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcdfac7e6f7b9774e157db98c0d635c9" id="r_afcdfac7e6f7b9774e157db98c0d635c9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afcdfac7e6f7b9774e157db98c0d635c9"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afcdfac7e6f7b9774e157db98c0d635c9">eq</a> (T a, T b) -&gt; bool</td></tr>
+<tr class="separator:afcdfac7e6f7b9774e157db98c0d635c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f562bcefd717de48a0deaa80f9776a" id="r_a66f562bcefd717de48a0deaa80f9776a"><td class="memTemplParams" colspan="2">template&lt;concepts::num T&gt; </td></tr>
+<tr class="memitem:a66f562bcefd717de48a0deaa80f9776a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a66f562bcefd717de48a0deaa80f9776a">null</a> (T num) -&gt; bool</td></tr>
+<tr class="separator:a66f562bcefd717de48a0deaa80f9776a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa722c8b624bbd64c4cbdd47bfd285c5d" id="r_aa722c8b624bbd64c4cbdd47bfd285c5d"><td class="memTemplParams" colspan="2">template&lt;concepts::num T&gt; </td></tr>
+<tr class="memitem:aa722c8b624bbd64c4cbdd47bfd285c5d"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa722c8b624bbd64c4cbdd47bfd285c5d">to_radians</a> (T deg) -&gt; T</td></tr>
+<tr class="separator:aa722c8b624bbd64c4cbdd47bfd285c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b111b7ea138d5c9b5e0a2aaaf8e98d" id="r_af2b111b7ea138d5c9b5e0a2aaaf8e98d"><td class="memTemplParams" colspan="2">template&lt;concepts::num T&gt; </td></tr>
+<tr class="memitem:af2b111b7ea138d5c9b5e0a2aaaf8e98d"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af2b111b7ea138d5c9b5e0a2aaaf8e98d">to_degrees</a> (T rad) -&gt; T</td></tr>
+<tr class="separator:af2b111b7ea138d5c9b5e0a2aaaf8e98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b9d9a7dff8b3db60c6e956976745c3" id="r_a42b9d9a7dff8b3db60c6e956976745c3"><td class="memTemplParams" colspan="2">template&lt;std::floating_point T&gt; </td></tr>
+<tr class="memitem:a42b9d9a7dff8b3db60c6e956976745c3"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a42b9d9a7dff8b3db60c6e956976745c3">log</a> (T base, T num) -&gt; T</td></tr>
+<tr class="separator:a42b9d9a7dff8b3db60c6e956976745c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de30a44dfef08af9546a545e064b4bb" id="r_a1de30a44dfef08af9546a545e064b4bb"><td class="memTemplParams" colspan="2">template&lt;concepts::num T&gt; </td></tr>
+<tr class="memitem:a1de30a44dfef08af9546a545e064b4bb"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1de30a44dfef08af9546a545e064b4bb">log</a> (T num) -&gt; T</td></tr>
+<tr class="separator:a1de30a44dfef08af9546a545e064b4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b788689cac7bc0f3b593775123aaaee" id="r_a5b788689cac7bc0f3b593775123aaaee"><td class="memTemplParams" colspan="2">template&lt;std::destructible T&gt; </td></tr>
 <tr class="memitem:a5b788689cac7bc0f3b593775123aaaee"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee">some</a> (T &amp;&amp;t) -&gt; <a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#aa202473f296b2492d9239773369181af">option</a>&lt; std::decay_t&lt; T &gt; &gt;</td></tr>
 <tr class="separator:a5b788689cac7bc0f3b593775123aaaee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -408,6 +435,370 @@ template&lt;class E , class T &gt; </div>
 <p>Stream adaptor for <a class="el" href="../../d5/d44/structfloppy_1_1source__location.html" title="Provides information about the location of the current source file.">source_location</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d9f/backports_8h_source.html#l00187">187</a> of file <a class="el" href="../../d2/d9f/backports_8h_source.html">backports.h</a>.</p>
+
+</div>
+</div>
+<a id="a6a778dde2b29125b63c1101d454f3e76" name="a6a778dde2b29125b63c1101d454f3e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a778dde2b29125b63c1101d454f3e76">&#9670;&#160;</a></span>panic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto panic </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>message</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d44/structfloppy_1_1source__location.html">source_location</a></td>          <td class="paramname"><span class="paramname"><em>location</em><span class="paramdefsep"> = </span><span class="paramdefval">source_location::current()</span></span>&#160;) -&gt; void </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Terminates program execution with detailed error message. </p>
+<p>Logs the error message and terminates program execution via <code>std::terminate</code> </p><dl class="section note"><dt>Note</dt><dd>You can catch the panic via <code>std::set_terminate</code> custom handler, but it's not recommended. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://en.cppreference.com/w/cpp/error/terminate">https://en.cppreference.com/w/cpp/error/terminate</a> </dd>
+<dd>
+<a href="https://en.cppreference.com/w/cpp/error/terminate_handler">https://en.cppreference.com/w/cpp/error/terminate_handler</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Error message. </td></tr>
+    <tr><td class="paramname">location</td><td>Source location of the panic. Defaults to current location. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../de/da7/corefn_8h_source.html#l00020">20</a> of file <a class="el" href="../../de/da7/corefn_8h_source.html">corefn.h</a>.</p>
+
+</div>
+</div>
+<a id="a0bbd17556e1675c4a05316d9f6743342" name="a0bbd17556e1675c4a05316d9f6743342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bbd17556e1675c4a05316d9f6743342">&#9670;&#160;</a></span>narrow_cast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;concepts::num T, concepts::num U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto narrow_cast </td>
+          <td>(</td>
+          <td class="paramtype">U &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>u</em></span></td><td>)</td>
+          <td> -&gt; T </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts number type to another number type. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This function doesn't check for overflow or underflow. </dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Target number type </td></tr>
+    <tr><td class="paramname">U</td><td>Source number type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>Source number value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Converted number </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../de/da7/corefn_8h_source.html#l00037">37</a> of file <a class="el" href="../../de/da7/corefn_8h_source.html">corefn.h</a>.</p>
+
+</div>
+</div>
+<a id="afcdfac7e6f7b9774e157db98c0d635c9" name="afcdfac7e6f7b9774e157db98c0d635c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcdfac7e6f7b9774e157db98c0d635c9">&#9670;&#160;</a></span>eq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto eq </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>a</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;) -&gt; bool </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if numbers are equal. </p>
+<p>Compares floating point values using formula <code>|a - b| &lt;= epsilon</code> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>First number </td></tr>
+    <tr><td class="paramname">b</td><td>Second number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Number type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if numbers are equal </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00018">18</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
+
+</div>
+</div>
+<a id="a66f562bcefd717de48a0deaa80f9776a" name="a66f562bcefd717de48a0deaa80f9776a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f562bcefd717de48a0deaa80f9776a">&#9670;&#160;</a></span>null()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;concepts::num T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto null </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>num</em></span></td><td>)</td>
+          <td> -&gt; bool </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if type is equal to zero (number specific) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td>Number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Number type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if number is equal to zero </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00030">30</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
+
+</div>
+</div>
+<a id="aa722c8b624bbd64c4cbdd47bfd285c5d" name="aa722c8b624bbd64c4cbdd47bfd285c5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa722c8b624bbd64c4cbdd47bfd285c5d">&#9670;&#160;</a></span>to_radians()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;concepts::num T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto to_radians </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>deg</em></span></td><td>)</td>
+          <td> -&gt; T </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts radians to degrees. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rad</td><td>Radians </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Radians type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Degrees </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00037">37</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
+
+</div>
+</div>
+<a id="af2b111b7ea138d5c9b5e0a2aaaf8e98d" name="af2b111b7ea138d5c9b5e0a2aaaf8e98d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b111b7ea138d5c9b5e0a2aaaf8e98d">&#9670;&#160;</a></span>to_degrees()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;concepts::num T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto to_degrees </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>rad</em></span></td><td>)</td>
+          <td> -&gt; T </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts degrees to radians. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deg</td><td>Degrees </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Degrees type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Radians </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00046">46</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
+
+</div>
+</div>
+<a id="a42b9d9a7dff8b3db60c6e956976745c3" name="a42b9d9a7dff8b3db60c6e956976745c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b9d9a7dff8b3db60c6e956976745c3">&#9670;&#160;</a></span>log() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::floating_point T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto log </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>base</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>num</em></span>&#160;) -&gt; T </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns logarithm of a number in a given base. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base</td><td>Base </td></tr>
+    <tr><td class="paramname">num</td><td>Number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Number type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Logarithm of the number in the given base </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00056">56</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
+
+</div>
+</div>
+<a id="a1de30a44dfef08af9546a545e064b4bb" name="a1de30a44dfef08af9546a545e064b4bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de30a44dfef08af9546a545e064b4bb">&#9670;&#160;</a></span>log() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;concepts::num T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto log </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>num</em></span></td><td>)</td>
+          <td> -&gt; T </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns natural logarithm of a number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td>Number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Number type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Natural logarithm of the number </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00063">63</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
 
 </div>
 </div>

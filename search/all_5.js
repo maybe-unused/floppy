@@ -17,10 +17,12 @@ var searchData=
   ['floppy_3a_3aliterals_14',['literals',['../d4/dc3/namespacefloppy_1_1literals.html',1,'floppy']]],
   ['floppy_3a_3ameta_15',['meta',['../db/d67/namespacefloppy_1_1meta.html',1,'floppy']]],
   ['floppy_3a_3aplatform_16',['platform',['../dd/d95/namespacefloppy_1_1platform.html',1,'floppy']]],
-  ['floppy_3a_3aranges_17',['ranges',['../df/dd6/namespacefloppy_1_1ranges.html',1,'floppy']]],
-  ['floppy_3a_3atypes_18',['types',['../dd/d72/namespacefloppy_1_1types.html',1,'floppy']]],
-  ['floppyrecipe_19',['FloppyRecipe',['../da/dce/classconanfile_1_1FloppyRecipe.html',1,'conanfile']]],
-  ['formatter_3c_20floppy_3a_3asource_5flocation_20_3e_20',['formatter&lt; floppy::source_location &gt;',['../db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html',1,'fmt']]],
-  ['freebsd_21',['freebsd',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663a1527e888767cdce15d200b870b39cfd0',1,'floppy::platform']]],
-  ['function_5fname_22',['function_name',['../d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644',1,'floppy::source_location']]]
+  ['floppy_3a_3aprint_5fhelpers_17',['print_helpers',['../d8/de5/namespacefloppy_1_1print__helpers.html',1,'floppy']]],
+  ['floppy_3a_3aranges_18',['ranges',['../df/dd6/namespacefloppy_1_1ranges.html',1,'floppy']]],
+  ['floppy_3a_3artti_19',['rtti',['../dc/d09/namespacefloppy_1_1rtti.html',1,'floppy']]],
+  ['floppy_3a_3atypes_20',['types',['../dd/d72/namespacefloppy_1_1types.html',1,'floppy']]],
+  ['floppyrecipe_21',['FloppyRecipe',['../da/dce/classconanfile_1_1FloppyRecipe.html',1,'conanfile']]],
+  ['formatter_3c_20floppy_3a_3asource_5flocation_20_3e_22',['formatter&lt; floppy::source_location &gt;',['../db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html',1,'fmt']]],
+  ['freebsd_23',['freebsd',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663a1527e888767cdce15d200b870b39cfd0',1,'floppy::platform']]],
+  ['function_5fname_24',['function_name',['../d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644',1,'floppy::source_location']]]
 ];

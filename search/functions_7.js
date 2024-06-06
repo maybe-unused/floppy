@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['to_0',['to',['../df/dd6/namespacefloppy_1_1ranges.html#a67cbb0e75a528381cac61bff759a9a7f',1,'floppy::ranges']]],
-  ['to_5funderlying_1',['to_underlying',['../d3/d05/namespacefloppy.html#a0424b6d00fac262e879df80e00da46b6',1,'floppy']]]
+  ['narrow_5fcast_0',['narrow_cast',['../d3/d05/namespacefloppy.html#a0bbd17556e1675c4a05316d9f6743342',1,'floppy']]],
+  ['null_1',['null',['../d3/d05/namespacefloppy.html#a66f562bcefd717de48a0deaa80f9776a',1,'floppy']]]
 ];
