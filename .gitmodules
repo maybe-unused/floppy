@@ -1,0 +1,6 @@
+[submodule "extern/3rd-party/fmt"]
+	path = extern/3rd-party/fmt
+	url = https://github.com/fmtlib/fmt
+[submodule "extern/winapi20"]
+	path = extern/winapi20
+	url = https://github.com/whs31/winapi20

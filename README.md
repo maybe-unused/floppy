@@ -13,7 +13,8 @@
 ### Dependencies
 
 - ![fmt logo](https://avatars.githubusercontent.com/u/7280830?s=16&v=4)[**fmt**](https://github.com/fmtlib/fmt) - modern formatting library (proposal for `std::format`) (**MIT**)
-- ![spdlog logo](https://avatars.githubusercontent.com/u/6052198?s=16&v=4)[**spdlog**](https://github.com/gabime/spdlog) - flexible logger implemented using *fmt* library (**MIT**)
+
+[//]: # (- ![spdlog logo]&#40;https://avatars.githubusercontent.com/u/6052198?s=16&v=4&#41;[**spdlog**]&#40;https://github.com/gabime/spdlog&#41; - flexible logger implemented using *fmt* library &#40;**MIT**&#41;)
 
 ### Licensing
 

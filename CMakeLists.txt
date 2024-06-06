@@ -32,25 +32,34 @@ if(NO_SUBMODULES)
   endif()
 else()
   message(STATUS "[${PROJECT_NAME}] building with git submodules")
+  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/extern/3rd-party/fmt)
+  if(WIN32)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/extern/winapi20)
+  endif()
 endif()
 
 add_library(${PROJECT_NAME})
 add_library(${PROJECT_NAMESPACE}${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
-set_target_properties(${PROJECT_NAME}
-  PROPERTIES
+set_target_properties(${PROJECT_NAME} PROPERTIES
   CXX_STANDARD 20
   CXX_STANDARD_REQUIRED ON
   CXX_EXTENSIONS OFF
   POSITION_INDEPENDENT_CODE ON
-  WINDOWS_EXPORT_ALL_SYMBOLS ${BUILD_SHARED_LIBS}
+)
+
+cmake_print_properties(TARGETS ${PROJECT_NAME} PROPERTIES
+  CXX_STANDARD
+  CXX_STANDARD_REQUIRED
+  CXX_EXTENSIONS
+  POSITION_INDEPENDENT_CODE
 )
 
 target_sources(${PROJECT_NAME}
   PUBLIC
-    #$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/lf/detail/export.h> $<INSTALL_INTERFACE:include/lf/detail/export.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/export.h> $<INSTALL_INTERFACE:include/floppy/detail/export.h>
   PRIVATE
-
+    dummy.cc
 )
 
 target_link_libraries(${PROJECT_NAME}
@@ -69,6 +78,14 @@ else()
   message(STATUS "[${PROJECT_NAME}] adding static export symbols: FLOPPY_STATIC_LIBRARY")
   target_compile_definitions(${PROJECT_NAME} PUBLIC -DFLOPPY_STATIC_LIBRARY=1)
 endif()
+
+target_compile_definitions(${PROJECT_NAME}
+  PUBLIC
+    -DCMAKE_TARGET_NAME=${PROJECT_NAME}
+    -DCMAKE_PROJECT_VERSION_MAJOR=${PROJECT_VERSION_MAJOR}
+    -DCMAKE_PROJECT_VERSION_MINOR=${PROJECT_VERSION_MINOR}
+    -DCMAKE_PROJECT_VERSION_PATCH=${PROJECT_VERSION_PATCH}
+)
 
 message(STATUS "[${PROJECT_NAME}] compile integration tests status: ${INTEGRATION_TESTS}")
 message(STATUS "[${PROJECT_NAME}] installing ${PROJECT_NAME} in namespace ${PROJECT_NAMESPACE}")
