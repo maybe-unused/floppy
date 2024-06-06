@@ -29,7 +29,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
      * \brief Safe alias for <tt>std::optional</tt>.
      * \details Defaults to <tt>std::optional</tt> if available, otherwise <tt>std::experimental::optional</tt>.
      * Example usage with helper functions:
-     * \code {{.cpp}
+     * \code {.cpp}
         template <typename T>
         auto first(std::vector<T> const& vec) -> option<T> {
           if(vec.empty())
