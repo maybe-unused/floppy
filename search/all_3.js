@@ -1,7 +1,7 @@
 var searchData=
 [
   ['darwin_0',['darwin',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663a3750c667d5cd8aecc0a9213b362066e9',1,'floppy::platform']]],
-  ['demangle_1',['demangle',['../dc/d09/namespacefloppy_1_1rtti.html#a08fd2a4a9646fdfd50c5b45102ba8a24',1,'floppy::rtti']]],
+  ['demangle_1',['demangle',['../dc/d09/namespacefloppy_1_1rtti.html#a67c6adb54f12fdf9e8ef12c2ef08c99a',1,'floppy::rtti']]],
   ['dependencies_2',['Dependencies',['../index.html#autotoc_md2',1,'']]],
   ['diab_3',['diab',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939ea9d76d663f4feae3bb1bc63ed17388abd',1,'floppy::platform']]],
   ['digitalmars_4',['digitalmars',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939ea1000cda46e51b6348226da9e5a658583',1,'floppy::platform']]],

@@ -151,14 +151,10 @@ struct floppy::traits::singleton&lt; T &gt;</div><p>Singleton pattern trait. </p
 <div class="line"> <span class="keyword">private</span>:</div>
 <div class="line">  TestSingleton() = <span class="keywordflow">default</span>;</div>
 <div class="line">};</div>
-</div><!-- fragment --><p> Example usage: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#af0163e5dd2cfaabe6e1126542874859a">TestSingleton::ref</a>().add(1, 2);</div>
-<div class="line"><a class="code hl_function" href="#a2df12143bc88306c1f341d9f54877319">TestSingleton::ref_mut</a>().add(1, 2);</div>
-<div class="line"><a class="code hl_function" href="#a3668e49f287d02953577eeb995ab64e2">TestSingleton::ptr</a>()-&gt;add(1, 2);</div>
-<div class="line"><a class="code hl_function" href="#afce897b3503cc4e00c72624f156c04d2">TestSingleton::ptr_mut</a>()-&gt;add(1, 2);</div>
-<div class="ttc" id="astructfloppy_1_1traits_1_1singleton_html_a2df12143bc88306c1f341d9f54877319"><div class="ttname"><a href="#a2df12143bc88306c1f341d9f54877319">floppy::traits::singleton&lt; TestSingleton &gt;::ref_mut</a></div><div class="ttdeci">static auto ref_mut() noexcept -&gt; TestSingleton &amp;</div><div class="ttdoc">Returns \i mutable \i reference to the singleton instance.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dff/traits_8h_source.html#l00103">traits.h:103</a></div></div>
-<div class="ttc" id="astructfloppy_1_1traits_1_1singleton_html_a3668e49f287d02953577eeb995ab64e2"><div class="ttname"><a href="#a3668e49f287d02953577eeb995ab64e2">floppy::traits::singleton&lt; TestSingleton &gt;::ptr</a></div><div class="ttdeci">static auto ptr() noexcept -&gt; TestSingleton const *</div><div class="ttdoc">Returns \i pointer to the singleton instance.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dff/traits_8h_source.html#l00093">traits.h:93</a></div></div>
-<div class="ttc" id="astructfloppy_1_1traits_1_1singleton_html_af0163e5dd2cfaabe6e1126542874859a"><div class="ttname"><a href="#af0163e5dd2cfaabe6e1126542874859a">floppy::traits::singleton&lt; TestSingleton &gt;::ref</a></div><div class="ttdeci">static auto ref() noexcept -&gt; TestSingleton const &amp;</div><div class="ttdoc">Returns \i constant \i reference to the singleton instance.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dff/traits_8h_source.html#l00098">traits.h:98</a></div></div>
-<div class="ttc" id="astructfloppy_1_1traits_1_1singleton_html_afce897b3503cc4e00c72624f156c04d2"><div class="ttname"><a href="#afce897b3503cc4e00c72624f156c04d2">floppy::traits::singleton&lt; TestSingleton &gt;::ptr_mut</a></div><div class="ttdeci">static auto ptr_mut() noexcept -&gt; TestSingleton *</div><div class="ttdoc">Returns \i mutable \i pointer to the singleton instance.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dff/traits_8h_source.html#l00085">traits.h:85</a></div></div>
+</div><!-- fragment --><p> Example usage: </p><div class="fragment"><div class="line">TestSingleton::ref().add(1, 2);</div>
+<div class="line">TestSingleton::ref_mut().add(1, 2);</div>
+<div class="line">TestSingleton::ptr()-&gt;add(1, 2);</div>
+<div class="line">TestSingleton::ptr_mut()-&gt;add(1, 2);</div>
 </div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>Produced singleton is thread-safe. </dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -194,9 +190,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns \i mutable \i pointer to the singleton instance. </p>
+<p>Returns <em>mutable pointer</em> to the singleton instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>Mutable pointer to the singleton instance. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a3668e49f287d02953577eeb995ab64e2" title="Returns \i pointer to the singleton instance.">ptr</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a3668e49f287d02953577eeb995ab64e2" title="Returns pointer to the singleton instance.">ptr</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00085">85</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
 
@@ -227,9 +223,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns \i pointer to the singleton instance. </p>
+<p>Returns <em>pointer</em> to the singleton instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the singleton instance. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#afce897b3503cc4e00c72624f156c04d2" title="Returns \i mutable \i pointer to the singleton instance.">ptr_mut</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#afce897b3503cc4e00c72624f156c04d2" title="Returns mutable pointer to the singleton instance.">ptr_mut</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00093">93</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
 
@@ -260,9 +256,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns \i constant \i reference to the singleton instance. </p>
+<p>Returns <em>constant reference</em> to the singleton instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to the singleton instance. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2df12143bc88306c1f341d9f54877319" title="Returns \i mutable \i reference to the singleton instance.">ref_mut</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2df12143bc88306c1f341d9f54877319" title="Returns mutable reference to the singleton instance.">ref_mut</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00098">98</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
 
@@ -293,9 +289,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns \i mutable \i reference to the singleton instance. </p>
+<p>Returns <em>mutable reference</em> to the singleton instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>Mutable reference to the singleton instance. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#af0163e5dd2cfaabe6e1126542874859a" title="Returns \i constant \i reference to the singleton instance.">ref</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#af0163e5dd2cfaabe6e1126542874859a" title="Returns constant reference to the singleton instance.">ref</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00103">103</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
 

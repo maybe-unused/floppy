@@ -90,7 +90,7 @@ var namespacefloppy =
     ] ],
     [ "ranges", "df/dd6/namespacefloppy_1_1ranges.html", "df/dd6/namespacefloppy_1_1ranges" ],
     [ "rtti", "dc/d09/namespacefloppy_1_1rtti.html", [
-      [ "demangle", "dc/d09/namespacefloppy_1_1rtti.html#a08fd2a4a9646fdfd50c5b45102ba8a24", null ],
+      [ "demangle", "dc/d09/namespacefloppy_1_1rtti.html#a67c6adb54f12fdf9e8ef12c2ef08c99a", null ],
       [ "type_name", "dc/d09/namespacefloppy_1_1rtti.html#aece47fc7440ee1c5e315c2b6c754f607", null ]
     ] ],
     [ "traits", "d7/db2/namespacefloppy_1_1traits.html", "d7/db2/namespacefloppy_1_1traits" ],
