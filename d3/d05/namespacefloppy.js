@@ -1,5 +1,6 @@
 var namespacefloppy =
 [
+    [ "concepts", "dc/dda/namespacefloppy_1_1concepts.html", "dc/dda/namespacefloppy_1_1concepts" ],
     [ "literals", "d4/dc3/namespacefloppy_1_1literals.html", null ],
     [ "meta", "db/d67/namespacefloppy_1_1meta.html", "db/d67/namespacefloppy_1_1meta" ],
     [ "platform", "dd/d95/namespacefloppy_1_1platform.html", [
@@ -83,6 +84,7 @@ var namespacefloppy =
       [ "path_separator", "dd/d95/namespacefloppy_1_1platform.html#af97ae00655feb6c7c1b5127b14d1fed9", null ],
       [ "swap_endian", "dd/d95/namespacefloppy_1_1platform.html#aeae4d5c61d1e34c12ae0ad2a40a19b43", null ]
     ] ],
+    [ "ranges", "df/dd6/namespacefloppy_1_1ranges.html", "df/dd6/namespacefloppy_1_1ranges" ],
     [ "types", "dd/d72/namespacefloppy_1_1types.html", [
       [ "u8", "dd/d72/namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6", null ],
       [ "u16", "dd/d72/namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4", null ],
@@ -102,6 +104,10 @@ var namespacefloppy =
       [ "some", "dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee", null ],
       [ "none", "dd/d72/namespacefloppy_1_1types.html#a9365b793fe547271e48fa719a7f4854d", null ]
     ] ],
+    [ "ostream_formatter", "d4/de5/structfloppy_1_1ostream__formatter.html", null ],
+    [ "plain_type", "d3/d05/namespacefloppy.html#d8/d14/structfloppy_1_1plain__type", null ],
+    [ "source_location", "d5/d44/structfloppy_1_1source__location.html", "d5/d44/structfloppy_1_1source__location" ],
+    [ "plain_type_t", "d3/d05/namespacefloppy.html#abb6b740122d8db472da8ccec3de5ec9c", null ],
     [ "u8", "dd/d72/namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6", null ],
     [ "u16", "dd/d72/namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4", null ],
     [ "u32", "dd/d72/namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41", null ],
@@ -117,6 +123,9 @@ var namespacefloppy =
     [ "f128", "dd/d72/namespacefloppy_1_1types.html#aa2dce0ff04d649f59f59d9008b781747", null ],
     [ "option", "dd/d72/namespacefloppy_1_1types.html#aa202473f296b2492d9239773369181af", null ],
     [ "ref", "dd/d72/namespacefloppy_1_1types.html#ae7d120016347ce3f021bc18dcefe2809", null ],
+    [ "unreachable", "d3/d05/namespacefloppy.html#abb16b244632f4ab5f6fd117e5a75473e", null ],
+    [ "to_underlying", "d3/d05/namespacefloppy.html#a0424b6d00fac262e879df80e00da46b6", null ],
+    [ "operator<<", "d3/d05/namespacefloppy.html#addcab788066267803ed3875e35a0042f", null ],
     [ "some", "dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee", null ],
     [ "none", "dd/d72/namespacefloppy_1_1types.html#a9365b793fe547271e48fa719a7f4854d", null ]
 ];

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['some_0',['some',['../dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee',1,'floppy::some()'],['../dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee',1,'floppy::types::some()']]],
-  ['standard_1',['standard',['../dd/d95/namespacefloppy_1_1platform.html#a8d6b568f1818d9f6232b7ae062c0eb17',1,'floppy::platform']]],
-  ['swap_5fendian_2',['swap_endian',['../dd/d95/namespacefloppy_1_1platform.html#aeae4d5c61d1e34c12ae0ad2a40a19b43',1,'floppy::platform']]],
-  ['system_3',['system',['../dd/d95/namespacefloppy_1_1platform.html#afb68d8bf26fc612d26c15875e337cde7',1,'floppy::platform']]]
+  ['file_5fname_0',['file_name',['../d5/d44/structfloppy_1_1source__location.html#a8f1c9c6c6060cef15dda6a2ef11384d2',1,'floppy::source_location']]],
+  ['function_5fname_1',['function_name',['../d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644',1,'floppy::source_location']]]
 ];
