@@ -3,16 +3,26 @@
 #include <fmt/format.h>
 #include <fmt/color.h>
 
+/// \brief Print helpers namespace.
 namespace floppy::print_helpers
 {
+  /// \brief Prints a message to the console with google test style.
+  /// \param format The format string.
+  /// \param args The format arguments.
+  /// \tparam Args The format arguments types (inferred from the format string and args).
   template <typename... Args>
   auto google_test_print(fmt::format_string<Args...> format, Args&&... args) -> void {
     fmt::println("\u001b[32m[          ] \u001b[33m{}\u001b[0m", fmt::format(format, std::forward<Args>(args)...));
   }
 
+  /// \brief Prints a message to stderr with error formatting.
+  /// \param format The format string.
+  /// \param args The format arguments.
+  /// \tparam Args The format arguments types (inferred from the format string and args).
   template <typename... Args>
   auto critical_message(std::string_view format, Args&&... args) -> void {
     fmt::print(
+      stderr,
       fmt::emphasis::bold | fg(fmt::color::red),
       "fatal: {}\n",
       fmt::format(fmt::runtime(format), std::forward<Args>(args)...)
@@ -20,4 +30,19 @@ namespace floppy::print_helpers
   }
 }
 
+/// \defgroup macros Macros
+
+/// \ingroup macros
+/// \brief Prints a message to the console with google test style.
+/// \details Use this macro to print messages in google test style.
+/// Example:
+/// \code {.cpp}
+/// GTEST_PRINT("Hello, {}!", "World");
+/// GTEST_PRINT("Hello, {}!", 42);
+/// \endcode
+/// Output:
+/// \code
+/// [          ] Hello, World!
+/// [          ] Hello, 42!
+/// \endcode
 #define GTEST_PRINT(...) ::floppy::print_helpers::google_test_print(__VA_ARGS__)

@@ -57,17 +57,21 @@ cmake_print_properties(TARGETS ${PROJECT_NAME} PROPERTIES
 
 target_sources(${PROJECT_NAME}
   PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/floppy.h> $<INSTALL_INTERFACE:include/floppy/floppy.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/export.h> $<INSTALL_INTERFACE:include/floppy/detail/export.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/predefs.h> $<INSTALL_INTERFACE:include/floppy/detail/predefs.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/types.h> $<INSTALL_INTERFACE:include/floppy/detail/types.h>
+    #$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/traits.h> $<INSTALL_INTERFACE:include/floppy/detail/traits.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/type_traits.h> $<INSTALL_INTERFACE:include/floppy/detail/type_traits.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/formatters.h> $<INSTALL_INTERFACE:include/floppy/detail/formatters.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/concepts.h> $<INSTALL_INTERFACE:include/floppy/detail/concepts.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/platform.h> $<INSTALL_INTERFACE:include/floppy/detail/platform.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/backports.h> $<INSTALL_INTERFACE:include/floppy/detail/backports.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/print_helpers.h> $<INSTALL_INTERFACE:include/floppy/detail/print_helpers.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/corefn.h> $<INSTALL_INTERFACE:include/floppy/detail/corefn.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/math.h> $<INSTALL_INTERFACE:include/floppy/detail/math.h>
   PRIVATE
-    dummy.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/detail/rtti.cc
 )
 
 target_link_libraries(${PROJECT_NAME}
