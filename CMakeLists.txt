@@ -60,7 +60,12 @@ target_sources(${PROJECT_NAME}
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/export.h> $<INSTALL_INTERFACE:include/floppy/detail/export.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/predefs.h> $<INSTALL_INTERFACE:include/floppy/detail/predefs.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/types.h> $<INSTALL_INTERFACE:include/floppy/detail/types.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/type_traits.h> $<INSTALL_INTERFACE:include/floppy/detail/type_traits.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/formatters.h> $<INSTALL_INTERFACE:include/floppy/detail/formatters.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/concepts.h> $<INSTALL_INTERFACE:include/floppy/detail/concepts.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/platform.h> $<INSTALL_INTERFACE:include/floppy/detail/platform.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/backports.h> $<INSTALL_INTERFACE:include/floppy/detail/backports.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/print_helpers.h> $<INSTALL_INTERFACE:include/floppy/detail/print_helpers.h>
   PRIVATE
     dummy.cc
 )
@@ -89,6 +94,11 @@ target_compile_definitions(${PROJECT_NAME}
     -DCMAKE_PROJECT_VERSION_MINOR=${PROJECT_VERSION_MINOR}
     -DCMAKE_PROJECT_VERSION_PATCH=${PROJECT_VERSION_PATCH}
 )
+
+if(TESTS)
+  enable_testing()
+  add_subdirectory(tests)
+endif()
 
 message(STATUS "[${PROJECT_NAME}] compile integration tests status: ${INTEGRATION_TESTS}")
 message(STATUS "[${PROJECT_NAME}] installing ${PROJECT_NAME} in namespace ${PROJECT_NAMESPACE}")
