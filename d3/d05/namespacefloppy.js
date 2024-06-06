@@ -93,6 +93,7 @@ var namespacefloppy =
       [ "demangle", "dc/d09/namespacefloppy_1_1rtti.html#a08fd2a4a9646fdfd50c5b45102ba8a24", null ],
       [ "type_name", "dc/d09/namespacefloppy_1_1rtti.html#aece47fc7440ee1c5e315c2b6c754f607", null ]
     ] ],
+    [ "traits", "d7/db2/namespacefloppy_1_1traits.html", "d7/db2/namespacefloppy_1_1traits" ],
     [ "types", "dd/d72/namespacefloppy_1_1types.html", [
       [ "u8", "dd/d72/namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6", null ],
       [ "u16", "dd/d72/namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4", null ],
