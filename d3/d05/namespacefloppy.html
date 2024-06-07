@@ -254,6 +254,9 @@ Functions</h2></td></tr>
 <tr class="separator:a8b90ba9cfcf5e0328b4d81f7fbd076d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62a0bf9e0111e8d22e38c62fc18055ae" id="r_a62a0bf9e0111e8d22e38c62fc18055ae"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/namespacefloppy_1_1literals.html#a62a0bf9e0111e8d22e38c62fc18055ae">operator&quot;&quot;_ptr</a> (unsigned long long value) -&gt; void *</td></tr>
 <tr class="separator:a62a0bf9e0111e8d22e38c62fc18055ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d45337f1be6120ab3a8e3a5fcb25d3c" id="r_a5d45337f1be6120ab3a8e3a5fcb25d3c"><td class="memTemplParams" colspan="2">template&lt;typename C , <a class="el" href="../../d9/d00/conceptfloppy_1_1traits_1_1detail_1_1derived__from__formattable.html">floppy::traits::detail::derived_from_formattable</a>&lt; C &gt; T&gt; </td></tr>
+<tr class="memitem:a5d45337f1be6120ab3a8e3a5fcb25d3c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5d45337f1be6120ab3a8e3a5fcb25d3c">str_cast</a> (T const &amp;t) noexcept -&gt; std::string</td></tr>
+<tr class="separator:a5d45337f1be6120ab3a8e3a5fcb25d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -806,6 +809,47 @@ template&lt;concepts::num T&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Natural logarithm of the number </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00063">63</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
+
+</div>
+</div>
+<a id="a5d45337f1be6120ab3a8e3a5fcb25d3c" name="a5d45337f1be6120ab3a8e3a5fcb25d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d45337f1be6120ab3a8e3a5fcb25d3c">&#9670;&#160;</a></span>str_cast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename C , <a class="el" href="../../d9/d00/conceptfloppy_1_1traits_1_1detail_1_1derived__from__formattable.html">floppy::traits::detail::derived_from_formattable</a>&lt; C &gt; T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto str_cast </td>
+          <td>(</td>
+          <td class="paramtype">T const &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td> -&gt; std::string </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Casts types which derives from <code>formattable_base&lt;C&gt;</code> to string. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">C</td><td>Character type. </td></tr>
+    <tr><td class="paramname">T</td><td>Type to cast. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>formattable </dd>
+<dd>
+detail::derived_from_formattable </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00186">186</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
 
 </div>
 </div>

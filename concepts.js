@@ -10,6 +10,11 @@ var concepts =
         [ "ref", "de/df6/conceptfloppy_1_1concepts_1_1ref.html", null ],
         [ "enum_", "d0/dd3/conceptfloppy_1_1concepts_1_1enum__.html", null ],
         [ "formattable", "d1/d5d/conceptfloppy_1_1concepts_1_1formattable.html", null ]
+      ] ],
+      [ "traits", "d7/db2/namespacefloppy_1_1traits.html", [
+        [ "detail", "d9/de1/namespacefloppy_1_1traits_1_1detail.html", [
+          [ "derived_from_formattable", "d9/d00/conceptfloppy_1_1traits_1_1detail_1_1derived__from__formattable.html", null ]
+        ] ]
       ] ]
     ] ]
 ];

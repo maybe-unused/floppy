@@ -144,5 +144,6 @@ var namespacefloppy =
     [ "log", "d3/d05/namespacefloppy.html#a42b9d9a7dff8b3db60c6e956976745c3", null ],
     [ "log", "d3/d05/namespacefloppy.html#a1de30a44dfef08af9546a545e064b4bb", null ],
     [ "some", "dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee", null ],
+    [ "str_cast", "d3/d05/namespacefloppy.html#a5d45337f1be6120ab3a8e3a5fcb25d3c", null ],
     [ "none", "dd/d72/namespacefloppy_1_1types.html#a9365b793fe547271e48fa719a7f4854d", null ]
 ];

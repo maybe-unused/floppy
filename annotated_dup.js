@@ -10,7 +10,10 @@ var annotated_dup =
         ] ]
       ] ],
       [ "traits", "d7/db2/namespacefloppy_1_1traits.html", [
-        [ "formattable", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
+        [ "detail", "d9/de1/namespacefloppy_1_1traits_1_1detail.html", [
+          [ "formattable_base", "d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html", "d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base" ]
+        ] ],
+        [ "formattable", "db/d59/structfloppy_1_1traits_1_1formattable.html", "db/d59/structfloppy_1_1traits_1_1formattable" ],
         [ "non_copyable", "d7/d83/structfloppy_1_1traits_1_1non__copyable.html", null ],
         [ "non_movable", "d2/df5/structfloppy_1_1traits_1_1non__movable.html", null ],
         [ "pin", "d7/dac/structfloppy_1_1traits_1_1pin.html", null ],
@@ -23,6 +26,6 @@ var annotated_dup =
     ] ],
     [ "fmt", null, [
       [ "formatter< floppy::source_location >", "db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html", null ],
-      [ "formatter< floppy::traits::formattable< C, T > >", "d6/dd0/structfmt_1_1formatter_3_01floppy_1_1traits_1_1formattable_3_01C_00_01T_01_4_01_4.html", null ]
+      [ "formatter< T >", "d6/dc7/structfmt_1_1formatter_3_01T_01_4.html", null ]
     ] ]
 ];

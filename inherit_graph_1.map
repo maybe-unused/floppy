@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" title=" " alt="" coords="5,42,85,68"/>
 <area shape="rect" id="Node000001" href="$d4/de5/structfloppy_1_1ostream__formatter.html" title=" " alt="" coords="147,5,295,46"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="99,43,146,35,147,41,100,49"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="99,43,146,35,147,41,100,49"/>
 <area shape="rect" id="Node000003" href="$d4/de5/structfloppy_1_1ostream__formatter.html" title=" " alt="" coords="133,70,309,96"/>
-<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="101,61,137,67,136,72,100,66"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="101,61,137,67,136,72,100,66"/>
 <area shape="rect" id="Node000002" href="$db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" title=" " alt="" coords="357,5,495,46"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="311,23,357,23,357,28,311,28"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="311,23,357,23,357,28,311,28"/>
 </map>

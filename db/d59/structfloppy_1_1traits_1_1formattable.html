@@ -113,12 +113,25 @@ $(function(){initNavTree('db/d59/structfloppy_1_1traits_1_1formattable.html','..
   <div class="headertitle"><div class="title">formattable&lt; T, C &gt; Struct Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for formattable&lt; T, C &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d82/structfloppy_1_1traits_1_1formattable__inherit__graph.svg" width="180" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for formattable&lt; T, C &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/dce/structfloppy_1_1traits_1_1formattable__coll__graph.svg" width="180" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a543ce404be5492a74ae1a93d377d425f" id="r_a543ce404be5492a74ae1a93d377d425f"><td class="memItemLeft" align="right" valign="top"><a id="a543ce404be5492a74ae1a93d377d425f" name="a543ce404be5492a74ae1a93d377d425f"></a>
-virtual std::basic_string&lt; C &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> () const =0</td></tr>
+<tr class="memitem:a543ce404be5492a74ae1a93d377d425f" id="r_a543ce404be5492a74ae1a93d377d425f"><td class="memItemLeft" align="right" valign="top">virtual std::basic_string&lt; C &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a543ce404be5492a74ae1a93d377d425f">to_string</a> () const =0</td></tr>
 <tr class="separator:a543ce404be5492a74ae1a93d377d425f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb97ee5b3485f7cc5eb67cff00cd963a" id="r_abb97ee5b3485f7cc5eb67cff00cd963a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a">operator std::basic_string&lt; C &gt;</a> () const</td></tr>
+<tr class="separator:abb97ee5b3485f7cc5eb67cff00cd963a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -127,9 +140,84 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T, typename C&gt;<br />
-struct floppy::traits::formattable&lt; T, C &gt;</div>
-<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00139">139</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
-</div><h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+struct floppy::traits::formattable&lt; T, C &gt;</div><p>Allows type to be converted to string and printed via standard streams or <b>fmt</b>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type to convert. </td></tr>
+    <tr><td class="paramname">C</td><td>Character type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method.">detail::formattable_base</a> </dd>
+<dd>
+<a class="el" href="../../d9/d00/conceptfloppy_1_1traits_1_1detail_1_1derived__from__formattable.html" title="Check if T is derived from formattable_base&lt;C&gt;.">detail::derived_from_formattable</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00169">169</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a543ce404be5492a74ae1a93d377d425f" name="a543ce404be5492a74ae1a93d377d425f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a543ce404be5492a74ae1a93d377d425f">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename C &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::basic_string&lt; C &gt; to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns string representation of the object. </p>
+<dl class="section return"><dt>Returns</dt><dd>String representation of the object. </dd></dl>
+
+</div>
+</div>
+<a id="abb97ee5b3485f7cc5eb67cff00cd963a" name="abb97ee5b3485f7cc5eb67cff00cd963a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb97ee5b3485f7cc5eb67cff00cd963a">&#9670;&#160;</a></span>operator std::basic_string&lt; C &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename C &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">operator std::basic_string&lt; C &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns string representation of the object. </p>
+<dl class="section return"><dt>Returns</dt><dd>String representation of the object. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a543ce404be5492a74ae1a93d377d425f" title="Returns string representation of the object.">to_string</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00153">153</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
 <a id="ac7c14369f0d7d89df417cab6fcac0ad2" name="ac7c14369f0d7d89df417cab6fcac0ad2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac7c14369f0d7d89df417cab6fcac0ad2">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
 
@@ -159,7 +247,9 @@ template&lt;typename T , typename C &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00142">142</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
+<p>Writes string representation of the object to the stream. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00172">172</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
 
 </div>
 </div>

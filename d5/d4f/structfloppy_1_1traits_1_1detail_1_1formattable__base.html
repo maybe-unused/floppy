@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=11" />
   <meta name="generator" content="Doxygen 1.10.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Floppy: formatter&lt; floppy::traits::formattable&lt; C, T &gt; &gt; Struct Template Reference</title>
+  <title>Floppy: formattable_base&lt; C &gt; Struct Template Reference</title>
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
@@ -80,7 +80,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('d6/dd0/structfmt_1_1formatter_3_01floppy_1_1traits_1_1formattable_3_01C_00_01T_01_4_01_4.html','../../'); initResizable(); });
+$(function(){initNavTree('d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -108,82 +108,97 @@ $(function(){initNavTree('d6/dd0/structfmt_1_1formatter_3_01floppy_1_1traits_1_1
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="../../d7/d1c/structfmt_1_1formatter_3_01floppy_1_1traits_1_1formattable_3_01C_00_01T_01_4_01_4-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">formatter&lt; floppy::traits::formattable&lt; C, T &gt; &gt; Struct Template Reference</div></div>
+<a href="../../dc/d7d/structfloppy_1_1traits_1_1detail_1_1formattable__base-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">formattable_base&lt; C &gt; Struct Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for formattable_base&lt; C &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/d50/structfloppy_1_1traits_1_1detail_1_1formattable__base__inherit__graph.svg" width="180" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9097e974a7540859a7ef773b80496123" id="r_a9097e974a7540859a7ef773b80496123"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9097e974a7540859a7ef773b80496123">parse</a> (fmt::format_parse_context &amp;ctx) -&gt; decltype(ctx.begin())</td></tr>
-<tr class="separator:a9097e974a7540859a7ef773b80496123"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac3f053ff653817aead69ae05da36b26" id="r_aac3f053ff653817aead69ae05da36b26"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac3f053ff653817aead69ae05da36b26">format</a> (<a class="el" href="../../db/d59/structfloppy_1_1traits_1_1formattable.html">floppy::traits::formattable</a>&lt; C, T &gt; const &amp;t, fmt::format_context &amp;ctx) const -&gt; decltype(ctx.out())</td></tr>
-<tr class="separator:aac3f053ff653817aead69ae05da36b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a543ce404be5492a74ae1a93d377d425f" id="r_a543ce404be5492a74ae1a93d377d425f"><td class="memItemLeft" align="right" valign="top">virtual std::basic_string&lt; C &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a543ce404be5492a74ae1a93d377d425f">to_string</a> () const =0</td></tr>
+<tr class="separator:a543ce404be5492a74ae1a93d377d425f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb97ee5b3485f7cc5eb67cff00cd963a" id="r_abb97ee5b3485f7cc5eb67cff00cd963a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb97ee5b3485f7cc5eb67cff00cd963a">operator std::basic_string&lt; C &gt;</a> () const</td></tr>
+<tr class="separator:abb97ee5b3485f7cc5eb67cff00cd963a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, typename C&gt;<br />
-struct fmt::formatter&lt; floppy::traits::formattable&lt; C, T &gt; &gt;</div>
-<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00150">150</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename C&gt;<br />
+struct floppy::traits::detail::formattable_base&lt; C &gt;</div><p>Interface, providing <code>to_string</code> method. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">C</td><td>Character type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00144">144</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9097e974a7540859a7ef773b80496123" name="a9097e974a7540859a7ef773b80496123"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9097e974a7540859a7ef773b80496123">&#9670;&#160;</a></span>parse()</h2>
+<a id="a543ce404be5492a74ae1a93d377d425f" name="a543ce404be5492a74ae1a93d377d425f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a543ce404be5492a74ae1a93d377d425f">&#9670;&#160;</a></span>to_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename C &gt; </div>
+template&lt;typename C &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto parse </td>
+          <td class="memname">virtual std::basic_string&lt; C &gt; to_string </td>
           <td>(</td>
-          <td class="paramtype">fmt::format_parse_context &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
-          <td> -&gt; decltype(ctx.begin()) </td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00151">151</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
+<p>Returns string representation of the object. </p>
+<dl class="section return"><dt>Returns</dt><dd>String representation of the object. </dd></dl>
 
 </div>
 </div>
-<a id="aac3f053ff653817aead69ae05da36b26" name="aac3f053ff653817aead69ae05da36b26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac3f053ff653817aead69ae05da36b26">&#9670;&#160;</a></span>format()</h2>
+<a id="abb97ee5b3485f7cc5eb67cff00cd963a" name="abb97ee5b3485f7cc5eb67cff00cd963a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb97ee5b3485f7cc5eb67cff00cd963a">&#9670;&#160;</a></span>operator std::basic_string&lt; C &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename C &gt; </div>
+template&lt;typename C &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto format </td>
+          <td class="memname">operator std::basic_string&lt; C &gt; </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d59/structfloppy_1_1traits_1_1formattable.html">floppy::traits::formattable</a>&lt; C, T &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">fmt::format_context &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>&#160;) const -&gt; decltype(ctx.out()) </td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00152">152</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
+<p>Returns string representation of the object. </p>
+<dl class="section return"><dt>Returns</dt><dd>String representation of the object. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a543ce404be5492a74ae1a93d377d425f" title="Returns string representation of the object.">to_string</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00153">153</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +210,7 @@ template&lt;typename T , typename C &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>fmt</b></li><li class="navelem"><a class="el" href="../../d6/dd0/structfmt_1_1formatter_3_01floppy_1_1traits_1_1formattable_3_01C_00_01T_01_4_01_4.html">formatter&lt; floppy::traits::formattable&lt; C, T &gt; &gt;</a></li>
+    <li class="navelem"><a class="el" href="../../d3/d05/namespacefloppy.html">floppy</a></li><li class="navelem"><a class="el" href="../../d7/db2/namespacefloppy_1_1traits.html">traits</a></li><li class="navelem"><a class="el" href="../../d9/de1/namespacefloppy_1_1traits_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="../../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html">formattable_base</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

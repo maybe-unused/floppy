@@ -9,5 +9,6 @@ var searchData=
   ['floppy_3a_3aranges_6',['ranges',['../df/dd6/namespacefloppy_1_1ranges.html',1,'floppy']]],
   ['floppy_3a_3artti_7',['rtti',['../dc/d09/namespacefloppy_1_1rtti.html',1,'floppy']]],
   ['floppy_3a_3atraits_8',['traits',['../d7/db2/namespacefloppy_1_1traits.html',1,'floppy']]],
-  ['floppy_3a_3atypes_9',['types',['../dd/d72/namespacefloppy_1_1types.html',1,'floppy']]]
+  ['floppy_3a_3atraits_3a_3adetail_9',['detail',['../d9/de1/namespacefloppy_1_1traits_1_1detail.html',1,'floppy::traits']]],
+  ['floppy_3a_3atypes_10',['types',['../dd/d72/namespacefloppy_1_1types.html',1,'floppy']]]
 ];
