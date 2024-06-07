@@ -135,21 +135,83 @@ namespace floppy::traits
   template <typename T>
   using pimpl = std::experimental::propagate_const<std::unique_ptr<T>>;
 
-  template <typename T, typename C>
-  struct formattable
+  /// \brief Implementation details of traits.
+  namespace detail
   {
-    [[nodiscard]] virtual std::basic_string<C> to_string() const = 0;
+    /// \brief Interface, providing <tt>to_string</tt> method.
+    /// \tparam C Character type.
+    template <typename C>
+    struct formattable_base
+    {
+      /// \brief Returns string representation of the object.
+      /// \return String representation of the object.
+      [[nodiscard]] virtual std::basic_string<C> to_string() const = 0;
+
+      /// \brief Returns string representation of the object.
+      /// \return String representation of the object.
+      /// \see to_string
+      [[nodiscard]] explicit operator std::basic_string<C>() const { return this->to_string(); }
+    };
+
+    /// \brief Check if T is derived from formattable_base<C>.
+    /// \tparam T Type to check.
+    /// \tparam C Character type.
+    template <typename T, typename C>
+    concept derived_from_formattable = std::is_base_of_v<formattable_base<C>, T>;
+  } // namespace detail
+
+  /// \brief Allows type to be converted to string and printed via standard streams or <b>fmt</b>.
+  /// \tparam T Type to convert.
+  /// \tparam C Character type.
+  /// \see detail::formattable_base
+  /// \see detail::derived_from_formattable
+  template <typename T, typename C>
+  struct formattable : public detail::formattable_base<C>
+  {
+    /// \brief Writes string representation of the object to the stream.
     friend std::basic_ostream<C>& operator<<(std::basic_ostream<C>& os, T const& t) {
       return os << t.to_string();
     }
   };
 } // namespace floppy::traits
 
-// todo: not working properly
-template <typename T, typename C>
-struct fmt::formatter<floppy::traits::formattable<C, T>> {
-  constexpr auto parse(fmt::format_parse_context& ctx) -> decltype(ctx.begin()) { return ctx.begin(); }
-  auto format(floppy::traits::formattable<C, T> const& t, fmt::format_context& ctx) const -> decltype(ctx.out()) {
-    return fmt::format_to(ctx.out(), "{}", t.to_string());
+namespace floppy
+{
+  /// \brief Casts types which derives from <tt>formattable_base<C></tt> to string.
+  /// \tparam C Character type.
+  /// \tparam T Type to cast.
+  /// \see formattable
+  /// \see detail::derived_from_formattable
+  template <typename C, floppy::traits::detail::derived_from_formattable<C> T>
+  [[nodiscard]] auto str_cast(T const& t) noexcept -> std::string {
+    return (std::string)t;
+  }
+} // namespace floppy
+
+/// \brief Formatter for types which can be easily converted to string.
+template <std::convertible_to<std::string> T>
+struct fmt::formatter<T>
+{
+  template <typename ParseContext>
+  constexpr auto parse(ParseContext& ctx) const {
+    return ctx.begin();
+  }
+  template <typename FormatContext>
+  constexpr auto format(T const& c, FormatContext& ctx) const {
+    return format_to(ctx.out(), "{}", (std::string)c);
+  }
+};
+
+/// \brief Formatter for types which derives from <tt>formattable_base<char></tt>.
+template <floppy::traits::detail::derived_from_formattable<char> T>
+struct fmt::formatter<T>
+{
+  template <typename ParseContext>
+  constexpr auto parse(ParseContext& ctx) const {
+    return ctx.begin();
+  }
+  template <typename FormatContext>
+  constexpr auto format(T const& c, FormatContext& ctx) const {
+    return format_to(ctx.out(), "{}", c.to_string());
   }
 };
