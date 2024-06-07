@@ -1,5 +1,6 @@
 var namespacefloppy_1_1traits =
 [
+    [ "formattable", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
     [ "non_copyable", "d7/d83/structfloppy_1_1traits_1_1non__copyable.html", null ],
     [ "non_movable", "d2/df5/structfloppy_1_1traits_1_1non__movable.html", null ],
     [ "pin", "d7/dac/structfloppy_1_1traits_1_1pin.html", null ],

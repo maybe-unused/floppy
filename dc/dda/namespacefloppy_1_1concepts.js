@@ -6,5 +6,6 @@ var namespacefloppy_1_1concepts =
     [ "fn", "df/d99/conceptfloppy_1_1concepts_1_1fn.html", null ],
     [ "ptr", "db/dee/conceptfloppy_1_1concepts_1_1ptr.html", null ],
     [ "ref", "de/df6/conceptfloppy_1_1concepts_1_1ref.html", null ],
-    [ "enum_", "d0/dd3/conceptfloppy_1_1concepts_1_1enum__.html", null ]
+    [ "enum_", "d0/dd3/conceptfloppy_1_1concepts_1_1enum__.html", null ],
+    [ "formattable", "d1/d5d/conceptfloppy_1_1concepts_1_1formattable.html", null ]
 ];

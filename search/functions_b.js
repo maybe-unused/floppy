@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['some_0',['some',['../dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee',1,'floppy::some()'],['../dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee',1,'floppy::types::some()']]],
-  ['source_5flocation_1',['source_location',['../d5/d44/structfloppy_1_1source__location.html#aa3cb6509b6b1bf6578be6a615bd953ff',1,'floppy::source_location::source_location() noexcept'],['../d5/d44/structfloppy_1_1source__location.html#a44ec96e0e5290e3988011ccee09b7ad2',1,'floppy::source_location::source_location(char const *file, uint_least32_t const line, char const *function, uint_least32_t const column=0) noexcept']]],
-  ['standard_2',['standard',['../dd/d95/namespacefloppy_1_1platform.html#a8d6b568f1818d9f6232b7ae062c0eb17',1,'floppy::platform']]],
-  ['swap_5fendian_3',['swap_endian',['../dd/d95/namespacefloppy_1_1platform.html#aeae4d5c61d1e34c12ae0ad2a40a19b43',1,'floppy::platform']]],
-  ['system_4',['system',['../dd/d95/namespacefloppy_1_1platform.html#afb68d8bf26fc612d26c15875e337cde7',1,'floppy::platform']]]
+  ['to_0',['to',['../df/dd6/namespacefloppy_1_1ranges.html#a67cbb0e75a528381cac61bff759a9a7f',1,'floppy::ranges']]],
+  ['to_5fdegrees_1',['to_degrees',['../d3/d05/namespacefloppy.html#af2b111b7ea138d5c9b5e0a2aaaf8e98d',1,'floppy']]],
+  ['to_5fradians_2',['to_radians',['../d3/d05/namespacefloppy.html#aa722c8b624bbd64c4cbdd47bfd285c5d',1,'floppy']]],
+  ['to_5funderlying_3',['to_underlying',['../d3/d05/namespacefloppy.html#a0424b6d00fac262e879df80e00da46b6',1,'floppy']]],
+  ['type_5fname_4',['type_name',['../dc/d09/namespacefloppy_1_1rtti.html#aece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
 ];

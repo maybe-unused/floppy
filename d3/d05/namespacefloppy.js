@@ -85,7 +85,6 @@ var namespacefloppy =
       [ "swap_endian", "dd/d95/namespacefloppy_1_1platform.html#aeae4d5c61d1e34c12ae0ad2a40a19b43", null ]
     ] ],
     [ "print_helpers", "d8/de5/namespacefloppy_1_1print__helpers.html", [
-      [ "google_test_print", "d8/de5/namespacefloppy_1_1print__helpers.html#af16c3ca8e24d92348feaa691921e8ffc", null ],
       [ "critical_message", "d8/de5/namespacefloppy_1_1print__helpers.html#abdcc54d31693c73090e4e02f31872ebd", null ]
     ] ],
     [ "ranges", "df/dd6/namespacefloppy_1_1ranges.html", "df/dd6/namespacefloppy_1_1ranges" ],
@@ -113,6 +112,7 @@ var namespacefloppy =
       [ "some", "dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee", null ],
       [ "none", "dd/d72/namespacefloppy_1_1types.html#a9365b793fe547271e48fa719a7f4854d", null ]
     ] ],
+    [ "one_of", "d8/dca/structfloppy_1_1one__of.html", null ],
     [ "ostream_formatter", "d4/de5/structfloppy_1_1ostream__formatter.html", null ],
     [ "plain_type", "d3/d05/namespacefloppy.html#d8/d14/structfloppy_1_1plain__type", null ],
     [ "source_location", "d5/d44/structfloppy_1_1source__location.html", "d5/d44/structfloppy_1_1source__location" ],

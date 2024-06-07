@@ -122,32 +122,32 @@ $(function(){initNavTree('d4/d45/print__helpers_8h_source.html','../../'); initR
 <div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d8/de5/namespacefloppy_1_1print__helpers.html">    7</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d8/de5/namespacefloppy_1_1print__helpers.html">floppy::print_helpers</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d8/de5/namespacefloppy_1_1print__helpers.html#af16c3ca8e24d92348feaa691921e8ffc">   14</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="../../d8/de5/namespacefloppy_1_1print__helpers.html#af16c3ca8e24d92348feaa691921e8ffc">google_test_print</a>(fmt::format_string&lt;Args...&gt; format, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    fmt::println(<span class="stringliteral">&quot;\u001b[32m[          ] \u001b[33m{}\u001b[0m&quot;</span>, fmt::format(format, std::forward&lt;Args&gt;(args)...));</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keyword">namespace </span>detail</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">auto</span> google_test_print(fmt::format_string&lt;Args...&gt; format, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      fmt::println(<span class="stringliteral">&quot;\u001b[32m[          ] \u001b[33m{}\u001b[0m&quot;</span>, fmt::format(format, std::forward&lt;Args&gt;(args)...));</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  } <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d8/de5/namespacefloppy_1_1print__helpers.html#abdcc54d31693c73090e4e02f31872ebd">   26</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="../../d8/de5/namespacefloppy_1_1print__helpers.html#abdcc54d31693c73090e4e02f31872ebd">critical_message</a>(std::string_view format, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    fmt::print(</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      stderr,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      fmt::emphasis::bold | fg(fmt::color::red),</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="stringliteral">&quot;fatal: {}\n&quot;</span>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      fmt::format(fmt::runtime(format), std::forward&lt;Args&gt;(args)...)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    );</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  }</div>
 </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d8/de5/namespacefloppy_1_1print__helpers.html#abdcc54d31693c73090e4e02f31872ebd">   23</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="../../d8/de5/namespacefloppy_1_1print__helpers.html#abdcc54d31693c73090e4e02f31872ebd">critical_message</a>(std::string_view format, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    fmt::print(</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      stderr,</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      fmt::emphasis::bold | fg(fmt::color::red),</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <span class="stringliteral">&quot;fatal: {}\n&quot;</span>,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      fmt::format(fmt::runtime(format), std::forward&lt;Args&gt;(args)...)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    );</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
-</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d5/dfd/group__macros.html#ga5640226fcdabfd268993c1d43f34885e">   48</a></span><span class="preprocessor">#define GTEST_PRINT(...) ::floppy::print_helpers::google_test_print(__VA_ARGS__)</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d5/dfd/group__macros.html#ga5640226fcdabfd268993c1d43f34885e">   51</a></span><span class="preprocessor">#define GTEST_PRINT(...) ::floppy::print_helpers::detail::google_test_print(__VA_ARGS__)</span></div>
 <div class="ttc" id="anamespacefloppy_1_1print__helpers_html"><div class="ttname"><a href="../../d8/de5/namespacefloppy_1_1print__helpers.html">floppy::print_helpers</a></div><div class="ttdoc">Print helpers namespace.</div><div class="ttdef"><b>Definition</b> <a href="#l00007">print_helpers.h:8</a></div></div>
-<div class="ttc" id="anamespacefloppy_1_1print__helpers_html_abdcc54d31693c73090e4e02f31872ebd"><div class="ttname"><a href="../../d8/de5/namespacefloppy_1_1print__helpers.html#abdcc54d31693c73090e4e02f31872ebd">floppy::print_helpers::critical_message</a></div><div class="ttdeci">auto critical_message(std::string_view format, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Prints a message to stderr with error formatting.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">print_helpers.h:23</a></div></div>
-<div class="ttc" id="anamespacefloppy_1_1print__helpers_html_af16c3ca8e24d92348feaa691921e8ffc"><div class="ttname"><a href="../../d8/de5/namespacefloppy_1_1print__helpers.html#af16c3ca8e24d92348feaa691921e8ffc">floppy::print_helpers::google_test_print</a></div><div class="ttdeci">auto google_test_print(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Prints a message to the console with google test style.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">print_helpers.h:14</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1print__helpers_html_abdcc54d31693c73090e4e02f31872ebd"><div class="ttname"><a href="../../d8/de5/namespacefloppy_1_1print__helpers.html#abdcc54d31693c73090e4e02f31872ebd">floppy::print_helpers::critical_message</a></div><div class="ttdeci">auto critical_message(std::string_view format, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Prints a message to stderr with error formatting.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">print_helpers.h:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
