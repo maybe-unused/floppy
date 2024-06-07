@@ -1,8 +1,10 @@
 #pragma once
 
 #include <memory>
+#include <iostream>
 #include <experimental/propagate_const>
 #include <floppy/detail/export.h>
+#include <floppy/detail/formatters.h>
 
 /// \brief Namespace with traits for custom types and classes.
 namespace floppy::traits
@@ -132,4 +134,22 @@ namespace floppy::traits
   /// \tparam T Underlying type.
   template <typename T>
   using pimpl = std::experimental::propagate_const<std::unique_ptr<T>>;
+
+  template <typename T, typename C>
+  struct formattable
+  {
+    [[nodiscard]] virtual std::basic_string<C> to_string() const = 0;
+    friend std::basic_ostream<C>& operator<<(std::basic_ostream<C>& os, T const& t) {
+      return os << t.to_string();
+    }
+  };
 } // namespace floppy::traits
+
+// todo: not working properly
+template <typename T, typename C>
+struct fmt::formatter<floppy::traits::formattable<C, T>> {
+  constexpr auto parse(fmt::format_parse_context& ctx) -> decltype(ctx.begin()) { return ctx.begin(); }
+  auto format(floppy::traits::formattable<C, T> const& t, fmt::format_context& ctx) const -> decltype(ctx.out()) {
+    return fmt::format_to(ctx.out(), "{}", t.to_string());
+  }
+};

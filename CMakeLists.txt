@@ -99,6 +99,14 @@ target_compile_definitions(${PROJECT_NAME}
     -DCMAKE_PROJECT_VERSION_PATCH=${PROJECT_VERSION_PATCH}
 )
 
+if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+  message(STATUS "[${PROJECT_NAME}] adding compiler flags: -Wall -Wextra -Wpedantic -Werror")
+  target_compile_options(${PROJECT_NAME} PRIVATE
+    $<$<CXX_COMPILER_ID:MSVC>:/W4 /WX>
+    $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -Wpedantic -Werror>
+  )
+endif()
+
 if(TESTS)
   enable_testing()
   add_subdirectory(tests)

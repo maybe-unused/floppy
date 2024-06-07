@@ -6,14 +6,17 @@
 /// \brief Print helpers namespace.
 namespace floppy::print_helpers
 {
-  /// \brief Prints a message to the console with google test style.
-  /// \param format The format string.
-  /// \param args The format arguments.
-  /// \tparam Args The format arguments types (inferred from the format string and args).
-  template <typename... Args>
-  auto google_test_print(fmt::format_string<Args...> format, Args&&... args) -> void {
-    fmt::println("\u001b[32m[          ] \u001b[33m{}\u001b[0m", fmt::format(format, std::forward<Args>(args)...));
-  }
+  namespace detail
+  {
+    /// \brief Prints a message to the console with google test style.
+    /// \param format The format string.
+    /// \param args The format arguments.
+    /// \tparam Args The format arguments types (inferred from the format string and args).
+    template <typename... Args>
+    auto google_test_print(fmt::format_string<Args...> format, Args&&... args) -> void {
+      fmt::println("\u001b[32m[          ] \u001b[33m{}\u001b[0m", fmt::format(format, std::forward<Args>(args)...));
+    }
+  } // namespace detail
 
   /// \brief Prints a message to stderr with error formatting.
   /// \param format The format string.
@@ -45,4 +48,4 @@ namespace floppy::print_helpers
 /// [          ] Hello, World!
 /// [          ] Hello, 42!
 /// \endcode
-#define GTEST_PRINT(...) ::floppy::print_helpers::google_test_print(__VA_ARGS__)
+#define GTEST_PRINT(...) ::floppy::print_helpers::detail::google_test_print(__VA_ARGS__)

@@ -26,4 +26,9 @@ namespace floppy::concepts
 
   template <typename T>
   concept enum_ = std::is_enum_v<plain_type_t<T>>;
+
+  template <typename T, typename C>
+  concept formattable = requires(T t) {
+    { t.to_string() } -> std::convertible_to<std::basic_string<C>>;
+  };
 } // namespace floppy::concepts

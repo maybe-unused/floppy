@@ -37,6 +37,13 @@ auto TestPimpl::add(int a, int b) const -> int {
   return this->impl->add(a, b);
 }
 
+struct Velocity : public traits::formattable<Velocity, char>
+{
+  f64 value;
+  explicit Velocity(f64 value) : value(value) {}
+  [[nodiscard]] auto to_string() const -> std::string override { return fmt::format("{:.1f} m/s", value); }
+};
+
 TEST(Traits, Singleton)
 {
   EXPECT_EQ(TestSingleton::ref().add(1, 2), 3);
@@ -44,4 +51,14 @@ TEST(Traits, Singleton)
   EXPECT_EQ(TestSingleton::ptr()->add(1, 2), 3);
   EXPECT_EQ(TestSingleton::ptr_mut()->add(1, 2), 3);
   EXPECT_TRUE(TestSingleton::ptr() == TestSingleton::ptr_mut());
+}
+
+TEST(Traits, Formattable)
+{
+  EXPECT_EQ(Velocity{10.0}.to_string(), "10.0 m/s");
+
+  auto ss = std::stringstream();
+  ss << Velocity{10.0};
+  EXPECT_EQ(ss.str(), "10.0 m/s");
+  //EXPECT_EQ(fmt::format("{}", Velocity{10.0}), "10.0 m/s");
 }
