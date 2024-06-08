@@ -22,10 +22,8 @@ ui_*
 # Doxygen generated
 src/html/
 src/latex/
-docs/*
-!docs/images
-!docs/src
-!docs/pages
+docs/xml
+docs/html
 
 # Conan (deps folder must have separate .gitignore)
 CMakeUserPresets.json

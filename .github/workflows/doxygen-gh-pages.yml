@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - master # tmp disabled for now
 permissions:
   contents: write
 
