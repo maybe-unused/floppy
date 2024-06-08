@@ -1,7 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939eabafbd5257cc137fe7822159bb464b4e5":[1,0,0,4,2,10],
-"dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939eac0ee85ff66cf80206ac9ab7b03975213":[1,0,0,4,2,21],
 "dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939eac3e57e97f4c290780d0b9f7a20942870":[1,0,0,4,2,20],
 "dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939eac82c4aea416dd7e181bab22ce5d86f16":[1,0,0,4,2,17],
 "dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939ead473fc947ac66e2de55db5cefeb048d6":[1,0,0,4,2,26],
@@ -31,8 +29,8 @@ var NAVTREEINDEX1 =
 "de/d03/platform_8h_source.html":[4,0,0,0,0,7],
 "de/da7/corefn_8h_source.html":[4,0,0,0,0,2],
 "de/ddd/directories_8h_source.html":[4,0,0,0,1],
-"de/df6/conceptfloppy_1_1concepts_1_1ref.html":[2,0,0,5],
 "de/df6/conceptfloppy_1_1concepts_1_1ref.html":[1,0,0,0,5],
+"de/df6/conceptfloppy_1_1concepts_1_1ref.html":[2,0,0,5],
 "df/d63/type__traits_8h_source.html":[4,0,0,0,0,10],
 "df/d99/conceptfloppy_1_1concepts_1_1fn.html":[1,0,0,0,3],
 "df/d99/conceptfloppy_1_1concepts_1_1fn.html":[2,0,0,3],
