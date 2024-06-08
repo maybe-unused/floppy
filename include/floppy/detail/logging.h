@@ -4,6 +4,7 @@
 #include <floppy/detail/export.h>
 
 namespace spdlog {};
+/// \brief Namespace providing access to logging facilities.
 namespace floppy::logger
 {
   using namespace spdlog;

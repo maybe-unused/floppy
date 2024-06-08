@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>std namespace | Floppy Extensions for C++ stdlib</title>
+  <title>floppy::ostream_formatter struct | Floppy Extensions for C++ stdlib</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
   <link rel="icon" href="favicon-dark.png" type="image/png" />
@@ -44,9 +44,22 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          std <span class="m-thin">namespace</span>
+          <div class="m-doc-template">template&lt;typename C&gt;</div>
+          <span class="m-breadcrumb"><a href="namespacefloppy.html">floppy</a>::<wbr/></span>ostream_formatter <span class="m-thin">struct</span>
         </h1>
-        <p>STL namespace.</p>
+        <p>Formatter for types which support stream output.</p>
+        <table class="m-table m-fullwidth m-flat">
+          <thead>
+            <tr><th colspan="2">Template parameters</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="width: 1%">C</td>
+              <td>Type of the stream character type.</td>
+            </tr>
+          </tbody>
+        </table>
+<p>Example usage for <code>std::ostream</code>:</p><pre class="m-code"><span class="k">template</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">fmt</span><span class="o">::</span><span class="n">formatter</span><span class="o">&lt;</span><span class="n">YourType</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">floppy</span><span class="o">::</span><span class="n">ostream_formatter</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{};</span></pre><p>Example usage for <code>std::wostream</code>:</p><pre class="m-code"><span class="k">template</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">fmt</span><span class="o">::</span><span class="n">formatter</span><span class="o">&lt;</span><span class="n">YourType</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">floppy</span><span class="o">::</span><span class="n">ostream_formatter</span><span class="o">&lt;</span><span class="kt">wchar_t</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{};</span></pre>
       </div>
     </div>
   </div>

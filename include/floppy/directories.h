@@ -21,10 +21,10 @@ namespace floppy::filesystem
    * std::cout << dirs.config_dir() << std::endl;
    * \endcode
    * will produce the following output:
-   * \code
-   * Linux:   /home/alice/.config/barapp
-   * Windows: C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App
-   * MacOS:   /Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App
+   * \code {.ansi}
+   * Linux:   '/home/alice/.config/barapp'
+   * Windows: 'C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App'
+   * MacOS:   '/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App'
    * \endcode
    */
   class FLOPPY_EXPORT application_dirs

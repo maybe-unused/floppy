@@ -18,27 +18,44 @@
 #define _stringify$(x) #x
 #define stringify$(x) _stringify$(x)
 
-/// \brief Main namespace for the library. See \ref fl for shorter alias.
+/// \brief Main namespace for the library.
+/// \note Use <tt>fl</tt> instead of <tt>floppy</tt> if you want shorter name.
 namespace floppy {
   /// \brief Metadata definitions, such as library version or name.
   namespace meta {
     /// \brief Project version constexpr structure. Equals to current cmake/conan version.
-    struct [[maybe_unused]] project_version
+    class [[maybe_unused]] project_meta
     {
-      int major;  ///< Major version.
-      int minor;  ///< Minor version.
-      int patch;  ///< Patch version.
+     private:
+      int major;                          ///< Major version.
+      int minor;                          ///< Minor version.
+      int patch;                          ///< Patch version.
+      std::string_view project_name;      ///< Project name.
 
+     public:
       /// \brief Creates version object at compile-time.
       /// \see project_name
-      constexpr inline project_version()
+      consteval inline project_meta()
         : major(CMAKE_PROJECT_VERSION_MAJOR)
         , minor(CMAKE_PROJECT_VERSION_MINOR)
         , patch(CMAKE_PROJECT_VERSION_PATCH)
+        , project_name(stringify$(CMAKE_TARGET_NAME))
       {}
 
+      /// \brief Project name constant-expression string. Always equals to \c floppy.
+      [[nodiscard]] constexpr inline auto name() const noexcept -> std::string_view { return this->project_name; }
+
+      /// \brief Returns constant expression version number major as an integer.
+      [[nodiscard]] constexpr inline auto version_major() const noexcept -> int { return this->major; }
+
+      /// \brief Returns constant expression version number minor as an integer.
+      [[nodiscard]] constexpr inline auto version_minor() const noexcept -> int { return this->minor; }
+
+      /// \brief Returns constant expression version number patch as an integer.
+      [[nodiscard]] constexpr inline auto version_patch() const noexcept -> int { return this->patch; }
+
       /// \brief Returns constant expression version string in <tt>XX.YY.ZZ</tt> format.
-      [[nodiscard]] static constexpr inline auto as_str() -> std::string_view {
+      [[nodiscard]] constexpr inline auto version_string() const noexcept -> std::string_view {
         return {
           stringify$(CMAKE_PROJECT_VERSION_MAJOR) "."
           stringify$(CMAKE_PROJECT_VERSION_MINOR) "."
@@ -47,16 +64,20 @@ namespace floppy {
       }
     };
 
-    static_assert(project_version::as_str() == std::string_view(
+    /// \brief Project metadata object, available at compile-time.
+    [[maybe_unused]] constexpr inline auto project_info = project_meta{};
+
+    static_assert(project_info.version_string() == std::string_view(
         stringify$(CMAKE_PROJECT_VERSION_MAJOR) "."
         stringify$(CMAKE_PROJECT_VERSION_MINOR) "."
         stringify$(CMAKE_PROJECT_VERSION_PATCH)
       ), "versions aren't the same"
     );
 
-    /// \brief Project name constant-expression string. Always equals to \c floppy.
-    /// \see project_version
-    auto constexpr project_name = std::string_view(stringify$(CMAKE_TARGET_NAME));
+    static_assert(project_info.version_major() == CMAKE_PROJECT_VERSION_MAJOR, "major version isn't the same");
+    static_assert(project_info.version_minor() == CMAKE_PROJECT_VERSION_MINOR, "minor version isn't the same");
+    static_assert(project_info.version_patch() == CMAKE_PROJECT_VERSION_PATCH, "patch version isn't the same");
+    static_assert(project_info.name() == std::string_view(stringify$(CMAKE_TARGET_NAME)), "project name isn't the same");
   }
 };
 

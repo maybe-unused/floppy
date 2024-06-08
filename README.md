@@ -7,6 +7,7 @@
     <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/><br/>
     <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="cpp_badge"/><img src="https://img.shields.io/badge/CMake-064F8C?style=flat-square&logo=cmake&logoColor=white" alt="cmake_badge"/>
 </h3>
+![[link](https://whs31.github.io/floppy/index.html)](https://img.shields.io/badge/documentation-doxygen-white?style=for-the-badge&logo=readthedocs&link=https%3A%2F%2Fwhs31.github.io%2Ffloppy%2Findex.html)
 
 ### [Changelog](./CHANGELOG.md)
 

@@ -6,6 +6,7 @@
 /// \brief Print helpers namespace.
 namespace floppy::print_helpers
 {
+  /// \brief Print helpers internal namespace.
   namespace detail
   {
     /// \brief Prints a message to the console with google test style.

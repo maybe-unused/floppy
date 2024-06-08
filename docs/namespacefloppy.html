@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>floppy namespace | Floppy Library that augments and extends C++ standard library</title>
+  <title>floppy namespace | Floppy Extensions for C++ stdlib</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
   <link rel="icon" href="favicon-dark.png" type="image/png" />
@@ -13,7 +13,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m"><img src="logo-tmp.png" alt="" />Floppy <span class="m-thin">Library that augments and extends C++ standard library</span></a>
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m"><img src="logo-tmp.png" alt="" />Floppy <span class="m-thin">Extensions for C++ stdlib</span></a>
       <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
         <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
           <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
@@ -46,7 +46,7 @@
         <h1>
           floppy <span class="m-thin">namespace</span>
         </h1>
-        <p>Main namespace for the library. See fl for shorter alias.</p>
+        <p>Main namespace for the library.</p>
         <nav class="m-block m-default">
           <h3>Contents</h3>
           <ul>
@@ -62,15 +62,16 @@
             </li>
           </ul>
         </nav>
+<aside class="m-note m-info"><h4>Note</h4><p>Use <code>fl</code> instead of <code>floppy</code> if you want shorter name.</p></aside>
         <section id="namespaces">
           <h2><a href="#namespaces">Namespaces</a></h2>
           <dl class="m-doc">
-            <dt>namespace <a href="namespacefloppy_1_1concepts.html" class="m-doc">concepts</a></dt>
-            <dd>Concepts namespace.</dd>
             <dt>namespace <a href="namespacefloppy_1_1filesystem.html" class="m-doc">filesystem</a></dt>
             <dd>Filesystem namespace.</dd>
             <dt>namespace <a href="namespacefloppy_1_1literals.html" class="m-doc">literals</a> <span class="m-label m-flat m-info">inline</span></dt>
             <dd>Inline namespace for literal operators.</dd>
+            <dt>namespace <a href="namespacefloppy_1_1logger.html" class="m-doc">logger</a></dt>
+            <dd>Namespace providing access to logging facilities.</dd>
             <dt>namespace <a href="namespacefloppy_1_1meta.html" class="m-doc">meta</a></dt>
             <dd>Metadata definitions, such as library version or name.</dd>
             <dt>namespace <a href="namespacefloppy_1_1platform.html" class="m-doc">platform</a></dt>
@@ -95,6 +96,11 @@
               struct <a href="structfloppy_1_1one__of.html" class="m-doc">one_of</a>
             </dt>
             <dd>Checks if type is one of the given types.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename C&gt;</div>
+              struct <a href="structfloppy_1_1ostream__formatter.html" class="m-doc">ostream_formatter</a>
+            </dt>
+            <dd>Formatter for types which support stream output.</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename T&gt;</div>
               struct <a href="structfloppy_1_1plain__type.html" class="m-doc">plain_type</a>
@@ -244,6 +250,62 @@
             </dt>
             <dd>Helper function for <a href="namespacefloppy_1_1types.html#aa202473f296b2492d9239773369181af" class="m-doc">option</a>.</dd>
             <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#ac58595dcf43ef5b63222d4870ab99a0a" class="m-doc">operator&quot;&quot;_z</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; isize -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <strong>signed version</strong> of <code>size_t</code>/<a href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d" class="m-doc">types::<wbr />isize</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#aa7b3c64dbeec151bf546fbc7b9fde028" class="m-doc">operator&quot;&quot;_Z</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; isize -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <strong>signed version</strong> of <code>size_t</code>/<a href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d" class="m-doc">types::<wbr />isize</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#af42b9484d915dd341f8568115381aba5" class="m-doc">operator&quot;&quot;_zu</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; usize -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <code>size_t</code>/<a href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037" class="m-doc">types::<wbr />usize</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#ae1b89bbab478172cc119815a813c24e1" class="m-doc">operator&quot;&quot;_ZU</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; usize -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <code>size_t</code>/<a href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037" class="m-doc">types::<wbr />usize</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#af8cebce6997bf12cf8db37adb88ce08b" class="m-doc">operator&quot;&quot;_u8</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; u8 -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <a href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6" class="m-doc">types::<wbr />u8</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#a3c6414cf450aa1b5b146e9fae265d39d" class="m-doc">operator&quot;&quot;_u16</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; u16 -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <a href="namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4" class="m-doc">types::<wbr />u16</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#afa016bb51878f0865128e2939d688d6e" class="m-doc">operator&quot;&quot;_u32</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; u32 -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <a href="namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41" class="m-doc">types::<wbr />u32</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#acebfcb833f8b97983e959880c70bea1d" class="m-doc">operator&quot;&quot;_u64</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; u64 -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <a href="namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574" class="m-doc">types::<wbr />u64</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#a1b524fdcc0b074b6b192b04f0c15d97a" class="m-doc">operator&quot;&quot;_i8</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; i8 -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <a href="namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef" class="m-doc">types::<wbr />i8</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#a114b87bdec2d4e4194e9dcf1935c8e1b" class="m-doc">operator&quot;&quot;_i16</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; i16 -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <a href="namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8" class="m-doc">types::<wbr />i16</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#a37c8fa77be51b89fd384677725e7d369" class="m-doc">operator&quot;&quot;_i32</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; i32 -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <a href="namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84" class="m-doc">types::<wbr />i32</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#ac8d230d3e8c6365c08b76dfd3833187e" class="m-doc">operator&quot;&quot;_i64</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; i64 -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <a href="namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd" class="m-doc">types::<wbr />i64</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#a8b90ba9cfcf5e0328b4d81f7fbd076d1" class="m-doc">operator&quot;&quot;_ptrdiff</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; std::ptrdiff_t -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Literal operator for <code>std::ptrdiff_t</code>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="namespacefloppy_1_1literals.html#a514cd59529b04e6124eca2e8fbb5a297" class="m-doc">operator&quot;&quot;_pvoid</a>(</span><span class="m-doc-wrap">unsigned long long value) -&gt; void * -&gt; auto</span>
+            </dt>
+            <dd>Literal operator for <code>void*</code>.</dd>
+            <dt>
               <div class="m-doc-template">template&lt;typename C, floppy::traits::detail::derived_from_formattable&lt;C&gt; T&gt;</div>
               <span class="m-doc-wrap-bumper">auto <a href="#a5d45337f1be6120ab3a8e3a5fcb25d3c" class="m-doc">str_cast</a>(</span><span class="m-doc-wrap">T const&amp; t) noexcept -&gt; std::string -&gt; auto</span>
             </dt>
@@ -253,6 +315,11 @@
         <section id="var-members">
           <h2><a href="#var-members">Variables</a></h2>
           <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;typename U, typename... T&gt;</div>
+              bool <a href="#abd4d29634ca4f4ef8b64beeca2631026" class="m-doc">one_of_v</a> <span class="m-label m-flat m-primary">constexpr</span>
+            </dt>
+            <dd>Checks if type is one of the given types.</dd>
             <dt>
               auto <a href="namespacefloppy_1_1types.html#a9365b793fe547271e48fa719a7f4854d" class="m-doc">none</a> <span class="m-label m-flat m-primary">constexpr</span>
             </dt>
@@ -593,7 +660,35 @@
                 </tr>
               </tbody>
             </table>
-<aside class="m-note m-default"><h4>See also</h4><p>formattable</p><p>detail::derived_from_formattable</p></aside>
+<aside class="m-note m-default"><h4>See also</h4><p><a href="structfloppy_1_1traits_1_1formattable.html" class="m-doc">floppy::<wbr />traits::<wbr />formattable</a></p></aside>
+          </div></section>
+        </section>
+        <section>
+          <h2>Variable documentation</h2>
+          <section class="m-doc-details" id="abd4d29634ca4f4ef8b64beeca2631026"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename U, typename... T&gt;
+              </div>
+              bool floppy::<wbr /><a href="#abd4d29634ca4f4ef8b64beeca2631026" class="m-doc-self">one_of_v</a> <span class="m-label m-primary">constexpr</span>
+            </h3>
+            <p>Checks if type is one of the given types.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">U</td>
+                  <td>The type to check.</td>
+                </tr>
+                <tr>
+                  <td>T</td>
+                  <td>The types to check against.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>See also</h4><p><a href="structfloppy_1_1one__of.html" class="m-doc">one_<wbr />of</a></p></aside>
           </div></section>
         </section>
       </div>
@@ -640,7 +735,7 @@
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>Floppy Library that augments and extends C++ standard library. Created with <a href="https://doxygen.org/">Doxygen</a> 1.10.0 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>Floppy Extensions for C++ stdlib. Created with <a href="https://doxygen.org/">Doxygen</a> 1.10.0 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

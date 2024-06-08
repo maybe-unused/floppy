@@ -180,8 +180,7 @@ namespace floppy
   /// \brief Casts types which derives from <tt>formattable_base<C></tt> to string.
   /// \tparam C Character type.
   /// \tparam T Type to cast.
-  /// \see formattable
-  /// \see detail::derived_from_formattable
+  /// \see floppy::traits::formattable
   template <typename C, floppy::traits::detail::derived_from_formattable<C> T>
   [[nodiscard]] auto str_cast(T const& t) noexcept -> std::string {
     return (std::string)t;

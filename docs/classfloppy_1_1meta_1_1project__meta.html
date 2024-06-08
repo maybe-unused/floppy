@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>std namespace | Floppy Extensions for C++ stdlib</title>
+  <title>floppy::meta::project_meta class | Floppy Extensions for C++ stdlib</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
   <link rel="icon" href="favicon-dark.png" type="image/png" />
@@ -44,9 +44,65 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          std <span class="m-thin">namespace</span>
+          <span class="m-breadcrumb"><a href="namespacefloppy.html">floppy</a>::<wbr/></span><span class="m-breadcrumb"><a href="namespacefloppy_1_1meta.html">meta</a>::<wbr/></span>project_meta <span class="m-thin">class</span>
         </h1>
-        <p>STL namespace.</p>
+        <p>Project version constexpr structure. Equals to current cmake/conan version.</p>
+        <nav class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#acc71b248aae60fb1c42141ad8df6d8ec" class="m-doc">project_meta</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-primary">consteval</span></span>
+            </dt>
+            <dd>Creates version object at compile-time.</dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a1f67d5b82fcb2d90d2fc88fa40125b1a">
+              <span class="m-doc-wrap-bumper">auto <a href="#a1f67d5b82fcb2d90d2fc88fa40125b1a" class="m-doc-self">name</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; std::string_view -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Project name constant-expression string. Always equals to <code>floppy</code>.</dd>
+            <dt id="a57f41f97e95624674d3d957ebaf1e4b3">
+              <span class="m-doc-wrap-bumper">auto <a href="#a57f41f97e95624674d3d957ebaf1e4b3" class="m-doc-self">version_major</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; int -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Returns constant expression version number major as an integer.</dd>
+            <dt id="a320fa960819065f3c892c97505e71b60">
+              <span class="m-doc-wrap-bumper">auto <a href="#a320fa960819065f3c892c97505e71b60" class="m-doc-self">version_minor</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; int -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Returns constant expression version number minor as an integer.</dd>
+            <dt id="aa1ff66d88c522759681e901d4b42ff5c">
+              <span class="m-doc-wrap-bumper">auto <a href="#aa1ff66d88c522759681e901d4b42ff5c" class="m-doc-self">version_patch</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; int -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Returns constant expression version number patch as an integer.</dd>
+            <dt id="ac7162970e97a617c60cbe6daa9facb86">
+              <span class="m-doc-wrap-bumper">auto <a href="#ac7162970e97a617c60cbe6daa9facb86" class="m-doc-self">version_string</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; std::string_view -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd>Returns constant expression version string in <code>XX.YY.ZZ</code> format.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="acc71b248aae60fb1c42141ad8df6d8ec"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> floppy::<wbr />meta::<wbr />project_meta::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#acc71b248aae60fb1c42141ad8df6d8ec" class="m-doc-self">project_meta</a>(</span><span class="m-doc-wrap">) <span class="m-label m-primary">consteval</span></span></span>
+            </h3>
+            <p>Creates version object at compile-time.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a href="classfloppy_1_1meta_1_1project__meta.html#a5281e2015ff4acc5ee192284723e7731" class="m-doc">project_<wbr />name</a></p></aside>
+          </div></section>
+        </section>
       </div>
     </div>
   </div>

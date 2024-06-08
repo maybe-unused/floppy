@@ -3,7 +3,6 @@
 #include <floppy/detail/type_traits.h>
 #include <floppy/detail/types.h>
 
-/// \brief Concepts namespace.
 namespace floppy::concepts
 {
   template <typename T>
@@ -19,10 +18,10 @@ namespace floppy::concepts
   concept fn = std::is_function_v<plain_type_t<T>>;
 
   template <typename T>
-  concept ptr = std::is_pointer_v<plain_type_t<T>>;
+  concept ptr = std::is_pointer_v<T>;
 
   template <typename T>
-  concept ref = std::is_reference_v<plain_type_t<T>>;
+  concept ref = std::is_reference_v<T>;
 
   template <typename T>
   concept enum_ = std::is_enum_v<plain_type_t<T>>;

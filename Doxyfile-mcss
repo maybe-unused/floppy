@@ -13,3 +13,4 @@ STYLESHEETS = [
 ]
 THEME_COLOR = '#22272e'
 FAVICON = 'favicon-dark.png'
+SHOW_INCLUDE_FILES = YES

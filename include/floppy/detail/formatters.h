@@ -7,6 +7,20 @@
 
 namespace floppy
 {
+  /// \brief Formatter for types which support stream output.
+  /// \details Example usage for <tt>std::ostream</tt>:
+  ///
+  /// \code {.cpp}
+  /// template <> struct fmt::formatter<YourType> : floppy::ostream_formatter<char> {};
+  /// \endcode
+  ///
+  /// Example usage for <tt>std::wostream</tt>:
+  ///
+  /// \code {.cpp}
+  /// template <> struct fmt::formatter<YourType> : floppy::ostream_formatter<wchar_t> {};
+  /// \endcode
+  ///
+  /// \tparam C Type of the stream character type.
   template <typename C>
   struct ostream_formatter : fmt::formatter<std::basic_string_view<C>, C>
   {
