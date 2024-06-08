@@ -3,7 +3,7 @@
 #include <limits>
 #include <floppy/detail/export.h>
 #include <floppy/detail/types.h>
-#include <floppy/detail/platform.h>
+#include <floppy/detail/predefs.h>
 
 /// \brief Namespace providing access to operating system, compiler and platform information.
 namespace floppy::platform
@@ -21,7 +21,8 @@ namespace floppy::platform
     netbsd,            ///< NetBSD
     openbsd,           ///< OpenBSD
     unknown,           ///< Unknown OS - unable to determine
-    linux_ = gnu_linux ///< Alias for GNU/Linux
+    linux_ = gnu_linux,///< Alias for GNU/Linux
+    macos = darwin     ///< Alias for Apple macOS
   };
 
   /// \brief Architectures supported by the library.

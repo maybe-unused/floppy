@@ -11,3 +11,4 @@
 #include <floppy/detail/print_helpers.h>
 #include <floppy/detail/type_traits.h>
 #include <floppy/detail/types.h>
+#include <floppy/detail/logging.h>
