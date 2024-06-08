@@ -1,6 +1,7 @@
 var namespacefloppy =
 [
     [ "concepts", "dc/dda/namespacefloppy_1_1concepts.html", "dc/dda/namespacefloppy_1_1concepts" ],
+    [ "filesystem", "d3/d3a/namespacefloppy_1_1filesystem.html", "d3/d3a/namespacefloppy_1_1filesystem" ],
     [ "literals", "d4/dc3/namespacefloppy_1_1literals.html", null ],
     [ "meta", "db/d67/namespacefloppy_1_1meta.html", "db/d67/namespacefloppy_1_1meta" ],
     [ "platform", "dd/d95/namespacefloppy_1_1platform.html", [
@@ -15,7 +16,8 @@ var namespacefloppy =
         [ "netbsd", "dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663a2a41a8fb50557ff7d9b55a6c26c1a888", null ],
         [ "openbsd", "dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663a8a9596f483a1f51017555338843c4b46", null ],
         [ "unknown", "dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663aad921d60486366258809553a3db49a4a", null ],
-        [ "linux_", "dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663af3dfd03e84bb3efd1302688157a2a896", null ]
+        [ "linux_", "dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663af3dfd03e84bb3efd1302688157a2a896", null ],
+        [ "macos", "dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663a43b9d8ea18c48c3a64c4e37338fc668f", null ]
       ] ],
       [ "arch", "dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5", [
         [ "x86_32", "dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5a5eb027c44e7bab8f2c0ca8e0bc3a9b61", null ],

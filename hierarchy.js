@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", null ],
     [ "formattable_base< C >", "d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html", [
       [ "formattable< T, C >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ]
     ] ],

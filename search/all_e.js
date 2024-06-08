@@ -11,9 +11,12 @@ var searchData=
   ['plain_5ftype_5ft_8',['plain_type_t',['../d3/d05/namespacefloppy.html#abb6b740122d8db472da8ccec3de5ec9c',1,'floppy']]],
   ['portlandgroup_9',['portlandgroup',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939ea21e4877ebcf75b3ffc961671a274f985',1,'floppy::platform']]],
   ['powerpc_10',['powerpc',['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5ab2e2e41d11017681a62980c1762a4de8',1,'floppy::platform']]],
-  ['project_5fname_11',['project_name',['../db/d67/namespacefloppy_1_1meta.html#aa289488d8f089f42bfb8dbeb9ef9a49f',1,'floppy::meta']]],
-  ['project_5fversion_12',['project_version',['../da/db3/structfloppy_1_1meta_1_1project__version.html',1,'project_version'],['../da/db3/structfloppy_1_1meta_1_1project__version.html#a72860507e87a1034b0095a9964c46f6b',1,'floppy::meta::project_version::project_version()']]],
-  ['ptr_13',['ptr',['../d9/d8a/structfloppy_1_1traits_1_1singleton.html#a3668e49f287d02953577eeb995ab64e2',1,'floppy::traits::singleton']]],
-  ['ptr_5fmut_14',['ptr_mut',['../d9/d8a/structfloppy_1_1traits_1_1singleton.html#afce897b3503cc4e00c72624f156c04d2',1,'floppy::traits::singleton']]],
-  ['pyramid_15',['pyramid',['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5a437233c74e25fe505293cd2e8ecc2696',1,'floppy::platform']]]
+  ['preference_5fdir_11',['preference_dir',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#abf7464131f356ab780da1279c200b0be',1,'floppy::filesystem::application_dirs']]],
+  ['preferences_12',['preferences',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a4ca269cf93df1b512b52174c1a256fe5a1ce027fe3518cc64ef3570b50a9a7c10',1,'floppy::filesystem::application_dirs']]],
+  ['project_5fname_13',['project_name',['../db/d67/namespacefloppy_1_1meta.html#aa289488d8f089f42bfb8dbeb9ef9a49f',1,'floppy::meta']]],
+  ['project_5fpath_14',['project_path',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#aec57925e9296d77eff2481f636d1933b',1,'floppy::filesystem::application_dirs']]],
+  ['project_5fversion_15',['project_version',['../da/db3/structfloppy_1_1meta_1_1project__version.html',1,'project_version'],['../da/db3/structfloppy_1_1meta_1_1project__version.html#a72860507e87a1034b0095a9964c46f6b',1,'floppy::meta::project_version::project_version()']]],
+  ['ptr_16',['ptr',['../d9/d8a/structfloppy_1_1traits_1_1singleton.html#a3668e49f287d02953577eeb995ab64e2',1,'floppy::traits::singleton']]],
+  ['ptr_5fmut_17',['ptr_mut',['../d9/d8a/structfloppy_1_1traits_1_1singleton.html#afce897b3503cc4e00c72624f156c04d2',1,'floppy::traits::singleton']]],
+  ['pyramid_18',['pyramid',['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5a437233c74e25fe505293cd2e8ecc2696',1,'floppy::platform']]]
 ];

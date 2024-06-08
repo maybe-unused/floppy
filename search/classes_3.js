@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pin_0',['pin',['../d7/dac/structfloppy_1_1traits_1_1pin.html',1,'floppy::traits']]],
-  ['plain_5ftype_1',['plain_type',['../d3/d05/namespacefloppy.html#d8/d14/structfloppy_1_1plain__type',1,'floppy']]],
-  ['project_5fversion_2',['project_version',['../da/db3/structfloppy_1_1meta_1_1project__version.html',1,'floppy::meta']]]
+  ['one_5fof_0',['one_of',['../d8/dca/structfloppy_1_1one__of.html',1,'floppy']]],
+  ['ostream_5fformatter_1',['ostream_formatter',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]],
+  ['ostream_5fformatter_3c_20char_20_3e_2',['ostream_formatter&lt; char &gt;',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]]
 ];

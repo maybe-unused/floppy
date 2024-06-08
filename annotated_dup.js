@@ -1,6 +1,9 @@
 var annotated_dup =
 [
     [ "floppy", "d3/d05/namespacefloppy.html", [
+      [ "filesystem", "d3/d3a/namespacefloppy_1_1filesystem.html", [
+        [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs" ]
+      ] ],
       [ "meta", "db/d67/namespacefloppy_1_1meta.html", [
         [ "project_version", "da/db3/structfloppy_1_1meta_1_1project__version.html", "da/db3/structfloppy_1_1meta_1_1project__version" ]
       ] ],

@@ -45,6 +45,7 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -57,7 +58,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"index.html#autotoc_md3"
+"dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939eabafbd5257cc137fe7822159bb464b4e5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
