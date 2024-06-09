@@ -7,6 +7,11 @@
 
 namespace floppy
 {
+  /// \brief Platform information
+  /// \details Contains information about the operating system, architecture, language version and etc.
+  /// Use \ref platform::current function or \ref floppy::current_platform constant to get the current platform information.
+  /// \see platform::current
+  /// \see floppy::current_platform
   class platform
   {
    public:
@@ -128,7 +133,7 @@ namespace floppy
 //#pragma GCC diagnostic pop
 
     /// \brief Returns platform information for the current platform at compile-time.
-    /// \see floppy::platform::current
+    /// \see floppy::current_platform
     [[nodiscard]] static consteval inline auto current() noexcept -> platform
     {
       return platform {
