@@ -54,7 +54,7 @@ namespace floppy::filesystem
     string_view application
   ) noexcept(false)
   {
-    if constexpr(platform::system() == platform::operating_system::linux_) {
+    if constexpr(current_platform.operating_system == platform::operating_system::linux_) {
       auto const path = fs::path(::trim(application, ""));
       auto const home_c = std::getenv("HOME");
       if(not home_c)
@@ -70,7 +70,7 @@ namespace floppy::filesystem
       this->m_preference_dir = this->m_config_dir;
       this->m_runtime_dir = xdg_runtime_dir ? option<fs::path>(fs::path(xdg_runtime_dir)) : none;
       this->m_state_dir = home / ".local" / "state" / path;
-    } else if constexpr(platform::system() == platform::operating_system::windows) {
+    } else if constexpr(current_platform.operating_system == platform::operating_system::windows) {
       auto const path = fs::path(organization) / application;
       #if defined(FLOPPY_OS_WINDOWS)
         auto const appdata_roaming = winapi::shell::known_folder_path(winapi::shell::FolderID::RoamingAppData);
@@ -85,7 +85,7 @@ namespace floppy::filesystem
         this->m_runtime_dir = none;
         this->m_state_dir = none;
       #endif
-    } else if constexpr(platform::system() == platform::operating_system::macos) {
+    } else if constexpr(current_platform.operating_system == platform::operating_system::macos) {
       auto replaced = [](string_view const str, char const what, char const with) {
         auto owned_str = string(str);
         std::replace(owned_str.begin(), owned_str.end(), what, with);
