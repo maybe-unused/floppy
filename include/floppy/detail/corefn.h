@@ -20,7 +20,7 @@ namespace floppy
 #ifndef DOXYGEN_GENERATING_OUTPUT
   [[noreturn]] inline auto panic(std::string_view message, source_location location = source_location::current()) -> void {
 #else
-  [[noreturn]] inline auto panic(std::string_view message, source_location location = source_location::current()) -> void {
+  [[noreturn]] inline void panic(std::string_view message, source_location location = source_location::current()) {
 #endif
     print_helpers::critical_message("panic in file `{}` line {}", location.file_name(), location.line());
     print_helpers::critical_message("in function `{}`", location.function_name());
