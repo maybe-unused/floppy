@@ -69,20 +69,36 @@ namespace floppy::filesystem
      /// \throws std::system_error If the directory does not exist on this platform.
      /// \note Use explicit functions such as \ref config_dir() to avoid this exception.
      /// \see operator[]
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto get(dir directory_type) const noexcept(false) -> std::filesystem::path;
+#else
+     [[nodiscard]] std::filesystem::path get(dir directory_type) const noexcept(false);
+#endif
 
      /// \brief Creates the directories if they do not exist.
+#ifndef DOXYGEN_GENERATING_OUTPUT
      auto create() const -> void;
+#else
+     void create();
+#endif
 
      /// \brief Removes the directories from the filesystem.
+#ifndef DOXYGEN_GENERATING_OUTPUT
      auto remove() const -> void;
+#else
+     void remove();
+#endif
 
      /**
       * \brief Returns the project path fragment used to compute the project's cache/config/data directories.
       * \details The value is derived from the ProjectDirs::from call and is platform-dependent.
       * \return The project path.
       */
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto project_path() const -> std::filesystem::path const&;
+#else
+     [[nodiscard]] std::filesystem::path project_path() const;
+#endif
 
      /**
       * \brief Returns the path to the project's cache directory.
@@ -92,7 +108,11 @@ namespace floppy::filesystem
       * - <b>Windows</b>: <tt>%LOCALAPPDATA%</tt>\\<tt>project_path</tt>\\cache, for example: <tt>C:\\Users\\Alice\\AppData\\Local\\Foo Corp\\Bar App\\cache</tt>
       * \return The path to the project's cache directory.
       */
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto cache_dir() const -> std::filesystem::path const&;
+#else
+     [[nodiscard]] std::filesystem::path cache_dir() const;
+#endif
 
      /**
       * \brief Returns the path to the project's config directory.
@@ -102,7 +122,11 @@ namespace floppy::filesystem
       * - <b>Windows</b>: <tt>%APPDATA%</tt>\\<tt>project_path</tt>\\config, for example: <tt>C:\\Users\\Alice\\AppData\\Roaming\\Foo Corp\\Bar App\\config</tt>
       * \return The path to the project's config directory.
       */
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto config_dir() const -> std::filesystem::path const&;
+#else
+     [[nodiscard]] std::filesystem::path config_dir() const;
+#endif
 
      /**
       * \brief Returns the path to the project's config_local directory.
@@ -112,7 +136,11 @@ namespace floppy::filesystem
       * - <b>Windows</b>: <tt>%LOCALAPPDATA%</tt>\\<tt>project_path</tt>\\config, for example: <tt>C:\\Users\\Alice\\AppData\\Roaming\\Foo Corp\\Bar App\\config</tt>
       * \return The path to the project's config_local directory.
       */
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto config_local_dir() const -> std::filesystem::path const&;
+#else
+     [[nodiscard]] std::filesystem::path config_local_dir() const;
+#endif
 
      /**
       * \brief Returns the path to the project's data directory.
@@ -122,7 +150,11 @@ namespace floppy::filesystem
       * - <b>Windows</b>: <tt>%LOCALAPPDATA%</tt>\\<tt>project_path</tt>\\data, for example: <tt>C:\\Users\\Alice\\AppData\\Roaming\\Foo Corp\\Bar App\\data</tt>
       * \return The path to the project's data directory.
       */
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto data_dir() const -> std::filesystem::path const&;
+#else
+     [[nodiscard]] std::filesystem::path data_dir() const;
+#endif
 
      /**
       * \brief Returns the path to the project's data_local directory.
@@ -132,7 +164,11 @@ namespace floppy::filesystem
       * - <b>Windows</b>: <tt>%LOCALAPPDATA%</tt>\\<tt>project_path</tt>\\data, for example: <tt>C:\\Users\\Alice\\AppData\\Roaming\\Foo Corp\\Bar App\\data</tt>
       * \return The path to the project's data_local directory.
       */
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto data_local_dir() const -> std::filesystem::path const&;
+#else
+     [[nodiscard]] std::filesystem::path data_local_dir() const;
+#endif
 
      /**
       * \brief Returns the path to the project's preference directory.
@@ -142,7 +178,11 @@ namespace floppy::filesystem
       * - <b>Windows</b>: <tt>%LOCALAPPDATA%</tt>\\<tt>project_path</tt>\\config, for example: <tt>C:\\Users\\Alice\\AppData\\Roaming\\Foo Corp\\Bar App\\config</tt>
       * \return
       */
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto preference_dir() const -> std::filesystem::path const&;
+#else
+     [[nodiscard]] std::filesystem::path preference_dir() const;
+#endif
 
      /**
       * \brief Returns the path to the project's runtime directory.
@@ -156,7 +196,11 @@ namespace floppy::filesystem
       * \note Only for Linux.
       * \return The path to the project's runtime directory or <tt>none</tt> if it is not available.
       */
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto runtime_dir() const -> option<std::filesystem::path> const&;
+#else
+     [[nodiscard]] option<std::filesystem::path> runtime_dir() const;
+#endif
 
      /**
       * \brief Returns the path to the project's state directory.
@@ -170,7 +214,11 @@ namespace floppy::filesystem
       * \note Only for Linux.
       * \return The path to the project's state directory or <tt>none</tt> if it is not available.
       */
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto state_dir() const -> option<std::filesystem::path> const&;
+#else
+     [[nodiscard]] option<std::filesystem::path> state_dir() const;
+#endif
 
      /// \brief Shortcut for \ref get() function.
      /// \param directory_type The directory type.
@@ -178,7 +226,11 @@ namespace floppy::filesystem
      /// \throws std::system_error If the directory does not exist on this platform.
      /// \note Use explicit functions such as \ref config_dir() to avoid this exception.
      /// \see get
+#ifndef DOXYGEN_GENERATING_OUTPUT
      [[nodiscard]] auto operator[](dir directory_type) const noexcept(false) -> std::filesystem::path;
+#else
+     [[nodiscard]] std::filesystem::path operator[](dir directory_type) const;
+#endif
 
     private:
      std::filesystem::path m_project_path;

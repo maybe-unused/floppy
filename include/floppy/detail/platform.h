@@ -146,7 +146,11 @@ namespace floppy
 
     /// \brief Returns platform information for the current platform at compile-time.
     /// \see floppy::current_platform
+#ifndef DOXYGEN_GENERATING_OUTPUT
     [[nodiscard]] static consteval inline auto current() noexcept -> platform
+#else
+    [[nodiscard]] static constexpr inline platform current() noexcept
+#endif
     {
       return platform {
         platform::current_system(),   platform::current_architecture(),
@@ -160,7 +164,11 @@ namespace floppy
     /// \param u Value.
     /// \return Value with swapped endianness.
     template <typename T>
-    [[nodiscard]] static constexpr auto swap_endian(T u) -> T {
+#ifndef DOXYGEN_GENERATING_OUTPUT
+    [[nodiscard]] static constexpr auto swap_endian(T u) noexcept -> T {
+#else
+    [[nodiscard]] static constexpr T swap_endian(T u) noexcept {
+#endif
       static_assert(std::numeric_limits<unsigned char>::digits == 8, "unsigned char is not 8 bits");
       union {
         T u;

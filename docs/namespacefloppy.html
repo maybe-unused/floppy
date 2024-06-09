@@ -108,10 +108,6 @@
               class <a href="classfloppy_1_1platform.html" class="m-doc">platform</a>
             </dt>
             <dd>Platform information.</dd>
-            <dt>
-              struct <a href="structfloppy_1_1source__location.html" class="m-doc">source_location</a>
-            </dt>
-            <dd>Provides information about the location of the current source file.</dd>
           </dl>
         </section>
         <section id="typedef-members">
@@ -190,60 +186,49 @@
           <h2><a href="#func-members">Functions</a></h2>
           <dl class="m-doc">
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#abb16b244632f4ab5f6fd117e5a75473e" class="m-doc">unreachable</a>(</span><span class="m-doc-wrap">) -&gt; void -&gt; auto</span>
+              <span class="m-doc-wrap-bumper">void <a href="#a98a996adc7ad22a8dc75b936e74b73ca" class="m-doc">unreachable</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
             <dd>Invokes undefined behavior.</dd>
             <dt>
-              <div class="m-doc-template">template&lt;concepts::enum_ T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a0424b6d00fac262e879df80e00da46b6" class="m-doc">to_underlying</a>(</span><span class="m-doc-wrap">T t) noexcept -&gt; std::underlying_type_t&lt; T &gt; -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
-            </dt>
-            <dd>Converts enum type to its underlying type.</dd>
-            <dt id="addcab788066267803ed3875e35a0042f">
-              <div class="m-doc-template">template&lt;class E, class T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#addcab788066267803ed3875e35a0042f" class="m-doc-self">operator&lt;&lt;</a>(</span><span class="m-doc-wrap">std::basic_ostream&lt;E, T&gt;&amp; os,
-              <a href="structfloppy_1_1source__location.html" class="m-doc">source_<wbr />location</a> const&amp; loc) -&gt; std::basic_ostream&lt; E, T &gt; &amp; -&gt; auto</span>
-            </dt>
-            <dd>Stream adaptor for <a href="structfloppy_1_1source__location.html" class="m-doc">source_<wbr />location</a>.</dd>
-            <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a6a778dde2b29125b63c1101d454f3e76" class="m-doc">panic</a>(</span><span class="m-doc-wrap">std::string_view message,
-              <a href="structfloppy_1_1source__location.html" class="m-doc">source_<wbr />location</a> location = source_location::current()) -&gt; void -&gt; auto</span>
+              <a href="structsource__location.html" class="m-doc">source_<wbr />location</a> location = source_location::current()) -&gt; void -&gt; auto</span>
             </dt>
             <dd>Terminates program execution with detailed error message.</dd>
             <dt>
               <div class="m-doc-template">template&lt;concepts::num T, concepts::num U&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a0bbd17556e1675c4a05316d9f6743342" class="m-doc">narrow_cast</a>(</span><span class="m-doc-wrap">U&amp;&amp; u) noexcept -&gt; T -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab152ec4309a24545e4c89219c67a33e2" class="m-doc">narrow_cast</a>(</span><span class="m-doc-wrap">U&amp;&amp; u) -&gt; T <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
             </dt>
             <dd>Converts number type to another number type.</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#afcdfac7e6f7b9774e157db98c0d635c9" class="m-doc">eq</a>(</span><span class="m-doc-wrap">T a,
-              T b) -&gt; bool -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#aef90d2a95bc9f575f0fb5595bc4330c4" class="m-doc">eq</a>(</span><span class="m-doc-wrap">T a,
+              T b) -&gt; bool <span class="m-label m-flat m-primary">constexpr</span></span>
             </dt>
             <dd>Returns true if numbers are equal.</dd>
             <dt>
               <div class="m-doc-template">template&lt;concepts::num T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a66f562bcefd717de48a0deaa80f9776a" class="m-doc">null</a>(</span><span class="m-doc-wrap">T num) -&gt; bool -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#aee60f957aa9158752d45fe502e94ccb4" class="m-doc">null</a>(</span><span class="m-doc-wrap">T num) -&gt; bool <span class="m-label m-flat m-primary">constexpr</span></span>
             </dt>
             <dd>Returns true if type is equal to zero (number specific)</dd>
             <dt>
               <div class="m-doc-template">template&lt;concepts::num T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#aa722c8b624bbd64c4cbdd47bfd285c5d" class="m-doc">to_radians</a>(</span><span class="m-doc-wrap">T deg) -&gt; T -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#af76fbc2a9979264e85a20172bc12dc02" class="m-doc">to_radians</a>(</span><span class="m-doc-wrap">T deg) -&gt; T <span class="m-label m-flat m-primary">constexpr</span></span>
             </dt>
             <dd>Converts radians to degrees.</dd>
             <dt>
               <div class="m-doc-template">template&lt;concepts::num T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#af2b111b7ea138d5c9b5e0a2aaaf8e98d" class="m-doc">to_degrees</a>(</span><span class="m-doc-wrap">T rad) -&gt; T -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a0fe6456458cb9bde3010c481a34f6baa" class="m-doc">to_degrees</a>(</span><span class="m-doc-wrap">T rad) -&gt; T <span class="m-label m-flat m-primary">constexpr</span></span>
             </dt>
             <dd>Converts degrees to radians.</dd>
             <dt>
               <div class="m-doc-template">template&lt;std::floating_point T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a42b9d9a7dff8b3db60c6e956976745c3" class="m-doc">log</a>(</span><span class="m-doc-wrap">T base,
-              T num) -&gt; T -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a802fec5cf8091661192e653a7623ff88" class="m-doc">log</a>(</span><span class="m-doc-wrap">T base,
+              T num) -&gt; T <span class="m-label m-flat m-primary">constexpr</span></span>
             </dt>
             <dd>Returns logarithm of a number in a given base.</dd>
             <dt>
               <div class="m-doc-template">template&lt;concepts::num T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a1de30a44dfef08af9546a545e064b4bb" class="m-doc">log</a>(</span><span class="m-doc-wrap">T num) -&gt; T -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a31048739fe2d1f42ed622f05f4f2602a" class="m-doc">log</a>(</span><span class="m-doc-wrap">T num) -&gt; T <span class="m-label m-flat m-primary">constexpr</span></span>
             </dt>
             <dd>Returns natural logarithm of a number.</dd>
             <dt>
@@ -309,7 +294,7 @@
             <dd>Literal operator for <code>void*</code>.</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename C, floppy::traits::detail::derived_from_formattable&lt;C&gt; T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a5d45337f1be6120ab3a8e3a5fcb25d3c" class="m-doc">str_cast</a>(</span><span class="m-doc-wrap">T const&amp; t) noexcept -&gt; std::string -&gt; auto</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5a25401b2f4525cd57f39b02fa195618" class="m-doc">str_cast</a>(</span><span class="m-doc-wrap">T const&amp; t) -&gt; std::string <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
             </dt>
             <dd>Casts types which derives from <code>formattable_base&lt;C&gt;</code> to string.</dd>
           </dl>
@@ -334,53 +319,17 @@
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-doc-details" id="abb16b244632f4ab5f6fd117e5a75473e"><div>
+          <section class="m-doc-details" id="a98a996adc7ad22a8dc75b936e74b73ca"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#abb16b244632f4ab5f6fd117e5a75473e" class="m-doc-self">unreachable</a>(</span><span class="m-doc-wrap">) -&gt; void</span></span>
+              <span class="m-doc-wrap-bumper">void floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a98a996adc7ad22a8dc75b936e74b73ca" class="m-doc-self">unreachable</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
             <p>Invokes undefined behavior.</p>
 <p><a href="https://en.cppreference.com/w/cpp/utility/unreachable">https:/<wbr />/<wbr />en.cppreference.com/<wbr />w/<wbr />cpp/<wbr />utility/<wbr />unreachable</a></p>
           </div></section>
-          <section class="m-doc-details" id="a0424b6d00fac262e879df80e00da46b6"><div>
-            <h3>
-              <div class="m-doc-template">
-                template&lt;concepts::enum_ T&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0424b6d00fac262e879df80e00da46b6" class="m-doc-self">to_underlying</a>(</span><span class="m-doc-wrap">T t) noexcept -&gt; std::underlying_type_t&lt; T &gt; <span class="m-label m-primary">constexpr</span></span></span>
-            </h3>
-            <p>Converts enum type to its underlying type.</p>
-            <table class="m-table m-fullwidth m-flat">
-              <thead>
-                <tr><th colspan="2">Template parameters</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="width: 1%">T</td>
-                  <td>Enum type. Must be an enum type.</td>
-                </tr>
-              </tbody>
-              <thead>
-                <tr><th colspan="2">Parameters</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>t</td>
-                  <td>Enum value</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>Returns</th>
-                  <td>Underlying value of the enum</td>
-                </tr>
-              </tfoot>
-            </table>
-<p>This is backport of C++20 (23) std::to_underlying.</p><aside class="m-note m-default"><h4>See also</h4><p><a href="https://en.cppreference.com/w/cpp/utility/to_underlying">https://en.cppreference.com/w/cpp/utility/to_<wbr />underlying</a></p></aside>
-          </div></section>
           <section class="m-doc-details" id="a6a778dde2b29125b63c1101d454f3e76"><div>
             <h3>
               <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6a778dde2b29125b63c1101d454f3e76" class="m-doc-self">panic</a>(</span><span class="m-doc-wrap">std::string_view message,
-              <a href="structfloppy_1_1source__location.html" class="m-doc">source_<wbr />location</a> location = source_location::current()) -&gt; void</span></span>
+              <a href="structsource__location.html" class="m-doc">source_<wbr />location</a> location = source_location::current()) -&gt; void</span></span>
             </h3>
             <p>Terminates program execution with detailed error message.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -400,12 +349,12 @@
             </table>
 <p>Logs the error message and terminates program execution via <code>std::terminate</code></p><aside class="m-note m-info"><h4>Note</h4><p>You can catch the panic via <code>std::set_terminate</code> custom handler, but it&#x27;s not recommended.</p></aside><aside class="m-note m-default"><h4>See also</h4><p><a href="https://en.cppreference.com/w/cpp/error/terminate">https:/<wbr />/<wbr />en.cppreference.com/<wbr />w/<wbr />cpp/<wbr />error/<wbr />terminate</a></p><p><a href="https://en.cppreference.com/w/cpp/error/terminate_handler">https://en.cppreference.com/w/cpp/error/terminate_<wbr />handler</a></p></aside>
           </div></section>
-          <section class="m-doc-details" id="a0bbd17556e1675c4a05316d9f6743342"><div>
+          <section class="m-doc-details" id="ab152ec4309a24545e4c89219c67a33e2"><div>
             <h3>
               <div class="m-doc-template">
                 template&lt;concepts::num T, concepts::num U&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0bbd17556e1675c4a05316d9f6743342" class="m-doc-self">narrow_cast</a>(</span><span class="m-doc-wrap">U&amp;&amp; u) noexcept -&gt; T <span class="m-label m-primary">constexpr</span></span></span>
+              <span class="m-doc-wrap-bumper">T floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab152ec4309a24545e4c89219c67a33e2" class="m-doc-self">narrow_cast</a>(</span><span class="m-doc-wrap">U&amp;&amp; u) <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
             </h3>
             <p>Converts number type to another number type.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -440,13 +389,13 @@
             </table>
 <aside class="m-note m-danger"><h4>Warning</h4><p>This function doesn&#x27;t check for overflow or underflow.</p></aside>
           </div></section>
-          <section class="m-doc-details" id="afcdfac7e6f7b9774e157db98c0d635c9"><div>
+          <section class="m-doc-details" id="aef90d2a95bc9f575f0fb5595bc4330c4"><div>
             <h3>
               <div class="m-doc-template">
                 template&lt;typename T&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#afcdfac7e6f7b9774e157db98c0d635c9" class="m-doc-self">eq</a>(</span><span class="m-doc-wrap">T a,
-              T b) -&gt; bool <span class="m-label m-primary">constexpr</span></span></span>
+              <span class="m-doc-wrap-bumper">bool floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aef90d2a95bc9f575f0fb5595bc4330c4" class="m-doc-self">eq</a>(</span><span class="m-doc-wrap">T a,
+              T b) <span class="m-label m-primary">constexpr</span></span></span>
             </h3>
             <p>Returns true if numbers are equal.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -479,14 +428,14 @@
                 </tr>
               </tfoot>
             </table>
-<p>Compares floating point values using formula <code>|a - b| &lt;= epsilon</code></p>
+<p>Compares floating point values using formula <code>|a - b| &lt;= epsilon</code></p><aside class="m-note m-default"><h4>See also</h4><p><a href="namespacefloppy.html#aee60f957aa9158752d45fe502e94ccb4" class="m-doc">null</a></p></aside>
           </div></section>
-          <section class="m-doc-details" id="a66f562bcefd717de48a0deaa80f9776a"><div>
+          <section class="m-doc-details" id="aee60f957aa9158752d45fe502e94ccb4"><div>
             <h3>
               <div class="m-doc-template">
                 template&lt;concepts::num T&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a66f562bcefd717de48a0deaa80f9776a" class="m-doc-self">null</a>(</span><span class="m-doc-wrap">T num) -&gt; bool <span class="m-label m-primary">constexpr</span></span></span>
+              <span class="m-doc-wrap-bumper">bool floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aee60f957aa9158752d45fe502e94ccb4" class="m-doc-self">null</a>(</span><span class="m-doc-wrap">T num) <span class="m-label m-primary">constexpr</span></span></span>
             </h3>
             <p>Returns true if type is equal to zero (number specific)</p>
             <table class="m-table m-fullwidth m-flat">
@@ -515,13 +464,14 @@
                 </tr>
               </tfoot>
             </table>
+<aside class="m-note m-default"><h4>See also</h4><p><a href="namespacefloppy.html#aef90d2a95bc9f575f0fb5595bc4330c4" class="m-doc">eq</a></p></aside>
           </div></section>
-          <section class="m-doc-details" id="aa722c8b624bbd64c4cbdd47bfd285c5d"><div>
+          <section class="m-doc-details" id="af76fbc2a9979264e85a20172bc12dc02"><div>
             <h3>
               <div class="m-doc-template">
                 template&lt;concepts::num T&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa722c8b624bbd64c4cbdd47bfd285c5d" class="m-doc-self">to_radians</a>(</span><span class="m-doc-wrap">T deg) -&gt; T <span class="m-label m-primary">constexpr</span></span></span>
+              <span class="m-doc-wrap-bumper">T floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af76fbc2a9979264e85a20172bc12dc02" class="m-doc-self">to_radians</a>(</span><span class="m-doc-wrap">T deg) <span class="m-label m-primary">constexpr</span></span></span>
             </h3>
             <p>Converts radians to degrees.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -541,13 +491,14 @@
                 </tr>
               </tfoot>
             </table>
+<aside class="m-note m-default"><h4>See also</h4><p><a href="namespacefloppy.html#af76fbc2a9979264e85a20172bc12dc02" class="m-doc">to_<wbr />radians</a></p></aside>
           </div></section>
-          <section class="m-doc-details" id="af2b111b7ea138d5c9b5e0a2aaaf8e98d"><div>
+          <section class="m-doc-details" id="a0fe6456458cb9bde3010c481a34f6baa"><div>
             <h3>
               <div class="m-doc-template">
                 template&lt;concepts::num T&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af2b111b7ea138d5c9b5e0a2aaaf8e98d" class="m-doc-self">to_degrees</a>(</span><span class="m-doc-wrap">T rad) -&gt; T <span class="m-label m-primary">constexpr</span></span></span>
+              <span class="m-doc-wrap-bumper">T floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0fe6456458cb9bde3010c481a34f6baa" class="m-doc-self">to_degrees</a>(</span><span class="m-doc-wrap">T rad) <span class="m-label m-primary">constexpr</span></span></span>
             </h3>
             <p>Converts degrees to radians.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -567,14 +518,15 @@
                 </tr>
               </tfoot>
             </table>
+<aside class="m-note m-default"><h4>See also</h4><p><a href="namespacefloppy.html#a0fe6456458cb9bde3010c481a34f6baa" class="m-doc">to_<wbr />degrees</a></p></aside>
           </div></section>
-          <section class="m-doc-details" id="a42b9d9a7dff8b3db60c6e956976745c3"><div>
+          <section class="m-doc-details" id="a802fec5cf8091661192e653a7623ff88"><div>
             <h3>
               <div class="m-doc-template">
                 template&lt;std::floating_point T&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a42b9d9a7dff8b3db60c6e956976745c3" class="m-doc-self">log</a>(</span><span class="m-doc-wrap">T base,
-              T num) -&gt; T <span class="m-label m-primary">constexpr</span></span></span>
+              <span class="m-doc-wrap-bumper">T floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a802fec5cf8091661192e653a7623ff88" class="m-doc-self">log</a>(</span><span class="m-doc-wrap">T base,
+              T num) <span class="m-label m-primary">constexpr</span></span></span>
             </h3>
             <p>Returns logarithm of a number in a given base.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -608,12 +560,12 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-doc-details" id="a1de30a44dfef08af9546a545e064b4bb"><div>
+          <section class="m-doc-details" id="a31048739fe2d1f42ed622f05f4f2602a"><div>
             <h3>
               <div class="m-doc-template">
                 template&lt;concepts::num T&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1de30a44dfef08af9546a545e064b4bb" class="m-doc-self">log</a>(</span><span class="m-doc-wrap">T num) -&gt; T <span class="m-label m-primary">constexpr</span></span></span>
+              <span class="m-doc-wrap-bumper">T floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a31048739fe2d1f42ed622f05f4f2602a" class="m-doc-self">log</a>(</span><span class="m-doc-wrap">T num) <span class="m-label m-primary">constexpr</span></span></span>
             </h3>
             <p>Returns natural logarithm of a number.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -643,12 +595,12 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-doc-details" id="a5d45337f1be6120ab3a8e3a5fcb25d3c"><div>
+          <section class="m-doc-details" id="a5a25401b2f4525cd57f39b02fa195618"><div>
             <h3>
               <div class="m-doc-template">
                 template&lt;typename C, floppy::traits::detail::derived_from_formattable&lt;C&gt; T&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5d45337f1be6120ab3a8e3a5fcb25d3c" class="m-doc-self">str_cast</a>(</span><span class="m-doc-wrap">T const&amp; t) noexcept -&gt; std::string</span></span>
+              <span class="m-doc-wrap-bumper">std::string floppy::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5a25401b2f4525cd57f39b02fa195618" class="m-doc-self">str_cast</a>(</span><span class="m-doc-wrap">T const&amp; t) <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
             </h3>
             <p>Casts types which derives from <code>formattable_base&lt;C&gt;</code> to string.</p>
             <table class="m-table m-fullwidth m-flat">

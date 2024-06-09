@@ -84,7 +84,11 @@ namespace floppy::traits
     /// \brief Returns <i>mutable pointer</i> to the singleton instance.
     /// \return Mutable pointer to the singleton instance.
     /// \see ptr
+#ifndef DOXYGEN_GENERATING_OUTPUT
     [[nodiscard]] static auto ptr_mut() noexcept -> T* {
+#else
+    [[nodiscard]] constexpr static T* ptr_mut() noexcept {
+#endif
       static T instance;
       return &instance;
     }
@@ -92,17 +96,29 @@ namespace floppy::traits
     /// \brief Returns <i>pointer</i> to the singleton instance.
     /// \return Pointer to the singleton instance.
     /// \see ptr_mut
+#ifndef DOXYGEN_GENERATING_OUTPUT
     [[nodiscard]] static inline auto ptr() noexcept -> T const* { return ptr_mut(); }
+#else
+    [[nodiscard]] static constexpr inline T const* ptr() noexcept { return ptr_mut(); }
+#endif
 
     /// \brief Returns <i>constant reference</i> to the singleton instance.
     /// \return Constant reference to the singleton instance.
     /// \see ref_mut
+#ifndef DOXYGEN_GENERATING_OUTPUT
     [[nodiscard]] static inline auto ref() noexcept -> T const& { return *ptr(); }
+#else
+    [[nodiscard]] static constexpr inline T const& ref() noexcept { return *ptr(); }
+#endif
 
     /// \brief Returns <i>mutable reference</i> to the singleton instance.
     /// \return Mutable reference to the singleton instance.
     /// \see ref
+#ifndef DOXYGEN_GENERATING_OUTPUT
     [[nodiscard]] static inline auto ref_mut() noexcept -> T& { return *ptr_mut(); }
+#else
+    [[nodiscard]] static constexpr inline T& ref_mut() noexcept { return *ptr_mut(); }
+#endif
 
     singleton() = default;
   };
@@ -145,12 +161,20 @@ namespace floppy::traits
     {
       /// \brief Returns string representation of the object.
       /// \return String representation of the object.
-      [[nodiscard]] virtual std::basic_string<C> to_string() const = 0;
+#ifndef DOXYGEN_GENERATING_OUTPUT
+      [[nodiscard]] virtual auto to_string() const -> std::basic_string<C> = 0;
+#else
+      [[nodiscard]] virtual std::string to_string() const = 0;
+#endif
 
       /// \brief Returns string representation of the object.
       /// \return String representation of the object.
       /// \see to_string
+#ifndef DOXYGEN_GENERATING_OUTPUT
       [[nodiscard]] explicit operator std::basic_string<C>() const { return this->to_string(); }
+#else
+      [[nodiscard]] explicit operator std::string() const { return this->to_string(); }
+#endif
     };
 
     /// \brief Check if T is derived from formattable_base<C>.
@@ -182,7 +206,11 @@ namespace floppy
   /// \tparam T Type to cast.
   /// \see floppy::traits::formattable
   template <typename C, floppy::traits::detail::derived_from_formattable<C> T>
+#ifndef DOXYGEN_GENERATING_OUTPUT
   [[nodiscard]] auto str_cast(T const& t) noexcept -> std::string {
+#else
+  [[nodiscard]] constexpr std::string str_cast(T const& t) noexcept {
+#endif
     return (std::string)t;
   }
 } // namespace floppy

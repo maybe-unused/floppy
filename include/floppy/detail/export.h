@@ -42,20 +42,52 @@ namespace floppy {
         , project_name(stringify$(CMAKE_TARGET_NAME))
       {}
 
-      /// \brief Project name constant-expression string. Always equals to \c floppy.
+      /// \brief Project name constant-expression string. Always equals to <b>floppy</b>.
+#ifndef DOXYGEN_GENERATING_OUTPUT
       [[nodiscard]] constexpr inline auto name() const noexcept -> std::string_view { return this->project_name; }
+#else
+      [[nodiscard]] constexpr inline std::string_view name() const noexcept { return this->project_name; }
+#endif
 
       /// \brief Returns constant expression version number major as an integer.
+      /// \see version_minor
+      /// \see version_patch
+      /// \see version_string
+#ifndef DOXYGEN_GENERATING_OUTPUT
       [[nodiscard]] constexpr inline auto version_major() const noexcept -> int { return this->major; }
+#else
+      [[nodiscard]] constexpr inline int version_major() const noexcept { return this->major; }
+#endif
 
       /// \brief Returns constant expression version number minor as an integer.
+      /// \see version_major
+      /// \see version_patch
+      /// \see version_string
+#ifndef DOXYGEN_GENERATING_OUTPUT
       [[nodiscard]] constexpr inline auto version_minor() const noexcept -> int { return this->minor; }
+#else
+      [[nodiscard]] constexpr inline int version_minor() const noexcept { return this->minor; }
+#endif
 
       /// \brief Returns constant expression version number patch as an integer.
+      /// \see version_major
+      /// \see version_minor
+      /// \see version_string
+#ifndef DOXYGEN_GENERATING_OUTPUT
       [[nodiscard]] constexpr inline auto version_patch() const noexcept -> int { return this->patch; }
+#else
+      [[nodiscard]] constexpr inline int version_patch() const noexcept { return this->patch; }
+#endif
 
       /// \brief Returns constant expression version string in <tt>XX.YY.ZZ</tt> format.
+      /// \see version_major
+      /// \see version_minor
+      /// \see version_patch
+#ifndef DOXYGEN_GENERATING_OUTPUT
       [[nodiscard]] constexpr inline auto version_string() const noexcept -> std::string_view {
+#else
+      [[nodiscard]] constexpr inline std::string_view version_string() const noexcept {
+#endif
         return {
           stringify$(CMAKE_PROJECT_VERSION_MAJOR) "."
           stringify$(CMAKE_PROJECT_VERSION_MINOR) "."

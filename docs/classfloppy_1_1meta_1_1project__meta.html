@@ -71,24 +71,24 @@
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt id="a1f67d5b82fcb2d90d2fc88fa40125b1a">
-              <span class="m-doc-wrap-bumper">auto <a href="#a1f67d5b82fcb2d90d2fc88fa40125b1a" class="m-doc-self">name</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; std::string_view -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            <dt id="a6dbef6eba3f6e10e6214264935416840">
+              <span class="m-doc-wrap-bumper">auto <a href="#a6dbef6eba3f6e10e6214264935416840" class="m-doc-self">name</a>(</span><span class="m-doc-wrap">) const -&gt; std::string_view <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
             </dt>
-            <dd>Project name constant-expression string. Always equals to <code>floppy</code>.</dd>
-            <dt id="a57f41f97e95624674d3d957ebaf1e4b3">
-              <span class="m-doc-wrap-bumper">auto <a href="#a57f41f97e95624674d3d957ebaf1e4b3" class="m-doc-self">version_major</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; int -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            <dd>Project name constant-expression string. Always equals to <strong>floppy</strong>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#abe1ec82d8b728272d8b3ce40e4ddc8e0" class="m-doc">version_major</a>(</span><span class="m-doc-wrap">) const -&gt; int <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
             </dt>
             <dd>Returns constant expression version number major as an integer.</dd>
-            <dt id="a320fa960819065f3c892c97505e71b60">
-              <span class="m-doc-wrap-bumper">auto <a href="#a320fa960819065f3c892c97505e71b60" class="m-doc-self">version_minor</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; int -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a614262700ff1aed2ee3370d9f86b12ea" class="m-doc">version_minor</a>(</span><span class="m-doc-wrap">) const -&gt; int <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
             </dt>
             <dd>Returns constant expression version number minor as an integer.</dd>
-            <dt id="aa1ff66d88c522759681e901d4b42ff5c">
-              <span class="m-doc-wrap-bumper">auto <a href="#aa1ff66d88c522759681e901d4b42ff5c" class="m-doc-self">version_patch</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; int -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a6cebc8aa1cd6b4b81e2314f09ef9d704" class="m-doc">version_patch</a>(</span><span class="m-doc-wrap">) const -&gt; int <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
             </dt>
             <dd>Returns constant expression version number patch as an integer.</dd>
-            <dt id="ac7162970e97a617c60cbe6daa9facb86">
-              <span class="m-doc-wrap-bumper">auto <a href="#ac7162970e97a617c60cbe6daa9facb86" class="m-doc-self">version_string</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; std::string_view -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a1596285c57eb039bebcdc32c0929b6c7" class="m-doc">version_string</a>(</span><span class="m-doc-wrap">) const -&gt; std::string_view <span class="m-label m-flat m-primary">constexpr</span> <span class="m-label m-flat m-success">noexcept</span></span>
             </dt>
             <dd>Returns constant expression version string in <code>XX.YY.ZZ</code> format.</dd>
           </dl>
@@ -101,6 +101,34 @@
             </h3>
             <p>Creates version object at compile-time.</p>
 <aside class="m-note m-default"><h4>See also</h4><p><a href="classfloppy_1_1meta_1_1project__meta.html#a5281e2015ff4acc5ee192284723e7731" class="m-doc">project_<wbr />name</a></p></aside>
+          </div></section>
+          <section class="m-doc-details" id="abe1ec82d8b728272d8b3ce40e4ddc8e0"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int floppy::<wbr />meta::<wbr />project_meta::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#abe1ec82d8b728272d8b3ce40e4ddc8e0" class="m-doc-self">version_major</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>Returns constant expression version number major as an integer.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a href="classfloppy_1_1meta_1_1project__meta.html#a614262700ff1aed2ee3370d9f86b12ea" class="m-doc">version_<wbr />minor</a></p><p><a href="classfloppy_1_1meta_1_1project__meta.html#a6cebc8aa1cd6b4b81e2314f09ef9d704" class="m-doc">version_<wbr />patch</a></p><p><a href="classfloppy_1_1meta_1_1project__meta.html#a1596285c57eb039bebcdc32c0929b6c7" class="m-doc">version_<wbr />string</a></p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a614262700ff1aed2ee3370d9f86b12ea"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int floppy::<wbr />meta::<wbr />project_meta::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a614262700ff1aed2ee3370d9f86b12ea" class="m-doc-self">version_minor</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>Returns constant expression version number minor as an integer.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a href="classfloppy_1_1meta_1_1project__meta.html#abe1ec82d8b728272d8b3ce40e4ddc8e0" class="m-doc">version_<wbr />major</a></p><p><a href="classfloppy_1_1meta_1_1project__meta.html#a6cebc8aa1cd6b4b81e2314f09ef9d704" class="m-doc">version_<wbr />patch</a></p><p><a href="classfloppy_1_1meta_1_1project__meta.html#a1596285c57eb039bebcdc32c0929b6c7" class="m-doc">version_<wbr />string</a></p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a6cebc8aa1cd6b4b81e2314f09ef9d704"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int floppy::<wbr />meta::<wbr />project_meta::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6cebc8aa1cd6b4b81e2314f09ef9d704" class="m-doc-self">version_patch</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>Returns constant expression version number patch as an integer.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a href="classfloppy_1_1meta_1_1project__meta.html#abe1ec82d8b728272d8b3ce40e4ddc8e0" class="m-doc">version_<wbr />major</a></p><p><a href="classfloppy_1_1meta_1_1project__meta.html#a614262700ff1aed2ee3370d9f86b12ea" class="m-doc">version_<wbr />minor</a></p><p><a href="classfloppy_1_1meta_1_1project__meta.html#a1596285c57eb039bebcdc32c0929b6c7" class="m-doc">version_<wbr />string</a></p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a1596285c57eb039bebcdc32c0929b6c7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">std::string_view floppy::<wbr />meta::<wbr />project_meta::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1596285c57eb039bebcdc32c0929b6c7" class="m-doc-self">version_string</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-primary">constexpr</span> <span class="m-label m-success">noexcept</span></span></span>
+            </h3>
+            <p>Returns constant expression version string in <code>XX.YY.ZZ</code> format.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a href="classfloppy_1_1meta_1_1project__meta.html#abe1ec82d8b728272d8b3ce40e4ddc8e0" class="m-doc">version_<wbr />major</a></p><p><a href="classfloppy_1_1meta_1_1project__meta.html#a614262700ff1aed2ee3370d9f86b12ea" class="m-doc">version_<wbr />minor</a></p><p><a href="classfloppy_1_1meta_1_1project__meta.html#a6cebc8aa1cd6b4b81e2314f09ef9d704" class="m-doc">version_<wbr />patch</a></p></aside>
           </div></section>
         </section>
       </div>

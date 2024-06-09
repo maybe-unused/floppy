@@ -25,7 +25,11 @@ namespace floppy
 
       template <typename C, range R>
         requires std::convertible_to<range_value_t<R>, typename C::value_type>
+#ifndef DOXYGEN_GENERATING_OUTPUT
       auto operator|(R&& r, to_helper<C>) -> C
+#else
+      C operator|(R&& r, to_helper<C>)
+#endif
       {
         return C { r.begin(), r.end() };
       }
@@ -53,7 +57,11 @@ namespace floppy
    * \brief Invokes undefined behavior.
    * \details https://en.cppreference.com/w/cpp/utility/unreachable
    */
+#ifndef DOXYGEN_GENERATING_OUTPUT
   [[noreturn]] inline auto unreachable() -> void {
+#else
+  inline void unreachable() {
+#endif
     #if defined(FLOPPY_COMPILER_MSVC) && !defined(FLOPPY_COMPILER_CLANG)
         __assume(false);
     #else
@@ -70,7 +78,11 @@ namespace floppy
    * \sa https://en.cppreference.com/w/cpp/utility/to_underlying
    */
   template <concepts::enum_ T>
+#ifndef DOXYGEN_GENERATING_OUTPUT
   constexpr inline auto to_underlying(T t) noexcept -> std::underlying_type_t<T> {
+#else
+  constexpr inline std::underlying_type_t<T> to_underlying(T t) noexcept
+#endif
     return static_cast<std::underlying_type_t<T>>(t);
   }
 
@@ -170,21 +182,41 @@ namespace floppy
       {}
 
       /// \brief Returns the file name.
+#ifndef DOXYGEN_GENERATING_OUTPUT
       [[nodiscard]] constexpr auto file_name() const noexcept -> char const* { return this->m_file; }
+#else
+      [[nodiscard]] constexpr char const* file_name() const noexcept { return this->m_file; }
+#endif
 
       /// \brief Returns the function name. NULL if unknown or not available on compiler
+#ifndef DOXYGEN_GENERATING_OUTPUT
       [[nodiscard]] constexpr auto function_name() const noexcept -> char const* { return this->m_function; }
+#else
+      [[nodiscard]] constexpr char const* function_name() const noexcept { return this->m_function; }
+#endif
 
       /// \brief Returns the line number. 0 if unknown or not available on compiler
-      [[nodiscard]] constexpr auto line() const noexcept { return this->m_line; }
+#ifndef DOXYGEN_GENERATING_OUTPUT
+      [[nodiscard]] constexpr auto line() const noexcept -> uint_least32_t { return this->m_line; }
+#else
+      [[nodiscard]] constexpr uint_least32_t line() const noexcept { return this->m_line; }
+#endif
 
       /// \brief Returns the column number. 0 if unknown or not available on compiler
-      [[nodiscard]] constexpr auto column() const noexcept { return this->m_column; }
+#ifndef DOXYGEN_GENERATING_OUTPUT
+      [[nodiscard]] constexpr auto column() const noexcept -> uint_least32_t { return this->m_column; }
+#else
+      [[nodiscard]] constexpr uint_least32_t column() const noexcept { return this->m_column; }
+#endif
     };
 
     /// \brief Stream adaptor for source_location
     template <class E, class T>
+#ifndef DOXYGEN_GENERATING_OUTPUT
     auto operator<<(std::basic_ostream<E, T>& os, source_location const& loc) -> std::basic_ostream<E, T>&
+#else
+    std::basic_ostream<E, T>& operator<<(std::basic_ostream<E, T>& os, source_location const& loc)
+#endif
     {
       os.width(0);
       if(loc.line() == 0)
