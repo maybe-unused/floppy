@@ -18,96 +18,108 @@ namespace floppy
     /// \brief Operating systems supported by the library.
     enum class [[maybe_unused]] operating_system
     {
-      windows,           ///< Microsoft Windows
-      gnu_linux,         ///< GNU/Linux
-      darwin,            ///< Apple macOS
-      android,           ///< Android
-      cygwin,            ///< Cygwin
-      freebsd,           ///< FreeBSD
-      dragonfly,         ///< DragonFly BSD
-      netbsd,            ///< NetBSD
-      openbsd,           ///< OpenBSD
-      unknown,           ///< Unknown OS - unable to determine
-      linux_ = gnu_linux,///< Alias for GNU/Linux
-      macos = darwin     ///< Alias for Apple macOS
+      windows,           ///< Microsoft Windows. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_WINDOWS</tt></i>.
+      gnu_linux,         ///< GNU/Linux. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_LINUX</tt></i>.
+      darwin,            ///< Apple macOS. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_DARWIN</tt></i>.
+      android,           ///< Android. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_ANDROID</tt></i>.
+      cygwin,            ///< Cygwin environment. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_CYGWIN</tt></i>.
+      freebsd,           ///< FreeBSD. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_FREEBSD</tt></i>.
+      dragonfly,         ///< DragonFly BSD. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_DRAGONFLY</tt></i>.
+      netbsd,            ///< NetBSD. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_NETBSD</tt></i>.
+      openbsd,           ///< OpenBSD. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_OPENBSD</tt></i>.
+      unknown,           ///< Unknown OS - unable to determine. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_UNKNOWN</tt></i>.
+      linux_ = gnu_linux,///< Alias for GNU/Linux.
+      macos = darwin     ///< Alias for Apple macOS.
     };
 
     /// \brief Architectures supported by the library.
     enum class [[maybe_unused]] arch
     {
-      x86_32,       ///< 32-bit x86
-      x86_64,       ///< 64-bit x86
-      alpha,        ///< Alpha
-      arm,          ///< ARM (any)
-      bfin,         ///< Blackfin
-      convex,       ///< Convex
-      e2k,          ///< Elbrus 2k
-      ia64,         ///< 64-bit Itanium
-      loongarch,    ///< LoongArch
-      m68k,         ///< 68k
-      mips,         ///< Mips
-      hppa,         ///< HP-PA
-      powerpc,      ///< PowerPC
-      cuda,         ///< CUDA
-      pyramid,      ///< Pyramid
-      riscv,        ///< RISC-V
-      rs6000,       ///< RS6000
-      sparc,        ///< Sparc
-      superh,       ///< SuperH
-      s370,         ///< 370
-      s390,         ///< 390
-      sysz,         ///< SystemZ
-      unknown       ///< Unknown architecture - unable to determine
+      x86_32,       ///< 32-bit x86. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_X86_32</tt></i>.
+      x86_64,       ///< 64-bit x86. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_X86_64</tt></i>.
+      alpha,        ///< Alpha. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_ALPHA</tt></i>.
+      arm,          ///< ARM (any). <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_ARM</tt></i>.
+      bfin,         ///< Blackfin. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_BFIN</tt></i>.
+      convex,       ///< Convex. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_CONVEX</tt></i>.
+      e2k,          ///< Elbrus 2k. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_E2K</tt></i>.
+      ia64,         ///< 64-bit Itanium. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_IA64</tt></i>.
+      loongarch,    ///< LoongArch. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_LOONGARCH</tt></i>.
+      m68k,         ///< 68k. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_M68K</tt></i>.
+      mips,         ///< Mips. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_MIPS</tt></i>.
+      hppa,         ///< HP-PA. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_HPPA</tt></i>.
+      powerpc,      ///< PowerPC. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_POWERPC</tt></i>.
+      cuda,         ///< CUDA. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_CUDA</tt></i>.
+      pyramid,      ///< Pyramid. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_PYRAMID</tt></i>.
+      riscv,        ///< RISC-V. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_RISCV</tt></i>.
+      rs6000,       ///< RS6000. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_RS6000</tt></i>.
+      sparc,        ///< Sparc. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_SPARC</tt></i>.
+      superh,       ///< SuperH. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_SUPERH</tt></i>.
+      s370,         ///< 370. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_SYS370</tt></i>.
+      s390,         ///< 390. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_S390</tt></i>.
+      sysz,         ///< SystemZ. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_SYSZ</tt></i>.
+      unknown       ///< Unknown architecture - unable to determine. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_UNKNOWN</tt></i>.
     };
 
     /// \brief Compilers supported by the library.
     enum class [[maybe_unused]] compiler
     {
-      borland,       ///< Borland C++ Builder
-      clang,         ///< Clang
-      comeau,        ///< Comeau C++
-      compaq,        ///< Compaq C++
-      diab,          ///< Diab C++
-      digitalmars,   ///< Digital Mars
-      dignussystem,  ///< Dignus Systems C++
-      edg,           ///< EDG C++
-      pathscale,     ///< PathScale C++
-      gcc,           ///< GNU GCC
-      greenhills,    ///< Greenhills C++
-      hpa,           ///< Hewlett-Packard C++
-      iar,           ///< IAR C++
-      ibm,           ///< IBM C++
-      intel,         ///< Intel C++
-      kai,           ///< Kai C++
-      llvm,          ///< LLVM C++
-      metaware,      ///< Metaware C++
-      codewarrior,   ///< CodeWarrior C++
-      microtec,      ///< Microtec C++
-      mpw,           ///< MPW C++
-      nvcc,          ///< NVIDIA C++
-      palm,          ///< Palm C++
-      portlandgroup, ///< Portland Group C++
-      mipspro,       ///< MIPSpro C++
-      oracle,        ///< Oracle C++ (Sun)
-      tendra,        ///< Tendra C++
-      msvc,          ///< Microsoft Visual C++
-      watcom,        ///< Watcom C++
-      unknown        ///< Unknown compiler - unable to determine
+      borland,       ///< Borland C++ Builder. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_BORLAND</tt></i>.
+      clang,         ///< Clang. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_CLANG</tt></i>.
+      comeau,        ///< Comeau C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_COMO</tt></i>.
+      compaq,        ///< Compaq C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_COMPAQ</tt></i>.
+      diab,          ///< Diab C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_DIAB</tt></i>.
+      digitalmars,   ///< Digital Mars. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_DMC</tt></i>.
+      dignussystem,  ///< Dignus Systems C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_DIGNUS</tt></i>.
+      edg,           ///< EDG C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_EDG</tt></i>.
+      pathscale,     ///< PathScale C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_PATHSCALE</tt></i>.
+      gcc,           ///< GNU GCC. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_GNU</tt></i>.
+      greenhills,    ///< Greenhills C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_GREENHILLS</tt></i>.
+      hpa,           ///< Hewlett-Packard C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_HPA</tt></i>.
+      iar,           ///< IAR C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_IAR</tt></i>.
+      ibm,           ///< IBM C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_IBM</tt></i>.
+      intel,         ///< Intel C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_INTEL</tt></i>.
+      kai,           ///< Kai C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_KAI</tt></i>.
+      llvm,          ///< LLVM C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_LLVM</tt></i>.
+      metaware,      ///< Metaware C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_HIGHC</tt></i>.
+      codewarrior,   ///< CodeWarrior C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_METROWERKS</tt></i>.
+      microtec,      ///< Microtec C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_MRI</tt></i>.
+      mpw,           ///< MPW C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_MPW</tt></i>.
+      nvcc,          ///< NVIDIA C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_NVIDIA</tt></i>.
+      palm,          ///< Palm C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_PACC</tt></i>.
+      portlandgroup, ///< Portland Group C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_PGI</tt></i>.
+      mipspro,       ///< MIPSpro C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_SGI</tt></i>.
+      oracle,        ///< Oracle C++ (Sun). <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_SUN</tt></i>.
+      tendra,        ///< Tendra C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_TENDRA</tt></i>.
+      msvc,          ///< Microsoft Visual C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_MSVC</tt></i>.
+      watcom,        ///< Watcom C++. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_WATCOM</tt></i>.
+      unknown        ///< Unknown compiler - unable to determine. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_UNKNOWN</tt></i>.
     };
 
     /// \brief Endiannesses enumeration.
     enum class [[maybe_unused]] endianness
     {
-      little,     ///< Little-endian
-      big,        ///< Big-endian
-      unknown     ///< Unknown endianness - unable to determine
+      little,     ///< Little-endian. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ENDIAN_LITTLE</tt></i>.
+      big,        ///< Big-endian. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ENDIAN_BIG</tt></i>.
+      unknown     ///< Unknown endianness - unable to determine. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ENDIAN_UNKNOWN</tt></i>.
     };
 
+    /// \brief Holds current operating system.
     operating_system operating_system;
+
+    /// \brief Holds current architecture.
     arch architecture;
+
+    /// \brief Holds current compiler.
     compiler compiler;
+
+    /// \brief Holds current endianness.
+    /// \note Can often be unknown in current library version. I'm working on it.
     endianness endianness;
+
+    /// \brief Holds current C++ standard.
     i16 cxx_standard;
+
+    /// \brief Holds current path separator.
     char path_separator;
 
 //#pragma GCC diagnostic push
