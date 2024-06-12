@@ -20,22 +20,22 @@
 
 /// \brief Main namespace for the library.
 /// \note Use <tt>fl</tt> instead of <tt>floppy</tt> if you want shorter name.
-namespace floppy {
+namespace floppy { // NOLINT(*-concat-nested-namespaces)
   /// \brief Metadata definitions, such as library version or name.
   namespace meta {
     /// \brief Project version constexpr structure. Equals to current cmake/conan version.
     class [[maybe_unused]] project_meta
     {
      private:
-      int major;                          ///< Major version.
-      int minor;                          ///< Minor version.
-      int patch;                          ///< Patch version.
-      std::string_view project_name;      ///< Project name.
+      int major{};                   ///< Major version.
+      int minor{};                   ///< Minor version.
+      int patch{};                   ///< Patch version.
+      std::string_view project_name; ///< Project name.
 
      public:
       /// \brief Creates version object at compile-time.
       /// \see project_name
-      consteval inline project_meta()
+      consteval project_meta()
         : major(CMAKE_PROJECT_VERSION_MAJOR)
         , minor(CMAKE_PROJECT_VERSION_MINOR)
         , patch(CMAKE_PROJECT_VERSION_PATCH)
@@ -44,9 +44,9 @@ namespace floppy {
 
       /// \brief Project name constant-expression string. Always equals to <b>floppy</b>.
 #ifndef DOXYGEN_GENERATING_OUTPUT
-      [[nodiscard]] constexpr inline auto name() const noexcept -> std::string_view { return this->project_name; }
+      [[nodiscard]] constexpr auto name() const noexcept -> std::string_view { return this->project_name; }
 #else
-      [[nodiscard]] constexpr inline std::string_view name() const noexcept { return this->project_name; }
+      [[nodiscard]] constexpr std::string_view name() const noexcept { return this->project_name; }
 #endif
 
       /// \brief Returns constant expression version number major as an integer.
@@ -54,9 +54,9 @@ namespace floppy {
       /// \see version_patch
       /// \see version_string
 #ifndef DOXYGEN_GENERATING_OUTPUT
-      [[nodiscard]] constexpr inline auto version_major() const noexcept -> int { return this->major; }
+      [[nodiscard]] constexpr auto version_major() const noexcept -> int { return this->major; }
 #else
-      [[nodiscard]] constexpr inline int version_major() const noexcept { return this->major; }
+      [[nodiscard]] constexpr int version_major() const noexcept { return this->major; }
 #endif
 
       /// \brief Returns constant expression version number minor as an integer.
@@ -64,9 +64,9 @@ namespace floppy {
       /// \see version_patch
       /// \see version_string
 #ifndef DOXYGEN_GENERATING_OUTPUT
-      [[nodiscard]] constexpr inline auto version_minor() const noexcept -> int { return this->minor; }
+      [[nodiscard]] constexpr auto version_minor() const noexcept -> int { return this->minor; }
 #else
-      [[nodiscard]] constexpr inline int version_minor() const noexcept { return this->minor; }
+      [[nodiscard]] constexpr int version_minor() const noexcept { return this->minor; }
 #endif
 
       /// \brief Returns constant expression version number patch as an integer.
@@ -74,7 +74,7 @@ namespace floppy {
       /// \see version_minor
       /// \see version_string
 #ifndef DOXYGEN_GENERATING_OUTPUT
-      [[nodiscard]] constexpr inline auto version_patch() const noexcept -> int { return this->patch; }
+      [[nodiscard]] constexpr auto version_patch() const noexcept -> int { return this->patch; }
 #else
       [[nodiscard]] constexpr inline int version_patch() const noexcept { return this->patch; }
 #endif
@@ -84,7 +84,7 @@ namespace floppy {
       /// \see version_minor
       /// \see version_patch
 #ifndef DOXYGEN_GENERATING_OUTPUT
-      [[nodiscard]] constexpr inline auto version_string() const noexcept -> std::string_view {
+      [[nodiscard]] static constexpr auto version_string() noexcept -> std::string_view {
 #else
       [[nodiscard]] constexpr inline std::string_view version_string() const noexcept {
 #endif
@@ -99,7 +99,7 @@ namespace floppy {
     /// \brief Project metadata object, available at compile-time.
     [[maybe_unused]] constexpr inline auto project_info = project_meta{};
 
-    static_assert(project_info.version_string() == std::string_view(
+    static_assert(project_meta::version_string() == std::string_view(
         stringify$(CMAKE_PROJECT_VERSION_MAJOR) "."
         stringify$(CMAKE_PROJECT_VERSION_MINOR) "."
         stringify$(CMAKE_PROJECT_VERSION_PATCH)
@@ -110,11 +110,11 @@ namespace floppy {
     static_assert(project_info.version_minor() == CMAKE_PROJECT_VERSION_MINOR, "minor version isn't the same");
     static_assert(project_info.version_patch() == CMAKE_PROJECT_VERSION_PATCH, "patch version isn't the same");
     static_assert(project_info.name() == std::string_view(stringify$(CMAKE_TARGET_NAME)), "project name isn't the same");
-  }
-};
+  } // namespace meta
+} // namespace floppy
 
 #undef _stringify$
 #undef stringify$
 
 /// \brief Alias for the main namespace \ref floppy.
-namespace fl = floppy;
+namespace fl = floppy; // NOLINT(*-unused-alias-decls)

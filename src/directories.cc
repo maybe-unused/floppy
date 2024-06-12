@@ -56,11 +56,11 @@ namespace floppy::filesystem
   {
     if constexpr(current_platform.operating_system == platform::operating_system::linux_) {
       auto const path = fs::path(::trim(application, ""));
-      auto const home_c = std::getenv("HOME");
+      auto* const home_c = std::getenv("HOME");
       if(not home_c)
         throw std::runtime_error("no valid home directory could be retrieved from the operating system");
       auto const home = fs::path(home_c);
-      auto const xdg_runtime_dir = std::getenv("XDG_RUNTIME_DIR");
+      auto* const xdg_runtime_dir = std::getenv("XDG_RUNTIME_DIR");
       this->m_project_path = path;
       this->m_cache_dir = home / ".cache" / path;
       this->m_config_dir = home / ".config" / path;
@@ -99,7 +99,7 @@ namespace floppy::filesystem
         org.empty() ? "" : ".",
         application
       );
-      auto const home_c = std::getenv("HOME");
+      auto* const home_c = std::getenv("HOME");
       if(not home_c)
         throw std::runtime_error("no valid home directory could be retrieved from the operating system");
       auto const home = fs::path(home_c);

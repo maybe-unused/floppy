@@ -23,7 +23,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     using isize = std::make_signed_t<size_t>; ///< Signed integer with pointer size
     using f32 = float;                        ///< Float with 32-bit precision
     using f64 = double;                       ///< Float with 64-bit precision
-    using f128 = long double;                 ///< Float with 128-bit precision
+    using f128 [[maybe_unused]] = long double;///< Float with 128-bit precision
 
     /**
      * \brief Safe alias for <tt>std::optional</tt>.
@@ -63,52 +63,56 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
       /// \brief Literal operator for <b>signed version</b> of <tt>size_t</tt>/\ref types::isize.
       /// \note Available only with C++20 or older.
       /// \sa https://en.cppreference.com/w/cpp/language/operator_literal
-      constexpr inline auto operator""_z(unsigned long long value) -> isize { return static_cast<isize>(value); }
+      constexpr auto operator""_z(unsigned long long value) -> isize { return static_cast<isize>(value); }
 
       /// \brief Literal operator for <b>signed version</b> of <tt>size_t</tt>/\ref types::isize.
       /// \note Available only with C++20 or older.
       /// \sa https://en.cppreference.com/w/cpp/language/operator_literal
-      constexpr inline auto operator""_Z(unsigned long long value) -> isize { return static_cast<isize>(value); }
+      constexpr auto operator""_Z(unsigned long long value) -> isize { return static_cast<isize>(value); }
 
       /// \brief Literal operator for <tt>size_t</tt>/\ref types::usize.
       /// \note Available only with C++20 or older.
       /// \sa https://en.cppreference.com/w/cpp/language/operator_literal
-      constexpr inline auto operator""_zu(unsigned long long value) -> usize { return static_cast<usize>(value); }
+      constexpr auto operator""_zu(unsigned long long value) -> usize { return static_cast<usize>(value); }
 
       /// \brief Literal operator for <tt>size_t</tt>/\ref types::usize.
       /// \note Available only with C++20 or older.
       /// \sa https://en.cppreference.com/w/cpp/language/operator_literal
-      constexpr inline auto operator""_ZU(unsigned long long value) -> usize { return static_cast<usize>(value); }
+      constexpr auto operator""_ZU(unsigned long long value) -> usize { return static_cast<usize>(value); }
     #endif // defined(__cpp_size_t_suffix)
 
     /// \brief Literal operator for \ref types::u8.
-    constexpr inline auto operator""_u8(unsigned long long value) -> u8 { return static_cast<u8>(value); }
+    constexpr auto operator""_u8(unsigned long long value) -> u8 { return static_cast<u8>(value); }
 
     /// \brief Literal operator for \ref types::u16.
-    constexpr inline auto operator""_u16(unsigned long long value) -> u16 { return static_cast<u16>(value); }
+    constexpr auto operator""_u16(unsigned long long value) -> u16 { return static_cast<u16>(value); }
 
     /// \brief Literal operator for \ref types::u32.
-    constexpr inline auto operator""_u32(unsigned long long value) -> u32 { return static_cast<u32>(value); }
+    constexpr auto operator""_u32(unsigned long long value) -> u32 { return static_cast<u32>(value); }
 
     /// \brief Literal operator for \ref types::u64.
-    constexpr inline auto operator""_u64(unsigned long long value) -> u64 { return static_cast<u64>(value); }
+    constexpr auto operator""_u64(unsigned long long value) -> u64 { return static_cast<u64>(value); }
 
     /// \brief Literal operator for \ref types::i8.
-    constexpr inline auto operator""_i8(unsigned long long value) -> i8 { return static_cast<i8>(value); }
+    constexpr auto operator""_i8(unsigned long long value) -> i8 { return static_cast<i8>(value); }
 
     /// \brief Literal operator for \ref types::i16.
-    constexpr inline auto operator""_i16(unsigned long long value) -> i16 { return static_cast<i16>(value); }
+    constexpr auto operator""_i16(unsigned long long value) -> i16 { return static_cast<i16>(value); }
 
     /// \brief Literal operator for \ref types::i32.
-    constexpr inline auto operator""_i32(unsigned long long value) -> i32 { return static_cast<i32>(value); }
+    constexpr auto operator""_i32(unsigned long long value) -> i32 { return static_cast<i32>(value); }
 
     /// \brief Literal operator for \ref types::i64.
-    constexpr inline auto operator""_i64(unsigned long long value) -> i64 { return static_cast<i64>(value); }
+    constexpr auto operator""_i64(unsigned long long value) -> i64 { return static_cast<i64>(value); }
 
     /// \brief Literal operator for <tt>std::ptrdiff_t</tt>.
-    constexpr inline auto operator""_ptrdiff(unsigned long long value) -> std::ptrdiff_t { return static_cast<std::ptrdiff_t>(value); }
+    constexpr auto operator""_ptrdiff(unsigned long long value) -> std::ptrdiff_t { return static_cast<std::ptrdiff_t>(value); }
+
+    // NOLINTBEGIN(*-pro-type-reinterpret-cast, *-no-int-to-ptr)
 
     /// \brief Literal operator for <tt>void*</tt>.
     inline auto operator""_pvoid(unsigned long long value) -> void* { return reinterpret_cast<void*>(value); }
+
+    // NOLINTEND(*-pro-type-reinterpret-cast, *-no-int-to-ptr)
   }
 } // namespace floppy

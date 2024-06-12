@@ -2,25 +2,25 @@
 
 // os detection
 #if defined(_WIN32) || defined(_WIN64) || defined(__WIN32__) || defined(__TOS_WIN__) || defined(__WINDOWS__)
-# define FLOPPY_OS_WINDOWS 1
+# define FLOPPY_OS_WINDOWS
 #elif defined(linux) || defined(__linux) || defined(__linux__) || defined(__gnu_linux__)
-# define FLOPPY_OS_LINUX 1
+# define FLOPPY_OS_LINUX
 #elif defined(macintosh) || defined(Macintosh) || (defined(__APPLE__) && defined(__MACH__))
-# define FLOPPY_OS_DARWIN 1
+# define FLOPPY_OS_DARWIN
 #elif defined(__ANDROID__)
-# define FLOPPY_OS_ANDROID 1
+# define FLOPPY_OS_ANDROID
 #elif defined(__APPLE__) && defined(__MACH__) && defined(__ENVIRONMENT_IPHONE_OS_VERSION_MIN_REQUIRED__)
-# define FLOPPY_OS_IOS 1
+# define FLOPPY_OS_IOS
 #elif defined(__CYGWIN__)
-# define FLOPPY_OS_CYGWIN 1
+# define FLOPPY_OS_CYGWIN
 #elif defined(__FreeBSD__)
-# define FLOPPY_OS_FREEBSD 1
+# define FLOPPY_OS_FREEBSD
 #elif defined(__DragonFly__)
-# define FLOPPY_OS_DRAGONFLY 1
+# define FLOPPY_OS_DRAGONFLY
 #elif defined(__NETBSD__) || defined(__NetBSD__)
-# define FLOPPY_OS_NETBSD 1
+# define FLOPPY_OS_NETBSD
 #elif defined(__OpenBSD__)
-# define FLOPPY_OS_OPENBSD 1
+# define FLOPPY_OS_OPENBSD
 #else
 # define FLOPPY_OS_UNKNOWN
 # warning "-- [floppy] Operating system is not detected."

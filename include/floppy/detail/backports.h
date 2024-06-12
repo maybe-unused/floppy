@@ -16,7 +16,7 @@ namespace floppy
   /// \brief <tt>std::ranges</tt> backports namespace.
   namespace ranges
   {
-    using namespace std::ranges;
+    using namespace std::ranges; // NOLINT(*-build-using-namespace)
 
     namespace detail
     {
@@ -26,29 +26,25 @@ namespace floppy
       template <typename C, range R>
         requires std::convertible_to<range_value_t<R>, typename C::value_type>
 #ifndef DOXYGEN_GENERATING_OUTPUT
-      auto operator|(R&& r, to_helper<C>) -> C
+      auto operator|(R&& r, [[maybe_unused]] to_helper<C> _) -> C // NOLINT(*-missing-std-forward)
 #else
-      C operator|(R&& r, to_helper<C>)
+      C operator|(R&& r, [[maybe_unused]] to_helper<C> _)
 #endif
       {
         return C { r.begin(), r.end() };
       }
     } // namespace detail
 
-    /**
-     * \brief The overloads of the range conversion function construct a new non-view object from a source range.
-     * \details This is an alias to <tt>std::ranges::to</tt>.
-     * \sa https://en.cppreference.com/w/cpp/ranges/to
-     * \sa to
-     */
+    /// \brief The overloads of the range conversion function construct a new non-view object from a source range.
+    /// \details This is an alias to <tt>std::ranges::to</tt>.
+    /// \sa https://en.cppreference.com/w/cpp/ranges/to
+    /// \sa to
     template <range C> requires (not view<C>)
     auto collect() { return detail::to_helper<C> {}; }
 
-    /**
-     * \brief The overloads of the range conversion function construct a new non-view object from a source range.
-     * \sa https://en.cppreference.com/w/cpp/ranges/to
-     * \sa collect
-     */
+    /// \brief The overloads of the range conversion function construct a new non-view object from a source range.
+    /// \sa https://en.cppreference.com/w/cpp/ranges/to
+    /// \sa collect
     template <range C> requires (not view<C>)
     auto to() { return detail::to_helper<C> {}; }
   } // namespace ranges
@@ -79,9 +75,9 @@ namespace floppy
    */
   template <concepts::enum_ T>
 #ifndef DOXYGEN_GENERATING_OUTPUT
-  constexpr inline auto to_underlying(T t) noexcept -> std::underlying_type_t<T> {
+  constexpr auto to_underlying(T t) noexcept -> std::underlying_type_t<T> {
 #else
-  constexpr inline std::underlying_type_t<T> to_underlying(T t) noexcept
+  constexpr std::underlying_type_t<T> to_underlying(T t) noexcept
 #endif
     return static_cast<std::underlying_type_t<T>>(t);
   }
@@ -162,13 +158,11 @@ namespace floppy
         , m_column(0)
       {}
 
-      /**
-       * \brief Creates a source_location from given parameters.
-       * \param file File name
-       * \param line Number of the line in the file. 0 if NULL
-       * \param function Function name
-       * \param column Column number in the function. Defaults to 0
-       */
+      /// \brief Creates a source_location from given parameters.
+      /// \param file File name
+      /// \param line Number of the line in the file. 0 if NULL
+      /// \param function Function name
+      /// \param column Column number in the function. Defaults to 0
       constexpr source_location(
         char const* file,
         uint_least32_t const line,
@@ -232,4 +226,4 @@ namespace floppy
   #endif // __cpp_lib_source_location
 } // namespace floppy
 
-template <> struct fmt::formatter<floppy::source_location> : floppy::ostream_formatter<char> {};
+template <> struct [[maybe_unused]] fmt::formatter<floppy::source_location> : floppy::ostream_formatter<char> {};

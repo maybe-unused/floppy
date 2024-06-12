@@ -16,7 +16,7 @@ namespace floppy
   {
    public:
     /// \brief Operating systems supported by the library.
-    enum class [[maybe_unused]] operating_system
+    enum class [[maybe_unused]] operating_system : u8
     {
       windows,           ///< Microsoft Windows. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_WINDOWS</tt></i>.
       gnu_linux,         ///< GNU/Linux. <i>Corresponds to C preprocessor macro <tt>FLOPPY_OS_LINUX</tt></i>.
@@ -33,7 +33,7 @@ namespace floppy
     };
 
     /// \brief Architectures supported by the library.
-    enum class [[maybe_unused]] arch
+    enum class [[maybe_unused]] arch : u8
     {
       x86_32,       ///< 32-bit x86. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_X86_32</tt></i>.
       x86_64,       ///< 64-bit x86. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ARCH_X86_64</tt></i>.
@@ -61,7 +61,7 @@ namespace floppy
     };
 
     /// \brief Compilers supported by the library.
-    enum class [[maybe_unused]] compiler
+    enum class [[maybe_unused]] compiler : u8
     {
       borland,       ///< Borland C++ Builder. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_BORLAND</tt></i>.
       clang,         ///< Clang. <i>Corresponds to C preprocessor macro <tt>FLOPPY_COMPILER_CLANG</tt></i>.
@@ -96,7 +96,7 @@ namespace floppy
     };
 
     /// \brief Endiannesses enumeration.
-    enum class [[maybe_unused]] endianness
+    enum class [[maybe_unused]] endianness : u8
     {
       little,     ///< Little-endian. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ENDIAN_LITTLE</tt></i>.
       big,        ///< Big-endian. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ENDIAN_BIG</tt></i>.
@@ -126,12 +126,12 @@ namespace floppy
 //#pragma GCC diagnostic ignored "-Wunknown-pragmas"
 //#pragma clang diagnostic push
 //#pragma ide diagnostic ignored "ConstantParameter"
-    constexpr inline platform(
+    constexpr platform(
       enum operating_system operating_system_,
       enum arch architecture_,
       enum compiler compiler_,
       enum endianness endianness_,
-      i16 cxx_standard_,
+      i16 cxx_standard_, // NOLINT(*-easily-swappable-parameters)
       char path_separator_
     )
       : operating_system(operating_system_)
@@ -147,9 +147,9 @@ namespace floppy
     /// \brief Returns platform information for the current platform at compile-time.
     /// \see floppy::current_platform
 #ifndef DOXYGEN_GENERATING_OUTPUT
-    [[nodiscard]] static consteval inline auto current() noexcept -> platform
+    [[nodiscard]] static consteval auto current() noexcept -> platform
 #else
-    [[nodiscard]] static constexpr inline platform current() noexcept
+    [[nodiscard]] static constexpr platform current() noexcept
 #endif
     {
       return platform {
@@ -169,10 +169,10 @@ namespace floppy
 #else
     [[nodiscard]] static constexpr T swap_endian(T u) noexcept {
 #endif
-      static_assert(std::numeric_limits<unsigned char>::digits == 8, "unsigned char is not 8 bits");
+      static_assert(std::numeric_limits<unsigned char>::digits == 8, "unsigned char is not 8 bits"); // NOLINT(*-magic-numbers)
       union {
         T u;
-        u8 c[sizeof(T)];
+        u8 c[sizeof(T)]; // NOLINT(*-avoid-c-arrays)
       } source {}, dest {};
       source.u = u;
       for(auto k = 0_ZU; k < sizeof(T); k++)
@@ -345,23 +345,23 @@ namespace floppy
       #if defined(FLOPPY_LANGUAGE_C)
             return std::numeric_limits<i16>::min();
       #elif defined(FLOPPY_LANGUAGE_CXXPRE98)
-            return -3;
+            return -3; // NOLINT(*-magic-numbers)
       #elif defined(FLOPPY_LANGUAGE_CXX98)
-            return -2;
+            return -2; // NOLINT(*-magic-numbers)
       #elif defined(FLOPPY_LANGUAGE_CXX03)
-            return 3;
+            return 3; // NOLINT(*-magic-numbers)
       #elif defined(FLOPPY_LANGUAGE_CXX11)
-            return 11;
+            return 11; // NOLINT(*-magic-numbers)
       #elif defined(FLOPPY_LANGUAGE_CXX14)
-            return 14;
+            return 14; // NOLINT(*-magic-numbers)
       #elif defined(FLOPPY_LANGUAGE_CXX17)
-            return 17;
+            return 17; // NOLINT(*-magic-numbers)
       #elif defined(FLOPPY_LANGUAGE_CXX20)
-            return 20;
+            return 20; // NOLINT(*-magic-numbers)
       #elif defined(FLOPPY_LANGUAGE_CXX23)
-            return 23;
+            return 23; // NOLINT(*-magic-numbers)
       #else
-            return -1;
+            return -1; // NOLINT(*-magic-numbers)
       #endif
     }
 

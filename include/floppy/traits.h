@@ -22,7 +22,7 @@ namespace floppy::traits
   {
     non_copyable() = default;
     non_copyable(const T&) = delete;
-    T& operator=(const T&) = delete;
+    auto operator=(const T&) -> T& = delete;
   };
 
   /// \brief Disallow move operations for a type
@@ -38,7 +38,7 @@ namespace floppy::traits
   {
     non_movable() = default;
     non_movable(T&&) = delete;
-    T& operator=(T&&) = delete;
+    auto operator=(T&&) -> T& = delete;
   };
 
   /// \brief Disallow copy and move operations for a type
@@ -97,27 +97,27 @@ namespace floppy::traits
     /// \return Pointer to the singleton instance.
     /// \see ptr_mut
 #ifndef DOXYGEN_GENERATING_OUTPUT
-    [[nodiscard]] static inline auto ptr() noexcept -> T const* { return ptr_mut(); }
+    [[nodiscard]] static auto ptr() noexcept -> T const* { return ptr_mut(); }
 #else
-    [[nodiscard]] static constexpr inline T const* ptr() noexcept { return ptr_mut(); }
+    [[nodiscard]] static T const* ptr() noexcept { return ptr_mut(); }
 #endif
 
     /// \brief Returns <i>constant reference</i> to the singleton instance.
     /// \return Constant reference to the singleton instance.
     /// \see ref_mut
 #ifndef DOXYGEN_GENERATING_OUTPUT
-    [[nodiscard]] static inline auto ref() noexcept -> T const& { return *ptr(); }
+    [[nodiscard]] static auto ref() noexcept -> T const& { return *ptr(); }
 #else
-    [[nodiscard]] static constexpr inline T const& ref() noexcept { return *ptr(); }
+    [[nodiscard]] static T const& ref() noexcept { return *ptr(); }
 #endif
 
     /// \brief Returns <i>mutable reference</i> to the singleton instance.
     /// \return Mutable reference to the singleton instance.
     /// \see ref
 #ifndef DOXYGEN_GENERATING_OUTPUT
-    [[nodiscard]] static inline auto ref_mut() noexcept -> T& { return *ptr_mut(); }
+    [[nodiscard]] static auto ref_mut() noexcept -> T& { return *ptr_mut(); }
 #else
-    [[nodiscard]] static constexpr inline T& ref_mut() noexcept { return *ptr_mut(); }
+    [[nodiscard]] static T& ref_mut() noexcept { return *ptr_mut(); }
 #endif
 
     singleton() = default;
@@ -193,7 +193,11 @@ namespace floppy::traits
   struct formattable : public detail::formattable_base<C>
   {
     /// \brief Writes string representation of the object to the stream.
-    friend std::basic_ostream<C>& operator<<(std::basic_ostream<C>& os, T const& t) {
+#ifndef DOXYGEN_GENERATING_OUTPUT
+    friend auto operator<<(std::basic_ostream<C>& os, T const& t) -> std::basic_ostream<C>& {
+#else
+    friend std::basic_ostream<C>& operator<<(std::basic_ostream<C>& os, T const& t)
+#endif
       return os << t.to_string();
     }
   };
@@ -201,23 +205,45 @@ namespace floppy::traits
 
 namespace floppy
 {
-  /// \brief Casts types which derives from <tt>formattable_base<C></tt> to string.
-  /// \tparam C Character type.
-  /// \tparam T Type to cast.
-  /// \see floppy::traits::formattable
-  template <typename C, floppy::traits::detail::derived_from_formattable<C> T>
-#ifndef DOXYGEN_GENERATING_OUTPUT
-  [[nodiscard]] auto str_cast(T const& t) noexcept -> std::string {
-#else
-  [[nodiscard]] constexpr std::string str_cast(T const& t) noexcept {
-#endif
-    return (std::string)t;
+  namespace detail
+  {
+    /// \brief Casts types which derives from <tt>formattable_base<C></tt> to string.
+    /// \tparam C Character type.
+    /// \tparam T Type to cast.
+    /// \see floppy::traits::formattable
+    template <typename C, floppy::traits::detail::derived_from_formattable<C> T>
+  #ifndef DOXYGEN_GENERATING_OUTPUT
+    [[nodiscard]] auto str_cast(T const& t) noexcept -> std::string {
+  #else
+    [[nodiscard]] std::string str_cast(T const& t) noexcept {
+  #endif
+      return (std::string)t;
+    }
+  }
+
+  template <typename T>
+  typename std::enable_if<
+    std::is_same<
+      decltype(std::declval<T const&>().to_string()), std::string
+    >::value, std::string
+  >::type string_cast(T const& t)
+  {
+    return t.to_string();
+  }
+
+  template <typename T>
+  typename std::enable_if<
+    std::is_same<
+      decltype(std::to_string(std::declval<T&>())), std::string
+    >::value, std::string
+  >::type string_cast(T const& t) {
+    return std::to_string(t);
   }
 } // namespace floppy
 
 /// \brief Formatter for types which can be easily converted to string.
 template <std::convertible_to<std::string> T>
-struct fmt::formatter<T>
+struct [[maybe_unused]] fmt::formatter<T>
 {
   template <typename ParseContext>
   constexpr auto parse(ParseContext& ctx) const {
@@ -231,7 +257,7 @@ struct fmt::formatter<T>
 
 /// \brief Formatter for types which derives from <tt>formattable_base<char></tt>.
 template <floppy::traits::detail::derived_from_formattable<char> T>
-struct fmt::formatter<T>
+struct [[maybe_unused]] fmt::formatter<T>
 {
   template <typename ParseContext>
   constexpr auto parse(ParseContext& ctx) const {

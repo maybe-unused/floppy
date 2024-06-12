@@ -1,0 +1,42 @@
+# Clang-Tidy configuration for the `floppy` library.
+---
+Checks: >
+  -*,
+  bugprone-*,
+  google-*,
+  misc-*,
+  modernize-*,
+  performance-*,
+  portability-*,
+  readability-*,
+  -google-readability-namespace-comments,
+  -google-runtime-int,
+  -google-runtime-references,
+  -misc-non-private-member-variables-in-classes,
+  -readability-named-parameter,
+  -readability-braces-around-statements,
+  -readability-magic-numbers
+
+# Turn all the warnings from the checks above into errors.
+WarningsAsErrors: "*"
+
+CheckOptions:
+  - { key: readability-identifier-naming.NamespaceCase,          value: lower_case }
+  - { key: readability-identifier-naming.ClassCase,              value: lower_case  }
+  - { key: readability-identifier-naming.StructCase,             value: lower_case  }
+  - { key: readability-identifier-naming.TemplateParameterCase,  value: CamelCase  }
+  - { key: readability-identifier-naming.FunctionCase,           value: lower_case  }
+  - { key: readability-identifier-naming.VariableCase,           value: lower_case }
+  - { key: readability-identifier-naming.PrivateMemberSuffix,    value: _          }
+  - { key: readability-identifier-naming.ProtectedMemberSuffix,  value: _          }
+  - { key: readability-identifier-naming.MacroDefinitionCase,    value: aNy_CasE }
+  - { key: readability-identifier-naming.EnumConstantCase,         value: CamelCase }
+  - { key: readability-identifier-naming.EnumConstantPrefix,       value:          }
+  - { key: readability-identifier-naming.ConstexprVariableCase,    value: aNy_CasE }
+  - { key: readability-identifier-naming.ConstexprVariablePrefix,  value:          }
+  - { key: readability-identifier-naming.GlobalConstantCase,       value: aNy_CasE }
+  - { key: readability-identifier-naming.GlobalConstantPrefix,     value:          }
+  - { key: readability-identifier-naming.MemberConstantCase,       value: lower_case }
+  - { key: readability-identifier-naming.MemberConstantPrefix,     value:          }
+  - { key: readability-identifier-naming.StaticConstantCase,       value: lower_case }
+  - { key: readability-identifier-naming.StaticConstantPrefix,     value:          }

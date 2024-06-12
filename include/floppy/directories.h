@@ -31,7 +31,7 @@ namespace floppy::filesystem
   {
    public:
       /// \brief Supported directory types.
-      enum class dir
+      enum class dir : u8
       {
         cache,        ///< Cache directory
         config,       ///< Config directory
@@ -62,6 +62,10 @@ namespace floppy::filesystem
      ) noexcept(false);
 
      ~application_dirs() = default;
+     application_dirs(application_dirs const&) = default;
+     auto operator=(application_dirs const&) -> application_dirs& = default;
+     application_dirs(application_dirs&&) = default;
+     auto operator=(application_dirs&&) -> application_dirs& = default;
 
      /// \brief Returns the path to the directory.
      /// \param directory_type The directory type.

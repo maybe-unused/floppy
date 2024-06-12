@@ -22,10 +22,10 @@ namespace floppy
   ///
   /// \tparam C Type of the stream character type.
   template <typename C>
-  struct ostream_formatter : fmt::formatter<std::basic_string_view<C>, C>
+  struct [[maybe_unused]] ostream_formatter : fmt::formatter<std::basic_string_view<C>, C>
   {
     template <typename T, typename OutputIt>
-    inline auto format(T const& value, fmt::basic_format_context<OutputIt, C>& ctx) const -> OutputIt {
+    auto format(T const& value, fmt::basic_format_context<OutputIt, C>& ctx) const -> OutputIt {
       auto ss = std::basic_stringstream<C>();
       ss << value;
       return fmt::formatter<std::basic_string_view<C>, C>::format(ss.str(), ctx);

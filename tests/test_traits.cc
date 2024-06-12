@@ -63,5 +63,6 @@ TEST(Traits, Formattable)
   EXPECT_EQ(fmt::format("{}", val), "10.0 m/s");
   EXPECT_EQ((std::string)val, "10.0 m/s");
   EXPECT_EQ(static_cast<std::string>(val), "10.0 m/s");
-  EXPECT_EQ(str_cast<char>(val), "10.0 m/s");
+  EXPECT_EQ(detail::str_cast<char>(val), "10.0 m/s");
+  EXPECT_EQ(string_cast(val), "10.0 m/s");
 }

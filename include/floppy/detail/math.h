@@ -8,6 +8,44 @@
 
 namespace floppy
 {
+  /// \brief Numbers namespace.
+  inline namespace numbers
+  {
+    namespace detail
+    {
+      template <concepts::num T, f64 V>
+      struct number_base
+      {
+        using type = T;
+        static constexpr type value = T{V};
+
+        constexpr number_base() = default;
+        constexpr operator type() const { return this->value; }
+
+        template <concepts::num U>
+        constexpr auto operator-(U const& other) const -> type { return this->value - other; }
+
+        template <concepts::num U>
+        constexpr auto operator*(U const& other) const -> type { return this->value * other; }
+
+        template <concepts::num U>
+        constexpr auto operator/(U const& other) const -> type { return this->value / other; }
+
+        template <concepts::num U>
+        constexpr auto operator+(U const& other) const -> type { return this->value + other; }
+      };
+    } // namespace detail
+
+    template <concepts::num T = f64>
+    struct pi : detail::number_base<T, std::numbers::pi>
+    {
+     public:
+      [[maybe_unused]]
+      [[nodiscard]]
+      constexpr auto as_degrees() const -> T { return 180.0; } // NOLINT(*-magic-numbers)
+    };
+  }
+
   /// \brief Returns true if numbers are equal
   /// \details Compares floating point values using formula <tt>|a - b| <= epsilon</tt>
   /// \param a First number
@@ -50,7 +88,7 @@ namespace floppy
 #else
   [[nodiscard]] constexpr T to_radians(T deg) {
 #endif
-    return static_cast<T>(deg * std::numbers::pi_v<T> / 180.0);
+    return static_cast<T>(deg * std::numbers::pi_v<T> / pi<T>().as_degrees());
   }
 
   /// \brief Converts degrees to radians
@@ -64,7 +102,7 @@ namespace floppy
 #else
   [[nodiscard]] constexpr T to_degrees(T rad) {
 #endif
-    return static_cast<T>(rad * 180.0 / std::numbers::pi_v<T>);
+    return static_cast<T>(rad * pi<T>().as_degrees() / std::numbers::pi_v<T>);
   }
 
   /// \brief Returns logarithm of a number in a given base.

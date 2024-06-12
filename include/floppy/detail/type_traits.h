@@ -45,4 +45,4 @@ namespace floppy
   static_assert(not one_of_v<char, int, int>);
   static_assert(one_of_v<std::string, std::basic_string<char>, std::basic_string<wchar_t>>);
   static_assert(not one_of_v<std::u8string, std::basic_string<char>, std::basic_string<wchar_t>>);
-};
+} // namespace floppy
