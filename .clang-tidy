@@ -1,24 +1,25 @@
 # Clang-Tidy configuration for the `floppy` library.
 ---
-Checks: >
-  -*
-  boost-*
-  cppcoreguidelines-*
-  modernize-*
-  performance-*
-  portability-*
-  bugprone-*
-  -bugprone-easily-swappable-parameters
-  google-readability-casting
-  google-runtime-int
-  google-explicit-constructor
-  llvm-namespace-comment
-  misc-*
-  -misc-non-private-member-variables-in-classes
-  readability-*
-  -readability-identifier-length
-  -readability-implicit-bool-conversion
-  -readability-braces-around-statements
+Checks: 
+  - -*
+  - boost-*
+  - cppcoreguidelines-*
+  - modernize-*
+  - performance-*
+  - portability-*
+  - bugprone-*
+  - -bugprone-easily-swappable-parameters
+  - google-readability-casting
+  - google-runtime-int
+  - google-explicit-constructor
+  - llvm-namespace-comment
+  - misc-*
+  - -misc-non-private-member-variables-in-classes
+  - readability-*
+  - -readability-identifier-length
+  - -readability-implicit-bool-conversion
+  - -readability-braces-around-statements
+  - -misc-include-cleaner
 
 # Turn all the warnings from the checks above into errors.
 WarningsAsErrors: "*"
@@ -34,12 +35,6 @@ CheckOptions:
   - { key: readability-identifier-naming.ProtectedMemberSuffix,  value: _          }
   - { key: readability-identifier-naming.MacroDefinitionCase,    value: aNy_CasE }
   - { key: readability-identifier-naming.EnumConstantCase,         value: CamelCase }
-  - { key: readability-identifier-naming.EnumConstantPrefix,       value:          }
   - { key: readability-identifier-naming.ConstexprVariableCase,    value: aNy_CasE }
-  - { key: readability-identifier-naming.ConstexprVariablePrefix,  value:          }
   - { key: readability-identifier-naming.GlobalConstantCase,       value: aNy_CasE }
-  - { key: readability-identifier-naming.GlobalConstantPrefix,     value:          }
-  - { key: readability-identifier-naming.MemberConstantCase,       value: lower_case }
-  - { key: readability-identifier-naming.MemberConstantPrefix,     value:          }
   - { key: readability-identifier-naming.StaticConstantCase,       value: lower_case }
-  - { key: readability-identifier-naming.StaticConstantPrefix,     value:          }
