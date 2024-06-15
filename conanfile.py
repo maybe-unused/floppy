@@ -61,7 +61,7 @@ class FloppyRecipe(ConanFile):
             self.requires("winapi20/0.0.2")
         if self.options.test:
             self.requires("gtest/1.14.0")
-            self.requires("tomlplusplus/[^3.0.0]", transitive_headers = True, transitive_libs=True)
+            self.requires("tomlplusplus/[^3.0.0]", transitive_headers=True, transitive_libs=True)
 
     def layout(self):
         cmake_layout(self)

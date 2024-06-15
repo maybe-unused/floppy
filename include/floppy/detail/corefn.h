@@ -17,11 +17,7 @@ namespace floppy
    * \param message Error message.
    * \param location Source location of the panic. Defaults to current location.
    */
-#ifndef DOXYGEN_GENERATING_OUTPUT
   [[noreturn]] inline auto panic(std::string_view message, source_location location = source_location::current()) -> void {
-#else
-  [[noreturn]] inline void panic(std::string_view message, source_location location = source_location::current()) {
-#endif
     print_helpers::critical_message("panic in file `{}` line {}", location.file_name(), location.line());
     print_helpers::critical_message("in function `{}`", location.function_name());
     print_helpers::critical_message("reason: {}", message);
@@ -38,11 +34,7 @@ namespace floppy
    * \return Converted number
    */
   template <concepts::num T, concepts::num U>
-#ifndef DOXYGEN_GENERATING_OUTPUT
   constexpr auto narrow_cast(U&& u) noexcept -> T {
-#else
-  constexpr T narrow_cast(U&& u) noexcept {
-#endif
     return static_cast<T>(std::forward<U>(u));
   }
 
@@ -50,19 +42,11 @@ namespace floppy
   namespace rtti
   {
     /// \brief Demangles C++ type name from string.
-#ifndef DOXYGEN_GENERATING_OUTPUT
     [[nodiscard]] FLOPPY_EXPORT auto demangle(char const* name) -> std::string;
-#else
-    [[nodiscard]] std::string demangle(char const* name);
-#endif
 
     /// \brief Returns C++ type name or signature from <b>typeid</b> object using RTTI.
     template <typename T>
-#ifndef DOXYGEN_GENERATING_OUTPUT
     [[nodiscard]] auto type_name() -> std::string {
-#else
-    [[nodiscard]] std::string type_name() {
-#endif
       return rtti::demangle(typeid(T).name());
     }
   } // namespace rtti

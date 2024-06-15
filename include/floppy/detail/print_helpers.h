@@ -14,11 +14,7 @@ namespace floppy::print_helpers
     /// \param args The format arguments.
     /// \tparam Args The format arguments types (inferred from the format string and args).
     template <typename... Args>
-#ifndef DOXYGEN_GENERATING_OUTPUT
     auto google_test_print(fmt::format_string<Args...> format, Args&&... args) -> void {
-#else
-    void google_test_print(fmt::format_string<Args...> format, Args&&... args) {
-#endif
       fmt::println("\u001b[32m[          ] \u001b[33m{}\u001b[0m", fmt::format(format, std::forward<Args>(args)...));
     }
   } // namespace detail
@@ -28,11 +24,7 @@ namespace floppy::print_helpers
   /// \param args The format arguments.
   /// \tparam Args The format arguments types (inferred from the format string and args).
   template <typename... Args>
-#ifndef DOXYGEN_GENERATING_OUTPUT
   auto critical_message(std::string_view format, Args&&... args) -> void {
-#else
-  void critical_message(std::string_view format, Args&&... args) {
-#endif
     fmt::print(
       stderr,
       fmt::emphasis::bold | fg(fmt::color::red),
