@@ -1,4 +1,5 @@
 find_package(GTest REQUIRED)
+find_package(tomlplusplus REQUIRED)
 
 file(GLOB TEST_SOURCES "*.cc")
 
@@ -11,7 +12,7 @@ set_target_properties(${PROJECT_NAME}-test PROPERTIES
 
 target_sources(${PROJECT_NAME}-test PRIVATE ${TEST_SOURCES})
 
-target_link_libraries(${PROJECT_NAME}-test PRIVATE GTest::Main ${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME}-test PRIVATE GTest::Main ${PROJECT_NAME} tomlplusplus::tomlplusplus)
 
 if(WIN32)
   add_custom_command(TARGET ${PROJECT_NAME}-test

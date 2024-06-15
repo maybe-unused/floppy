@@ -74,7 +74,10 @@ namespace floppy::serialization
   /// \tparam C Character type. Defaults to char.
   /// \param value Value to serialize.
   /// \return Value serialized as string in given format.
+  /// \throws serialization_error if deserialization fails.
   /// \see deserialize
+  /// \see serialization_error
+  /// \see serializable, serializable_and_deserializable
   template <auto F, typename T, typename C = char>
   requires std::is_same_v<decltype(F), format>
   [[maybe_unused]] auto serialize(T const& value) -> std::basic_string<C> = delete;
@@ -85,8 +88,42 @@ namespace floppy::serialization
   /// \tparam C Character type. Defaults to char.
   /// \param value Value to deserialize.
   /// \return Value deserialized from string in given format.
+  /// \throws serialization_error if deserialization fails.
   /// \see serialize
+  /// \see serialization_error
+  /// \see deserializable, serializable_and_deserializable
   template <auto F, typename T, typename C = char>
   requires std::is_same_v<decltype(F), format>
   [[maybe_unused]] auto deserialize(std::basic_string<C> const& value) -> T = delete;
+
+  /// \brief Concept describing serializable types.
+  /// \tparam F Format type. Must be value of enum \ref floppy::serialization::format.
+  /// \tparam T Type to serialize.
+  /// \tparam C Character type. Defaults to char.
+  /// \see deserializable, serializable_and_deserializable
+  /// \see serialize, deserialize
+  template <auto F, typename T, typename C = char>
+  concept serializable = requires(T const& t) {
+    { serialize<F, T, C>(t) } -> std::convertible_to<std::basic_string<C>>;
+  };
+
+  /// \brief Concept describing deserializable types.
+  /// \tparam F Format type. Must be value of enum \ref floppy::serialization::format.
+  /// \tparam T Type to deserialize.
+  /// \tparam C Character type. Defaults to char.
+  /// \see serializable, serializable_and_deserializable
+  /// \see serialize, deserialize
+  template <auto F, typename T, typename C = char>
+  concept deserializable = requires(std::basic_string<C> const& s) {
+    { deserialize<F, T, C>(s) } -> std::convertible_to<T>;
+  };
+
+  /// \brief Concept describing serializable and deserializable types.
+  /// \tparam F Format type. Must be value of enum \ref floppy::serialization::format.
+  /// \tparam T Type to serialize and deserialize.
+  /// \tparam C Character type. Defaults to char.
+  /// \see serializable, deserializable
+  /// \see serialize, deserialize
+  template <auto F, typename T, typename C = char>
+  concept serializable_and_deserializable = serializable<F, T, C> and deserializable<F, T, C>;
 } // namespace floppy::serialization
