@@ -190,21 +190,14 @@ namespace floppy
   }
 
   template <typename T>
-  typename std::enable_if<
-    std::is_same<
-      decltype(std::declval<T const&>().to_string()), std::string
-    >::value, std::string
-  >::type string_cast(T const& t)
-  {
+  auto string_cast(T const& t) -> std::string
+  requires std::is_same_v<decltype(std::declval<T const&>().to_string()), std::string> {
     return t.to_string();
   }
 
   template <typename T>
-  typename std::enable_if<
-    std::is_same<
-      decltype(std::to_string(std::declval<T&>())), std::string
-    >::value, std::string
-  >::type string_cast(T const& t) {
+  auto string_cast(T const& t) -> std::string
+  requires std::is_same_v<decltype(std::to_string(std::declval<T&>())), std::string> {
     return std::to_string(t);
   }
 } // namespace floppy
@@ -219,7 +212,7 @@ struct [[maybe_unused]] fmt::formatter<T>
   }
   template <typename FormatContext>
   constexpr auto format(T const& c, FormatContext& ctx) const {
-    return format_to(ctx.out(), "{}", (std::string)c);
+    return format_to(ctx.out(), "{}", static_cast<std::string>(c));
   }
 };
 
