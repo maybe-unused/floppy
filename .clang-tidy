@@ -1,33 +1,33 @@
 # Clang-Tidy configuration for the `floppy` library.
 ---
-Checks: 
-  - -*
-  - boost-*
-  - cppcoreguidelines-*
-  - modernize-*
-  - performance-*
-  - portability-*
-  - bugprone-*
-  - -bugprone-easily-swappable-parameters
-  - google-readability-casting
-  - google-runtime-int
-  - google-explicit-constructor
-  - llvm-namespace-comment
-  - misc-*
-  - -misc-non-private-member-variables-in-classes
-  - readability-*
-  - -readability-identifier-length
-  - -readability-implicit-bool-conversion
-  - -readability-braces-around-statements
-  - -misc-include-cleaner
+Checks:
+  -*,
+  boost-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  performance-*,
+  portability-*,
+  bugprone-*,
+  -bugprone-easily-swappable-parameters,
+  google-readability-casting,
+  google-runtime-int,
+  google-explicit-constructor,
+  llvm-namespace-comment,
+  misc-*,
+  -misc-non-private-member-variables-in-classes,
+  readability-*,
+  -readability-identifier-length,
+  -readability-implicit-bool-conversion,
+  -readability-braces-around-statements,
+  -misc-include-cleaner
 
 # Turn all the warnings from the checks above into errors.
 WarningsAsErrors: "*"
 
 CheckOptions:
   - { key: readability-identifier-naming.NamespaceCase,          value: lower_case }
-  - { key: readability-identifier-naming.ClassCase,              value: lower_case  }
-  - { key: readability-identifier-naming.StructCase,             value: lower_case  }
+  - { key: readability-identifier-naming.ClassCase,              value: aNy_CasE  }
+  - { key: readability-identifier-naming.StructCase,             value: aNy_CasE  }
   - { key: readability-identifier-naming.TemplateParameterCase,  value: CamelCase  }
   - { key: readability-identifier-naming.FunctionCase,           value: lower_case  }
   - { key: readability-identifier-naming.VariableCase,           value: lower_case }
