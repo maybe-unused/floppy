@@ -1817,21 +1817,3 @@ details[open]>summary::before {
     font-size: 80%;
 }
 
-body {
-    scrollbar-color: #A37DAF #F9F6FA;
-}
-
-::-webkit-scrollbar {
-        background-color: #F9F6FA;
-        height: 12px;
-        width: 12px;
-}
-::-webkit-scrollbar-thumb {
-        border-radius: 6px;
-        box-shadow: inset 0 0 12px 12px #A37DAF;
-        border: solid 2px transparent;
-}
-::-webkit-scrollbar-corner {
-        background-color: #F9F6FA;
-}
-
