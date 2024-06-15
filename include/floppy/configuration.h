@@ -39,8 +39,8 @@ namespace floppy
   /// template <>
   /// auto fl::serialization::serialize<fl::serialization::format::toml>(DummyConfiguration const& value) -> std::basic_string<char>
   /// { /* implementation */ }
-  /// template <>
   ///
+  /// template <>
   /// auto fl::serialization::deserialize<fl::serialization::format::toml>(std::basic_string<char> const& value) -> DummyConfiguration
   /// { /* implementation */ }
   ///
@@ -54,6 +54,8 @@ namespace floppy
   ///     fs::current_path() / "test-cfg",
   ///     explicit_
   ///   );
+  ///   if(not config)
+  ///     return 1;
   ///   std::cout << config().ip_address.ip << std::endl;
   ///   try {
   ///     config().ip_address.sock_mode.udp = true;
