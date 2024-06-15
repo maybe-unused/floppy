@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operating_5fsystem_0',['operating_system',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663',1,'floppy::platform']]]
+  ['format_0',['format',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181eb',1,'floppy::serialization']]]
 ];

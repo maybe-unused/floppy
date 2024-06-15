@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['one_5fof_0',['one_of',['../d8/dca/structfloppy_1_1one__of.html',1,'floppy']]],
-  ['openbsd_1',['openbsd',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663a8a9596f483a1f51017555338843c4b46',1,'floppy::platform']]],
-  ['operating_5fsystem_2',['operating_system',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663',1,'floppy::platform']]],
-  ['operator_20std_3a_3abasic_5fstring_3c_20c_20_3e_3',['basic_string&lt; C &gt;',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a',1,'floppy::traits::detail::formattable_base']]],
-  ['operator_3c_3c_4',['operator&lt;&lt;',['../db/d59/structfloppy_1_1traits_1_1formattable.html#ac7c14369f0d7d89df417cab6fcac0ad2',1,'floppy::traits::formattable::operator&lt;&lt;'],['../d3/d05/namespacefloppy.html#addcab788066267803ed3875e35a0042f',1,'floppy::operator&lt;&lt;()']]],
-  ['operator_5b_5d_5',['operator[]',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#acf223fac7271422435f20b4a73429a12',1,'floppy::filesystem::application_dirs']]],
-  ['option_6',['option',['../dd/d72/namespacefloppy_1_1types.html#aa202473f296b2492d9239773369181af',1,'floppy::option'],['../dd/d72/namespacefloppy_1_1types.html#aa202473f296b2492d9239773369181af',1,'floppy::types::option']]],
-  ['oracle_7',['oracle',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939eaa189c633d9995e11bf8607170ec9a4b8',1,'floppy::platform']]],
-  ['ostream_5fformatter_8',['ostream_formatter',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]],
-  ['ostream_5fformatter_3c_20char_20_3e_9',['ostream_formatter&lt; char &gt;',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]]
+  ['name_0',['name',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#a1f67d5b82fcb2d90d2fc88fa40125b1a',1,'floppy::meta::project_meta']]],
+  ['narrow_5fcast_1',['narrow_cast',['../d3/d05/namespacefloppy.html#a0bbd17556e1675c4a05316d9f6743342',1,'floppy']]],
+  ['netbsd_2',['netbsd',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a2a41a8fb50557ff7d9b55a6c26c1a888',1,'floppy::platform']]],
+  ['non_5fcopyable_3',['non_copyable',['../d7/d83/structfloppy_1_1traits_1_1non__copyable.html',1,'floppy::traits']]],
+  ['non_5fmovable_4',['non_movable',['../d2/df5/structfloppy_1_1traits_1_1non__movable.html',1,'floppy::traits']]],
+  ['none_5',['none',['../dd/d72/namespacefloppy_1_1types.html#a9365b793fe547271e48fa719a7f4854d',1,'floppy::none'],['../dd/d72/namespacefloppy_1_1types.html#a9365b793fe547271e48fa719a7f4854d',1,'floppy::types::none']]],
+  ['null_6',['null',['../d3/d05/namespacefloppy.html#a66f562bcefd717de48a0deaa80f9776a',1,'floppy']]],
+  ['number_5fbase_7',['number_base',['../d6/d0f/structfloppy_1_1numbers_1_1detail_1_1number__base.html',1,'floppy::numbers::detail']]],
+  ['number_5fbase_3c_20f64_2c_20std_3a_3anumbers_3a_3api_20_3e_8',['number_base&lt; f64, std::numbers::pi &gt;',['../d6/d0f/structfloppy_1_1numbers_1_1detail_1_1number__base.html',1,'floppy::numbers::detail']]],
+  ['nvcc_9',['nvcc',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cac0ee85ff66cf80206ac9ab7b03975213',1,'floppy::platform']]]
 ];

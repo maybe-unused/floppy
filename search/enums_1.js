@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['compiler_0',['compiler',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939e',1,'floppy::platform']]]
+  ['compiler_0',['compiler',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678c',1,'floppy::platform']]]
 ];

@@ -7,5 +7,9 @@ var searchData=
   ['floppy_3a_3aconcepts_3a_3anum_4',['num',['../da/d12/conceptfloppy_1_1concepts_1_1num.html',1,'floppy::concepts']]],
   ['floppy_3a_3aconcepts_3a_3aobject_5',['object',['../d0/d4a/conceptfloppy_1_1concepts_1_1object.html',1,'floppy::concepts']]],
   ['floppy_3a_3aconcepts_3a_3aptr_6',['ptr',['../db/dee/conceptfloppy_1_1concepts_1_1ptr.html',1,'floppy::concepts']]],
-  ['floppy_3a_3aconcepts_3a_3aref_7',['ref',['../de/df6/conceptfloppy_1_1concepts_1_1ref.html',1,'floppy::concepts']]]
+  ['floppy_3a_3aconcepts_3a_3aref_7',['ref',['../de/df6/conceptfloppy_1_1concepts_1_1ref.html',1,'floppy::concepts']]],
+  ['floppy_3a_3aserialization_3a_3adeserializable_8',['deserializable',['../d5/d21/conceptfloppy_1_1serialization_1_1deserializable.html',1,'floppy::serialization']]],
+  ['floppy_3a_3aserialization_3a_3aserializable_9',['serializable',['../d7/da6/conceptfloppy_1_1serialization_1_1serializable.html',1,'floppy::serialization']]],
+  ['floppy_3a_3aserialization_3a_3aserializable_5fand_5fdeserializable_10',['serializable_and_deserializable',['../d2/db7/conceptfloppy_1_1serialization_1_1serializable__and__deserializable.html',1,'floppy::serialization']]],
+  ['floppy_3a_3atraits_3a_3adetail_3a_3aderived_5ffrom_5fformattable_11',['derived_from_formattable',['../d9/d00/conceptfloppy_1_1traits_1_1detail_1_1derived__from__formattable.html',1,'floppy::traits::detail']]]
 ];

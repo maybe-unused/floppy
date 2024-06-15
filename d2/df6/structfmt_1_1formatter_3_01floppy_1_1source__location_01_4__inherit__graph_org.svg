@@ -22,7 +22,7 @@
 <g id="Node000002" class="node">
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="../../d4/de5/structfloppy_1_1ostream__formatter.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="115.38,-97 4.12,-97 4.12,-66.5 115.38,-66.5 115.38,-97"/>
+<polygon fill="white" stroke="#666666" points="115.38,-97 4.12,-97 4.12,-66.5 115.38,-66.5 115.38,-97"/>
 <text text-anchor="start" x="12.12" y="-82.55" font-family="Arial" font-size="11.00">ostream_formatter&lt;</text>
 <text text-anchor="middle" x="59.75" y="-71.3" font-family="Arial" font-size="11.00"> char &gt;</text>
 </a>

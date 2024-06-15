@@ -1,5 +1,5 @@
 var namespacefloppy_1_1meta =
 [
-    [ "project_version", "da/db3/structfloppy_1_1meta_1_1project__version.html", "da/db3/structfloppy_1_1meta_1_1project__version" ],
-    [ "project_name", "db/d67/namespacefloppy_1_1meta.html#aa289488d8f089f42bfb8dbeb9ef9a49f", null ]
+    [ "project_meta", "d2/de7/classfloppy_1_1meta_1_1project__meta.html", "d2/de7/classfloppy_1_1meta_1_1project__meta" ],
+    [ "project_info", "db/d67/namespacefloppy_1_1meta.html#a8127a1ee7bba2fad2bb8c24ce42619b1", null ]
 ];

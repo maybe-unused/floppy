@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unknown_0',['unknown',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939eaad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../dd/d95/namespacefloppy_1_1platform.html#a2bab90cd2cabf9a5184cbbf563f65217aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown']]]
+  ['tendra_0',['tendra',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cad473fc947ac66e2de55db5cefeb048d6',1,'floppy::platform']]],
+  ['toml_1',['toml',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181ebaec18ad9a83c312380533fa93ac6fc61c',1,'floppy::serialization']]]
 ];

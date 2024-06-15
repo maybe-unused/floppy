@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['arch_0',['arch',['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5',1,'floppy::platform']]]
+  ['arch_0',['arch',['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6',1,'floppy::platform']]]
 ];

@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['palm_0',['palm',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939ea4ab4aca1c61c78b89338c3e3804e0e9d',1,'floppy::platform']]],
-  ['pathscale_1',['pathscale',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939ea6d187e1e0278e55df4973764d97a18fd',1,'floppy::platform']]],
-  ['portlandgroup_2',['portlandgroup',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939ea21e4877ebcf75b3ffc961671a274f985',1,'floppy::platform']]],
-  ['powerpc_3',['powerpc',['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5ab2e2e41d11017681a62980c1762a4de8',1,'floppy::platform']]],
-  ['preferences_4',['preferences',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a4ca269cf93df1b512b52174c1a256fe5a1ce027fe3518cc64ef3570b50a9a7c10',1,'floppy::filesystem::application_dirs']]],
-  ['pyramid_5',['pyramid',['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5a437233c74e25fe505293cd2e8ecc2696',1,'floppy::platform']]]
+  ['openbsd_0',['openbsd',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a8a9596f483a1f51017555338843c4b46',1,'floppy::platform']]],
+  ['oracle_1',['oracle',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678caa189c633d9995e11bf8607170ec9a4b8',1,'floppy::platform']]]
 ];

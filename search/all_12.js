@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['u16_0',['u16',['../dd/d72/namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4',1,'floppy::u16'],['../dd/d72/namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4',1,'floppy::types::u16']]],
-  ['u32_1',['u32',['../dd/d72/namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41',1,'floppy::u32'],['../dd/d72/namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41',1,'floppy::types::u32']]],
-  ['u64_2',['u64',['../dd/d72/namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574',1,'floppy::u64'],['../dd/d72/namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574',1,'floppy::types::u64']]],
-  ['u8_3',['u8',['../dd/d72/namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6',1,'floppy::u8'],['../dd/d72/namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6',1,'floppy::types::u8']]],
-  ['unknown_4',['unknown',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../dd/d95/namespacefloppy_1_1platform.html#a17556dba5117c1f4d450f5a3127b69b5aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939eaad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../dd/d95/namespacefloppy_1_1platform.html#a2bab90cd2cabf9a5184cbbf563f65217aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown']]],
-  ['unreachable_5',['unreachable',['../d3/d05/namespacefloppy.html#abb16b244632f4ab5f6fd117e5a75473e',1,'floppy']]],
-  ['usize_6',['usize',['../dd/d72/namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037',1,'floppy::usize'],['../dd/d72/namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037',1,'floppy::types::usize']]]
+  ['tendra_0',['tendra',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cad473fc947ac66e2de55db5cefeb048d6',1,'floppy::platform']]],
+  ['to_1',['to',['../df/dd6/namespacefloppy_1_1ranges.html#a67cbb0e75a528381cac61bff759a9a7f',1,'floppy::ranges']]],
+  ['to_5fdegrees_2',['to_degrees',['../d3/d05/namespacefloppy.html#af2b111b7ea138d5c9b5e0a2aaaf8e98d',1,'floppy']]],
+  ['to_5fhelper_3',['to_helper',['../d2/d49/structfloppy_1_1ranges_1_1detail_1_1to__helper.html',1,'floppy::ranges::detail']]],
+  ['to_5fradians_4',['to_radians',['../d3/d05/namespacefloppy.html#aa722c8b624bbd64c4cbdd47bfd285c5d',1,'floppy']]],
+  ['to_5fstring_5',['to_string',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8',1,'floppy::traits::detail::formattable_base::to_string()'],['../d9/d0b/namespacefloppy_1_1serialization_1_1detail.html#a6ca464db13e4eefa9db21644a4e38565',1,'floppy::serialization::detail::to_string()']]],
+  ['to_5funderlying_6',['to_underlying',['../d3/d05/namespacefloppy.html#a0424b6d00fac262e879df80e00da46b6',1,'floppy']]],
+  ['toml_7',['toml',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181ebaec18ad9a83c312380533fa93ac6fc61c',1,'floppy::serialization']]],
+  ['type_5fname_8',['type_name',['../dc/d09/namespacefloppy_1_1rtti.html#aece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
 ];

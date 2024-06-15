@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['watcom_0',['watcom',['../dd/d95/namespacefloppy_1_1platform.html#a6451deb5394132175a0d9e01b048939ea503005b697234be331178bb28f375ce2',1,'floppy::platform']]],
-  ['windows_1',['windows',['../dd/d95/namespacefloppy_1_1platform.html#a91d9c7f480972e4bb9fca426321d3663a0f4137ed1502b5045d6083aa258b5c42',1,'floppy::platform']]]
+  ['unknown_0',['unknown',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678caad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../d6/d7f/classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown']]]
 ];
