@@ -185,16 +185,24 @@ namespace floppy
     /// \see floppy::traits::formattable
     template <typename C, floppy::traits::detail::derived_from_formattable<C> T>
     [[nodiscard]] auto str_cast(T const& t) noexcept -> std::string {
-      return (std::string)t;
+      return static_cast<std::string>(t);
     }
-  }
+  } // namespace detail
 
+  /// \brief Casts type to string.
+  /// \details If the type has method <tt>to_string</tt>, calls it. Otherwise, calls <tt>std::to_string</tt>.
+  /// \tparam T Type to cast.
+  /// \see detail::str_cast
   template <typename T>
   auto string_cast(T const& t) -> std::string
   requires std::is_same_v<decltype(std::declval<T const&>().to_string()), std::string> {
     return t.to_string();
   }
 
+  /// \brief Casts type to string.
+  /// \details Specialization for method <tt>std::to_string</tt>.
+  /// \tparam T Type to cast.
+  /// \see detail::str_cast
   template <typename T>
   auto string_cast(T const& t) -> std::string
   requires std::is_same_v<decltype(std::to_string(std::declval<T&>())), std::string> {

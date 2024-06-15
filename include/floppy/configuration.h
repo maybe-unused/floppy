@@ -1,0 +1,8 @@
+//
+// Created by User on 16.06.2024.
+//
+
+#ifndef FLOPPY_CONFIGURATION_H
+#define FLOPPY_CONFIGURATION_H
+
+#endif // FLOPPY_CONFIGURATION_H

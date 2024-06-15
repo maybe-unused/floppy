@@ -61,6 +61,8 @@ target_sources(${PROJECT_NAME}
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/floppy.h> $<INSTALL_INTERFACE:include/floppy/floppy.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/traits.h> $<INSTALL_INTERFACE:include/floppy/traits.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/directories.h> $<INSTALL_INTERFACE:include/floppy/directories.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/serialization.h> $<INSTALL_INTERFACE:include/floppy/serialization.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/configuration.h> $<INSTALL_INTERFACE:include/floppy/configuration.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/export.h> $<INSTALL_INTERFACE:include/floppy/detail/export.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/predefs.h> $<INSTALL_INTERFACE:include/floppy/detail/predefs.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/types.h> $<INSTALL_INTERFACE:include/floppy/detail/types.h>
@@ -76,6 +78,7 @@ target_sources(${PROJECT_NAME}
   PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src/detail/rtti.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/src/directories.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/configuration.cc
 )
 
 target_link_libraries(${PROJECT_NAME}
