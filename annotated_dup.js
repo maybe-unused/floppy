@@ -8,7 +8,8 @@ var annotated_dup =
         [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs" ]
       ] ],
       [ "meta", "db/d67/namespacefloppy_1_1meta.html", [
-        [ "project_meta", "d2/de7/classfloppy_1_1meta_1_1project__meta.html", "d2/de7/classfloppy_1_1meta_1_1project__meta" ]
+        [ "project_meta", "d2/de7/classfloppy_1_1meta_1_1project__meta.html", "d2/de7/classfloppy_1_1meta_1_1project__meta" ],
+        [ "version", "d9/dbf/classfloppy_1_1meta_1_1version.html", "d9/dbf/classfloppy_1_1meta_1_1version" ]
       ] ],
       [ "numbers", "db/d4a/namespacefloppy_1_1numbers.html", [
         [ "detail", null, [

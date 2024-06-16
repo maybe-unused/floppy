@@ -34,5 +34,6 @@ var hierarchy =
     [ "platform", "d6/d7f/classfloppy_1_1platform.html", null ],
     [ "project_meta", "d2/de7/classfloppy_1_1meta_1_1project__meta.html", null ],
     [ "source_location", "d5/d44/structfloppy_1_1source__location.html", null ],
-    [ "to_helper< C >", "d2/d49/structfloppy_1_1ranges_1_1detail_1_1to__helper.html", null ]
+    [ "to_helper< C >", "d2/d49/structfloppy_1_1ranges_1_1detail_1_1to__helper.html", null ],
+    [ "version", "d9/dbf/classfloppy_1_1meta_1_1version.html", null ]
 ];

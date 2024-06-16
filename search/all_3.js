@@ -16,5 +16,7 @@ var searchData=
   ['digitalmars_13',['digitalmars',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca1000cda46e51b6348226da9e5a658583',1,'floppy::platform']]],
   ['dignussystem_14',['dignussystem',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678caa5a0674e6d06c76c324c9f7b3034c75d',1,'floppy::platform']]],
   ['dir_15',['dir',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75',1,'floppy::filesystem::application_dirs']]],
-  ['dragonfly_16',['dragonfly',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a7fc8baba8e7696d6c3b286f738245592',1,'floppy::platform']]]
+  ['domain_16',['domain',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#adeb5281b7ff8433975b337a1f47562a5',1,'floppy::meta::project_meta']]],
+  ['domain_5f_17',['domain_',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#ae762fb49635ffd9139da75ebd5fefb79',1,'floppy::meta::project_meta']]],
+  ['dragonfly_18',['dragonfly',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a7fc8baba8e7696d6c3b286f738245592',1,'floppy::platform']]]
 ];

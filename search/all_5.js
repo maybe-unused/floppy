@@ -33,11 +33,12 @@ var searchData=
   ['floppy_3a_3atraits_3a_3adetail_30',['detail',['../d9/de1/namespacefloppy_1_1traits_1_1detail.html',1,'floppy::traits']]],
   ['floppy_3a_3atraits_3a_3adetail_3a_3aderived_5ffrom_5fformattable_31',['derived_from_formattable',['../d9/d00/conceptfloppy_1_1traits_1_1detail_1_1derived__from__formattable.html',1,'floppy::traits::detail']]],
   ['floppy_3a_3atypes_32',['types',['../dd/d72/namespacefloppy_1_1types.html',1,'floppy']]],
-  ['format_33',['format',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181eb',1,'floppy::serialization']]],
-  ['formattable_34',['formattable',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
-  ['formattable_5fbase_35',['formattable_base',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html',1,'floppy::traits::detail']]],
-  ['formatter_3c_20floppy_3a_3asource_5flocation_20_3e_36',['formatter&lt; floppy::source_location &gt;',['../db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html',1,'fmt']]],
-  ['formatter_3c_20t_20_3e_37',['formatter&lt; T &gt;',['../d6/dc7/structfmt_1_1formatter_3_01T_01_4.html',1,'fmt']]],
-  ['freebsd_38',['freebsd',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a1527e888767cdce15d200b870b39cfd0',1,'floppy::platform']]],
-  ['function_5fname_39',['function_name',['../d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644',1,'floppy::source_location']]]
+  ['floppy_5fmeta_33',['floppy_meta',['../db/d67/namespacefloppy_1_1meta.html#ae535ff44e9e406ace8fd25175aea0dfc',1,'floppy::meta']]],
+  ['format_34',['format',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181eb',1,'floppy::serialization']]],
+  ['formattable_35',['formattable',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
+  ['formattable_5fbase_36',['formattable_base',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html',1,'floppy::traits::detail']]],
+  ['formatter_3c_20floppy_3a_3asource_5flocation_20_3e_37',['formatter&lt; floppy::source_location &gt;',['../db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html',1,'fmt']]],
+  ['formatter_3c_20t_20_3e_38',['formatter&lt; T &gt;',['../d6/dc7/structfmt_1_1formatter_3_01T_01_4.html',1,'fmt']]],
+  ['freebsd_39',['freebsd',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a1527e888767cdce15d200b870b39cfd0',1,'floppy::platform']]],
+  ['function_5fname_40',['function_name',['../d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644',1,'floppy::source_location']]]
 ];

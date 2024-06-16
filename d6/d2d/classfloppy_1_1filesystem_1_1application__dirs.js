@@ -11,6 +11,7 @@ var classfloppy_1_1filesystem_1_1application__dirs =
       [ "state", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a9ed39e2ea931586b6a985a6942ef573e", null ]
     ] ],
     [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a1ceb7feef425111cbc554fa7553bb8d1", null ],
+    [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a76ebf067c9623e51291a4a59a30397ee", null ],
     [ "get", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a81a7f8aa63773449710e5d0e155331ed", null ],
     [ "create", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a724c6ef6f60f37464f3abdbd2ba55b0f", null ],
     [ "remove", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a9e36998ffb1db201959e7adc47adb5cb", null ],

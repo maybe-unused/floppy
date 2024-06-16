@@ -137,6 +137,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ceb7feef425111cbc554fa7553bb8d1" id="r_a1ceb7feef425111cbc554fa7553bb8d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ceb7feef425111cbc554fa7553bb8d1">application_dirs</a> (std::string_view qualifier, std::string_view organization, std::string_view application) noexcept(false)</td></tr>
 <tr class="separator:a1ceb7feef425111cbc554fa7553bb8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ebf067c9623e51291a4a59a30397ee" id="r_a76ebf067c9623e51291a4a59a30397ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76ebf067c9623e51291a4a59a30397ee">application_dirs</a> (<a class="el" href="../../d2/de7/classfloppy_1_1meta_1_1project__meta.html">meta::project_meta</a> const &amp;meta) noexcept(false)</td></tr>
+<tr class="separator:a76ebf067c9623e51291a4a59a30397ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae12f431a6630c0681a11fc73c11c2373" id="r_ae12f431a6630c0681a11fc73c11c2373"><td class="memItemLeft" align="right" valign="top"><a id="ae12f431a6630c0681a11fc73c11c2373" name="ae12f431a6630c0681a11fc73c11c2373"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>application_dirs</b> (<a class="el" href="../../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html">application_dirs</a> const &amp;)=default</td></tr>
 <tr class="separator:ae12f431a6630c0681a11fc73c11c2373"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,7 +261,7 @@ Private Attributes</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1ceb7feef425111cbc554fa7553bb8d1" name="a1ceb7feef425111cbc554fa7553bb8d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ceb7feef425111cbc554fa7553bb8d1">&#9670;&#160;</a></span>application_dirs()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ceb7feef425111cbc554fa7553bb8d1">&#9670;&#160;</a></span>application_dirs() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,6 +310,49 @@ Directories will be created if they do not exist. </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a76ebf067c9623e51291a4a59a30397ee" name="a76ebf067c9623e51291a4a59a30397ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ebf067c9623e51291a4a59a30397ee">&#9670;&#160;</a></span>application_dirs() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html">application_dirs</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/de7/classfloppy_1_1meta_1_1project__meta.html">meta::project_meta</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>meta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates an <a class="el" href="../../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html" title="Class for getting location of system directories for a specific application.">application_dirs</a> class from values describing the project. </p>
+<dl class="section note"><dt>Note</dt><dd>Constuctor can fail if no valid home directory could be retrieved from the operating system. </dd>
+<dd>
+Directories will be created if they do not exist. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meta</td><td>The project meta data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if no valid home directory could be retrieved from the operating system. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d2/de7/classfloppy_1_1meta_1_1project__meta.html" title="Project metadata constexpr structure.">floppy::meta::project_meta</a> </dd></dl>
 
 </div>
 </div>
@@ -561,11 +606,11 @@ Directories will be created if they do not exist. </dd></dl>
 <p>Returns the path to the project's state directory. </p>
 <p>The state directory contains data that should be retained between sessions (unlike the runtime directory), but may not be important/portable enough to be synchronized across machines (unlike the config/preferences/data directories).<br  />
  Values on different platforms:</p><ul>
-<li><b>Linux</b>: <code>$XDG_STATE_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.local/state/<code>project_path</code>, for example: <code>/home/alice/.local/state/barapp</code></li>
-<li><b>MacOS</b>: -</li>
-<li><b>Windows</b>: - <dl class="section note"><dt>Note</dt><dd>Only for Linux. </dd></dl>
+<li><b>Linux</b>: <code>$XDG_STATE_HOME/<code>project_path</code> or <code>$HOME</code>/.local/state/<code>project_path</code>, for example: <code>/home/alice/.local/state/barapp</code></code></li>
+<li><code><b>MacOS</b>: -</code></li>
+<li><code><b>Windows</b>: - <dl class="section note"><dt>Note</dt><dd>Only for Linux. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The path to the project's state directory or <code>none</code> if it is not available. </dd></dl>
-</li>
+</code></li>
 </ul>
 
 </div>
@@ -625,7 +670,7 @@ Directories will be created if they do not exist. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00188">188</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00196">196</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>
@@ -649,7 +694,7 @@ Directories will be created if they do not exist. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00189">189</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00197">197</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>
@@ -673,7 +718,7 @@ Directories will be created if they do not exist. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00190">190</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00198">198</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>
@@ -697,7 +742,7 @@ Directories will be created if they do not exist. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00191">191</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00199">199</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>
@@ -721,7 +766,7 @@ Directories will be created if they do not exist. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00192">192</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00200">200</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>
@@ -745,7 +790,7 @@ Directories will be created if they do not exist. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00193">193</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00201">201</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>
@@ -769,7 +814,7 @@ Directories will be created if they do not exist. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00194">194</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00202">202</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>
@@ -793,7 +838,7 @@ Directories will be created if they do not exist. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00195">195</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00203">203</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>
@@ -817,7 +862,7 @@ Directories will be created if they do not exist. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00196">196</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/ddd/directories_8h_source.html#l00204">204</a> of file <a class="el" href="../../de/ddd/directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>
