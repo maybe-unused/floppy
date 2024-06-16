@@ -17,7 +17,7 @@ var namespacefloppy =
       [ "operator\"\"_ptrdiff", "d4/dc3/namespacefloppy_1_1literals.html#a8b90ba9cfcf5e0328b4d81f7fbd076d1", null ],
       [ "operator\"\"_pvoid", "d4/dc3/namespacefloppy_1_1literals.html#a514cd59529b04e6124eca2e8fbb5a297", null ]
     ] ],
-    [ "logger", "d9/deb/namespacefloppy_1_1logger.html", null ],
+    [ "logging", "d7/d79/namespacefloppy_1_1logging.html", "d7/d79/namespacefloppy_1_1logging" ],
     [ "meta", "db/d67/namespacefloppy_1_1meta.html", "db/d67/namespacefloppy_1_1meta" ],
     [ "numbers", "db/d4a/namespacefloppy_1_1numbers.html", "db/d4a/namespacefloppy_1_1numbers" ],
     [ "print_helpers", "d8/de5/namespacefloppy_1_1print__helpers.html", "d8/de5/namespacefloppy_1_1print__helpers" ],

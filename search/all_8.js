@@ -7,6 +7,8 @@ var searchData=
   ['ia64_4',['ia64',['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a53c28cc68db9108085f6e5840442c2bc',1,'floppy::platform']]],
   ['iar_5',['iar',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca792a3194462bce7c44b400b97f187a97',1,'floppy::platform']]],
   ['ibm_6',['ibm',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cae757fd4fedc4fe825bb81b1b466a0947',1,'floppy::platform']]],
-  ['intel_7',['intel',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca4e5bbaeafc82ab7aa1385bea8ef5d30a',1,'floppy::platform']]],
-  ['isize_8',['isize',['../dd/d72/namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d',1,'floppy::isize'],['../dd/d72/namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d',1,'floppy::types::isize']]]
+  ['info_7',['info',['../d7/d79/namespacefloppy_1_1logging.html#afdaa6e366f8bbdcd865a50a82c970d9a',1,'floppy::logging']]],
+  ['info_5fto_8',['info_to',['../d7/d79/namespacefloppy_1_1logging.html#a394535db66a7496bb7117bad991d8b14',1,'floppy::logging']]],
+  ['intel_9',['intel',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca4e5bbaeafc82ab7aa1385bea8ef5d30a',1,'floppy::platform']]],
+  ['isize_10',['isize',['../dd/d72/namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d',1,'floppy::isize'],['../dd/d72/namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d',1,'floppy::types::isize']]]
 ];

@@ -8,5 +8,7 @@ var searchData=
   ['to_5fstring_5',['to_string',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8',1,'floppy::traits::detail::formattable_base::to_string()'],['../d9/d0b/namespacefloppy_1_1serialization_1_1detail.html#a6ca464db13e4eefa9db21644a4e38565',1,'floppy::serialization::detail::to_string()']]],
   ['to_5funderlying_6',['to_underlying',['../d3/d05/namespacefloppy.html#a0424b6d00fac262e879df80e00da46b6',1,'floppy']]],
   ['toml_7',['toml',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181ebaec18ad9a83c312380533fa93ac6fc61c',1,'floppy::serialization']]],
-  ['type_5fname_8',['type_name',['../dc/d09/namespacefloppy_1_1rtti.html#aece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
+  ['trace_8',['trace',['../d7/d79/namespacefloppy_1_1logging.html#a1958617b608e95656ef732069cb6a51f',1,'floppy::logging']]],
+  ['trace_5fto_9',['trace_to',['../d7/d79/namespacefloppy_1_1logging.html#afe5b43f7e92b1290fa979606a9d8bd59',1,'floppy::logging']]],
+  ['type_5fname_10',['type_name',['../dc/d09/namespacefloppy_1_1rtti.html#aece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
 ];
