@@ -61,6 +61,14 @@ namespace floppy::filesystem
        std::string_view application
      ) noexcept(false);
 
+     /// \brief Creates an application_dirs class from values describing the project.
+     /// \note Constuctor can fail if no valid home directory could be retrieved from the operating system.
+     /// \note Directories will be created if they do not exist.
+     /// \param meta The project meta data.
+     /// \throws std::runtime_error if no valid home directory could be retrieved from the operating system.
+     /// \see floppy::meta::project_meta
+     explicit application_dirs(meta::project_meta const& meta) noexcept(false);
+
      ~application_dirs() = default;
      application_dirs(application_dirs const&) = default;
      auto operator=(application_dirs const&) -> application_dirs& = default;
@@ -168,7 +176,7 @@ namespace floppy::filesystem
       * The state directory contains data that should be retained between sessions (unlike the runtime directory),
       * but may not be important/portable enough to be synchronized across machines (unlike the config/preferences/data directories).<br>
       * Values on different platforms:
-      * - <b>Linux</b>: <tt>$XDG_STATE_HOME</tt>/<tt>project_path</tt> or <tt>$HOME</tt>/.local/state/<tt>project_path</tt>, for example: <tt>/home/alice/.local/state/barapp</tt>
+      * - <b>Linux</b>: <tt>$XDG_STATE_HOME/<tt>project_path</tt> or <tt>$HOME</tt>/.local/state/<tt>project_path</tt>, for example: <tt>/home/alice/.local/state/barapp</tt>
       * - <b>MacOS</b>: -
       * - <b>Windows</b>: -
       * \note Only for Linux.

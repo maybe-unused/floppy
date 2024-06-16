@@ -48,6 +48,10 @@ namespace
 
 namespace floppy::filesystem
 {
+  application_dirs::application_dirs(meta::project_meta const& meta) noexcept(false)
+    : application_dirs(meta.domain(), meta.organization(), meta.name())
+  {}
+
   application_dirs::application_dirs(
     string_view qualifier,
     string_view organization,
