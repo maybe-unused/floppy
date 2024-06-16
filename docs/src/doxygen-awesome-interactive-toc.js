@@ -28,8 +28,8 @@ SOFTWARE.
 */
 
 class DoxygenAwesomeInteractiveToc {
-    static topOffset = 45
-    static hideMobileMenu = false
+    static topOffset = 38
+    static hideMobileMenu = true
     static headers = []
 
     static init() {
