@@ -28,12 +28,18 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 if(NO_SUBMODULES)
   message(STATUS "[${PROJECT_NAME}] building without submodules, relying on system or conan packages")
   find_package(fmt REQUIRED)
+  find_package(spdlog REQUIRED)
   if(WIN32)
     find_package(winapi20 REQUIRED)
   endif()
 else()
   message(STATUS "[${PROJECT_NAME}] building with git submodules")
   add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/extern/3rd-party/fmt)
+  if(TARGET spdlog::spdlog)
+    message(STATUS "[${PROJECT_NAME}] linked with spdlog")
+  else()
+    message(FATAL_ERROR "[${PROJECT_NAME}] failed to link with spdlog. don't forget to link with spdlog::spdlog in parent project!")
+  endif()
   if(WIN32)
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/extern/winapi20)
   endif()
@@ -63,6 +69,7 @@ target_sources(${PROJECT_NAME}
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/directories.h> $<INSTALL_INTERFACE:include/floppy/directories.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/serialization.h> $<INSTALL_INTERFACE:include/floppy/serialization.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/configuration.h> $<INSTALL_INTERFACE:include/floppy/configuration.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/logging.h> $<INSTALL_INTERFACE:include/floppy/logging.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/inl/configuration.inl> $<INSTALL_INTERFACE:include/floppy/inl/configuration.inl>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/export.h> $<INSTALL_INTERFACE:include/floppy/detail/export.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/predefs.h> $<INSTALL_INTERFACE:include/floppy/detail/predefs.h>
@@ -75,7 +82,6 @@ target_sources(${PROJECT_NAME}
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/print_helpers.h> $<INSTALL_INTERFACE:include/floppy/detail/print_helpers.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/corefn.h> $<INSTALL_INTERFACE:include/floppy/detail/corefn.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/math.h> $<INSTALL_INTERFACE:include/floppy/detail/math.h>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/logging.h> $<INSTALL_INTERFACE:include/floppy/detail/logging.h>
   PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src/detail/rtti.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/src/directories.cc
@@ -84,6 +90,7 @@ target_sources(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
   PUBLIC
     fmt::fmt
+    spdlog::spdlog
   PRIVATE
     $<$<BOOL:${WIN32}>:winapi::winapi20>
 )

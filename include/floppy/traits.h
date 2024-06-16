@@ -234,6 +234,6 @@ struct [[maybe_unused]] fmt::formatter<T>
   }
   template <typename FormatContext>
   constexpr auto format(T const& c, FormatContext& ctx) const {
-    return format_to(ctx.out(), "{}", c.to_string());
+    return fmt::format_to(ctx.out(), "{}", c.to_string());
   }
 };

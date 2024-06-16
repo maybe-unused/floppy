@@ -5,6 +5,7 @@
 #include <fstream>
 #include <floppy/floppy.h>
 #include <floppy/serialization.h>
+#include <floppy/logging.h>
 
 namespace floppy
 {
