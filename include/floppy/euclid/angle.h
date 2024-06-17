@@ -66,8 +66,8 @@ namespace floppy::math
     /// \note Takes wrapping and signs into account.
     [[nodiscard]] constexpr auto angle_to(angle const& other) const -> angle {
       auto const max = ::fl::math::pi<T>::value * T(2);
-      auto const d = (other.radians() - this->radians()) % max;
-      return angle::from_radians(T(2) * d % max - d);
+      auto const d = std::fmod(other.radians() - this->radians(), max);
+      return angle::from_radians(std::fmod(T(2) * d, max) - d);
     }
 
     /// \brief Linear interpolation between two angles, using the shortest path.
