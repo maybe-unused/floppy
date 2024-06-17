@@ -2,7 +2,7 @@ var searchData=
 [
   ['save_0',['save',['../dc/d2c/classfloppy_1_1configuration__file.html#a4fd91547358b4ebf224666b795d4bbbe',1,'floppy::configuration_file']]],
   ['saving_5fpolicy_1',['saving_policy',['../dc/d2c/classfloppy_1_1configuration__file.html#a1528ec473f4a2402c329dfbe9e16a6e4',1,'floppy::configuration_file']]],
-  ['scale_2',['scale',['../db/db2/structfloppy_1_1math_1_1scale.html#ac3c5ffea5c89ad4d5571354a0da55813',1,'floppy::math::scale']]],
+  ['scale_2',['scale',['../db/db2/structfloppy_1_1math_1_1scale.html#a7ddcfd29802500a5f938e4eabc92bbff',1,'floppy::math::scale::scale()'],['../db/db2/structfloppy_1_1math_1_1scale.html#ac3c5ffea5c89ad4d5571354a0da55813',1,'floppy::math::scale::scale(T s)']]],
   ['serialization_5ferror_3',['serialization_error',['../db/d2a/classfloppy_1_1serialization_1_1serialization__error.html#a38cc9815e09fa42f404f593fac1ae61e',1,'floppy::serialization::serialization_error::serialization_error(format f, std::string_view details)'],['../db/d2a/classfloppy_1_1serialization_1_1serialization__error.html#a1ea46b781b9a93b4142be5c5b76f6821',1,'floppy::serialization::serialization_error::serialization_error(format f)']]],
   ['serialize_4',['serialize',['../d0/da9/namespacefloppy_1_1serialization.html#a9ea974aff95bad2cc99b711105638e97',1,'floppy::serialization']]],
   ['signed_5f_5',['signed_',['../de/d4d/structfloppy_1_1math_1_1angle.html#a16f668eb5ce16e45fb3f943ec204284b',1,'floppy::math::angle']]],

@@ -1,3 +1,17 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title=" " alt="" coords="5,5,192,31"/>
+<area shape="rect" id="Node000000" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,121,175,147"/>
+<area shape="rect" id="Node000001" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="229,5,370,46"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="124,110,221,55,245,44,248,49,224,60,127,115"/>
+<area shape="rect" id="Node000002" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="227,70,372,126"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="183,115,226,108,227,113,184,120"/>
+<area shape="rect" id="Node000003" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="223,149,376,190"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="184,147,222,154,222,159,183,152"/>
+<area shape="rect" id="Node000004" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="226,214,373,240"/>
+<area shape="poly" id="edge6_Node000000_Node000004" title=" " alt="" coords="129,152,224,199,255,211,253,216,222,204,127,157"/>
+<area shape="rect" id="Node000005" href="$de/d4d/structfloppy_1_1math_1_1angle.html" title="Newtype describing an angle." alt="" coords="442,165,533,191"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="365,207,440,187,442,192,367,212"/>
+<area shape="rect" id="Node000006" href="$dd/dd1/classfloppy_1_1math_1_1length.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="431,214,544,240"/>
+<area shape="poly" id="edge8_Node000004_Node000006" title=" " alt="" coords="388,224,430,224,430,230,388,230"/>
+<area shape="rect" id="Node000007" href="$db/db2/structfloppy_1_1math_1_1scale.html" title="A scaling factor between two different units of measurement." alt="" coords="424,264,550,289"/>
+<area shape="poly" id="edge9_Node000004_Node000007" title=" " alt="" coords="367,242,436,260,435,265,365,247"/>
 </map>

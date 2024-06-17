@@ -3,6 +3,7 @@ var structfloppy_1_1math_1_1scale =
     [ "type", "db/db2/structfloppy_1_1math_1_1scale.html#a834c467da58ea1d81821952d3c473b64", null ],
     [ "source_type", "db/db2/structfloppy_1_1math_1_1scale.html#a1290ef5a2787eb9937be136cc262993a", null ],
     [ "destination_type", "db/db2/structfloppy_1_1math_1_1scale.html#ade7958c1143337a2576cd6ef72ffe368", null ],
+    [ "scale", "db/db2/structfloppy_1_1math_1_1scale.html#a7ddcfd29802500a5f938e4eabc92bbff", null ],
     [ "scale", "db/db2/structfloppy_1_1math_1_1scale.html#ac3c5ffea5c89ad4d5571354a0da55813", null ],
     [ "to_string", "db/db2/structfloppy_1_1math_1_1scale.html#a2670941a8b4ee25c472c0a2b5450d6f2", null ],
     [ "is_identity", "db/db2/structfloppy_1_1math_1_1scale.html#a23f3d5bc522b2f52513c9c4aa8cf875f", null ],

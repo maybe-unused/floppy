@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", null ],
     [ "configuration_file< F, T >", "dc/d2c/classfloppy_1_1configuration__file.html", null ],
+    [ "default_unit", "d5/ddf/namespacefloppy_1_1math.html#d4/d45/structfloppy_1_1math_1_1default__unit", null ],
     [ "exception", null, [
       [ "runtime_error", null, [
         [ "serialization_error", "db/d2a/classfloppy_1_1serialization_1_1serialization__error.html", null ]
@@ -9,9 +10,11 @@ var hierarchy =
     ] ],
     [ "formattable_base< C >", "d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html", [
       [ "formattable< angle< f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
+      [ "formattable< length< default_unit, f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
       [ "formattable< scale< S, D, f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
       [ "formattable< T, C >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
         [ "angle< T >", "de/d4d/structfloppy_1_1math_1_1angle.html", null ],
+        [ "length< U, T >", "dd/dd1/classfloppy_1_1math_1_1length.html", null ],
         [ "scale< S, D, T >", "db/db2/structfloppy_1_1math_1_1scale.html", null ]
       ] ]
     ] ],

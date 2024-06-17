@@ -15,6 +15,8 @@ var annotated_dup =
           [ "pi", "d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html", null ]
         ] ],
         [ "angle", "de/d4d/structfloppy_1_1math_1_1angle.html", "de/d4d/structfloppy_1_1math_1_1angle" ],
+        [ "default_unit", "d5/ddf/namespacefloppy_1_1math.html#d4/d45/structfloppy_1_1math_1_1default__unit", null ],
+        [ "length", "dd/dd1/classfloppy_1_1math_1_1length.html", "dd/dd1/classfloppy_1_1math_1_1length" ],
         [ "pi", "d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html", null ],
         [ "scale", "db/db2/structfloppy_1_1math_1_1scale.html", "db/db2/structfloppy_1_1math_1_1scale" ]
       ] ],

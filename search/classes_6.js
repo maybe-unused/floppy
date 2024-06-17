@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['scale_0',['scale',['../db/db2/structfloppy_1_1math_1_1scale.html',1,'floppy::math']]],
-  ['serialization_5ferror_1',['serialization_error',['../db/d2a/classfloppy_1_1serialization_1_1serialization__error.html',1,'floppy::serialization']]],
-  ['singleton_2',['singleton',['../d9/d8a/structfloppy_1_1traits_1_1singleton.html',1,'floppy::traits']]],
-  ['source_5flocation_3',['source_location',['../d5/d44/structfloppy_1_1source__location.html',1,'floppy']]]
+  ['one_5fof_0',['one_of',['../d8/dca/structfloppy_1_1one__of.html',1,'floppy']]],
+  ['ostream_5fformatter_1',['ostream_formatter',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]],
+  ['ostream_5fformatter_3c_20char_20_3e_2',['ostream_formatter&lt; char &gt;',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]]
 ];

@@ -39,13 +39,14 @@ var searchData=
   ['format_36',['format',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181eb',1,'floppy::serialization']]],
   ['formattable_37',['formattable',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
   ['formattable_3c_20angle_3c_20f32_20_3e_2c_20char_20_3e_38',['formattable&lt; angle&lt; f32 &gt;, char &gt;',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
-  ['formattable_3c_20scale_3c_20s_2c_20d_2c_20f32_20_3e_2c_20char_20_3e_39',['formattable&lt; scale&lt; S, D, f32 &gt;, char &gt;',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
-  ['formattable_5fbase_40',['formattable_base',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html',1,'floppy::traits::detail']]],
-  ['formattable_5fbase_3c_20char_20_3e_41',['formattable_base&lt; char &gt;',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html',1,'floppy::traits::detail']]],
-  ['formatter_3c_20floppy_3a_3asource_5flocation_20_3e_42',['formatter&lt; floppy::source_location &gt;',['../db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html',1,'fmt']]],
-  ['formatter_3c_20t_20_3e_43',['formatter&lt; T &gt;',['../d6/dc7/structfmt_1_1formatter_3_01T_01_4.html',1,'fmt']]],
-  ['freebsd_44',['freebsd',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a1527e888767cdce15d200b870b39cfd0',1,'floppy::platform']]],
-  ['from_5fdegrees_45',['from_degrees',['../de/d4d/structfloppy_1_1math_1_1angle.html#acb086a1a839db1bd34fc99ec22c8431e',1,'floppy::math::angle']]],
-  ['from_5fradians_46',['from_radians',['../de/d4d/structfloppy_1_1math_1_1angle.html#ac7d4586b77d368fd0dbfe9a6c02e3e8c',1,'floppy::math::angle']]],
-  ['function_5fname_47',['function_name',['../d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644',1,'floppy::source_location']]]
+  ['formattable_3c_20length_3c_20default_5funit_2c_20f32_20_3e_2c_20char_20_3e_39',['formattable&lt; length&lt; default_unit, f32 &gt;, char &gt;',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
+  ['formattable_3c_20scale_3c_20s_2c_20d_2c_20f32_20_3e_2c_20char_20_3e_40',['formattable&lt; scale&lt; S, D, f32 &gt;, char &gt;',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
+  ['formattable_5fbase_41',['formattable_base',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html',1,'floppy::traits::detail']]],
+  ['formattable_5fbase_3c_20char_20_3e_42',['formattable_base&lt; char &gt;',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html',1,'floppy::traits::detail']]],
+  ['formatter_3c_20floppy_3a_3asource_5flocation_20_3e_43',['formatter&lt; floppy::source_location &gt;',['../db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html',1,'fmt']]],
+  ['formatter_3c_20t_20_3e_44',['formatter&lt; T &gt;',['../d6/dc7/structfmt_1_1formatter_3_01T_01_4.html',1,'fmt']]],
+  ['freebsd_45',['freebsd',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a1527e888767cdce15d200b870b39cfd0',1,'floppy::platform']]],
+  ['from_5fdegrees_46',['from_degrees',['../de/d4d/structfloppy_1_1math_1_1angle.html#acb086a1a839db1bd34fc99ec22c8431e',1,'floppy::math::angle']]],
+  ['from_5fradians_47',['from_radians',['../de/d4d/structfloppy_1_1math_1_1angle.html#ac7d4586b77d368fd0dbfe9a6c02e3e8c',1,'floppy::math::angle']]],
+  ['function_5fname_48',['function_name',['../d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644',1,'floppy::source_location']]]
 ];

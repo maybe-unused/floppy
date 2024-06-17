@@ -155,6 +155,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a7ddcfd29802500a5f938e4eabc92bbff" id="r_a7ddcfd29802500a5f938e4eabc92bbff"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ddcfd29802500a5f938e4eabc92bbff">scale</a> ()</td></tr>
+<tr class="separator:a7ddcfd29802500a5f938e4eabc92bbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3c5ffea5c89ad4d5571354a0da55813" id="r_ac3c5ffea5c89ad4d5571354a0da55813"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3c5ffea5c89ad4d5571354a0da55813">scale</a> (T s)</td></tr>
 <tr class="separator:ac3c5ffea5c89ad4d5571354a0da55813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2670941a8b4ee25c472c0a2b5450d6f2" id="r_a2670941a8b4ee25c472c0a2b5450d6f2"><td class="memItemLeft" align="right" valign="top">virtual auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a> () const -&gt; std::string override</td></tr>
@@ -205,7 +207,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename S, typename D, concepts::num T = f32&gt;<br />
 struct floppy::math::scale&lt; S, D, T &gt;</div><p>A scaling factor between two different units of measurement. </p>
-<p>This is effectively a type-safe float, intended to be used in combination with other types like floppy::math::length to enforce conversion between systems of measurement at compile time. <b>S</b> and <b>D</b> are types representing the units before and after multiplying a value by a scale. They may be types without values, such as empty enums. For example: </p><div class="fragment"><div class="line"><span class="keyword">using </span>fl::math::scale;</div>
+<p>This is effectively a type-safe float, intended to be used in combination with other types like <a class="el" href="../../dd/dd1/classfloppy_1_1math_1_1length.html">floppy::math::length</a> to enforce conversion between systems of measurement at compile time. <b>S</b> and <b>D</b> are types representing the units before and after multiplying a value by a scale. They may be types without values, such as empty enums. For example: </p><div class="fragment"><div class="line"><span class="keyword">using </span>fl::math::scale;</div>
 <div class="line"><span class="keyword">struct </span>Inch {};</div>
 <div class="line"><span class="keyword">struct </span>Mm {};</div>
 <div class="line"> </div>
@@ -220,9 +222,9 @@ struct floppy::math::scale&lt; S, D, T &gt;</div><p>A scaling factor between two
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd>floppy::math::length </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/dd1/classfloppy_1_1math_1_1length.html" title="A one-dimensional distance with associated unit of measurement.">floppy::math::length</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00032">32</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00035">35</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a834c467da58ea1d81821952d3c473b64" name="a834c467da58ea1d81821952d3c473b64"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a834c467da58ea1d81821952d3c473b64">&#9670;&#160;</a></span>type</h2>
@@ -240,7 +242,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 
 <p>Underlying number type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00035">35</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00038">38</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -260,7 +262,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 
 <p>Underlying source type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00038">38</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00041">41</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -280,13 +282,45 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 
 <p>Underlying destination type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00041">41</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00044">44</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7ddcfd29802500a5f938e4eabc92bbff" name="a7ddcfd29802500a5f938e4eabc92bbff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ddcfd29802500a5f938e4eabc92bbff">&#9670;&#160;</a></span>scale() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../db/db2/structfloppy_1_1math_1_1scale.html">scale</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an identity scale. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a1aa17b4eca3ee340d78ce8e3aa5c5848" title="Creates an identity scale (1.0).">scale::identity</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00048">48</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+
+</div>
+</div>
 <a id="ac3c5ffea5c89ad4d5571354a0da55813" name="ac3c5ffea5c89ad4d5571354a0da55813"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3c5ffea5c89ad4d5571354a0da55813">&#9670;&#160;</a></span>scale()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3c5ffea5c89ad4d5571354a0da55813">&#9670;&#160;</a></span>scale() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +344,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a scale from a number. </p>
+<p>Constructs a scale from a number. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>Scale factor. </td></tr>
@@ -319,7 +353,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a1aa17b4eca3ee340d78ce8e3aa5c5848" title="Creates an identity scale (1.0).">scale::identity</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00046">46</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00055">55</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -354,7 +388,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 
 <p>Implements <a class="el" href="../../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8">formattable_base&lt; C &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00055">55</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00064">64</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -393,10 +427,10 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 <div class="line">assert(cm_per_mm.is_identity() == <span class="keyword">false</span>);</div>
 <div class="line">assert(mm_per_mm.is_identity() == <span class="keyword">true</span>);</div>
 <div class="line">assert(mm_per_mm == <a class="code hl_function" href="#a1aa17b4eca3ee340d78ce8e3aa5c5848">scale&lt;mm, mm&gt;::identity</a>());</div>
-<div class="ttc" id="astructfloppy_1_1math_1_1scale_html_a1aa17b4eca3ee340d78ce8e3aa5c5848"><div class="ttname"><a href="#a1aa17b4eca3ee340d78ce8e3aa5c5848">floppy::math::scale::identity</a></div><div class="ttdeci">static constexpr auto identity() -&gt; scale</div><div class="ttdoc">Creates an identity scale (1.0).</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d0c/scale_8h_source.html#l00103">scale.h:103</a></div></div>
+<div class="ttc" id="astructfloppy_1_1math_1_1scale_html_a1aa17b4eca3ee340d78ce8e3aa5c5848"><div class="ttname"><a href="#a1aa17b4eca3ee340d78ce8e3aa5c5848">floppy::math::scale::identity</a></div><div class="ttdeci">static constexpr auto identity() -&gt; scale</div><div class="ttdoc">Creates an identity scale (1.0).</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d0c/scale_8h_source.html#l00112">scale.h:112</a></div></div>
 </div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd><code>true</code> if this scale has no effect. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00073">73</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00082">82</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -428,7 +462,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 <p>Returns the underlying scalar scale factor. </p>
 <dl class="section return"><dt>Returns</dt><dd>This scale as number. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00077">77</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00086">86</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -466,7 +500,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 <div class="line">assert(cm_per_mm.inverse() == scale&lt;mm, cm&gt;(10.0F));</div>
 </div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>The inverse scale. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00090">90</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00099">99</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -497,7 +531,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 
 <p>Creates an identity scale (1.0). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00103">103</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00112">112</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -529,7 +563,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 <p>Returns the underlying scalar scale factor. </p>
 <dl class="section return"><dt>Returns</dt><dd>This scale as number. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00107">107</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00116">116</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -558,7 +592,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00109">109</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00118">118</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -587,7 +621,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00110">110</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00119">119</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -616,7 +650,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00111">111</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00120">120</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -645,7 +679,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00112">112</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00121">121</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -674,7 +708,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00113">113</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00122">122</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -703,7 +737,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00114">114</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00123">123</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -732,7 +766,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00115">115</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00124">124</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -761,7 +795,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00116">116</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00125">125</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -809,7 +843,7 @@ template&lt;typename Sn , typename Dn , concepts::num Tn&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result of multiplication </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00125">125</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00134">134</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -857,7 +891,7 @@ template&lt;typename Sn , typename Dn , concepts::num Tn&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result of division </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00136">136</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00145">145</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
@@ -917,7 +951,7 @@ template&lt;typename S , typename D , concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00141">141</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d0c/scale_8h_source.html#l00150">150</a> of file <a class="el" href="../../d8/d0c/scale_8h_source.html">scale.h</a>.</p>
 
 </div>
 </div>
