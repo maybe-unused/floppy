@@ -32,3 +32,5 @@ namespace floppy
     }
   };
 } // namespace floppy
+
+// todo: formatters for version and meta
