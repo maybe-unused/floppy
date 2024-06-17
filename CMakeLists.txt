@@ -70,6 +70,7 @@ target_sources(${PROJECT_NAME}
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/serialization.h> $<INSTALL_INTERFACE:include/floppy/serialization.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/configuration.h> $<INSTALL_INTERFACE:include/floppy/configuration.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/logging.h> $<INSTALL_INTERFACE:include/floppy/logging.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/angle.h> $<INSTALL_INTERFACE:include/floppy/euclid/angle.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/inl/configuration.inl> $<INSTALL_INTERFACE:include/floppy/inl/configuration.inl>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/export.h> $<INSTALL_INTERFACE:include/floppy/detail/export.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/predefs.h> $<INSTALL_INTERFACE:include/floppy/detail/predefs.h>
