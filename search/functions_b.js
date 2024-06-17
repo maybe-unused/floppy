@@ -17,7 +17,8 @@ var searchData=
   ['operator_22_22_5fzu_14',['operator&quot;&quot;_ZU',['../d4/dc3/namespacefloppy_1_1literals.html#ae1b89bbab478172cc119815a813c24e1',1,'floppy::operator&quot;&quot;_ZU()'],['../d4/dc3/namespacefloppy_1_1literals.html#ae1b89bbab478172cc119815a813c24e1',1,'floppy::literals::operator&quot;&quot;_ZU()']]],
   ['operator_22_22_5fzu_15',['operator&quot;&quot;_zu',['../d4/dc3/namespacefloppy_1_1literals.html#af42b9484d915dd341f8568115381aba5',1,'floppy::operator&quot;&quot;_zu()'],['../d4/dc3/namespacefloppy_1_1literals.html#af42b9484d915dd341f8568115381aba5',1,'floppy::literals::operator&quot;&quot;_zu()']]],
   ['operator_28_29_16',['operator()',['../dc/d2c/classfloppy_1_1configuration__file.html#ac5a48f5dc476c65cc6bda590740958b6',1,'floppy::configuration_file::operator()() const -&gt; T const &amp;'],['../dc/d2c/classfloppy_1_1configuration__file.html#a7fea92ab79b6e98d0bcf0881ea45055d',1,'floppy::configuration_file::operator()() -&gt; T &amp;']]],
-  ['operator_3c_3c_17',['operator&lt;&lt;',['../d3/d05/namespacefloppy.html#addcab788066267803ed3875e35a0042f',1,'floppy']]],
-  ['operator_5b_5d_18',['operator[]',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#acf223fac7271422435f20b4a73429a12',1,'floppy::filesystem::application_dirs']]],
-  ['organization_19',['organization',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#af871cb1729b7c6415a60aad9e0fa67b4',1,'floppy::meta::project_meta']]]
+  ['operator_2a_17',['operator*',['../db/db2/structfloppy_1_1math_1_1scale.html#a80ab88f3a657f22d8fbfff41b4faff04',1,'floppy::math::scale']]],
+  ['operator_3c_3c_18',['operator&lt;&lt;',['../d3/d05/namespacefloppy.html#addcab788066267803ed3875e35a0042f',1,'floppy']]],
+  ['operator_5b_5d_19',['operator[]',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#acf223fac7271422435f20b4a73429a12',1,'floppy::filesystem::application_dirs']]],
+  ['organization_20',['organization',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#af871cb1729b7c6415a60aad9e0fa67b4',1,'floppy::meta::project_meta']]]
 ];

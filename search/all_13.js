@@ -12,5 +12,6 @@ var searchData=
   ['trace_9',['trace',['../d1/d93/namespacefloppy_1_1log.html#a1958617b608e95656ef732069cb6a51f',1,'floppy::log']]],
   ['trace_5fto_10',['trace_to',['../d1/d93/namespacefloppy_1_1log.html#afe5b43f7e92b1290fa979606a9d8bd59',1,'floppy::log']]],
   ['two_5fpi_11',['two_pi',['../de/d4d/structfloppy_1_1math_1_1angle.html#a8bf55a1f1d6b12c00a1a412d55e114d3',1,'floppy::math::angle']]],
-  ['type_5fname_12',['type_name',['../dc/d09/namespacefloppy_1_1rtti.html#aece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
+  ['type_12',['type',['../db/db2/structfloppy_1_1math_1_1scale.html#a834c467da58ea1d81821952d3c473b64',1,'floppy::math::scale']]],
+  ['type_5fname_13',['type_name',['../dc/d09/namespacefloppy_1_1rtti.html#aece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
 ];
