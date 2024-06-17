@@ -21,7 +21,7 @@ namespace floppy::math
   /// \see floppy::math::scale
   /// \see floppy::math::angle
   template <typename U = default_unit, concepts::num T = f32>
-  class length : traits::formattable<length<U, T>, char>
+  class length : public traits::formattable<length<U, T>, char>
   {
    public:
     /// \brief Constructs an empty length.

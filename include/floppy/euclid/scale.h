@@ -32,7 +32,7 @@ namespace floppy::math
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   /// \see floppy::math::length
   template <typename S, typename D, concepts::num T = f32>
-  struct scale : traits::formattable<scale<S, D, T>, char>
+  struct scale : public traits::formattable<scale<S, D, T>, char>
   {
     /// \brief Underlying number type.
     using type = T;
