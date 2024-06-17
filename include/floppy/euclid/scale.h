@@ -115,7 +115,14 @@ namespace floppy::math
     /// \return This scale as number.
     [[nodiscard]] constexpr auto operator*() const -> T { return this->m_; }
 
-    [[nodiscard]] constexpr auto operator==(scale const& other) const -> bool { return eq(this->m_, other.m_); }
+    /// \brief Compares two scales.
+    /// \note If both scales are <tt>infinity</tt>, the result is <tt>true</tt>.
+    [[nodiscard]] constexpr auto operator==(scale const& other) const -> bool {
+      if(std::isinf(this->m_) and std::isinf(other.m_))
+        return true;
+      return eq(this->m_, other.m_);
+    }
+
     [[nodiscard]] constexpr auto operator!=(scale const& other) const -> bool { return not eq(this->m_, other.m_); }
     [[nodiscard]] constexpr auto operator<(scale const& other) const -> bool { return this->m_ < other.m_; }
     [[nodiscard]] constexpr auto operator>(scale const& other) const -> bool { return this->m_ > other.m_; }

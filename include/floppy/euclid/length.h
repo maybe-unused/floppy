@@ -33,6 +33,21 @@ namespace floppy::math
       : m_(value)
     {}
 
+    constexpr length(length const&) = default;
+    constexpr length(length&&) = default;
+
+    /// \brief Returns string representation of the length.
+    /// \details Length is represented as it's numeric value. If the underlying number type is floating
+    /// point, it is rounded to three decimal places.
+    /// \note Due to limitations of the language, units are not displayed.
+    /// \return String representation of the object.
+    [[nodiscard]] virtual auto to_string() const -> std::string override {
+      if constexpr(std::is_floating_point_v<T>)
+        return fmt::format("{:.3f}", this->m_);
+      else
+        return fmt::format("{}", this->m_);
+    }
+
     /// \brief Returns the underlying value.
     [[nodiscard]] constexpr auto value() const -> T { return this->m_; }
 
@@ -77,6 +92,84 @@ namespace floppy::math
 
     /// \brief Returns the underlying value.
     [[nodiscard]] constexpr auto operator*() const -> T { return this->m_; }
+
+    constexpr auto operator=(T value) -> length& {
+      this->m_ = value;
+      return *this;
+    }
+
+    constexpr auto operator+=(length const& other) -> length& { return *this = *this + other; }
+    constexpr auto operator-=(length const& other) -> length& { return *this = *this - other; }
+    constexpr auto operator*=(length const& other) -> length& { return *this = *this * other; }
+    constexpr auto operator/=(length const& other) -> length& { return *this = *this / other; }
+
+    template <concepts::num T2>
+    constexpr auto operator+=(T2 value) -> length& { return *this = *this + static_cast<T>(value); }
+
+    template <concepts::num T2>
+    constexpr auto operator-=(T2 value) -> length& { return *this = *this - static_cast<T>(value); }
+
+    template <concepts::num T2>
+    constexpr auto operator*=(T2 value) -> length& { return *this = *this * static_cast<T>(value); }
+
+    template <concepts::num T2>
+    constexpr auto operator/=(T2 value) -> length& { return *this = *this / static_cast<T>(value); }
+
+    constexpr auto operator+(length const& other) const -> length { return length(this->m_ + other.m_); }
+    constexpr auto operator-(length const& other) const -> length { return length(this->m_ - other.m_); }
+    constexpr auto operator*(length const& other) const -> length { return length(this->m_ * other.m_); }
+
+    template <concepts::num T2>
+    constexpr auto operator+(T2 value) const -> length { return length(this->m_ + static_cast<T>(value)); }
+
+    template <concepts::num T2>
+    constexpr auto operator-(T2 value) const -> length { return length(this->m_ - static_cast<T>(value)); }
+
+    template <concepts::num T2>
+    constexpr auto operator*(T2 value) const -> length { return length(this->m_ * static_cast<T>(value)); }
+
+    template <concepts::num T2>
+    constexpr auto operator/(T2 value) const -> length { return length(this->m_ / static_cast<T>(value)); }
+
+    /// \brief Divides this length by length of another unit and return the result as a scale.
+    /// \tparam U2 Unit of the other length.
+    /// \tparam T2 Type of the other length.
+    /// \param other The other length.
+    /// \return The result as a scale ratio <i>U2/U</i> of type T of this length.
+    template <typename U2, concepts::num T2>
+    constexpr auto operator/(length<U2, T2> const& other) const -> scale<U2, U, T> {
+      return scale<U2, U, T>(this->value() / static_cast<T>(other.value()));
+    }
+
+    /// \brief Multiplies this length by scale factor.
+    /// \tparam U2 Unit of the scale factor.
+    /// \tparam T2 Type of the scale factor.
+    /// \param other The scale factor.
+    /// \return The result as a length of type T of this length.
+    template <typename U2, concepts::num T2>
+    constexpr auto operator*(scale<U, U2, T2> const& s) const -> length<U2, T> {
+      return length<U2, T>(this->value() * static_cast<T>(s.value()));
+    }
+
+    /// \brief Divides this length by scale factor.
+    /// \tparam U2 Unit of the scale factor.
+    /// \tparam T2 Type of the scale factor.
+    /// \param other The scale factor.
+    /// \return The result as a length of type T of this length.
+    template <typename U2, concepts::num T2>
+    constexpr auto operator/(scale<U2, U, T2> const& s) const -> length<U2, T> {
+      return length<U2, T>(this->value() / static_cast<T>(s.value()));
+    }
+
+    constexpr auto operator=(length const& other) -> length&  = default;
+    constexpr auto operator=(length&& other) -> length& = default;
+    constexpr auto operator-() const -> length { return length(-this->m_); }
+    [[nodiscard]] constexpr auto operator==(length const& other) const -> bool { return eq(this->m_, other.m_); }
+    [[nodiscard]] constexpr auto operator!=(length const& other) const -> bool { return not eq(this->m_, other.m_); }
+    [[nodiscard]] constexpr auto operator<(length const& other) const -> bool { return this->m_ < other.m_; }
+    [[nodiscard]] constexpr auto operator>(length const& other) const -> bool { return this->m_ > other.m_; }
+    [[nodiscard]] constexpr auto operator<=(length const& other) const -> bool { return this->m_ <= other.m_; }
+    [[nodiscard]] constexpr auto operator>=(length const& other) const -> bool { return this->m_ >= other.m_; }
 
    private:
     T m_;
