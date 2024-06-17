@@ -4,7 +4,9 @@
 
 namespace floppy::math
 {
-  /// \brief Describes an angle.
+  /// \brief Newtype describing an angle.
+  /// \details Stores an angle in radians.
+  /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   template <concepts::num T = f32>
   struct angle
   {
@@ -15,8 +17,13 @@ namespace floppy::math
       : m_(radians)
     {}
 
+    /// \brief Default copy constructor.
     constexpr angle(angle const&) = default;
+
+    /// \brief Default move constructor.
     constexpr angle(angle&&) = default;
+
+    /// \brief Default destructor.
     ~angle() = default;
 
     /// \brief Returns this angle as number in radians.
@@ -108,6 +115,7 @@ namespace floppy::math
     /// \brief Constructs an angle with value \f$\frac{\pi}{4}\f$.
     [[nodiscard]] static constexpr auto quarter_pi() -> angle { return { T(0.25) * ::fl::math::pi<T>::value }; }
 
+    [[nodiscard]] constexpr auto operator+() const -> angle { return *this; }
     [[nodiscard]] constexpr auto operator-() const -> angle { return { -this->m_ }; }
     [[nodiscard]] constexpr auto operator+(angle const& other) const -> angle { return { this->m_ + other.m_ }; }
     [[nodiscard]] constexpr auto operator-(angle const& other) const -> angle { return { this->m_ - other.m_ }; }
@@ -145,7 +153,6 @@ namespace floppy::math
     template <concepts::num U>
     [[nodiscard]] constexpr auto operator/=(U const& other) -> angle& { this->m_ /= other; return *this; }
 
-    [[nodiscard]] constexpr auto operator+() const -> angle { return *this; }
     [[nodiscard]] constexpr auto operator++() -> angle& { ++this->m_; return *this; }
     [[nodiscard]] constexpr auto operator++(int) -> angle { auto ret = *this; ++this->m_; return ret; }
     [[nodiscard]] constexpr auto operator--() -> angle& { --this->m_; return *this; }
@@ -161,6 +168,7 @@ namespace floppy::math
     [[nodiscard]] constexpr auto operator>=(angle const& other) const -> bool { return this->m_ >= other.m_; }
     [[nodiscard]] constexpr auto operator!() const -> bool { return not this->m_; }
 
+    /// \brief Returns true if the angle is not a zero-angle.
     [[nodiscard]] constexpr explicit operator bool() const { return not is_null(this->m_); }
     [[nodiscard]] constexpr explicit operator T() const { return this->m_; }
 
