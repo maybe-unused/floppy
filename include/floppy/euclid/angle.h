@@ -6,6 +6,7 @@
 namespace floppy::math
 {
   /// \brief Newtype describing an angle.
+  /// \headerfile floppy/euclid/angle.h
   /// \details Stores an angle in radians.
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   template <concepts::num T = f32>
