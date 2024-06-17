@@ -10,6 +10,9 @@
 <a href="https://whs31.github.io/floppy/index.html">
 <img src="https://img.shields.io/badge/documentation-doxygen-white?style=for-the-badge&logo=readthedocs" alt="docs_badge"/>
 </a>
+<a href="https://tmp-name-org.github.io/floppy/index.html">
+<img src="https://img.shields.io/badge/doxygen-sky?style=for-the-badge&logo=readthedocs&label=dev-documentation" alt="docs_badge"/>
+</a>
 
 ### [Changelog](./CHANGELOG.md)
 
