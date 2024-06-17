@@ -1,3 +1,7 @@
+/// \file floppy/euclid/angle.h
+/// \brief Newtype describing an angle.
+/// \author whs31
+
 #pragma once
 
 #include <floppy/detail/math.h>
