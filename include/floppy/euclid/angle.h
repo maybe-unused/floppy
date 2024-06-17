@@ -1,6 +1,7 @@
 #pragma once
 
 #include <floppy/detail/math.h>
+#include <floppy/traits.h>
 
 namespace floppy::math
 {
@@ -8,7 +9,7 @@ namespace floppy::math
   /// \details Stores an angle in radians.
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   template <concepts::num T = f32>
-  struct angle
+  struct angle : traits::formattable<angle<T>, char>
   {
     /// \brief Constructs an angle from radians.
     /// \param radians Angle in radians
@@ -25,6 +26,17 @@ namespace floppy::math
 
     /// \brief Default destructor.
     ~angle() = default;
+
+    /// \brief Returns string representation of the object.
+    /// \details Angle is represented in degrees.
+    /// If the underlying number type is floating point, it is rounded to two decimal places.
+    /// \return String representation of the object.
+    [[nodiscard]] virtual auto to_string() const -> std::string override {
+      if constexpr(std::is_floating_point_v<T>)
+        return fmt::format("{:.2f}°", this->degrees());
+      else
+        return fmt::format("{}°", this->degrees());
+    }
 
     /// \brief Returns this angle as number in radians.
     [[nodiscard]] constexpr auto radians() const -> T { return this->m_; }
