@@ -4,6 +4,7 @@ var structfloppy_1_1math_1_1angle =
     [ "angle", "de/d4d/structfloppy_1_1math_1_1angle.html#a2ddf4eb45f66fc53a35a92fec3fd22b9", null ],
     [ "angle", "de/d4d/structfloppy_1_1math_1_1angle.html#a908e7bc2c2d8e9a26301ff68ddbb023c", null ],
     [ "~angle", "de/d4d/structfloppy_1_1math_1_1angle.html#a62ac8ec6740b5914e8f9226c7714dbe6", null ],
+    [ "to_string", "de/d4d/structfloppy_1_1math_1_1angle.html#a2670941a8b4ee25c472c0a2b5450d6f2", null ],
     [ "radians", "de/d4d/structfloppy_1_1math_1_1angle.html#acce83cf8143407272735bc71979b73fb", null ],
     [ "degrees", "de/d4d/structfloppy_1_1math_1_1angle.html#a1d170f6c3273085f81efbef3b9d32abb", null ],
     [ "positive", "de/d4d/structfloppy_1_1math_1_1angle.html#ac4bf6b495d5787265c5f51db4fe5f13d", null ],
@@ -24,5 +25,6 @@ var structfloppy_1_1math_1_1angle =
     [ "half_pi", "de/d4d/structfloppy_1_1math_1_1angle.html#a8b67ad1f8ab287735ddf7ad085f6f52a", null ],
     [ "third_pi", "de/d4d/structfloppy_1_1math_1_1angle.html#a876e7db4f4cdfc082e68477771796e88", null ],
     [ "quarter_pi", "de/d4d/structfloppy_1_1math_1_1angle.html#a5bc56fa19547e504203ec5f2ed7bc98d", null ],
-    [ "operator bool", "de/d4d/structfloppy_1_1math_1_1angle.html#ad0ed9dded3dc4405713f0b9270930a92", null ]
+    [ "operator bool", "de/d4d/structfloppy_1_1math_1_1angle.html#ad0ed9dded3dc4405713f0b9270930a92", null ],
+    [ "basic_string< C >", "de/d4d/structfloppy_1_1math_1_1angle.html#abb97ee5b3485f7cc5eb67cff00cd963a", null ]
 ];

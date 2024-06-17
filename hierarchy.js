@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "angle< T >", "de/d4d/structfloppy_1_1math_1_1angle.html", null ],
     [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", null ],
     [ "configuration_file< F, T >", "dc/d2c/classfloppy_1_1configuration__file.html", null ],
     [ "exception", null, [
@@ -9,8 +8,12 @@ var hierarchy =
       ] ]
     ] ],
     [ "formattable_base< C >", "d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html", [
-      [ "formattable< T, C >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ]
+      [ "formattable< angle< f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
+      [ "formattable< T, C >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
+        [ "angle< T >", "de/d4d/structfloppy_1_1math_1_1angle.html", null ]
+      ] ]
     ] ],
+    [ "formattable_base< char >", "d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html", null ],
     [ "formatter", null, [
       [ "ostream_formatter< char >", "d4/de5/structfloppy_1_1ostream__formatter.html", [
         [ "formatter< floppy::source_location >", "db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html", null ]
