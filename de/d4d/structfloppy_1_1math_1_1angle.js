@@ -12,7 +12,7 @@ var structfloppy_1_1math_1_1angle =
     [ "angle_to", "de/d4d/structfloppy_1_1math_1_1angle.html#a3ed2d8f5b941b68d507f22d360dcf753", null ],
     [ "lerp", "de/d4d/structfloppy_1_1math_1_1angle.html#a6e7a33eae7ffeed2c276abcdca871506", null ],
     [ "is_finite", "de/d4d/structfloppy_1_1math_1_1angle.html#a7bd2d4c1b6c2133b6040f0aff4361e4c", null ],
-    [ "sin_cos", "de/d4d/structfloppy_1_1math_1_1angle.html#ab0ded02ba2abb8d672c6c8420aff5b5c", null ],
+    [ "sin_cos", "de/d4d/structfloppy_1_1math_1_1angle.html#a674fd6ea0d22759616dce5de1d2c9398", null ],
     [ "cast", "de/d4d/structfloppy_1_1math_1_1angle.html#a9335066d12bc690f95c8479c853853d4", null ],
     [ "as", "de/d4d/structfloppy_1_1math_1_1angle.html#a24533155dfcb52345a11c319404921d2", null ],
     [ "as_f32", "de/d4d/structfloppy_1_1math_1_1angle.html#ad442d6c900cfaa98b643163029859b1b", null ],
