@@ -3,17 +3,16 @@
 
 TEST(Logging, Simple)
 {
-  namespace l = floppy::logging;
-
+  namespace log = floppy::log;
   spdlog::set_level(spdlog::level::trace);
-  l::log(l::lvl::trace, "Hello, {}!", "Floppy");
-  l::log(l::lvl::debug, "Hello, {}!", "Floppy");
-  l::log(l::lvl::info, "Hello, {}!", "Floppy");
-  l::log(l::lvl::warn, "Hello, {}!", "Floppy");
-  l::log(l::lvl::err, "Hello, {}!", "Floppy");
-  l::error("Hello, {}!", "Floppy");
-  l::warn("Hello, {}!", "Floppy");
-  l::info("Hello, {}!", "Floppy");
-  l::debug("Hello, {}!", "Floppy");
-  l::trace("Hello, {}!", "Floppy");
+  log::log(log::level::trace, "Hello, {}!", "Floppy");
+  log::log(log::level::debug, "Hello, {}!", "Floppy");
+  log::log(log::level::info, "Hello, {}!", "Floppy");
+  log::log(log::level::warn, "Hello, {}!", "Floppy");
+  log::log(log::level::err, "Hello, {}!", "Floppy");
+  log::error("Hello, {}!", "Floppy");
+  log::warn("Hello, {}!", "Floppy");
+  log::info("Hello, {}!", "Floppy");
+  log::debug("Hello, {}!", "Floppy");
+  log::trace("Hello, {}!", "Floppy");
 }

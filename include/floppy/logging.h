@@ -7,11 +7,9 @@
 namespace spdlog {} // namespace spdlog
 
 /// \brief Namespace providing access to logging facilities.
-namespace floppy::logging
-{
+namespace floppy::log {
   /// \brief Logging levels.
-  namespace lvl
-  {
+  namespace level {
     using namespace spdlog::level;
   } // namespace lvl
 
@@ -149,7 +147,7 @@ namespace floppy::logging
   /// \param args Format arguments.
   /// \see log
   template <typename... Args>
-  auto log_to(lvl::level_enum level, spdlog::logger& logger, fmt::format_string<Args...> const& fmt, Args&&... args) -> void {
+  auto log_to(level::level_enum level, spdlog::logger& logger, fmt::format_string<Args...> const& fmt, Args&&... args) -> void {
     logger.log(level, fmt, std::forward<Args>(args)...);
   }
 
@@ -160,7 +158,7 @@ namespace floppy::logging
   /// \param args Format arguments.
   /// \see log_to
   template <typename... Args>
-  auto log(lvl::level_enum level, fmt::format_string<Args...> const& fmt, Args&&... args) -> void {
+  auto log(level::level_enum level, fmt::format_string<Args...> const& fmt, Args&&... args) -> void {
     log_to(level, *spdlog::default_logger(), fmt, std::forward<Args>(args)...);
   }
 } // namespace floppy::logging

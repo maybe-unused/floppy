@@ -6,7 +6,8 @@
 #include <floppy/detail/export.h>
 #include <floppy/detail/concepts.h>
 
-namespace floppy
+/// \brief Math namespace.
+namespace floppy::math
 {
   /// \brief Numbers namespace.
   inline namespace numbers
@@ -67,7 +68,7 @@ namespace floppy
   /// \return True if number is equal to zero
   /// \see eq
   template <concepts::num T>
-  [[nodiscard]] constexpr auto null(T num) -> bool { return eq(num, T(0.0)); }
+  [[nodiscard]] constexpr auto is_null(T num) -> bool { return eq(num, T(0.0)); }
 
   /// \brief Converts radians to degrees
   /// \param rad Radians
@@ -103,4 +104,4 @@ namespace floppy
   /// \return Natural logarithm of the number
   template <concepts::num T>
   [[nodiscard]] constexpr auto log(T num) -> T { return std::log(num); }
-} // namespace floppy
+} // namespace floppy::math

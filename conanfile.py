@@ -1,38 +1,13 @@
 import os
-import re
 from conan import ConanFile
 from conan.tools.cmake import CMake, CMakeToolchain, cmake_layout, CMakeDeps
 from conan.tools.build import check_min_cppstd
 from conan.tools.files import rmdir
 
-try:
-    from termcolor import colored
-except ModuleNotFoundError:
-    def colored(text, color=None):
-        return text
-
-
-def cmake_version(directory: str) -> str:
-    print(colored(f'▶ searching for CMakeLists.txt in {directory}', "magenta"))
-    try:
-        with open(os.path.join(directory, "CMakeLists.txt"), "r") as f:
-            lines = f.readlines()
-            # use regex: VERSION (\d+\.)?(\d+\.)?(\*|\d+)
-            for i, line in enumerate(lines):
-                if re.search(r"VERSION (\d+\.)?(\d+\.)?(\*|\d+)", line) and not line.startswith("cmake_"):
-                    version = re.search(r"VERSION (\d+\.)?(\d+\.)?(\*|\d+)", line).group(0)
-                    version = version.replace("VERSION ", "")
-                    print(colored(f"▶ found CMakeLists.txt version: {version}", "green"))
-                    return version
-            print(colored("▶ could not find CMakeLists.txt version", "red"))
-            return None
-    except FileNotFoundError:
-        raise FileNotFoundError(f"CMakeLists.txt not found in {directory}")
-
 
 class FloppyRecipe(ConanFile):
     name = "floppy"
-    version = cmake_version(os.path.dirname(__file__))
+    version = "1.1.5"
     description = "Library that augments and extends C++ standard library"
     author = "whs31 <whs31@github.io>"
     topics = ("logging", "coreutils", "utility")
