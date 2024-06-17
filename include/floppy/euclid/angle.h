@@ -81,7 +81,7 @@ namespace floppy::math
     [[nodiscard]] constexpr auto is_finite() const -> bool { return ::std::isfinite(this->m_); }
 
     /// \brief Return \f$(sin(x), cos(x))\f$.
-    [[nodiscard]] constexpr auto sin_cos() const -> ::std::pair<T, T> {
+    [[nodiscard]] constexpr auto sin_cos() const -> std::pair<T, T> {
       return std::make_pair(std::sin(this->m_), std::cos(this->m_));
     }
 

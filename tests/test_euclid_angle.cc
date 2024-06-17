@@ -51,3 +51,13 @@ TEST(EuclidAngle, Sum)
   EXPECT_EQ(angles[0] + angles[1] + angles[2], sum);
   EXPECT_EQ(std::accumulate(angles.cbegin(), angles.cend(), angle<f32>::zero()), sum);
 }
+
+TEST(EuclidAngle, Format)
+{
+  auto const a = angle<f32>::from_degrees(1.0F);
+  std::stringstream ss;
+  ss << a;
+  EXPECT_EQ(ss.str(), "1.00°");
+  EXPECT_EQ(fmt::format("{}", a), "1.00°");
+  //EXPECT_EQ(fmt::format("{}", a.cast<i32>()), "1°"); todo 17.06.2024: this test fails to compile for some strange reason
+}
