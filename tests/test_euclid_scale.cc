@@ -35,3 +35,9 @@ TEST(EuclidScale, Integral)
   EXPECT_EQ(a + b, c);
   EXPECT_EQ(a - b, d);
 }
+
+TEST(EuclidScale, Format)
+{
+  auto const cm_per_mm = scale<Mm, Cm>(0.1F);
+  EXPECT_EQ(fmt::format("{}", cm_per_mm), "1/10");
+}

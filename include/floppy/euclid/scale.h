@@ -1,3 +1,7 @@
+/// \file floppy/euclid/scale.h
+/// \brief A scaling factor between two different units of measurement.
+/// \author whs31
+
 #pragma once
 
 #include <floppy/detail/math.h>
@@ -24,7 +28,7 @@ namespace floppy::math
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   /// \see floppy::math::length
   template <typename S, typename D, concepts::num T = f32>
-  struct scale
+  struct scale : traits::formattable<scale<S, D, T>, char>
   {
     /// \brief Underlying number type.
     using type = T;
@@ -41,6 +45,15 @@ namespace floppy::math
     constexpr explicit scale(T s)
       : m_(s)
     {}
+
+    /// \brief Returns string representation of the scale.
+    /// \details Scale is represented as the reciprocal of the underlying number, e.g. if scale value
+    /// is <i>0.1F</i>, the string representation is <i>1/10</i>. Floating point values are rounded to
+    /// nearest integer.
+    /// \return String representation of the object.
+    [[nodiscard]] virtual auto to_string() const -> std::string override {
+      return fmt::format("1/{}", std::round(1.0F / this->m_));
+    }
 
     /// \brief Returns <tt>true</tt> if this scale has no effect.
     /// \details Example:
@@ -85,7 +98,6 @@ namespace floppy::math
     // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#171
     // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#183
 
-
     /// \brief Creates an identity scale (1.0).
     [[nodiscard]] static constexpr auto identity() -> scale { return scale(1.0); }
 
@@ -102,11 +114,23 @@ namespace floppy::math
     [[nodiscard]] constexpr auto operator+(scale const& other) const -> scale { return scale(this->m_ + other.m_); }
     [[nodiscard]] constexpr auto operator-(scale const& other) const -> scale { return scale(this->m_ - other.m_); }
 
+    /// \brief Multiplies this scale with another scale of different source and destination types.
+    /// \tparam Sn Other scale source type
+    /// \tparam Dn Other scale destination type
+    /// \tparam Tn Other scale underlying number type
+    /// \param other Scale to multiply with
+    /// \return The result of multiplication
     template <typename Sn, typename Dn, concepts::num Tn>
     [[nodiscard]] constexpr auto operator*(scale<Sn, Dn, Tn> const& other) const -> scale {
       return scale(this->value() * other.value());
     }
 
+    /// \brief Divides this scale with another scale of different source and destination types.
+    /// \tparam Sn Other scale source type
+    /// \tparam Dn Other scale destination type
+    /// \tparam Tn Other scale underlying number type
+    /// \param other Scale to divide with
+    /// \return The result of division
     template <typename Sn, typename Dn, concepts::num Tn>
     [[nodiscard]] constexpr auto operator/(scale<Sn, Dn, Tn> const& other) const -> scale {
       return scale(this->value() / other.value());
