@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['info_0',['info',['../d7/d79/namespacefloppy_1_1logging.html#afdaa6e366f8bbdcd865a50a82c970d9a',1,'floppy::logging']]],
-  ['info_5fto_1',['info_to',['../d7/d79/namespacefloppy_1_1logging.html#a394535db66a7496bb7117bad991d8b14',1,'floppy::logging']]]
+  ['half_5fpi_0',['half_pi',['../de/d4d/structfloppy_1_1math_1_1angle.html#a8b67ad1f8ab287735ddf7ad085f6f52a',1,'floppy::math::angle']]]
 ];

@@ -1,21 +1,25 @@
 var annotated_dup =
 [
     [ "floppy", "d3/d05/namespacefloppy.html", [
-      [ "detail", null, [
-        [ "number_base", "d6/d0f/structfloppy_1_1numbers_1_1detail_1_1number__base.html", null ]
-      ] ],
       [ "filesystem", "d3/d3a/namespacefloppy_1_1filesystem.html", [
         [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs" ]
+      ] ],
+      [ "math", "d5/ddf/namespacefloppy_1_1math.html", [
+        [ "detail", null, [
+          [ "number_base", "d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html", null ]
+        ] ],
+        [ "numbers", "d4/d94/namespacefloppy_1_1math_1_1numbers.html", [
+          [ "detail", null, [
+            [ "number_base", "d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html", null ]
+          ] ],
+          [ "pi", "d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html", null ]
+        ] ],
+        [ "angle", "de/d4d/structfloppy_1_1math_1_1angle.html", "de/d4d/structfloppy_1_1math_1_1angle" ],
+        [ "pi", "d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html", null ]
       ] ],
       [ "meta", "db/d67/namespacefloppy_1_1meta.html", [
         [ "project_meta", "d2/de7/classfloppy_1_1meta_1_1project__meta.html", "d2/de7/classfloppy_1_1meta_1_1project__meta" ],
         [ "version", "d9/dbf/classfloppy_1_1meta_1_1version.html", "d9/dbf/classfloppy_1_1meta_1_1version" ]
-      ] ],
-      [ "numbers", "db/d4a/namespacefloppy_1_1numbers.html", [
-        [ "detail", null, [
-          [ "number_base", "d6/d0f/structfloppy_1_1numbers_1_1detail_1_1number__base.html", null ]
-        ] ],
-        [ "pi", "d7/d57/structfloppy_1_1numbers_1_1pi.html", null ]
       ] ],
       [ "ranges", "df/dd6/namespacefloppy_1_1ranges.html", [
         [ "detail", null, [
@@ -38,7 +42,6 @@ var annotated_dup =
       [ "configuration_file", "dc/d2c/classfloppy_1_1configuration__file.html", "dc/d2c/classfloppy_1_1configuration__file" ],
       [ "one_of", "d8/dca/structfloppy_1_1one__of.html", null ],
       [ "ostream_formatter", "d4/de5/structfloppy_1_1ostream__formatter.html", null ],
-      [ "pi", "d7/d57/structfloppy_1_1numbers_1_1pi.html", null ],
       [ "plain_type", "d3/d05/namespacefloppy.html#d8/d14/structfloppy_1_1plain__type", null ],
       [ "platform", "d6/d7f/classfloppy_1_1platform.html", "d6/d7f/classfloppy_1_1platform" ],
       [ "source_location", "d5/d44/structfloppy_1_1source__location.html", "d5/d44/structfloppy_1_1source__location" ]

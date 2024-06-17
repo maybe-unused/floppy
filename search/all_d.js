@@ -7,8 +7,7 @@ var searchData=
   ['non_5fcopyable_4',['non_copyable',['../d7/d83/structfloppy_1_1traits_1_1non__copyable.html',1,'floppy::traits']]],
   ['non_5fmovable_5',['non_movable',['../d2/df5/structfloppy_1_1traits_1_1non__movable.html',1,'floppy::traits']]],
   ['none_6',['none',['../dd/d72/namespacefloppy_1_1types.html#a9365b793fe547271e48fa719a7f4854d',1,'floppy::none'],['../dd/d72/namespacefloppy_1_1types.html#a9365b793fe547271e48fa719a7f4854d',1,'floppy::types::none']]],
-  ['null_7',['null',['../d3/d05/namespacefloppy.html#a66f562bcefd717de48a0deaa80f9776a',1,'floppy']]],
-  ['number_5fbase_8',['number_base',['../d6/d0f/structfloppy_1_1numbers_1_1detail_1_1number__base.html',1,'floppy::numbers::detail']]],
-  ['number_5fbase_3c_20f64_2c_20std_3a_3anumbers_3a_3api_20_3e_9',['number_base&lt; f64, std::numbers::pi &gt;',['../d6/d0f/structfloppy_1_1numbers_1_1detail_1_1number__base.html',1,'floppy::numbers::detail']]],
-  ['nvcc_10',['nvcc',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cac0ee85ff66cf80206ac9ab7b03975213',1,'floppy::platform']]]
+  ['number_5fbase_7',['number_base',['../d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html',1,'floppy::math::numbers::detail']]],
+  ['number_5fbase_3c_20f64_2c_20std_3a_3anumbers_3a_3api_20_3e_8',['number_base&lt; f64, std::numbers::pi &gt;',['../d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html',1,'floppy::math::numbers::detail']]],
+  ['nvcc_9',['nvcc',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cac0ee85ff66cf80206ac9ab7b03975213',1,'floppy::platform']]]
 ];

@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['valid_0',['valid',['../dc/d2c/classfloppy_1_1configuration__file.html#abc64ee47a063e9848f08717d8131ac8a',1,'floppy::configuration_file']]],
-  ['values_1',['values',['../dc/d2c/classfloppy_1_1configuration__file.html#af369edad742b8a6331d16846bb8a2e34',1,'floppy::configuration_file']]],
-  ['values_5fmut_2',['values_mut',['../dc/d2c/classfloppy_1_1configuration__file.html#a79c5539b570fcf78c54acc05ba2623c2',1,'floppy::configuration_file']]],
-  ['version_3',['version',['../d9/dbf/classfloppy_1_1meta_1_1version.html',1,'version'],['../d9/dbf/classfloppy_1_1meta_1_1version.html#aa1911ff476ff2833dfa5e9c58137dfcf',1,'floppy::meta::version::version(int major, int minor, int patch)'],['../d9/dbf/classfloppy_1_1meta_1_1version.html#a55949c3df6c0bb364b5d082ec2055fe9',1,'floppy::meta::version::version(std::string_view version) noexcept'],['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#a5cf0d42ee33556be9f93283b1091460d',1,'floppy::meta::project_meta::version() const noexcept -&gt; version']]],
-  ['version_5f_4',['version_',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#ae47738023ec1b44099125613d01c05c3',1,'floppy::meta::project_meta']]]
+  ['u16_0',['u16',['../dd/d72/namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4',1,'floppy::u16'],['../dd/d72/namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4',1,'floppy::types::u16']]],
+  ['u32_1',['u32',['../dd/d72/namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41',1,'floppy::u32'],['../dd/d72/namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41',1,'floppy::types::u32']]],
+  ['u64_2',['u64',['../dd/d72/namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574',1,'floppy::u64'],['../dd/d72/namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574',1,'floppy::types::u64']]],
+  ['u8_3',['u8',['../dd/d72/namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6',1,'floppy::u8'],['../dd/d72/namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6',1,'floppy::types::u8']]],
+  ['unknown_4',['unknown',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678caad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../d6/d7f/classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown']]],
+  ['unreachable_5',['unreachable',['../d3/d05/namespacefloppy.html#abb16b244632f4ab5f6fd117e5a75473e',1,'floppy']]],
+  ['usize_6',['usize',['../dd/d72/namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037',1,'floppy::usize'],['../dd/d72/namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037',1,'floppy::types::usize']]]
 ];

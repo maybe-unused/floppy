@@ -1,5 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,5,175,31"/>
-<area shape="rect" id="Node000001" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="223,5,369,31"/>
-<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="190,16,223,16,223,21,190,21"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,5,88,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="136,5,244,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="103,16,135,16,135,21,103,21"/>
+<area shape="rect" id="Node000002" href="$db/d2a/classfloppy_1_1serialization_1_1serialization__error.html" title="Exception thrown during serialization or deserialization." alt="" coords="292,5,427,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="260,16,291,16,291,21,260,21"/>
 </map>

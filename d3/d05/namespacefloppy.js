@@ -1,5 +1,6 @@
 var namespacefloppy =
 [
+    [ "concepts", "dc/dda/namespacefloppy_1_1concepts.html", "dc/dda/namespacefloppy_1_1concepts" ],
     [ "filesystem", "d3/d3a/namespacefloppy_1_1filesystem.html", "d3/d3a/namespacefloppy_1_1filesystem" ],
     [ "literals", "d4/dc3/namespacefloppy_1_1literals.html", [
       [ "operator\"\"_z", "d4/dc3/namespacefloppy_1_1literals.html#ac58595dcf43ef5b63222d4870ab99a0a", null ],
@@ -17,9 +18,9 @@ var namespacefloppy =
       [ "operator\"\"_ptrdiff", "d4/dc3/namespacefloppy_1_1literals.html#a8b90ba9cfcf5e0328b4d81f7fbd076d1", null ],
       [ "operator\"\"_pvoid", "d4/dc3/namespacefloppy_1_1literals.html#a514cd59529b04e6124eca2e8fbb5a297", null ]
     ] ],
-    [ "logging", "d7/d79/namespacefloppy_1_1logging.html", "d7/d79/namespacefloppy_1_1logging" ],
+    [ "log", "d1/d93/namespacefloppy_1_1log.html", "d1/d93/namespacefloppy_1_1log" ],
+    [ "math", "d5/ddf/namespacefloppy_1_1math.html", "d5/ddf/namespacefloppy_1_1math" ],
     [ "meta", "db/d67/namespacefloppy_1_1meta.html", "db/d67/namespacefloppy_1_1meta" ],
-    [ "numbers", "db/d4a/namespacefloppy_1_1numbers.html", "db/d4a/namespacefloppy_1_1numbers" ],
     [ "print_helpers", "d8/de5/namespacefloppy_1_1print__helpers.html", "d8/de5/namespacefloppy_1_1print__helpers" ],
     [ "ranges", "df/dd6/namespacefloppy_1_1ranges.html", "df/dd6/namespacefloppy_1_1ranges" ],
     [ "rtti", "dc/d09/namespacefloppy_1_1rtti.html", [
@@ -49,7 +50,6 @@ var namespacefloppy =
     [ "configuration_file", "dc/d2c/classfloppy_1_1configuration__file.html", "dc/d2c/classfloppy_1_1configuration__file" ],
     [ "one_of", "d8/dca/structfloppy_1_1one__of.html", null ],
     [ "ostream_formatter", "d4/de5/structfloppy_1_1ostream__formatter.html", null ],
-    [ "pi", "d7/d57/structfloppy_1_1numbers_1_1pi.html", null ],
     [ "plain_type", "d3/d05/namespacefloppy.html#d8/d14/structfloppy_1_1plain__type", null ],
     [ "platform", "d6/d7f/classfloppy_1_1platform.html", "d6/d7f/classfloppy_1_1platform" ],
     [ "source_location", "d5/d44/structfloppy_1_1source__location.html", "d5/d44/structfloppy_1_1source__location" ],
@@ -77,12 +77,6 @@ var namespacefloppy =
     [ "operator<<", "d3/d05/namespacefloppy.html#addcab788066267803ed3875e35a0042f", null ],
     [ "panic", "d3/d05/namespacefloppy.html#a6a778dde2b29125b63c1101d454f3e76", null ],
     [ "narrow_cast", "d3/d05/namespacefloppy.html#a0bbd17556e1675c4a05316d9f6743342", null ],
-    [ "eq", "d3/d05/namespacefloppy.html#afcdfac7e6f7b9774e157db98c0d635c9", null ],
-    [ "null", "d3/d05/namespacefloppy.html#a66f562bcefd717de48a0deaa80f9776a", null ],
-    [ "to_radians", "d3/d05/namespacefloppy.html#aa722c8b624bbd64c4cbdd47bfd285c5d", null ],
-    [ "to_degrees", "d3/d05/namespacefloppy.html#af2b111b7ea138d5c9b5e0a2aaaf8e98d", null ],
-    [ "log", "d3/d05/namespacefloppy.html#a42b9d9a7dff8b3db60c6e956976745c3", null ],
-    [ "log", "d3/d05/namespacefloppy.html#a1de30a44dfef08af9546a545e064b4bb", null ],
     [ "some", "dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee", null ],
     [ "operator\"\"_z", "d4/dc3/namespacefloppy_1_1literals.html#ac58595dcf43ef5b63222d4870ab99a0a", null ],
     [ "operator\"\"_Z", "d4/dc3/namespacefloppy_1_1literals.html#aa7b3c64dbeec151bf546fbc7b9fde028", null ],

@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['to_0',['to',['../df/dd6/namespacefloppy_1_1ranges.html#a67cbb0e75a528381cac61bff759a9a7f',1,'floppy::ranges']]],
-  ['to_5fdegrees_1',['to_degrees',['../d3/d05/namespacefloppy.html#af2b111b7ea138d5c9b5e0a2aaaf8e98d',1,'floppy']]],
-  ['to_5fradians_2',['to_radians',['../d3/d05/namespacefloppy.html#aa722c8b624bbd64c4cbdd47bfd285c5d',1,'floppy']]],
-  ['to_5fstring_3',['to_string',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8',1,'floppy::traits::detail::formattable_base::to_string()'],['../d9/d0b/namespacefloppy_1_1serialization_1_1detail.html#a6ca464db13e4eefa9db21644a4e38565',1,'floppy::serialization::detail::to_string()']]],
-  ['to_5funderlying_4',['to_underlying',['../d3/d05/namespacefloppy.html#a0424b6d00fac262e879df80e00da46b6',1,'floppy']]],
-  ['trace_5',['trace',['../d7/d79/namespacefloppy_1_1logging.html#a1958617b608e95656ef732069cb6a51f',1,'floppy::logging']]],
-  ['trace_5fto_6',['trace_to',['../d7/d79/namespacefloppy_1_1logging.html#afe5b43f7e92b1290fa979606a9d8bd59',1,'floppy::logging']]],
-  ['type_5fname_7',['type_name',['../dc/d09/namespacefloppy_1_1rtti.html#aece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
+  ['radians_0',['radians',['../de/d4d/structfloppy_1_1math_1_1angle.html#acce83cf8143407272735bc71979b73fb',1,'floppy::math::angle']]],
+  ['read_5ffrom_5ffile_1',['read_from_file',['../dc/d2c/classfloppy_1_1configuration__file.html#ad8f9109cc71f837b50e066ff431c8991',1,'floppy::configuration_file']]],
+  ['ref_2',['ref',['../d9/d8a/structfloppy_1_1traits_1_1singleton.html#af0163e5dd2cfaabe6e1126542874859a',1,'floppy::traits::singleton']]],
+  ['ref_5fmut_3',['ref_mut',['../d9/d8a/structfloppy_1_1traits_1_1singleton.html#a2df12143bc88306c1f341d9f54877319',1,'floppy::traits::singleton']]],
+  ['remove_4',['remove',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a9e36998ffb1db201959e7adc47adb5cb',1,'floppy::filesystem::application_dirs']]],
+  ['revert_5fto_5fdefault_5',['revert_to_default',['../dc/d2c/classfloppy_1_1configuration__file.html#af0a2e98094ed13472fbaa0e5d18e5c0d',1,'floppy::configuration_file']]],
+  ['runtime_5fdir_6',['runtime_dir',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a52ddda9c32961e71dd407082523492a1',1,'floppy::filesystem::application_dirs']]]
 ];

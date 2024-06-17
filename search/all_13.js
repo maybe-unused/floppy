@@ -1,10 +1,16 @@
 var searchData=
 [
-  ['u16_0',['u16',['../dd/d72/namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4',1,'floppy::u16'],['../dd/d72/namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4',1,'floppy::types::u16']]],
-  ['u32_1',['u32',['../dd/d72/namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41',1,'floppy::u32'],['../dd/d72/namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41',1,'floppy::types::u32']]],
-  ['u64_2',['u64',['../dd/d72/namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574',1,'floppy::u64'],['../dd/d72/namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574',1,'floppy::types::u64']]],
-  ['u8_3',['u8',['../dd/d72/namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6',1,'floppy::u8'],['../dd/d72/namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6',1,'floppy::types::u8']]],
-  ['unknown_4',['unknown',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678caad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown'],['../d6/d7f/classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637aad921d60486366258809553a3db49a4a',1,'floppy::platform::unknown']]],
-  ['unreachable_5',['unreachable',['../d3/d05/namespacefloppy.html#abb16b244632f4ab5f6fd117e5a75473e',1,'floppy']]],
-  ['usize_6',['usize',['../dd/d72/namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037',1,'floppy::usize'],['../dd/d72/namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037',1,'floppy::types::usize']]]
+  ['tendra_0',['tendra',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cad473fc947ac66e2de55db5cefeb048d6',1,'floppy::platform']]],
+  ['third_5fpi_1',['third_pi',['../de/d4d/structfloppy_1_1math_1_1angle.html#a876e7db4f4cdfc082e68477771796e88',1,'floppy::math::angle']]],
+  ['to_2',['to',['../df/dd6/namespacefloppy_1_1ranges.html#a67cbb0e75a528381cac61bff759a9a7f',1,'floppy::ranges']]],
+  ['to_5fdegrees_3',['to_degrees',['../d5/ddf/namespacefloppy_1_1math.html#af2b111b7ea138d5c9b5e0a2aaaf8e98d',1,'floppy::math']]],
+  ['to_5fhelper_4',['to_helper',['../d2/d49/structfloppy_1_1ranges_1_1detail_1_1to__helper.html',1,'floppy::ranges::detail']]],
+  ['to_5fradians_5',['to_radians',['../d5/ddf/namespacefloppy_1_1math.html#aa722c8b624bbd64c4cbdd47bfd285c5d',1,'floppy::math']]],
+  ['to_5fstring_6',['to_string',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8',1,'floppy::traits::detail::formattable_base::to_string()'],['../d9/d0b/namespacefloppy_1_1serialization_1_1detail.html#a6ca464db13e4eefa9db21644a4e38565',1,'floppy::serialization::detail::to_string()']]],
+  ['to_5funderlying_7',['to_underlying',['../d3/d05/namespacefloppy.html#a0424b6d00fac262e879df80e00da46b6',1,'floppy']]],
+  ['toml_8',['toml',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181ebaec18ad9a83c312380533fa93ac6fc61c',1,'floppy::serialization']]],
+  ['trace_9',['trace',['../d1/d93/namespacefloppy_1_1log.html#a1958617b608e95656ef732069cb6a51f',1,'floppy::log']]],
+  ['trace_5fto_10',['trace_to',['../d1/d93/namespacefloppy_1_1log.html#afe5b43f7e92b1290fa979606a9d8bd59',1,'floppy::log']]],
+  ['two_5fpi_11',['two_pi',['../de/d4d/structfloppy_1_1math_1_1angle.html#a8bf55a1f1d6b12c00a1a412d55e114d3',1,'floppy::math::angle']]],
+  ['type_5fname_12',['type_name',['../dc/d09/namespacefloppy_1_1rtti.html#aece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
 ];
