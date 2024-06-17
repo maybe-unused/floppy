@@ -9,6 +9,9 @@
 
 namespace floppy::math
 {
+  /// \brief Default unit of measurement.
+  struct [[maybe_unused]] default_unit {};
+
   /// \brief A scaling factor between two different units of measurement.
   /// \headerfile floppy/euclid/scale.h
   /// \details This is effectively a type-safe float, intended to be used in combination with other types
@@ -40,7 +43,13 @@ namespace floppy::math
     /// \brief Underlying destination type.
     using destination_type = D;
 
-    /// \brief Creates a scale from a number.
+    /// \brief Constructs an identity scale.
+    /// \see scale::identity
+    constexpr scale()
+      : m_(1.0F)
+    {}
+
+    /// \brief Constructs a scale from a number.
     /// \param s Scale factor.
     /// \see scale::identity
     constexpr explicit scale(T s)

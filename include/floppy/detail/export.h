@@ -132,7 +132,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     [[maybe_unused]] constexpr inline auto floppy_meta = project_meta(
       version(CMAKE_PROJECT_VERSION_MAJOR, CMAKE_PROJECT_VERSION_MINOR, CMAKE_PROJECT_VERSION_PATCH),
       std::string_view(stringify$(CMAKE_TARGET_NAME)),
-      "io",
+      "io.github.whs31",
       "whs31"
     );
 
@@ -140,7 +140,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     static_assert(floppy_meta.version().minor() == CMAKE_PROJECT_VERSION_MINOR, "minor version isn't the same");
     static_assert(floppy_meta.version().patch() == CMAKE_PROJECT_VERSION_PATCH, "patch version isn't the same");
     static_assert(floppy_meta.name() == std::string_view(stringify$(CMAKE_TARGET_NAME)), "project name isn't the same");
-    static_assert(floppy_meta.domain() == "io", "project domain isn't the same");
+    static_assert(floppy_meta.domain() == "io.github.whs31", "project domain isn't the same");
     static_assert(floppy_meta.organization() == "whs31", "project organization isn't the same");
   } // namespace meta
 } // namespace floppy
