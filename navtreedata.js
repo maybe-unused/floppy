@@ -59,8 +59,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d6/d7f/classfloppy_1_1platform.html#a825b4a9e2409c9f3b8373e2e905a1509",
-"dc/d2c/classfloppy_1_1configuration__file.html#a620c382a597e2b9291aa344ee8dadc38"
+"d6/d7f/classfloppy_1_1platform.html#a59111e456e3bfba78f27d52c59121b2a",
+"dc/d2c/classfloppy_1_1configuration__file.html#a4fd91547358b4ebf224666b795d4bbbe"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

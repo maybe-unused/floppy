@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"dc/d2c/classfloppy_1_1configuration__file.html#a4fd91547358b4ebf224666b795d4bbbe":[1,0,0,12,11],
 "dc/d2c/classfloppy_1_1configuration__file.html#a620c382a597e2b9291aa344ee8dadc38":[1,0,0,12,13],
 "dc/d2c/classfloppy_1_1configuration__file.html#a620c382a597e2b9291aa344ee8dadc38":[3,0,0,6,13],
 "dc/d2c/classfloppy_1_1configuration__file.html#a79c5539b570fcf78c54acc05ba2623c2":[3,0,0,6,7],
