@@ -1,5 +1,6 @@
 var structfloppy_1_1math_1_1angle =
 [
+    [ "type", "de/d4d/structfloppy_1_1math_1_1angle.html#a834c467da58ea1d81821952d3c473b64", null ],
     [ "angle", "de/d4d/structfloppy_1_1math_1_1angle.html#a6280aa3fa90b594ff86172630cad4f3e", null ],
     [ "angle", "de/d4d/structfloppy_1_1math_1_1angle.html#a2ddf4eb45f66fc53a35a92fec3fd22b9", null ],
     [ "angle", "de/d4d/structfloppy_1_1math_1_1angle.html#a908e7bc2c2d8e9a26301ff68ddbb023c", null ],

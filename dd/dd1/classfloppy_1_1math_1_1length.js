@@ -1,5 +1,6 @@
 var classfloppy_1_1math_1_1length =
 [
+    [ "type", "dd/dd1/classfloppy_1_1math_1_1length.html#a834c467da58ea1d81821952d3c473b64", null ],
     [ "length", "dd/dd1/classfloppy_1_1math_1_1length.html#a551c7e0e852eca122dfa08308571ba45", null ],
     [ "length", "dd/dd1/classfloppy_1_1math_1_1length.html#a2a0854e1d88cbc6ba6666b55281f483a", null ],
     [ "to_string", "dd/dd1/classfloppy_1_1math_1_1length.html#a2670941a8b4ee25c472c0a2b5450d6f2", null ],
