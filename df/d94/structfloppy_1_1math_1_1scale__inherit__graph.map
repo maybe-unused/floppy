@@ -1,9 +1,9 @@
 <map id="scale&lt; S, D, T &gt;" name="scale&lt; S, D, T &gt;">
-<area shape="rect" id="Node000001" title="A scaling factor between two different units of measurement." alt="" coords="115,153,241,178"/>
+<area shape="rect" id="Node000001" title="A scaling factor between two different units of measurement." alt="" coords="120,153,247,178"/>
 <area shape="rect" id="Node000002" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="17,79,163,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,113,165,150,162,154,115,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,112,169,150,166,154,116,117"/>
 <area shape="rect" id="Node000003" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,5,175,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,46,93,79,87,79,87,46"/>
-<area shape="rect" id="Node000004" href="$d2/d59/structfloppy_1_1math_1_1detail_1_1default__ordering.html" title=" " alt="" coords="187,79,348,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="242,116,195,154,191,150,239,112"/>
+<area shape="rect" id="Node000004" href="$d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html" title=" " alt="" coords="187,79,369,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="251,117,201,154,198,150,248,112"/>
 </map>

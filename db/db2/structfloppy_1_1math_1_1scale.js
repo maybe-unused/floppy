@@ -11,7 +11,6 @@ var structfloppy_1_1math_1_1scale =
     [ "inverse", "db/db2/structfloppy_1_1math_1_1scale.html#a4e64f12b7e91bda44f367ec7ebf6d31c", null ],
     [ "identity", "db/db2/structfloppy_1_1math_1_1scale.html#a1aa17b4eca3ee340d78ce8e3aa5c5848", null ],
     [ "operator*", "db/db2/structfloppy_1_1math_1_1scale.html#a80ab88f3a657f22d8fbfff41b4faff04", null ],
-    [ "operator==", "db/db2/structfloppy_1_1math_1_1scale.html#a8ee95f8ab8e1743c2416015ebb192751", null ],
     [ "operator*", "db/db2/structfloppy_1_1math_1_1scale.html#a8b8e59788a756e684c75a3e8cdaebc89", null ],
     [ "operator/", "db/db2/structfloppy_1_1math_1_1scale.html#a30a8f284dbba9406b21d13ba882f1637", null ],
     [ "basic_string< C >", "db/db2/structfloppy_1_1math_1_1scale.html#abb97ee5b3485f7cc5eb67cff00cd963a", null ]
