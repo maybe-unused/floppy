@@ -6,6 +6,7 @@
 
 #include <floppy/detail/math.h>
 #include <floppy/traits.h>
+#include <floppy/euclid/detail/nt_traits.h>
 
 namespace floppy::math
 {
@@ -32,7 +33,8 @@ namespace floppy::math
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   /// \see floppy::math::length
   template <typename S, typename D, concepts::num T = f32>
-  struct scale : public traits::formattable<scale<S, D, T>, char>
+  struct scale : public traits::formattable<scale<S, D, T>, char>,
+                 public detail::default_ordering<scale<S, D, T>>
   {
     /// \brief Underlying number type.
     using type = T;
@@ -115,8 +117,6 @@ namespace floppy::math
     /// \return This scale as number.
     [[nodiscard]] constexpr auto operator*() const -> T { return this->m_; }
 
-    [[nodiscard]] constexpr auto operator<=>(scale const& other) const { return strong_compare(**this, *other); }
-
     /// \brief Compares two scales.
     /// \note If both scales are <tt>infinity</tt>, the result is <tt>true</tt>.
     [[nodiscard]] constexpr auto operator==(scale const& other) const -> bool {
@@ -125,15 +125,6 @@ namespace floppy::math
       return eq(this->m_, other.m_);
     }
     [[nodiscard]] constexpr auto operator!=(scale const& other) const -> bool { return not ((*this) == other); }
-
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator<=>(T2 const& other) const { return strong_compare(**this, static_cast<T>(other)); }
-
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator==(T2 const& other) const -> bool { return (((*this) <=> static_cast<T>(other)) == 0); }
-
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool { return (((*this) <=> static_cast<T>(other)) != 0); }
 
     [[nodiscard]] constexpr auto operator+(scale const& other) const -> scale { return scale(this->m_ + other.m_); }
     [[nodiscard]] constexpr auto operator-(scale const& other) const -> scale { return scale(this->m_ - other.m_); }

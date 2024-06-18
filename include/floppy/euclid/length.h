@@ -5,6 +5,7 @@
 #pragma once
 
 #include <floppy/euclid/scale.h>
+#include <floppy/euclid/detail/nt_traits.h>
 
 namespace floppy::math
 {
@@ -21,9 +22,13 @@ namespace floppy::math
   /// \see floppy::math::scale
   /// \see floppy::math::angle
   template <typename U = default_unit, concepts::num T = f32>
-  class length : public traits::formattable<length<U, T>, char>
+  class length : public traits::formattable<length<U, T>, char>,
+                 public detail::default_equality<length<U, T>>
   {
    public:
+    /// \brief Underlying number type.
+    using type = T;
+
     /// \brief Constructs an empty length.
     constexpr length()
       : m_(static_cast<T>(0.0F))
@@ -166,18 +171,6 @@ namespace floppy::math
     constexpr auto operator=(length&& other) -> length& = default;
     constexpr auto operator-() const -> length { return length(-this->m_); }
 
-    [[nodiscard]] constexpr auto operator<=>(length const& other) const { return strong_compare(**this, *other); }
-    [[nodiscard]] constexpr auto operator==(length const& other) const -> bool { return (((*this) <=> other) == 0); }
-    [[nodiscard]] constexpr auto operator!=(length const& other) const -> bool { return (((*this) <=> other) != 0); }
-
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator<=>(T2 const& other) const { return strong_compare(**this, static_cast<T>(other)); }
-
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator==(T2 const& other) const -> bool { return (((*this) <=> static_cast<T>(other)) == 0); }
-
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool { return (((*this) <=> static_cast<T>(other)) != 0); }
    private:
     T m_;
   };

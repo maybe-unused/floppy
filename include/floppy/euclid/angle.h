@@ -6,6 +6,7 @@
 
 #include <floppy/detail/math.h>
 #include <floppy/traits.h>
+#include <floppy/euclid/detail/nt_traits.h>
 
 namespace floppy::math
 {
@@ -14,8 +15,12 @@ namespace floppy::math
   /// \details Stores an angle in radians.
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   template <concepts::num T = f32>
-  struct angle : public traits::formattable<angle<T>, char>
+  struct angle : public traits::formattable<angle<T>, char>,
+                 public detail::default_equality<angle<T>>
   {
+    /// \brief Underlying number type.
+    using type = T;
+
     /// \brief Constructs an angle from radians.
     /// \param radians Angle in radians
     /// \see from_degrees, from_radians
@@ -177,19 +182,6 @@ namespace floppy::math
 
     constexpr auto operator=(angle const&) -> angle& = default;
     constexpr auto operator=(angle&&) -> angle& = default;
-
-    [[nodiscard]] constexpr auto operator<=>(angle const& other) const { return strong_compare(**this, *other); }
-    [[nodiscard]] constexpr auto operator==(angle const& other) const -> bool { return (((*this) <=> other) == 0); }
-    [[nodiscard]] constexpr auto operator!=(angle const& other) const -> bool { return (((*this) <=> other) != 0); }
-
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator<=>(T2 const& other) const { return strong_compare(**this, static_cast<T>(other)); }
-
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator==(T2 const& other) const -> bool { return (((*this) <=> static_cast<T>(other)) == 0); }
-
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool { return (((*this) <=> static_cast<T>(other)) != 0); }
 
     /// \brief Returns true if the angle is not a zero-angle.
     [[nodiscard]] constexpr explicit operator bool() const { return not is_null(this->m_); }
