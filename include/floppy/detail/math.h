@@ -3,6 +3,7 @@
 #include <cmath>
 #include <limits>
 #include <numbers>
+#include <compare>
 #include <floppy/detail/export.h>
 #include <floppy/detail/concepts.h>
 
@@ -69,6 +70,29 @@ namespace floppy::math
   /// \see eq
   template <concepts::num T>
   [[nodiscard]] constexpr auto is_null(T num) -> bool { return eq(num, T(0.0)); }
+
+  /// \brief Three-ways compare two numbers, forcing them to <i>strong_order</i>.
+  /// \param a First number
+  /// \param b Second number
+  /// \tparam T Number type
+  /// \return Comparison result
+  template <concepts::num T>
+  [[nodiscard]] constexpr auto strong_compare(T a, T b) -> std::strong_ordering {
+    if constexpr(std::is_floating_point_v<T>)
+      return std::abs(a - b) <= std::numeric_limits<T>::epsilon()
+        ? std::strong_ordering::equal
+        : (a < b
+            ? std::strong_ordering::less
+            : std::strong_ordering::greater
+          );
+    else
+      return a == b
+        ? std::strong_ordering::equal
+        : (a < b
+            ? std::strong_ordering::less
+            : std::strong_ordering::greater
+          );
+  }
 
   /// \brief Converts radians to degrees
   /// \param rad Radians

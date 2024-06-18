@@ -6,6 +6,7 @@
 
 #include <floppy/detail/math.h>
 #include <floppy/traits.h>
+#include <floppy/euclid/detail/nt_traits.h>
 
 namespace floppy::math
 {
@@ -32,7 +33,8 @@ namespace floppy::math
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   /// \see floppy::math::length
   template <typename S, typename D, concepts::num T = f32>
-  struct scale : public traits::formattable<scale<S, D, T>, char>
+  struct scale : public traits::formattable<scale<S, D, T>, char>,
+                 public detail::default_ordering<scale<S, D, T>>
   {
     /// \brief Underlying number type.
     using type = T;
@@ -122,12 +124,8 @@ namespace floppy::math
         return true;
       return eq(this->m_, other.m_);
     }
+    [[nodiscard]] constexpr auto operator!=(scale const& other) const -> bool { return not ((*this) == other); }
 
-    [[nodiscard]] constexpr auto operator!=(scale const& other) const -> bool { return not eq(this->m_, other.m_); }
-    [[nodiscard]] constexpr auto operator<(scale const& other) const -> bool { return this->m_ < other.m_; }
-    [[nodiscard]] constexpr auto operator>(scale const& other) const -> bool { return this->m_ > other.m_; }
-    [[nodiscard]] constexpr auto operator<=(scale const& other) const -> bool { return this->m_ <= other.m_; }
-    [[nodiscard]] constexpr auto operator>=(scale const& other) const -> bool { return this->m_ >= other.m_; }
     [[nodiscard]] constexpr auto operator+(scale const& other) const -> scale { return scale(this->m_ + other.m_); }
     [[nodiscard]] constexpr auto operator-(scale const& other) const -> scale { return scale(this->m_ - other.m_); }
 
