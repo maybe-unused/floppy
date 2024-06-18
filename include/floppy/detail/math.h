@@ -75,16 +75,23 @@ namespace floppy::math
   /// \param a First number
   /// \param b Second number
   /// \tparam T Number type
+  /// \note Treats <tt>NaN</tt> as equal to <tt>NaN</tt> and <tt>inf</tt> as equal to <tt>inf</tt> in case of floating points.
+  /// \see eq
   /// \return Comparison result
   template <concepts::num T>
   [[nodiscard]] constexpr auto strong_compare(T a, T b) -> std::strong_ordering {
-    if constexpr(std::is_floating_point_v<T>)
+    if constexpr(std::is_floating_point_v<T>) {
+      if(std::isinf(a) and std::isinf(b))
+        return std::strong_ordering::equal;
+      if(std::isnan(a) or std::isnan(b))
+        return std::strong_ordering::equal;
       return std::abs(a - b) <= std::numeric_limits<T>::epsilon()
         ? std::strong_ordering::equal
         : (a < b
             ? std::strong_ordering::less
             : std::strong_ordering::greater
           );
+    }
     else
       return a == b
         ? std::strong_ordering::equal

@@ -23,7 +23,7 @@ namespace floppy::math
   /// \see floppy::math::angle
   template <typename U = default_unit, concepts::num T = f32>
   class length : public traits::formattable<length<U, T>, char>,
-                 public detail::default_equality<length<U, T>>
+                 public detail::default_comparable<length<U, T>>
   {
    public:
     /// \brief Underlying number type.

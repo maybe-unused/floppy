@@ -20,6 +20,7 @@ Checks:
   -readability-implicit-bool-conversion,
   -readability-braces-around-statements,
   -misc-include-cleaner
+  -cppcoreguidelines-explicit-virtual-functions
 
 # Turn all the warnings from the checks above into errors.
 WarningsAsErrors: "*"

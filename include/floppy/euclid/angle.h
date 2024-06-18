@@ -16,7 +16,7 @@ namespace floppy::math
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   template <concepts::num T = f32>
   struct angle : public traits::formattable<angle<T>, char>,
-                 public detail::default_equality<angle<T>>
+                 public detail::default_comparable<angle<T>>
   {
     /// \brief Underlying number type.
     using type = T;

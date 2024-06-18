@@ -34,7 +34,7 @@ namespace floppy::math
   /// \see floppy::math::length
   template <typename S, typename D, concepts::num T = f32>
   struct scale : public traits::formattable<scale<S, D, T>, char>,
-                 public detail::default_ordering<scale<S, D, T>>
+                 public detail::default_comparable<scale<S, D, T>>
   {
     /// \brief Underlying number type.
     using type = T;
@@ -116,15 +116,6 @@ namespace floppy::math
     /// \brief Returns the underlying scalar scale factor.
     /// \return This scale as number.
     [[nodiscard]] constexpr auto operator*() const -> T { return this->m_; }
-
-    /// \brief Compares two scales.
-    /// \note If both scales are <tt>infinity</tt>, the result is <tt>true</tt>.
-    [[nodiscard]] constexpr auto operator==(scale const& other) const -> bool {
-      if(std::isinf(this->m_) and std::isinf(other.m_))
-        return true;
-      return eq(this->m_, other.m_);
-    }
-    [[nodiscard]] constexpr auto operator!=(scale const& other) const -> bool { return not ((*this) == other); }
 
     [[nodiscard]] constexpr auto operator+(scale const& other) const -> scale { return scale(this->m_ + other.m_); }
     [[nodiscard]] constexpr auto operator-(scale const& other) const -> scale { return scale(this->m_ - other.m_); }
