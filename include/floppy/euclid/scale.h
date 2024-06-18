@@ -115,6 +115,8 @@ namespace floppy::math
     /// \return This scale as number.
     [[nodiscard]] constexpr auto operator*() const -> T { return this->m_; }
 
+    [[nodiscard]] constexpr auto operator<=>(scale const& other) const { return strong_compare(**this, *other); }
+
     /// \brief Compares two scales.
     /// \note If both scales are <tt>infinity</tt>, the result is <tt>true</tt>.
     [[nodiscard]] constexpr auto operator==(scale const& other) const -> bool {
@@ -122,12 +124,17 @@ namespace floppy::math
         return true;
       return eq(this->m_, other.m_);
     }
+    [[nodiscard]] constexpr auto operator!=(scale const& other) const -> bool { return not ((*this) == other); }
 
-    [[nodiscard]] constexpr auto operator!=(scale const& other) const -> bool { return not eq(this->m_, other.m_); }
-    [[nodiscard]] constexpr auto operator<(scale const& other) const -> bool { return this->m_ < other.m_; }
-    [[nodiscard]] constexpr auto operator>(scale const& other) const -> bool { return this->m_ > other.m_; }
-    [[nodiscard]] constexpr auto operator<=(scale const& other) const -> bool { return this->m_ <= other.m_; }
-    [[nodiscard]] constexpr auto operator>=(scale const& other) const -> bool { return this->m_ >= other.m_; }
+    template <concepts::num T2>
+    [[nodiscard]] constexpr auto operator<=>(T2 const& other) const { return strong_compare(**this, static_cast<T>(other)); }
+
+    template <concepts::num T2>
+    [[nodiscard]] constexpr auto operator==(T2 const& other) const -> bool { return (((*this) <=> static_cast<T>(other)) == 0); }
+
+    template <concepts::num T2>
+    [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool { return (((*this) <=> static_cast<T>(other)) != 0); }
+
     [[nodiscard]] constexpr auto operator+(scale const& other) const -> scale { return scale(this->m_ + other.m_); }
     [[nodiscard]] constexpr auto operator-(scale const& other) const -> scale { return scale(this->m_ - other.m_); }
 

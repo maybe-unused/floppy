@@ -177,16 +177,23 @@ namespace floppy::math
 
     constexpr auto operator=(angle const&) -> angle& = default;
     constexpr auto operator=(angle&&) -> angle& = default;
-    [[nodiscard]] constexpr auto operator==(angle const& other) const -> bool { return eq(this->m_, other.m_); }
-    [[nodiscard]] constexpr auto operator!=(angle const& other) const -> bool { return not eq(this->m_, other.m_); }
-    [[nodiscard]] constexpr auto operator<(angle const& other) const -> bool { return this->m_ < other.m_; }
-    [[nodiscard]] constexpr auto operator<=(angle const& other) const -> bool { return this->m_ <= other.m_; }
-    [[nodiscard]] constexpr auto operator>(angle const& other) const -> bool { return this->m_ > other.m_; }
-    [[nodiscard]] constexpr auto operator>=(angle const& other) const -> bool { return this->m_ >= other.m_; }
-    [[nodiscard]] constexpr auto operator!() const -> bool { return not this->m_; }
+
+    [[nodiscard]] constexpr auto operator<=>(angle const& other) const { return strong_compare(**this, *other); }
+    [[nodiscard]] constexpr auto operator==(angle const& other) const -> bool { return (((*this) <=> other) == 0); }
+    [[nodiscard]] constexpr auto operator!=(angle const& other) const -> bool { return (((*this) <=> other) != 0); }
+
+    template <concepts::num T2>
+    [[nodiscard]] constexpr auto operator<=>(T2 const& other) const { return strong_compare(**this, static_cast<T>(other)); }
+
+    template <concepts::num T2>
+    [[nodiscard]] constexpr auto operator==(T2 const& other) const -> bool { return (((*this) <=> static_cast<T>(other)) == 0); }
+
+    template <concepts::num T2>
+    [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool { return (((*this) <=> static_cast<T>(other)) != 0); }
 
     /// \brief Returns true if the angle is not a zero-angle.
     [[nodiscard]] constexpr explicit operator bool() const { return not is_null(this->m_); }
+    [[nodiscard]] constexpr auto operator!() const -> bool { return not this->m_; }
     [[nodiscard]] constexpr explicit operator T() const { return this->m_; }
 
    private:
