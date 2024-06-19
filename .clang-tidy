@@ -14,13 +14,13 @@ Checks:
   google-explicit-constructor,
   llvm-namespace-comment,
   misc-*,
-  -misc-non-private-member-variables-in-classes,
   readability-*,
   -readability-identifier-length,
   -readability-implicit-bool-conversion,
   -readability-braces-around-statements,
-  -misc-include-cleaner
   -cppcoreguidelines-explicit-virtual-functions
+  -misc-non-private-member-variables-in-classes,
+  -misc-include-cleaner
 
 # Turn all the warnings from the checks above into errors.
 WarningsAsErrors: "*"

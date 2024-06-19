@@ -11,7 +11,7 @@
 namespace floppy::math
 {
   /// \brief Newtype describing an angle.
-  /// \headerfile floppy/euclid/angle.h
+  /// \headerfile floppy/euclid.h
   /// \details Stores an angle in radians.
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   template <concepts::num T = f32>
@@ -79,9 +79,6 @@ namespace floppy::math
     [[nodiscard]] constexpr auto lerp(angle const& other, T t) const -> angle {
       return *this + this->angle_to(other) * t;
     }
-
-    /// \brief Returns true if the angle is a finite number.
-    [[nodiscard]] constexpr auto is_finite() const -> bool { return ::std::isfinite(this->m_); }
 
     /// \brief Return \f$(sin(x), cos(x))\f$.
     [[nodiscard]] constexpr auto sin_cos() const -> std::pair<T, T> {

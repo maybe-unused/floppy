@@ -14,7 +14,7 @@ namespace floppy::math
   struct [[maybe_unused]] default_unit {};
 
   /// \brief A scaling factor between two different units of measurement.
-  /// \headerfile floppy/euclid/scale.h
+  /// \headerfile floppy/euclid.h
   /// \details This is effectively a type-safe float, intended to be used in combination with other types
   /// like \ref floppy::math::length to enforce conversion between systems of measurement at compile time.
   /// <b>S</b> and <b>D</b> are types representing the units before and after multiplying a value by a scale.
@@ -44,15 +44,13 @@ namespace floppy::math
 
     /// \brief Constructs an identity scale.
     /// \see scale::identity
-    constexpr scale()
-      : detail::basic_numeric_newtype<scale<S, D, T>, T>()
+    constexpr scale() : detail::basic_numeric_newtype<scale<S, D, T>, T>()
     {}
 
     /// \brief Constructs a scale from a number.
     /// \param s Scale factor.
     /// \see scale::identity
-    constexpr explicit scale(T s)
-      : detail::basic_numeric_newtype<scale<S, D, T>, T>(s)
+    constexpr explicit scale(T s) : detail::basic_numeric_newtype<scale<S, D, T>, T>(s)
     {}
 
     /// \brief Returns string representation of the scale.
@@ -94,14 +92,6 @@ namespace floppy::math
     [[nodiscard]] constexpr auto inverse() const -> scale<destination_type, source_type, T> {
       return scale<destination_type, source_type, T>(T(1.0) / this->m_);
     }
-
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#87
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#96
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#117
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#138
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#159
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#171
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#183
 
     /// \brief Creates an identity scale (1.0).
     [[nodiscard]] static constexpr auto identity() -> scale { return scale(1.0); }

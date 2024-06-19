@@ -10,7 +10,7 @@
 namespace floppy::math
 {
   /// \brief A one-dimensional distance with associated unit of measurement.
-  /// \headerfile floppy/euclid/length.h
+  /// \headerfile floppy/euclid.h
   /// \details Unit is not used in the representation of a length value.
   /// It is used only at compile time to ensure that a Length stored with one unit is converted
   /// explicitly before being used in an expression that requires a different unit.
@@ -26,6 +26,9 @@ namespace floppy::math
                  public detail::basic_numeric_newtype<length<U, T>, T>
   {
    public:
+    /// \brief Associated unit of measurement.
+    using unit_type = U;
+
     /// \brief Constructs an empty length.
     constexpr length()
       : detail::basic_numeric_newtype<length<U, T>, T>()
