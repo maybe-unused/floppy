@@ -103,7 +103,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       /// \param domain Project domain.
       /// \param organization Project organization.
       /// \see project_name
-      consteval project_meta(version version, std::string_view name, std::string_view domain, std::string_view organization)
+      consteval project_meta(class version version, std::string_view name, std::string_view domain, std::string_view organization)
         : version_(version)
         , name_(name)
         , domain_(domain)
