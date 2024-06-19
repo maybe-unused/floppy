@@ -1,4 +1,4 @@
-/// \file floppy/euclid/euclid.h
+/// \file floppy/euclid.h
 /// \brief Small collection of classes and functions for geometric types with a focus on 2d graphics and layout.
 /// \author whs31
 
