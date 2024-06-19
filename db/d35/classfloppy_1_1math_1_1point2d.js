@@ -12,6 +12,8 @@ var classfloppy_1_1math_1_1point2d =
     [ "map", "db/d35/classfloppy_1_1math_1_1point2d.html#ad7738a303eb830c494dc9f86896fda8e", null ],
     [ "to_untyped", "db/d35/classfloppy_1_1math_1_1point2d.html#a750f0a04df8f60a5be6c024b0b458790", null ],
     [ "to_size2d", "db/d35/classfloppy_1_1math_1_1point2d.html#aaf50c9542ca5d12ff8aff81ba9966b95", null ],
+    [ "to_qpoint", "db/d35/classfloppy_1_1math_1_1point2d.html#a74985f76e78c2ce6d7b6eddf52667c53", null ],
+    [ "to_qpointf", "db/d35/classfloppy_1_1math_1_1point2d.html#aaad517001a831eff7de9c3223d591b02", null ],
     [ "cast_unit", "db/d35/classfloppy_1_1math_1_1point2d.html#a127231287e74ae7e99bffdda8d3a133d", null ],
     [ "cast", "db/d35/classfloppy_1_1math_1_1point2d.html#a99240421c774ebc1924e00dffa323891", null ],
     [ "to_f32", "db/d35/classfloppy_1_1math_1_1point2d.html#a650e03b7202b4d548c535fb7a4f5e405", null ],

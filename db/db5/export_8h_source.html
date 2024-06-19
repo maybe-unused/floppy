@@ -260,6 +260,18 @@ $(function(){initNavTree('db/db5/export_8h_source.html','../../'); initResizable
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">#undef stringify$</span></div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d3/d05/namespacefloppy.html">fl</a> = <a class="code hl_namespace" href="../../d3/d05/namespacefloppy.html">floppy</a>; <span class="comment">// NOLINT(*-unused-alias-decls)</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">#if defined(QT_CORE_LIB) || __has_include(&quot;qtglobal.h&quot;) || __has_include(&quot;qcoreapplication.h&quot;)</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor"># define FL_QT_CORE</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">#if defined(QT_GUI_LIB) || __has_include(&quot;qpainter.h&quot;) || __has_include(&quot;qguiapplication.h&quot;)</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor"># define FL_QT_GUI</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#if defined(DOXYGEN_GENERATING_OUTPUT)</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor"># define FL_DOC</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassfloppy_1_1meta_1_1project__meta_html"><div class="ttname"><a href="../../d2/de7/classfloppy_1_1meta_1_1project__meta.html">floppy::meta::project_meta</a></div><div class="ttdoc">Project metadata constexpr structure.</div><div class="ttdef"><b>Definition</b> <a href="#l00096">export.h:97</a></div></div>
 <div class="ttc" id="aclassfloppy_1_1meta_1_1project__meta_html_a1f67d5b82fcb2d90d2fc88fa40125b1a"><div class="ttname"><a href="../../d2/de7/classfloppy_1_1meta_1_1project__meta.html#a1f67d5b82fcb2d90d2fc88fa40125b1a">floppy::meta::project_meta::name</a></div><div class="ttdeci">constexpr auto name() const noexcept -&gt; std::string_view</div><div class="ttdoc">Returns constant expression project name.</div><div class="ttdef"><b>Definition</b> <a href="#l00116">export.h:116</a></div></div>
 <div class="ttc" id="aclassfloppy_1_1meta_1_1project__meta_html_a5cf0d42ee33556be9f93283b1091460d"><div class="ttname"><a href="../../d2/de7/classfloppy_1_1meta_1_1project__meta.html#a5cf0d42ee33556be9f93283b1091460d">floppy::meta::project_meta::version</a></div><div class="ttdeci">constexpr auto version() const noexcept -&gt; version</div><div class="ttdoc">Returns constant expression project version.</div><div class="ttdef"><b>Definition</b> <a href="#l00113">export.h:113</a></div></div>

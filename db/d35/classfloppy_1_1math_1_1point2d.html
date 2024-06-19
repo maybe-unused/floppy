@@ -176,6 +176,10 @@ requires (not std::is_same_v&lt;U, U2&gt;)</td></tr>
 <tr class="separator:a750f0a04df8f60a5be6c024b0b458790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf50c9542ca5d12ff8aff81ba9966b95" id="r_aaf50c9542ca5d12ff8aff81ba9966b95"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf50c9542ca5d12ff8aff81ba9966b95">to_size2d</a> () const -&gt; <a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a></td></tr>
 <tr class="separator:aaf50c9542ca5d12ff8aff81ba9966b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74985f76e78c2ce6d7b6eddf52667c53" id="r_a74985f76e78c2ce6d7b6eddf52667c53"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74985f76e78c2ce6d7b6eddf52667c53">to_qpoint</a> () const -&gt; QPoint</td></tr>
+<tr class="separator:a74985f76e78c2ce6d7b6eddf52667c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad517001a831eff7de9c3223d591b02" id="r_aaad517001a831eff7de9c3223d591b02"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaad517001a831eff7de9c3223d591b02">to_qpointf</a> () const -&gt; QPointF</td></tr>
+<tr class="separator:aaad517001a831eff7de9c3223d591b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a127231287e74ae7e99bffdda8d3a133d" id="r_a127231287e74ae7e99bffdda8d3a133d"><td class="memTemplParams" colspan="2">template&lt;typename U2 &gt; </td></tr>
 <tr class="memitem:a127231287e74ae7e99bffdda8d3a133d"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a127231287e74ae7e99bffdda8d3a133d">cast_unit</a> () const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&lt; U2, <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> &gt;</td></tr>
 <tr class="separator:a127231287e74ae7e99bffdda8d3a133d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,7 +337,7 @@ class floppy::math::point2d&lt; U, T &gt;</div><p>A two-dimensional point tagged
 <dd>
 floppy::math::vector2d </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00025">25</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00026">26</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="afa2a121b54048696c085ef8c66ac8a01" name="afa2a121b54048696c085ef8c66ac8a01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa2a121b54048696c085ef8c66ac8a01">&#9670;&#160;</a></span>unit</h2>
@@ -351,7 +355,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Associated unit type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00029">29</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00030">30</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +375,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Underlying number type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00032">32</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00033">33</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -391,7 +395,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Associated <a class="el" href="../../d0/d22/classfloppy_1_1math_1_1size2d.html" title="A two-dimensional size2d tagged with a unit.">size2d</a> type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00035">35</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00036">36</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -423,7 +427,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Constructs new point with zero coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00038">38</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00039">39</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -465,7 +469,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00043">43</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00044">44</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -507,7 +511,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00048">48</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00049">49</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -544,7 +548,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00052">52</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00053">53</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -584,7 +588,7 @@ requires (not std::is_same_v&lt;U, U2&gt;)</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00058">58</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00059">59</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +625,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00062">62</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00063">63</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -667,7 +671,7 @@ template&lt;concepts::num U2&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00068">68</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00069">69</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -698,7 +702,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Drops the units from the point, returning just the numeric scalar values. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00075">75</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00076">76</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -729,7 +733,71 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts the point into <a class="el" href="../../d0/d22/classfloppy_1_1math_1_1size2d.html" title="A two-dimensional size2d tagged with a unit.">size2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00080">80</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00081">81</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a74985f76e78c2ce6d7b6eddf52667c53" name="a74985f76e78c2ce6d7b6eddf52667c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74985f76e78c2ce6d7b6eddf52667c53">&#9670;&#160;</a></span>to_qpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto to_qpoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const -&gt; QPoint </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Casts this <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a> into <code>QPoint</code>. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00086">86</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="aaad517001a831eff7de9c3223d591b02" name="aaad517001a831eff7de9c3223d591b02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad517001a831eff7de9c3223d591b02">&#9670;&#160;</a></span>to_qpointf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto to_qpointf </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const -&gt; QPointF </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Casts this <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a> into <code>QPointF</code>. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00093">93</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -769,7 +837,7 @@ template&lt;typename U2 &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a> with the new unit of measurement and the same value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00086">86</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00100">100</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -809,7 +877,7 @@ template&lt;concepts::num T2&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a> with the new number type and the same value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00094">94</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00108">108</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -840,7 +908,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>f32</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00099">99</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00113">113</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -871,7 +939,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>f64</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00104">104</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00118">118</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -902,7 +970,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>u32</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00109">109</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00123">123</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -933,7 +1001,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>u64</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00114">114</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00128">128</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -964,7 +1032,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>usize</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00119">119</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00133">133</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -995,7 +1063,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>i32</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00124">124</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00138">138</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1026,7 +1094,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>i64</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00129">129</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00143">143</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1125,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>isize</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00134">134</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00148">148</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1163,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The distance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00143">143</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00157">157</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1144,7 +1212,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_
 <dd>
 <a class="el" href="#af755f083e286f81fe8cfe00e8d76ab35" title="Calculates the least nonnegative remainder of self (mod other).">rem_euclid</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00154">154</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00168">168</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1193,7 +1261,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_
 <dd>
 <a class="el" href="#a2e36f43b15dd31047fab42d0f48009ec" title="Calculates Euclidean division, the matching method for rem_euclid.">div_euclid</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00168">168</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00182">182</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1224,7 +1292,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Constructs new point with zero coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00178">178</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00192">192</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1253,7 +1321,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00180">180</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00194">194</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1282,7 +1350,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00181">181</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00195">195</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1311,7 +1379,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00183">183</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00197">197</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1340,7 +1408,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00187">187</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00201">201</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1371,7 +1439,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00192">192</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00206">206</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1402,7 +1470,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00197">197</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00211">211</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1431,7 +1499,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00201">201</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00215">215</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1462,7 +1530,7 @@ template&lt;typename U2 , concepts::num T2&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00206">206</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00220">220</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1491,7 +1559,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00213">213</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00227">227</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1522,7 +1590,7 @@ template&lt;typename U2 , concepts::num T2&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00218">218</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00232">232</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1553,7 +1621,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00226">226</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00240">240</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1584,7 +1652,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00233">233</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00247">247</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1613,7 +1681,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00239">239</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00253">253</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1642,7 +1710,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00245">245</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00259">259</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1679,7 +1747,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00253">253</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00267">267</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
