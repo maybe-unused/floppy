@@ -59,6 +59,24 @@ namespace floppy::math
     requires (not std::is_same_v<U, U2>)
     constexpr explicit size2d(size2d<default_unit, underlying_type> const& p) : detail::basic_two_dimensional_type<size2d<U, T>, U, T>(p.x(), p.y()){}
 
+    /// \brief Alias to <tt>x</tt> member function.
+    [[nodiscard]] constexpr auto width() const -> underlying_type { return this->x(); }
+
+    /// \brief Alias to <tt>y</tt> member function.
+    [[nodiscard]] constexpr auto height() const -> underlying_type { return this->y(); }
+
+    /// \brief Alias to <tt>x_mut</tt> member function.
+    [[nodiscard]] constexpr auto width_mut() -> underlying_type& { return this->x_mut(); }
+
+    /// \brief Alias to <tt>y_mut</tt> member function.
+    [[nodiscard]] constexpr auto height_mut() -> underlying_type& { return this->y_mut(); }
+
+    /// \brief Alias to <tt>lx</tt> member function.
+    [[nodiscard]] constexpr auto width_typed() const -> length<unit> { return this->lx(); }
+
+    /// \brief Alias to <tt>ly</tt> member function.
+    [[nodiscard]] constexpr auto height_typed() const -> length<unit> { return this->ly(); }
+
     /// \brief Drops the units from the size2d, returning just the numeric scalar values.
     [[nodiscard]] constexpr auto to_untyped() const -> size2d<default_unit, underlying_type> {
       return size2d<default_unit, underlying_type>(this->x(), this->y());

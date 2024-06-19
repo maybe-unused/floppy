@@ -6,6 +6,7 @@
 
 #include <functional>
 #include <floppy/euclid/length.h>
+#include <floppy/euclid/size2d.h>
 #include <floppy/euclid/detail/nt_traits2d.h>
 
 // todo: to qpoint
@@ -29,6 +30,9 @@ namespace floppy::math
 
     /// \brief Underlying number type.
     using underlying_type = T;
+
+    /// \brief Associated size2d type.
+    using size2d_type = size2d<unit, underlying_type>;
 
     /// \brief Constructs new point with zero coordinates.
     constexpr point2d() : detail::basic_two_dimensional_type<point2d<U, T>, U, T>() {}
@@ -125,7 +129,6 @@ namespace floppy::math
     }
 
     // todo: to_3d https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.to_3d
-    // todo add_size https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.add_size
 
     /// \brief Returns distance between this and another point.
     /// \param other The other point.
@@ -157,5 +160,76 @@ namespace floppy::math
 
     /// \brief Constructs new point with zero coordinates.
     [[nodiscard]] static constexpr auto origin() -> point2d { return point2d(); }
+
+    [[nodiscard]] constexpr auto operator+() const -> point2d { return *this; }
+    [[nodiscard]] constexpr auto operator-() const -> point2d { return point2d(-this->x(), -this->y()); }
+
+    [[nodiscard]] constexpr auto operator==(point2d const& other) const -> bool {
+      return eq(this->x(), other.x()) and eq(this->y(), other.y());
+    }
+
+    [[nodiscard]] constexpr auto operator!=(point2d const& other) const -> bool {
+      return not eq(this->x(), other.x()) or not eq(this->y(), other.y());
+    }
+
+    template <concepts::any_of<point2d, size2d_type> Q>
+    [[nodiscard]] constexpr auto operator+(Q const& other) const -> point2d {
+      return point2d(this->x() + other.x(), this->y() + other.y());
+    }
+
+    template <concepts::any_of<point2d, size2d_type> Q>
+    [[nodiscard]] constexpr auto operator-(Q const& other) const -> point2d {
+      return point2d(this->x() - other.x(), this->y() - other.y());
+    }
+
+    [[nodiscard]] constexpr auto operator*(underlying_type const& other) const -> point2d {
+      return point2d(this->x() * other, this->y() * other);
+    }
+
+    template <typename U2, concepts::num T2>
+    [[nodiscard]] constexpr auto operator*(scale<unit, U2, T2> const& other) const -> point2d<U2, underlying_type> {
+      return point2d<U2, underlying_type>(
+        this->x() * other.template as<underlying_type>(),
+        this->y() * other.template as<underlying_type>()
+      );
+    }
+
+    [[nodiscard]] constexpr auto operator/(underlying_type const& other) const -> point2d {
+      return point2d(this->x() / other, this->y() / other);
+    }
+
+    template <typename U2, concepts::num T2>
+    [[nodiscard]] constexpr auto operator/(scale<U2, unit, T2> const& other) const -> point2d<U2, underlying_type> {
+      return point2d<U2, underlying_type>(
+        this->x() / other.template as<underlying_type>(),
+        this->y() / other.template as<underlying_type>()
+      );
+    }
+
+    template <concepts::any_of<point2d, size2d_type> Q>
+    [[nodiscard]] constexpr auto operator+=(Q const& other) -> point2d& {
+      this->x_mut() += other.x();
+      this->y_mut() += other.y();
+      return *this;
+    }
+
+    template <concepts::any_of<point2d, size2d_type> Q>
+    [[nodiscard]] constexpr auto operator-=(Q const& other) -> point2d& {
+      this->x_mut() -= other.x();
+      this->y_mut() -= other.y();
+      return *this;
+    }
+
+    [[nodiscard]] constexpr auto operator*=(underlying_type const& other) -> point2d& {
+      this->x_mut() *= other;
+      this->y_mut() *= other;
+      return *this;
+    }
+
+    [[nodiscard]] constexpr auto operator/=(underlying_type const& other) -> point2d& {
+      this->x_mut() /= other;
+      this->y_mut() /= other;
+      return *this;
+    }
   };
 } // namespace floppy::math

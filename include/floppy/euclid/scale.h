@@ -93,14 +93,6 @@ namespace floppy::math
       return scale<destination_type, source_type, T>(T(1.0) / this->m_);
     }
 
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#87
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#96
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#117
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#138
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#159
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#171
-    // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#183
-
     /// \brief Creates an identity scale (1.0).
     [[nodiscard]] static constexpr auto identity() -> scale { return scale(1.0); }
 
