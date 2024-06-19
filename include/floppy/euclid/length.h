@@ -26,6 +26,9 @@ namespace floppy::math
                  public detail::basic_numeric_newtype<length<U, T>, T>
   {
    public:
+    /// \brief Associated unit of measurement.
+    using unit = U;
+
     /// \brief Constructs an empty length.
     constexpr length()
       : detail::basic_numeric_newtype<length<U, T>, T>()
