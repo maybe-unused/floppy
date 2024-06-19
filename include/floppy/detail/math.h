@@ -135,4 +135,34 @@ namespace floppy::math
   /// \return Natural logarithm of the number
   template <concepts::num T>
   [[nodiscard]] constexpr auto log(T num) -> T { return std::log(num); }
+
+  /// \brief Calculates Euclidean division, the matching method for <b>rem_euclid</b>.
+  /// \param a Dividend
+  /// \param b Divisor
+  template <concepts::num T>
+  [[nodiscard]] auto div_euclid(T a, T b) -> T {
+    auto const q = std::trunc(a / b);
+    if constexpr(std::is_floating_point_v<T>) {
+      if(std::fmod(a, b) < 0.0)
+        return b > 0.0 ? q - 1.0 : q + 1.0;
+    } else {
+      if(a % b < 0)
+        return b > 0 ? q - 1 : q + 1;
+    }
+    return q;
+  }
+
+  /// \brief Calculates the least nonnegative remainder of <tt>self (mod rhs)</tt>.
+  /// \param a Dividend
+  /// \param b Divisor
+  template <concepts::num T>
+  [[nodiscard]] auto rem_euclid(T a, T b) -> T {
+    if constexpr(std::is_floating_point_v<T>) {
+      auto const r = std::fmod(a, b);
+      return r < 0.0 ? r + std::abs(b) : r;
+    } else {
+      auto const r = a % b;
+      return r < 0 ? r + std::abs(b) : r;
+    }
+  }
 } // namespace floppy::math

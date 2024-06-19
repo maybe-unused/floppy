@@ -57,6 +57,10 @@ namespace floppy::math
     requires (not std::is_same_v<U, U2>)
     constexpr explicit point2d(point2d<default_unit, T> const& p) : detail::basic_two_dimensional_type<point2d<U, T>, U, T>(p.x(), p.y()){}
 
+    /// \brief Constructs new point from size2d.
+    /// \param other The other size2d.
+    [[nodiscard]] constexpr explicit point2d(size2d_type const& other) : point2d(other.x(), other.y()) {}
+
     /// \brief Applies the function <b>fn</b> to each component of the point.
     /// \tparam U2 The new point2d's numeric scalar type.
     /// \param fn The function to apply.
@@ -71,6 +75,9 @@ namespace floppy::math
     [[nodiscard]] constexpr auto to_untyped() const -> point2d<default_unit, underlying_type> {
       return point2d<default_unit, underlying_type>(this->x(), this->y());
     }
+
+    /// \brief Casts the point into size2d.
+    [[nodiscard]] constexpr auto to_size2d() const -> size2d_type { return size2d_type(this->x(), this->y()); }
 
     /// \brief Casts the unit of measurement.
     /// \tparam U2 New unit of measurement.
@@ -137,26 +144,35 @@ namespace floppy::math
       return length<unit>(std::hypot(this->x() - other.x(), this->y() - other.y()));
     }
 
-    /// \brief Calculates the least nonnegative remainder of this (mod other)
-    /// \param other The divisor.
-    /// \return The remainder.
-    /// \see div_euclid
-    [[nodiscard]] constexpr auto rem_euclid(point2d<U, T> const& other) const -> point2d<U, T> {
-      if constexpr(std::is_integral_v<T>)
-        return point2d<U, T>(this->x() % other.x(), this->y() % other.y());
-      else
-        return point2d<U, T>(std::fmod(this->x(), other.x()), std::fmod(this->y(), other.y()));
-    }
-
     /// \brief Calculates Euclidean division, the matching method for rem_euclid.
+    /// \tparam Q The type of the divisor. Can be <tt>point2d</tt> or <tt>size2d</tt>.
     /// \param other The divisor.
     /// \return The quotient.
+    /// \see floppy::math::rem_euclid, floppy::math::div_euclid
     /// \see rem_euclid
-    [[nodiscard]] constexpr auto div_euclid(point2d<U, T> const& other) const -> point2d<U, T> {
-      return point2d<U, T>(this->x() / other.x(), this->y() / other.y());
+    template <concepts::any_of<point2d, size2d_type> Q>
+    [[nodiscard]] constexpr auto div_euclid(Q const& other) const -> point2d {
+      return point2d(
+        fl::math::div_euclid(this->x(), other.x()),
+        fl::math::div_euclid(this->y(), other.y())
+      );
     }
+
+    /// \brief Calculates the least nonnegative remainder of </tt>self (mod other)</tt>.
+    /// \tparam Q The type of the divisor. Can be <tt>point2d</tt> or <tt>size2d</tt>.
+    /// \param other The divisor.
+    /// \return The remainder.
+    /// \see floppy::math::rem_euclid, floppy::math::div_euclid
+    /// \see div_euclid
+    template <concepts::any_of<point2d, size2d_type> Q>
+    [[nodiscard]] constexpr auto rem_euclid(Q const& other) const -> point2d {
+      return point2d(
+        fl::math::rem_euclid(this->x(), other.x()),
+        fl::math::rem_euclid(this->y(), other.y())
+      );
+    }
+
     // todo: same two methods for size2d
-    // todo: operators
 
     /// \brief Constructs new point with zero coordinates.
     [[nodiscard]] static constexpr auto origin() -> point2d { return point2d(); }
@@ -231,5 +247,9 @@ namespace floppy::math
       this->y_mut() /= other;
       return *this;
     }
+
+    /// \brief Constructs new point from size2d.
+    /// \param other The other size2d.
+    [[nodiscard]] static constexpr auto from_size2d(size2d_type const& other) -> point2d { return point2d(other); }
   };
 } // namespace floppy::math
