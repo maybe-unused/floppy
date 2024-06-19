@@ -190,3 +190,20 @@ TEST(EuclidVector2D, Reflect)
   EXPECT_EQ(a.reflected(n1), vector2d(1.0, -3.0));
   EXPECT_EQ(a.reflected(n2), vector2d(3.0, 1.0));
 }
+
+TEST(EuclidVector2D, Map)
+{
+  auto const p = vector2d(1.0, 2.0);
+  auto const expected = vector2d<default_unit, i32>(2, 4);
+  auto fn = [](f64 x) -> i32 { return x * 2; };
+  EXPECT_EQ(p.map(fn), expected);
+}
+
+TEST(EuclidVector2D, Zip)
+{
+  auto const p = vector2d(1.0, 2.0);
+  auto const q = vector2d(3.0, 4.0);
+  auto const got = p.zip(q, [](f64 x, f64 y) -> f64 { return x + y; });
+  auto const expected = vector2d(4.0, 6.0);
+  EXPECT_EQ(got.to_point2d(), expected.to_point2d());
+}

@@ -46,7 +46,7 @@ namespace floppy::math
       [[nodiscard]]
       constexpr auto as_degrees() const -> T { return 180.0; } // NOLINT(*-magic-numbers)
     };
-  }
+  } // namespace numbers
 
   /// \brief Returns true if numbers are equal
   /// \details Compares floating point values using formula <tt>|a - b| <= epsilon</tt>

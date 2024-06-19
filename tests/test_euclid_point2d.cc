@@ -6,6 +6,7 @@
 
 using fl::math::size2d;
 using fl::math::point2d;
+using fl::math::vector2d;
 using fl::math::default_unit;
 using fl::math::scale;
 using namespace fl::types;
@@ -185,9 +186,37 @@ TEST(EuclidPoint2D, FromQPoint)
   EXPECT_EQ(point2d(p), point2d(1.0F, 2.0F));
 }
 
-/*
-#[test] pub fn test_add_vec() { assert_eq!(Point2DMm::new(1.0, 2.0) + vec2(3.0, 4.0), Point2DMm::new(4.0, 6.0)); }
-#[test] pub fn test_add_assign_vec() { assert_eq!(Point2DMm::new(1.0, 2.0) += vec2(3.0, 4.0), Point2DMm::new(4.0, 6.0)); }
-#[test] pub fn test_sub_vec() { assert_eq!(Point2DMm::new(1.0, 2.0) - vec2(3.0, 4.0), Point2DMm::new(-2.0, -2.0)); }
-#[test] pub fn test_sub_assign_vec() { assert_eq!(Point2DMm::new(1.0, 2.0) -= vec2(3.0, 4.0), Point2DMm::new(-2.0, -2.0)); }
-*/
+TEST(EuclidPoint2D, Map)
+{
+  auto const p = point2d(1.0, 2.0);
+  auto const expected = point2d<default_unit, i32>(2, 4);
+  auto fn = [](f64 x) -> i32 { return x * 2; };
+  EXPECT_EQ(p.map(fn), expected);
+}
+
+TEST(EuclidPoint2D, Zip)
+{
+  auto const p = point2d(1.0, 2.0);
+  auto const q = point2d(3.0, 4.0);
+  auto const got = p.zip(q, [](f64 x, f64 y) -> f64 { return x + y; });
+  auto const expected = point2d(4.0, 6.0);
+  EXPECT_EQ(got.to_size2d(), expected.to_size2d());
+}
+
+TEST(EuclidPoint2D, AddVec)
+{
+  auto const p = point2d(1.0, 2.0);
+  auto const v = vector2d(3.0, 4.0);
+  auto const got = p + v;
+  auto const expected = point2d(4.0, 6.0);
+  EXPECT_EQ(got, expected);
+}
+
+TEST(EuclidPoint2D, SubVec)
+{
+  auto const p = point2d(1.0, 2.0);
+  auto const v = vector2d(3.0, 4.0);
+  auto const got = p - v;
+  auto const expected = point2d(-2.0, -2.0);
+  EXPECT_EQ(got, expected);
+}

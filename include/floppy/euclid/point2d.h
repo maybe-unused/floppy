@@ -36,6 +36,9 @@ namespace floppy::math
     /// \brief Associated size2d type.
     using size2d_type = size2d<unit_type, underlying_type>;
 
+    /// \brief Associated vector type.
+    using vector2d_type = vector2d<unit_type, underlying_type>;
+
     /// \brief Constructs new point with zero coordinates.
     constexpr point2d() : detail::basic_two_dimensional_type<point2d<U, T>, U, T>() {}
 
@@ -68,14 +71,22 @@ namespace floppy::math
     constexpr explicit point2d(vector2d<default_unit, underlying_type> const& v) : detail::basic_two_dimensional_type<point2d<U, T>, U, T>(v.x(), v.y()) {}
 
     /// \brief Applies the function <b>fn</b> to each component of the point.
-    /// \tparam U2 The new point2d's numeric scalar type.
+    /// \tparam F The type of function to apply.
     /// \param fn The function to apply.
-    template <concepts::num U2>
-    constexpr auto map(std::function<U2(U)> fn) const { return point2d<unit_type, U2>(fn(this->x()), fn(this->y())); }
+    template <std::invocable<underlying_type> F>
+    constexpr auto map(F&& fn) const {
+      return point2d<unit_type, decltype(fn(this->x()))>(fn(this->x()), fn(this->y()));
+    }
 
-    // todo: zip https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.zip
+    /// \brief Applies the function <b>fn</b> to each component of this point and the other point.
+    /// \tparam F The type of function to apply.
+    /// \param other The other point to apply.
+    /// \param fn The function to apply.
+    template <std::invocable<underlying_type, underlying_type> F>
+    constexpr auto zip(point2d const& other, F&& fn) const -> vector2d<unit_type, decltype(fn(this->x(), other.x()))> {
+      return vector2d<unit_type, decltype(fn(this->x(), other.x()))>(fn(this->x(), other.x()), fn(this->y(), other.y()));
+    }
     // todo: extend https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.extend
-    // todo: to_vector https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.to_vector
 
     /// \brief Drops the units from the point, returning just the numeric scalar values.
     [[nodiscard]] constexpr auto to_untyped() const -> point2d<default_unit, underlying_type> {
@@ -214,12 +225,12 @@ namespace floppy::math
       return not eq(this->x(), other.x()) or not eq(this->y(), other.y());
     }
 
-    template <concepts::any_of<point2d, size2d_type> Q>
+    template <concepts::any_of<point2d, size2d_type, vector2d_type> Q>
     [[nodiscard]] constexpr auto operator+(Q const& other) const -> point2d {
       return point2d(this->x() + other.x(), this->y() + other.y());
     }
 
-    template <concepts::any_of<point2d, size2d_type> Q>
+    template <concepts::any_of<point2d, size2d_type, vector2d_type> Q>
     [[nodiscard]] constexpr auto operator-(Q const& other) const -> point2d {
       return point2d(this->x() - other.x(), this->y() - other.y());
     }
@@ -248,14 +259,14 @@ namespace floppy::math
       );
     }
 
-    template <concepts::any_of<point2d, size2d_type> Q>
+    template <concepts::any_of<point2d, size2d_type, vector2d_type> Q>
     constexpr auto operator+=(Q const& other) -> point2d& {
       this->x_mut() += other.x();
       this->y_mut() += other.y();
       return *this;
     }
 
-    template <concepts::any_of<point2d, size2d_type> Q>
+    template <concepts::any_of<point2d, size2d_type, vector2d_type> Q>
     constexpr auto operator-=(Q const& other) -> point2d& {
       this->x_mut() -= other.x();
       this->y_mut() -= other.y();

@@ -39,9 +39,9 @@ namespace floppy::math
     using underlying_type = T;
 
     constexpr size2d(size2d const&) = default;
-    constexpr size2d& operator=(size2d const&) = default;
+    constexpr auto operator=(size2d const&) -> size2d& = default;
     constexpr size2d(size2d&&) = default;
-    constexpr size2d& operator=(size2d&&) = default;
+    constexpr auto operator=(size2d&&) -> size2d& = default;
 
     /// \brief Constructs new size2d with zero coordinates.
     constexpr size2d() : detail::basic_two_dimensional_type<size2d<U, T>, U, T>() {}
@@ -181,8 +181,6 @@ namespace floppy::math
     /// \brief Returns result of multiplication of both scalars.
     /// \return Area of the size2d.
     [[nodiscard]] constexpr auto area() const -> underlying_type { return this->x() * this->y(); }
-
-    // todo: to_vector()
 
     [[nodiscard]] constexpr auto operator+() const -> size2d { return *this; }
     [[nodiscard]] constexpr auto operator-() const -> size2d { return size2d(-this->x(), -this->y()); }

@@ -14,8 +14,6 @@
 # include <qvector2d.h>
 #endif
 
-// todo: constructors from all 3 types inbetween
-
 namespace floppy::math
 {
   template <typename U, concepts::num T>
@@ -88,20 +86,20 @@ namespace floppy::math
     {}
 
     /// \brief Applies the function <b>fn</b> to each component of the vector2d.
-    /// \tparam U2 The new vector2d's numeric scalar type.
+    /// \tparam F The type of function to apply.
     /// \param fn The function to apply.
-    template <concepts::num U2>
-    constexpr auto map(std::function<U2(U)> fn) const {
-      return vector2d<unit_type, U2>(fn(this->x()), fn(this->y()));
+    template <std::invocable<underlying_type> F>
+    constexpr auto map(F&& fn) const {
+      return vector2d<unit_type, decltype(fn(this->x()))>(fn(this->x()), fn(this->y()));
     }
 
-    /// \brief Applies the function <b>fn</b> to each pair of components of this vector and <i>other</i> vector.
-    /// \tparam U2 The new vector2d's numeric scalar type.
-    /// \param other The other vector.
+    /// \brief Applies the function <b>fn</b> to each component of this vector2d and the other vector2d.
+    /// \tparam F The type of function to apply.
+    /// \param other The other vector2d to apply.
     /// \param fn The function to apply.
-    template <concepts::num U2>
-    [[nodiscard]] constexpr auto zip(vector2d<unit_type, U2> const& other, std::function<U2(U, U2)> fn) const {
-      return vector2d<unit_type, U2>(fn(this->x(), other.x()), fn(this->y(), other.y()));
+    template <std::invocable<underlying_type, underlying_type> F>
+    constexpr auto zip(vector2d const& other, F&& fn) const -> vector2d<unit_type, decltype(fn(this->x(), other.x()))> {
+      return vector2d<unit_type, decltype(fn(this->x(), other.x()))>(fn(this->x(), other.x()), fn(this->y(), other.y()));
     }
 
     // todo: extend
@@ -241,12 +239,12 @@ namespace floppy::math
   #endif
 
     /// \brief Constructs new vector with all values set to one.
-    [[nodiscard]] static constexpr vector2d one() { return vector2d::splat(1.0); }
+    [[nodiscard]] static constexpr auto one() -> vector2d { return vector2d::splat(1.0); }
 
     /// \brief Constructs new vector from angle and length.
     /// \param angle The angle in <i>unit</i>.
     /// \param length The length in <i>unit</i>.
-    [[nodiscard]] static constexpr vector2d from_angle_and_length(angle_type angle, length_type length) {
+    [[nodiscard]] static constexpr auto from_angle_and_length(angle_type angle, length_type length) -> vector2d {
       return vector2d(angle, length);
     }
 
