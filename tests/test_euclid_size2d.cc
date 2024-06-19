@@ -99,50 +99,33 @@ TEST(EuclidSize2D, MultiplyByScale)
   auto const cm_per_mm = scale<Mm, Cm>(0.1);
   EXPECT_EQ(sz * cm_per_mm, size2d<Cm>(0.1, 0.2));
 }
-/*
- * #[test]
-pub fn test_div_scalar() {
-    let s1: Size2D<f32> = Size2D::new(15.0, 25.0);
 
-let result = s1 / 5.0;
-
-assert_eq!(result, Size2D::new(3.0, 5.0));
+TEST(EuclidSize2D, DivideByScalar)
+{
+  EXPECT_EQ(size2d(1.0, 2.0) / 2.0, size2d(0.5, 1.0));
+  EXPECT_EQ(size2d(1.0, 2.0) / -2.0, size2d(-0.5, -1.0));
 }
 
-#[test]
-pub fn test_div_assign_scalar() {
-let mut s1: Size2D<f32> = Size2D::new(15.0, 25.0);
-
-s1 /= 5.0;
-
-assert_eq!(s1, Size2D::new(3.0, 5.0));
+TEST(EuclidSize2D, DivideAssignByScalar)
+{
+  EXPECT_EQ(size2d(1.0, 2.0) /= 2.0, size2d(0.5, 1.0));
+  EXPECT_EQ(size2d(1.0, 2.0) /= -2.0, size2d(-0.5, -1.0));
 }
 
-#[test]
-pub fn test_div_scale() {
-let s1 = Size2DCm::new(0.1, 0.2);
-let cm_per_mm: Scale<f32, Mm, Cm> = Scale::new(0.1);
+TEST(EuclidSize2D, DivideByScale)
+{
+  auto const sz = size2d<Cm>(0.1, 0.2);
+  auto const cm_per_mm = scale<Mm, Cm>(0.1);
 
-let result = s1 / cm_per_mm;
-
-assert_eq!(result, Size2DMm::new(1.0, 2.0));
+  EXPECT_EQ(sz / cm_per_mm, size2d<Mm>(1.0, 2.0));
 }
 
-#[test]
-pub fn test_div_assign_scale() {
-let mut s1 = Size2DMm::new(0.1, 0.2);
-let scale: Scale<f32, Mm, Mm> = Scale::new(0.1);
-
-s1 /= scale;
-
-assert_eq!(s1, Size2DMm::new(1.0, 2.0));
+TEST(EuclidSize2D, NanEmpty)
+{
+  auto const a = size2d(std::numeric_limits<f32>::quiet_NaN(), 2.0F);
+  auto const b = size2d(0.0F, std::numeric_limits<f32>::quiet_NaN());
+  auto const c = size2d(std::numeric_limits<f32>::quiet_NaN(), -2.0F);
+  EXPECT_FALSE(a);
+  EXPECT_FALSE(b);
+  EXPECT_FALSE(c);
 }
-
-#[test]
-pub fn test_nan_empty() {
-use std::f32::NAN;
-assert!(Size2D::new(NAN, 2.0).is_empty());
-assert!(Size2D::new(0.0, NAN).is_empty());
-assert!(Size2D::new(NAN, -2.0).is_empty());
-}
- */

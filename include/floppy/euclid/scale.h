@@ -44,15 +44,13 @@ namespace floppy::math
 
     /// \brief Constructs an identity scale.
     /// \see scale::identity
-    constexpr scale()
-      : detail::basic_numeric_newtype<scale<S, D, T>, T>()
+    constexpr scale() : detail::basic_numeric_newtype<scale<S, D, T>, T>()
     {}
 
     /// \brief Constructs a scale from a number.
     /// \param s Scale factor.
     /// \see scale::identity
-    constexpr explicit scale(T s)
-      : detail::basic_numeric_newtype<scale<S, D, T>, T>(s)
+    constexpr explicit scale(T s) : detail::basic_numeric_newtype<scale<S, D, T>, T>(s)
     {}
 
     /// \brief Returns string representation of the scale.

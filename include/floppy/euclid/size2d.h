@@ -181,5 +181,10 @@ namespace floppy::math
     [[nodiscard]] constexpr auto operator*(scale<unit, U2> const& s) const -> size2d<U2, underlying_type> {
       return size2d<U2, underlying_type>(this->x() * s.value(), this->y() * s.value());
     }
+
+    template <typename U2>
+    [[nodiscard]] constexpr auto operator/(scale<U2, unit> const& s) const -> size2d<U2, underlying_type> {
+      return size2d<U2, underlying_type>(this->x() / s.value(), this->y() / s.value());
+    }
   };
 } // namespace floppy::math

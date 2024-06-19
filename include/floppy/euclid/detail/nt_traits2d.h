@@ -208,8 +208,17 @@ namespace floppy::math::detail
       return T(other.first, other.second);
     }
 
-    /// \brief Returns <tt>true</tt> if underlying values is both not <tt>0</tt>.
-    [[nodiscard]] constexpr explicit operator bool() const { return not is_null(this->x_) and not is_null(this->y_); }
+    /// \brief Returns <tt>true</tt> if underlying values is both not <tt>0</tt> and not <tt>NaN</tt> or <tt>Infinity</tt> in case of floating point.
+    /// \note Also returns <tt>false
+    [[nodiscard]] constexpr explicit operator bool() const {
+      if constexpr(std::is_floating_point_v<underlying_type>) {
+        if(not this->is_finite())
+          return false;
+        if(std::isnan(this->x_) or std::isnan(this->y_))
+          return false;
+      }
+      return not is_null(this->x_) and not is_null(this->y_);
+    }
 
     /// \brief Returns <tt>false</tt> if underlying values is both not <tt>0</tt>.
     [[nodiscard]] constexpr auto operator!() const -> bool { return not this->operator bool(); }
