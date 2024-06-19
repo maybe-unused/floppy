@@ -29,16 +29,19 @@ var hierarchy =
       [ "formattable< T, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
         [ "basic_two_dimensional_type< T, U, N >", "d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html", [
           [ "point2d< U, T >", "db/d35/classfloppy_1_1math_1_1point2d.html", null ],
-          [ "size2d< U, T >", "d0/d22/classfloppy_1_1math_1_1size2d.html", null ]
+          [ "size2d< U, T >", "d0/d22/classfloppy_1_1math_1_1size2d.html", null ],
+          [ "vector2d< U, T >", "d4/d33/classfloppy_1_1math_1_1vector2d.html", null ]
         ] ]
       ] ],
       [ "formattable< length< default_unit, f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
       [ "formattable< point2d< default_unit, f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
       [ "formattable< scale< S, D, f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
       [ "formattable< size2d< default_unit, f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
+      [ "formattable< vector2d< default_unit, f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
       [ "formattable< T, C >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
         [ "basic_two_dimensional_type< point2d< default_unit, f32 >, default_unit, f32 >", "d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html", null ],
         [ "basic_two_dimensional_type< size2d< default_unit, f32 >, default_unit, f32 >", "d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html", null ],
+        [ "basic_two_dimensional_type< vector2d< default_unit, f32 >, default_unit, f32 >", "d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html", null ],
         [ "angle< T >", "de/d4d/structfloppy_1_1math_1_1angle.html", null ],
         [ "length< U, T >", "dd/dd1/classfloppy_1_1math_1_1length.html", null ],
         [ "scale< S, D, T >", "db/db2/structfloppy_1_1math_1_1scale.html", null ]

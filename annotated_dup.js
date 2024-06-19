@@ -20,7 +20,8 @@ var annotated_dup =
         [ "pi", "d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html", null ],
         [ "point2d", "db/d35/classfloppy_1_1math_1_1point2d.html", "db/d35/classfloppy_1_1math_1_1point2d" ],
         [ "scale", "db/db2/structfloppy_1_1math_1_1scale.html", "db/db2/structfloppy_1_1math_1_1scale" ],
-        [ "size2d", "d0/d22/classfloppy_1_1math_1_1size2d.html", "d0/d22/classfloppy_1_1math_1_1size2d" ]
+        [ "size2d", "d0/d22/classfloppy_1_1math_1_1size2d.html", "d0/d22/classfloppy_1_1math_1_1size2d" ],
+        [ "vector2d", "d4/d33/classfloppy_1_1math_1_1vector2d.html", "d4/d33/classfloppy_1_1math_1_1vector2d" ]
       ] ],
       [ "meta", "db/d67/namespacefloppy_1_1meta.html", [
         [ "project_meta", "d2/de7/classfloppy_1_1meta_1_1project__meta.html", "d2/de7/classfloppy_1_1meta_1_1project__meta" ],

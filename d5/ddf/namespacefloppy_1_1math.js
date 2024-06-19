@@ -8,6 +8,7 @@ var namespacefloppy_1_1math =
     [ "point2d", "db/d35/classfloppy_1_1math_1_1point2d.html", "db/d35/classfloppy_1_1math_1_1point2d" ],
     [ "scale", "db/db2/structfloppy_1_1math_1_1scale.html", "db/db2/structfloppy_1_1math_1_1scale" ],
     [ "size2d", "d0/d22/classfloppy_1_1math_1_1size2d.html", "d0/d22/classfloppy_1_1math_1_1size2d" ],
+    [ "vector2d", "d4/d33/classfloppy_1_1math_1_1vector2d.html", "d4/d33/classfloppy_1_1math_1_1vector2d" ],
     [ "eq", "d5/ddf/namespacefloppy_1_1math.html#afcdfac7e6f7b9774e157db98c0d635c9", null ],
     [ "is_null", "d5/ddf/namespacefloppy_1_1math.html#afb084ce4a1ef170a2a6e5c000f43398a", null ],
     [ "strong_compare", "d5/ddf/namespacefloppy_1_1math.html#a000c8ac590dc1840dda974d4529f08b4", null ],

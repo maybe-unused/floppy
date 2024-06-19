@@ -8,42 +8,48 @@
 <area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="188,151,236,160,235,165,187,156"/>
 <area shape="rect" id="Node000004" href="$d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html" title=" " alt="" coords="236,229,411,270"/>
 <area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="132,157,181,186,237,215,263,226,260,231,235,220,178,191,130,161"/>
-<area shape="rect" id="Node000005" href="$d8/d97/structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html" title=" " alt="" coords="479,136,656,177"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="398,221,410,215,434,201,458,187,491,175,492,180,460,192,436,206,412,220,400,225"/>
-<area shape="rect" id="Node000006" href="$d8/d97/structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html" title=" " alt="" coords="479,201,656,242"/>
-<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="426,235,478,229,478,235,427,241"/>
-<area shape="rect" id="Node000011" href="$dd/dd1/classfloppy_1_1math_1_1length.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="511,266,624,292"/>
-<area shape="poly" id="edge8_Node000004_Node000011" title=" " alt="" coords="427,259,510,270,510,275,426,265"/>
-<area shape="rect" id="Node000012" href="$db/db2/structfloppy_1_1math_1_1scale.html" title="A scaling factor between two different units of measurement." alt="" coords="504,316,630,341"/>
-<area shape="poly" id="edge9_Node000004_Node000012" title=" " alt="" coords="385,274,460,302,504,314,503,319,458,307,383,279"/>
-<area shape="rect" id="Node000007" href="$de/d4d/structfloppy_1_1math_1_1angle.html" title="Newtype describing an angle." alt="" coords="738,288,830,313"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="658,245,676,251,755,284,753,289,674,256,656,250"/>
-<area shape="rect" id="Node000013" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="12,584,181,609"/>
-<area shape="rect" id="Node000014" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="253,771,394,811"/>
-<area shape="poly" id="edge10_Node000013_Node000014" title=" " alt="" coords="116,621,165,688,199,725,237,757,256,768,253,772,234,761,195,729,161,692,112,624"/>
-<area shape="rect" id="Node000015" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="242,721,405,747"/>
-<area shape="poly" id="edge11_Node000013_Node000015" title=" " alt="" coords="123,618,173,663,204,686,237,706,266,718,264,723,234,711,201,690,170,667,119,622"/>
-<area shape="rect" id="Node000019" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="251,417,396,472"/>
-<area shape="poly" id="edge15_Node000013_Node000019" title=" " alt="" coords="121,571,172,527,234,482,255,470,257,475,237,487,175,531,125,575"/>
-<area shape="rect" id="Node000020" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="247,497,400,552"/>
-<area shape="poly" id="edge16_Node000013_Node000020" title=" " alt="" coords="153,576,245,546,247,551,155,581"/>
-<area shape="rect" id="Node000021" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="247,576,400,617"/>
-<area shape="poly" id="edge17_Node000013_Node000021" title=" " alt="" coords="196,594,246,594,246,599,196,599"/>
-<area shape="rect" id="Node000022" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="250,641,397,696"/>
-<area shape="poly" id="edge18_Node000013_Node000022" title=" " alt="" coords="155,612,250,642,248,648,153,617"/>
-<area shape="rect" id="Node000008" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="250,366,397,392"/>
-<area shape="poly" id="edge19_Node000013_Node000008" title=" " alt="" coords="107,569,127,531,155,486,191,441,234,402,257,390,259,395,237,407,195,445,159,490,131,534,112,571"/>
-<area shape="rect" id="Node000016" href="$d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="483,713,651,754"/>
-<area shape="poly" id="edge12_Node000015_Node000016" title=" " alt="" coords="420,731,483,731,483,736,420,736"/>
-<area shape="rect" id="Node000017" href="$db/d35/classfloppy_1_1math_1_1point2d.html" title="A two&#45;dimensional point tagged with a unit." alt="" coords="723,745,845,771"/>
-<area shape="poly" id="edge13_Node000016_Node000017" title=" " alt="" coords="667,742,723,748,723,754,667,747"/>
-<area shape="rect" id="Node000018" href="$d0/d22/classfloppy_1_1math_1_1size2d.html" title="A two&#45;dimensional size2d tagged with a unit." alt="" coords="726,696,842,721"/>
-<area shape="poly" id="edge14_Node000016_Node000018" title=" " alt="" coords="666,719,726,712,727,718,667,725"/>
-<area shape="poly" id="edge22_Node000008_Node000007" title=" " alt="" coords="412,379,538,374,607,366,675,351,722,333,761,311,763,316,724,338,676,356,608,371,538,380,412,385"/>
-<area shape="poly" id="edge23_Node000008_Node000011" title=" " alt="" coords="355,355,402,327,458,301,509,286,511,291,460,305,405,332,358,360"/>
-<area shape="poly" id="edge24_Node000008_Node000012" title=" " alt="" coords="403,360,503,339,504,344,404,365"/>
-<area shape="rect" id="Node000009" href="$d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="459,417,675,472"/>
-<area shape="poly" id="edge20_Node000008_Node000009" title=" " alt="" coords="389,394,461,413,460,418,388,399"/>
-<area shape="rect" id="Node000010" href="$d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="459,497,675,552"/>
-<area shape="poly" id="edge21_Node000008_Node000010" title=" " alt="" coords="405,397,413,402,430,422,438,443,445,463,461,482,477,494,474,498,457,486,440,466,433,445,426,425,409,406,402,401"/>
+<area shape="rect" id="Node000005" href="$d8/d97/structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html" title=" " alt="" coords="479,223,656,263"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="426,244,478,243,478,248,426,250"/>
+<area shape="rect" id="Node000006" href="$d8/d97/structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html" title=" " alt="" coords="479,288,656,329"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="426,272,480,285,479,290,424,277"/>
+<area shape="rect" id="Node000012" href="$dd/dd1/classfloppy_1_1math_1_1length.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="511,402,624,428"/>
+<area shape="poly" id="edge8_Node000004_Node000012" title=" " alt="" coords="410,277,413,280,425,294,432,309,437,337,442,364,449,377,461,389,484,402,511,410,509,415,482,407,457,393,445,380,437,366,431,338,426,310,420,297,409,284,406,281"/>
+<area shape="rect" id="Node000013" href="$db/db2/structfloppy_1_1math_1_1scale.html" title="A scaling factor between two different units of measurement." alt="" coords="504,353,630,379"/>
+<area shape="poly" id="edge9_Node000004_Node000013" title=" " alt="" coords="407,276,413,280,428,295,437,310,445,325,460,338,482,348,505,356,503,361,480,353,458,343,441,328,432,313,424,298,409,284,404,280"/>
+<area shape="rect" id="Node000007" href="$de/d4d/structfloppy_1_1math_1_1angle.html" title="Newtype describing an angle." alt="" coords="742,374,834,400"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="657,331,676,338,758,371,756,376,674,343,655,336"/>
+<area shape="rect" id="Node000014" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="12,565,181,591"/>
+<area shape="rect" id="Node000015" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="253,648,394,689"/>
+<area shape="poly" id="edge10_Node000014_Node000015" title=" " alt="" coords="143,595,237,634,265,645,263,650,235,639,141,600"/>
+<area shape="rect" id="Node000016" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="242,713,405,739"/>
+<area shape="poly" id="edge11_Node000014_Node000016" title=" " alt="" coords="121,600,171,650,203,676,237,698,265,710,262,715,234,703,200,680,167,654,117,604"/>
+<area shape="rect" id="Node000021" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="251,763,396,819"/>
+<area shape="poly" id="edge16_Node000014_Node000021" title=" " alt="" coords="116,603,165,674,199,714,237,749,254,760,251,765,234,753,195,717,161,677,111,606"/>
+<area shape="rect" id="Node000022" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="247,294,400,350"/>
+<area shape="poly" id="edge17_Node000014_Node000022" title=" " alt="" coords="106,550,126,509,154,459,190,406,234,360,250,348,253,352,237,364,194,410,158,462,130,511,111,552"/>
+<area shape="rect" id="Node000023" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="247,373,400,414"/>
+<area shape="poly" id="edge18_Node000014_Node000023" title=" " alt="" coords="113,550,163,488,197,453,234,423,254,412,257,417,237,428,200,457,167,491,117,554"/>
+<area shape="rect" id="Node000024" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="250,438,397,494"/>
+<area shape="poly" id="edge19_Node000014_Node000024" title=" " alt="" coords="135,555,234,503,258,492,261,497,237,508,137,560"/>
+<area shape="rect" id="Node000025" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="243,518,404,574"/>
+<area shape="poly" id="edge20_Node000014_Node000025" title=" " alt="" coords="196,561,242,554,243,560,197,566"/>
+<area shape="rect" id="Node000008" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="250,598,397,624"/>
+<area shape="poly" id="edge21_Node000014_Node000008" title=" " alt="" coords="197,590,250,598,249,603,196,595"/>
+<area shape="rect" id="Node000017" href="$d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="483,743,651,783"/>
+<area shape="poly" id="edge12_Node000016_Node000017" title=" " alt="" coords="421,738,483,747,482,753,420,743"/>
+<area shape="rect" id="Node000018" href="$db/d35/classfloppy_1_1math_1_1point2d.html" title="A two&#45;dimensional point tagged with a unit." alt="" coords="727,701,849,727"/>
+<area shape="poly" id="edge13_Node000017_Node000018" title=" " alt="" coords="665,738,727,724,728,730,667,744"/>
+<area shape="rect" id="Node000019" href="$d0/d22/classfloppy_1_1math_1_1size2d.html" title="A two&#45;dimensional size2d tagged with a unit." alt="" coords="730,750,846,776"/>
+<area shape="poly" id="edge14_Node000017_Node000019" title=" " alt="" coords="667,760,730,760,730,766,667,766"/>
+<area shape="rect" id="Node000020" href="$d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two&#45;dimensional vector tagged with a unit." alt="" coords="723,800,853,825"/>
+<area shape="poly" id="edge15_Node000017_Node000020" title=" " alt="" coords="667,782,728,796,727,802,665,788"/>
+<area shape="poly" id="edge25_Node000008_Node000007" title=" " alt="" coords="403,588,409,584,420,573,426,561,432,537,438,513,446,501,457,489,486,470,512,459,537,454,561,452,613,451,642,447,674,438,721,418,761,398,764,403,723,423,676,443,643,452,613,456,561,458,537,459,513,465,488,475,461,493,450,504,443,515,437,539,431,563,424,576,413,588,406,593"/>
+<area shape="poly" id="edge26_Node000008_Node000012" title=" " alt="" coords="405,588,409,584,422,567,429,551,432,516,436,481,443,463,457,445,482,429,509,419,511,424,484,433,461,449,448,465,441,482,438,517,434,552,427,570,413,588,408,592"/>
+<area shape="poly" id="edge27_Node000008_Node000013" title=" " alt="" coords="406,587,409,584,426,560,433,536,434,512,432,487,429,462,431,437,439,412,457,388,478,373,503,365,504,371,481,378,461,392,443,415,436,438,435,462,437,487,439,512,438,537,431,562,413,587,409,591"/>
+<area shape="rect" id="Node000009" href="$d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="459,503,675,559"/>
+<area shape="poly" id="edge22_Node000008_Node000009" title=" " alt="" coords="386,591,410,583,487,557,489,562,412,588,388,596"/>
+<area shape="rect" id="Node000010" href="$d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="459,583,675,639"/>
+<area shape="poly" id="edge23_Node000008_Node000010" title=" " alt="" coords="412,608,459,608,459,614,412,614"/>
+<area shape="rect" id="Node000011" href="$d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="459,663,675,719"/>
+<area shape="poly" id="edge24_Node000008_Node000011" title=" " alt="" coords="388,626,412,634,489,660,487,665,410,639,386,631"/>
 </map>
