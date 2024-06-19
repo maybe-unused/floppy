@@ -16,7 +16,7 @@
 namespace floppy::math
 {
   /// \brief A two-dimensional point tagged with a unit.
-  /// \headerfile floppy/euclid/euclid.h
+  /// \headerfile floppy/euclid.h
   /// \tparam U Associated unit of measurement. Default is \ref default_unit.
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   /// \see floppy::math::length
