@@ -91,8 +91,8 @@ var namespacefloppy =
     [ "operator\"\"_i64", "d4/dc3/namespacefloppy_1_1literals.html#ac8d230d3e8c6365c08b76dfd3833187e", null ],
     [ "operator\"\"_ptrdiff", "d4/dc3/namespacefloppy_1_1literals.html#a8b90ba9cfcf5e0328b4d81f7fbd076d1", null ],
     [ "operator\"\"_pvoid", "d4/dc3/namespacefloppy_1_1literals.html#a514cd59529b04e6124eca2e8fbb5a297", null ],
-    [ "string_cast", "d3/d05/namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9", null ],
-    [ "string_cast", "d3/d05/namespacefloppy.html#ac931da5028dd2811b5d0e93caf0f23d4", null ],
+    [ "string_cast", "d3/d05/namespacefloppy.html#af08a2a2959a34a847f4360deaf43a5b3", null ],
+    [ "string_cast", "d3/d05/namespacefloppy.html#aa884fb6656cef23e55b58519768d69f6", null ],
     [ "current_platform", "d3/d05/namespacefloppy.html#a6a6470b3bb68e4a32f414478fac76058", null ],
     [ "one_of_v", "d3/d05/namespacefloppy.html#abd4d29634ca4f4ef8b64beeca2631026", null ],
     [ "none", "dd/d72/namespacefloppy_1_1types.html#a9365b793fe547271e48fa719a7f4854d", null ]

@@ -264,14 +264,14 @@ Functions</h2></td></tr>
 <tr class="separator:a514cd59529b04e6124eca2e8fbb5a297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a999129c8af8a7fbf453f6b3df546313d" id="r_a999129c8af8a7fbf453f6b3df546313d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a999129c8af8a7fbf453f6b3df546313d">catch</a> (std::exception const &amp;ex)</td></tr>
 <tr class="separator:a999129c8af8a7fbf453f6b3df546313d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b4c72879a9dbdecb0d928464fbba5f9" id="r_a3b4c72879a9dbdecb0d928464fbba5f9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires std::is_same_v&lt;decltype(std::declval&lt;T const&amp;&gt;().to_string()), std::string&gt;</td></tr>
-<tr class="memitem:a3b4c72879a9dbdecb0d928464fbba5f9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3b4c72879a9dbdecb0d928464fbba5f9">string_cast</a> (T const &amp;t) -&gt; std::string</td></tr>
-<tr class="separator:a3b4c72879a9dbdecb0d928464fbba5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac931da5028dd2811b5d0e93caf0f23d4" id="r_ac931da5028dd2811b5d0e93caf0f23d4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires std::is_same_v&lt;decltype(std::to_string(std::declval&lt;T&amp;&gt;())), std::string&gt;</td></tr>
-<tr class="memitem:ac931da5028dd2811b5d0e93caf0f23d4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac931da5028dd2811b5d0e93caf0f23d4">string_cast</a> (T const &amp;t) -&gt; std::string</td></tr>
-<tr class="separator:ac931da5028dd2811b5d0e93caf0f23d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08a2a2959a34a847f4360deaf43a5b3" id="r_af08a2a2959a34a847f4360deaf43a5b3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires requires (T t) { {t.to_string()} -&gt; std::same_as&lt;std::string&gt;; }</td></tr>
+<tr class="memitem:af08a2a2959a34a847f4360deaf43a5b3"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af08a2a2959a34a847f4360deaf43a5b3">string_cast</a> (T const &amp;t) -&gt; std::string</td></tr>
+<tr class="separator:af08a2a2959a34a847f4360deaf43a5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa884fb6656cef23e55b58519768d69f6" id="r_aa884fb6656cef23e55b58519768d69f6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires requires (T t) { {std::to_string(t)} -&gt; std::same_as&lt;std::string&gt;; }</td></tr>
+<tr class="memitem:aa884fb6656cef23e55b58519768d69f6"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa884fb6656cef23e55b58519768d69f6">string_cast</a> (T const &amp;t) -&gt; std::string</td></tr>
+<tr class="separator:aa884fb6656cef23e55b58519768d69f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -608,21 +608,20 @@ template&lt;concepts::num T, concepts::num U&gt; </div>
 
 </div>
 </div>
-<a id="a3b4c72879a9dbdecb0d928464fbba5f9" name="a3b4c72879a9dbdecb0d928464fbba5f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b4c72879a9dbdecb0d928464fbba5f9">&#9670;&#160;</a></span>string_cast() <span class="overload">[1/2]</span></h2>
+<a id="af08a2a2959a34a847f4360deaf43a5b3" name="af08a2a2959a34a847f4360deaf43a5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08a2a2959a34a847f4360deaf43a5b3">&#9670;&#160;</a></span>string_cast() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; <br />
-requires std::is_same_v&lt;decltype(std::declval&lt;T const&amp;&gt;().to_string()), std::string&gt;</div>
+requires requires (T t) { {t.to_string()} -&gt; std::same_as&lt;std::string&gt;; }</div>
       <table class="memname">
         <tr>
           <td class="memname">auto string_cast </td>
           <td>(</td>
           <td class="paramtype">T const &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
-          <td> -&gt; std::string
-  </td>
+          <td> -&gt;  std::string</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -636,25 +635,22 @@ requires std::is_same_v&lt;decltype(std::declval&lt;T const&amp;&gt;().to_string
 </dl>
 <dl class="section see"><dt>See also</dt><dd>detail::str_cast </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00197">197</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
-
 </div>
 </div>
-<a id="ac931da5028dd2811b5d0e93caf0f23d4" name="ac931da5028dd2811b5d0e93caf0f23d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac931da5028dd2811b5d0e93caf0f23d4">&#9670;&#160;</a></span>string_cast() <span class="overload">[2/2]</span></h2>
+<a id="aa884fb6656cef23e55b58519768d69f6" name="aa884fb6656cef23e55b58519768d69f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa884fb6656cef23e55b58519768d69f6">&#9670;&#160;</a></span>string_cast() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; <br />
-requires std::is_same_v&lt;decltype(std::to_string(std::declval&lt;T&amp;&gt;())), std::string&gt;</div>
+requires requires (T t) { {std::to_string(t)} -&gt; std::same_as&lt;std::string&gt;; }</div>
       <table class="memname">
         <tr>
           <td class="memname">auto string_cast </td>
           <td>(</td>
           <td class="paramtype">T const &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
-          <td> -&gt; std::string
-  </td>
+          <td> -&gt;  std::string</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -667,8 +663,6 @@ requires std::is_same_v&lt;decltype(std::to_string(std::declval&lt;T&amp;&gt;())
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd>detail::str_cast </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../dd/dff/traits_8h_source.html#l00207">207</a> of file <a class="el" href="../../dd/dff/traits_8h_source.html">traits.h</a>.</p>
 
 </div>
 </div>
