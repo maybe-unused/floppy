@@ -8,18 +8,27 @@ namespace floppy::math::detail
   template <typename T>
   struct default_comparable
   {
-    [[nodiscard]] constexpr auto operator<=>(T const& other) const { return strong_compare(**static_cast<T const*>(this), *other); }
-    [[nodiscard]] constexpr auto operator==(T const& other) const -> bool { return (((*static_cast<T const*>(this)) <=> other) == 0); }
-    [[nodiscard]] constexpr auto operator!=(T const& other) const -> bool { return (((*static_cast<T const*>(this)) <=> other) != 0); }
+    [[nodiscard]] constexpr auto operator==(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal); }
+    [[nodiscard]] constexpr auto operator!=(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) != std::strong_ordering::equal); }
+    [[nodiscard]] constexpr auto operator<(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::less); }
+    [[nodiscard]] constexpr auto operator>(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::greater); }
+    [[nodiscard]] constexpr auto operator<=(T const& other) const -> bool {
+      return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::less
+        or strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal);
+    }
+    [[nodiscard]] constexpr auto operator>=(T const& other) const -> bool {
+      return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::greater
+        or strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal);
+    }
 
     template <concepts::num T2>
     [[nodiscard]] constexpr auto operator<=>(T2 const& other) const { return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)); }
 
     template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator==(T2 const& other) const -> bool { return (((*static_cast<T const*>(this)) <=> static_cast<T::underlying_type>(other)) == 0); }
+    [[nodiscard]] constexpr auto operator==(T2 const& other) const -> bool { return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)) == std::strong_ordering::equal; }
 
     template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool { return (((*static_cast<T const*>(this)) <=> static_cast<T::underlying_type>(other)) != 0); }
+    [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool { return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)) != std::strong_ordering::equal; }
   };
 
   template <typename T, concepts::num U>

@@ -5,6 +5,7 @@
 #include <floppy/euclid.h>
 
 using fl::math::size2d;
+using fl::math::point2d;
 using fl::math::default_unit;
 using fl::math::scale;
 using namespace fl::types;
@@ -142,4 +143,11 @@ TEST(EuclidSize2D, ToQSizeF)
   EXPECT_EQ(size2d(1.0, 2.0).to_qsizef(), QSizeF(1.0, 2.0));
   EXPECT_EQ(size2d(0.0, 0.0).to_qsizef(), QSizeF(0.0, 0.0));
   EXPECT_EQ(size2d(-1.0, -2.0).to_qsizef(), QSizeF(-1.0, -2.0));
+}
+
+TEST(EuclidSize2D, ToPoint2D)
+{
+  EXPECT_EQ(size2d(1.0, 2.0).to_point2d(), point2d(1.0, 2.0));
+  EXPECT_EQ(size2d(0.0, 0.0).to_point2d(), point2d(0.0, 0.0));
+  EXPECT_EQ(size2d(-1.0, -2.0).to_point2d(), point2d(-1.0, -2.0));
 }

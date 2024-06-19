@@ -15,6 +15,9 @@
 
 namespace floppy::math
 {
+  template <typename U, concepts::num T>
+  class point2d;
+
   /// \brief A two-dimensional size2d tagged with a unit.
   /// \headerfile floppy/euclid.h
   /// \tparam U Associated unit of measurement. Default is \ref default_unit.
@@ -81,6 +84,12 @@ namespace floppy::math
     /// \brief Drops the units from the size2d, returning just the numeric scalar values.
     [[nodiscard]] constexpr auto to_untyped() const -> size2d<default_unit, underlying_type> {
       return size2d<default_unit, underlying_type>(this->x(), this->y());
+    }
+
+    /// \brief Converts this size2d into <tt>point2d</tt>.
+    /// \return The resulting point2d.
+    [[nodiscard]] constexpr auto to_point2d() const -> point2d<unit, underlying_type> {
+      return point2d<unit, underlying_type>(this->x(), this->y());
     }
 
     #if defined(FL_QT_GUI) || defined(FL_DOC)
