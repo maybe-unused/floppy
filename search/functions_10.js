@@ -9,8 +9,9 @@ var searchData=
   ['sin_5fcos_6',['sin_cos',['../de/d4d/structfloppy_1_1math_1_1angle.html#a674fd6ea0d22759616dce5de1d2c9398',1,'floppy::math::angle']]],
   ['some_7',['some',['../dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee',1,'floppy::some()'],['../dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee',1,'floppy::types::some()']]],
   ['source_5flocation_8',['source_location',['../d5/d44/structfloppy_1_1source__location.html#aa3cb6509b6b1bf6578be6a615bd953ff',1,'floppy::source_location::source_location() noexcept'],['../d5/d44/structfloppy_1_1source__location.html#a44ec96e0e5290e3988011ccee09b7ad2',1,'floppy::source_location::source_location(char const *file, uint_least32_t const line, char const *function, uint_least32_t const column=0) noexcept']]],
-  ['state_5fdir_9',['state_dir',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a021aa8018cecc56780804ca78476a7f3',1,'floppy::filesystem::application_dirs']]],
-  ['string_5fcast_10',['string_cast',['../d3/d05/namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9',1,'floppy::string_cast(T const &amp;t) -&gt; std::string'],['../d3/d05/namespacefloppy.html#ac931da5028dd2811b5d0e93caf0f23d4',1,'floppy::string_cast(T const &amp;t) -&gt; std::string']]],
-  ['strong_5fcompare_11',['strong_compare',['../d5/ddf/namespacefloppy_1_1math.html#a000c8ac590dc1840dda974d4529f08b4',1,'floppy::math']]],
-  ['swap_5fendian_12',['swap_endian',['../d6/d7f/classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32',1,'floppy::platform']]]
+  ['splat_9',['splat',['../db/d35/classfloppy_1_1math_1_1point2d.html#ae6155ae5400a00a8e73c14acb81e77f2',1,'floppy::math::point2d']]],
+  ['state_5fdir_10',['state_dir',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a021aa8018cecc56780804ca78476a7f3',1,'floppy::filesystem::application_dirs']]],
+  ['string_5fcast_11',['string_cast',['../d3/d05/namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9',1,'floppy::string_cast(T const &amp;t) -&gt; std::string'],['../d3/d05/namespacefloppy.html#ac931da5028dd2811b5d0e93caf0f23d4',1,'floppy::string_cast(T const &amp;t) -&gt; std::string']]],
+  ['strong_5fcompare_12',['strong_compare',['../d5/ddf/namespacefloppy_1_1math.html#a000c8ac590dc1840dda974d4529f08b4',1,'floppy::math']]],
+  ['swap_5fendian_13',['swap_endian',['../d6/d7f/classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32',1,'floppy::platform']]]
 ];

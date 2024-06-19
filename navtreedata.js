@@ -59,8 +59,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d6/d7f/classfloppy_1_1platform.html#a59111e456e3bfba78f27d52c59121b2a",
-"dc/d2c/classfloppy_1_1configuration__file.html#a11c3968bb530354cfddcd95fa1f62c76"
+"d6/d7f/classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637ad861877da56b8b4ceb35c8cbfdf65bb4",
+"db/d35/classfloppy_1_1math_1_1point2d.html#a9fb30d9a8be73771d870e05711512d35",
+"de/d4d/structfloppy_1_1math_1_1angle.html#ac4bf6b495d5787265c5f51db4fe5f13d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

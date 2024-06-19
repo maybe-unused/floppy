@@ -29,6 +29,7 @@ var searchData=
   ['oracle_26',['oracle',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678caa189c633d9995e11bf8607170ec9a4b8',1,'floppy::platform']]],
   ['organization_27',['organization',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#af871cb1729b7c6415a60aad9e0fa67b4',1,'floppy::meta::project_meta']]],
   ['organization_5f_28',['organization_',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#afa5420d2f47a72fd0f3cc3c5224f1e48',1,'floppy::meta::project_meta']]],
-  ['ostream_5fformatter_29',['ostream_formatter',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]],
-  ['ostream_5fformatter_3c_20char_20_3e_30',['ostream_formatter&lt; char &gt;',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]]
+  ['origin_29',['origin',['../db/d35/classfloppy_1_1math_1_1point2d.html#a2994c3e57fc3cc9e6dc63d7e6da0bfe0',1,'floppy::math::point2d']]],
+  ['ostream_5fformatter_30',['ostream_formatter',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]],
+  ['ostream_5fformatter_3c_20char_20_3e_31',['ostream_formatter&lt; char &gt;',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]]
 ];

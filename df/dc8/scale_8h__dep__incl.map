@@ -1,5 +1,7 @@
 <map id="scale.h" name="scale.h">
-<area shape="rect" id="Node000001" title="A scaling factor between two different units of measurement." alt="" coords="8,5,75,31"/>
-<area shape="rect" id="Node000002" href="$dd/db9/length_8h.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="5,79,78,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,46,44,79,39,79,39,46"/>
+<area shape="rect" id="Node000001" title="A scaling factor between two different units of measurement." alt="" coords="12,5,79,31"/>
+<area shape="rect" id="Node000002" href="$dd/db9/length_8h.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="9,79,82,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,46,48,79,43,79,43,46"/>
+<area shape="rect" id="Node000003" href="$d4/d12/point2d_8h.html" title="A two&#45;dimensional point tagged with a unit." alt="" coords="5,153,86,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="48,120,48,152,43,152,43,120"/>
 </map>

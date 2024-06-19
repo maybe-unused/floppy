@@ -21,5 +21,6 @@ var searchData=
   ['operator_2f_18',['operator/',['../dd/dd1/classfloppy_1_1math_1_1length.html#a98a90d5e67d7e5185e081c1020c9254e',1,'floppy::math::length::operator/(length&lt; U2, T2 &gt; const &amp;other) const -&gt; scale&lt; U2, U, T &gt;'],['../dd/dd1/classfloppy_1_1math_1_1length.html#a4eece50acd06336f3ed16f29cdefa016',1,'floppy::math::length::operator/(scale&lt; U2, U, T2 &gt; const &amp;s) const -&gt; length&lt; U2, T &gt;'],['../db/db2/structfloppy_1_1math_1_1scale.html#a30a8f284dbba9406b21d13ba882f1637',1,'floppy::math::scale::operator/()']]],
   ['operator_3c_3c_19',['operator&lt;&lt;',['../d3/d05/namespacefloppy.html#addcab788066267803ed3875e35a0042f',1,'floppy']]],
   ['operator_5b_5d_20',['operator[]',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#acf223fac7271422435f20b4a73429a12',1,'floppy::filesystem::application_dirs']]],
-  ['organization_21',['organization',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#af871cb1729b7c6415a60aad9e0fa67b4',1,'floppy::meta::project_meta']]]
+  ['organization_21',['organization',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#af871cb1729b7c6415a60aad9e0fa67b4',1,'floppy::meta::project_meta']]],
+  ['origin_22',['origin',['../db/d35/classfloppy_1_1math_1_1point2d.html#a2994c3e57fc3cc9e6dc63d7e6da0bfe0',1,'floppy::math::point2d']]]
 ];

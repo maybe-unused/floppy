@@ -5,6 +5,7 @@ var namespacefloppy_1_1math =
     [ "default_unit", "d5/ddf/namespacefloppy_1_1math.html#d4/d45/structfloppy_1_1math_1_1default__unit", null ],
     [ "length", "dd/dd1/classfloppy_1_1math_1_1length.html", "dd/dd1/classfloppy_1_1math_1_1length" ],
     [ "pi", "d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html", null ],
+    [ "point2d", "db/d35/classfloppy_1_1math_1_1point2d.html", "db/d35/classfloppy_1_1math_1_1point2d" ],
     [ "scale", "db/db2/structfloppy_1_1math_1_1scale.html", "db/db2/structfloppy_1_1math_1_1scale" ],
     [ "eq", "d5/ddf/namespacefloppy_1_1math.html#afcdfac7e6f7b9774e157db98c0d635c9", null ],
     [ "is_null", "d5/ddf/namespacefloppy_1_1math.html#afb084ce4a1ef170a2a6e5c000f43398a", null ],

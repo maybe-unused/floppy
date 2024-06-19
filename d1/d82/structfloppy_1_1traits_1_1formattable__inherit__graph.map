@@ -1,11 +1,13 @@
 <map id="formattable&lt; T, C &gt;" name="formattable&lt; T, C &gt;">
-<area shape="rect" id="Node000001" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="105,79,251,105"/>
+<area shape="rect" id="Node000001" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="175,79,322,105"/>
 <area shape="rect" id="Node000003" href="$de/d4d/structfloppy_1_1math_1_1angle.html" title="Newtype describing an angle." alt="" coords="5,153,97,178"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,115,74,154,71,150,142,110"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,113,86,155,84,150,200,108"/>
 <area shape="rect" id="Node000004" href="$dd/dd1/classfloppy_1_1math_1_1length.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="121,153,234,178"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,120,180,152,175,152,175,120"/>
-<area shape="rect" id="Node000005" href="$db/db2/structfloppy_1_1math_1_1scale.html" title="A scaling factor between two different units of measurement." alt="" coords="259,153,385,178"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="217,109,298,150,296,154,214,114"/>
-<area shape="rect" id="Node000002" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="93,5,262,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,46,180,79,175,79,175,46"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,117,191,154,188,150,224,114"/>
+<area shape="rect" id="Node000005" href="$db/d35/classfloppy_1_1math_1_1point2d.html" title="A two&#45;dimensional point tagged with a unit." alt="" coords="258,153,380,178"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="273,114,309,150,305,154,269,117"/>
+<area shape="rect" id="Node000006" href="$db/db2/structfloppy_1_1math_1_1scale.html" title="A scaling factor between two different units of measurement." alt="" coords="404,153,530,178"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="301,107,431,150,429,155,299,112"/>
+<area shape="rect" id="Node000002" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="164,5,333,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,46,251,79,246,79,246,46"/>
 </map>
