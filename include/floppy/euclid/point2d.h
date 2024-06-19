@@ -4,8 +4,6 @@
 
 #pragma once
 
-#include <array>
-#include <tuple>
 #include <functional>
 #include <floppy/euclid/length.h>
 #include <floppy/euclid/detail/nt_traits2d.h>
@@ -51,6 +49,8 @@ namespace floppy::math
 
     /// \brief Tags a unitless value with units.
     /// \param p Unitless point2d
+    template <typename U2 = default_unit>
+    requires (not std::is_same_v<U, U2>)
     constexpr explicit point2d(point2d<default_unit, T> const& p) : detail::basic_two_dimensional_type<point2d<U, T>, U, T>(p.x(), p.y()){}
 
     /// \brief Applies the function <b>fn</b> to each component of the point.

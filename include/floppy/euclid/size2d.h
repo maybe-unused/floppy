@@ -31,6 +31,11 @@ namespace floppy::math
     /// \brief Underlying number type.
     using underlying_type = T;
 
+    constexpr size2d(size2d const&) = default;
+    constexpr size2d& operator=(size2d const&) = default;
+    constexpr size2d(size2d&&) = default;
+    constexpr size2d& operator=(size2d&&) = default;
+
     /// \brief Constructs new size2d with zero coordinates.
     constexpr size2d() : detail::basic_two_dimensional_type<size2d<U, T>, U, T>() {}
 
@@ -50,6 +55,8 @@ namespace floppy::math
 
     /// \brief Tags a unitless value with units.
     /// \param p Unitless size2d
+    template <typename U2 = default_unit>
+    requires (not std::is_same_v<U, U2>)
     constexpr explicit size2d(size2d<default_unit, underlying_type> const& p) : detail::basic_two_dimensional_type<size2d<U, T>, U, T>(p.x(), p.y()){}
 
     /// \brief Drops the units from the size2d, returning just the numeric scalar values.
@@ -118,5 +125,61 @@ namespace floppy::math
     [[nodiscard]] constexpr auto area() const -> underlying_type { return this->x() * this->y(); }
 
     // todo: to_vector()
+
+    [[nodiscard]] constexpr auto operator+() const -> size2d { return *this; }
+    [[nodiscard]] constexpr auto operator-() const -> size2d { return size2d(-this->x(), -this->y()); }
+
+    [[nodiscard]] constexpr auto operator==(const size2d& other) const -> bool {
+      return eq(this->x(), other.x()) and eq(this->y(), other.y());
+    }
+
+    [[nodiscard]] constexpr auto operator!=(const size2d& other) const -> bool {
+      return not eq(this->x(), other.x()) or not eq(this->y(), other.y());
+    }
+
+    [[nodiscard]] constexpr auto operator+(const size2d& other) const -> size2d {
+      return size2d(this->x() + other.x(), this->y() + other.y());
+    }
+
+    [[nodiscard]] constexpr auto operator-(const size2d& other) const -> size2d {
+      return size2d(this->x() - other.x(), this->y() - other.y());
+    }
+
+    [[nodiscard]] constexpr auto operator*(const underlying_type& other) const -> size2d {
+      return size2d(this->x() * other, this->y() * other);
+    }
+
+    [[nodiscard]] constexpr auto operator/(const underlying_type& other) const -> size2d {
+      return size2d(this->x() / other, this->y() / other);
+    }
+
+    [[nodiscard]] constexpr auto operator+=(const size2d& other) -> size2d& {
+      this->x_mut() += other.x();
+      this->y_mut() += other.y();
+      return *this;
+    }
+
+    [[nodiscard]] constexpr auto operator-=(const size2d& other) -> size2d& {
+      this->x_mut() -= other.x();
+      this->y_mut() -= other.y();
+      return *this;
+    }
+
+    [[nodiscard]] constexpr auto operator*=(const underlying_type& other) -> size2d& {
+      this->x_mut() *= other;
+      this->y_mut() *= other;
+      return *this;
+    }
+
+    [[nodiscard]] constexpr auto operator/=(const underlying_type& other) -> size2d& {
+      this->x_mut() /= other;
+      this->y_mut() /= other;
+      return *this;
+    }
+
+    template <typename U2>
+    [[nodiscard]] constexpr auto operator*(scale<unit, U2> const& s) const -> size2d<U2, underlying_type> {
+      return size2d<U2, underlying_type>(this->x() * s.value(), this->y() * s.value());
+    }
   };
 } // namespace floppy::math

@@ -1,5 +1,8 @@
 #pragma once
 
+#include <array>
+#include <tuple>
+#include <utility>
 #include <floppy/euclid/length.h>
 #include <floppy/euclid/detail/nt_traits.h>
 
@@ -43,18 +46,6 @@ namespace floppy::math::detail
       , y_(value)
     {}
 
-    /// \brief Default copy constructor.
-    constexpr basic_two_dimensional_type(basic_two_dimensional_type const&) = default;
-
-    /// \brief Default move constructor.
-    constexpr basic_two_dimensional_type(basic_two_dimensional_type&&) = default;
-
-    /// \brief Default destructor.
-    ~basic_two_dimensional_type() = default;
-
-    constexpr auto operator=(basic_two_dimensional_type const&) -> basic_two_dimensional_type& = default;
-    constexpr auto operator=(basic_two_dimensional_type&&) -> basic_two_dimensional_type& = default;
-
     /// \brief Returns the x-coordinate of the basic_two_dimensional_type as scalar value.
     /// \return The x-coordinate of the basic_two_dimensional_type.
     [[nodiscard]] constexpr auto x() const -> underlying_type { return this->x_; }
@@ -62,6 +53,14 @@ namespace floppy::math::detail
     /// \brief Returns the y-coordinate of the basic_two_dimensional_type as scalar value.
     /// \return The y-coordinate of the basic_two_dimensional_type.
     [[nodiscard]] constexpr auto y() const -> underlying_type { return this->y_; }
+
+    /// \brief Returns mutable reference to the x-coordinate of the basic_two_dimensional_type as scalar value.
+    /// \return Mutable reference to the x-coordinate of the basic_two_dimensional_type.
+    [[nodiscard]] constexpr auto x_mut() -> underlying_type& { return this->x_; }
+
+    /// \brief Returns mutable reference to the y-coordinate of the basic_two_dimensional_type as scalar value.
+    /// \return Mutable reference to the y-coordinate of the basic_two_dimensional_type.
+    [[nodiscard]] constexpr auto y_mut() -> underlying_type& { return this->y_; }
 
     /// \brief Returns the x-coordinate of the basic_two_dimensional_type as length value with units.
     /// \return The x-coordinate of the basic_two_dimensional_type.
@@ -186,6 +185,34 @@ namespace floppy::math::detail
     /// \brief Constructs new basic_two_dimensional_type, setting all components to the same value.
     /// \param value The value to set all components to.
     [[nodiscard]] static constexpr auto splat(underlying_type value) -> T { return T(value); }
+
+    /// \brief Constructs new basic_two_dimensional_type from <tt>std::tuple</tt>.
+    /// \param other The other <tt>std::tuple</tt>.
+    template <typename... Args>
+    requires (std::tuple_size_v<std::tuple<Args...>> == 2)
+    [[nodiscard]] static constexpr auto from_tuple(std::tuple<Args...> const& other) -> T {
+      return T(std::get<0>(other), std::get<1>(other));
+    }
+
+    /// \brief Constructs new basic_two_dimensional_type from <tt>std::array</tt>.
+    /// \param other The other <tt>std::array</tt>.
+    template <std::size_t N2>
+    requires (N2 == 2)
+    [[nodiscard]] static constexpr auto from_array(std::array<underlying_type, N2> const& other) -> T {
+      return T(other[0], other[1]);
+    }
+
+    /// \brief Constructs new basic_two_dimensional_type from <tt>std::pair</tt>.
+    /// \param other The other <tt>std::pair</tt>.
+    [[nodiscard]] static constexpr auto from_pair(std::pair<underlying_type, underlying_type> const& other) -> T {
+      return T(other.first, other.second);
+    }
+
+    /// \brief Returns <tt>true</tt> if underlying values is both not <tt>0</tt>.
+    [[nodiscard]] constexpr explicit operator bool() const { return not is_null(this->x_) and not is_null(this->y_); }
+
+    /// \brief Returns <tt>false</tt> if underlying values is both not <tt>0</tt>.
+    [[nodiscard]] constexpr auto operator!() const -> bool { return not this->operator bool(); }
 
    protected:
     underlying_type x_;
