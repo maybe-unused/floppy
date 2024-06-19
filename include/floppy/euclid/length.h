@@ -27,7 +27,7 @@ namespace floppy::math
   {
    public:
     /// \brief Associated unit of measurement.
-    using unit = U;
+    using unit_type = U;
 
     /// \brief Constructs an empty length.
     constexpr length()

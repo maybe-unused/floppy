@@ -7,6 +7,7 @@
 #include <functional>
 #include <floppy/euclid/length.h>
 #include <floppy/euclid/size2d.h>
+#include <floppy/euclid/vector2d.h>
 #include <floppy/euclid/detail/nt_traits2d.h>
 
 #if defined(FL_QT_GUI)
@@ -60,7 +61,11 @@ namespace floppy::math
 
     /// \brief Constructs new point from size2d.
     /// \param other The other size2d.
-    [[nodiscard]] constexpr explicit point2d(size2d_type const& other) : point2d(other.x(), other.y()) {}
+    constexpr explicit point2d(size2d_type const& other) : point2d(other.x(), other.y()) {}
+
+    /// \brief Constructs new point from a vector2d.
+    /// \param v The vector2d to copy.
+    constexpr explicit point2d(vector2d<default_unit, underlying_type> const& v) : detail::basic_two_dimensional_type<point2d<U, T>, U, T>(v.x(), v.y()) {}
 
     /// \brief Applies the function <b>fn</b> to each component of the point.
     /// \tparam U2 The new point2d's numeric scalar type.
@@ -77,10 +82,19 @@ namespace floppy::math
       return point2d<default_unit, underlying_type>(this->x(), this->y());
     }
 
-    /// \brief Casts the point into size2d.
-    [[nodiscard]] constexpr auto to_size2d() const -> size2d_type { return size2d_type(this->x(), this->y()); }
+    /// \brief Converts this point2d into <tt>size2d</tt>.
+    /// \return The resulting size2d.
+    [[nodiscard]] constexpr auto to_size2d() const -> size2d_type {
+      return size2d_type(this->x(), this->y());
+    }
 
-    #if defined(FL_QT_GUI) || defined(FL_DOC)
+    /// \brief Converts this point2d into <tt>vector2d</tt>.
+    /// \return The resulting vector2d.
+    [[nodiscard]] constexpr auto to_vector2d() const -> vector2d<unit_type, underlying_type> {
+      return vector2d<unit_type, underlying_type>(this->x(), this->y());
+    }
+
+  #if defined(FL_QT_GUI) || defined(FL_DOC)
     /// \brief Casts this point2d into <tt>QPoint</tt>.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
     [[nodiscard]] constexpr auto to_qpoint() const -> QPoint {
@@ -91,7 +105,7 @@ namespace floppy::math
     /// \brief Casts this point2d into <tt>QPointF</tt>.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
     [[nodiscard]] constexpr auto to_qpointf() const -> QPointF { return QPointF(this->x(), this->y()); }
-    #endif
+  #endif
 
     /// \brief Casts the unit of measurement.
     /// \tparam U2 New unit of measurement.
@@ -186,8 +200,6 @@ namespace floppy::math
       );
     }
 
-    // todo: same two methods for size2d
-
     /// \brief Constructs new point with zero coordinates.
     [[nodiscard]] static constexpr auto origin() -> point2d { return point2d(); }
 
@@ -237,26 +249,26 @@ namespace floppy::math
     }
 
     template <concepts::any_of<point2d, size2d_type> Q>
-    [[nodiscard]] constexpr auto operator+=(Q const& other) -> point2d& {
+    constexpr auto operator+=(Q const& other) -> point2d& {
       this->x_mut() += other.x();
       this->y_mut() += other.y();
       return *this;
     }
 
     template <concepts::any_of<point2d, size2d_type> Q>
-    [[nodiscard]] constexpr auto operator-=(Q const& other) -> point2d& {
+    constexpr auto operator-=(Q const& other) -> point2d& {
       this->x_mut() -= other.x();
       this->y_mut() -= other.y();
       return *this;
     }
 
-    [[nodiscard]] constexpr auto operator*=(underlying_type const& other) -> point2d& {
+    constexpr auto operator*=(underlying_type const& other) -> point2d& {
       this->x_mut() *= other;
       this->y_mut() *= other;
       return *this;
     }
 
-    [[nodiscard]] constexpr auto operator/=(underlying_type const& other) -> point2d& {
+    constexpr auto operator/=(underlying_type const& other) -> point2d& {
       this->x_mut() /= other;
       this->y_mut() /= other;
       return *this;
@@ -266,7 +278,7 @@ namespace floppy::math
     /// \param other The other size2d.
     [[nodiscard]] static constexpr auto from_size2d(size2d_type const& other) -> point2d { return point2d(other); }
 
-    #if defined(FL_QT_GUI) || defined(FL_DOC)
+  #if defined(FL_QT_GUI) || defined(FL_DOC)
     /// \brief Constructs new point from <tt>QPoint</tt>.
     /// \param other The other <tt>QPoint</tt>.
     /// \remarks This constructor is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
@@ -286,6 +298,6 @@ namespace floppy::math
     /// \param other The other <tt>QPointF</tt>.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
     [[nodiscard]] static constexpr auto from_qpointf(QPointF const& other) -> point2d { return point2d(other.x(), other.y()); }
-    #endif
+  #endif
   };
 } // namespace floppy::math

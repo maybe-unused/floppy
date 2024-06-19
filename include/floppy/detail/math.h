@@ -54,7 +54,7 @@ namespace floppy::math
   /// \param b Second number
   /// \tparam T Number type
   /// \return True if numbers are equal
-  /// \see null
+  /// \see is_null, approx_eq, strong_compare
   template <typename T>
   [[nodiscard]] constexpr auto eq(T a, T b) -> bool {
     if constexpr(std::is_floating_point_v<T>)
@@ -63,11 +63,27 @@ namespace floppy::math
       return a == b;
   }
 
+  /// \brief Returns true if numbers are approximately equal
+  /// \details Compares floating point values using formula <tt>|a - b| <= epsilon * epsilon_factor</tt>
+  /// \param a First number
+  /// \param b Second number
+  /// \param epsilon_factor Epsilon factor for comparison
+  /// \tparam T Number type
+  /// \return True if numbers are approximately equal
+  /// \see is_null, eq, strong_compare
+  template <typename T>
+  [[nodiscard]] constexpr auto approx_eq(T a, T b, T epsilon_factor) -> bool {
+    if constexpr(std::is_floating_point_v<T>)
+      return std::abs(a - b) <= std::numeric_limits<T>::epsilon() * epsilon_factor;
+    else
+      return a == b;
+  }
+
   /// \brief Returns true if type is equal to zero (number specific)
   /// \param num Number
   /// \tparam T Number type
   /// \return True if number is equal to zero
-  /// \see eq
+  /// \see eq, approx_eq, strong_compare
   template <concepts::num T>
   [[nodiscard]] constexpr auto is_null(T num) -> bool { return eq(num, T(0.0)); }
 
@@ -76,7 +92,7 @@ namespace floppy::math
   /// \param b Second number
   /// \tparam T Number type
   /// \note Treats <tt>NaN</tt> as equal to <tt>NaN</tt> and <tt>inf</tt> as equal to <tt>inf</tt> in case of floating points.
-  /// \see eq
+  /// \see eq, approx_eq, is_null
   /// \return Comparison result
   template <concepts::num T>
   [[nodiscard]] constexpr auto strong_compare(T a, T b) -> std::strong_ordering {

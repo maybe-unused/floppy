@@ -18,6 +18,9 @@ namespace floppy::math
   template <typename U, concepts::num T>
   class point2d;
 
+  template <typename U, concepts::num T>
+  class vector2d;
+
   /// \brief A two-dimensional size2d tagged with a unit.
   /// \headerfile floppy/euclid.h
   /// \tparam U Associated unit of measurement. Default is \ref default_unit.
@@ -57,6 +60,14 @@ namespace floppy::math
     /// \param value The value to set all components to.
     constexpr explicit size2d(underlying_type value) : detail::basic_two_dimensional_type<size2d<U, T>, U, T>(value) {}
 
+    /// \brief Constructs new size2d from a point2d.
+    /// \param p The point2d to copy.
+    constexpr explicit size2d(point2d<default_unit, underlying_type> const& p) : detail::basic_two_dimensional_type<size2d<U, T>, U, T>(p.x(), p.y()) {}
+
+    /// \brief Constructs new size2d from a vector2d.
+    /// \param v The vector2d to copy.
+    constexpr explicit size2d(vector2d<default_unit, underlying_type> const& v) : detail::basic_two_dimensional_type<size2d<U, T>, U, T>(v.x(), v.y()) {}
+
     /// \brief Tags a unitless value with units.
     /// \param p Unitless size2d
     template <typename U2 = default_unit>
@@ -90,6 +101,12 @@ namespace floppy::math
     /// \return The resulting point2d.
     [[nodiscard]] constexpr auto to_point2d() const -> point2d<unit_type, underlying_type> {
       return point2d<unit_type, underlying_type>(this->x(), this->y());
+    }
+
+    /// \brief Converts this size2d into <tt>vector2d</tt>.
+    /// \return The resulting vector2d.
+    [[nodiscard]] constexpr auto to_vector2d() const -> vector2d<unit_type, underlying_type> {
+      return vector2d<unit_type, underlying_type>(this->x(), this->y());
     }
 
     #if defined(FL_QT_GUI) || defined(FL_DOC)
@@ -194,25 +211,25 @@ namespace floppy::math
       return size2d(this->x() / other, this->y() / other);
     }
 
-    [[nodiscard]] constexpr auto operator+=(const size2d& other) -> size2d& {
+    constexpr auto operator+=(const size2d& other) -> size2d& {
       this->x_mut() += other.x();
       this->y_mut() += other.y();
       return *this;
     }
 
-    [[nodiscard]] constexpr auto operator-=(const size2d& other) -> size2d& {
+    constexpr auto operator-=(const size2d& other) -> size2d& {
       this->x_mut() -= other.x();
       this->y_mut() -= other.y();
       return *this;
     }
 
-    [[nodiscard]] constexpr auto operator*=(const underlying_type& other) -> size2d& {
+    constexpr auto operator*=(const underlying_type& other) -> size2d& {
       this->x_mut() *= other;
       this->y_mut() *= other;
       return *this;
     }
 
-    [[nodiscard]] constexpr auto operator/=(const underlying_type& other) -> size2d& {
+    constexpr auto operator/=(const underlying_type& other) -> size2d& {
       this->x_mut() /= other;
       this->y_mut() /= other;
       return *this;
