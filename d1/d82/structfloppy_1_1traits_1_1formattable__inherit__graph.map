@@ -1,5 +1,15 @@
 <map id="formattable&lt; T, C &gt;" name="formattable&lt; T, C &gt;">
-<area shape="rect" id="Node000001" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="17,79,163,105"/>
-<area shape="rect" id="Node000002" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,5,175,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,46,93,79,87,79,87,46"/>
+<area shape="rect" id="Node000001" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="223,166,369,191"/>
+<area shape="rect" id="Node000003" href="$d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="417,5,633,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="318,152,361,111,416,71,438,59,440,64,418,75,364,115,322,156"/>
+<area shape="rect" id="Node000004" href="$d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="417,85,633,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="357,158,424,139,426,144,359,164"/>
+<area shape="rect" id="Node000005" href="$de/d4d/structfloppy_1_1math_1_1angle.html" title="Newtype describing an angle." alt="" coords="480,166,571,191"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="385,176,479,176,479,181,385,181"/>
+<area shape="rect" id="Node000006" href="$dd/dd1/classfloppy_1_1math_1_1length.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="469,215,582,241"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="374,193,469,213,468,218,373,198"/>
+<area shape="rect" id="Node000007" href="$db/db2/structfloppy_1_1math_1_1scale.html" title="A scaling factor between two different units of measurement." alt="" coords="462,264,588,290"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="328,198,369,226,418,251,463,264,461,269,416,256,367,230,325,203"/>
+<area shape="rect" id="Node000002" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,166,175,191"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,176,223,176,223,181,190,181"/>
 </map>

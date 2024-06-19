@@ -1,0 +1,8 @@
+\_form#0=33x14:$[0, 2\pi)$
+\_form#1=38x14:$[-\pi, \pi)$
+\_form#2=83x14:$(sin(x), cos(x))$
+\_form#3=9x6:$\pi$
+\_form#4=14x9:$2\pi$
+\_form#5=8x15:$\frac{\pi}{2}$
+\_form#6=8x15:$\frac{\pi}{3}$
+\_form#7=8x15:$\frac{\pi}{4}$

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['info_0',['info',['../d1/d93/namespacefloppy_1_1log.html#afdaa6e366f8bbdcd865a50a82c970d9a',1,'floppy::log']]],
-  ['info_5fto_1',['info_to',['../d1/d93/namespacefloppy_1_1log.html#a394535db66a7496bb7117bad991d8b14',1,'floppy::log']]],
-  ['is_5fnull_2',['is_null',['../d5/ddf/namespacefloppy_1_1math.html#afb084ce4a1ef170a2a6e5c000f43398a',1,'floppy::math']]]
+  ['get_0',['get',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a81a7f8aa63773449710e5d0e155331ed',1,'floppy::filesystem::application_dirs']]],
+  ['google_5ftest_5fprint_1',['google_test_print',['../dd/d22/namespacefloppy_1_1print__helpers_1_1detail.html#af16c3ca8e24d92348feaa691921e8ffc',1,'floppy::print_helpers::detail']]]
 ];
