@@ -150,3 +150,15 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
 
 /// \brief Alias for the main namespace \ref floppy.
 namespace fl = floppy; // NOLINT(*-unused-alias-decls)
+
+#if defined(QT_CORE_LIB) || __has_include("qtglobal.h") || __has_include("qcoreapplication.h")
+# define FL_QT_CORE
+#endif
+
+#if defined(QT_GUI_LIB) || __has_include("qpainter.h") || __has_include("qguiapplication.h")
+# define FL_QT_GUI
+#endif
+
+#if defined(DOXYGEN_GENERATING_OUTPUT)
+# define FL_DOC
+#endif

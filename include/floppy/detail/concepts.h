@@ -1,11 +1,18 @@
 #pragma once
 
+#include <concepts>
 #include <floppy/detail/type_traits.h>
 #include <floppy/detail/types.h>
 
 /// \brief Concepts namespace.
 namespace floppy::concepts
 {
+  /// \brief Satisfied if T and any of given U are the same type.
+  /// \tparam T Type to check
+  /// \tparam U Types to check against
+  template <typename T, typename... U>
+  concept any_of = (std::same_as<T, U> or ...);
+
   /// \brief Number concept.
   /// \details Number types are integral or floating point.
   /// \note This concept will be true for references or pointers to numbers as well.
