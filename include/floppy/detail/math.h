@@ -71,7 +71,7 @@ namespace floppy::math
   [[nodiscard]] constexpr auto is_null(T num) -> bool { return eq(num, T(0.0)); }
 
   /// \brief Converts radians to degrees
-  /// \param rad Radians
+  /// \param deg Radians
   /// \tparam T Radians type
   /// \return Degrees
   /// \see to_radians
@@ -81,7 +81,7 @@ namespace floppy::math
   }
 
   /// \brief Converts degrees to radians
-  /// \param deg Degrees
+  /// \param rad Degrees
   /// \tparam T Degrees type
   /// \return Radians
   /// \see to_degrees

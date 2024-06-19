@@ -124,8 +124,7 @@ namespace floppy::filesystem
 
   auto application_dirs::create() const -> void {
     for(auto i = 0_ZU; i <= static_cast<usize>(dir::preferences); ++i) {
-      auto const dir = this->get(static_cast<enum dir>(i));
-      if(not fs::exists(dir))
+      if(auto const dir = this->get(static_cast<enum dir>(i)); not fs::exists(dir))
         fs::create_directories(dir);
     }
     if(this->m_runtime_dir and not fs::exists(*this->m_runtime_dir))
@@ -136,8 +135,7 @@ namespace floppy::filesystem
 
   auto application_dirs::remove() const -> void {
     for(auto i = 0_ZU; i <= static_cast<usize>(dir::preferences); ++i) {
-      auto const dir = this->get(static_cast<enum dir>(i));
-      if(fs::exists(dir))
+      if(auto const dir = this->get(static_cast<enum dir>(i)); fs::exists(dir))
         fs::remove_all(dir);
     }
     if(this->m_runtime_dir and fs::exists(*this->m_runtime_dir))
