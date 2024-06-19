@@ -11,4 +11,17 @@
 #include <floppy/euclid/point2d.h>
 #include <floppy/euclid/vector2d.h>
 
-// todo: operators between point and size
+// todo: box2d
+// todo: box3d
+// todo: point3d
+// todo: rect
+// todo: rigidtransform3d
+// todo: rotation2d
+// todo: rotation3d
+// todo: size3d
+// todo: transform2d
+// todo: transform3d
+// todo: translation2d
+// todo: translation3d
+// todo: vector3d
+// https://docs.rs/euclid/latest/euclid/
