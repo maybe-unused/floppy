@@ -24,7 +24,7 @@ var searchData=
   ['dignussystem_21',['dignussystem',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678caa5a0674e6d06c76c324c9f7b3034c75d',1,'floppy::platform']]],
   ['dir_22',['dir',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75',1,'floppy::filesystem::application_dirs']]],
   ['distance_5fto_23',['distance_to',['../db/d35/classfloppy_1_1math_1_1point2d.html#ac8302bc3d1e9bbfaed4e0274eb0aed1b',1,'floppy::math::point2d']]],
-  ['div_5feuclid_24',['div_euclid',['../db/d35/classfloppy_1_1math_1_1point2d.html#ab2dc47c2b6150d79f62ea94cdce5306e',1,'floppy::math::point2d']]],
+  ['div_5feuclid_24',['div_euclid',['../db/d35/classfloppy_1_1math_1_1point2d.html#a2e36f43b15dd31047fab42d0f48009ec',1,'floppy::math::point2d::div_euclid()'],['../d5/ddf/namespacefloppy_1_1math.html#a751139c04bc5de9f5873901e61a031ed',1,'floppy::math::div_euclid()']]],
   ['domain_25',['domain',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#adeb5281b7ff8433975b337a1f47562a5',1,'floppy::meta::project_meta']]],
   ['domain_5f_26',['domain_',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#ae762fb49635ffd9139da75ebd5fefb79',1,'floppy::meta::project_meta']]],
   ['dragonfly_27',['dragonfly',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a7fc8baba8e7696d6c3b286f738245592',1,'floppy::platform']]]

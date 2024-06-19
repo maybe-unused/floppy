@@ -14,5 +14,7 @@ var namespacefloppy_1_1math =
     [ "to_radians", "d5/ddf/namespacefloppy_1_1math.html#aa722c8b624bbd64c4cbdd47bfd285c5d", null ],
     [ "to_degrees", "d5/ddf/namespacefloppy_1_1math.html#af2b111b7ea138d5c9b5e0a2aaaf8e98d", null ],
     [ "log", "d5/ddf/namespacefloppy_1_1math.html#a42b9d9a7dff8b3db60c6e956976745c3", null ],
-    [ "log", "d5/ddf/namespacefloppy_1_1math.html#a1de30a44dfef08af9546a545e064b4bb", null ]
+    [ "log", "d5/ddf/namespacefloppy_1_1math.html#a1de30a44dfef08af9546a545e064b4bb", null ],
+    [ "div_euclid", "d5/ddf/namespacefloppy_1_1math.html#a751139c04bc5de9f5873901e61a031ed", null ],
+    [ "rem_euclid", "d5/ddf/namespacefloppy_1_1math.html#add770f95287eea461bee0dea63476fb2", null ]
 ];

@@ -5,7 +5,7 @@ var searchData=
   ['ref_2',['ref',['../d9/d8a/structfloppy_1_1traits_1_1singleton.html#af0163e5dd2cfaabe6e1126542874859a',1,'floppy::traits::singleton::ref()'],['../dd/d72/namespacefloppy_1_1types.html#ae7d120016347ce3f021bc18dcefe2809',1,'floppy::ref'],['../dd/d72/namespacefloppy_1_1types.html#ae7d120016347ce3f021bc18dcefe2809',1,'floppy::types::ref']]],
   ['ref_20changelog_20md_20changelog_3',['@ref &quot;./CHANGELOG.md&quot; &quot;Changelog&quot;',['../index.html#autotoc_md1',1,'']]],
   ['ref_5fmut_4',['ref_mut',['../d9/d8a/structfloppy_1_1traits_1_1singleton.html#a2df12143bc88306c1f341d9f54877319',1,'floppy::traits::singleton']]],
-  ['rem_5feuclid_5',['rem_euclid',['../db/d35/classfloppy_1_1math_1_1point2d.html#a25725e7b084bc811f5f2bb798b7bf2b3',1,'floppy::math::point2d']]],
+  ['rem_5feuclid_5',['rem_euclid',['../db/d35/classfloppy_1_1math_1_1point2d.html#af755f083e286f81fe8cfe00e8d76ab35',1,'floppy::math::point2d::rem_euclid()'],['../d5/ddf/namespacefloppy_1_1math.html#add770f95287eea461bee0dea63476fb2',1,'floppy::math::rem_euclid()']]],
   ['remove_6',['remove',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a9e36998ffb1db201959e7adc47adb5cb',1,'floppy::filesystem::application_dirs']]],
   ['revert_5fto_5fdefault_7',['revert_to_default',['../dc/d2c/classfloppy_1_1configuration__file.html#af0a2e98094ed13472fbaa0e5d18e5c0d',1,'floppy::configuration_file']]],
   ['riscv_8',['riscv',['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a8058d18cbe5eb5f9af15fe6c0b9510aa',1,'floppy::platform']]],

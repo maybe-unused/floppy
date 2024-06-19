@@ -175,6 +175,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a1de30a44dfef08af9546a545e064b4bb" id="r_a1de30a44dfef08af9546a545e064b4bb"><td class="memTemplParams" colspan="2">template&lt;concepts::num T&gt; </td></tr>
 <tr class="memitem:a1de30a44dfef08af9546a545e064b4bb"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1de30a44dfef08af9546a545e064b4bb">log</a> (T num) -&gt; T</td></tr>
 <tr class="separator:a1de30a44dfef08af9546a545e064b4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751139c04bc5de9f5873901e61a031ed" id="r_a751139c04bc5de9f5873901e61a031ed"><td class="memTemplParams" colspan="2">template&lt;concepts::num T&gt; </td></tr>
+<tr class="memitem:a751139c04bc5de9f5873901e61a031ed"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a751139c04bc5de9f5873901e61a031ed">div_euclid</a> (T a, T b) -&gt; T</td></tr>
+<tr class="separator:a751139c04bc5de9f5873901e61a031ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add770f95287eea461bee0dea63476fb2" id="r_add770f95287eea461bee0dea63476fb2"><td class="memTemplParams" colspan="2">template&lt;concepts::num T&gt; </td></tr>
+<tr class="memitem:add770f95287eea461bee0dea63476fb2"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#add770f95287eea461bee0dea63476fb2">rem_euclid</a> (T a, T b) -&gt; T</td></tr>
+<tr class="separator:add770f95287eea461bee0dea63476fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Math namespace. </p>
@@ -523,6 +529,74 @@ template&lt;concepts::num T&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Natural logarithm of the number </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00137">137</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
+
+</div>
+</div>
+<a id="a751139c04bc5de9f5873901e61a031ed" name="a751139c04bc5de9f5873901e61a031ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751139c04bc5de9f5873901e61a031ed">&#9670;&#160;</a></span>div_euclid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;concepts::num T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto div_euclid </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>a</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;) -&gt; T </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates Euclidean division, the matching method for <b>rem_euclid</b>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Dividend </td></tr>
+    <tr><td class="paramname">b</td><td>Divisor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00143">143</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
+
+</div>
+</div>
+<a id="add770f95287eea461bee0dea63476fb2" name="add770f95287eea461bee0dea63476fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add770f95287eea461bee0dea63476fb2">&#9670;&#160;</a></span>rem_euclid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;concepts::num T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rem_euclid </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>a</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;) -&gt; T </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the least nonnegative remainder of <code>self (mod rhs)</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Dividend </td></tr>
+    <tr><td class="paramname">b</td><td>Divisor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00159">159</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
 
 </div>
 </div>

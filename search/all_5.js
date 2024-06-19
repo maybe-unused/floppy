@@ -56,6 +56,7 @@ var searchData=
   ['from_5flengths_53',['from_lengths',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#aaca5c75ae78b6c53d27cf63cd944ff62',1,'floppy::math::detail::basic_two_dimensional_type']]],
   ['from_5fpair_54',['from_pair',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a185ce55518e9f85808db6f1c09fa93de',1,'floppy::math::detail::basic_two_dimensional_type']]],
   ['from_5fradians_55',['from_radians',['../de/d4d/structfloppy_1_1math_1_1angle.html#ac7d4586b77d368fd0dbfe9a6c02e3e8c',1,'floppy::math::angle']]],
-  ['from_5ftuple_56',['from_tuple',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a39931c09ddb4efe110f1c24d4b78ad8e',1,'floppy::math::detail::basic_two_dimensional_type']]],
-  ['function_5fname_57',['function_name',['../d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644',1,'floppy::source_location']]]
+  ['from_5fsize2d_56',['from_size2d',['../db/d35/classfloppy_1_1math_1_1point2d.html#a7812b770fba4eb5ae9754091968b8811',1,'floppy::math::point2d']]],
+  ['from_5ftuple_57',['from_tuple',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a39931c09ddb4efe110f1c24d4b78ad8e',1,'floppy::math::detail::basic_two_dimensional_type']]],
+  ['function_5fname_58',['function_name',['../d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644',1,'floppy::source_location']]]
 ];
