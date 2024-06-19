@@ -3,6 +3,7 @@
 #include <vector>
 #include <sstream>
 #include <iterator>
+#include <algorithm>
 #include <floppy/detail/predefs.h>
 #include <floppy/detail/platform.h>
 #if defined(FLOPPY_OS_WINDOWS)
