@@ -59,10 +59,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644",
-"d6/d7f/classfloppy_1_1platform.html#afcee39ad85bc97c977cc1c3f6a95ec7a",
-"dc/d2c/classfloppy_1_1configuration__file.html",
-"functions_y.html"
+"d5/d44/structfloppy_1_1source__location.html#a44ec96e0e5290e3988011ccee09b7ad2",
+"d6/d7f/classfloppy_1_1platform.html#aeec140132148d32f6a3881b7958019d7",
+"dc/d09/namespacefloppy_1_1rtti.html#a67c6adb54f12fdf9e8ef12c2ef08c99a",
+"functions_w.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

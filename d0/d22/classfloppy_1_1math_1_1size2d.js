@@ -16,6 +16,7 @@ var classfloppy_1_1math_1_1size2d =
     [ "width_typed", "d0/d22/classfloppy_1_1math_1_1size2d.html#a43c035a7cd7ad5ec515e84835547a229", null ],
     [ "height_typed", "d0/d22/classfloppy_1_1math_1_1size2d.html#aa06be4c1f27938f8da60ec6ad4435435", null ],
     [ "to_untyped", "d0/d22/classfloppy_1_1math_1_1size2d.html#acade6cee77bf48368a06db5ba705f2b7", null ],
+    [ "to_point2d", "d0/d22/classfloppy_1_1math_1_1size2d.html#ae68bdb0e289081ce19780e8d7a86ee6d", null ],
     [ "to_qsize", "d0/d22/classfloppy_1_1math_1_1size2d.html#a0b97115111e9a490130c249bf9cdfc87", null ],
     [ "to_qsizef", "d0/d22/classfloppy_1_1math_1_1size2d.html#a4fa44755f89891979817969f2d03be3f", null ],
     [ "cast_unit", "d0/d22/classfloppy_1_1math_1_1size2d.html#a4fb98f56eda1c221c46ae22c39ca5f1d", null ],
