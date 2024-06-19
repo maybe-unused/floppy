@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['destination_5ftype_0',['destination_type',['../db/db2/structfloppy_1_1math_1_1scale.html#ade7958c1143337a2576cd6ef72ffe368',1,'floppy::math::scale']]]
+  ['angle_5ftype_0',['angle_type',['../d4/d33/classfloppy_1_1math_1_1vector2d.html#a159ca4449ff1a5219706225f27e464f4',1,'floppy::math::vector2d']]]
 ];

@@ -11,5 +11,6 @@ var searchData=
   ['deserialize_8',['deserialize',['../d0/da9/namespacefloppy_1_1serialization.html#a853fcffdf0e983b17478535a994706b0',1,'floppy::serialization']]],
   ['distance_5fto_9',['distance_to',['../db/d35/classfloppy_1_1math_1_1point2d.html#a37dda189e7218258a4aaec77823d0cbc',1,'floppy::math::point2d']]],
   ['div_5feuclid_10',['div_euclid',['../db/d35/classfloppy_1_1math_1_1point2d.html#a2e36f43b15dd31047fab42d0f48009ec',1,'floppy::math::point2d::div_euclid()'],['../d5/ddf/namespacefloppy_1_1math.html#a751139c04bc5de9f5873901e61a031ed',1,'floppy::math::div_euclid()']]],
-  ['domain_11',['domain',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#adeb5281b7ff8433975b337a1f47562a5',1,'floppy::meta::project_meta']]]
+  ['domain_11',['domain',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#adeb5281b7ff8433975b337a1f47562a5',1,'floppy::meta::project_meta']]],
+  ['dot_12',['dot',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a490d4db84a5929cbf01a0f774e2690fb',1,'floppy::math::detail::basic_two_dimensional_type']]]
 ];

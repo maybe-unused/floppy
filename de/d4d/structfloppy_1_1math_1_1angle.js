@@ -10,7 +10,6 @@ var structfloppy_1_1math_1_1angle =
     [ "signed_", "de/d4d/structfloppy_1_1math_1_1angle.html#a16f668eb5ce16e45fb3f943ec204284b", null ],
     [ "angle_to", "de/d4d/structfloppy_1_1math_1_1angle.html#a3ed2d8f5b941b68d507f22d360dcf753", null ],
     [ "lerp", "de/d4d/structfloppy_1_1math_1_1angle.html#a6e7a33eae7ffeed2c276abcdca871506", null ],
-    [ "is_finite", "de/d4d/structfloppy_1_1math_1_1angle.html#a7bd2d4c1b6c2133b6040f0aff4361e4c", null ],
     [ "sin_cos", "de/d4d/structfloppy_1_1math_1_1angle.html#a674fd6ea0d22759616dce5de1d2c9398", null ],
     [ "from_radians", "de/d4d/structfloppy_1_1math_1_1angle.html#ac7d4586b77d368fd0dbfe9a6c02e3e8c", null ],
     [ "from_degrees", "de/d4d/structfloppy_1_1math_1_1angle.html#acb086a1a839db1bd34fc99ec22c8431e", null ],
@@ -26,5 +25,12 @@ var structfloppy_1_1math_1_1angle =
     [ "as", "de/d4d/structfloppy_1_1math_1_1angle.html#a7a5362991b043f043a2fd952fa9f3917", null ],
     [ "as_f32", "de/d4d/structfloppy_1_1math_1_1angle.html#a62f3e16f951b2635fd2e04be55f6d914", null ],
     [ "as_f64", "de/d4d/structfloppy_1_1math_1_1angle.html#af00bbd3efca6624840346bba50ada2a3", null ],
+    [ "is_finite", "de/d4d/structfloppy_1_1math_1_1angle.html#a7bd2d4c1b6c2133b6040f0aff4361e4c", null ],
+    [ "sin", "de/d4d/structfloppy_1_1math_1_1angle.html#ad3b3c9e313da58838b6b703a6b2a17cd", null ],
+    [ "cos", "de/d4d/structfloppy_1_1math_1_1angle.html#a6dd7cf74119d22f24c8994d96abfa835", null ],
+    [ "tan", "de/d4d/structfloppy_1_1math_1_1angle.html#a890987bdc4b845b3864fd3970e166c03", null ],
+    [ "asin", "de/d4d/structfloppy_1_1math_1_1angle.html#add809373661187793ef5d2296d7f7eb3", null ],
+    [ "acos", "de/d4d/structfloppy_1_1math_1_1angle.html#abf397172dd9d15d35fa64f78456a8e90", null ],
+    [ "atan", "de/d4d/structfloppy_1_1math_1_1angle.html#a2c5c1e764b8e4c7f8fb6407b0e78f22e", null ],
     [ "operator bool", "de/d4d/structfloppy_1_1math_1_1angle.html#ad0ed9dded3dc4405713f0b9270930a92", null ]
 ];

@@ -1,6 +1,6 @@
 var classfloppy_1_1math_1_1length =
 [
-    [ "unit", "dd/dd1/classfloppy_1_1math_1_1length.html#afa2a121b54048696c085ef8c66ac8a01", null ],
+    [ "unit_type", "dd/dd1/classfloppy_1_1math_1_1length.html#a7b8314ff8d4c191b672593c4214f6d63", null ],
     [ "underlying_type", "dd/dd1/classfloppy_1_1math_1_1length.html#a480ef2f6ca5320039182c62023b100b2", null ],
     [ "length", "dd/dd1/classfloppy_1_1math_1_1length.html#a551c7e0e852eca122dfa08308571ba45", null ],
     [ "length", "dd/dd1/classfloppy_1_1math_1_1length.html#a2a0854e1d88cbc6ba6666b55281f483a", null ],
@@ -17,5 +17,12 @@ var classfloppy_1_1math_1_1length =
     [ "as", "dd/dd1/classfloppy_1_1math_1_1length.html#a7a5362991b043f043a2fd952fa9f3917", null ],
     [ "as_f32", "dd/dd1/classfloppy_1_1math_1_1length.html#a62f3e16f951b2635fd2e04be55f6d914", null ],
     [ "as_f64", "dd/dd1/classfloppy_1_1math_1_1length.html#af00bbd3efca6624840346bba50ada2a3", null ],
+    [ "is_finite", "dd/dd1/classfloppy_1_1math_1_1length.html#a7bd2d4c1b6c2133b6040f0aff4361e4c", null ],
+    [ "sin", "dd/dd1/classfloppy_1_1math_1_1length.html#ad3b3c9e313da58838b6b703a6b2a17cd", null ],
+    [ "cos", "dd/dd1/classfloppy_1_1math_1_1length.html#a6dd7cf74119d22f24c8994d96abfa835", null ],
+    [ "tan", "dd/dd1/classfloppy_1_1math_1_1length.html#a890987bdc4b845b3864fd3970e166c03", null ],
+    [ "asin", "dd/dd1/classfloppy_1_1math_1_1length.html#add809373661187793ef5d2296d7f7eb3", null ],
+    [ "acos", "dd/dd1/classfloppy_1_1math_1_1length.html#abf397172dd9d15d35fa64f78456a8e90", null ],
+    [ "atan", "dd/dd1/classfloppy_1_1math_1_1length.html#a2c5c1e764b8e4c7f8fb6407b0e78f22e", null ],
     [ "operator bool", "dd/dd1/classfloppy_1_1math_1_1length.html#ad0ed9dded3dc4405713f0b9270930a92", null ]
 ];
