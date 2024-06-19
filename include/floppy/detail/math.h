@@ -70,21 +70,21 @@ namespace floppy::math
   template <concepts::num T>
   [[nodiscard]] constexpr auto is_null(T num) -> bool { return eq(num, T(0.0)); }
 
-  /// \brief Converts radians to degrees
-  /// \param rad Radians
-  /// \tparam T Radians type
-  /// \return Degrees
-  /// \see to_radians
-  template <concepts::num T>
-  [[nodiscard]] constexpr auto to_radians(T deg) -> T {
-    return static_cast<T>(deg * std::numbers::pi_v<T> / pi<T>().as_degrees());
-  }
-
   /// \brief Converts degrees to radians
   /// \param deg Degrees
   /// \tparam T Degrees type
   /// \return Radians
   /// \see to_degrees
+  template <concepts::num T>
+  [[nodiscard]] constexpr auto to_radians(T deg) -> T {
+    return static_cast<T>(deg * std::numbers::pi_v<T> / pi<T>().as_degrees());
+  }
+
+  /// \brief Converts radians to degrees
+  /// \param rad Radians
+  /// \tparam T Radians type
+  /// \return Degrees
+  /// \see to_radians
   template <concepts::num T>
   [[nodiscard]] constexpr auto to_degrees(T rad) -> T {
     return static_cast<T>(rad * pi<T>().as_degrees() / std::numbers::pi_v<T>);
