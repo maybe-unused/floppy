@@ -30,7 +30,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../de/d44/euclid_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="../../de/d44/euclid_8h.html" target="_top" xlink:title="Small collection of classes and functions for geometric types with a focus on 2d graphics and layout.">
 <polygon fill="white" stroke="#666666" points="56.5,-19.25 3.75,-19.25 3.75,0 56.5,0 56.5,-19.25"/>
 <text text-anchor="middle" x="30.12" y="-4.8" font-family="Arial" font-size="11.00">euclid.h</text>
 </a>

@@ -1,6 +1,6 @@
 <map id="scale.h" name="scale.h">
 <area shape="rect" id="Node000001" title="A scaling factor between two different units of measurement." alt="" coords="5,5,72,31"/>
-<area shape="rect" id="Node000002" href="$de/d44/euclid_8h_source.html" title=" " alt="" coords="42,300,112,326"/>
+<area shape="rect" id="Node000002" href="$de/d44/euclid_8h.html" title="Small collection of classes and functions for geometric types with a focus on 2d graphics and layout." alt="" coords="42,300,112,326"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="41,46,44,138,50,195,60,251,75,299,70,300,55,253,45,195,39,138,36,46"/>
 <area shape="rect" id="Node000003" href="$dd/db9/length_8h.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="53,79,125,105"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="58,42,83,77,78,80,53,45"/>

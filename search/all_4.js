@@ -6,5 +6,6 @@ var searchData=
   ['eq_3',['eq',['../d5/ddf/namespacefloppy_1_1math.html#afcdfac7e6f7b9774e157db98c0d635c9',1,'floppy::math']]],
   ['error_4',['error',['../d1/d93/namespacefloppy_1_1log.html#a534b29837e55ef023b77119e94c9c80b',1,'floppy::log']]],
   ['error_5fto_5',['error_to',['../d1/d93/namespacefloppy_1_1log.html#a195e878b0ed7408d61836109edc78794',1,'floppy::log']]],
-  ['explicit_5f_6',['explicit_',['../d3/d05/namespacefloppy.html#ae1e5f60a57661fe4d13cf754e0a8d6aeac9c45ac5595e1bb329ad8e26396d93c5',1,'floppy']]]
+  ['euclid_2eh_6',['euclid.h',['../de/d44/euclid_8h.html',1,'']]],
+  ['explicit_5f_7',['explicit_',['../d3/d05/namespacefloppy.html#ae1e5f60a57661fe4d13cf754e0a8d6aeac9c45ac5595e1bb329ad8e26396d93c5',1,'floppy']]]
 ];
