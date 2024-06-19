@@ -6,7 +6,7 @@ var classfloppy_1_1math_1_1size2d =
     [ "size2d", "d0/d22/classfloppy_1_1math_1_1size2d.html#afb39ea46ec2cda3ce895b02e20c5e0dc", null ],
     [ "size2d", "d0/d22/classfloppy_1_1math_1_1size2d.html#ad64f6720d9226c3c2d9708a2b66d5a92", null ],
     [ "size2d", "d0/d22/classfloppy_1_1math_1_1size2d.html#a169c9a93629e8fe5afd74e00fcba1ae1", null ],
-    [ "size2d", "d0/d22/classfloppy_1_1math_1_1size2d.html#a8a6b329d45b90881738d9fb9fba4c450", null ],
+    [ "size2d", "d0/d22/classfloppy_1_1math_1_1size2d.html#a0ad2ff3fd3eb33b1e206a53b719d6def", null ],
     [ "to_untyped", "d0/d22/classfloppy_1_1math_1_1size2d.html#acade6cee77bf48368a06db5ba705f2b7", null ],
     [ "cast_unit", "d0/d22/classfloppy_1_1math_1_1size2d.html#a4fb98f56eda1c221c46ae22c39ca5f1d", null ],
     [ "cast", "d0/d22/classfloppy_1_1math_1_1size2d.html#ac5d008f9daffcf88a085656faf928fb1", null ],
@@ -21,6 +21,8 @@ var classfloppy_1_1math_1_1size2d =
     [ "area", "d0/d22/classfloppy_1_1math_1_1size2d.html#a09936b23308281dcaf4fbe12397a025e", null ],
     [ "x", "d0/d22/classfloppy_1_1math_1_1size2d.html#a441c4ade3c9551750efba0d1ac6eaf94", null ],
     [ "y", "d0/d22/classfloppy_1_1math_1_1size2d.html#aa65e359771aa0604379b1cc72458e54a", null ],
+    [ "x_mut", "d0/d22/classfloppy_1_1math_1_1size2d.html#a6a41cfe66ec073938ebf59a129cacd76", null ],
+    [ "y_mut", "d0/d22/classfloppy_1_1math_1_1size2d.html#ac37a2f9414fd51fa3be7fcdf58d4a084", null ],
     [ "lx", "d0/d22/classfloppy_1_1math_1_1size2d.html#a4a1740480a7289652d1e7bcdffe9807a", null ],
     [ "ly", "d0/d22/classfloppy_1_1math_1_1size2d.html#accc043ce7ff2febe8af29365f34ef1de", null ],
     [ "to_string", "d0/d22/classfloppy_1_1math_1_1size2d.html#a2670941a8b4ee25c472c0a2b5450d6f2", null ],
@@ -40,5 +42,10 @@ var classfloppy_1_1math_1_1size2d =
     [ "zero", "d0/d22/classfloppy_1_1math_1_1size2d.html#a0fbd62b53a93846defa3052cb19d8678", null ],
     [ "from_lengths", "d0/d22/classfloppy_1_1math_1_1size2d.html#aaca5c75ae78b6c53d27cf63cd944ff62", null ],
     [ "splat", "d0/d22/classfloppy_1_1math_1_1size2d.html#a64f9ee09d34b61616679129ce72807e7", null ],
+    [ "from_tuple", "d0/d22/classfloppy_1_1math_1_1size2d.html#a39931c09ddb4efe110f1c24d4b78ad8e", null ],
+    [ "from_array", "d0/d22/classfloppy_1_1math_1_1size2d.html#aca72a4461756e412508447537c9d1443", null ],
+    [ "from_pair", "d0/d22/classfloppy_1_1math_1_1size2d.html#a185ce55518e9f85808db6f1c09fa93de", null ],
+    [ "operator bool", "d0/d22/classfloppy_1_1math_1_1size2d.html#ad0ed9dded3dc4405713f0b9270930a92", null ],
+    [ "operator!", "d0/d22/classfloppy_1_1math_1_1size2d.html#aa62cb136f618e0d16feed8b745225d05", null ],
     [ "basic_string< C >", "d0/d22/classfloppy_1_1math_1_1size2d.html#abb97ee5b3485f7cc5eb67cff00cd963a", null ]
 ];
