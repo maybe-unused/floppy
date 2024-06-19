@@ -23,24 +23,18 @@ namespace floppy::math
   /// \see floppy::math::angle
   template <typename U = default_unit, concepts::num T = f32>
   class length : public traits::formattable<length<U, T>, char>,
-                 public detail::default_comparable<length<U, T>>
+                 public detail::basic_numeric_newtype<length<U, T>, T>
   {
    public:
-    /// \brief Underlying number type.
-    using type = T;
-
     /// \brief Constructs an empty length.
     constexpr length()
-      : m_(static_cast<T>(0.0F))
+      : detail::basic_numeric_newtype<length<U, T>, T>()
     {}
 
     /// \brief Constructs a length from a given numeric value.
     explicit constexpr length(T value)
-      : m_(value)
+      : detail::basic_numeric_newtype<length<U, T>, T>(value)
     {}
-
-    constexpr length(length const&) = default;
-    constexpr length(length&&) = default;
 
     /// \brief Returns string representation of the length.
     /// \details Length is represented as it's numeric value. If the underlying number type is floating
@@ -53,9 +47,6 @@ namespace floppy::math
       else
         return fmt::format("{}", this->m_);
     }
-
-    /// \brief Returns the underlying value.
-    [[nodiscard]] constexpr auto value() const -> T { return this->m_; }
 
     /// \brief Casts the unit of measurement.
     /// \tparam U2 New unit of measurement.
@@ -167,11 +158,7 @@ namespace floppy::math
       return length<U2, T>(this->value() / static_cast<T>(s.value()));
     }
 
-    constexpr auto operator=(length const& other) -> length&  = default;
-    constexpr auto operator=(length&& other) -> length& = default;
+    constexpr auto operator+() const -> length { return length(this->m_); }
     constexpr auto operator-() const -> length { return length(-this->m_); }
-
-   private:
-    T m_;
   };
 } // namespace floppy::math

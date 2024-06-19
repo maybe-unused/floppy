@@ -16,26 +16,19 @@ namespace floppy::math
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   template <concepts::num T = f32>
   struct angle : public traits::formattable<angle<T>, char>,
-                 public detail::default_comparable<angle<T>>
+                 public detail::advanced_numeric_type<angle<T>, T>
   {
-    /// \brief Underlying number type.
-    using type = T;
+    /// \brief Constructs an empty angle.
+    constexpr angle()
+      : detail::advanced_numeric_type<angle<T>, T>()
+    {}
 
     /// \brief Constructs an angle from radians.
     /// \param radians Angle in radians
     /// \see from_degrees, from_radians
-    constexpr angle(T radians)
-      : m_(radians)
+    constexpr explicit angle(T radians)
+      : detail::advanced_numeric_type<angle<T>, T>(radians)
     {}
-
-    /// \brief Default copy constructor.
-    constexpr angle(angle const&) = default;
-
-    /// \brief Default move constructor.
-    constexpr angle(angle&&) = default;
-
-    /// \brief Default destructor.
-    ~angle() = default;
 
     /// \brief Returns string representation of the object.
     /// \details Angle is represented in degrees.
@@ -95,100 +88,35 @@ namespace floppy::math
       return std::make_pair(std::sin(this->m_), std::cos(this->m_));
     }
 
-    /// \brief Casts angle from one numeric representation to another.
     template <concepts::num U>
-    [[nodiscard]] constexpr auto cast() const -> angle<U> { return { static_cast<U>(this->m_) }; }
-
-    /// \brief Returns this angle as number in another numeric representation.
-    template <concepts::num U>
-    [[nodiscard]] constexpr auto as() const -> U { return static_cast<U>(this->m_); }
-
-    /// \brief Returns this angle as 32-bit floating point number.
-    [[maybe_unused]] [[nodiscard]] constexpr auto as_f32() const -> T { return this->as<f32>(); }
-
-    /// \brief Returns this angle as 64-bit floating point number.
-    [[maybe_unused]] [[nodiscard]] constexpr auto as_f64() const -> T { return this->as<f64>(); }
+    [[nodiscard]] constexpr auto cast() const -> angle<U> { return angle<U>(static_cast<U>(this->m_)); }
 
     /// \brief Constructs an angle from radians.
     /// \param radians Angle in radians
     /// \see from_degrees
-    [[nodiscard]] static constexpr auto from_radians(T radians) -> angle { return { radians }; }
+    [[nodiscard]] static constexpr auto from_radians(T radians) -> angle { return angle(radians); }
 
     /// \brief Constructs an angle from degrees.
     /// \param degrees Angle in degrees
     /// \see from_radians
-    [[nodiscard]] static constexpr auto from_degrees(T degrees) -> angle { return { to_radians(degrees) }; }
+    [[nodiscard]] static constexpr auto from_degrees(T degrees) -> angle { return angle(to_radians(degrees)); }
 
     /// \brief Constructs an zero angle.
-    [[nodiscard]] static constexpr auto zero() -> angle { return { static_cast<T>(0.0) }; }
+    [[nodiscard]] static constexpr auto zero() -> angle { return angle(static_cast<T>(0.0)); }
 
     /// \brief Constructs an angle with value \f$\pi\f$.
-    [[nodiscard]] static constexpr auto pi() -> angle { return { ::fl::math::pi<T>::value }; }
+    [[nodiscard]] static constexpr auto pi() -> angle { return angle(::fl::math::pi<T>::value); }
 
     /// \brief Constructs an angle with value \f$2\pi\f$.
-    [[nodiscard]] static constexpr auto two_pi() -> angle { return { T(2) * ::fl::math::pi<T>::value }; }
+    [[nodiscard]] static constexpr auto two_pi() -> angle { return angle(T(2) * ::fl::math::pi<T>::value); }
 
     /// \brief Constructs an angle with value \f$\frac{\pi}{2}\f$.
-    [[nodiscard]] static constexpr auto half_pi() -> angle { return { T(0.5) * ::fl::math::pi<T>::value }; }
+    [[nodiscard]] static constexpr auto half_pi() -> angle { return angle(T(0.5) * ::fl::math::pi<T>::value); }
 
     /// \brief Constructs an angle with value \f$\frac{\pi}{3}\f$.
-    [[nodiscard]] static constexpr auto third_pi() -> angle { return { ::fl::math::pi<T>::value / T(3) } ; }
+    [[nodiscard]] static constexpr auto third_pi() -> angle { return angle(::fl::math::pi<T>::value / T(3)); }
 
     /// \brief Constructs an angle with value \f$\frac{\pi}{4}\f$.
-    [[nodiscard]] static constexpr auto quarter_pi() -> angle { return { T(0.25) * ::fl::math::pi<T>::value }; }
-
-    [[nodiscard]] constexpr auto operator+() const -> angle { return *this; }
-    [[nodiscard]] constexpr auto operator-() const -> angle { return { -this->m_ }; }
-    [[nodiscard]] constexpr auto operator+(angle const& other) const -> angle { return { this->m_ + other.m_ }; }
-    [[nodiscard]] constexpr auto operator-(angle const& other) const -> angle { return { this->m_ - other.m_ }; }
-    [[nodiscard]] constexpr auto operator*(angle const& other) const -> angle { return { this->m_ * other.m_ }; }
-    [[nodiscard]] constexpr auto operator/(angle const& other) const -> angle { return { this->m_ / other.m_ }; }
-    [[nodiscard]] constexpr auto operator+=(angle const& other) -> angle& { this->m_ += other.m_; return *this; }
-    [[nodiscard]] constexpr auto operator-=(angle const& other) -> angle& { this->m_ -= other.m_; return *this; }
-    [[nodiscard]] constexpr auto operator*=(angle const& other) -> angle& { this->m_ *= other.m_; return *this; }
-    [[nodiscard]] constexpr auto operator/=(angle const& other) -> angle& { this->m_ /= other.m_; return *this; }
-
-    [[nodiscard]] constexpr auto operator*() const -> T const& { return this->m_; }
-    [[nodiscard]] constexpr auto operator*() -> T& { return this->m_; }
-
-    template <concepts::num U>
-    [[nodiscard]] constexpr auto operator*(U const& other) const -> angle { return { this->m_ * other }; }
-
-    template <concepts::num U>
-    [[nodiscard]] constexpr auto operator/(U const& other) const -> angle { return { this->m_ / other }; }
-
-    template <concepts::num U>
-    [[nodiscard]] constexpr auto operator+(U const& other) const -> angle { return { this->m_ + other }; }
-
-    template <concepts::num U>
-    [[nodiscard]] constexpr auto operator-(U const& other) const -> angle { return { this->m_ - other }; }
-
-    template <concepts::num U>
-    [[nodiscard]] constexpr auto operator+=(U const& other) -> angle& { this->m_ += other; return *this; }
-
-    template <concepts::num U>
-    [[nodiscard]] constexpr auto operator-=(U const& other) -> angle& { this->m_ -= other; return *this; }
-
-    template <concepts::num U>
-    [[nodiscard]] constexpr auto operator*=(U const& other) -> angle& { this->m_ *= other; return *this; }
-
-    template <concepts::num U>
-    [[nodiscard]] constexpr auto operator/=(U const& other) -> angle& { this->m_ /= other; return *this; }
-
-    [[nodiscard]] constexpr auto operator++() -> angle& { ++this->m_; return *this; }
-    [[nodiscard]] constexpr auto operator++(int) -> angle { auto ret = *this; ++this->m_; return ret; }
-    [[nodiscard]] constexpr auto operator--() -> angle& { --this->m_; return *this; }
-    [[nodiscard]] constexpr auto operator--(int) -> angle { auto ret = *this; --this->m_; return ret; }
-
-    constexpr auto operator=(angle const&) -> angle& = default;
-    constexpr auto operator=(angle&&) -> angle& = default;
-
-    /// \brief Returns true if the angle is not a zero-angle.
-    [[nodiscard]] constexpr explicit operator bool() const { return not is_null(this->m_); }
-    [[nodiscard]] constexpr auto operator!() const -> bool { return not this->m_; }
-    [[nodiscard]] constexpr explicit operator T() const { return this->m_; }
-
-   private:
-    T m_;
+    [[nodiscard]] static constexpr auto quarter_pi() -> angle { return angle(T(0.25) * ::fl::math::pi<T>::value); }
   };
 } // namespace floppy::math

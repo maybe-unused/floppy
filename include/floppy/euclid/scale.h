@@ -34,11 +34,8 @@ namespace floppy::math
   /// \see floppy::math::length
   template <typename S, typename D, concepts::num T = f32>
   struct scale : public traits::formattable<scale<S, D, T>, char>,
-                 public detail::default_comparable<scale<S, D, T>>
+                 public detail::basic_numeric_newtype<scale<S, D, T>, T>
   {
-    /// \brief Underlying number type.
-    using type = T;
-
     /// \brief Underlying source type.
     using source_type = S;
 
@@ -48,14 +45,14 @@ namespace floppy::math
     /// \brief Constructs an identity scale.
     /// \see scale::identity
     constexpr scale()
-      : m_(1.0F)
+      : detail::basic_numeric_newtype<scale<S, D, T>, T>()
     {}
 
     /// \brief Constructs a scale from a number.
     /// \param s Scale factor.
     /// \see scale::identity
     constexpr explicit scale(T s)
-      : m_(s)
+      : detail::basic_numeric_newtype<scale<S, D, T>, T>(s)
     {}
 
     /// \brief Returns string representation of the scale.
@@ -83,10 +80,6 @@ namespace floppy::math
     /// \return <tt>true</tt> if this scale has no effect.
     [[nodiscard]] constexpr auto is_identity() const -> bool { return eq(this->m_, T(1.0)); }
 
-    /// \brief Returns the underlying scalar scale factor.
-    /// \return This scale as number.
-    [[nodiscard]] constexpr auto value() const -> T { return this->m_; }
-
     /// \brief Returns the inverse scale (1.0 / scale).
     /// \details Example:
     /// \code {.cpp}
@@ -98,8 +91,8 @@ namespace floppy::math
     /// assert(cm_per_mm.inverse() == scale<mm, cm>(10.0F));
     /// \endcode
     /// \return The inverse scale.
-    [[nodiscard]] constexpr auto inverse() const -> scale<destination_type, source_type, type> {
-      return scale<destination_type, source_type, type>(T(1.0) / this->m_);
+    [[nodiscard]] constexpr auto inverse() const -> scale<destination_type, source_type, T> {
+      return scale<destination_type, source_type, T>(T(1.0) / this->m_);
     }
 
     // todo 18.06.2024: https://docs.rs/euclid/latest/src/euclid/scale.rs.html#87
@@ -141,8 +134,5 @@ namespace floppy::math
     [[nodiscard]] constexpr auto operator/(scale<Sn, Dn, Tn> const& other) const -> scale {
       return scale(this->value() / other.value());
     }
-
-   private:
-    T m_;
   };
 } // namespace floppy::math
