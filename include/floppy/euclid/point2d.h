@@ -265,5 +265,27 @@ namespace floppy::math
     /// \brief Constructs new point from size2d.
     /// \param other The other size2d.
     [[nodiscard]] static constexpr auto from_size2d(size2d_type const& other) -> point2d { return point2d(other); }
+
+    #if defined(FL_QT_GUI) || defined(FL_DOC)
+    /// \brief Constructs new point from <tt>QPoint</tt>.
+    /// \param other The other <tt>QPoint</tt>.
+    /// \remarks This constructor is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    constexpr explicit point2d(QPoint const& other) : point2d(other.x(), other.y()) {}
+
+    /// \brief Constructs new point from <tt>QPointF</tt>.
+    /// \param other The other <tt>QPointF</tt>.
+    /// \remarks This constructor is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    constexpr explicit point2d(QPointF const& other) : point2d(other.x(), other.y()) {}
+
+    /// \brief Constructs new point from <tt>QPoint</tt>.
+    /// \param other The other <tt>QPoint</tt>.
+    /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    [[nodiscard]] static constexpr auto from_qpoint(QPoint const& other) -> point2d { return point2d(other.x(), other.y()); }
+
+    /// \brief Constructs new point from <tt>QPointF</tt>.
+    /// \param other The other <tt>QPointF</tt>.
+    /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    [[nodiscard]] static constexpr auto from_qpointf(QPointF const& other) -> point2d { return point2d(other.x(), other.y()); }
+    #endif
   };
 } // namespace floppy::math

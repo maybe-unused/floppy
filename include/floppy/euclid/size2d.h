@@ -218,5 +218,28 @@ namespace floppy::math
     [[nodiscard]] constexpr auto operator/(scale<U2, unit> const& s) const -> size2d<U2, underlying_type> {
       return size2d<U2, underlying_type>(this->x() / s.value(), this->y() / s.value());
     }
+
+#if defined(FL_QT_GUI) || defined(FL_DOC)
+    // and constructors
+    /// \brief Constructs new size2d from <tt>QSize</tt>.
+    /// \param other The other <tt>QSize</tt>.
+    /// \remarks This constructor is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    constexpr explicit size2d(QSize const& other) : size2d(other.width(), other.height()) {}
+
+    /// \brief Constructs new size2d from <tt>QSizeF</tt>.
+    /// \param other The other <tt>QSizeF</tt>.
+    /// \remarks This constructor is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    constexpr explicit size2d(QSizeF const& other) : size2d(other.width(), other.height()) {}
+
+    /// \brief Constructs new size2d from <tt>QSize</tt>.
+    /// \param other The other <tt>QSize</tt>.
+    /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    [[nodiscard]] static constexpr auto from_qsize(QSize const& other) -> size2d { return size2d(other.width(), other.height()); }
+
+    /// \brief Constructs new size2d from <tt>QSizeF</tt>.
+    /// \param other The other <tt>QSizeF</tt>.
+    /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    [[nodiscard]] static constexpr auto from_qsizef(QSizeF const& other) -> size2d { return size2d(other.width(), other.height()); }
+#endif
   };
 } // namespace floppy::math
