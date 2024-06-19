@@ -164,6 +164,27 @@ TEST(EuclidPoint2D, DivEuclid)
   EXPECT_EQ(p.div_euclid(-s), point2d(-1.0, -2.0));
 }
 
+TEST(EuclidPoint2D, ToQPoint)
+{
+  auto const p = point2d(1.0, 2.0);
+
+  EXPECT_EQ(p.to_qpoint(), QPoint(1, 2));
+}
+
+TEST(EuclidPoint2D, ToQPointF)
+{
+  auto const p = point2d(1.0, 2.0);
+
+  EXPECT_EQ(p.to_qpointf(), QPointF(1.0, 2.0));
+}
+
+TEST(EuclidPoint2D, FromQPoint)
+{
+  auto const p = QPoint(1, 2);
+
+  EXPECT_EQ(point2d(p), point2d(1.0F, 2.0F));
+}
+
 /*
 #[test] pub fn test_add_vec() { assert_eq!(Point2DMm::new(1.0, 2.0) + vec2(3.0, 4.0), Point2DMm::new(4.0, 6.0)); }
 #[test] pub fn test_add_assign_vec() { assert_eq!(Point2DMm::new(1.0, 2.0) += vec2(3.0, 4.0), Point2DMm::new(4.0, 6.0)); }
