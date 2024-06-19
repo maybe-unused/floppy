@@ -46,6 +46,16 @@ namespace floppy::math::detail
       , y_(value)
     {}
 
+    /// \brief Returns inverted basic_two_dimensional_type.
+    /// \return Inverted basic_two_dimensional_type.
+    /// \see yx
+    [[nodiscard]] constexpr auto inverted() const -> T { return T(this->y_, this->x_); }
+
+    /// \brief Same as <i>inverted</i>.
+    /// \return Inverted basic_two_dimensional_type.
+    /// \see inverted
+    [[nodiscard]] constexpr auto yx() const -> T { return this->inverted(); }
+
     /// \brief Returns the x-coordinate of the basic_two_dimensional_type as scalar value.
     /// \return The x-coordinate of the basic_two_dimensional_type.
     [[nodiscard]] constexpr auto x() const -> underlying_type { return this->x_; }
@@ -167,6 +177,21 @@ namespace floppy::math::detail
     /// \brief Returns the absolute value of each component.
     /// \return The absolute value of each component.
     [[nodiscard]] constexpr auto abs() const -> T { return T(std::abs(this->x_), std::abs(this->y_)); }
+
+    /// \brief Returns dot product of this and another basic_two_dimensional_type.
+    /// \param other The other basic_two_dimensional_type.
+    /// \return The dot product of this and another basic_two_dimensional_type.
+    [[nodiscard]] constexpr auto dot(T const& other) const -> underlying_type {
+      return this->x_ * other.x_ + this->y_ * other.y_;
+    }
+
+    /// \brief Returns the norm of the cross product of this and another basic_two_dimensional_type.
+    /// \details Cross product is defined as <code>[x1, y1] x [x2, y2] = x1 * y2 - y1 * x2</code>.
+    /// \param other The other basic_two_dimensional_type.
+    /// \return The norm of the cross product of this and another basic_two_dimensional_type.
+    [[nodiscard]] constexpr auto cross(T const& other) const -> underlying_type {
+      return this->x_ * other.y_ - this->y_ * other.x_;
+    }
 
     /// \brief Returns true if all members are finite.
     [[nodiscard]] constexpr auto is_finite() const -> bool { return std::isfinite(this->x_) && std::isfinite(this->y_); }

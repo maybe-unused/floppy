@@ -9,5 +9,6 @@
 #include <floppy/euclid/scale.h>
 #include <floppy/euclid/size2d.h>
 #include <floppy/euclid/point2d.h>
+#include <floppy/euclid/vector2d.h>
 
 // todo: operators between point and size

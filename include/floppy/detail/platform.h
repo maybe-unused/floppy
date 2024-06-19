@@ -379,4 +379,4 @@ namespace floppy
 
   /// \brief Constant-initialized variable, containing current platform information.
   inline auto constexpr current_platform = platform::current();
-} // namespace floppy::platform
+} // namespace floppy

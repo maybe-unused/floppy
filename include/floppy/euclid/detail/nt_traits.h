@@ -16,6 +16,7 @@ namespace floppy::math::detail
       return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::less
         or strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal);
     }
+
     [[nodiscard]] constexpr auto operator>=(T const& other) const -> bool {
       return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::greater
         or strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal);
@@ -73,6 +74,27 @@ namespace floppy::math::detail
 
     /// \brief Returns this numeric newtype as 64-bit floating point number.
     [[maybe_unused]] [[nodiscard]] constexpr auto as_f64() const -> underlying_type { return this->as<f64>(); }
+
+    /// \brief Returns true if this is a finite number.
+    [[nodiscard]] constexpr auto is_finite() const -> bool { return ::std::isfinite(this->m_); }
+
+    /// \brief Returns <b>sin</b>(this).
+    [[nodiscard]] constexpr auto sin() const -> T { return std::sin(this->m_); }
+
+    /// \brief Returns <b>cos</b>(this).
+    [[nodiscard]] constexpr auto cos() const -> T { return std::cos(this->m_); }
+
+    /// \brief Returns <b>tan</b>(this).
+    [[nodiscard]] constexpr auto tan() const -> T { return std::tan(this->m_); }
+
+    /// \brief Returns <b>asin</b>(this).
+    [[nodiscard]] constexpr auto asin() const -> T { return std::asin(this->m_); }
+
+    /// \brief Returns <b>acos</b>(this).
+    [[nodiscard]] constexpr auto acos() const -> T { return std::acos(this->m_); }
+
+    /// \brief Returns <b>atan</b>(this).
+    [[nodiscard]] constexpr auto atan() const -> T { return std::atan(this->m_); }
 
     [[nodiscard]] constexpr auto operator++() -> T& { ++this->m_; return *this; }
     [[nodiscard]] constexpr auto operator++(int) -> T { auto ret = *this; ++this->m_; return ret; }

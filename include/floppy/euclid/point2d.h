@@ -7,6 +7,7 @@
 #include <functional>
 #include <floppy/euclid/length.h>
 #include <floppy/euclid/size2d.h>
+#include <floppy/euclid/vector2d.h>
 #include <floppy/euclid/detail/nt_traits2d.h>
 
 #if defined(FL_QT_GUI)
@@ -27,13 +28,16 @@ namespace floppy::math
   {
    public:
     /// \brief Associated unit type.
-    using unit = U;
+    using unit_type = U;
 
     /// \brief Underlying number type.
     using underlying_type = T;
 
     /// \brief Associated size2d type.
-    using size2d_type = size2d<unit, underlying_type>;
+    using size2d_type = size2d<unit_type, underlying_type>;
+
+    /// \brief Associated vector type.
+    using vector2d_type = vector2d<unit_type, underlying_type>;
 
     /// \brief Constructs new point with zero coordinates.
     constexpr point2d() : detail::basic_two_dimensional_type<point2d<U, T>, U, T>() {}
@@ -46,7 +50,7 @@ namespace floppy::math
     /// \brief Constructs new point from proper <i>length</i> values.
     /// \param x The x-coordinate in <i>unit</i>.
     /// \param y The y-coordinate in <i>unit</i>.
-    constexpr point2d(length<unit> x, length<unit> y) : detail::basic_two_dimensional_type<point2d<U, T>, U, T>(x, y) {}
+    constexpr point2d(length<unit_type> x, length<unit_type> y) : detail::basic_two_dimensional_type<point2d<U, T>, U, T>(x, y) {}
 
     /// \brief Constructs new point, setting all components to the same value.
     /// \param value The value to set all components to.
@@ -60,27 +64,48 @@ namespace floppy::math
 
     /// \brief Constructs new point from size2d.
     /// \param other The other size2d.
-    [[nodiscard]] constexpr explicit point2d(size2d_type const& other) : point2d(other.x(), other.y()) {}
+    constexpr explicit point2d(size2d_type const& other) : point2d(other.x(), other.y()) {}
+
+    /// \brief Constructs new point from a vector2d.
+    /// \param v The vector2d to copy.
+    constexpr explicit point2d(vector2d<default_unit, underlying_type> const& v) : detail::basic_two_dimensional_type<point2d<U, T>, U, T>(v.x(), v.y()) {}
 
     /// \brief Applies the function <b>fn</b> to each component of the point.
-    /// \tparam U2 The new point2d's numeric scalar type.
+    /// \tparam F The type of function to apply.
     /// \param fn The function to apply.
-    template <concepts::num U2>
-    constexpr auto map(std::function<U2(U)> fn) const { return point2d<unit, U2>(fn(this->x()), fn(this->y())); }
+    template <std::invocable<underlying_type> F>
+    constexpr auto map(F&& fn) const {
+      return point2d<unit_type, decltype(fn(this->x()))>(fn(this->x()), fn(this->y()));
+    }
 
-    // todo: zip https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.zip
+    /// \brief Applies the function <b>fn</b> to each component of this point and the other point.
+    /// \tparam F The type of function to apply.
+    /// \param other The other point to apply.
+    /// \param fn The function to apply.
+    template <std::invocable<underlying_type, underlying_type> F>
+    constexpr auto zip(point2d const& other, F&& fn) const -> vector2d<unit_type, decltype(fn(this->x(), other.x()))> {
+      return vector2d<unit_type, decltype(fn(this->x(), other.x()))>(fn(this->x(), other.x()), fn(this->y(), other.y()));
+    }
     // todo: extend https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.extend
-    // todo: to_vector https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.to_vector
 
     /// \brief Drops the units from the point, returning just the numeric scalar values.
     [[nodiscard]] constexpr auto to_untyped() const -> point2d<default_unit, underlying_type> {
       return point2d<default_unit, underlying_type>(this->x(), this->y());
     }
 
-    /// \brief Casts the point into size2d.
-    [[nodiscard]] constexpr auto to_size2d() const -> size2d_type { return size2d_type(this->x(), this->y()); }
+    /// \brief Converts this point2d into <tt>size2d</tt>.
+    /// \return The resulting size2d.
+    [[nodiscard]] constexpr auto to_size2d() const -> size2d_type {
+      return size2d_type(this->x(), this->y());
+    }
 
-    #if defined(FL_QT_GUI) || defined(FL_DOC)
+    /// \brief Converts this point2d into <tt>vector2d</tt>.
+    /// \return The resulting vector2d.
+    [[nodiscard]] constexpr auto to_vector2d() const -> vector2d<unit_type, underlying_type> {
+      return vector2d<unit_type, underlying_type>(this->x(), this->y());
+    }
+
+  #if defined(FL_QT_GUI) || defined(FL_DOC)
     /// \brief Casts this point2d into <tt>QPoint</tt>.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
     [[nodiscard]] constexpr auto to_qpoint() const -> QPoint {
@@ -91,7 +116,7 @@ namespace floppy::math
     /// \brief Casts this point2d into <tt>QPointF</tt>.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
     [[nodiscard]] constexpr auto to_qpointf() const -> QPointF { return QPointF(this->x(), this->y()); }
-    #endif
+  #endif
 
     /// \brief Casts the unit of measurement.
     /// \tparam U2 New unit of measurement.
@@ -105,48 +130,48 @@ namespace floppy::math
     /// \tparam T2 New number type.
     /// \return The point2d with the new number type and the same value.
     template <concepts::num T2>
-    [[nodiscard]] constexpr auto cast() const -> point2d<unit, T2> {
-      return point2d<unit, T2>(this->x(), this->y());
+    [[nodiscard]] constexpr auto cast() const -> point2d<unit_type, T2> {
+      return point2d<unit_type, T2>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>f32</tt> point2d.
-    [[nodiscard]] constexpr auto to_f32() const -> point2d<unit, f32> {
-      return point2d<unit, f32>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_f32() const -> point2d<unit_type, f32> {
+      return point2d<unit_type, f32>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>f64</tt> point2d.
-    [[nodiscard]] constexpr auto to_f64() const -> point2d<unit, f64> {
-      return point2d<unit, f64>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_f64() const -> point2d<unit_type, f64> {
+      return point2d<unit_type, f64>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>u32</tt> point2d.
-    [[nodiscard]] constexpr auto to_u32() const -> point2d<unit, u32> {
-      return point2d<unit, u32>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_u32() const -> point2d<unit_type, u32> {
+      return point2d<unit_type, u32>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>u64</tt> point2d.
-    [[nodiscard]] constexpr auto to_u64() const -> point2d<unit, u64> {
-      return point2d<unit, u64>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_u64() const -> point2d<unit_type, u64> {
+      return point2d<unit_type, u64>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>usize</tt> point2d.
-    [[nodiscard]] constexpr auto to_usize() const -> point2d<unit, usize> {
-      return point2d<unit, usize>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_usize() const -> point2d<unit_type, usize> {
+      return point2d<unit_type, usize>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>i32</tt> point2d.
-    [[nodiscard]] constexpr auto to_i32() const -> point2d<unit, i32> {
-      return point2d<unit, i32>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_i32() const -> point2d<unit_type, i32> {
+      return point2d<unit_type, i32>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>i64</tt> point2d.
-    [[nodiscard]] constexpr auto to_i64() const -> point2d<unit, i64> {
-      return point2d<unit, i64>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_i64() const -> point2d<unit_type, i64> {
+      return point2d<unit_type, i64>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>isize</tt> point2d.
-    [[nodiscard]] constexpr auto to_isize() const -> point2d<unit, isize> {
-      return point2d<unit, isize>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_isize() const -> point2d<unit_type, isize> {
+      return point2d<unit_type, isize>(this->x(), this->y());
     }
 
     // todo: to_3d https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.to_3d
@@ -154,8 +179,8 @@ namespace floppy::math
     /// \brief Returns distance between this and another point.
     /// \param other The other point.
     /// \return The distance.
-    [[nodiscard]] constexpr auto distance_to(point2d<U, T> const& other) const -> length<unit> {
-      return length<unit>(std::hypot(this->x() - other.x(), this->y() - other.y()));
+    [[nodiscard]] constexpr auto distance_to(point2d<U, T> const& other) const -> length<unit_type> {
+      return length<unit_type>(std::hypot(this->x() - other.x(), this->y() - other.y()));
     }
 
     /// \brief Calculates Euclidean division, the matching method for rem_euclid.
@@ -186,8 +211,6 @@ namespace floppy::math
       );
     }
 
-    // todo: same two methods for size2d
-
     /// \brief Constructs new point with zero coordinates.
     [[nodiscard]] static constexpr auto origin() -> point2d { return point2d(); }
 
@@ -202,12 +225,12 @@ namespace floppy::math
       return not eq(this->x(), other.x()) or not eq(this->y(), other.y());
     }
 
-    template <concepts::any_of<point2d, size2d_type> Q>
+    template <concepts::any_of<point2d, size2d_type, vector2d_type> Q>
     [[nodiscard]] constexpr auto operator+(Q const& other) const -> point2d {
       return point2d(this->x() + other.x(), this->y() + other.y());
     }
 
-    template <concepts::any_of<point2d, size2d_type> Q>
+    template <concepts::any_of<point2d, size2d_type, vector2d_type> Q>
     [[nodiscard]] constexpr auto operator-(Q const& other) const -> point2d {
       return point2d(this->x() - other.x(), this->y() - other.y());
     }
@@ -217,7 +240,7 @@ namespace floppy::math
     }
 
     template <typename U2, concepts::num T2>
-    [[nodiscard]] constexpr auto operator*(scale<unit, U2, T2> const& other) const -> point2d<U2, underlying_type> {
+    [[nodiscard]] constexpr auto operator*(scale<unit_type, U2, T2> const& other) const -> point2d<U2, underlying_type> {
       return point2d<U2, underlying_type>(
         this->x() * other.template as<underlying_type>(),
         this->y() * other.template as<underlying_type>()
@@ -229,34 +252,34 @@ namespace floppy::math
     }
 
     template <typename U2, concepts::num T2>
-    [[nodiscard]] constexpr auto operator/(scale<U2, unit, T2> const& other) const -> point2d<U2, underlying_type> {
+    [[nodiscard]] constexpr auto operator/(scale<U2, unit_type, T2> const& other) const -> point2d<U2, underlying_type> {
       return point2d<U2, underlying_type>(
         this->x() / other.template as<underlying_type>(),
         this->y() / other.template as<underlying_type>()
       );
     }
 
-    template <concepts::any_of<point2d, size2d_type> Q>
-    [[nodiscard]] constexpr auto operator+=(Q const& other) -> point2d& {
+    template <concepts::any_of<point2d, size2d_type, vector2d_type> Q>
+    constexpr auto operator+=(Q const& other) -> point2d& {
       this->x_mut() += other.x();
       this->y_mut() += other.y();
       return *this;
     }
 
-    template <concepts::any_of<point2d, size2d_type> Q>
-    [[nodiscard]] constexpr auto operator-=(Q const& other) -> point2d& {
+    template <concepts::any_of<point2d, size2d_type, vector2d_type> Q>
+    constexpr auto operator-=(Q const& other) -> point2d& {
       this->x_mut() -= other.x();
       this->y_mut() -= other.y();
       return *this;
     }
 
-    [[nodiscard]] constexpr auto operator*=(underlying_type const& other) -> point2d& {
+    constexpr auto operator*=(underlying_type const& other) -> point2d& {
       this->x_mut() *= other;
       this->y_mut() *= other;
       return *this;
     }
 
-    [[nodiscard]] constexpr auto operator/=(underlying_type const& other) -> point2d& {
+    constexpr auto operator/=(underlying_type const& other) -> point2d& {
       this->x_mut() /= other;
       this->y_mut() /= other;
       return *this;
@@ -266,7 +289,7 @@ namespace floppy::math
     /// \param other The other size2d.
     [[nodiscard]] static constexpr auto from_size2d(size2d_type const& other) -> point2d { return point2d(other); }
 
-    #if defined(FL_QT_GUI) || defined(FL_DOC)
+  #if defined(FL_QT_GUI) || defined(FL_DOC)
     /// \brief Constructs new point from <tt>QPoint</tt>.
     /// \param other The other <tt>QPoint</tt>.
     /// \remarks This constructor is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
@@ -286,6 +309,6 @@ namespace floppy::math
     /// \param other The other <tt>QPointF</tt>.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
     [[nodiscard]] static constexpr auto from_qpointf(QPointF const& other) -> point2d { return point2d(other.x(), other.y()); }
-    #endif
+  #endif
   };
 } // namespace floppy::math

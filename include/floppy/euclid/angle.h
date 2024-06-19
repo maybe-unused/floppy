@@ -80,9 +80,6 @@ namespace floppy::math
       return *this + this->angle_to(other) * t;
     }
 
-    /// \brief Returns true if the angle is a finite number.
-    [[nodiscard]] constexpr auto is_finite() const -> bool { return ::std::isfinite(this->m_); }
-
     /// \brief Return \f$(sin(x), cos(x))\f$.
     [[nodiscard]] constexpr auto sin_cos() const -> std::pair<T, T> {
       return std::make_pair(std::sin(this->m_), std::cos(this->m_));

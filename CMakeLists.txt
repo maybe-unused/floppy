@@ -70,12 +70,13 @@ target_sources(${PROJECT_NAME}
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/serialization.h> $<INSTALL_INTERFACE:include/floppy/serialization.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/configuration.h> $<INSTALL_INTERFACE:include/floppy/configuration.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/logging.h> $<INSTALL_INTERFACE:include/floppy/logging.h>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid.h> $<INSTALL_INTERFACE:include/floppy/euclid..h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid.h> $<INSTALL_INTERFACE:include/floppy/euclid.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/angle.h> $<INSTALL_INTERFACE:include/floppy/euclid/angle.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/scale.h> $<INSTALL_INTERFACE:include/floppy/euclid/scale.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/length.h> $<INSTALL_INTERFACE:include/floppy/euclid/length.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/point2d.h> $<INSTALL_INTERFACE:include/floppy/euclid/point2d.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/size2d.h> $<INSTALL_INTERFACE:include/floppy/euclid/size2d.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/vector2d.h> $<INSTALL_INTERFACE:include/floppy/euclid/vector2d.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/detail/nt_traits.h> $<INSTALL_INTERFACE:include/floppy/euclid/detail/nt_traits.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/detail/nt_traits2d.h> $<INSTALL_INTERFACE:include/floppy/euclid/detail/nt_traits2d.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/inl/configuration.inl> $<INSTALL_INTERFACE:include/floppy/inl/configuration.inl>

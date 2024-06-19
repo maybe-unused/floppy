@@ -24,6 +24,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
   /// \brief Metadata definitions, such as library version or name.
   namespace meta {
     namespace detail {
+      // todo: this must be rewritten
       constexpr auto is_digit(char c) -> bool { return c <= '9' && c >= '0'; }
       constexpr auto stoi_impl(char const* str, int value = 0) -> int {
         return *str ? is_digit(*str)
