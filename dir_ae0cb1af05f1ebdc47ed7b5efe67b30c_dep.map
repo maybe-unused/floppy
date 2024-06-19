@@ -1,7 +1,9 @@
 <map id="floppy" name="floppy">
+<area shape="rect" id="node3" href="dir_047d1c41069b6adef11ae34e0147700f.html" title="euclid" alt="" coords="38,137,96,162"/>
+<area shape="poly" id="edge1" href="dir_000003_000002.html" alt="" coords="69,88,69,121,64,121,64,88"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000003_000002.html" title="5" alt="" coords="71,111,79,126"/>
 <area shape="rect" id="node2" href="dir_a70aa49210f20f6d80e3cfefc70580f7.html" title="detail" alt="" coords="120,63,176,89"/>
-<area shape="rect" id="node3" href="dir_047d1c41069b6adef11ae34e0147700f.html" title="euclid" alt="" coords="200,63,259,89"/>
-<area shape="rect" id="node4" href="dir_59ebea3516646c7d01fbca39d54537c0.html" title="inl" alt="" coords="282,63,321,89"/>
-<area shape="rect" id="clust2" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html" alt="" coords="27,52,331,99"/>
-<area shape="rect" id="clust1" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="16,16,341,110"/>
+<area shape="rect" id="node4" href="dir_59ebea3516646c7d01fbca39d54537c0.html" title="inl" alt="" coords="199,63,238,89"/>
+<area shape="rect" id="clust2" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html" alt="" coords="27,52,248,173"/>
+<area shape="rect" id="clust1" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="16,16,259,184"/>
 </map>

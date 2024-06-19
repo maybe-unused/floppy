@@ -1,10 +1,10 @@
 var searchData=
 [
   ['cache_5fdir_0',['cache_dir',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a48ed75f5a0bd9457f373ed99d9e39d40',1,'floppy::filesystem::application_dirs']]],
-  ['cast_1',['cast',['../dd/dd1/classfloppy_1_1math_1_1length.html#a999bc22c6dda4183df505aaa03ee3b2a',1,'floppy::math::length::cast()'],['../db/d35/classfloppy_1_1math_1_1point2d.html#a99240421c774ebc1924e00dffa323891',1,'floppy::math::point2d::cast()']]],
-  ['cast_5funit_2',['cast_unit',['../dd/dd1/classfloppy_1_1math_1_1length.html#acceeec95c576d3f27c880c673384eb4b',1,'floppy::math::length::cast_unit()'],['../db/d35/classfloppy_1_1math_1_1point2d.html#a127231287e74ae7e99bffdda8d3a133d',1,'floppy::math::point2d::cast_unit() const -&gt; point2d&lt; U2, underlying_type &gt;']]],
-  ['ceil_3',['ceil',['../db/d35/classfloppy_1_1math_1_1point2d.html#a988e02619c0e611d233b3bfb33a83030',1,'floppy::math::point2d']]],
-  ['clamp_4',['clamp',['../db/d35/classfloppy_1_1math_1_1point2d.html#af615d13dbf55cd8e48bbd70d1a32b32a',1,'floppy::math::point2d']]],
+  ['cast_1',['cast',['../dd/dd1/classfloppy_1_1math_1_1length.html#a999bc22c6dda4183df505aaa03ee3b2a',1,'floppy::math::length::cast()'],['../db/d35/classfloppy_1_1math_1_1point2d.html#a99240421c774ebc1924e00dffa323891',1,'floppy::math::point2d::cast()'],['../d0/d22/classfloppy_1_1math_1_1size2d.html#ac5d008f9daffcf88a085656faf928fb1',1,'floppy::math::size2d::cast()']]],
+  ['cast_5funit_2',['cast_unit',['../dd/dd1/classfloppy_1_1math_1_1length.html#acceeec95c576d3f27c880c673384eb4b',1,'floppy::math::length::cast_unit()'],['../db/d35/classfloppy_1_1math_1_1point2d.html#a127231287e74ae7e99bffdda8d3a133d',1,'floppy::math::point2d::cast_unit()'],['../d0/d22/classfloppy_1_1math_1_1size2d.html#a4fb98f56eda1c221c46ae22c39ca5f1d',1,'floppy::math::size2d::cast_unit()']]],
+  ['ceil_3',['ceil',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ad71476fbe8ef1d19ece8f78442c2b2bf',1,'floppy::math::detail::basic_two_dimensional_type']]],
+  ['clamp_4',['clamp',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a64a17113cf024a9ca60673c7255a2613',1,'floppy::math::detail::basic_two_dimensional_type']]],
   ['collect_5',['collect',['../df/dd6/namespacefloppy_1_1ranges.html#a8028c6dff3e217c133bb0dfda2c25ba4',1,'floppy::ranges']]],
   ['column_6',['column',['../d5/d44/structfloppy_1_1source__location.html#aa5435523d5e20e47d7a4fe6c44cea263',1,'floppy::source_location']]],
   ['config_5fdir_7',['config_dir',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a467a8375bb1b4e8d4030857ea1d03860',1,'floppy::filesystem::application_dirs']]],
