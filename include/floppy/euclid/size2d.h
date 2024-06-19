@@ -30,7 +30,7 @@ namespace floppy::math
   {
    public:
     /// \brief Associated unit type.
-    using unit = U;
+    using unit_type = U;
 
     /// \brief Underlying number type.
     using underlying_type = T;
@@ -51,7 +51,7 @@ namespace floppy::math
     /// \brief Constructs new size2d from proper <i>length</i> values.
     /// \param x The x-coordinate in <i>unit</i>.
     /// \param y The y-coordinate in <i>unit</i>.
-    constexpr size2d(length<unit> x, length<unit> y) : detail::basic_two_dimensional_type<size2d<U, T>, U, T>(x, y) {}
+    constexpr size2d(length<unit_type> x, length<unit_type> y) : detail::basic_two_dimensional_type<size2d<U, T>, U, T>(x, y) {}
 
     /// \brief Constructs new size2d, setting all components to the same value.
     /// \param value The value to set all components to.
@@ -76,10 +76,10 @@ namespace floppy::math
     [[nodiscard]] constexpr auto height_mut() -> underlying_type& { return this->y_mut(); }
 
     /// \brief Alias to <tt>lx</tt> member function.
-    [[nodiscard]] constexpr auto width_typed() const -> length<unit> { return this->lx(); }
+    [[nodiscard]] constexpr auto width_typed() const -> length<unit_type> { return this->lx(); }
 
     /// \brief Alias to <tt>ly</tt> member function.
-    [[nodiscard]] constexpr auto height_typed() const -> length<unit> { return this->ly(); }
+    [[nodiscard]] constexpr auto height_typed() const -> length<unit_type> { return this->ly(); }
 
     /// \brief Drops the units from the size2d, returning just the numeric scalar values.
     [[nodiscard]] constexpr auto to_untyped() const -> size2d<default_unit, underlying_type> {
@@ -88,8 +88,8 @@ namespace floppy::math
 
     /// \brief Converts this size2d into <tt>point2d</tt>.
     /// \return The resulting point2d.
-    [[nodiscard]] constexpr auto to_point2d() const -> point2d<unit, underlying_type> {
-      return point2d<unit, underlying_type>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_point2d() const -> point2d<unit_type, underlying_type> {
+      return point2d<unit_type, underlying_type>(this->x(), this->y());
     }
 
     #if defined(FL_QT_GUI) || defined(FL_DOC)
@@ -117,48 +117,48 @@ namespace floppy::math
     /// \tparam T2 New number type.
     /// \return The size2d with the new number type and the same value.
     template <concepts::num T2>
-    [[nodiscard]] constexpr auto cast() const -> size2d<unit, T2> {
-      return size2d<unit, T2>(this->x(), this->y());
+    [[nodiscard]] constexpr auto cast() const -> size2d<unit_type, T2> {
+      return size2d<unit_type, T2>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>f32</tt> size2d.
-    [[nodiscard]] constexpr auto to_f32() const -> size2d<unit, f32> {
-      return size2d<unit, f32>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_f32() const -> size2d<unit_type, f32> {
+      return size2d<unit_type, f32>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>f64</tt> size2d.
-    [[nodiscard]] constexpr auto to_f64() const -> size2d<unit, f64> {
-      return size2d<unit, f64>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_f64() const -> size2d<unit_type, f64> {
+      return size2d<unit_type, f64>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>u32</tt> size2d.
-    [[nodiscard]] constexpr auto to_u32() const -> size2d<unit, u32> {
-      return size2d<unit, u32>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_u32() const -> size2d<unit_type, u32> {
+      return size2d<unit_type, u32>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>u64</tt> size2d.
-    [[nodiscard]] constexpr auto to_u64() const -> size2d<unit, u64> {
-      return size2d<unit, u64>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_u64() const -> size2d<unit_type, u64> {
+      return size2d<unit_type, u64>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>usize</tt> size2d.
-    [[nodiscard]] constexpr auto to_usize() const -> size2d<unit, usize> {
-      return size2d<unit, usize>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_usize() const -> size2d<unit_type, usize> {
+      return size2d<unit_type, usize>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>i32</tt> size2d.
-    [[nodiscard]] constexpr auto to_i32() const -> size2d<unit, i32> {
-      return size2d<unit, i32>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_i32() const -> size2d<unit_type, i32> {
+      return size2d<unit_type, i32>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>i64</tt> size2d.
-    [[nodiscard]] constexpr auto to_i64() const -> size2d<unit, i64> {
-      return size2d<unit, i64>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_i64() const -> size2d<unit_type, i64> {
+      return size2d<unit_type, i64>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>isize</tt> size2d.
-    [[nodiscard]] constexpr auto to_isize() const -> size2d<unit, isize> {
-      return size2d<unit, isize>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_isize() const -> size2d<unit_type, isize> {
+      return size2d<unit_type, isize>(this->x(), this->y());
     }
 
     /// \brief Returns result of multiplication of both scalars.
@@ -219,12 +219,12 @@ namespace floppy::math
     }
 
     template <typename U2>
-    [[nodiscard]] constexpr auto operator*(scale<unit, U2> const& s) const -> size2d<U2, underlying_type> {
+    [[nodiscard]] constexpr auto operator*(scale<unit_type, U2> const& s) const -> size2d<U2, underlying_type> {
       return size2d<U2, underlying_type>(this->x() * s.value(), this->y() * s.value());
     }
 
     template <typename U2>
-    [[nodiscard]] constexpr auto operator/(scale<U2, unit> const& s) const -> size2d<U2, underlying_type> {
+    [[nodiscard]] constexpr auto operator/(scale<U2, unit_type> const& s) const -> size2d<U2, underlying_type> {
       return size2d<U2, underlying_type>(this->x() / s.value(), this->y() / s.value());
     }
 

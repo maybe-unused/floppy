@@ -16,6 +16,7 @@ namespace floppy::math::detail
       return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::less
         or strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal);
     }
+
     [[nodiscard]] constexpr auto operator>=(T const& other) const -> bool {
       return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::greater
         or strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal);

@@ -27,13 +27,13 @@ namespace floppy::math
   {
    public:
     /// \brief Associated unit type.
-    using unit = U;
+    using unit_type = U;
 
     /// \brief Underlying number type.
     using underlying_type = T;
 
     /// \brief Associated size2d type.
-    using size2d_type = size2d<unit, underlying_type>;
+    using size2d_type = size2d<unit_type, underlying_type>;
 
     /// \brief Constructs new point with zero coordinates.
     constexpr point2d() : detail::basic_two_dimensional_type<point2d<U, T>, U, T>() {}
@@ -46,7 +46,7 @@ namespace floppy::math
     /// \brief Constructs new point from proper <i>length</i> values.
     /// \param x The x-coordinate in <i>unit</i>.
     /// \param y The y-coordinate in <i>unit</i>.
-    constexpr point2d(length<unit> x, length<unit> y) : detail::basic_two_dimensional_type<point2d<U, T>, U, T>(x, y) {}
+    constexpr point2d(length<unit_type> x, length<unit_type> y) : detail::basic_two_dimensional_type<point2d<U, T>, U, T>(x, y) {}
 
     /// \brief Constructs new point, setting all components to the same value.
     /// \param value The value to set all components to.
@@ -66,7 +66,7 @@ namespace floppy::math
     /// \tparam U2 The new point2d's numeric scalar type.
     /// \param fn The function to apply.
     template <concepts::num U2>
-    constexpr auto map(std::function<U2(U)> fn) const { return point2d<unit, U2>(fn(this->x()), fn(this->y())); }
+    constexpr auto map(std::function<U2(U)> fn) const { return point2d<unit_type, U2>(fn(this->x()), fn(this->y())); }
 
     // todo: zip https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.zip
     // todo: extend https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.extend
@@ -105,48 +105,48 @@ namespace floppy::math
     /// \tparam T2 New number type.
     /// \return The point2d with the new number type and the same value.
     template <concepts::num T2>
-    [[nodiscard]] constexpr auto cast() const -> point2d<unit, T2> {
-      return point2d<unit, T2>(this->x(), this->y());
+    [[nodiscard]] constexpr auto cast() const -> point2d<unit_type, T2> {
+      return point2d<unit_type, T2>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>f32</tt> point2d.
-    [[nodiscard]] constexpr auto to_f32() const -> point2d<unit, f32> {
-      return point2d<unit, f32>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_f32() const -> point2d<unit_type, f32> {
+      return point2d<unit_type, f32>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>f64</tt> point2d.
-    [[nodiscard]] constexpr auto to_f64() const -> point2d<unit, f64> {
-      return point2d<unit, f64>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_f64() const -> point2d<unit_type, f64> {
+      return point2d<unit_type, f64>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>u32</tt> point2d.
-    [[nodiscard]] constexpr auto to_u32() const -> point2d<unit, u32> {
-      return point2d<unit, u32>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_u32() const -> point2d<unit_type, u32> {
+      return point2d<unit_type, u32>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>u64</tt> point2d.
-    [[nodiscard]] constexpr auto to_u64() const -> point2d<unit, u64> {
-      return point2d<unit, u64>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_u64() const -> point2d<unit_type, u64> {
+      return point2d<unit_type, u64>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>usize</tt> point2d.
-    [[nodiscard]] constexpr auto to_usize() const -> point2d<unit, usize> {
-      return point2d<unit, usize>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_usize() const -> point2d<unit_type, usize> {
+      return point2d<unit_type, usize>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>i32</tt> point2d.
-    [[nodiscard]] constexpr auto to_i32() const -> point2d<unit, i32> {
-      return point2d<unit, i32>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_i32() const -> point2d<unit_type, i32> {
+      return point2d<unit_type, i32>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>i64</tt> point2d.
-    [[nodiscard]] constexpr auto to_i64() const -> point2d<unit, i64> {
-      return point2d<unit, i64>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_i64() const -> point2d<unit_type, i64> {
+      return point2d<unit_type, i64>(this->x(), this->y());
     }
 
     /// \brief Casts into <tt>isize</tt> point2d.
-    [[nodiscard]] constexpr auto to_isize() const -> point2d<unit, isize> {
-      return point2d<unit, isize>(this->x(), this->y());
+    [[nodiscard]] constexpr auto to_isize() const -> point2d<unit_type, isize> {
+      return point2d<unit_type, isize>(this->x(), this->y());
     }
 
     // todo: to_3d https://docs.rs/euclid/latest/euclid/struct.Point2D.html#method.to_3d
@@ -154,8 +154,8 @@ namespace floppy::math
     /// \brief Returns distance between this and another point.
     /// \param other The other point.
     /// \return The distance.
-    [[nodiscard]] constexpr auto distance_to(point2d<U, T> const& other) const -> length<unit> {
-      return length<unit>(std::hypot(this->x() - other.x(), this->y() - other.y()));
+    [[nodiscard]] constexpr auto distance_to(point2d<U, T> const& other) const -> length<unit_type> {
+      return length<unit_type>(std::hypot(this->x() - other.x(), this->y() - other.y()));
     }
 
     /// \brief Calculates Euclidean division, the matching method for rem_euclid.
@@ -217,7 +217,7 @@ namespace floppy::math
     }
 
     template <typename U2, concepts::num T2>
-    [[nodiscard]] constexpr auto operator*(scale<unit, U2, T2> const& other) const -> point2d<U2, underlying_type> {
+    [[nodiscard]] constexpr auto operator*(scale<unit_type, U2, T2> const& other) const -> point2d<U2, underlying_type> {
       return point2d<U2, underlying_type>(
         this->x() * other.template as<underlying_type>(),
         this->y() * other.template as<underlying_type>()
@@ -229,7 +229,7 @@ namespace floppy::math
     }
 
     template <typename U2, concepts::num T2>
-    [[nodiscard]] constexpr auto operator/(scale<U2, unit, T2> const& other) const -> point2d<U2, underlying_type> {
+    [[nodiscard]] constexpr auto operator/(scale<U2, unit_type, T2> const& other) const -> point2d<U2, underlying_type> {
       return point2d<U2, underlying_type>(
         this->x() / other.template as<underlying_type>(),
         this->y() / other.template as<underlying_type>()
