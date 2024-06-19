@@ -150,6 +150,8 @@ Public Types</h2></td></tr>
 <tr class="separator:afa2a121b54048696c085ef8c66ac8a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a093738e9be246ac547e6ae2478ba5918" id="r_a093738e9be246ac547e6ae2478ba5918"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> = T</td></tr>
 <tr class="separator:a093738e9be246ac547e6ae2478ba5918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab0e701834565c70db663a021e25b1a5" id="r_aab0e701834565c70db663a021e25b1a5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a> = <a class="el" href="../../d0/d22/classfloppy_1_1math_1_1size2d.html">size2d</a>&lt;<a class="el" href="#afa2a121b54048696c085ef8c66ac8a01">unit</a>, <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a>&gt;</td></tr>
+<tr class="separator:aab0e701834565c70db663a021e25b1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -198,6 +200,40 @@ requires (not std::is_same_v&lt;U, U2&gt;)</td></tr>
 <tr class="separator:a25725e7b084bc811f5f2bb798b7bf2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2dc47c2b6150d79f62ea94cdce5306e" id="r_ab2dc47c2b6150d79f62ea94cdce5306e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2dc47c2b6150d79f62ea94cdce5306e">div_euclid</a> (<a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&lt; U, T &gt; const &amp;other) const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&lt; U, T &gt;</td></tr>
 <tr class="separator:ab2dc47c2b6150d79f62ea94cdce5306e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04c2bd143439734928e96fd74f6baec2" id="r_a04c2bd143439734928e96fd74f6baec2"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04c2bd143439734928e96fd74f6baec2">operator+</a> () const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a></td></tr>
+<tr class="separator:a04c2bd143439734928e96fd74f6baec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada12101e50ae345d5cd34c48503183da" id="r_ada12101e50ae345d5cd34c48503183da"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada12101e50ae345d5cd34c48503183da">operator-</a> () const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a></td></tr>
+<tr class="separator:ada12101e50ae345d5cd34c48503183da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead85f370ad50b91ad116eadc1a77c1e" id="r_aead85f370ad50b91ad116eadc1a77c1e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aead85f370ad50b91ad116eadc1a77c1e">operator==</a> (<a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> const &amp;other) const -&gt; bool</td></tr>
+<tr class="separator:aead85f370ad50b91ad116eadc1a77c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d0c678acc34f99f0b00b6159883f7da" id="r_a7d0c678acc34f99f0b00b6159883f7da"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d0c678acc34f99f0b00b6159883f7da">operator!=</a> (<a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> const &amp;other) const -&gt; bool</td></tr>
+<tr class="separator:a7d0c678acc34f99f0b00b6159883f7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c17e2f00f447961989fb4cf8e15b457" id="r_a5c17e2f00f447961989fb4cf8e15b457"><td class="memTemplParams" colspan="2">template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>, <a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a> &gt; Q&gt; </td></tr>
+<tr class="memitem:a5c17e2f00f447961989fb4cf8e15b457"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5c17e2f00f447961989fb4cf8e15b457">operator+</a> (Q const &amp;other) const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a></td></tr>
+<tr class="separator:a5c17e2f00f447961989fb4cf8e15b457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a7e1f98369e2a11e3f00d5536342f9" id="r_a05a7e1f98369e2a11e3f00d5536342f9"><td class="memTemplParams" colspan="2">template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>, <a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a> &gt; Q&gt; </td></tr>
+<tr class="memitem:a05a7e1f98369e2a11e3f00d5536342f9"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a05a7e1f98369e2a11e3f00d5536342f9">operator-</a> (Q const &amp;other) const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a></td></tr>
+<tr class="separator:a05a7e1f98369e2a11e3f00d5536342f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbbdcf546daa066789e937fe9ee708e5" id="r_adbbdcf546daa066789e937fe9ee708e5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbbdcf546daa066789e937fe9ee708e5">operator*</a> (<a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> const &amp;other) const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a></td></tr>
+<tr class="separator:adbbdcf546daa066789e937fe9ee708e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c102f75db1637797ef048aacaba8787" id="r_a7c102f75db1637797ef048aacaba8787"><td class="memTemplParams" colspan="2">template&lt;typename U2 , concepts::num T2&gt; </td></tr>
+<tr class="memitem:a7c102f75db1637797ef048aacaba8787"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7c102f75db1637797ef048aacaba8787">operator*</a> (<a class="el" href="../../db/db2/structfloppy_1_1math_1_1scale.html">scale</a>&lt; <a class="el" href="#afa2a121b54048696c085ef8c66ac8a01">unit</a>, U2, T2 &gt; const &amp;other) const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&lt; U2, <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> &gt;</td></tr>
+<tr class="separator:a7c102f75db1637797ef048aacaba8787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a411c76f14a23f9a929718db0316e1" id="r_a64a411c76f14a23f9a929718db0316e1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64a411c76f14a23f9a929718db0316e1">operator/</a> (<a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> const &amp;other) const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a></td></tr>
+<tr class="separator:a64a411c76f14a23f9a929718db0316e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82efd1a8e13ada7916fa72f70a04b188" id="r_a82efd1a8e13ada7916fa72f70a04b188"><td class="memTemplParams" colspan="2">template&lt;typename U2 , concepts::num T2&gt; </td></tr>
+<tr class="memitem:a82efd1a8e13ada7916fa72f70a04b188"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a82efd1a8e13ada7916fa72f70a04b188">operator/</a> (<a class="el" href="../../db/db2/structfloppy_1_1math_1_1scale.html">scale</a>&lt; U2, <a class="el" href="#afa2a121b54048696c085ef8c66ac8a01">unit</a>, T2 &gt; const &amp;other) const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&lt; U2, <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> &gt;</td></tr>
+<tr class="separator:a82efd1a8e13ada7916fa72f70a04b188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7395dc39c69cbf84e2441495ff142244" id="r_a7395dc39c69cbf84e2441495ff142244"><td class="memTemplParams" colspan="2">template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>, <a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a> &gt; Q&gt; </td></tr>
+<tr class="memitem:a7395dc39c69cbf84e2441495ff142244"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7395dc39c69cbf84e2441495ff142244">operator+=</a> (Q const &amp;other) -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> &amp;</td></tr>
+<tr class="separator:a7395dc39c69cbf84e2441495ff142244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c823f208d1db8c4b07b174c1165a746" id="r_a4c823f208d1db8c4b07b174c1165a746"><td class="memTemplParams" colspan="2">template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>, <a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a> &gt; Q&gt; </td></tr>
+<tr class="memitem:a4c823f208d1db8c4b07b174c1165a746"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4c823f208d1db8c4b07b174c1165a746">operator-=</a> (Q const &amp;other) -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> &amp;</td></tr>
+<tr class="separator:a4c823f208d1db8c4b07b174c1165a746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f8a983a4a10259c5dedc05b0c01603" id="r_af1f8a983a4a10259c5dedc05b0c01603"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1f8a983a4a10259c5dedc05b0c01603">operator*=</a> (<a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> const &amp;other) -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> &amp;</td></tr>
+<tr class="separator:af1f8a983a4a10259c5dedc05b0c01603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f4fea4881df758a774b40a64af51fd" id="r_a33f4fea4881df758a774b40a64af51fd"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33f4fea4881df758a774b40a64af51fd">operator/=</a> (<a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> const &amp;other) -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> &amp;</td></tr>
+<tr class="separator:a33f4fea4881df758a774b40a64af51fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a441c4ade3c9551750efba0d1ac6eaf94" id="r_a441c4ade3c9551750efba0d1ac6eaf94"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a441c4ade3c9551750efba0d1ac6eaf94">x</a> () const -&gt; <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a></td></tr>
 <tr class="separator:a441c4ade3c9551750efba0d1ac6eaf94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa65e359771aa0604379b1cc72458e54a" id="r_aa65e359771aa0604379b1cc72458e54a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#aa65e359771aa0604379b1cc72458e54a">y</a> () const -&gt; <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a></td></tr>
@@ -289,7 +325,7 @@ class floppy::math::point2d&lt; U, T &gt;</div><p>A two-dimensional point tagged
 <dd>
 floppy::math::vector2d </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00024">24</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00025">25</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="afa2a121b54048696c085ef8c66ac8a01" name="afa2a121b54048696c085ef8c66ac8a01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa2a121b54048696c085ef8c66ac8a01">&#9670;&#160;</a></span>unit</h2>
@@ -307,7 +343,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Associated unit type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00028">28</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00029">29</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -327,7 +363,27 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Underlying number type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00031">31</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00032">32</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="aab0e701834565c70db663a021e25b1a5" name="aab0e701834565c70db663a021e25b1a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab0e701834565c70db663a021e25b1a5">&#9670;&#160;</a></span>size2d_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a> = <a class="el" href="../../d0/d22/classfloppy_1_1math_1_1size2d.html">size2d</a>&lt;<a class="el" href="#afa2a121b54048696c085ef8c66ac8a01">unit</a>, <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Associated <a class="el" href="../../d0/d22/classfloppy_1_1math_1_1size2d.html" title="A two-dimensional size2d tagged with a unit.">size2d</a> type. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00035">35</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -359,7 +415,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Constructs new point with zero coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00034">34</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00038">38</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -401,7 +457,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00039">39</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00043">43</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -443,7 +499,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00044">44</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00048">48</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -480,7 +536,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00048">48</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00052">52</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -520,7 +576,7 @@ requires (not std::is_same_v&lt;U, U2&gt;)</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00054">54</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00058">58</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -566,7 +622,7 @@ template&lt;concepts::num U2&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00060">60</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00064">64</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -597,7 +653,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Drops the units from the point, returning just the numeric scalar values. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00067">67</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00071">71</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -637,7 +693,7 @@ template&lt;typename U2 &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a> with the new unit of measurement and the same value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00075">75</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00079">79</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -677,7 +733,7 @@ template&lt;concepts::num T2&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a> with the new number type and the same value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00083">83</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00087">87</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -708,7 +764,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>f32</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00088">88</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00092">92</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -739,7 +795,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>f64</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00093">93</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00097">97</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -770,7 +826,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>u32</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00098">98</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00102">102</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -801,7 +857,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>u64</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00103">103</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00107">107</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -832,7 +888,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>usize</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00108">108</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00112">112</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -863,7 +919,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>i32</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00113">113</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00117">117</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -894,7 +950,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>i64</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00118">118</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00122">122</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -925,7 +981,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>isize</code> <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00123">123</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00127">127</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -963,7 +1019,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The distance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00133">133</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00136">136</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1002,7 +1058,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>The remainder. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab2dc47c2b6150d79f62ea94cdce5306e" title="Calculates Euclidean division, the matching method for rem_euclid.">div_euclid</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00141">141</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00144">144</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1041,7 +1097,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>The quotient. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a25725e7b084bc811f5f2bb798b7bf2b3" title="Calculates the least nonnegative remainder of this (mod other)">rem_euclid</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00152">152</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00155">155</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -1072,7 +1128,425 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Constructs new point with zero coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00159">159</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00162">162</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a04c2bd143439734928e96fd74f6baec2" name="a04c2bd143439734928e96fd74f6baec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c2bd143439734928e96fd74f6baec2">&#9670;&#160;</a></span>operator+() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator+ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00164">164</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="ada12101e50ae345d5cd34c48503183da" name="ada12101e50ae345d5cd34c48503183da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada12101e50ae345d5cd34c48503183da">&#9670;&#160;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00165">165</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="aead85f370ad50b91ad116eadc1a77c1e" name="aead85f370ad50b91ad116eadc1a77c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aead85f370ad50b91ad116eadc1a77c1e">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&lt; U, T &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const -&gt; bool </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00167">167</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a7d0c678acc34f99f0b00b6159883f7da" name="a7d0c678acc34f99f0b00b6159883f7da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d0c678acc34f99f0b00b6159883f7da">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto <a class="el" href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#aa62cb136f618e0d16feed8b745225d05">operator!</a>= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&lt; U, T &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const -&gt; bool </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00171">171</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a5c17e2f00f447961989fb4cf8e15b457" name="a5c17e2f00f447961989fb4cf8e15b457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c17e2f00f447961989fb4cf8e15b457">&#9670;&#160;</a></span>operator+() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<div class="memtemplate">
+template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>, <a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a> &gt; Q&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator+ </td>
+          <td>(</td>
+          <td class="paramtype">Q const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00176">176</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a05a7e1f98369e2a11e3f00d5536342f9" name="a05a7e1f98369e2a11e3f00d5536342f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a7e1f98369e2a11e3f00d5536342f9">&#9670;&#160;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<div class="memtemplate">
+template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>, <a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a> &gt; Q&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator- </td>
+          <td>(</td>
+          <td class="paramtype">Q const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00181">181</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="adbbdcf546daa066789e937fe9ee708e5" name="adbbdcf546daa066789e937fe9ee708e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbbdcf546daa066789e937fe9ee708e5">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00185">185</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a7c102f75db1637797ef048aacaba8787" name="a7c102f75db1637797ef048aacaba8787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c102f75db1637797ef048aacaba8787">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<div class="memtemplate">
+template&lt;typename U2 , concepts::num T2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/db2/structfloppy_1_1math_1_1scale.html">scale</a>&lt; <a class="el" href="#afa2a121b54048696c085ef8c66ac8a01">unit</a>, U2, T2 &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&lt;U2, <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a>&gt; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00190">190</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a64a411c76f14a23f9a929718db0316e1" name="a64a411c76f14a23f9a929718db0316e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a411c76f14a23f9a929718db0316e1">&#9670;&#160;</a></span>operator/() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator/ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00197">197</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a82efd1a8e13ada7916fa72f70a04b188" name="a82efd1a8e13ada7916fa72f70a04b188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82efd1a8e13ada7916fa72f70a04b188">&#9670;&#160;</a></span>operator/() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<div class="memtemplate">
+template&lt;typename U2 , concepts::num T2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator/ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/db2/structfloppy_1_1math_1_1scale.html">scale</a>&lt; U2, <a class="el" href="#afa2a121b54048696c085ef8c66ac8a01">unit</a>, T2 &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&lt;U2, <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a>&gt; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00202">202</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a7395dc39c69cbf84e2441495ff142244" name="a7395dc39c69cbf84e2441495ff142244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7395dc39c69cbf84e2441495ff142244">&#9670;&#160;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<div class="memtemplate">
+template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>, <a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a> &gt; Q&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator+= </td>
+          <td>(</td>
+          <td class="paramtype">Q const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00210">210</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a4c823f208d1db8c4b07b174c1165a746" name="a4c823f208d1db8c4b07b174c1165a746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c823f208d1db8c4b07b174c1165a746">&#9670;&#160;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<div class="memtemplate">
+template&lt;concepts::any_of&lt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>, <a class="el" href="#aab0e701834565c70db663a021e25b1a5">size2d_type</a> &gt; Q&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator-= </td>
+          <td>(</td>
+          <td class="paramtype">Q const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00217">217</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="af1f8a983a4a10259c5dedc05b0c01603" name="af1f8a983a4a10259c5dedc05b0c01603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f8a983a4a10259c5dedc05b0c01603">&#9670;&#160;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator*= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00223">223</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
+
+</div>
+</div>
+<a id="a33f4fea4881df758a774b40a64af51fd" name="a33f4fea4881df758a774b40a64af51fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f4fea4881df758a774b40a64af51fd">&#9670;&#160;</a></span>operator/=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator/= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html">point2d</a>&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/point2d_8h_source.html#l00229">229</a> of file <a class="el" href="../../d4/d12/point2d_8h_source.html">point2d.h</a>.</p>
 
 </div>
 </div>
@@ -2013,9 +2487,10 @@ template&lt;typename T , typename U , concepts::num N&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns <code>true</code> if underlying values is both not <code>0</code>. </p>
+<p>Returns <code>true</code> if underlying values is both not <code>0</code> and not <code>NaN</code> or <code>Infinity</code> in case of floating point. </p>
+<dl class="section note"><dt>Note</dt><dd>Also returns <code>false </code></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d53/nt__traits2d_8h_source.html#l00212">212</a> of file <a class="el" href="../../da/d53/nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d53/nt__traits2d_8h_source.html#l00213">213</a> of file <a class="el" href="../../da/d53/nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>
@@ -2046,7 +2521,7 @@ template&lt;typename T , typename U , concepts::num N&gt; </div>
 
 <p>Returns <code>false</code> if underlying values is both not <code>0</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d53/nt__traits2d_8h_source.html#l00215">215</a> of file <a class="el" href="../../da/d53/nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d53/nt__traits2d_8h_source.html#l00224">224</a> of file <a class="el" href="../../da/d53/nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>
@@ -2106,7 +2581,7 @@ template&lt;typename T , typename U , concepts::num N&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d53/nt__traits2d_8h_source.html#l00218">218</a> of file <a class="el" href="../../da/d53/nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d53/nt__traits2d_8h_source.html#l00227">227</a> of file <a class="el" href="../../da/d53/nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>
@@ -2132,7 +2607,7 @@ template&lt;typename T , typename U , concepts::num N&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d53/nt__traits2d_8h_source.html#l00219">219</a> of file <a class="el" href="../../da/d53/nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d53/nt__traits2d_8h_source.html#l00228">228</a> of file <a class="el" href="../../da/d53/nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>

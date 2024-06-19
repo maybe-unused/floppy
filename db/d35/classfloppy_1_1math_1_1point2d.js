@@ -2,6 +2,7 @@ var classfloppy_1_1math_1_1point2d =
 [
     [ "unit", "db/d35/classfloppy_1_1math_1_1point2d.html#afa2a121b54048696c085ef8c66ac8a01", null ],
     [ "underlying_type", "db/d35/classfloppy_1_1math_1_1point2d.html#a093738e9be246ac547e6ae2478ba5918", null ],
+    [ "size2d_type", "db/d35/classfloppy_1_1math_1_1point2d.html#aab0e701834565c70db663a021e25b1a5", null ],
     [ "point2d", "db/d35/classfloppy_1_1math_1_1point2d.html#a8309f6a91b9a3bf1e60930642489704f", null ],
     [ "point2d", "db/d35/classfloppy_1_1math_1_1point2d.html#a16bbdbedf42cefcd52ec57f4f3ff4877", null ],
     [ "point2d", "db/d35/classfloppy_1_1math_1_1point2d.html#a91a37668f4a2c0f0e5d90c575a816a7c", null ],

@@ -1,5 +1,6 @@
 var namespacefloppy_1_1concepts =
 [
+    [ "any_of", "df/da9/conceptfloppy_1_1concepts_1_1any__of.html", null ],
     [ "num", "da/d12/conceptfloppy_1_1concepts_1_1num.html", null ],
     [ "array", "d4/d90/conceptfloppy_1_1concepts_1_1array.html", null ],
     [ "object", "d0/d4a/conceptfloppy_1_1concepts_1_1object.html", null ],
