@@ -1,5 +1,9 @@
 var NAVTREEINDEX4 =
 {
+"dd/d50/serialization_8h_source.html":[4,0,0,0,8],
+"dd/d72/namespacefloppy_1_1types.html":[1,0,0,11],
+"dd/d72/namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef":[1,0,0,11,4],
+"dd/d72/namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef":[1,0,0,23],
 "dd/d72/namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574":[1,0,0,22],
 "dd/d72/namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574":[1,0,0,11,3],
 "dd/d72/namespacefloppy_1_1types.html#a5b788689cac7bc0f3b593775123aaaee":[1,0,0,11,14],

@@ -2,7 +2,7 @@ var searchData=
 [
   ['file_5fname_0',['file_name',['../d5/d44/structfloppy_1_1source__location.html#a8f1c9c6c6060cef15dda6a2ef11384d2',1,'floppy::source_location']]],
   ['floor_1',['floor',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a268fe695c2e75966b7a0adbeba14f083',1,'floppy::math::detail::basic_two_dimensional_type']]],
-  ['from_5fangle_5fand_5flength_2',['from_angle_and_length',['../d4/d33/classfloppy_1_1math_1_1vector2d.html#a9a3fe9594fbed506f4d9e441692ddada',1,'floppy::math::vector2d']]],
+  ['from_5fangle_5fand_5flength_2',['from_angle_and_length',['../d4/d33/classfloppy_1_1math_1_1vector2d.html#aa0da598c02ca95ee6ada4ece960dd9be',1,'floppy::math::vector2d']]],
   ['from_5farray_3',['from_array',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#aca72a4461756e412508447537c9d1443',1,'floppy::math::detail::basic_two_dimensional_type']]],
   ['from_5fdegrees_4',['from_degrees',['../de/d4d/structfloppy_1_1math_1_1angle.html#acb086a1a839db1bd34fc99ec22c8431e',1,'floppy::math::angle']]],
   ['from_5flengths_5',['from_lengths',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#aaca5c75ae78b6c53d27cf63cd944ff62',1,'floppy::math::detail::basic_two_dimensional_type']]],

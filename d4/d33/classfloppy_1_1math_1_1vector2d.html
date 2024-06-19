@@ -179,12 +179,12 @@ requires (not std::is_same_v&lt;U, U2&gt;)</td></tr>
 <tr class="separator:a7384120780d14f09285449e790fe47a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4141495640ca988d4c67960a327f3987" id="r_a4141495640ca988d4c67960a327f3987"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4141495640ca988d4c67960a327f3987">vector2d</a> (<a class="el" href="#a159ca4449ff1a5219706225f27e464f4">angle_type</a> <a class="el" href="../../de/d4d/structfloppy_1_1math_1_1angle.html">angle</a>, <a class="el" href="#ad44f903f12ca849c1e42d024a10de5bd">length_type</a> <a class="el" href="../../dd/dd1/classfloppy_1_1math_1_1length.html">length</a>)</td></tr>
 <tr class="separator:a4141495640ca988d4c67960a327f3987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7738a303eb830c494dc9f86896fda8e" id="r_ad7738a303eb830c494dc9f86896fda8e"><td class="memTemplParams" colspan="2">template&lt;concepts::num U2&gt; </td></tr>
-<tr class="memitem:ad7738a303eb830c494dc9f86896fda8e"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad7738a303eb830c494dc9f86896fda8e">map</a> (std::function&lt; U2(U)&gt; fn) const</td></tr>
-<tr class="separator:ad7738a303eb830c494dc9f86896fda8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5018a9b589c3a792c146ffc0f38848e" id="r_aa5018a9b589c3a792c146ffc0f38848e"><td class="memTemplParams" colspan="2">template&lt;concepts::num U2&gt; </td></tr>
-<tr class="memitem:aa5018a9b589c3a792c146ffc0f38848e"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa5018a9b589c3a792c146ffc0f38848e">zip</a> (<a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a>&lt; <a class="el" href="#a7b8314ff8d4c191b672593c4214f6d63">unit_type</a>, U2 &gt; const &amp;other, std::function&lt; U2(U, U2)&gt; fn) const</td></tr>
-<tr class="separator:aa5018a9b589c3a792c146ffc0f38848e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9dd348d29b48f5544b5b1fb6f551f63" id="r_aa9dd348d29b48f5544b5b1fb6f551f63"><td class="memTemplParams" colspan="2">template&lt;std::invocable&lt; <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> &gt; F&gt; </td></tr>
+<tr class="memitem:aa9dd348d29b48f5544b5b1fb6f551f63"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa9dd348d29b48f5544b5b1fb6f551f63">map</a> (F &amp;&amp;fn) const</td></tr>
+<tr class="separator:aa9dd348d29b48f5544b5b1fb6f551f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a587f96b7214a9036ea71c4a0fa2876" id="r_a4a587f96b7214a9036ea71c4a0fa2876"><td class="memTemplParams" colspan="2">template&lt;std::invocable&lt; <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a>, <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> &gt; F&gt; </td></tr>
+<tr class="memitem:a4a587f96b7214a9036ea71c4a0fa2876"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4a587f96b7214a9036ea71c4a0fa2876">zip</a> (<a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a> const &amp;other, F &amp;&amp;fn) const -&gt; <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a>&lt; <a class="el" href="#a7b8314ff8d4c191b672593c4214f6d63">unit_type</a>, decltype(fn(this-&gt;<a class="el" href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a441c4ade3c9551750efba0d1ac6eaf94">x</a>(), other.x()))&gt;</td></tr>
+<tr class="separator:a4a587f96b7214a9036ea71c4a0fa2876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bcc32294a1de845431fc597dc25967e" id="r_a8bcc32294a1de845431fc597dc25967e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bcc32294a1de845431fc597dc25967e">to_size2d</a> () const</td></tr>
 <tr class="separator:a8bcc32294a1de845431fc597dc25967e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afecc21081f1897b20615bfb6890f2141" id="r_afecc21081f1897b20615bfb6890f2141"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afecc21081f1897b20615bfb6890f2141">to_point2d</a> () const</td></tr>
@@ -326,10 +326,10 @@ requires (not std::is_same_v&lt;U, U2&gt;)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a8251d0051470489a585612a3c4cf821f" id="r_a8251d0051470489a585612a3c4cf821f"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8251d0051470489a585612a3c4cf821f">one</a> ()</td></tr>
-<tr class="separator:a8251d0051470489a585612a3c4cf821f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a3fe9594fbed506f4d9e441692ddada" id="r_a9a3fe9594fbed506f4d9e441692ddada"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a3fe9594fbed506f4d9e441692ddada">from_angle_and_length</a> (<a class="el" href="#a159ca4449ff1a5219706225f27e464f4">angle_type</a> <a class="el" href="../../de/d4d/structfloppy_1_1math_1_1angle.html">angle</a>, <a class="el" href="#ad44f903f12ca849c1e42d024a10de5bd">length_type</a> <a class="el" href="../../dd/dd1/classfloppy_1_1math_1_1length.html">length</a>)</td></tr>
-<tr class="separator:a9a3fe9594fbed506f4d9e441692ddada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46769f67938fbabfd5b913e9158c4297" id="r_a46769f67938fbabfd5b913e9158c4297"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46769f67938fbabfd5b913e9158c4297">one</a> () -&gt; <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a></td></tr>
+<tr class="separator:a46769f67938fbabfd5b913e9158c4297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0da598c02ca95ee6ada4ece960dd9be" id="r_aa0da598c02ca95ee6ada4ece960dd9be"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0da598c02ca95ee6ada4ece960dd9be">from_angle_and_length</a> (<a class="el" href="#a159ca4449ff1a5219706225f27e464f4">angle_type</a> <a class="el" href="../../de/d4d/structfloppy_1_1math_1_1angle.html">angle</a>, <a class="el" href="#ad44f903f12ca849c1e42d024a10de5bd">length_type</a> <a class="el" href="../../dd/dd1/classfloppy_1_1math_1_1length.html">length</a>) -&gt; <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a></td></tr>
+<tr class="separator:aa0da598c02ca95ee6ada4ece960dd9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2052dbb4c5756b0f95b82e836a17570c" id="r_a2052dbb4c5756b0f95b82e836a17570c"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2052dbb4c5756b0f95b82e836a17570c">from_qvector2d</a> (QVector2D const &amp;other) -&gt; <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a></td></tr>
 <tr class="separator:a2052dbb4c5756b0f95b82e836a17570c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fbd62b53a93846defa3052cb19d8678" id="r_a0fbd62b53a93846defa3052cb19d8678"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a0fbd62b53a93846defa3052cb19d8678">zero</a> () -&gt; T</td></tr>
@@ -372,7 +372,7 @@ class floppy::math::vector2d&lt; U, T &gt;</div><p>A two-dimensional vector tagg
 <dd>
 <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">floppy::math::point2d</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00032">32</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00030">30</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a7b8314ff8d4c191b672593c4214f6d63" name="a7b8314ff8d4c191b672593c4214f6d63"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7b8314ff8d4c191b672593c4214f6d63">&#9670;&#160;</a></span>unit_type</h2>
@@ -390,7 +390,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Associated unit type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00036">36</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00034">34</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -410,7 +410,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Underlying number type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00039">39</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00037">37</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -430,7 +430,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Associated <a class="el" href="../../d0/d22/classfloppy_1_1math_1_1size2d.html" title="A two-dimensional size2d tagged with a unit.">size2d</a> type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00042">42</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00040">40</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -450,7 +450,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Associated angle type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00045">45</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00043">43</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -470,7 +470,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Associated length type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00048">48</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00046">46</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -530,7 +530,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Constructs new vector with zero coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00051">51</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00049">49</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -572,7 +572,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00056">56</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00054">54</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -614,7 +614,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00061">61</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00059">59</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -651,7 +651,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00065">65</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00063">63</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -691,7 +691,7 @@ requires (not std::is_same_v&lt;U, U2&gt;)</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00071">71</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00069">69</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -728,7 +728,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00075">75</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00073">73</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -765,7 +765,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00079">79</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00077">77</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -807,7 +807,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00086">86</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00084">84</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -845,20 +845,20 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>This constructor is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00330">330</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00328">328</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad7738a303eb830c494dc9f86896fda8e" name="ad7738a303eb830c494dc9f86896fda8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7738a303eb830c494dc9f86896fda8e">&#9670;&#160;</a></span>map()</h2>
+<a id="aa9dd348d29b48f5544b5b1fb6f551f63" name="aa9dd348d29b48f5544b5b1fb6f551f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9dd348d29b48f5544b5b1fb6f551f63">&#9670;&#160;</a></span>map()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <div class="memtemplate">
-template&lt;concepts::num U2&gt; </div>
+template&lt;std::invocable&lt; <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> &gt; F&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -866,7 +866,7 @@ template&lt;concepts::num U2&gt; </div>
         <tr>
           <td class="memname">constexpr auto map </td>
           <td>(</td>
-          <td class="paramtype">std::function&lt; U2(U)&gt;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td class="paramtype">F &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -880,7 +880,7 @@ template&lt;concepts::num U2&gt; </div>
 <p>Applies the function <b>fn</b> to each component of the <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">U2</td><td>The new <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>'s numeric scalar type. </td></tr>
+    <tr><td class="paramname">F</td><td>The type of function to apply. </td></tr>
   </table>
   </dd>
 </dl>
@@ -891,19 +891,19 @@ template&lt;concepts::num U2&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00094">94</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00092">92</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
-<a id="aa5018a9b589c3a792c146ffc0f38848e" name="aa5018a9b589c3a792c146ffc0f38848e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5018a9b589c3a792c146ffc0f38848e">&#9670;&#160;</a></span>zip()</h2>
+<a id="a4a587f96b7214a9036ea71c4a0fa2876" name="a4a587f96b7214a9036ea71c4a0fa2876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a587f96b7214a9036ea71c4a0fa2876">&#9670;&#160;</a></span>zip()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <div class="memtemplate">
-template&lt;concepts::num U2&gt; </div>
+template&lt;std::invocable&lt; <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a>, <a class="el" href="#a093738e9be246ac547e6ae2478ba5918">underlying_type</a> &gt; F&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -911,12 +911,12 @@ template&lt;concepts::num U2&gt; </div>
         <tr>
           <td class="memname">constexpr auto zip </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a>&lt; <a class="el" href="#a7b8314ff8d4c191b672593c4214f6d63">unit_type</a>, U2 &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a>&lt; U, T &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::function&lt; U2(U, U2)&gt;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span>&#160;) const</td>
+          <td class="paramtype">F &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span>&#160;) const -&gt; <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a>&lt;<a class="el" href="#a7b8314ff8d4c191b672593c4214f6d63">unit_type</a>, decltype(fn(this-&gt;<a class="el" href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a441c4ade3c9551750efba0d1ac6eaf94">x</a>(), other.x()))&gt; </td>
         </tr>
       </table>
   </td>
@@ -926,22 +926,22 @@ template&lt;concepts::num U2&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Applies the function <b>fn</b> to each pair of components of this vector and <em>other</em> vector. </p>
+<p>Applies the function <b>fn</b> to each component of this <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a> and the other <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">U2</td><td>The new <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>'s numeric scalar type. </td></tr>
+    <tr><td class="paramname">F</td><td>The type of function to apply. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>The other vector. </td></tr>
+    <tr><td class="paramname">other</td><td>The other <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a> to apply. </td></tr>
     <tr><td class="paramname">fn</td><td>The function to apply. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00103">103</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00101">101</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -973,7 +973,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <p>Casts this vector to a <a class="el" href="../../d0/d22/classfloppy_1_1math_1_1size2d.html" title="A two-dimensional size2d tagged with a unit.">size2d</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="../../d0/d22/classfloppy_1_1math_1_1size2d.html" title="A two-dimensional size2d tagged with a unit.">size2d</a> representation of this vector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00111">111</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00109">109</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1005,7 +1005,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <p>Casts this vector to a <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="../../db/d35/classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">point2d</a> representation of this vector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00115">115</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00113">113</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1036,7 +1036,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Drops the units from the vector, returning just the numeric scalar values. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00118">118</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00116">116</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1068,7 +1068,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <p>Returns this vector3d's length as scalar value. </p>
 <dl class="section return"><dt>Returns</dt><dd>The length of this vector3d. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00126">126</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00124">124</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1100,7 +1100,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <p>Returns this vector3d's length in associated <em>unit</em>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The length of this vector3d in <em>unit</em>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00132">132</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00130">130</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1132,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <p>Returns this vector3d's length squared. </p>
 <dl class="section return"><dt>Returns</dt><dd>The length squared of this vector3d. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00138">138</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00136">136</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1171,7 +1171,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>The projection of this vector onto the other vector. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Projecting onto a zero vector will result in a division by zero. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00146">146</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00144">144</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1209,7 +1209,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The signed angle between this vector and the other vector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00153">153</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00151">151</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1241,7 +1241,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <p>Returns the signed angle between this vector and the x axis. </p>
 <p>Positive values counted counterclockwise, where 0 is <code>+x</code> axis, and <code>PI/2</code> is <code>+y</code> axis. </p><dl class="section return"><dt>Returns</dt><dd>The signed angle between this vector and the x axis. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00161">161</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00159">159</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1273,7 +1273,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <p>Returns the vector with length normalized. </p>
 <dl class="section return"><dt>Returns</dt><dd>The normalized vector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00167">167</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00165">165</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1311,7 +1311,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The scaled vector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00172">172</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00170">170</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1349,7 +1349,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The reflection vector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00177">177</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00175">175</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1389,7 +1389,7 @@ template&lt;typename U2 &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a> with the new unit of measurement and the same value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00185">185</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00183">183</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1429,7 +1429,7 @@ template&lt;concepts::num T2&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a> with the new number type and the same value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00193">193</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00191">191</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1460,7 +1460,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>f32</code> <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00198">198</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00196">196</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1491,7 +1491,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>f64</code> <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00203">203</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00201">201</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1522,7 +1522,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>u32</code> <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00208">208</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00206">206</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1553,7 +1553,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>u64</code> <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00213">213</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00211">211</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1584,7 +1584,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>usize</code> <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00218">218</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00216">216</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1615,7 +1615,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>i32</code> <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00223">223</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00221">221</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1646,7 +1646,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>i64</code> <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00228">228</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00226">226</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1677,7 +1677,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Casts into <code>isize</code> <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00233">233</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00231">231</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1709,12 +1709,12 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <p>Casts this <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">vector2d</a> into <code>QVector2D</code>. </p>
 <dl class="section remark"><dt>Remarks</dt><dd>This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00240">240</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00238">238</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
-<a id="a8251d0051470489a585612a3c4cf821f" name="a8251d0051470489a585612a3c4cf821f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8251d0051470489a585612a3c4cf821f">&#9670;&#160;</a></span>one()</h2>
+<a id="a46769f67938fbabfd5b913e9158c4297" name="a46769f67938fbabfd5b913e9158c4297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46769f67938fbabfd5b913e9158c4297">&#9670;&#160;</a></span>one()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1725,10 +1725,10 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a> one </td>
+          <td class="memname">static constexpr auto one </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td></td>
+          <td> -&gt; <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a> </td>
         </tr>
       </table>
   </td>
@@ -1740,12 +1740,12 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 
 <p>Constructs new vector with all values set to one. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00244">244</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00242">242</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
-<a id="a9a3fe9594fbed506f4d9e441692ddada" name="a9a3fe9594fbed506f4d9e441692ddada"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a3fe9594fbed506f4d9e441692ddada">&#9670;&#160;</a></span>from_angle_and_length()</h2>
+<a id="aa0da598c02ca95ee6ada4ece960dd9be" name="aa0da598c02ca95ee6ada4ece960dd9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0da598c02ca95ee6ada4ece960dd9be">&#9670;&#160;</a></span>from_angle_and_length()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1756,14 +1756,14 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a> from_angle_and_length </td>
+          <td class="memname">static constexpr auto from_angle_and_length </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a159ca4449ff1a5219706225f27e464f4">angle_type</a></td>          <td class="paramname"><span class="paramname"><em>angle</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#ad44f903f12ca849c1e42d024a10de5bd">length_type</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#ad44f903f12ca849c1e42d024a10de5bd">length_type</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;) -&gt; <a class="el" href="../../d4/d33/classfloppy_1_1math_1_1vector2d.html">vector2d</a> </td>
         </tr>
       </table>
   </td>
@@ -1782,7 +1782,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00249">249</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00247">247</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1811,7 +1811,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00253">253</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00251">251</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1840,7 +1840,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00254">254</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00252">252</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1869,7 +1869,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00256">256</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00254">254</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1898,7 +1898,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00261">261</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00259">259</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1929,7 +1929,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="../../d4/d33/classfloppy_1_
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00267">267</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00265">265</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1960,7 +1960,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="../../d4/d33/classfloppy_1_
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00272">272</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00270">270</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -1989,7 +1989,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00276">276</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00274">274</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -2020,7 +2020,7 @@ template&lt;typename U2 , concepts::num T2&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00281">281</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00279">279</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -2049,7 +2049,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00288">288</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00286">286</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -2080,7 +2080,7 @@ template&lt;typename U2 , concepts::num T2&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00293">293</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00291">291</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -2111,7 +2111,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="../../d4/d33/classfloppy_1_
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00301">301</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00299">299</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -2142,7 +2142,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="../../d4/d33/classfloppy_1_
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00308">308</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00306">306</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -2171,7 +2171,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00314">314</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00312">312</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -2200,7 +2200,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00320">320</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00318">318</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
@@ -2238,7 +2238,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00335">335</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dab/vector2d_8h_source.html#l00333">333</a> of file <a class="el" href="../../d1/dab/vector2d_8h_source.html">vector2d.h</a>.</p>
 
 </div>
 </div>
