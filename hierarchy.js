@@ -3,9 +3,17 @@ var hierarchy =
     [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", null ],
     [ "configuration_file< F, T >", "dc/d2c/classfloppy_1_1configuration__file.html", null ],
     [ "default_comparable< T >", "d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html", [
-      [ "angle< T >", "de/d4d/structfloppy_1_1math_1_1angle.html", null ],
-      [ "length< U, T >", "dd/dd1/classfloppy_1_1math_1_1length.html", null ],
-      [ "scale< S, D, T >", "db/db2/structfloppy_1_1math_1_1scale.html", null ]
+      [ "basic_numeric_newtype< angle< f32 >, U >", "d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", null ],
+      [ "basic_numeric_newtype< length< default_unit, f32 >, f32 >", "d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", null ],
+      [ "basic_numeric_newtype< scale< S, D, f32 >, f32 >", "d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", null ],
+      [ "basic_numeric_newtype< T, U >", "d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", [
+        [ "advanced_numeric_type< angle< f32 >, f32 >", "d8/d97/structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html", null ],
+        [ "advanced_numeric_type< T, U >", "d8/d97/structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html", [
+          [ "angle< T >", "de/d4d/structfloppy_1_1math_1_1angle.html", null ]
+        ] ],
+        [ "length< U, T >", "dd/dd1/classfloppy_1_1math_1_1length.html", null ],
+        [ "scale< S, D, T >", "db/db2/structfloppy_1_1math_1_1scale.html", null ]
+      ] ]
     ] ],
     [ "default_comparable< angle< f32 > >", "d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html", null ],
     [ "default_comparable< length< default_unit, f32 > >", "d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html", null ],

@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['bfin_0',['bfin',['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6aa531881387431839217936743c4bcd98',1,'floppy::platform']]],
-  ['big_1',['big',['../d6/d7f/classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637ad861877da56b8b4ceb35c8cbfdf65bb4',1,'floppy::platform']]],
-  ['borland_2',['borland',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca3c7f77cc43338e14824c111671beef30',1,'floppy::platform']]],
-  ['bson_3',['bson',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181eba0b6879b186bfb2b1ec65d2460e4eccd4',1,'floppy::serialization']]]
+  ['basic_5fnumeric_5fnewtype_0',['basic_numeric_newtype',['../d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html',1,'basic_numeric_newtype&lt; T, U &gt;'],['../d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#ae8ab78bd95330a71a2a077ac2ef65036',1,'floppy::math::detail::basic_numeric_newtype::basic_numeric_newtype()'],['../d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#ab2363877463a89fb41209e33c55e6522',1,'floppy::math::detail::basic_numeric_newtype::basic_numeric_newtype(underlying_type value)'],['../d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a7f2366bfb50a7ce49a80547740d8b2ce',1,'floppy::math::detail::basic_numeric_newtype::basic_numeric_newtype(basic_numeric_newtype const &amp;)=default'],['../d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#aaa2695128ac6e3624d46bbf5ddd42b35',1,'floppy::math::detail::basic_numeric_newtype::basic_numeric_newtype(basic_numeric_newtype &amp;&amp;)=default']]],
+  ['basic_5fnumeric_5fnewtype_3c_20angle_3c_20f32_20_3e_2c_20u_20_3e_1',['basic_numeric_newtype&lt; angle&lt; f32 &gt;, U &gt;',['../d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html',1,'floppy::math::detail']]],
+  ['basic_5fnumeric_5fnewtype_3c_20length_3c_20default_5funit_2c_20f32_20_3e_2c_20f32_20_3e_2',['basic_numeric_newtype&lt; length&lt; default_unit, f32 &gt;, f32 &gt;',['../d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html',1,'floppy::math::detail']]],
+  ['basic_5fnumeric_5fnewtype_3c_20scale_3c_20s_2c_20d_2c_20f32_20_3e_2c_20f32_20_3e_3',['basic_numeric_newtype&lt; scale&lt; S, D, f32 &gt;, f32 &gt;',['../d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html',1,'floppy::math::detail']]],
+  ['bfin_4',['bfin',['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6aa531881387431839217936743c4bcd98',1,'floppy::platform']]],
+  ['big_5',['big',['../d6/d7f/classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637ad861877da56b8b4ceb35c8cbfdf65bb4',1,'floppy::platform']]],
+  ['borland_6',['borland',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca3c7f77cc43338e14824c111671beef30',1,'floppy::platform']]],
+  ['bson_7',['bson',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181eba0b6879b186bfb2b1ec65d2460e4eccd4',1,'floppy::serialization']]]
 ];

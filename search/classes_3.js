@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['formattable_0',['formattable',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
-  ['formattable_3c_20angle_3c_20f32_20_3e_2c_20char_20_3e_1',['formattable&lt; angle&lt; f32 &gt;, char &gt;',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
-  ['formattable_3c_20length_3c_20default_5funit_2c_20f32_20_3e_2c_20char_20_3e_2',['formattable&lt; length&lt; default_unit, f32 &gt;, char &gt;',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
-  ['formattable_3c_20scale_3c_20s_2c_20d_2c_20f32_20_3e_2c_20char_20_3e_3',['formattable&lt; scale&lt; S, D, f32 &gt;, char &gt;',['../db/d59/structfloppy_1_1traits_1_1formattable.html',1,'floppy::traits']]],
-  ['formattable_5fbase_4',['formattable_base',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html',1,'floppy::traits::detail']]],
-  ['formattable_5fbase_3c_20char_20_3e_5',['formattable_base&lt; char &gt;',['../d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html',1,'floppy::traits::detail']]],
-  ['formatter_3c_20floppy_3a_3asource_5flocation_20_3e_6',['formatter&lt; floppy::source_location &gt;',['../db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html',1,'fmt']]],
-  ['formatter_3c_20t_20_3e_7',['formatter&lt; T &gt;',['../d6/dc7/structfmt_1_1formatter_3_01T_01_4.html',1,'fmt']]]
+  ['default_5fcomparable_0',['default_comparable',['../d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html',1,'floppy::math::detail']]],
+  ['default_5fcomparable_3c_20angle_3c_20f32_20_3e_20_3e_1',['default_comparable&lt; angle&lt; f32 &gt; &gt;',['../d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html',1,'floppy::math::detail']]],
+  ['default_5fcomparable_3c_20length_3c_20default_5funit_2c_20f32_20_3e_20_3e_2',['default_comparable&lt; length&lt; default_unit, f32 &gt; &gt;',['../d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html',1,'floppy::math::detail']]],
+  ['default_5fcomparable_3c_20scale_3c_20s_2c_20d_2c_20f32_20_3e_20_3e_3',['default_comparable&lt; scale&lt; S, D, f32 &gt; &gt;',['../d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html',1,'floppy::math::detail']]],
+  ['default_5funit_4',['default_unit',['../d5/ddf/namespacefloppy_1_1math.html#d4/d45/structfloppy_1_1math_1_1default__unit',1,'floppy::math']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['name_0',['name',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#a1f67d5b82fcb2d90d2fc88fa40125b1a',1,'floppy::meta::project_meta']]],
-  ['narrow_5fcast_1',['narrow_cast',['../d3/d05/namespacefloppy.html#a0bbd17556e1675c4a05316d9f6743342',1,'floppy']]]
+  ['major_0',['major',['../d9/dbf/classfloppy_1_1meta_1_1version.html#a25907698935989d16bdd51b423c5e55d',1,'floppy::meta::version']]],
+  ['minor_1',['minor',['../d9/dbf/classfloppy_1_1meta_1_1version.html#ae2b369982055499f81987d9229ea2807',1,'floppy::meta::version']]]
 ];

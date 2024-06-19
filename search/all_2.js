@@ -2,7 +2,7 @@ var searchData=
 [
   ['cache_0',['cache',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a0fea6a13c52b4d4725368f24b045ca84',1,'floppy::filesystem::application_dirs']]],
   ['cache_5fdir_1',['cache_dir',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a48ed75f5a0bd9457f373ed99d9e39d40',1,'floppy::filesystem::application_dirs']]],
-  ['cast_2',['cast',['../de/d4d/structfloppy_1_1math_1_1angle.html#a9335066d12bc690f95c8479c853853d4',1,'floppy::math::angle::cast()'],['../dd/dd1/classfloppy_1_1math_1_1length.html#a999bc22c6dda4183df505aaa03ee3b2a',1,'floppy::math::length::cast() const -&gt; length&lt; U, T2 &gt;']]],
+  ['cast_2',['cast',['../dd/dd1/classfloppy_1_1math_1_1length.html#a999bc22c6dda4183df505aaa03ee3b2a',1,'floppy::math::length']]],
   ['cast_5funit_3',['cast_unit',['../dd/dd1/classfloppy_1_1math_1_1length.html#acceeec95c576d3f27c880c673384eb4b',1,'floppy::math::length']]],
   ['cbor_4',['cbor',['../d0/da9/namespacefloppy_1_1serialization.html#a387137c43ed9616d39ba90e890d181ebaaf9de350d652f0c9055ddab514bd23ea',1,'floppy::serialization']]],
   ['changelog_5',['@ref &quot;./CHANGELOG.md&quot; &quot;Changelog&quot;',['../index.html#autotoc_md1',1,'']]],
