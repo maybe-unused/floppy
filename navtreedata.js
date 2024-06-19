@@ -43,7 +43,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
@@ -59,9 +59,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html",
-"d7/da6/conceptfloppy_1_1serialization_1_1serializable.html",
-"dc/d2c/classfloppy_1_1configuration__file.html#a8a9d6c204de1b0e268bca4dcf2f74488"
+"d5/d44/structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644",
+"d6/d7f/classfloppy_1_1platform.html#afcee39ad85bc97c977cc1c3f6a95ec7a",
+"dc/d2c/classfloppy_1_1configuration__file.html",
+"functions_y.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
