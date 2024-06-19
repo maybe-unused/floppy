@@ -24,6 +24,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
   /// \brief Metadata definitions, such as library version or name.
   namespace meta {
     namespace detail {
+      // todo: this must be rewritten
       constexpr auto is_digit(char c) -> bool { return c <= '9' && c >= '0'; }
       constexpr auto stoi_impl(char const* str, int value = 0) -> int {
         return *str ? is_digit(*str)
@@ -132,7 +133,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     [[maybe_unused]] constexpr inline auto floppy_meta = project_meta(
       version(CMAKE_PROJECT_VERSION_MAJOR, CMAKE_PROJECT_VERSION_MINOR, CMAKE_PROJECT_VERSION_PATCH),
       std::string_view(stringify$(CMAKE_TARGET_NAME)),
-      "io",
+      "io.github.whs31",
       "whs31"
     );
 
@@ -140,7 +141,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     static_assert(floppy_meta.version().minor() == CMAKE_PROJECT_VERSION_MINOR, "minor version isn't the same");
     static_assert(floppy_meta.version().patch() == CMAKE_PROJECT_VERSION_PATCH, "patch version isn't the same");
     static_assert(floppy_meta.name() == std::string_view(stringify$(CMAKE_TARGET_NAME)), "project name isn't the same");
-    static_assert(floppy_meta.domain() == "io", "project domain isn't the same");
+    static_assert(floppy_meta.domain() == "io.github.whs31", "project domain isn't the same");
     static_assert(floppy_meta.organization() == "whs31", "project organization isn't the same");
   } // namespace meta
 } // namespace floppy
@@ -150,3 +151,15 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
 
 /// \brief Alias for the main namespace \ref floppy.
 namespace fl = floppy; // NOLINT(*-unused-alias-decls)
+
+#if defined(QT_CORE_LIB) || __has_include("qtglobal.h") || __has_include("qcoreapplication.h")
+# define FL_QT_CORE
+#endif
+
+#if defined(QT_GUI_LIB) || __has_include("qpainter.h") || __has_include("qguiapplication.h")
+# define FL_QT_GUI
+#endif
+
+#if defined(DOXYGEN_GENERATING_OUTPUT)
+# define FL_DOC
+#endif

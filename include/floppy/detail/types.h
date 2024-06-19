@@ -54,7 +54,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \brief Shortcut for <tt>std::reference_wrapper</tt>.
     template <typename T>
     using ref = std::reference_wrapper<T>;
-  }
+  } // namespace types
 
   /// \brief Inline namespace for literal operators.
   inline namespace literals
@@ -114,5 +114,5 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     inline auto operator""_pvoid(unsigned long long value) -> void* { return reinterpret_cast<void*>(value); }
 
     // NOLINTEND(*-pro-type-reinterpret-cast, *-no-int-to-ptr)
-  }
+  } // namespace literals
 } // namespace floppy

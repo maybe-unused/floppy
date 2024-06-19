@@ -3,6 +3,11 @@ from conan import ConanFile
 from conan.tools.cmake import CMake, CMakeToolchain, cmake_layout, CMakeDeps
 from conan.tools.build import check_min_cppstd
 from conan.tools.files import rmdir
+try:
+    from termcolor import colored
+except ImportError:
+    def colored(text, color, on_color=None, attrs=None):
+        return text
 
 
 class FloppyRecipe(ConanFile):

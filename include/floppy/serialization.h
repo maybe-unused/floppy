@@ -8,7 +8,7 @@
 namespace floppy::serialization
 {
   /// \brief Supported serialization formats.
-  enum class format
+  enum class format : u8
   {
     json,         ///< JSON format (JavaScript Object Notation)
     bson,         ///< JSON-like binary format

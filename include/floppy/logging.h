@@ -11,7 +11,7 @@ namespace floppy::log {
   /// \brief Logging levels.
   namespace level {
     using namespace spdlog::level;
-  } // namespace lvl
+  } // namespace level
 
   /// \brief Logs message to given loger with level <b>trace</b>.
   /// \tparam Args Format arguments.
@@ -161,4 +161,4 @@ namespace floppy::log {
   auto log(level::level_enum level, fmt::format_string<Args...> const& fmt, Args&&... args) -> void {
     log_to(level, *spdlog::default_logger(), fmt, std::forward<Args>(args)...);
   }
-} // namespace floppy::logging
+} // namespace floppy::log

@@ -32,7 +32,7 @@ namespace floppy::print_helpers
       fmt::format(fmt::runtime(format), std::forward<Args>(args)...)
     );
   }
-}
+} // namespace floppy::print_helpers
 
 /// \defgroup macros Macros
 
