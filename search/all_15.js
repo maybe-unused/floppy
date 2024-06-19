@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['valid_0',['valid',['../dc/d2c/classfloppy_1_1configuration__file.html#abc64ee47a063e9848f08717d8131ac8a',1,'floppy::configuration_file']]],
-  ['value_1',['value',['../d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a45763e8ce16b80133e458093ada0145a',1,'floppy::math::detail::basic_numeric_newtype']]],
-  ['values_2',['values',['../dc/d2c/classfloppy_1_1configuration__file.html#af369edad742b8a6331d16846bb8a2e34',1,'floppy::configuration_file']]],
-  ['values_5fmut_3',['values_mut',['../dc/d2c/classfloppy_1_1configuration__file.html#a79c5539b570fcf78c54acc05ba2623c2',1,'floppy::configuration_file']]],
-  ['version_4',['version',['../d9/dbf/classfloppy_1_1meta_1_1version.html',1,'version'],['../d9/dbf/classfloppy_1_1meta_1_1version.html#aa1911ff476ff2833dfa5e9c58137dfcf',1,'floppy::meta::version::version(int major, int minor, int patch)'],['../d9/dbf/classfloppy_1_1meta_1_1version.html#a55949c3df6c0bb364b5d082ec2055fe9',1,'floppy::meta::version::version(std::string_view version) noexcept'],['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#a5cf0d42ee33556be9f93283b1091460d',1,'floppy::meta::project_meta::version() const noexcept -&gt; version']]],
-  ['version_5f_5',['version_',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html#ae47738023ec1b44099125613d01c05c3',1,'floppy::meta::project_meta']]]
+  ['warn_0',['warn',['../d1/d93/namespacefloppy_1_1log.html#a03e917030c7d8d1409cdab75da7ceecd',1,'floppy::log']]],
+  ['warn_5fto_1',['warn_to',['../d1/d93/namespacefloppy_1_1log.html#a4226f230f8451294f9117d972fc4d015',1,'floppy::log']]],
+  ['watcom_2',['watcom',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca503005b697234be331178bb28f375ce2',1,'floppy::platform']]],
+  ['windows_3',['windows',['../d6/d7f/classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a0f4137ed1502b5045d6083aa258b5c42',1,'floppy::platform']]],
+  ['write_5fto_5ffile_4',['write_to_file',['../dc/d2c/classfloppy_1_1configuration__file.html#ab6e3af11c5997bfec5725512d50867c0',1,'floppy::configuration_file']]]
 ];
