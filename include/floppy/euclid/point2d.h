@@ -9,8 +9,9 @@
 #include <floppy/euclid/size2d.h>
 #include <floppy/euclid/detail/nt_traits2d.h>
 
-// todo: to qpoint
-// todo: to qpointf
+#if defined(FL_QT_GUI)
+# include <qpoint.h>
+#endif
 
 namespace floppy::math
 {
@@ -78,6 +79,19 @@ namespace floppy::math
 
     /// \brief Casts the point into size2d.
     [[nodiscard]] constexpr auto to_size2d() const -> size2d_type { return size2d_type(this->x(), this->y()); }
+
+    #if defined(FL_QT_GUI) || defined(FL_DOC)
+    /// \brief Casts this point2d into <tt>QPoint</tt>.
+    /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    [[nodiscard]] constexpr auto to_qpoint() const -> QPoint {
+      auto const i = this->to_i32();
+      return QPoint(i.x(), i.y());
+    }
+
+    /// \brief Casts this point2d into <tt>QPointF</tt>.
+    /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    [[nodiscard]] constexpr auto to_qpointf() const -> QPointF { return QPointF(this->x(), this->y()); }
+    #endif
 
     /// \brief Casts the unit of measurement.
     /// \tparam U2 New unit of measurement.
