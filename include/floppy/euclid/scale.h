@@ -14,7 +14,7 @@ namespace floppy::math
   struct [[maybe_unused]] default_unit {};
 
   /// \brief A scaling factor between two different units of measurement.
-  /// \headerfile floppy/euclid/scale.h
+  /// \headerfile floppy/euclid/euclid.h
   /// \details This is effectively a type-safe float, intended to be used in combination with other types
   /// like \ref floppy::math::length to enforce conversion between systems of measurement at compile time.
   /// <b>S</b> and <b>D</b> are types representing the units before and after multiplying a value by a scale.

@@ -1,6 +1,5 @@
 #include <gtest/gtest.h>
-#include <floppy/floppy.h>
-#include <floppy/euclid/scale.h>
+#include <floppy/euclid.h>
 
 using fl::math::scale;
 using namespace fl::types;
