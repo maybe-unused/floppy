@@ -195,3 +195,5 @@ namespace floppy
 } // namespace floppy
 
 template <> struct [[maybe_unused]] fmt::formatter<floppy::source_location> : floppy::ostream_formatter<char> {};
+template <> struct [[maybe_unused]] fmt::formatter<floppy::meta::version> : floppy::ostream_formatter<char> {};
+template <> struct [[maybe_unused]] fmt::formatter<floppy::meta::project_meta> : floppy::ostream_formatter<char> {};
