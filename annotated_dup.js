@@ -4,6 +4,9 @@ var annotated_dup =
       [ "filesystem", "d3/d3a/namespacefloppy_1_1filesystem.html", [
         [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs" ]
       ] ],
+      [ "gfx", "d3/d33/namespacefloppy_1_1gfx.html", [
+        [ "color", "de/da8/classfloppy_1_1gfx_1_1color.html", "de/da8/classfloppy_1_1gfx_1_1color" ]
+      ] ],
       [ "math", "d5/ddf/namespacefloppy_1_1math.html", [
         [ "detail", null, [
           [ "number_base", "d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html", null ]

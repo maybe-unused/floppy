@@ -23,9 +23,11 @@ var searchData=
   ['splat_20',['splat',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a64f9ee09d34b61616679129ce72807e7',1,'floppy::math::detail::basic_two_dimensional_type']]],
   ['state_21',['state',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a9ed39e2ea931586b6a985a6942ef573e',1,'floppy::filesystem::application_dirs']]],
   ['state_5fdir_22',['state_dir',['../d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#a021aa8018cecc56780804ca78476a7f3',1,'floppy::filesystem::application_dirs']]],
-  ['string_5fcast_23',['string_cast',['../d3/d05/namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9',1,'floppy::string_cast(T const &amp;t) -&gt; std::string'],['../d3/d05/namespacefloppy.html#ac931da5028dd2811b5d0e93caf0f23d4',1,'floppy::string_cast(T const &amp;t) -&gt; std::string']]],
-  ['strong_5fcompare_24',['strong_compare',['../d5/ddf/namespacefloppy_1_1math.html#a000c8ac590dc1840dda974d4529f08b4',1,'floppy::math']]],
-  ['superh_25',['superh',['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a7073d3fffb222ee7ec5d8f2551638592',1,'floppy::platform']]],
-  ['swap_5fendian_26',['swap_endian',['../d6/d7f/classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32',1,'floppy::platform']]],
-  ['sysz_27',['sysz',['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ab43271928aae50d1357de5ecdf60e1c7',1,'floppy::platform']]]
+  ['str_5fto_5frgb_23',['str_to_rgb',['../da/dec/color_8h.html#a7bc9d70b70ca084ef8a9bddb3c76443e',1,'floppy::gfx::detail']]],
+  ['str_5fto_5frgba_24',['str_to_rgba',['../da/dec/color_8h.html#a902fdbfb01ae3a62fbae64bdd83baa4a',1,'floppy::gfx::detail']]],
+  ['string_5fcast_25',['string_cast',['../d3/d05/namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9',1,'floppy::string_cast(T const &amp;t) -&gt; std::string'],['../d3/d05/namespacefloppy.html#ac931da5028dd2811b5d0e93caf0f23d4',1,'floppy::string_cast(T const &amp;t) -&gt; std::string']]],
+  ['strong_5fcompare_26',['strong_compare',['../d5/ddf/namespacefloppy_1_1math.html#a000c8ac590dc1840dda974d4529f08b4',1,'floppy::math']]],
+  ['superh_27',['superh',['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a7073d3fffb222ee7ec5d8f2551638592',1,'floppy::platform']]],
+  ['swap_5fendian_28',['swap_endian',['../d6/d7f/classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32',1,'floppy::platform']]],
+  ['sysz_29',['sysz',['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ab43271928aae50d1357de5ecdf60e1c7',1,'floppy::platform']]]
 ];

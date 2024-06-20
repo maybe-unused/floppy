@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", null ],
+    [ "color", "de/da8/classfloppy_1_1gfx_1_1color.html", null ],
     [ "configuration_file< F, T >", "dc/d2c/classfloppy_1_1configuration__file.html", null ],
     [ "default_comparable< T >", "d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html", [
       [ "basic_numeric_newtype< angle< f32 >, U >", "d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", null ],
