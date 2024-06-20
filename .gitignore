@@ -37,3 +37,5 @@ target
 
 # DLL exports
 .export
+
+.idea/QtSettings.xml
