@@ -1,6 +1,8 @@
 var hierarchy =
 [
     [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", null ],
+    [ "cmyk", "de/da8/classfloppy_1_1gfx_1_1color.html#d2/d39/structfloppy_1_1gfx_1_1color_1_1cmyk", null ],
+    [ "cmyka", "de/da8/classfloppy_1_1gfx_1_1color.html#db/dbe/structfloppy_1_1gfx_1_1color_1_1cmyka", null ],
     [ "color", "de/da8/classfloppy_1_1gfx_1_1color.html", null ],
     [ "configuration_file< F, T >", "dc/d2c/classfloppy_1_1configuration__file.html", null ],
     [ "default_comparable< T >", "d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html", [
@@ -56,6 +58,10 @@ var hierarchy =
       [ "ostream_formatter< C >", "d4/de5/structfloppy_1_1ostream__formatter.html", null ]
     ] ],
     [ "formatter< T >", "d6/dc7/structfmt_1_1formatter_3_01T_01_4.html", null ],
+    [ "hsl", "de/da8/classfloppy_1_1gfx_1_1color.html#d1/dec/structfloppy_1_1gfx_1_1color_1_1hsl", null ],
+    [ "hsla", "de/da8/classfloppy_1_1gfx_1_1color.html#de/d73/structfloppy_1_1gfx_1_1color_1_1hsla", null ],
+    [ "hsv", "de/da8/classfloppy_1_1gfx_1_1color.html#de/d67/structfloppy_1_1gfx_1_1color_1_1hsv", null ],
+    [ "hsva", "de/da8/classfloppy_1_1gfx_1_1color.html#dd/d42/structfloppy_1_1gfx_1_1color_1_1hsva", null ],
     [ "non_copyable< T >", "d7/d83/structfloppy_1_1traits_1_1non__copyable.html", [
       [ "pin< T >", "d7/dac/structfloppy_1_1traits_1_1pin.html", [
         [ "singleton< T >", "d9/d8a/structfloppy_1_1traits_1_1singleton.html", null ]

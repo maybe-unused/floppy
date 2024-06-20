@@ -63,7 +63,7 @@ var NAVTREEINDEX =
 "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#aec57925e9296d77eff2481f636d1933b",
 "db/d35/classfloppy_1_1math_1_1point2d.html",
 "dc/d2c/classfloppy_1_1configuration__file.html#af982b8422f69b069613327fa141f4323",
-"functions_w.html"
+"functions_func_~.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

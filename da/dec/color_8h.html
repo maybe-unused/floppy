@@ -133,6 +133,7 @@ $(function(){initNavTree('da/dec/color_8h.html','../../'); initResizable(); });
 <code>#include &lt;floppy/detail/math.h&gt;</code><br />
 <code>#include &lt;floppy/detail/formatters.h&gt;</code><br />
 <code>#include &lt;floppy/traits.h&gt;</code><br />
+<code>#include &lt;qcolor.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for color.h:</div>
 <div class="dyncontent">
@@ -145,6 +146,18 @@ Include dependency graph for color.h:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da8/classfloppy_1_1gfx_1_1color.html">color</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d1/dec/structfloppy_1_1gfx_1_1color_1_1hsl" id="r_d1/dec/structfloppy_1_1gfx_1_1color_1_1hsl"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da8/classfloppy_1_1gfx_1_1color.html#d1/dec/structfloppy_1_1gfx_1_1color_1_1hsl">color::hsl</a></td></tr>
+<tr class="separator:d1/dec/structfloppy_1_1gfx_1_1color_1_1hsl"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:de/d73/structfloppy_1_1gfx_1_1color_1_1hsla" id="r_de/d73/structfloppy_1_1gfx_1_1color_1_1hsla"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da8/classfloppy_1_1gfx_1_1color.html#de/d73/structfloppy_1_1gfx_1_1color_1_1hsla">color::hsla</a></td></tr>
+<tr class="separator:de/d73/structfloppy_1_1gfx_1_1color_1_1hsla"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:de/d67/structfloppy_1_1gfx_1_1color_1_1hsv" id="r_de/d67/structfloppy_1_1gfx_1_1color_1_1hsv"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da8/classfloppy_1_1gfx_1_1color.html#de/d67/structfloppy_1_1gfx_1_1color_1_1hsv">color::hsv</a></td></tr>
+<tr class="separator:de/d67/structfloppy_1_1gfx_1_1color_1_1hsv"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dd/d42/structfloppy_1_1gfx_1_1color_1_1hsva" id="r_dd/d42/structfloppy_1_1gfx_1_1color_1_1hsva"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da8/classfloppy_1_1gfx_1_1color.html#dd/d42/structfloppy_1_1gfx_1_1color_1_1hsva">color::hsva</a></td></tr>
+<tr class="separator:dd/d42/structfloppy_1_1gfx_1_1color_1_1hsva"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d2/d39/structfloppy_1_1gfx_1_1color_1_1cmyk" id="r_d2/d39/structfloppy_1_1gfx_1_1color_1_1cmyk"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da8/classfloppy_1_1gfx_1_1color.html#d2/d39/structfloppy_1_1gfx_1_1color_1_1cmyk">color::cmyk</a></td></tr>
+<tr class="separator:d2/d39/structfloppy_1_1gfx_1_1color_1_1cmyk"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:db/dbe/structfloppy_1_1gfx_1_1color_1_1cmyka" id="r_db/dbe/structfloppy_1_1gfx_1_1color_1_1cmyka"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da8/classfloppy_1_1gfx_1_1color.html#db/dbe/structfloppy_1_1gfx_1_1color_1_1cmyka">color::cmyka</a></td></tr>
+<tr class="separator:db/dbe/structfloppy_1_1gfx_1_1color_1_1cmyka"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -184,7 +197,260 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>whs31 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="d1/dec/structfloppy_1_1gfx_1_1color_1_1hsl" id="d1/dec/structfloppy_1_1gfx_1_1color_1_1hsl"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d1/dec/structfloppy_1_1gfx_1_1color_1_1hsl">&#9670;&#160;</a></span>floppy::gfx::color::hsl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct floppy::gfx::color::hsl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00075">75</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="ab1feafe51f4d612286bdd6092669422c" name="ab1feafe51f4d612286bdd6092669422c"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+h = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a558ad47f5209f9b96db099d276ef0308" name="a558ad47f5209f9b96db099d276ef0308"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+s = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a9fe24f92a1a2d780e57fb2939bce41e9" name="a9fe24f92a1a2d780e57fb2939bce41e9"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+l = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="de/d73/structfloppy_1_1gfx_1_1color_1_1hsla" id="de/d73/structfloppy_1_1gfx_1_1color_1_1hsla"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#de/d73/structfloppy_1_1gfx_1_1color_1_1hsla">&#9670;&#160;</a></span>floppy::gfx::color::hsla</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct floppy::gfx::color::hsla</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00082">82</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="ab1feafe51f4d612286bdd6092669422c" name="ab1feafe51f4d612286bdd6092669422c"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+h = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a558ad47f5209f9b96db099d276ef0308" name="a558ad47f5209f9b96db099d276ef0308"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+s = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a9fe24f92a1a2d780e57fb2939bce41e9" name="a9fe24f92a1a2d780e57fb2939bce41e9"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+l = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a54390f11b8bc78e73e909dfb5f55b77c" name="a54390f11b8bc78e73e909dfb5f55b77c"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+a = 1.0F</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="de/d67/structfloppy_1_1gfx_1_1color_1_1hsv" id="de/d67/structfloppy_1_1gfx_1_1color_1_1hsv"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#de/d67/structfloppy_1_1gfx_1_1color_1_1hsv">&#9670;&#160;</a></span>floppy::gfx::color::hsv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct floppy::gfx::color::hsv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00090">90</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="ab1feafe51f4d612286bdd6092669422c" name="ab1feafe51f4d612286bdd6092669422c"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+h = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a558ad47f5209f9b96db099d276ef0308" name="a558ad47f5209f9b96db099d276ef0308"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+s = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a54109eadf651676f62788961e99c2beb" name="a54109eadf651676f62788961e99c2beb"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+v = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="dd/d42/structfloppy_1_1gfx_1_1color_1_1hsva" id="dd/d42/structfloppy_1_1gfx_1_1color_1_1hsva"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#dd/d42/structfloppy_1_1gfx_1_1color_1_1hsva">&#9670;&#160;</a></span>floppy::gfx::color::hsva</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct floppy::gfx::color::hsva</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00097">97</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="ab1feafe51f4d612286bdd6092669422c" name="ab1feafe51f4d612286bdd6092669422c"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+h = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a558ad47f5209f9b96db099d276ef0308" name="a558ad47f5209f9b96db099d276ef0308"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+s = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a54109eadf651676f62788961e99c2beb" name="a54109eadf651676f62788961e99c2beb"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+v = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a54390f11b8bc78e73e909dfb5f55b77c" name="a54390f11b8bc78e73e909dfb5f55b77c"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+a = 1.0F</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="d2/d39/structfloppy_1_1gfx_1_1color_1_1cmyk" id="d2/d39/structfloppy_1_1gfx_1_1color_1_1cmyk"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d2/d39/structfloppy_1_1gfx_1_1color_1_1cmyk">&#9670;&#160;</a></span>floppy::gfx::color::cmyk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct floppy::gfx::color::cmyk</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00105">105</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a7cbbe0fb0d8225481c99d1d7aab8faea" name="a7cbbe0fb0d8225481c99d1d7aab8faea"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+c = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a59c6f0a8b9b9a6c16040cb5ec01b750b" name="a59c6f0a8b9b9a6c16040cb5ec01b750b"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+m = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ab7291adeb8828a0cba3aedf332c2053d" name="ab7291adeb8828a0cba3aedf332c2053d"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+y = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a693c98944c57ea85ecf606421176cb87" name="a693c98944c57ea85ecf606421176cb87"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+k = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="db/dbe/structfloppy_1_1gfx_1_1color_1_1cmyka" id="db/dbe/structfloppy_1_1gfx_1_1color_1_1cmyka"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#db/dbe/structfloppy_1_1gfx_1_1color_1_1cmyka">&#9670;&#160;</a></span>floppy::gfx::color::cmyka</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct floppy::gfx::color::cmyka</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00113">113</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a7cbbe0fb0d8225481c99d1d7aab8faea" name="a7cbbe0fb0d8225481c99d1d7aab8faea"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+c = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a59c6f0a8b9b9a6c16040cb5ec01b750b" name="a59c6f0a8b9b9a6c16040cb5ec01b750b"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+m = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ab7291adeb8828a0cba3aedf332c2053d" name="ab7291adeb8828a0cba3aedf332c2053d"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+y = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a693c98944c57ea85ecf606421176cb87" name="a693c98944c57ea85ecf606421176cb87"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+k = 0.0F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a54390f11b8bc78e73e909dfb5f55b77c" name="a54390f11b8bc78e73e909dfb5f55b77c"></a><a class="el" href="../../dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>
+<td class="fieldname">
+a = 1.0F</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="ab64ba153dfb932095c93e5671cb73c53" name="ab64ba153dfb932095c93e5671cb73c53"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab64ba153dfb932095c93e5671cb73c53">&#9670;&#160;</a></span>hex_to_dec()</h2>
 
@@ -208,7 +474,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00017">17</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00022">22</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
 
 </div>
 </div>
@@ -237,7 +503,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00027">27</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00032">32</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
 
 </div>
 </div>
@@ -275,7 +541,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00029">29</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00034">34</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
 
 </div>
 </div>
@@ -304,7 +570,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00033">33</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00038">38</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
 
 </div>
 </div>
@@ -342,7 +608,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00035">35</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00040">40</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +637,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00039">39</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00044">44</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
 
 </div>
 </div>
@@ -402,7 +668,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00040">40</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00045">45</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
 
 </div>
 </div>
@@ -432,7 +698,7 @@ template&lt;typename T &gt; </div>
 <p>Converts a hex string to an rgb color. </p>
 <dl class="section note"><dt>Note</dt><dd>Assumes the string is 6 characters long. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00044">44</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00049">49</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
 
 </div>
 </div>
@@ -462,7 +728,7 @@ template&lt;typename T &gt; </div>
 <p>Converts a hex string to an rgba color. </p>
 <dl class="section note"><dt>Note</dt><dd>Assumes the string is 8 characters long. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00054">54</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dec/color_8h_source.html#l00059">59</a> of file <a class="el" href="../../da/dec/color_8h_source.html">color.h</a>.</p>
 
 </div>
 </div>
