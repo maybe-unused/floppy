@@ -2,6 +2,8 @@
 
 #include <string>
 #include <string_view>
+#include <iostream>
+#include <fmt/format.h>
 
 #if defined(_WIN32)
 # if defined(FLOPPY_LIBRARY)
@@ -136,6 +138,27 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       "io.github.whs31",
       "whs31"
     );
+
+    /// \brief Stream adaptor for floppy::meta::version
+    template <class E, class T>
+    auto operator<<(std::basic_ostream<E, T>& os, version const& d) -> std::basic_ostream<E, T>& {
+      os << fmt::format("{}.{}.{}", d.major(), d.minor(), d.patch());
+      return os;
+    }
+
+    /// \brief Stream adaptor for floppy::meta::project_meta
+    template <class E, class T>
+    auto operator<<(std::basic_ostream<E, T>& os, project_meta const& d) -> std::basic_ostream<E, T>& {
+      os << fmt::format("{} v. {}.{}.{} (c) {} <{}>",
+        d.name(),
+        d.version().major(),
+        d.version().minor(),
+        d.version().patch(),
+        d.organization(),
+        d.domain()
+      );
+      return os;
+    }
 
     static_assert(floppy_meta.version().major() == CMAKE_PROJECT_VERSION_MAJOR, "major version isn't the same");
     static_assert(floppy_meta.version().minor() == CMAKE_PROJECT_VERSION_MINOR, "minor version isn't the same");
