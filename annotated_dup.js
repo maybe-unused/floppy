@@ -4,9 +4,6 @@ var annotated_dup =
       [ "filesystem", "d3/d3a/namespacefloppy_1_1filesystem.html", [
         [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs" ]
       ] ],
-      [ "gfx", "d3/d33/namespacefloppy_1_1gfx.html", [
-        [ "color", "de/da8/classfloppy_1_1gfx_1_1color.html", "de/da8/classfloppy_1_1gfx_1_1color" ]
-      ] ],
       [ "math", "d5/ddf/namespacefloppy_1_1math.html", [
         [ "detail", null, [
           [ "number_base", "d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html", null ]
@@ -56,6 +53,8 @@ var annotated_dup =
       [ "source_location", "d5/d44/structfloppy_1_1source__location.html", "d5/d44/structfloppy_1_1source__location" ]
     ] ],
     [ "fmt", null, [
+      [ "formatter< floppy::meta::project_meta >", "d2/d87/structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html", null ],
+      [ "formatter< floppy::meta::version >", "d1/de8/structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html", null ],
       [ "formatter< floppy::source_location >", "db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html", null ],
       [ "formatter< T >", "d6/dc7/structfmt_1_1formatter_3_01T_01_4.html", null ]
     ] ]

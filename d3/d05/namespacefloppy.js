@@ -2,7 +2,6 @@ var namespacefloppy =
 [
     [ "concepts", "dc/dda/namespacefloppy_1_1concepts.html", "dc/dda/namespacefloppy_1_1concepts" ],
     [ "filesystem", "d3/d3a/namespacefloppy_1_1filesystem.html", "d3/d3a/namespacefloppy_1_1filesystem" ],
-    [ "gfx", "d3/d33/namespacefloppy_1_1gfx.html", "d3/d33/namespacefloppy_1_1gfx" ],
     [ "literals", "d4/dc3/namespacefloppy_1_1literals.html", [
       [ "operator\"\"_z", "d4/dc3/namespacefloppy_1_1literals.html#ac58595dcf43ef5b63222d4870ab99a0a", null ],
       [ "operator\"\"_Z", "d4/dc3/namespacefloppy_1_1literals.html#aa7b3c64dbeec151bf546fbc7b9fde028", null ],

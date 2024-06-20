@@ -1,8 +1,6 @@
 var hierarchy =
 [
     [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", null ],
-    [ "cmyk_t", "db/d46/structfloppy_1_1gfx_1_1color_1_1cmyk__t.html", null ],
-    [ "cmyka_t", "d0/d56/structfloppy_1_1gfx_1_1color_1_1cmyka__t.html", null ],
     [ "configuration_file< F, T >", "dc/d2c/classfloppy_1_1configuration__file.html", null ],
     [ "default_comparable< T >", "d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html", [
       [ "basic_numeric_newtype< angle< f32 >, U >", "d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", null ],
@@ -27,15 +25,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "formattable_base< C >", "d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html", [
-      [ "formattable< color, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
-        [ "color", "de/da8/classfloppy_1_1gfx_1_1color.html", null ]
-      ] ],
-      [ "formattable< color::hsl_t, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
-        [ "hsl_t", "dc/df5/structfloppy_1_1gfx_1_1color_1_1hsl__t.html", null ]
-      ] ],
-      [ "formattable< color::hsla_t, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
-        [ "hsla_t", "d2/d0e/structfloppy_1_1gfx_1_1color_1_1hsla__t.html", null ]
-      ] ],
       [ "formattable< angle< f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
       [ "formattable< T, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
         [ "basic_two_dimensional_type< T, U, N >", "d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html", [
@@ -61,13 +50,13 @@ var hierarchy =
     [ "formattable_base< char >", "d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html", null ],
     [ "formatter", null, [
       [ "ostream_formatter< char >", "d4/de5/structfloppy_1_1ostream__formatter.html", [
+        [ "formatter< floppy::meta::project_meta >", "d2/d87/structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html", null ],
+        [ "formatter< floppy::meta::version >", "d1/de8/structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html", null ],
         [ "formatter< floppy::source_location >", "db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html", null ]
       ] ],
       [ "ostream_formatter< C >", "d4/de5/structfloppy_1_1ostream__formatter.html", null ]
     ] ],
     [ "formatter< T >", "d6/dc7/structfmt_1_1formatter_3_01T_01_4.html", null ],
-    [ "hsv_t", "df/de6/structfloppy_1_1gfx_1_1color_1_1hsv__t.html", null ],
-    [ "hsva_t", "dd/dc9/structfloppy_1_1gfx_1_1color_1_1hsva__t.html", null ],
     [ "non_copyable< T >", "d7/d83/structfloppy_1_1traits_1_1non__copyable.html", [
       [ "pin< T >", "d7/dac/structfloppy_1_1traits_1_1pin.html", [
         [ "singleton< T >", "d9/d8a/structfloppy_1_1traits_1_1singleton.html", null ]

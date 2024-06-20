@@ -10,8 +10,6 @@ var searchData=
   ['basic_5ftwo_5fdimensional_5ftype_3c_20vector2d_3c_20default_5funit_2c_20f32_20_3e_2c_20default_5funit_2c_20f32_20_3e_7',['basic_two_dimensional_type&lt; vector2d&lt; default_unit, f32 &gt;, default_unit, f32 &gt;',['../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html',1,'floppy::math::detail']]],
   ['bfin_8',['bfin',['../d6/d7f/classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6aa531881387431839217936743c4bcd98',1,'floppy::platform']]],
   ['big_9',['big',['../d6/d7f/classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637ad861877da56b8b4ceb35c8cbfdf65bb4',1,'floppy::platform']]],
-  ['blue_10',['blue',['../de/da8/classfloppy_1_1gfx_1_1color.html#a54ee5bd5e1a714c38361dd8bb9e41149',1,'floppy::gfx::color']]],
-  ['bluef_11',['bluef',['../de/da8/classfloppy_1_1gfx_1_1color.html#a37bdde4097e35dfd595e1a5197d4d3de',1,'floppy::gfx::color']]],
-  ['borland_12',['borland',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca3c7f77cc43338e14824c111671beef30',1,'floppy::platform']]],
-  ['bson_13',['bson',['../d0/da9/namespacefloppy_1_1serialization.html#aab5efc62e072f3561d45db61e0c83b85a0b6879b186bfb2b1ec65d2460e4eccd4',1,'floppy::serialization']]]
+  ['borland_10',['borland',['../d6/d7f/classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca3c7f77cc43338e14824c111671beef30',1,'floppy::platform']]],
+  ['bson_11',['bson',['../d0/da9/namespacefloppy_1_1serialization.html#aab5efc62e072f3561d45db61e0c83b85a0b6879b186bfb2b1ec65d2460e4eccd4',1,'floppy::serialization']]]
 ];
