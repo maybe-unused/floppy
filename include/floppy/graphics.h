@@ -1,8 +1,7 @@
-//
-// Created by User on 20.06.2024.
-//
+/// \file floppy/graphics.h
+/// \brief Classes and functions related to graphics and drawing.
+/// \author whs31
 
-#ifndef FLOPPY_GRAPHICS_H
-#define FLOPPY_GRAPHICS_H
+#pragma once
 
-#endif // FLOPPY_GRAPHICS_H
+#include <floppy/graphics/color.h>
