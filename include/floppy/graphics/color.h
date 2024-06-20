@@ -122,25 +122,29 @@ namespace floppy::gfx
         s = s.substr(1);
       if (s.size() == 6) {
         auto const rgb = detail::str_to_rgb(s.data());
-        r_ = static_cast<f32>(rgb[0]) / u8_maxf;
-        g_ = static_cast<f32>(rgb[1]) / u8_maxf;
-        b_ = static_cast<f32>(rgb[2]) / u8_maxf;
-        a_ = 1.0F;
+        this->r_ = static_cast<f32>(rgb[0]) / u8_maxf;
+        this->g_ = static_cast<f32>(rgb[1]) / u8_maxf;
+        this->b_ = static_cast<f32>(rgb[2]) / u8_maxf;
+        this->a_ = 1.0F;
       } else if (s.size() == 8) {
         auto const rgba = detail::str_to_rgba(s.data());
-        r_ = static_cast<f32>(rgba[0]) / u8_maxf;
-        g_ = static_cast<f32>(rgba[1]) / u8_maxf;
-        b_ = static_cast<f32>(rgba[2]) / u8_maxf;
-        a_ = static_cast<f32>(rgba[3]) / u8_maxf;
+        this->r_ = static_cast<f32>(rgba[0]) / u8_maxf;
+        this->g_ = static_cast<f32>(rgba[1]) / u8_maxf;
+        this->b_ = static_cast<f32>(rgba[2]) / u8_maxf;
+        this->a_ = static_cast<f32>(rgba[3]) / u8_maxf;
       } else {
         throw std::invalid_argument("invalid color: "  + std::string(s));
       }
     }
 
-    [[nodiscard]] constexpr auto r() const -> f32 { return r_; }
-    [[nodiscard]] constexpr auto g() const -> f32 { return g_; }
-    [[nodiscard]] constexpr auto b() const -> f32 { return b_; }
-    [[nodiscard]] constexpr auto a() const -> f32 { return a_; }
+    [[nodiscard]] constexpr auto fr() const -> f32 { return r_; }
+    [[nodiscard]] constexpr auto fg() const -> f32 { return g_; }
+    [[nodiscard]] constexpr auto fb() const -> f32 { return b_; }
+    [[nodiscard]] constexpr auto fa() const -> f32 { return a_; }
+    [[nodiscard]] constexpr auto r() const -> u8 { return static_cast<u8>(r_ * u8_max); }
+    [[nodiscard]] constexpr auto g() const -> u8 { return static_cast<u8>(g_ * u8_max); }
+    [[nodiscard]] constexpr auto b() const -> u8 { return static_cast<u8>(b_ * u8_max); }
+    [[nodiscard]] constexpr auto a() const -> u8 { return static_cast<u8>(a_ * u8_max); }
 
     [[nodiscard]] constexpr auto rgba() const -> u32 {
       return static_cast<u32>(r_ * u8_max) << 24
@@ -156,6 +160,87 @@ namespace floppy::gfx
         | u8_max;
     }
 
+    [[nodiscard]] constexpr auto operator==(color const& other) const -> bool {
+      return math::approx_eq(this->r_, other.r_, 3.0F)
+        and math::approx_eq(this->g_, other.g_, 3.0F)
+        and math::approx_eq(this->b_, other.b_, 3.0F)
+        and math::approx_eq(this->a_, other.a_, 3.0F);
+    }
+
+    [[nodiscard]] constexpr auto operator!=(color const& other) const -> bool { return not (*this == other); }
+
+    [[nodiscard]] constexpr auto operator+(color const& other) const -> color {
+      return color(this->r_ + other.r_, this->g_ + other.g_, this->b_ + other.b_, this->a_ + other.a_);
+    }
+
+    [[nodiscard]] constexpr auto operator-(color const& other) const -> color {
+      return color(this->r_ - other.r_, this->g_ - other.g_, this->b_ - other.b_, this->a_ - other.a_);
+    }
+
+    [[nodiscard]] constexpr auto operator*(color const& other) const -> color {
+      return color(this->r_ * other.r_, this->g_ * other.g_, this->b_ * other.b_, this->a_ * other.a_);
+    }
+
+    [[nodiscard]] constexpr auto operator/(color const& other) const -> color {
+      return color(this->r_ / other.r_, this->g_ / other.g_, this->b_ / other.b_, this->a_ / other.a_);
+    }
+
+    [[nodiscard]] constexpr auto operator-() const -> color {
+      return color(-this->r_, -this->g_, -this->b_, -this->a_);
+    }
+
+    [[nodiscard]] constexpr auto operator*=(color const& other) -> color& {
+      this->r_ *= other.r_;
+      this->g_ *= other.g_;
+      this->b_ *= other.b_;
+      this->a_ *= other.a_;
+      return *this;
+    }
+
+    [[nodiscard]] constexpr auto operator/=(color const& other) -> color& {
+      this->r_ /= other.r_;
+      this->g_ /= other.g_;
+      this->b_ /= other.b_;
+      this->a_ /= other.a_;
+      return *this;
+    }
+
+    [[nodiscard]] constexpr auto operator+=(color const& other) -> color& {
+      this->r_ += other.r_;
+      this->g_ += other.g_;
+      this->b_ += other.b_;
+      this->a_ += other.a_;
+      return *this;
+    }
+
+    [[nodiscard]] constexpr auto operator-=(color const& other) -> color& {
+      this->r_ -= other.r_;
+      this->g_ -= other.g_;
+      this->b_ -= other.b_;
+      this->a_ -= other.a_;
+      return *this;
+    }
+
+    [[nodiscard]] constexpr auto operator*=(f32 other) -> color& {
+      this->r_ *= other;
+      this->g_ *= other;
+      this->b_ *= other;
+      this->a_ *= other;
+      return *this;
+    }
+
+    [[nodiscard]] constexpr auto operator/=(f32 other) -> color& {
+      this->r_ /= other;
+      this->g_ /= other;
+      this->b_ /= other;
+      this->a_ /= other;
+      return *this;
+    }
+
+    [[nodiscard]] static constexpr auto from_floats(f32 r, f32 g, f32 b, f32 a) -> color {
+      return color(r * u8_max, g * u8_max, b * u8_max, a * u8_max);
+    }
+
    private:
     f32 r_;
     f32 g_;
@@ -169,6 +254,7 @@ namespace floppy::gfx
   static_assert(color(50, 168, 82, 128).rgba() == color(0x32A85280).rgba());
   static_assert(color("#32a85280").rgba() == color(0x32A85280).rgba());
   static_assert(color("32a85280").rgba() == color(0x32A85280).rgba());
+  static_assert(color::from_floats(0.1966F, 0.659F, 0.322F, 0.505F).rgba() == color("32a85280").rgba());
 } // namespace floppy::gfx
 
 // #32a852
