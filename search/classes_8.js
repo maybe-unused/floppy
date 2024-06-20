@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['pi_0',['pi',['../d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html',1,'pi&lt; T &gt;'],['../d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html',1,'pi&lt; T &gt;']]],
-  ['pin_1',['pin',['../d7/dac/structfloppy_1_1traits_1_1pin.html',1,'floppy::traits']]],
-  ['plain_5ftype_2',['plain_type',['../d3/d05/namespacefloppy.html#d8/d14/structfloppy_1_1plain__type',1,'floppy']]],
-  ['platform_3',['platform',['../d6/d7f/classfloppy_1_1platform.html',1,'floppy']]],
-  ['point2d_4',['point2d',['../db/d35/classfloppy_1_1math_1_1point2d.html',1,'floppy::math']]],
-  ['project_5fmeta_5',['project_meta',['../d2/de7/classfloppy_1_1meta_1_1project__meta.html',1,'floppy::meta']]]
+  ['one_5fof_0',['one_of',['../d8/dca/structfloppy_1_1one__of.html',1,'floppy']]],
+  ['ostream_5fformatter_1',['ostream_formatter',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]],
+  ['ostream_5fformatter_3c_20char_20_3e_2',['ostream_formatter&lt; char &gt;',['../d4/de5/structfloppy_1_1ostream__formatter.html',1,'floppy']]]
 ];
