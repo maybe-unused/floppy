@@ -8,7 +8,7 @@ var dir_ae0cb1af05f1ebdc47ed7b5efe67b30c =
     [ "directories.h", "de/ddd/directories_8h_source.html", null ],
     [ "euclid.h", "de/d44/euclid_8h.html", null ],
     [ "floppy.h", "d7/d62/floppy_8h_source.html", null ],
-    [ "graphics.h", "d7/d04/graphics_8h_source.html", null ],
+    [ "graphics.h", "d7/d04/graphics_8h.html", null ],
     [ "logging.h", "d5/d77/logging_8h_source.html", null ],
     [ "serialization.h", "dd/d50/serialization_8h_source.html", null ],
     [ "traits.h", "dd/dff/traits_8h_source.html", null ]
