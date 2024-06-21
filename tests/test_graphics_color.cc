@@ -59,7 +59,7 @@ TEST(GraphicsColor, Hsla)
 
 TEST(GraphicsColor, Hsv)
 {
-  EXPECT_EQ(color("32a85280").hsv(), color::hsv_t(136, 0.70F, 0.66F));
+  EXPECT_EQ(color("32a85280").hsv(), color::hsv_t(136, 0.70238096F, 0.65882355F));
 }
 
 TEST(GraphicsColor, Hsva)
@@ -69,5 +69,5 @@ TEST(GraphicsColor, Hsva)
 
 TEST(GraphicsColor, FromHsv)
 {
-  EXPECT_EQ(color::from_hsv({136, 0.70238096, 0.65882355}), color("32a85280"));
+  EXPECT_EQ(color::from_hsv({136, 0.70238096, 0.65882355}), color("32a851FF"));
 }
