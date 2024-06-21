@@ -22,8 +22,10 @@ namespace floppy
     /// \brief Implementation details for the ranges backports.
     namespace detail
     {
+      /// \brief Converts a source range to a non-view object.
       template <typename C> struct to_helper {};
 
+      /// \brief Propagates conversion to a non-view object.
       template <typename C, range R>
         requires std::convertible_to<range_value_t<R>, typename C::value_type>
       auto operator|(R&& r, [[maybe_unused]] to_helper<C> _) -> C // NOLINT(*-missing-std-forward)
@@ -36,6 +38,15 @@ namespace floppy
     /// \headerfile floppy/floppy.h
     /// \ingroup backports
     /// \details This is an alias to <tt>std::ranges::to</tt>.
+    /// Example usage:
+    /// \code {.cpp}
+    /// auto main() -> int {
+    ///   auto vec = std::views::iota(1, 5)
+    ///     | std::views::transform([](int i) { return i * 2; })
+    ///     | fl::ranges::collect<std::vector>();
+    ///   return 0;
+    /// }
+    /// \endcode
     /// \sa https://en.cppreference.com/w/cpp/ranges/to
     /// \see to
     template <range C> requires (not view<C>)
@@ -80,6 +91,25 @@ namespace floppy
   /// \headerfile floppy/floppy.h
   /// \ingroup backports
   /// \details This is backport of C++20 (23) <tt>std::to_underlying</tt>.
+  /// Example usage:
+  /// \code {.cpp}
+  /// enum class A : char { val };
+  /// enum class B : int { val };
+  /// enum class C : short { val };
+  /// auto main() -> int {
+  ///   fmt::print("a underlying type: {}, value: {}\n", fl::rtti::type_name<decltype(fl::to_underlying(A::val))>(), fl::to_underlying(A::val));
+  ///   fmt::print("b underlying type: {}, value: {}\n", fl::rtti::type_name<decltype(fl::to_underlying(B::val))>(), fl::to_underlying(B::val));
+  ///   fmt::print("c underlying type: {}, value: {}\n", fl::rtti::type_name<decltype(fl::to_underlying(C::val))>(), fl::to_underlying(C::val));
+  ///   return 0;
+  /// }
+  /// \endcode
+  ///
+  /// Output:
+  /// \code {.sh}
+  /// a underlying type: char, value: 0
+  /// b underlying type: int, value: 0
+  /// c underlying type: short, value: 0
+  /// \endcode
   /// \tparam T Enum type. Must be an enum type.
   /// \param t Enum value
   /// \return Underlying value of the enum
@@ -123,6 +153,8 @@ namespace floppy
       constexpr static auto UNKNOWN = "(unknown)";
 
      public:
+      /// \brief Returns current source location.
+      /// \note Returns actual current source location only if called with default arguments.
   #if not defined(__apple_build_version__) and defined(__clang__) and (__clang_major__ >= 9)
       static consteval auto current(
         char const* file = __builtin_FILE(),

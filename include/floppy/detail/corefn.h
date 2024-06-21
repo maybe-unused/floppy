@@ -44,11 +44,33 @@ namespace floppy
     /// \brief Demangles C++ type name from string.
     /// \headerfile floppy/floppy.h
     /// \ingroup helpers
+    /// \invariant Confirmed support on:
+    /// <ul>
+    ///   <li>MSVC</li>
+    ///   <li>Clang</li>
+    ///   <li>GCC</li>
+    /// </ul>
+    /// \see type_name
     [[nodiscard]] FLOPPY_EXPORT auto demangle(char const* name) -> std::string;
 
     /// \brief Returns C++ type name or signature from <b>typeid</b> object using RTTI.
     /// \headerfile floppy/floppy.h
     /// \ingroup helpers
+    /// \details Example usage:
+    /// \code {.cpp}
+    /// auto name = rtti::type_name<int>();
+    /// assert(name == "int");
+    ///
+    /// auto name = rtti::type_name<std::vector<int>>();
+    /// assert(name == "std::vector<int>");
+    /// \endcode
+    /// \invariant Confirmed support on:
+    /// <ul>
+    ///   <li>MSVC</li>
+    ///   <li>Clang</li>
+    ///   <li>GCC</li>
+    /// </ul>
+    /// \see demangle
     template <typename T>
     [[nodiscard]] auto type_name() -> std::string {
       return rtti::demangle(typeid(T).name());

@@ -86,6 +86,9 @@ namespace floppy::math
       return std::make_pair(std::sin(this->m_), std::cos(this->m_));
     }
 
+    /// \brief Cast to a new underlying number type.
+    /// \tparam U New number type
+    /// \return Casted angle
     template <concepts::num U>
     [[nodiscard]] constexpr auto cast() const -> angle<U> { return angle<U>(static_cast<U>(this->m_)); }
 

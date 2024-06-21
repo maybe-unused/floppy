@@ -26,15 +26,22 @@ namespace floppy::concepts
   template <typename T>
   concept array = std::is_array_v<T>;
 
+  /// \brief Object concept.
+  /// \tparam T Type to check
+  /// \details Object is an any possibly cv-qualified type other than function, reference or void types.
   template <typename T>
-  concept object = std::is_object_v<plain_type_t<T>>;
+  concept object = std::is_object_v<T>;
 
-  template <typename T>
-  concept fn = std::is_function_v<plain_type_t<T>>;
-
+  /// \brief Pointer concept.
+  /// \details Will be true for any type that is a pointer or reference. Note that this concept will
+  /// not be true for function pointers, <tt>std::nullptr_t</tt> or smart pointers.
+  /// \tparam T Type to check
   template <typename T>
   concept ptr = std::is_pointer_v<T>;
 
+  /// \brief Reference concept.
+  /// \tparam T Type to check
+  /// \see ref
   template <typename T>
   concept ref = std::is_reference_v<T>;
 

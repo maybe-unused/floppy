@@ -39,9 +39,16 @@ namespace floppy::math
     /// \brief Underlying number type.
     using underlying_type = T;
 
+    /// \brief Default copy constructor.
     constexpr size2d(size2d const&) = default;
+
+    /// \brief Default copy assignment operator.
     constexpr auto operator=(size2d const&) -> size2d& = default;
+
+    /// \brief Default move constructor.
     constexpr size2d(size2d&&) = default;
+
+    /// \brief Default move assignment operator.
     constexpr auto operator=(size2d&&) -> size2d& = default;
 
     /// \brief Constructs new size2d with zero coordinates.
@@ -187,62 +194,103 @@ namespace floppy::math
     /// \return Area of the size2d.
     [[nodiscard]] constexpr auto area() const -> underlying_type { return this->x() * this->y(); }
 
+    /// \brief Returns the unchanged size2d.
     [[nodiscard]] constexpr auto operator+() const -> size2d { return *this; }
+
+    /// \brief Returns the negated size2d.
     [[nodiscard]] constexpr auto operator-() const -> size2d { return size2d(-this->x(), -this->y()); }
 
+    /// \brief Equality comparison.
+    /// \param other The other size2d.
+    /// \return <tt>true</tt> if the size2ds are equal, <tt>false</tt> otherwise.
     [[nodiscard]] constexpr auto operator==(const size2d& other) const -> bool {
       return eq(this->x(), other.x()) and eq(this->y(), other.y());
     }
 
+    /// \brief Inequality comparison.
+    /// \param other The other size2d.
+    /// \return <tt>true</tt> if the size2ds are not equal, <tt>false</tt> otherwise.
     [[nodiscard]] constexpr auto operator!=(const size2d& other) const -> bool {
       return not eq(this->x(), other.x()) or not eq(this->y(), other.y());
     }
 
+    /// \brief Addition operator.
+    /// \param other The other size2d.
+    /// \return The sum of both size2ds.
     [[nodiscard]] constexpr auto operator+(const size2d& other) const -> size2d {
       return size2d(this->x() + other.x(), this->y() + other.y());
     }
 
+    /// \brief Subtraction operator.
+    /// \param other The other size2d.
+    /// \return The difference of both size2ds.
     [[nodiscard]] constexpr auto operator-(const size2d& other) const -> size2d {
       return size2d(this->x() - other.x(), this->y() - other.y());
     }
 
+    /// \brief Multiplies size2d with a scalar.
+    /// \param other Scalar value.
+    /// \return The product of the size2d and the scalar.
     [[nodiscard]] constexpr auto operator*(const underlying_type& other) const -> size2d {
       return size2d(this->x() * other, this->y() * other);
     }
 
+    /// \brief Divides size2d by a scalar.
+    /// \param other Scalar value.
+    /// \return The quotient of the size2d and the scalar.
     [[nodiscard]] constexpr auto operator/(const underlying_type& other) const -> size2d {
       return size2d(this->x() / other, this->y() / other);
     }
 
+    /// \brief Addition assignment operator.
+    /// \param other The other size2d.
+    /// \return The result of the addition.
     constexpr auto operator+=(const size2d& other) -> size2d& {
       this->x_mut() += other.x();
       this->y_mut() += other.y();
       return *this;
     }
 
+    /// \brief Subtraction assignment operator.
+    /// \param other The other size2d.
+    /// \return The result of the subtraction.
     constexpr auto operator-=(const size2d& other) -> size2d& {
       this->x_mut() -= other.x();
       this->y_mut() -= other.y();
       return *this;
     }
 
+    /// \brief Multiplication assignment operator.
+    /// \param other Scalar value.
+    /// \return The result of the multiplication.
     constexpr auto operator*=(const underlying_type& other) -> size2d& {
       this->x_mut() *= other;
       this->y_mut() *= other;
       return *this;
     }
 
+    /// \brief Division assignment operator.
+    /// \param other Scalar value.
+    /// \return The result of the division.
     constexpr auto operator/=(const underlying_type& other) -> size2d& {
       this->x_mut() /= other;
       this->y_mut() /= other;
       return *this;
     }
 
+    /// \brief Multiplies size2d with a scale.
+    /// \tparam U2 The unit of the scale.
+    /// \param s The scale.
+    /// \return The product of the size2d and the scale.
     template <typename U2>
     [[nodiscard]] constexpr auto operator*(scale<unit_type, U2> const& s) const -> size2d<U2, underlying_type> {
       return size2d<U2, underlying_type>(this->x() * s.value(), this->y() * s.value());
     }
 
+    /// \brief Divides size2d by a scale.
+    /// \tparam U2 The unit of the scale.
+    /// \param s The scale.
+    /// \return The quotient of the size2d and the scale.
     template <typename U2>
     [[nodiscard]] constexpr auto operator/(scale<U2, unit_type> const& s) const -> size2d<U2, underlying_type> {
       return size2d<U2, underlying_type>(this->x() / s.value(), this->y() / s.value());

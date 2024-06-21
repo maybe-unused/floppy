@@ -18,9 +18,11 @@ namespace floppy
   template <typename T>
   struct plain_type
   {
+    /// \brief The type without qualifiers, references and pointers.
     using type = std::remove_cvref_t<std::remove_pointer_t<T>>;
+
+    /// \brief The type without qualifiers, references and pointers with a const qualifier.
     using const_type = std::add_const_t<type>;
-    using maybe_pointer_type = std::remove_cvref_t<type>;
   };
 
   /// \brief Remove all cv qualifiers, references and pointers from a type.
@@ -34,10 +36,14 @@ namespace floppy
   /// \ingroup helpers
   /// \tparam U The type to check.
   /// \tparam T The types to check against.
-  /// \sa one_of_v
+  /// \see one_of_v
+  /// \see floppy::concepts::any_of
   template <typename U, typename... T>
   struct one_of {
+    /// \brief The result of the check.
     static constexpr bool value = std::disjunction_v<std::is_same<U, T>...>;
+
+    /// \brief The result of the check as a boolean.
     constexpr explicit operator bool() const noexcept { return value; }
   };
 
@@ -46,7 +52,8 @@ namespace floppy
   /// \ingroup helpers
   /// \tparam U The type to check.
   /// \tparam T The types to check against.
-  /// \sa one_of
+  /// \see one_of
+  /// \see floppy::concepts::any_of
   template <typename U, typename... T>
   constexpr bool one_of_v = one_of<U, T...>::value;
 

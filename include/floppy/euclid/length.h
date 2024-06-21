@@ -94,41 +94,89 @@ namespace floppy::math
     /// \brief Returns the underlying value.
     [[nodiscard]] constexpr auto operator*() const -> T { return this->m_; }
 
+    /// \brief Copy assignment.
     constexpr auto operator=(T value) -> length& {
       this->m_ = value;
       return *this;
     }
 
+    /// \brief Returns <tt>this += other</tt>.
+    /// \param other The other length.
     constexpr auto operator+=(length const& other) -> length& { return *this = *this + other; }
+
+    /// \brief Returns <tt>this -= other</tt>.
+    /// \param other The other length.
     constexpr auto operator-=(length const& other) -> length& { return *this = *this - other; }
+
+    /// \brief Returns <tt>this *= other</tt>.
+    /// \param other The other length.
     constexpr auto operator*=(length const& other) -> length& { return *this = *this * other; }
+
+    /// \brief Returns <tt>this /= other</tt>.
+    /// \param other The other length.
     constexpr auto operator/=(length const& other) -> length& { return *this = *this / other; }
 
+    /// \brief Returns <tt>this += value</tt>.
+    /// \tparam T2 The type of the value.
+    /// \param value The value to add.
+    /// \return <tt>*this += other</tt>
     template <concepts::num T2>
     constexpr auto operator+=(T2 value) -> length& { return *this = *this + static_cast<T>(value); }
 
+    /// \brief Returns <tt>this -= value</tt>.
+    /// \tparam T2 The type of the value.
+    /// \param value The value to subtract.
+    /// \return <tt>*this -= other</tt>
     template <concepts::num T2>
     constexpr auto operator-=(T2 value) -> length& { return *this = *this - static_cast<T>(value); }
 
+    /// \brief Returns <tt>this *= value</tt>.
+    /// \tparam T2 The type of the value.
+    /// \param value The value to multiply.
+    /// \return <tt>*this *= other</tt>
     template <concepts::num T2>
     constexpr auto operator*=(T2 value) -> length& { return *this = *this * static_cast<T>(value); }
 
+    /// \brief Returns <tt>this /= value</tt>.
+    /// \tparam T2 The type of the value.
+    /// \param value The value to divide.
+    /// \return <tt>*this /= other</tt>
     template <concepts::num T2>
     constexpr auto operator/=(T2 value) -> length& { return *this = *this / static_cast<T>(value); }
 
+    /// \brief Returns <tt>this + other</tt>.
+    /// \param other The other length.
     constexpr auto operator+(length const& other) const -> length { return length(this->m_ + other.m_); }
+
+    /// \brief Returns <tt>this - other</tt>.
+    /// \param other The other length.
     constexpr auto operator-(length const& other) const -> length { return length(this->m_ - other.m_); }
+
+    /// \brief Returns <tt>this * other</tt>.
+    /// \param other The other length.
     constexpr auto operator*(length const& other) const -> length { return length(this->m_ * other.m_); }
 
+    /// \brief Returns <tt>this + other</tt>.
+    /// \tparam T2 The type of the value.
+    /// \param value The value to add.
     template <concepts::num T2>
     constexpr auto operator+(T2 value) const -> length { return length(this->m_ + static_cast<T>(value)); }
 
+    /// \brief Returns <tt>this - other</tt>.
+    /// \tparam T2 The type of the value.
+    /// \param value The value to subtract.
     template <concepts::num T2>
     constexpr auto operator-(T2 value) const -> length { return length(this->m_ - static_cast<T>(value)); }
 
+    /// \brief Returns <tt>this * other</tt>.
+    /// \tparam T2 The type of the value.
+    /// \param value The value to multiply.
     template <concepts::num T2>
     constexpr auto operator*(T2 value) const -> length { return length(this->m_ * static_cast<T>(value)); }
 
+    /// \brief Returns <tt>this * other</tt>.
+    /// \tparam T2 The type of the value.
+    /// \param value The value to divide.
     template <concepts::num T2>
     constexpr auto operator/(T2 value) const -> length { return length(this->m_ / static_cast<T>(value)); }
 
@@ -145,7 +193,7 @@ namespace floppy::math
     /// \brief Multiplies this length by scale factor.
     /// \tparam U2 Unit of the scale factor.
     /// \tparam T2 Type of the scale factor.
-    /// \param other The scale factor.
+    /// \param s The scale factor.
     /// \return The result as a length of type T of this length.
     template <typename U2, concepts::num T2>
     constexpr auto operator*(scale<U, U2, T2> const& s) const -> length<U2, T> {
@@ -155,14 +203,17 @@ namespace floppy::math
     /// \brief Divides this length by scale factor.
     /// \tparam U2 Unit of the scale factor.
     /// \tparam T2 Type of the scale factor.
-    /// \param other The scale factor.
+    /// \param s The scale factor.
     /// \return The result as a length of type T of this length.
     template <typename U2, concepts::num T2>
     constexpr auto operator/(scale<U2, U, T2> const& s) const -> length<U2, T> {
       return length<U2, T>(this->value() / static_cast<T>(s.value()));
     }
 
+    /// \brief Returns unchanged length.
     constexpr auto operator+() const -> length { return length(this->m_); }
+
+    /// \brief Returns negated length.
     constexpr auto operator-() const -> length { return length(-this->m_); }
   };
 } // namespace floppy::math

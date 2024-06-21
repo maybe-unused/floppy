@@ -101,7 +101,14 @@ namespace floppy::math
     /// \return This scale as number.
     [[nodiscard]] constexpr auto operator*() const -> T { return this->m_; }
 
+    /// \brief Sums two scales of same source and destination types.
+    /// \param other Scale to add
+    /// \return The result of addition
     [[nodiscard]] constexpr auto operator+(scale const& other) const -> scale { return scale(this->m_ + other.m_); }
+
+    /// \brief Subtracts two scales of same source and destination types.
+    /// \param other Scale to subtract
+    /// \return The result of subtraction
     [[nodiscard]] constexpr auto operator-(scale const& other) const -> scale { return scale(this->m_ - other.m_); }
 
     /// \brief Multiplies this scale with another scale of different source and destination types.
