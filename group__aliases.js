@@ -1,5 +1,6 @@
 var group__aliases =
 [
+    [ "fl", "namespacefl.html", null ],
     [ "types", "namespacefloppy_1_1types.html", null ],
     [ "literals", "namespacefloppy_1_1literals.html", null ],
     [ "option", "group__aliases.html#gaa202473f296b2492d9239773369181af", null ],
