@@ -44,6 +44,7 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <!-- https://tholman.com/github-corners/ -->
@@ -55,6 +56,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
    &#160;<span id="projectnumber">1.1.5</span>
@@ -124,7 +126,6 @@ $(function(){initNavTree('classfloppy_1_1meta_1_1version.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classfloppy_1_1meta_1_1version-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">version Class Reference</div></div>
 </div><!--header-->
@@ -146,15 +147,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad725472fc49ffcca298eabda9bc131ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fe8410e257f2d908f13220f47904be2" id="r_a3fe8410e257f2d908f13220f47904be2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fe8410e257f2d908f13220f47904be2">as_str</a> () const noexcept -&gt; std::string</td></tr>
 <tr class="separator:a3fe8410e257f2d908f13220f47904be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a15e74485b246574818d3d9fd9d1e61f5" id="r_a15e74485b246574818d3d9fd9d1e61f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15e74485b246574818d3d9fd9d1e61f5">major_</a> {}</td></tr>
-<tr class="separator:a15e74485b246574818d3d9fd9d1e61f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20b1af31d79c6ed228c3c3715d87eeb7" id="r_a20b1af31d79c6ed228c3c3715d87eeb7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20b1af31d79c6ed228c3c3715d87eeb7">minor_</a> {}</td></tr>
-<tr class="separator:a20b1af31d79c6ed228c3c3715d87eeb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8df70d635c6206c51a15411127a9f21" id="r_ae8df70d635c6206c51a15411127a9f21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8df70d635c6206c51a15411127a9f21">patch_</a> {}</td></tr>
-<tr class="separator:ae8df70d635c6206c51a15411127a9f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Version number structure. </p>
@@ -373,85 +365,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a15e74485b246574818d3d9fd9d1e61f5" name="a15e74485b246574818d3d9fd9d1e61f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15e74485b246574818d3d9fd9d1e61f5">&#9670;&#160;</a></span>major_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int major_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Major version. </p>
-
-<p class="definition">Definition at line <a class="el" href="export_8h_source.html#l00089">89</a> of file <a class="el" href="export_8h_source.html">export.h</a>.</p>
-
-</div>
-</div>
-<a id="a20b1af31d79c6ed228c3c3715d87eeb7" name="a20b1af31d79c6ed228c3c3715d87eeb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20b1af31d79c6ed228c3c3715d87eeb7">&#9670;&#160;</a></span>minor_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int minor_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Minor version. </p>
-
-<p class="definition">Definition at line <a class="el" href="export_8h_source.html#l00090">90</a> of file <a class="el" href="export_8h_source.html">export.h</a>.</p>
-
-</div>
-</div>
-<a id="ae8df70d635c6206c51a15411127a9f21" name="ae8df70d635c6206c51a15411127a9f21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8df70d635c6206c51a15411127a9f21">&#9670;&#160;</a></span>patch_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int patch_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Patch version. </p>
-
-<p class="definition">Definition at line <a class="el" href="export_8h_source.html#l00091">91</a> of file <a class="el" href="export_8h_source.html">export.h</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="export_8h_source.html">export.h</a></li>
 </ul>
@@ -461,7 +374,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefloppy.html">floppy</a></li><li class="navelem"><a class="el" href="namespacefloppy_1_1meta.html">meta</a></li><li class="navelem"><a class="el" href="classfloppy_1_1meta_1_1version.html">version</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Fri Jun 21 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

@@ -34,13 +34,7 @@ var searchData=
   ['cross_31',['cross',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ab769a6a6b00145f928d222b94861840e',1,'floppy::math::detail::basic_two_dimensional_type']]],
   ['cuda_32',['cuda',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a39466fe22b062a34cfe09f3cc8c24868',1,'floppy::platform']]],
   ['current_33',['current',['../classfloppy_1_1platform.html#ae38f44be4199dfae927a98d8aa44d53a',1,'floppy::platform']]],
-  ['current_5farchitecture_34',['current_architecture',['../classfloppy_1_1platform.html#a095864eb909733021eab0956fef67f2c',1,'floppy::platform']]],
-  ['current_5fcompiler_35',['current_compiler',['../classfloppy_1_1platform.html#a0e90d17213370244e8d23a06341b795c',1,'floppy::platform']]],
-  ['current_5fendianness_36',['current_endianness',['../classfloppy_1_1platform.html#a825b4a9e2409c9f3b8373e2e905a1509',1,'floppy::platform']]],
-  ['current_5fpath_5fseparator_37',['current_path_separator',['../classfloppy_1_1platform.html#ab84c1b96d70679fb8d0ee6a48aa2039e',1,'floppy::platform']]],
-  ['current_5fplatform_38',['current_platform',['../namespacefloppy.html#a6a6470b3bb68e4a32f414478fac76058',1,'floppy']]],
-  ['current_5fstandard_39',['current_standard',['../classfloppy_1_1platform.html#aa0b1f1e4971b1b295efefdea94760727',1,'floppy::platform']]],
-  ['current_5fsystem_40',['current_system',['../classfloppy_1_1platform.html#a37552f719fa3bce4d527c239f44ab55c',1,'floppy::platform']]],
-  ['cxx_5fstandard_41',['cxx_standard',['../classfloppy_1_1platform.html#afde0784b1e48a2bbb1fab830d24c0e64',1,'floppy::platform']]],
-  ['cygwin_42',['cygwin',['../classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985ab8a4b4dbf3ef27d58f49352e3110161d',1,'floppy::platform']]]
+  ['current_5fplatform_34',['current_platform',['../namespacefloppy.html#a6a6470b3bb68e4a32f414478fac76058',1,'floppy']]],
+  ['cxx_5fstandard_35',['cxx_standard',['../classfloppy_1_1platform.html#afde0784b1e48a2bbb1fab830d24c0e64',1,'floppy::platform']]],
+  ['cygwin_36',['cygwin',['../classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985ab8a4b4dbf3ef27d58f49352e3110161d',1,'floppy::platform']]]
 ];

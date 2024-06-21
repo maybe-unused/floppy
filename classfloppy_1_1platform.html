@@ -44,6 +44,7 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <!-- https://tholman.com/github-corners/ -->
@@ -55,6 +56,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
    &#160;<span id="projectnumber">1.1.5</span>
@@ -127,7 +129,6 @@ $(function(){initNavTree('classfloppy_1_1platform.html',''); initResizable(); })
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="classfloppy_1_1platform-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">platform Class Reference</div></div>
 </div><!--header-->
@@ -139,98 +140,150 @@ $(function(){initNavTree('classfloppy_1_1platform.html',''); initResizable(); })
 Public Types</h2></td></tr>
 <tr class="memitem:a25a1e653be2d434f69095f1dcd357985" id="r_a25a1e653be2d434f69095f1dcd357985"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25a1e653be2d434f69095f1dcd357985">operating_system</a> : u8 { <br />
 &#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985a0f4137ed1502b5045d6083aa258b5c42">windows</a>
-, <a class="el" href="#a25a1e653be2d434f69095f1dcd357985a70cc809fe628baec50d10e08ad34aac3">gnu_linux</a>
-, <a class="el" href="#a25a1e653be2d434f69095f1dcd357985a3750c667d5cd8aecc0a9213b362066e9">darwin</a>
-, <a class="el" href="#a25a1e653be2d434f69095f1dcd357985ac31b32364ce19ca8fcd150a417ecce58">android</a>
+, <br />
+&#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985a70cc809fe628baec50d10e08ad34aac3">gnu_linux</a>
+, <br />
+&#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985a3750c667d5cd8aecc0a9213b362066e9">darwin</a>
+, <br />
+&#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985ac31b32364ce19ca8fcd150a417ecce58">android</a>
 , <br />
 &#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985ab8a4b4dbf3ef27d58f49352e3110161d">cygwin</a>
-, <a class="el" href="#a25a1e653be2d434f69095f1dcd357985a1527e888767cdce15d200b870b39cfd0">freebsd</a>
-, <a class="el" href="#a25a1e653be2d434f69095f1dcd357985a7fc8baba8e7696d6c3b286f738245592">dragonfly</a>
-, <a class="el" href="#a25a1e653be2d434f69095f1dcd357985a2a41a8fb50557ff7d9b55a6c26c1a888">netbsd</a>
+, <br />
+&#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985a1527e888767cdce15d200b870b39cfd0">freebsd</a>
+, <br />
+&#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985a7fc8baba8e7696d6c3b286f738245592">dragonfly</a>
+, <br />
+&#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985a2a41a8fb50557ff7d9b55a6c26c1a888">netbsd</a>
 , <br />
 &#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985a8a9596f483a1f51017555338843c4b46">openbsd</a>
-, <a class="el" href="#a25a1e653be2d434f69095f1dcd357985aad921d60486366258809553a3db49a4a">unknown</a>
-, <a class="el" href="#a25a1e653be2d434f69095f1dcd357985af3dfd03e84bb3efd1302688157a2a896">linux_</a> = gnu_linux
-, <a class="el" href="#a25a1e653be2d434f69095f1dcd357985a43b9d8ea18c48c3a64c4e37338fc668f">macos</a> = darwin
+, <br />
+&#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985aad921d60486366258809553a3db49a4a">unknown</a>
+, <br />
+&#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985af3dfd03e84bb3efd1302688157a2a896">linux_</a> = gnu_linux
+, <br />
+&#160;&#160;<a class="el" href="#a25a1e653be2d434f69095f1dcd357985a43b9d8ea18c48c3a64c4e37338fc668f">macos</a> = darwin
 <br />
  }</td></tr>
 <tr class="separator:a25a1e653be2d434f69095f1dcd357985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c680d8fb41ad5da68fd9454583858c6" id="r_a8c680d8fb41ad5da68fd9454583858c6"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6">arch</a> : u8 { <br />
 &#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a5eb027c44e7bab8f2c0ca8e0bc3a9b61">x86_32</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a0027f42e1e5dfcb4fd5f8f9c6db89af3">x86_64</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a2c1743a391305fbf367df8e4f069f9f9">alpha</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6af926b3e222d7afee57071b2256839701">arm</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a0027f42e1e5dfcb4fd5f8f9c6db89af3">x86_64</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a2c1743a391305fbf367df8e4f069f9f9">alpha</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6af926b3e222d7afee57071b2256839701">arm</a>
 , <br />
 &#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6aa531881387431839217936743c4bcd98">bfin</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6ab9e9dd1fa31d98cf8eb1b96e735550ba">convex</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a988ff76d8157065583c5aa2ea5c8d922">e2k</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a53c28cc68db9108085f6e5840442c2bc">ia64</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6ab9e9dd1fa31d98cf8eb1b96e735550ba">convex</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a988ff76d8157065583c5aa2ea5c8d922">e2k</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a53c28cc68db9108085f6e5840442c2bc">ia64</a>
 , <br />
 &#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a4fd75bc52ec4368609c956ec4746d20e">loongarch</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a511d4c410909902523bfdd61a10e1e45">m68k</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6af981200e230d2cd8e710f6137ca3fdfe">mips</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6ab5dfb7b2291ae1f9c1410e78a0c311a6">hppa</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a511d4c410909902523bfdd61a10e1e45">m68k</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6af981200e230d2cd8e710f6137ca3fdfe">mips</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6ab5dfb7b2291ae1f9c1410e78a0c311a6">hppa</a>
 , <br />
 &#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6ab2e2e41d11017681a62980c1762a4de8">powerpc</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a39466fe22b062a34cfe09f3cc8c24868">cuda</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a437233c74e25fe505293cd2e8ecc2696">pyramid</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a8058d18cbe5eb5f9af15fe6c0b9510aa">riscv</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a39466fe22b062a34cfe09f3cc8c24868">cuda</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a437233c74e25fe505293cd2e8ecc2696">pyramid</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a8058d18cbe5eb5f9af15fe6c0b9510aa">riscv</a>
 , <br />
 &#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6ad270a41d40b1210d271c6994a97e3855">rs6000</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a45f540823942570f0f663af23049a49d">sparc</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a7073d3fffb222ee7ec5d8f2551638592">superh</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a9eb6596e1f858ba8dcbd6b731099474f">s370</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a45f540823942570f0f663af23049a49d">sparc</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a7073d3fffb222ee7ec5d8f2551638592">superh</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a9eb6596e1f858ba8dcbd6b731099474f">s370</a>
 , <br />
 &#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6a5916b85ad6045a8fc6c487481b847276">s390</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6ab43271928aae50d1357de5ecdf60e1c7">sysz</a>
-, <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6aad921d60486366258809553a3db49a4a">unknown</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6ab43271928aae50d1357de5ecdf60e1c7">sysz</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6aad921d60486366258809553a3db49a4a">unknown</a>
 <br />
  }</td></tr>
 <tr class="separator:a8c680d8fb41ad5da68fd9454583858c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a866af73ee3000fd42ac2778c7d15678c" id="r_a866af73ee3000fd42ac2778c7d15678c"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a866af73ee3000fd42ac2778c7d15678c">compiler</a> : u8 { <br />
 &#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca3c7f77cc43338e14824c111671beef30">borland</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca2c5517db7bc397f9b14ae357a7ce54ff">clang</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca356e862cb23a4a6880d74c193e661a3e">comeau</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca16ad5892d13a0b7c9220684e52a548b1">compaq</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca2c5517db7bc397f9b14ae357a7ce54ff">clang</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca356e862cb23a4a6880d74c193e661a3e">comeau</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca16ad5892d13a0b7c9220684e52a548b1">compaq</a>
 , <br />
 &#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca9d76d663f4feae3bb1bc63ed17388abd">diab</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca1000cda46e51b6348226da9e5a658583">digitalmars</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678caa5a0674e6d06c76c324c9f7b3034c75d">dignussystem</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca7c1e8f60df890199e98e1a4a7ee5cfd9">edg</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca1000cda46e51b6348226da9e5a658583">digitalmars</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678caa5a0674e6d06c76c324c9f7b3034c75d">dignussystem</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca7c1e8f60df890199e98e1a4a7ee5cfd9">edg</a>
 , <br />
 &#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca6d187e1e0278e55df4973764d97a18fd">pathscale</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678cae0d511356bd44120af49cc96c9dcf3b3">gcc</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678cabafbd5257cc137fe7822159bb464b4e5">greenhills</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678caefb87b1a67e11246e20b6294869903e1">hpa</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678cae0d511356bd44120af49cc96c9dcf3b3">gcc</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678cabafbd5257cc137fe7822159bb464b4e5">greenhills</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678caefb87b1a67e11246e20b6294869903e1">hpa</a>
 , <br />
 &#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca792a3194462bce7c44b400b97f187a97">iar</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678cae757fd4fedc4fe825bb81b1b466a0947">ibm</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca4e5bbaeafc82ab7aa1385bea8ef5d30a">intel</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678cae79fb748c3c8ab532a8fcf2da53ae54d">kai</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678cae757fd4fedc4fe825bb81b1b466a0947">ibm</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca4e5bbaeafc82ab7aa1385bea8ef5d30a">intel</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678cae79fb748c3c8ab532a8fcf2da53ae54d">kai</a>
 , <br />
 &#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca7c7d2b9e8389cc541dc5a615e05bcf1e">llvm</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678cac82c4aea416dd7e181bab22ce5d86f16">metaware</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca3853651bd4f950bb3f5cc6e3dca950ae">codewarrior</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca2102385085e8c88953569f782aecf8fc">microtec</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678cac82c4aea416dd7e181bab22ce5d86f16">metaware</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca3853651bd4f950bb3f5cc6e3dca950ae">codewarrior</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca2102385085e8c88953569f782aecf8fc">microtec</a>
 , <br />
 &#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678cac3e57e97f4c290780d0b9f7a20942870">mpw</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678cac0ee85ff66cf80206ac9ab7b03975213">nvcc</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca4ab4aca1c61c78b89338c3e3804e0e9d">palm</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca21e4877ebcf75b3ffc961671a274f985">portlandgroup</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678cac0ee85ff66cf80206ac9ab7b03975213">nvcc</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca4ab4aca1c61c78b89338c3e3804e0e9d">palm</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca21e4877ebcf75b3ffc961671a274f985">portlandgroup</a>
 , <br />
 &#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678cad88001a81cfc326b70c6132046495331">mipspro</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678caa189c633d9995e11bf8607170ec9a4b8">oracle</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678cad473fc947ac66e2de55db5cefeb048d6">tendra</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca3a69e825de46a19a06d800acd98739a9">msvc</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678caa189c633d9995e11bf8607170ec9a4b8">oracle</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678cad473fc947ac66e2de55db5cefeb048d6">tendra</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca3a69e825de46a19a06d800acd98739a9">msvc</a>
 , <br />
 &#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678ca503005b697234be331178bb28f375ce2">watcom</a>
-, <a class="el" href="#a866af73ee3000fd42ac2778c7d15678caad921d60486366258809553a3db49a4a">unknown</a>
+, <br />
+&#160;&#160;<a class="el" href="#a866af73ee3000fd42ac2778c7d15678caad921d60486366258809553a3db49a4a">unknown</a>
 <br />
  }</td></tr>
 <tr class="separator:a866af73ee3000fd42ac2778c7d15678c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ac0097bc135eadbd9eb7d88fe9b2637" id="r_a4ac0097bc135eadbd9eb7d88fe9b2637"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ac0097bc135eadbd9eb7d88fe9b2637">endianness</a> : u8 { <a class="el" href="#a4ac0097bc135eadbd9eb7d88fe9b2637aaae6635e044ac56046b2893a529b5114">little</a>
-, <a class="el" href="#a4ac0097bc135eadbd9eb7d88fe9b2637ad861877da56b8b4ceb35c8cbfdf65bb4">big</a>
-, <a class="el" href="#a4ac0097bc135eadbd9eb7d88fe9b2637aad921d60486366258809553a3db49a4a">unknown</a>
+<tr class="memitem:a4ac0097bc135eadbd9eb7d88fe9b2637" id="r_a4ac0097bc135eadbd9eb7d88fe9b2637"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ac0097bc135eadbd9eb7d88fe9b2637">endianness</a> : u8 { <br />
+&#160;&#160;<a class="el" href="#a4ac0097bc135eadbd9eb7d88fe9b2637aaae6635e044ac56046b2893a529b5114">little</a>
+, <br />
+&#160;&#160;<a class="el" href="#a4ac0097bc135eadbd9eb7d88fe9b2637ad861877da56b8b4ceb35c8cbfdf65bb4">big</a>
+, <br />
+&#160;&#160;<a class="el" href="#a4ac0097bc135eadbd9eb7d88fe9b2637aad921d60486366258809553a3db49a4a">unknown</a>
+<br />
  }</td></tr>
 <tr class="separator:a4ac0097bc135eadbd9eb7d88fe9b2637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -261,21 +314,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:afde0784b1e48a2bbb1fab830d24c0e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59111e456e3bfba78f27d52c59121b2a" id="r_a59111e456e3bfba78f27d52c59121b2a"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59111e456e3bfba78f27d52c59121b2a">path_separator</a></td></tr>
 <tr class="separator:a59111e456e3bfba78f27d52c59121b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a37552f719fa3bce4d527c239f44ab55c" id="r_a37552f719fa3bce4d527c239f44ab55c"><td class="memItemLeft" align="right" valign="top">static consteval auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37552f719fa3bce4d527c239f44ab55c">current_system</a> () noexcept -&gt; enum <a class="el" href="#a25a1e653be2d434f69095f1dcd357985">operating_system</a></td></tr>
-<tr class="separator:a37552f719fa3bce4d527c239f44ab55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a095864eb909733021eab0956fef67f2c" id="r_a095864eb909733021eab0956fef67f2c"><td class="memItemLeft" align="right" valign="top">static consteval auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a095864eb909733021eab0956fef67f2c">current_architecture</a> () noexcept -&gt; enum <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6">arch</a></td></tr>
-<tr class="separator:a095864eb909733021eab0956fef67f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e90d17213370244e8d23a06341b795c" id="r_a0e90d17213370244e8d23a06341b795c"><td class="memItemLeft" align="right" valign="top">static consteval auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e90d17213370244e8d23a06341b795c">current_compiler</a> () noexcept -&gt; enum <a class="el" href="#a866af73ee3000fd42ac2778c7d15678c">compiler</a></td></tr>
-<tr class="separator:a0e90d17213370244e8d23a06341b795c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a825b4a9e2409c9f3b8373e2e905a1509" id="r_a825b4a9e2409c9f3b8373e2e905a1509"><td class="memItemLeft" align="right" valign="top">static consteval auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a825b4a9e2409c9f3b8373e2e905a1509">current_endianness</a> () noexcept -&gt; enum <a class="el" href="#a4ac0097bc135eadbd9eb7d88fe9b2637">endianness</a></td></tr>
-<tr class="separator:a825b4a9e2409c9f3b8373e2e905a1509"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0b1f1e4971b1b295efefdea94760727" id="r_aa0b1f1e4971b1b295efefdea94760727"><td class="memItemLeft" align="right" valign="top">static consteval auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0b1f1e4971b1b295efefdea94760727">current_standard</a> () noexcept -&gt; <a class="el" href="namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8">i16</a></td></tr>
-<tr class="separator:aa0b1f1e4971b1b295efefdea94760727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab84c1b96d70679fb8d0ee6a48aa2039e" id="r_ab84c1b96d70679fb8d0ee6a48aa2039e"><td class="memItemLeft" align="right" valign="top">static consteval auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab84c1b96d70679fb8d0ee6a48aa2039e">current_path_separator</a> () noexcept -&gt; char</td></tr>
-<tr class="separator:ab84c1b96d70679fb8d0ee6a48aa2039e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Platform information. </p>
@@ -665,186 +703,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a37552f719fa3bce4d527c239f44ab55c" name="a37552f719fa3bce4d527c239f44ab55c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37552f719fa3bce4d527c239f44ab55c">&#9670;&#160;</a></span>current_system()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static consteval auto current_system </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> -&gt; enum <a class="el" href="#a25a1e653be2d434f69095f1dcd357985">operating_system</a>
-    </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns constant-evaluated current operating system enumeration. </p>
-
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00177">177</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
-
-</div>
-</div>
-<a id="a095864eb909733021eab0956fef67f2c" name="a095864eb909733021eab0956fef67f2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a095864eb909733021eab0956fef67f2c">&#9670;&#160;</a></span>current_architecture()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static consteval auto current_architecture </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> -&gt; enum <a class="el" href="#a8c680d8fb41ad5da68fd9454583858c6">arch</a>
-    </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns constant-evaluated current architecture enumeration. </p>
-
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00205">205</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
-
-</div>
-</div>
-<a id="a0e90d17213370244e8d23a06341b795c" name="a0e90d17213370244e8d23a06341b795c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e90d17213370244e8d23a06341b795c">&#9670;&#160;</a></span>current_compiler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static consteval auto current_compiler </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> -&gt; enum <a class="el" href="#a866af73ee3000fd42ac2778c7d15678c">compiler</a>
-    </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns constant-evaluated current compiler enumeration. </p>
-
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00257">257</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
-
-</div>
-</div>
-<a id="a825b4a9e2409c9f3b8373e2e905a1509" name="a825b4a9e2409c9f3b8373e2e905a1509"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a825b4a9e2409c9f3b8373e2e905a1509">&#9670;&#160;</a></span>current_endianness()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static consteval auto current_endianness </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> -&gt; enum <a class="el" href="#a4ac0097bc135eadbd9eb7d88fe9b2637">endianness</a>
-    </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns constant-evaluated current endianness enumeration. </p>
-
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00323">323</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
-
-</div>
-</div>
-<a id="aa0b1f1e4971b1b295efefdea94760727" name="aa0b1f1e4971b1b295efefdea94760727"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0b1f1e4971b1b295efefdea94760727">&#9670;&#160;</a></span>current_standard()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static consteval auto current_standard </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> -&gt; <a class="el" href="namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8">i16</a>
-    </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns constant-evaluated current language standard. </p>
-
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00335">335</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
-
-</div>
-</div>
-<a id="ab84c1b96d70679fb8d0ee6a48aa2039e" name="ab84c1b96d70679fb8d0ee6a48aa2039e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab84c1b96d70679fb8d0ee6a48aa2039e">&#9670;&#160;</a></span>current_path_separator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static consteval auto current_path_separator </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> -&gt; char </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns constant-evaluated file system path separator character on the current platform. </p>
-<p>Returns <code>'/'</code> for POSIX and <code>'\'</code> for Windows. </p><dl class="section return"><dt>Returns</dt><dd>File system path separator character. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="platform_8h_source.html#l00369">369</a> of file <a class="el" href="platform_8h_source.html">platform.h</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a82e09c39009db86033c546727eb900b8" name="a82e09c39009db86033c546727eb900b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82e09c39009db86033c546727eb900b8">&#9670;&#160;</a></span>operating_system</h2>
@@ -964,7 +822,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefloppy.html">floppy</a></li><li class="navelem"><a class="el" href="classfloppy_1_1platform.html">platform</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Fri Jun 21 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

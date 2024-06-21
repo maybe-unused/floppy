@@ -13,7 +13,7 @@
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title="A one&#45;dimensional distance with associated unit of measurement.">
 <polygon fill="#999999" stroke="#666666" points="180,-19.25 95,-19.25 95,0 180,0 180,-19.25"/>
-<text text-anchor="middle" x="137.5" y="-4.8" font-family="Arial" font-size="11.00">length&lt; U, T &gt;</text>
+<text text-anchor="middle" x="137.5" y="-4.8" font-family="Helvetica,sans-Serif" font-size="11.00">length&lt; U, T &gt;</text>
 </a>
 </g>
 </g>
@@ -22,7 +22,7 @@
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title="Allows type to be converted to string and printed via standard streams or fmt.">
 <polygon fill="white" stroke="#666666" points="123.38,-80.12 13.63,-80.12 13.63,-60.88 123.38,-60.88 123.38,-80.12"/>
-<text text-anchor="middle" x="68.5" y="-65.67" font-family="Arial" font-size="11.00">formattable&lt; T, C &gt;</text>
+<text text-anchor="middle" x="68.5" y="-65.67" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; T, C &gt;</text>
 </a>
 </g>
 </g>
@@ -40,7 +40,7 @@
 <title>Node3</title>
 <g id="a_Node000003"><a xlink:href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html" target="_top" xlink:title="Interface, providing to_string method.">
 <polygon fill="white" stroke="#666666" points="127,-141 0,-141 0,-121.75 127,-121.75 127,-141"/>
-<text text-anchor="middle" x="63.5" y="-126.55" font-family="Arial" font-size="11.00">formattable_base&lt; C &gt;</text>
+<text text-anchor="middle" x="63.5" y="-126.55" font-family="Helvetica,sans-Serif" font-size="11.00">formattable_base&lt; C &gt;</text>
 </a>
 </g>
 </g>
@@ -58,8 +58,8 @@
 <title>Node4</title>
 <g id="a_Node000004"><a xlink:href="structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html" target="_top" xlink:title="CRTP base for numeric newtypes that can be compared.">
 <polygon fill="white" stroke="#666666" points="276.25,-85.75 144.75,-85.75 144.75,-55.25 276.25,-55.25 276.25,-85.75"/>
-<text text-anchor="start" x="152.75" y="-71.3" font-family="Arial" font-size="11.00">basic_numeric_newtype</text>
-<text text-anchor="middle" x="210.5" y="-60.05" font-family="Arial" font-size="11.00">&lt; T, U &gt;</text>
+<text text-anchor="start" x="152.75" y="-71.3" font-family="Helvetica,sans-Serif" font-size="11.00">basic_numeric_newtype</text>
+<text text-anchor="middle" x="210.5" y="-60.05" font-family="Helvetica,sans-Serif" font-size="11.00">&lt; T, U &gt;</text>
 </a>
 </g>
 </g>
@@ -77,7 +77,7 @@
 <title>Node5</title>
 <g id="a_Node000005"><a xlink:href="structfloppy_1_1math_1_1detail_1_1default__comparable.html" target="_top" xlink:title="CRTP base for trivially comparable numeric types.">
 <polygon fill="white" stroke="#666666" points="281.88,-141 145.12,-141 145.12,-121.75 281.88,-121.75 281.88,-141"/>
-<text text-anchor="middle" x="213.5" y="-126.55" font-family="Arial" font-size="11.00">default_comparable&lt; T &gt;</text>
+<text text-anchor="middle" x="213.5" y="-126.55" font-family="Helvetica,sans-Serif" font-size="11.00">default_comparable&lt; T &gt;</text>
 </a>
 </g>
 </g>

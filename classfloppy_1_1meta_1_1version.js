@@ -5,8 +5,5 @@ var classfloppy_1_1meta_1_1version =
     [ "major", "classfloppy_1_1meta_1_1version.html#a25907698935989d16bdd51b423c5e55d", null ],
     [ "minor", "classfloppy_1_1meta_1_1version.html#ae2b369982055499f81987d9229ea2807", null ],
     [ "patch", "classfloppy_1_1meta_1_1version.html#ad725472fc49ffcca298eabda9bc131ef", null ],
-    [ "as_str", "classfloppy_1_1meta_1_1version.html#a3fe8410e257f2d908f13220f47904be2", null ],
-    [ "major_", "classfloppy_1_1meta_1_1version.html#a15e74485b246574818d3d9fd9d1e61f5", null ],
-    [ "minor_", "classfloppy_1_1meta_1_1version.html#a20b1af31d79c6ed228c3c3715d87eeb7", null ],
-    [ "patch_", "classfloppy_1_1meta_1_1version.html#ae8df70d635c6206c51a15411127a9f21", null ]
+    [ "as_str", "classfloppy_1_1meta_1_1version.html#a3fe8410e257f2d908f13220f47904be2", null ]
 ];

@@ -23,7 +23,7 @@
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title=" ">
 <polygon fill="#999999" stroke="#666666" points="232.25,-406 169,-406 169,-386.75 232.25,-386.75 232.25,-406"/>
-<text text-anchor="middle" x="200.62" y="-391.55" font-family="Arial" font-size="11.00">nt_traits.h</text>
+<text text-anchor="middle" x="200.62" y="-391.55" font-family="Helvetica,sans-Serif" font-size="11.00">nt_traits.h</text>
 </a>
 </g>
 </g>
@@ -32,7 +32,7 @@
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="angle_8h.html" target="_top" xlink:title="Newtype describing an angle.">
 <polygon fill="white" stroke="#666666" points="51.25,-185 0,-185 0,-165.75 51.25,-165.75 51.25,-185"/>
-<text text-anchor="middle" x="25.62" y="-170.55" font-family="Arial" font-size="11.00">angle.h</text>
+<text text-anchor="middle" x="25.62" y="-170.55" font-family="Helvetica,sans-Serif" font-size="11.00">angle.h</text>
 </a>
 </g>
 </g>
@@ -50,7 +50,7 @@
 <title>Node6</title>
 <g id="a_Node000006"><a xlink:href="length_8h.html" target="_top" xlink:title="A one&#45;dimensional distance with associated unit of measurement.">
 <polygon fill="white" stroke="#666666" points="192.75,-295.5 138.5,-295.5 138.5,-276.25 192.75,-276.25 192.75,-295.5"/>
-<text text-anchor="middle" x="165.62" y="-281.05" font-family="Arial" font-size="11.00">length.h</text>
+<text text-anchor="middle" x="165.62" y="-281.05" font-family="Helvetica,sans-Serif" font-size="11.00">length.h</text>
 </a>
 </g>
 </g>
@@ -68,7 +68,7 @@
 <title>Node7</title>
 <g id="a_Node000007"><a xlink:href="nt__traits2d_8h.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="264.25,-240.25 189,-240.25 189,-221 264.25,-221 264.25,-240.25"/>
-<text text-anchor="middle" x="226.62" y="-225.8" font-family="Arial" font-size="11.00">nt_traits2d.h</text>
+<text text-anchor="middle" x="226.62" y="-225.8" font-family="Helvetica,sans-Serif" font-size="11.00">nt_traits2d.h</text>
 </a>
 </g>
 </g>
@@ -86,7 +86,7 @@
 <title>Node9</title>
 <g id="a_Node000009"><a xlink:href="scale_8h.html" target="_top" xlink:title="A scaling factor between two different units of measurement.">
 <polygon fill="white" stroke="#666666" points="298.5,-350.75 248.75,-350.75 248.75,-331.5 298.5,-331.5 298.5,-350.75"/>
-<text text-anchor="middle" x="273.62" y="-336.3" font-family="Arial" font-size="11.00">scale.h</text>
+<text text-anchor="middle" x="273.62" y="-336.3" font-family="Helvetica,sans-Serif" font-size="11.00">scale.h</text>
 </a>
 </g>
 </g>
@@ -104,7 +104,7 @@
 <title>Node3</title>
 <g id="a_Node000003"><a xlink:href="euclid_8h.html" target="_top" xlink:title="Small collection of classes and functions for geometric types with a focus on 2d graphics and layout.">
 <polygon fill="white" stroke="#666666" points="205,-19.25 152.25,-19.25 152.25,0 205,0 205,-19.25"/>
-<text text-anchor="middle" x="178.62" y="-4.8" font-family="Arial" font-size="11.00">euclid.h</text>
+<text text-anchor="middle" x="178.62" y="-4.8" font-family="Helvetica,sans-Serif" font-size="11.00">euclid.h</text>
 </a>
 </g>
 </g>
@@ -122,7 +122,7 @@
 <title>Node4</title>
 <g id="a_Node000004"><a xlink:href="vector2d_8h.html" target="_top" xlink:title="A two&#45;dimensional vector tagged with a unit.">
 <polygon fill="white" stroke="#666666" points="170.75,-129.75 104.5,-129.75 104.5,-110.5 170.75,-110.5 170.75,-129.75"/>
-<text text-anchor="middle" x="137.62" y="-115.3" font-family="Arial" font-size="11.00">vector2d.h</text>
+<text text-anchor="middle" x="137.62" y="-115.3" font-family="Helvetica,sans-Serif" font-size="11.00">vector2d.h</text>
 </a>
 </g>
 </g>
@@ -149,7 +149,7 @@
 <title>Node5</title>
 <g id="a_Node000005"><a xlink:href="point2d_8h.html" target="_top" xlink:title="A two&#45;dimensional point tagged with a unit.">
 <polygon fill="white" stroke="#666666" points="286.75,-74.5 226.5,-74.5 226.5,-55.25 286.75,-55.25 286.75,-74.5"/>
-<text text-anchor="middle" x="256.62" y="-60.05" font-family="Arial" font-size="11.00">point2d.h</text>
+<text text-anchor="middle" x="256.62" y="-60.05" font-family="Helvetica,sans-Serif" font-size="11.00">point2d.h</text>
 </a>
 </g>
 </g>
@@ -212,7 +212,7 @@
 <title>Node8</title>
 <g id="a_Node000008"><a xlink:href="size2d_8h.html" target="_top" xlink:title="A two&#45;dimensional size tagged with a unit.">
 <polygon fill="white" stroke="#666666" points="244.5,-185 188.75,-185 188.75,-165.75 244.5,-165.75 244.5,-185"/>
-<text text-anchor="middle" x="216.62" y="-170.55" font-family="Arial" font-size="11.00">size2d.h</text>
+<text text-anchor="middle" x="216.62" y="-170.55" font-family="Helvetica,sans-Serif" font-size="11.00">size2d.h</text>
 </a>
 </g>
 </g>
