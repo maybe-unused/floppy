@@ -11,6 +11,9 @@
 #include <floppy/euclid/point2d.h>
 #include <floppy/euclid/vector2d.h>
 
+/// \defgroup geometry Geometry
+/// \brief Classes for geometric types with a focus on 2d graphics and layout.
+
 // todo: box2d
 // todo: box3d
 // todo: point3d

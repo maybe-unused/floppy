@@ -111,14 +111,18 @@ namespace floppy::math
 
     #if defined(FL_QT_GUI) || defined(FL_DOC)
     /// \brief Casts this size2d into <tt>QSize</tt>.
+    /// \return The resulting <tt>QSize</tt>.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    /// \sa https://doc.qt.io/qt-5/qsize.html
     [[nodiscard]] constexpr auto to_qsize() const -> QSize {
       auto const i = this->to_i32();
       return QSize(i.x(), i.y());
     }
 
     /// \brief Casts this size2d into <tt>QSizeF</tt>.
+    /// \return The resulting <tt>QSizeF</tt>.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    /// \sa https://doc.qt.io/qt-5/qsizef.html
     [[nodiscard]] constexpr auto to_qsizef() const -> QSizeF { return QSizeF(this->x(), this->y()); }
     #endif
 
@@ -248,21 +252,25 @@ namespace floppy::math
     /// \brief Constructs new size2d from <tt>QSize</tt>.
     /// \param other The other <tt>QSize</tt>.
     /// \remarks This constructor is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    /// \sa https://doc.qt.io/qt-5/qsize.html
     constexpr explicit size2d(QSize const& other) : size2d(other.width(), other.height()) {}
 
     /// \brief Constructs new size2d from <tt>QSizeF</tt>.
     /// \param other The other <tt>QSizeF</tt>.
     /// \remarks This constructor is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    /// \sa https://doc.qt.io/qt-5/qsizef.html
     constexpr explicit size2d(QSizeF const& other) : size2d(other.width(), other.height()) {}
 
     /// \brief Constructs new size2d from <tt>QSize</tt>.
     /// \param other The other <tt>QSize</tt>.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    /// \sa https://doc.qt.io/qt-5/qsize.html
     [[nodiscard]] static constexpr auto from_qsize(QSize const& other) -> size2d { return size2d(other.width(), other.height()); }
 
     /// \brief Constructs new size2d from <tt>QSizeF</tt>.
     /// \param other The other <tt>QSizeF</tt>.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
+    /// \sa https://doc.qt.io/qt-5/qsizef.html
     [[nodiscard]] static constexpr auto from_qsizef(QSizeF const& other) -> size2d { return size2d(other.width(), other.height()); }
 #endif
   };

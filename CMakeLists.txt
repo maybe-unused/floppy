@@ -71,6 +71,7 @@ target_sources(${PROJECT_NAME}
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/configuration.h> $<INSTALL_INTERFACE:include/floppy/configuration.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/logging.h> $<INSTALL_INTERFACE:include/floppy/logging.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid.h> $<INSTALL_INTERFACE:include/floppy/euclid.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/graphics.h> $<INSTALL_INTERFACE:include/floppy/graphics.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/angle.h> $<INSTALL_INTERFACE:include/floppy/euclid/angle.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/scale.h> $<INSTALL_INTERFACE:include/floppy/euclid/scale.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/length.h> $<INSTALL_INTERFACE:include/floppy/euclid/length.h>
@@ -79,6 +80,7 @@ target_sources(${PROJECT_NAME}
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/vector2d.h> $<INSTALL_INTERFACE:include/floppy/euclid/vector2d.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/detail/nt_traits.h> $<INSTALL_INTERFACE:include/floppy/euclid/detail/nt_traits.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/euclid/detail/nt_traits2d.h> $<INSTALL_INTERFACE:include/floppy/euclid/detail/nt_traits2d.h>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/graphics/color.h> $<INSTALL_INTERFACE:include/floppy/graphics/color.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/inl/configuration.inl> $<INSTALL_INTERFACE:include/floppy/inl/configuration.inl>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/export.h> $<INSTALL_INTERFACE:include/floppy/detail/export.h>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/predefs.h> $<INSTALL_INTERFACE:include/floppy/detail/predefs.h>
@@ -93,6 +95,7 @@ target_sources(${PROJECT_NAME}
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/floppy/detail/math.h> $<INSTALL_INTERFACE:include/floppy/detail/math.h>
   PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src/detail/rtti.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/graphics/color.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/src/directories.cc
 )
 
