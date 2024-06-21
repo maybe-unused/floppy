@@ -1,0 +1,8 @@
+<map id="vector2d.h" name="vector2d.h">
+<area shape="rect" id="Node000001" title="A two&#45;dimensional vector tagged with a unit." alt="" coords="5,5,94,31"/>
+<area shape="rect" id="Node000002" href="$euclid_8h.html" title="Small collection of classes and functions for geometric types with a focus on 2d graphics and layout." alt="" coords="14,153,85,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,47,39,75,39,104,49,152,43,153,34,105,34,74,39,46"/>
+<area shape="rect" id="Node000003" href="$point2d_8h.html" title="A two&#45;dimensional point tagged with a unit." alt="" coords="48,79,128,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="65,43,84,77,79,80,61,46"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="77,120,58,153,54,151,72,117"/>
+</map>

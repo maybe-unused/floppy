@@ -1,0 +1,33 @@
+<map id="nt_traits.h" name="nt_traits.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="231,5,315,31"/>
+<area shape="rect" id="Node000002" href="$angle_8h.html" title="Newtype describing an angle." alt="" coords="5,300,74,326"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,44,180,124,95,228,48,301,44,298,91,225,176,120,249,41"/>
+<area shape="rect" id="Node000006" href="$length_8h.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="190,153,262,178"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="267,47,233,153,228,151,262,45"/>
+<area shape="rect" id="Node000007" href="$nt__traits2d_8h.html" title=" " alt="" coords="257,226,358,252"/>
+<area shape="poly" id="edge19_Node000001_Node000007" title=" " alt="" coords="280,46,308,226,303,226,274,47"/>
+<area shape="rect" id="Node000009" href="$scale_8h.html" title="A scaling factor between two different units of measurement." alt="" coords="337,79,403,105"/>
+<area shape="poly" id="edge20_Node000001_Node000009" title=" " alt="" coords="303,38,355,76,352,81,300,43"/>
+<area shape="rect" id="Node000003" href="$euclid_8h.html" title="Small collection of classes and functions for geometric types with a focus on 2d graphics and layout." alt="" coords="208,521,279,547"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="44,341,48,371,56,406,70,441,91,471,117,493,148,508,209,525,207,530,146,513,114,497,87,475,65,443,51,407,42,372,38,342"/>
+<area shape="rect" id="Node000004" href="$vector2d_8h.html" title="A two&#45;dimensional vector tagged with a unit." alt="" coords="145,374,233,399"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="80,330,165,371,162,375,77,335"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="201,413,241,520,236,521,196,415"/>
+<area shape="rect" id="Node000005" href="$point2d_8h.html" title="A two&#45;dimensional point tagged with a unit." alt="" coords="307,447,388,473"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="230,404,322,444,319,449,228,408"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="319,484,263,523,260,518,316,480"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="207,192,177,231,147,282,137,311,130,340,129,370,135,398,155,436,180,470,230,519,226,522,176,474,150,439,130,400,124,370,125,339,131,309,143,280,172,228,203,188"/>
+<area shape="poly" id="edge18_Node000006_Node000004" title=" " alt="" coords="224,194,193,374,188,373,219,193"/>
+<area shape="poly" id="edge16_Node000006_Node000005" title=" " alt="" coords="278,171,329,189,353,204,372,225,387,254,393,285,394,318,389,350,373,408,356,448,351,446,368,406,384,349,388,317,388,286,382,256,368,228,350,208,327,194,277,176"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="253,187,296,224,292,228,250,191"/>
+<area shape="rect" id="Node000008" href="$size2d_8h.html" title="A two&#45;dimensional size tagged with a unit." alt="" coords="257,300,331,326"/>
+<area shape="poly" id="edge17_Node000006_Node000008" title=" " alt="" coords="231,194,237,222,247,251,264,277,283,298,279,301,260,280,242,253,232,223,226,195"/>
+<area shape="poly" id="edge15_Node000007_Node000004" title=" " alt="" coords="284,264,247,302,218,341,198,375,193,372,214,338,243,298,280,261"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="329,264,346,299,354,341,356,383,352,447,347,447,351,383,349,342,341,301,324,266"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="305,268,299,300,294,299,300,267"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="291,341,249,521,244,520,285,340"/>
+<area shape="poly" id="edge14_Node000008_Node000004" title=" " alt="" coords="265,337,208,375,205,371,262,332"/>
+<area shape="poly" id="edge13_Node000008_Node000005" title=" " alt="" coords="306,339,346,446,341,448,301,341"/>
+<area shape="poly" id="edge21_Node000009_Node000003" title=" " alt="" coords="400,112,425,135,449,165,468,199,475,238,475,388,470,420,454,448,430,470,402,489,338,515,280,529,279,524,336,510,399,484,427,466,450,444,465,418,470,388,470,238,463,201,445,168,421,139,396,116"/>
+<area shape="poly" id="edge22_Node000009_Node000006" title=" " alt="" coords="333,114,252,154,250,150,331,109"/>
+</map>

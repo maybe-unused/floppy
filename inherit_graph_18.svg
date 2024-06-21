@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="d6/d7f/classfloppy_1_1platform.html" target="_top" xlink:title="Platform information.">
+<g id="a_Node000000"><a xlink:href="classfloppy_1_1platform.html" target="_top" xlink:title="Platform information.">
 <polygon fill="white" stroke="#666666" points="55,-19.25 0,-19.25 0,0 55,0 55,-19.25"/>
 <text text-anchor="middle" x="27.5" y="-4.8" font-family="Arial" font-size="11.00">platform</text>
 </a>

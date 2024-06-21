@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="db/d46/structfloppy_1_1gfx_1_1color_1_1cmyk__t.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="structfloppy_1_1gfx_1_1color_1_1cmyk__t.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="79,-19.25 0,-19.25 0,0 79,0 79,-19.25"/>
 <text text-anchor="middle" x="39.5" y="-4.8" font-family="Arial" font-size="11.00">color::cmyk_t</text>
 </a>

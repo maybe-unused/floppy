@@ -1,0 +1,9 @@
+<map id="advanced_numeric_type&lt; T, U &gt;" name="advanced_numeric_type&lt; T, U &gt;">
+<area shape="rect" id="Node000001" title="CRTP base for numeric newtypes containing math operations implementation." alt="" coords="75,184,252,225"/>
+<area shape="rect" id="Node000002" href="$structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html" title="CRTP base for numeric newtypes that can be compared." alt="" coords="76,94,251,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,150,166,184,161,184,161,150"/>
+<area shape="rect" id="Node000003" href="$structfloppy_1_1math_1_1detail_1_1default__comparable.html" title="CRTP base for trivially comparable numeric types." alt="" coords="5,5,188,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="116,42,151,92,147,95,111,45"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="212,5,250,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="216,45,180,95,175,92,211,42"/>
+</map>

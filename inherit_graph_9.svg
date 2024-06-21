@@ -38,7 +38,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="db/d2a/classfloppy_1_1serialization_1_1serialization__error.html" target="_top" xlink:title="Exception thrown during serialization or deserialization.">
+<g id="a_Node000002"><a xlink:href="classfloppy_1_1serialization_1_1serialization__error.html" target="_top" xlink:title="Exception thrown during serialization or deserialization.">
 <polygon fill="white" stroke="#666666" points="316.5,-19.25 215,-19.25 215,0 316.5,0 316.5,-19.25"/>
 <text text-anchor="middle" x="265.75" y="-4.8" font-family="Arial" font-size="11.00">serialization_error</text>
 </a>

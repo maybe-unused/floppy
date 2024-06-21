@@ -1,13 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" title=" " alt="" coords="5,108,85,133"/>
-<area shape="rect" id="Node000001" href="$d4/de5/structfloppy_1_1ostream__formatter.html" title=" " alt="" coords="147,71,295,111"/>
+<area shape="rect" id="Node000001" href="$structfloppy_1_1ostream__formatter.html" title=" " alt="" coords="147,71,295,111"/>
 <area shape="poly" id="edge40_Node000000_Node000001" title=" " alt="" coords="99,109,146,101,147,106,100,114"/>
-<area shape="rect" id="Node000005" href="$d4/de5/structfloppy_1_1ostream__formatter.html" title="Formatter for types which support stream output." alt="" coords="133,136,309,161"/>
+<area shape="rect" id="Node000005" href="$structfloppy_1_1ostream__formatter.html" title="Formatter for types which support stream output." alt="" coords="133,136,309,161"/>
 <area shape="poly" id="edge44_Node000000_Node000005" title=" " alt="" coords="101,126,137,132,136,137,100,132"/>
-<area shape="rect" id="Node000002" href="$d2/d87/structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" title=" " alt="" coords="357,5,514,46"/>
+<area shape="rect" id="Node000002" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" title=" " alt="" coords="357,5,514,46"/>
 <area shape="poly" id="edge41_Node000001_Node000002" title=" " alt="" coords="304,63,365,44,367,49,305,68"/>
-<area shape="rect" id="Node000003" href="$d1/de8/structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" title=" " alt="" coords="367,71,505,111"/>
+<area shape="rect" id="Node000003" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" title=" " alt="" coords="367,71,505,111"/>
 <area shape="poly" id="edge42_Node000001_Node000003" title=" " alt="" coords="310,88,366,88,366,94,310,94"/>
-<area shape="rect" id="Node000004" href="$db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" title=" " alt="" coords="367,136,505,177"/>
+<area shape="rect" id="Node000004" href="$structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" title=" " alt="" coords="367,136,505,177"/>
 <area shape="poly" id="edge43_Node000001_Node000004" title=" " alt="" coords="305,114,367,133,365,138,304,119"/>
 </map>

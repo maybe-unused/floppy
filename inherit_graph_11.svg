@@ -20,7 +20,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:href="d4/de5/structfloppy_1_1ostream__formatter.html" target="_top" xlink:title=" ">
+<g id="a_Node000001"><a xlink:href="structfloppy_1_1ostream__formatter.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="217.25,-79.5 106,-79.5 106,-49 217.25,-49 217.25,-79.5"/>
 <text text-anchor="start" x="114" y="-65.05" font-family="Arial" font-size="11.00">ostream_formatter&lt;</text>
 <text text-anchor="middle" x="161.62" y="-53.8" font-family="Arial" font-size="11.00"> char &gt;</text>
@@ -39,7 +39,7 @@
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="d4/de5/structfloppy_1_1ostream__formatter.html" target="_top" xlink:title="Formatter for types which support stream output.">
+<g id="a_Node000005"><a xlink:href="structfloppy_1_1ostream__formatter.html" target="_top" xlink:title="Formatter for types which support stream output.">
 <polygon fill="white" stroke="#666666" points="227.75,-30.88 95.5,-30.88 95.5,-11.62 227.75,-11.62 227.75,-30.88"/>
 <text text-anchor="middle" x="161.62" y="-16.43" font-family="Arial" font-size="11.00">ostream_formatter&lt; C &gt;</text>
 </a>
@@ -57,7 +57,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="d2/d87/structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="381.75,-128.5 263.75,-128.5 263.75,-98 381.75,-98 381.75,-128.5"/>
 <text text-anchor="start" x="271.75" y="-114.05" font-family="Arial" font-size="11.00">formatter&lt; floppy::</text>
 <text text-anchor="middle" x="322.75" y="-102.8" font-family="Arial" font-size="11.00">meta::project_meta &gt;</text>
@@ -76,7 +76,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="d1/de8/structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" target="_top" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="374.62,-79.5 270.88,-79.5 270.88,-49 374.62,-49 374.62,-79.5"/>
 <text text-anchor="start" x="278.88" y="-65.05" font-family="Arial" font-size="11.00">formatter&lt; floppy::</text>
 <text text-anchor="middle" x="322.75" y="-53.8" font-family="Arial" font-size="11.00">meta::version &gt;</text>
@@ -95,7 +95,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" target="_top" xlink:title=" ">
+<g id="a_Node000004"><a xlink:href="structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="374.62,-30.5 270.88,-30.5 270.88,0 374.62,0 374.62,-30.5"/>
 <text text-anchor="start" x="278.88" y="-16.05" font-family="Arial" font-size="11.00">formatter&lt; floppy::</text>
 <text text-anchor="middle" x="322.75" y="-4.8" font-family="Arial" font-size="11.00">source_location &gt;</text>

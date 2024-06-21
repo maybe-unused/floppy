@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="structfloppy_1_1math_1_1detail_1_1default__comparable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="122.5,-30.5 0,-30.5 0,0 122.5,0 122.5,-30.5"/>
 <text text-anchor="start" x="8" y="-16.05" font-family="Arial" font-size="11.00">default_comparable</text>
 <text text-anchor="middle" x="61.25" y="-4.8" font-family="Arial" font-size="11.00">&lt; scale&lt; S, D, f32 &gt; &gt;</text>
