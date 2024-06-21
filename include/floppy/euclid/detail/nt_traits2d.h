@@ -9,6 +9,15 @@
 
 namespace floppy::math::detail
 {
+  /// \brief CRTP base class for two dimensional numerical types.
+  /// \headerfile floppy/euclid.h
+  /// \ingroup geometry
+  /// \tparam T The base class.
+  /// \tparam U The unit type.
+  /// \tparam N The number type. Must satisfy <i>floppy::concepts::num</i>.
+  /// \see floppy::math::point2d
+  /// \see floppy::math::vector2d
+  /// \see floppy::math::size2d
   template <typename T, typename U, concepts::num N>
   struct basic_two_dimensional_type : public traits::formattable<T, char>
   {
