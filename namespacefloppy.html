@@ -288,7 +288,8 @@ Variables</h2></td></tr>
 <tr class="separator:a9365b793fe547271e48fa719a7f4854d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section note"><dt>Note</dt><dd>Use <code>fl</code> instead of <code>floppy</code> if you want shorter name. </dd></dl>
+<div class="textblock"><p>Main namespace for the library. </p>
+<dl class="section note"><dt>Note</dt><dd>Use <code>fl</code> instead of <code>floppy</code> if you want shorter name. </dd></dl>
 </div><hr/><h2 class="groupheader">Class Documentation</h2>
 <a name="structfloppy_1_1plain__type" id="structfloppy_1_1plain__type"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#structfloppy_1_1plain__type">&#9670;&#160;</a></span>floppy::plain_type</h2>
@@ -302,7 +303,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-struct floppy::plain_type&lt; T &gt;</div><p>E.g: <br  />
+struct floppy::plain_type&lt; T &gt;</div><p>Remove all cv qualifiers, references and pointers from a type. </p>
+<p>E.g: <br  />
  - <code>std::string&amp;</code> becomes <code>std::string</code>;<br  />
 </p><ul>
 <li><code>const int*</code> becomes <code>int</code>.</li>

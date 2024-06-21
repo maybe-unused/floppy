@@ -149,7 +149,8 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename C&gt;<br />
-struct floppy::ostream_formatter&lt; C &gt;</div><p>Example usage for <code>std::ostream</code>:</p>
+struct floppy::ostream_formatter&lt; C &gt;</div><p>Formatter for types which support stream output. </p>
+<p>Example usage for <code>std::ostream</code>:</p>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>fmt::formatter&lt;YourType&gt; : <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a>&lt;char&gt; {};</div>
 <div class="ttc" id="astructfloppy_1_1ostream__formatter_html"><div class="ttname"><a href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a></div><div class="ttdoc">Formatter for types which support stream output.</div><div class="ttdef"><b>Definition</b> <a href="formatters_8h_source.html#l00025">formatters.h:26</a></div></div>
 </div><!-- fragment --><p>Example usage for <code>std::wostream</code>:</p>

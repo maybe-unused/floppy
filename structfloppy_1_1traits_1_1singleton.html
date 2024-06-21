@@ -154,7 +154,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-struct floppy::traits::singleton&lt; T &gt;</div><p>Allows to use <b>Singleton</b> pattern in custom types and classes. Example declaration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>TestSingleton : <span class="keyword">public</span> fl::traits::singleton&lt;TestSingleton&gt;</div>
+struct floppy::traits::singleton&lt; T &gt;</div><p>Singleton pattern trait. </p>
+<p>Allows to use <b>Singleton</b> pattern in custom types and classes. Example declaration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>TestSingleton : <span class="keyword">public</span> fl::traits::singleton&lt;TestSingleton&gt;</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">friend</span> <span class="keyword">struct </span>fl::traits::singleton&lt;TestSingleton&gt;;</div>
 <div class="line"> </div>

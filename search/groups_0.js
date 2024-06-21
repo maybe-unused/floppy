@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['geometry_0',['Geometry',['../group__geometry.html',1,'']]]
+  ['details_0',['Geometry Details',['../group__geometry__details.html',1,'']]]
 ];

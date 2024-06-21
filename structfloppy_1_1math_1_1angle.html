@@ -128,7 +128,7 @@ $(function(){initNavTree('structfloppy_1_1math_1_1angle.html',''); initResizable
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="structfloppy_1_1math_1_1angle-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">angle&lt; T &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">angle&lt; T &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__geometry.html">Geometry</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -307,14 +307,15 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;concepts::num T = f32&gt;<br />
-struct floppy::math::angle&lt; T &gt;</div><p>Stores an angle in radians. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+struct floppy::math::angle&lt; T &gt;</div><p>Newtype describing an angle. </p>
+<p>Stores an angle in radians. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>Number type. Must satisfy concept <code><a class="el" href="conceptfloppy_1_1concepts_1_1num.html" title="Number concept.">floppy::concepts::num</a></code>. Default is <code>f32</code>. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00018">18</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00019">19</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a480ef2f6ca5320039182c62023b100b2" name="a480ef2f6ca5320039182c62023b100b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a480ef2f6ca5320039182c62023b100b2">&#9670;&#160;</a></span>underlying_type</h2>
@@ -372,7 +373,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Constructs an empty angle. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00022">22</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00023">23</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -410,7 +411,7 @@ template&lt;concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#acb086a1a839db1bd34fc99ec22c8431e" title="Constructs an angle from degrees.">from_degrees</a>, <a class="el" href="#ac7d4586b77d368fd0dbfe9a6c02e3e8c" title="Constructs an angle from radians.">from_radians</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00029">29</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00030">30</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -445,7 +446,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Implements <a class="el" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8">formattable_base&lt; C &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00037">37</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00038">38</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -476,7 +477,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Returns this angle as number in radians. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00045">45</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00046">46</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -507,7 +508,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Returns this angle as number in degrees. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00048">48</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00049">49</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -538,7 +539,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Returns this angle as number in range <img class="formulaInl" alt="$[0, 2\pi)$" src="form_0.png" width="33" height="14"/>. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00051">51</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00052">52</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -569,7 +570,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Returns this angle as number in range <img class="formulaInl" alt="$[-\pi, \pi)$" src="form_1.png" width="38" height="14"/>. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00060">60</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00061">61</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -607,7 +608,7 @@ template&lt;concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Takes wrapping and signs into account. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00070">70</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00071">71</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -649,7 +650,7 @@ template&lt;concepts::num T = f32&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00079">79</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00080">80</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -680,7 +681,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Return <img class="formulaInl" alt="$(sin(x), cos(x))$" src="form_2.png" width="83" height="14"/>. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00084">84</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00085">85</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -711,7 +712,7 @@ template&lt;concepts::num U&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00089">89</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00090">90</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -749,7 +750,7 @@ template&lt;concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#acb086a1a839db1bd34fc99ec22c8431e" title="Constructs an angle from degrees.">from_degrees</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00094">94</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00095">95</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -787,7 +788,7 @@ template&lt;concepts::num T = f32&gt; </div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac7d4586b77d368fd0dbfe9a6c02e3e8c" title="Constructs an angle from radians.">from_radians</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00099">99</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00100">100</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -818,7 +819,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Constructs an zero angle. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00102">102</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00103">103</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -849,7 +850,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Constructs an angle with value <img class="formulaInl" alt="$\pi$" src="form_3.png" width="9" height="6"/>. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00105">105</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00106">106</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -880,7 +881,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Constructs an angle with value <img class="formulaInl" alt="$2\pi$" src="form_4.png" width="14" height="9"/>. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00108">108</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00109">109</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -911,7 +912,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Constructs an angle with value <img class="formulaInl" alt="$\frac{\pi}{2}$" src="form_5.png" width="8" height="15"/>. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00111">111</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00112">112</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -942,7 +943,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Constructs an angle with value <img class="formulaInl" alt="$\frac{\pi}{3}$" src="form_6.png" width="8" height="15"/>. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00114">114</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00115">115</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
@@ -973,7 +974,7 @@ template&lt;concepts::num T = f32&gt; </div>
 
 <p>Constructs an angle with value <img class="formulaInl" alt="$\frac{\pi}{4}$" src="form_7.png" width="8" height="15"/>. </p>
 
-<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00117">117</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="angle_8h_source.html#l00118">118</a> of file <a class="el" href="angle_8h_source.html">angle.h</a>.</p>
 
 </div>
 </div>
