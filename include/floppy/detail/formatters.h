@@ -8,6 +8,8 @@
 namespace floppy
 {
   /// \brief Formatter for types which support stream output.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup helpers
   /// \details Example usage for <tt>std::ostream</tt>:
   ///
   /// \code {.cpp}
@@ -32,5 +34,3 @@ namespace floppy
     }
   };
 } // namespace floppy
-
-// todo: formatters for version and meta
