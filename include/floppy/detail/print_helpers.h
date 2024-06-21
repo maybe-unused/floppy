@@ -20,6 +20,8 @@ namespace floppy::print_helpers
   } // namespace detail
 
   /// \brief Prints a message to stderr with error formatting.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup helpers
   /// \param format The format string.
   /// \param args The format arguments.
   /// \tparam Args The format arguments types (inferred from the format string and args).
@@ -32,12 +34,15 @@ namespace floppy::print_helpers
       fmt::format(fmt::runtime(format), std::forward<Args>(args)...)
     );
   }
-}
+} // namespace floppy::print_helpers
 
 /// \defgroup macros Macros
+/// \brief Macros defined in public headers of the library.
 
-/// \ingroup macros
 /// \brief Prints a message to the console with google test style.
+/// \headerfile floppy/floppy.h
+/// \ingroup macros
+/// \ingroup helpers
 /// \details Use this macro to print messages in google test style.
 /// Example:
 /// \code {.cpp}

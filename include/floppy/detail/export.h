@@ -2,6 +2,8 @@
 
 #include <string>
 #include <string_view>
+#include <iostream>
+#include <fmt/format.h>
 
 #if defined(_WIN32)
 # if defined(FLOPPY_LIBRARY)
@@ -15,8 +17,8 @@
 # define FLOPPY_EXPORT
 #endif
 
-#define _stringify$(x) #x
-#define stringify$(x) _stringify$(x)
+#define _stringify$(x) #x // NOLINT(*-macro-usage)
+#define stringify$(x) _stringify$(x) // NOLINT(*-macro-usage)
 
 /// \brief Main namespace for the library.
 /// \note Use <tt>fl</tt> instead of <tt>floppy</tt> if you want shorter name.
@@ -24,16 +26,25 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
   /// \brief Metadata definitions, such as library version or name.
   namespace meta {
     namespace detail {
+      // todo: this must be rewritten
+      /// \internal
       constexpr auto is_digit(char c) -> bool { return c <= '9' && c >= '0'; }
+
+      /// \internal
       constexpr auto stoi_impl(char const* str, int value = 0) -> int {
         return *str ? is_digit(*str)
           ? stoi_impl(str + 1, (*str - '0') + value * 10)
           : throw "compile-time-error: not a digit" : value;
       }
+
+      /// \internal
       constexpr auto stoi(char const* str) -> int { return stoi_impl(str); }
     } // namespace detail
 
     /// \brief Version number structure.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup helpers
+    /// \see project_meta
     class version
     {
      public:
@@ -93,6 +104,9 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     static_assert(version(1, 2, 3).patch() == 3);
 
     /// \brief Project metadata constexpr structure.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup helpers
+    /// \see version
     class [[maybe_unused]] project_meta
     {
      public:
@@ -102,7 +116,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       /// \param domain Project domain.
       /// \param organization Project organization.
       /// \see project_name
-      consteval project_meta(version version, std::string_view name, std::string_view domain, std::string_view organization)
+      consteval project_meta(class version version, std::string_view name, std::string_view domain, std::string_view organization)
         : version_(version)
         , name_(name)
         , domain_(domain)
@@ -129,18 +143,41 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     };
 
     /// \brief Project metadata object, available at compile-time.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup helpers
     [[maybe_unused]] constexpr inline auto floppy_meta = project_meta(
       version(CMAKE_PROJECT_VERSION_MAJOR, CMAKE_PROJECT_VERSION_MINOR, CMAKE_PROJECT_VERSION_PATCH),
       std::string_view(stringify$(CMAKE_TARGET_NAME)),
-      "io",
+      "io.github.whs31",
       "whs31"
     );
+
+    /// \brief Stream adaptor for floppy::meta::version
+    template <class E, class T>
+    auto operator<<(std::basic_ostream<E, T>& os, version const& d) -> std::basic_ostream<E, T>& {
+      os << fmt::format("{}.{}.{}", d.major(), d.minor(), d.patch());
+      return os;
+    }
+
+    /// \brief Stream adaptor for floppy::meta::project_meta
+    template <class E, class T>
+    auto operator<<(std::basic_ostream<E, T>& os, project_meta const& d) -> std::basic_ostream<E, T>& {
+      os << fmt::format("{} v. {}.{}.{} (c) {} <{}>",
+        d.name(),
+        d.version().major(),
+        d.version().minor(),
+        d.version().patch(),
+        d.organization(),
+        d.domain()
+      );
+      return os;
+    }
 
     static_assert(floppy_meta.version().major() == CMAKE_PROJECT_VERSION_MAJOR, "major version isn't the same");
     static_assert(floppy_meta.version().minor() == CMAKE_PROJECT_VERSION_MINOR, "minor version isn't the same");
     static_assert(floppy_meta.version().patch() == CMAKE_PROJECT_VERSION_PATCH, "patch version isn't the same");
     static_assert(floppy_meta.name() == std::string_view(stringify$(CMAKE_TARGET_NAME)), "project name isn't the same");
-    static_assert(floppy_meta.domain() == "io", "project domain isn't the same");
+    static_assert(floppy_meta.domain() == "io.github.whs31", "project domain isn't the same");
     static_assert(floppy_meta.organization() == "whs31", "project organization isn't the same");
   } // namespace meta
 } // namespace floppy
@@ -148,5 +185,26 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
 #undef _stringify$
 #undef stringify$
 
+/// \namespace fl
 /// \brief Alias for the main namespace \ref floppy.
+/// \headerfile floppy/floppy.h
+/// \ingroup aliases
 namespace fl = floppy; // NOLINT(*-unused-alias-decls)
+
+#if defined(QT_CORE_LIB) || __has_include("qtglobal.h") || __has_include("qcoreapplication.h") || defined(DOXYGEN_GENERATING_OUTPUT)
+/// \ingroup macros
+/// \brief Flag defined if <b>Qt::Core</b> library is available and linked.
+# define FL_QT_CORE
+#endif
+
+#if defined(QT_GUI_LIB) || __has_include("qpainter.h") || __has_include("qguiapplication.h") || defined(DOXYGEN_GENERATING_OUTPUT)
+/// \ingroup macros
+/// \brief Flag defined if <b>Qt::Gui</b> library is available and linked.
+# define FL_QT_GUI
+#endif
+
+#if defined(DOXYGEN_GENERATING_OUTPUT)
+/// \ingroup macros
+/// \brief Flag defined if documentation is being generated.
+# define FL_DOC
+#endif

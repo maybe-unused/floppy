@@ -214,10 +214,11 @@ namespace floppy
 template <std::convertible_to<std::string> T>
 struct [[maybe_unused]] fmt::formatter<T>
 {
+  /// \brief Required by <tt>fmt</tt>.
   template <typename ParseContext>
-  constexpr auto parse(ParseContext& ctx) const {
-    return ctx.begin();
-  }
+  constexpr auto parse(ParseContext& ctx) const { return ctx.begin();}
+
+  /// \brief Required by <tt>fmt</tt>.
   template <typename FormatContext>
   constexpr auto format(T const& c, FormatContext& ctx) const {
     return format_to(ctx.out(), "{}", static_cast<std::string>(c));
@@ -228,10 +229,11 @@ struct [[maybe_unused]] fmt::formatter<T>
 template <floppy::traits::detail::derived_from_formattable<char> T>
 struct [[maybe_unused]] fmt::formatter<T>
 {
+  /// \brief Required by <tt>fmt</tt>.
   template <typename ParseContext>
-  constexpr auto parse(ParseContext& ctx) const {
-    return ctx.begin();
-  }
+  constexpr auto parse(ParseContext& ctx) const { return ctx.begin(); }
+
+  /// \brief Required by <tt>fmt</tt>.
   template <typename FormatContext>
   constexpr auto format(T const& c, FormatContext& ctx) const {
     return fmt::format_to(ctx.out(), "{}", c.to_string());

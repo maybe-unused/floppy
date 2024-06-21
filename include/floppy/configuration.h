@@ -154,12 +154,15 @@ namespace floppy
     /// \return Values of configuration file.
     [[nodiscard]] auto operator()() -> T&;
 
+    /// \brief Default copy assignment.
     auto operator=(configuration_file const&) -> configuration_file& = default;
+
+    /// \brief Default move assignment.
     auto operator=(configuration_file&&) -> configuration_file& = default;
 
    protected:
     /// \brief Reads content of configuration file from file.
-    auto read_from_file() const noexcept(false) -> std::string;
+    [[nodiscard]] auto read_from_file() const noexcept(false) -> std::string;
 
     /// \brief Writes content of configuration file to a file.
     auto write_to_file(std::string_view content) const noexcept(false) -> void;

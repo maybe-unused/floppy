@@ -10,15 +10,16 @@
 <a href="https://whs31.github.io/floppy/index.html">
 <img src="https://img.shields.io/badge/documentation-doxygen-white?style=for-the-badge&logo=readthedocs" alt="docs_badge"/>
 </a>
+<a href="https://tmp-name-org.github.io/floppy/index.html">
+<img src="https://img.shields.io/badge/doxygen-sky?style=for-the-badge&logo=readthedocs&label=dev-documentation" alt="docs_badge"/>
+</a>
 
-### [Changelog](./CHANGELOG.md)
-
-### Dependencies
+#### Dependencies
 
 - ![fmt logo](https://avatars.githubusercontent.com/u/7280830?s=16&v=4)[**fmt**](https://github.com/fmtlib/fmt) - modern formatting library (proposal for `std::format`) (**MIT**)
 
 [//]: # (- ![spdlog logo]&#40;https://avatars.githubusercontent.com/u/6052198?s=16&v=4&#41;[**spdlog**]&#40;https://github.com/gabime/spdlog&#41; - flexible logger implemented using *fmt* library &#40;**MIT**&#41;)
 
-### Licensing
+#### Licensing
 
 *Floppy* library is distributed under the MIT license. See [LICENSE](./LICENSE) for details.

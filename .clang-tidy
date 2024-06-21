@@ -14,11 +14,15 @@ Checks:
   google-explicit-constructor,
   llvm-namespace-comment,
   misc-*,
-  -misc-non-private-member-variables-in-classes,
   readability-*,
   -readability-identifier-length,
   -readability-implicit-bool-conversion,
   -readability-braces-around-statements,
+  -readability-avoid-magic-numbers,
+  -readability-magic-numbers,
+  -cppcoreguidelines-explicit-virtual-functions,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -misc-non-private-member-variables-in-classes,
   -misc-include-cleaner
 
 # Turn all the warnings from the checks above into errors.

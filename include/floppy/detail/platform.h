@@ -7,9 +7,12 @@
 
 namespace floppy
 {
-  /// \brief Platform information
+  /// \brief Platform information.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup platform
   /// \details Contains information about the operating system, architecture, language version and etc.
   /// Use \ref platform::current function or \ref floppy::current_platform constant to get the current platform information.
+  /// \see platform
   /// \see platform::current
   /// \see floppy::current_platform
   class platform
@@ -113,7 +116,7 @@ namespace floppy
     compiler compiler;
 
     /// \brief Holds current endianness.
-    /// \note Can often be unknown in current library version. I'm working on it.
+    /// \bug Can often be unknown in current library version. I'm working on it.
     endianness endianness;
 
     /// \brief Holds current C++ standard.
@@ -122,10 +125,7 @@ namespace floppy
     /// \brief Holds current path separator.
     char path_separator;
 
-//#pragma GCC diagnostic push
-//#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-//#pragma clang diagnostic push
-//#pragma ide diagnostic ignored "ConstantParameter"
+    /// \brief Constructs platform information for the current platform at compile-time.
     constexpr platform(
       enum operating_system operating_system_,
       enum arch architecture_,
@@ -141,8 +141,6 @@ namespace floppy
       , cxx_standard(cxx_standard_)
       , path_separator(path_separator_)
     {}
-//#pragma clang diagnostic pop
-//#pragma GCC diagnostic pop
 
     /// \brief Returns platform information for the current platform at compile-time.
     /// \see floppy::current_platform
@@ -357,12 +355,6 @@ namespace floppy
       #endif
     }
 
-//#pragma GCC diagnostic push
-//#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-//#pragma clang diagnostic push
-//#pragma ide diagnostic ignored "ConstantFunctionResult"
-//#pragma clang diagnostic push
-//#pragma ide diagnostic ignored "Simplify"
     /// \brief Returns constant-evaluated file system path separator character on the current platform.
     /// \details Returns <tt>'/'</tt> for POSIX and <tt>'\\'</tt> for Windows.
     /// \return File system path separator character.
@@ -372,11 +364,10 @@ namespace floppy
       else
         return '/';
     }
-//#pragma clang diagnostic pop
-//#pragma clang diagnostic pop
-//#pragma GCC diagnostic pop
   };
 
   /// \brief Constant-initialized variable, containing current platform information.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup platform
   inline auto constexpr current_platform = platform::current();
-} // namespace floppy::platform
+} // namespace floppy

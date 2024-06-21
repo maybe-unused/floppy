@@ -3,11 +3,16 @@ from conan import ConanFile
 from conan.tools.cmake import CMake, CMakeToolchain, cmake_layout, CMakeDeps
 from conan.tools.build import check_min_cppstd
 from conan.tools.files import rmdir
+try:
+    from termcolor import colored
+except ImportError:
+    def colored(text, color, on_color=None, attrs=None):
+        return text
 
 
 class FloppyRecipe(ConanFile):
     name = "floppy"
-    version = "1.1.5"
+    version = "1.2.0"
     description = "Library that augments and extends C++ standard library"
     author = "whs31 <whs31@github.io>"
     topics = ("logging", "coreutils", "utility")
