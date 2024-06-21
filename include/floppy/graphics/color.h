@@ -244,7 +244,7 @@ namespace floppy::gfx
       /// \param h Hue
       /// \param s Saturation
       /// \param v Value
-      constexpr hsv_t(u16 h, f32 s, f32 l)
+      constexpr hsv_t(u16 h, f32 s, f32 v)
         : h(h)
         , s(s)
         , v(v)
@@ -252,28 +252,53 @@ namespace floppy::gfx
 
       /// \brief Converts the color to RGB format.
       [[nodiscard]] constexpr auto to_rgb() const -> std::array<u8, 3> {
-        auto rgb = std::array<f32, 3>();
-        auto const fc = this->v * this->s;
-        auto const fh_prime = std::fmod(this->h / 60.0F, 6.0F);
-        auto const fx = fc * (1.0F - std::abs(std::fmod(fh_prime, 2.0F) - 1.0F));
-        auto const fm = this->v - fc;
-        if(0.F <= fh_prime and fh_prime < 1.F)
-          rgb = { fc, fx, 0.F };
-        else if(1.F <= fh_prime and fh_prime < 2.F)
-          rgb = { fx, fc, 0.F };
-        else if(2.F <= fh_prime and fh_prime < 3.F)
-          rgb = { 0.F, fc, fx };
-        else if(3.F <= fh_prime and fh_prime < 4.F)
-          rgb = { 0.F, fx, fc };
-        else if(4.F <= fh_prime and fh_prime < 5.F)
-          rgb = { fx, 0.F, fc };
-        else
-          rgb = { 0.F, 0.F, 0.F };
-        return std::array<u8, 3> {
-          static_cast<u8>(fm + rgb[0] * 255.0F),
-          static_cast<u8>(fm + rgb[1] * 255.0F),
-          static_cast<u8>(fm + rgb[2] * 255.0F)
-        };
+        auto rgb = std::array<u8, 3>();
+        auto tmp_rgb  = std::array<f32, 3>();
+        auto c = this->v * this->s ;
+        auto x = c * (1.0F - std::abs(std::fmod(this->h / 60.0F, 2.0F) - 1.0F));
+        auto m = this->v - c;
+        if (this->h < 60.F)
+          tmp_rgb = {c, x ,0};
+        else if (this->h < 120.F)
+          tmp_rgb = {x, c, 0};
+        else if (this->h < 180.F)
+          tmp_rgb = {0, c, x};
+        else if (this->h < 240.F)
+          tmp_rgb = {0, x, c};
+        else if (this->h < 300.F)
+          tmp_rgb = {x, 0, c};
+        else if (this->h < 360.F)
+          tmp_rgb = {c, 0, x};
+
+        rgb[0] = static_cast<u8>((tmp_rgb[0] + m) * 255.0F);
+        rgb[1] = static_cast<u8>((tmp_rgb[1] + m) * 255.0F);
+        rgb[2] = static_cast<u8>((tmp_rgb[2] + m) * 255.0F);
+        return rgb;
+
+
+        // ---- old implementation ----
+//        auto rgb = std::array<f32, 3>();
+//        auto const fc = this->v * this->s;
+//        auto const fh_prime = std::fmod(this->h / 60.0F, 6.0F);
+//        auto const fx = fc * (1.0F - std::abs(std::fmod(fh_prime, 2.0F) - 1.0F));
+//        auto const fm = this->v - fc;
+//        if(0.F <= fh_prime and fh_prime < 1.F)
+//          rgb = { fc, fx, 0.F };
+//        else if(1.F <= fh_prime and fh_prime < 2.F)
+//          rgb = { fx, fc, 0.F };
+//        else if(2.F <= fh_prime and fh_prime < 3.F)
+//          rgb = { 0.F, fc, fx };
+//        else if(3.F <= fh_prime and fh_prime < 4.F)
+//          rgb = { 0.F, fx, fc };
+//        else if(4.F <= fh_prime and fh_prime < 5.F)
+//          rgb = { fx, 0.F, fc };
+//        else
+//          rgb = { 0.F, 0.F, 0.F };
+//        return {
+//          static_cast<u8>(fm + rgb[0] * 255.0F),
+//          static_cast<u8>(fm + rgb[1] * 255.0F),
+//          static_cast<u8>(fm + rgb[2] * 255.0F)
+//        };
       }
 
       /// \brief Constructs an HSL color from RGB values.
