@@ -197,7 +197,7 @@ namespace floppy::math
       );
     }
 
-    /// \brief Calculates the least nonnegative remainder of </tt>self (mod other)</tt>.
+    /// \brief Calculates the least nonnegative remainder of <tt>self (mod other)</tt>.
     /// \tparam Q The type of the divisor. Can be <tt>point2d</tt> or <tt>size2d</tt>.
     /// \param other The divisor.
     /// \return The remainder.

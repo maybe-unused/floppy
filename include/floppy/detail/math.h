@@ -10,34 +10,35 @@
 /// \brief Math namespace.
 namespace floppy::math
 {
+  /// \brief Implementation details for math types.
+  namespace detail
+  {
+    template <concepts::num T, f64 V>
+    struct number_base
+    {
+      using type = T;
+      static constexpr type value = T{V};
+
+      constexpr number_base() = default;
+      constexpr operator type() const { return this->value; }
+
+      template <concepts::num U>
+      constexpr auto operator-(U const& other) const -> type { return this->value - other; }
+
+      template <concepts::num U>
+      constexpr auto operator*(U const& other) const -> type { return this->value * other; }
+
+      template <concepts::num U>
+      constexpr auto operator/(U const& other) const -> type { return this->value / other; }
+
+      template <concepts::num U>
+      constexpr auto operator+(U const& other) const -> type { return this->value + other; }
+    };
+  } // namespace detail
+
   /// \brief Numbers namespace.
   inline namespace numbers
   {
-    namespace detail
-    {
-      template <concepts::num T, f64 V>
-      struct number_base
-      {
-        using type = T;
-        static constexpr type value = T{V};
-
-        constexpr number_base() = default;
-        constexpr operator type() const { return this->value; }
-
-        template <concepts::num U>
-        constexpr auto operator-(U const& other) const -> type { return this->value - other; }
-
-        template <concepts::num U>
-        constexpr auto operator*(U const& other) const -> type { return this->value * other; }
-
-        template <concepts::num U>
-        constexpr auto operator/(U const& other) const -> type { return this->value / other; }
-
-        template <concepts::num U>
-        constexpr auto operator+(U const& other) const -> type { return this->value + other; }
-      };
-    } // namespace detail
-
     template <concepts::num T = f64>
     struct pi : detail::number_base<T, std::numbers::pi>
     {

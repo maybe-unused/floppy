@@ -1,3 +1,6 @@
+/// \file floppy/euclid/detail/nt_traits2d.h
+/// \author whs31
+
 #pragma once
 
 #include <array>

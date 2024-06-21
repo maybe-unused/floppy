@@ -1,9 +1,11 @@
+/// \file floppy/euclid/detail/nt_traits.h
+/// \author whs31
+
 #pragma once
 
 #include <floppy/detail/math.h>
 #include <floppy/detail/concepts.h>
 
-/// \brief Implementation details for math types.
 namespace floppy::math::detail
 {
   /// \brief CRTP base for trivially comparable numeric types.
