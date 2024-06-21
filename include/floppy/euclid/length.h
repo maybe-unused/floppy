@@ -11,6 +11,7 @@ namespace floppy::math
 {
   /// \brief A one-dimensional distance with associated unit of measurement.
   /// \headerfile floppy/euclid.h
+  /// \ingroup geometry
   /// \details Unit is not used in the representation of a length value.
   /// It is used only at compile time to ensure that a Length stored with one unit is converted
   /// explicitly before being used in an expression that requires a different unit.

@@ -1,3 +1,6 @@
+/// \file floppy/euclid/detail/nt_traits2d.h
+/// \author whs31
+
 #pragma once
 
 #include <array>
@@ -11,7 +14,7 @@ namespace floppy::math::detail
 {
   /// \brief CRTP base class for two dimensional numerical types.
   /// \headerfile floppy/euclid.h
-  /// \ingroup geometry
+  /// \ingroup geometry_details
   /// \tparam T The base class.
   /// \tparam U The unit type.
   /// \tparam N The number type. Must satisfy <i>floppy::concepts::num</i>.

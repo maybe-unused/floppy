@@ -17,6 +17,7 @@
 /// \brief Namespace with types related to graphics and drawing.
 namespace floppy::gfx
 {
+  /// \brief Implementation details for classes and functions related to \ref gfx.
   namespace detail
   {
     [[nodiscard]] constexpr auto hex_to_dec(char const c) -> i32 {
@@ -112,7 +113,10 @@ namespace floppy::gfx
   } // namespace detail
 
   /// \brief Class representing a color.
+  /// \details The color type is used by the graphics module to represent colors. Provides useful
+  /// functions to convert between different color formats.
   /// \headerfile floppy/graphics.h
+  /// \ingroup gfx
   class color : public traits::formattable<color, char>
   {
     template <concepts::num T = u8>
