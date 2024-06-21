@@ -128,11 +128,11 @@ $(function(){initNavTree('structfloppy_1_1source__location.html',''); initResiza
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="structfloppy_1_1source__location-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">source_location Struct Reference</div></div>
+  <div class="headertitle"><div class="title">source_location Struct Reference<div class="ingroups"><a class="el" href="group__backports.html">Backports</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="backports_8h_source.html">backports.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="floppy_8h_source.html">floppy/floppy.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -156,24 +156,25 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides information about the location of the current source file. </p>
-<p>Class provides information about the location of the current source file. This class is a port of C++20 std::source_location. Example usage: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line">  llog::debug(<span class="stringliteral">&quot;I am called from {}, {}:{} in file {}!&quot;</span>,</div>
+<p>Class provides information about the location of the current source file. This class is a port of C++20 std::source_location. Example usage: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> main() -&gt; <span class="keywordtype">int</span> {</div>
+<div class="line">  <a class="code hl_function" href="namespacefloppy_1_1log.html#aebe2862c002ab7a673f4ba5038a905c7">log::debug</a>(<span class="stringliteral">&quot;I am called from {}, {}:{} in file {}!&quot;</span>,</div>
 <div class="line">    lf::source_location::current().<a class="code hl_function" href="#a7d3e32bc7888d35bc6b6096f16472644">function_name</a>(),</div>
 <div class="line">    lf::source_location::current().<a class="code hl_function" href="#a045aa753ae450e5f2a63358a7778c7e2">line</a>(),</div>
 <div class="line">    lf::source_location::current().<a class="code hl_function" href="#aa5435523d5e20e47d7a4fe6c44cea263">column</a>(),</div>
 <div class="line">    lf::source_location::current().<a class="code hl_function" href="#a8f1c9c6c6060cef15dda6a2ef11384d2">file_name</a>()</div>
 <div class="line">  );</div>
-<div class="line">  llog::debug(<span class="stringliteral">&quot;I am called from {}&quot;</span>, lf::source_location::current());</div>
+<div class="line">  <a class="code hl_function" href="namespacefloppy_1_1log.html#aebe2862c002ab7a673f4ba5038a905c7">log::debug</a>(<span class="stringliteral">&quot;I am called from {}&quot;</span>, lf::source_location::current());</div>
 <div class="line">}</div>
-<div class="ttc" id="astructfloppy_1_1source__location_html_a045aa753ae450e5f2a63358a7778c7e2"><div class="ttname"><a href="#a045aa753ae450e5f2a63358a7778c7e2">floppy::source_location::line</a></div><div class="ttdeci">constexpr auto line() const noexcept -&gt; uint_least32_t</div><div class="ttdoc">Returns the line number. 0 if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00173">backports.h:173</a></div></div>
-<div class="ttc" id="astructfloppy_1_1source__location_html_a7d3e32bc7888d35bc6b6096f16472644"><div class="ttname"><a href="#a7d3e32bc7888d35bc6b6096f16472644">floppy::source_location::function_name</a></div><div class="ttdeci">constexpr auto function_name() const noexcept -&gt; char const *</div><div class="ttdoc">Returns the function name. NULL if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00170">backports.h:170</a></div></div>
-<div class="ttc" id="astructfloppy_1_1source__location_html_a8f1c9c6c6060cef15dda6a2ef11384d2"><div class="ttname"><a href="#a8f1c9c6c6060cef15dda6a2ef11384d2">floppy::source_location::file_name</a></div><div class="ttdeci">constexpr auto file_name() const noexcept -&gt; char const *</div><div class="ttdoc">Returns the file name.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00167">backports.h:167</a></div></div>
-<div class="ttc" id="astructfloppy_1_1source__location_html_aa5435523d5e20e47d7a4fe6c44cea263"><div class="ttname"><a href="#aa5435523d5e20e47d7a4fe6c44cea263">floppy::source_location::column</a></div><div class="ttdeci">constexpr auto column() const noexcept -&gt; uint_least32_t</div><div class="ttdoc">Returns the column number. 0 if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00176">backports.h:176</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1log_html_aebe2862c002ab7a673f4ba5038a905c7"><div class="ttname"><a href="namespacefloppy_1_1log.html#aebe2862c002ab7a673f4ba5038a905c7">floppy::log::debug</a></div><div class="ttdeci">auto debug(fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to default logger with level debug.</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00054">logging.h:54</a></div></div>
+<div class="ttc" id="astructfloppy_1_1source__location_html_a045aa753ae450e5f2a63358a7778c7e2"><div class="ttname"><a href="#a045aa753ae450e5f2a63358a7778c7e2">floppy::source_location::line</a></div><div class="ttdeci">constexpr auto line() const noexcept -&gt; uint_least32_t</div><div class="ttdoc">Returns the line number. 0 if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00192">backports.h:192</a></div></div>
+<div class="ttc" id="astructfloppy_1_1source__location_html_a7d3e32bc7888d35bc6b6096f16472644"><div class="ttname"><a href="#a7d3e32bc7888d35bc6b6096f16472644">floppy::source_location::function_name</a></div><div class="ttdeci">constexpr auto function_name() const noexcept -&gt; char const *</div><div class="ttdoc">Returns the function name. NULL if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00189">backports.h:189</a></div></div>
+<div class="ttc" id="astructfloppy_1_1source__location_html_a8f1c9c6c6060cef15dda6a2ef11384d2"><div class="ttname"><a href="#a8f1c9c6c6060cef15dda6a2ef11384d2">floppy::source_location::file_name</a></div><div class="ttdeci">constexpr auto file_name() const noexcept -&gt; char const *</div><div class="ttdoc">Returns the file name.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00186">backports.h:186</a></div></div>
+<div class="ttc" id="astructfloppy_1_1source__location_html_aa5435523d5e20e47d7a4fe6c44cea263"><div class="ttname"><a href="#aa5435523d5e20e47d7a4fe6c44cea263">floppy::source_location::column</a></div><div class="ttdeci">constexpr auto column() const noexcept -&gt; uint_least32_t</div><div class="ttdoc">Returns the column number. 0 if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00195">backports.h:195</a></div></div>
 </div><!-- fragment --><p>Output: </p><div class="fragment"><div class="line">I am called from main, 5:7 in file main.c++!</div>
 <div class="line">I am called from main.c++:main 6:7</div>
 </div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>This implementation can be aliased to <code>std::source_location</code>, if the compiler supports it. Otherwise, it is a self-contained port of C++20 std::source_location. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00101">101</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00120">120</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa3cb6509b6b1bf6578be6a615bd953ff" name="aa3cb6509b6b1bf6578be6a615bd953ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3cb6509b6b1bf6578be6a615bd953ff">&#9670;&#160;</a></span>source_location() <span class="overload">[1/2]</span></h2>
@@ -200,7 +201,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Creates an empty invalid <a class="el" href="structfloppy_1_1source__location.html" title="Provides information about the location of the current source file.">source_location</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00142">142</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00161">161</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -252,7 +253,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00154">154</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00173">173</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -296,7 +297,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00122">122</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00141">141</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -325,7 +326,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns the file name. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00167">167</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00186">186</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -354,7 +355,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns the function name. NULL if unknown or not available on compiler. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00170">170</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00189">189</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -383,7 +384,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns the line number. 0 if unknown or not available on compiler. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00173">173</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00192">192</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -412,7 +413,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns the column number. 0 if unknown or not available on compiler. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00176">176</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00195">195</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>

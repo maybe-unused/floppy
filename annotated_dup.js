@@ -13,15 +13,15 @@ var annotated_dup =
           [ "basic_numeric_newtype", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype" ],
           [ "basic_two_dimensional_type", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type" ],
           [ "default_comparable", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", null ],
-          [ "number_base", "structfloppy_1_1math_1_1detail_1_1number__base.html", null ]
+          [ "number_base", "structfloppy_1_1math_1_1detail_1_1number__base.html", "structfloppy_1_1math_1_1detail_1_1number__base" ]
         ] ],
         [ "numbers", "namespacefloppy_1_1math_1_1numbers.html", [
-          [ "pi", "structfloppy_1_1math_1_1numbers_1_1pi.html", null ]
+          [ "pi", "structfloppy_1_1math_1_1numbers_1_1pi.html", "structfloppy_1_1math_1_1numbers_1_1pi" ]
         ] ],
         [ "angle", "structfloppy_1_1math_1_1angle.html", "structfloppy_1_1math_1_1angle" ],
         [ "default_unit", "namespacefloppy_1_1math.html#structfloppy_1_1math_1_1default__unit", null ],
         [ "length", "classfloppy_1_1math_1_1length.html", "classfloppy_1_1math_1_1length" ],
-        [ "pi", "structfloppy_1_1math_1_1numbers_1_1pi.html", null ],
+        [ "pi", "structfloppy_1_1math_1_1numbers_1_1pi.html", "structfloppy_1_1math_1_1numbers_1_1pi" ],
         [ "point2d", "classfloppy_1_1math_1_1point2d.html", "classfloppy_1_1math_1_1point2d" ],
         [ "scale", "structfloppy_1_1math_1_1scale.html", "structfloppy_1_1math_1_1scale" ],
         [ "size2d", "classfloppy_1_1math_1_1size2d.html", "classfloppy_1_1math_1_1size2d" ],
@@ -32,8 +32,8 @@ var annotated_dup =
         [ "version", "classfloppy_1_1meta_1_1version.html", "classfloppy_1_1meta_1_1version" ]
       ] ],
       [ "ranges", "namespacefloppy_1_1ranges.html", [
-        [ "detail", null, [
-          [ "to_helper", "structfloppy_1_1ranges_1_1detail_1_1to__helper.html", null ]
+        [ "detail", "namespacefloppy_1_1ranges_1_1detail.html", [
+          [ "to_helper", "namespacefloppy_1_1ranges_1_1detail.html#structfloppy_1_1ranges_1_1detail_1_1to__helper", null ]
         ] ]
       ] ],
       [ "serialization", "namespacefloppy_1_1serialization.html", [
@@ -52,7 +52,7 @@ var annotated_dup =
       [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
       [ "one_of", "structfloppy_1_1one__of.html", null ],
       [ "ostream_formatter", "structfloppy_1_1ostream__formatter.html", null ],
-      [ "plain_type", "namespacefloppy.html#structfloppy_1_1plain__type", null ],
+      [ "plain_type", "group__helpers.html#structfloppy_1_1plain__type", null ],
       [ "platform", "classfloppy_1_1platform.html", "classfloppy_1_1platform" ],
       [ "source_location", "structfloppy_1_1source__location.html", "structfloppy_1_1source__location" ]
     ] ],

@@ -125,22 +125,11 @@ $(function(){initNavTree('group__geometry.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#groups">Topics</a> &#124;
 <a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">Geometry</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Collaboration diagram for Geometry:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="group__geometry.svg" width="276" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="groups" name="groups"></a>
-Topics</h2></td></tr>
-<tr class="memitem:group__geometry__details" id="r_group__geometry__details"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__details.html">Geometry Details</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfloppy_1_1math_1_1angle.html">angle&lt; T &gt;</a></td></tr>
@@ -158,6 +147,35 @@ Classes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Classes for geometric types with a focus on 2d graphics and layout. </p>
+<p>The geometry module provides classes for geometric types with a focus on 2d graphics and layout.</p>
+<p>This module provides optional measurement unit system. All types below support this system. By default, types use the default unit <code><a class="el" href="namespacefloppy_1_1math.html#structfloppy_1_1math_1_1default__unit" title="Default unit of measurement.">floppy::math::default_unit</a></code>. See <a class="el" href="structfloppy_1_1math_1_1scale.html">floppy::math::scale</a> for tutorial on implementing your own units and converting between them.</p>
+<p>The following classes for measuring lengths and angles are provided:</p><ul>
+<li><code><a class="el" href="structfloppy_1_1math_1_1angle.html" title="Newtype describing an angle.">floppy::math::angle</a></code></li>
+<li><code><a class="el" href="classfloppy_1_1math_1_1length.html" title="A one-dimensional distance with associated unit of measurement.">floppy::math::length</a></code></li>
+<li><code><a class="el" href="structfloppy_1_1math_1_1scale.html" title="A scaling factor between two different units of measurement.">floppy::math::scale</a></code> for converting between units <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo</a></b></dt><dd><p class="startdd">Add class <code>box2d</code>. </p>
+<p class="interdd">Add class <code>rect</code>. </p>
+<p class="interdd">Add class <code>transform2d</code>. </p>
+<p class="interdd">Add class <code>translation2d</code>. </p>
+<p class="enddd">Add class <code>rotation2d</code></p>
+</dd></dl>
+</li>
+</ul>
+<p>The following classes for 2-dimensional geometry are provided:</p><ul>
+<li><code><a class="el" href="classfloppy_1_1math_1_1point2d.html" title="A two-dimensional point tagged with a unit.">floppy::math::point2d</a></code></li>
+<li><code><a class="el" href="classfloppy_1_1math_1_1vector2d.html" title="A two-dimensional vector tagged with a unit.">floppy::math::vector2d</a></code></li>
+<li><code><a class="el" href="classfloppy_1_1math_1_1size2d.html" title="A two-dimensional size2d tagged with a unit.">floppy::math::size2d</a></code></li>
+</ul>
+<p>3-dimensional geometry is not yet supported. See to-do items below. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo</a></b></dt><dd><p class="startdd">Add class <code>box3d</code> </p>
+<p class="interdd">Add class <code>transform3d</code>. </p>
+<p class="interdd">Add class <code>translation3d</code>. </p>
+<p class="interdd">Add class <code>vector3d</code> </p>
+<p class="interdd">Add class <code>rotation3d</code> </p>
+<p class="interdd">Add class <code>rigidtransform3d</code> </p>
+<p class="interdd">Add class <code>point3d</code> </p>
+<p class="enddd">Add class <code>size3d</code></p>
+</dd></dl>
+<p>This module in inspired (copied from) Rust's <code>euclid</code> crate. </p><dl class="section see"><dt>See also</dt><dd><a href="https://docs.rs/euclid/latest/euclid">https://docs.rs/euclid/latest/euclid</a></dd></dl>
+<dl class="section invariant"><dt>Invariant</dt><dd>If <b>Qt Gui</b> is linked against the TU this header is compiled for, the conversions between Qt classes (such as <code>QPointF</code>) and the <code>floppy</code> types are available. </dd></dl>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,6 +1,5 @@
 var color_8h =
 [
-    [ "color", "classfloppy_1_1gfx_1_1color.html", "classfloppy_1_1gfx_1_1color" ],
     [ "hsl_t", "structfloppy_1_1gfx_1_1color_1_1hsl__t.html", "structfloppy_1_1gfx_1_1color_1_1hsl__t" ],
     [ "hsla_t", "structfloppy_1_1gfx_1_1color_1_1hsla__t.html", "structfloppy_1_1gfx_1_1color_1_1hsla__t" ],
     [ "hsv_t", "structfloppy_1_1gfx_1_1color_1_1hsv__t.html", "structfloppy_1_1gfx_1_1color_1_1hsv__t" ],

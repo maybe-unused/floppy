@@ -76,6 +76,7 @@ var classfloppy_1_1platform =
       [ "big", "classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637ad861877da56b8b4ceb35c8cbfdf65bb4", null ],
       [ "unknown", "classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637aad921d60486366258809553a3db49a4a", null ]
     ] ],
+    [ "platform", "classfloppy_1_1platform.html#afa0fafd60bf8f6496afb093953547e5d", null ],
     [ "current", "classfloppy_1_1platform.html#ae38f44be4199dfae927a98d8aa44d53a", null ],
     [ "swap_endian", "classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32", null ],
     [ "operating_system", "classfloppy_1_1platform.html#a82e09c39009db86033c546727eb900b8", null ],

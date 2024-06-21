@@ -105,8 +105,8 @@ var sectionId = 'dynsection-0';
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="642.75,-128.5 524.75,-128.5 524.75,-98 642.75,-98 642.75,-128.5"/>
+<g id="a_Node000004"><a xlink:href="structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" target="_top" xlink:title="Formatter for floppy::meta::project_meta">
+<polygon fill="white" stroke="#666666" points="642.75,-128.5 524.75,-128.5 524.75,-98 642.75,-98 642.75,-128.5"/>
 <text text-anchor="start" x="532.75" y="-114.05" font-family="Helvetica,sans-Serif" font-size="11.00">formatter&lt; floppy::</text>
 <text text-anchor="middle" x="583.75" y="-102.8" font-family="Helvetica,sans-Serif" font-size="11.00">meta::project_meta &gt;</text>
 </a>
@@ -124,8 +124,8 @@ var sectionId = 'dynsection-0';
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="635.62,-79.5 531.88,-79.5 531.88,-49 635.62,-49 635.62,-79.5"/>
+<g id="a_Node000005"><a xlink:href="structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" target="_top" xlink:title="Formatter for floppy::meta::version">
+<polygon fill="white" stroke="#666666" points="635.62,-79.5 531.88,-79.5 531.88,-49 635.62,-49 635.62,-79.5"/>
 <text text-anchor="start" x="539.88" y="-65.05" font-family="Helvetica,sans-Serif" font-size="11.00">formatter&lt; floppy::</text>
 <text text-anchor="middle" x="583.75" y="-53.8" font-family="Helvetica,sans-Serif" font-size="11.00">meta::version &gt;</text>
 </a>
@@ -143,8 +143,8 @@ var sectionId = 'dynsection-0';
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="635.62,-30.5 531.88,-30.5 531.88,0 635.62,0 635.62,-30.5"/>
+<g id="a_Node000006"><a xlink:href="structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" target="_top" xlink:title="Formatter for floppy::source_location">
+<polygon fill="white" stroke="#666666" points="635.62,-30.5 531.88,-30.5 531.88,0 635.62,0 635.62,-30.5"/>
 <text text-anchor="start" x="539.88" y="-16.05" font-family="Helvetica,sans-Serif" font-size="11.00">formatter&lt; floppy::</text>
 <text text-anchor="middle" x="583.75" y="-4.8" font-family="Helvetica,sans-Serif" font-size="11.00">source_location &gt;</text>
 </a>

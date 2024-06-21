@@ -87,10 +87,10 @@ var hierarchy =
     ] ],
     [ "number_base< f64, std::numbers::pi >", "structfloppy_1_1math_1_1detail_1_1number__base.html", null ],
     [ "one_of< U, T >", "structfloppy_1_1one__of.html", null ],
-    [ "plain_type< T >", "namespacefloppy.html#structfloppy_1_1plain__type", null ],
+    [ "plain_type< T >", "group__helpers.html#structfloppy_1_1plain__type", null ],
     [ "platform", "classfloppy_1_1platform.html", null ],
     [ "project_meta", "classfloppy_1_1meta_1_1project__meta.html", null ],
     [ "source_location", "structfloppy_1_1source__location.html", null ],
-    [ "to_helper< C >", "structfloppy_1_1ranges_1_1detail_1_1to__helper.html", null ],
+    [ "to_helper< C >", "namespacefloppy_1_1ranges_1_1detail.html#structfloppy_1_1ranges_1_1detail_1_1to__helper", null ],
     [ "version", "classfloppy_1_1meta_1_1version.html", null ]
 ];

@@ -141,23 +141,21 @@ $(function(){initNavTree('formatters_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy.html">floppy</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> C&gt;</div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structfloppy_1_1ostream__formatter.html">   25</a></span>  <span class="keyword">struct </span>[[maybe_unused]] <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">ostream_formatter</a> : fmt::formatter&lt;std::basic_string_view&lt;C&gt;, C&gt;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> OutputIt&gt;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">auto</span> format(T <span class="keyword">const</span>&amp; value, fmt::basic_format_context&lt;OutputIt, C&gt;&amp; ctx) <span class="keyword">const</span> -&gt; OutputIt {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keyword">auto</span> ss = std::basic_stringstream&lt;C&gt;();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      ss &lt;&lt; value;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordflow">return</span> fmt::formatter&lt;std::basic_string_view&lt;C&gt;, C&gt;::format(ss.str(), ctx);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  };</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> C&gt;</div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structfloppy_1_1ostream__formatter.html">   27</a></span>  <span class="keyword">struct </span>[[maybe_unused]] <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">ostream_formatter</a> : fmt::formatter&lt;std::basic_string_view&lt;C&gt;, C&gt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> OutputIt&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">auto</span> format(T <span class="keyword">const</span>&amp; value, fmt::basic_format_context&lt;OutputIt, C&gt;&amp; ctx) <span class="keyword">const</span> -&gt; OutputIt {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keyword">auto</span> ss = std::basic_stringstream&lt;C&gt;();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      ss &lt;&lt; value;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keywordflow">return</span> fmt::formatter&lt;std::basic_string_view&lt;C&gt;, C&gt;::format(ss.str(), ctx);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  };</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// namespace floppy</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// todo: formatters for version and meta</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <span class="comment">// namespace floppy</span></div>
 <div class="ttc" id="anamespacefloppy_html"><div class="ttname"><a href="namespacefloppy.html">floppy</a></div><div class="ttdoc">Main namespace for the library.</div><div class="ttdef"><b>Definition</b> <a href="configuration_8h_source.html#l00010">configuration.h:11</a></div></div>
-<div class="ttc" id="astructfloppy_1_1ostream__formatter_html"><div class="ttname"><a href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a></div><div class="ttdoc">Formatter for types which support stream output.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">formatters.h:26</a></div></div>
+<div class="ttc" id="astructfloppy_1_1ostream__formatter_html"><div class="ttname"><a href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a></div><div class="ttdoc">Formatter for types which support stream output.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">formatters.h:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

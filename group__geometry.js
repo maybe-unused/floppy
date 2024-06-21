@@ -1,6 +1,5 @@
 var group__geometry =
 [
-    [ "Geometry Details", "group__geometry__details.html", "group__geometry__details" ],
     [ "angle< T >", "structfloppy_1_1math_1_1angle.html", [
       [ "underlying_type", "structfloppy_1_1math_1_1angle.html#a480ef2f6ca5320039182c62023b100b2", null ],
       [ "angle", "structfloppy_1_1math_1_1angle.html#a0b3265454614c3cb2c563ec74dfeb851", null ],

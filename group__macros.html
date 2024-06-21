@@ -132,33 +132,68 @@ $(function(){initNavTree('group__macros.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga5640226fcdabfd268993c1d43f34885e" id="r_ga5640226fcdabfd268993c1d43f34885e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5640226fcdabfd268993c1d43f34885e">GTEST_PRINT</a>(...)&#160;&#160;&#160;<a class="el" href="namespacefloppy_1_1print__helpers_1_1detail.html#af16c3ca8e24d92348feaa691921e8ffc">::floppy::print_helpers::detail::google_test_print</a>(__VA_ARGS__)</td></tr>
-<tr class="separator:ga5640226fcdabfd268993c1d43f34885e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf5f26fdd9376614b44211d6e1b931fe7" id="r_gaf5f26fdd9376614b44211d6e1b931fe7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf5f26fdd9376614b44211d6e1b931fe7">FL_QT_CORE</a></td></tr>
+<tr class="separator:gaf5f26fdd9376614b44211d6e1b931fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c801aa7bea6159f95ce836e34f5b576" id="r_ga6c801aa7bea6159f95ce836e34f5b576"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6c801aa7bea6159f95ce836e34f5b576">FL_QT_GUI</a></td></tr>
+<tr class="separator:ga6c801aa7bea6159f95ce836e34f5b576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf067ce0ad7d6807e89db2bebeb0aaabd" id="r_gaf067ce0ad7d6807e89db2bebeb0aaabd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf067ce0ad7d6807e89db2bebeb0aaabd">FL_DOC</a></td></tr>
+<tr class="separator:gaf067ce0ad7d6807e89db2bebeb0aaabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Macros defined in public headers of the library. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga5640226fcdabfd268993c1d43f34885e" name="ga5640226fcdabfd268993c1d43f34885e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5640226fcdabfd268993c1d43f34885e">&#9670;&#160;</a></span>GTEST_PRINT</h2>
+<a id="gaf5f26fdd9376614b44211d6e1b931fe7" name="gaf5f26fdd9376614b44211d6e1b931fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf5f26fdd9376614b44211d6e1b931fe7">&#9670;&#160;</a></span>FL_QT_CORE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GTEST_PRINT</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="namespacefloppy_1_1print__helpers_1_1detail.html#af16c3ca8e24d92348feaa691921e8ffc">::floppy::print_helpers::detail::google_test_print</a>(__VA_ARGS__)</td>
+          <td class="memname">#define FL_QT_CORE</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prints a message to the console with google test style. </p>
-<p>Use this macro to print messages in google test style. Example: </p><div class="fragment"><div class="line">GTEST_PRINT(<span class="stringliteral">&quot;Hello, {}!&quot;</span>, <span class="stringliteral">&quot;World&quot;</span>);</div>
-<div class="line">GTEST_PRINT(<span class="stringliteral">&quot;Hello, {}!&quot;</span>, 42);</div>
-</div><!-- fragment --><p> Output: </p><div class="fragment"><div class="line">[          ] Hello, World!</div>
-<div class="line">[          ] Hello, 42!</div>
-</div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="print__helpers_8h_source.html#l00052">52</a> of file <a class="el" href="print__helpers_8h_source.html">print_helpers.h</a>.</p>
+<p>Alias for the main namespace <a class="el" href="namespacefloppy.html">floppy</a>. </p>
+<p>Flag defined if Qt::Core library is available and linked. </p>
+
+<p class="definition">Definition at line <a class="el" href="export_8h_source.html#l00189">189</a> of file <a class="el" href="export_8h_source.html">export.h</a>.</p>
+
+</div>
+</div>
+<a id="ga6c801aa7bea6159f95ce836e34f5b576" name="ga6c801aa7bea6159f95ce836e34f5b576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c801aa7bea6159f95ce836e34f5b576">&#9670;&#160;</a></span>FL_QT_GUI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FL_QT_GUI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag defined if Qt::Gui library is available and linked. </p>
+
+<p class="definition">Definition at line <a class="el" href="export_8h_source.html#l00195">195</a> of file <a class="el" href="export_8h_source.html">export.h</a>.</p>
+
+</div>
+</div>
+<a id="gaf067ce0ad7d6807e89db2bebeb0aaabd" name="gaf067ce0ad7d6807e89db2bebeb0aaabd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf067ce0ad7d6807e89db2bebeb0aaabd">&#9670;&#160;</a></span>FL_DOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FL_DOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag defined if documentation is being generated. </p>
+
+<p class="definition">Definition at line <a class="el" href="export_8h_source.html#l00201">201</a> of file <a class="el" href="export_8h_source.html">export.h</a>.</p>
 
 </div>
 </div>

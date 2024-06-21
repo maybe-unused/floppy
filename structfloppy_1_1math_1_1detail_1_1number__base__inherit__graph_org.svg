@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="Base class for numbers.">
 <polygon fill="#999999" stroke="#666666" points="138.75,-108.25 17.75,-108.25 17.75,-89 138.75,-89 138.75,-108.25"/>
 <text text-anchor="middle" x="78.25" y="-93.8" font-family="Helvetica,sans-Serif" font-size="11.00">number_base&lt; T, V &gt;</text>
 </a>
@@ -20,8 +20,8 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="structfloppy_1_1math_1_1numbers_1_1pi.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="50.5,-24.88 0,-24.88 0,-5.63 50.5,-5.63 50.5,-24.88"/>
+<g id="a_Node000002"><a xlink:href="structfloppy_1_1math_1_1numbers_1_1pi.html" target="_top" xlink:title="Pi number.">
+<polygon fill="white" stroke="#666666" points="50.5,-24.88 0,-24.88 0,-5.63 50.5,-5.63 50.5,-24.88"/>
 <text text-anchor="middle" x="25.25" y="-10.43" font-family="Helvetica,sans-Serif" font-size="11.00">pi&lt; T &gt;</text>
 </a>
 </g>
@@ -39,7 +39,7 @@
 <g id="Node000003" class="node">
 <title>Node3</title>
 <g id="a_Node000003"><a xlink:href="structfloppy_1_1math_1_1detail_1_1number__base.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="195.75,-30.5 68.75,-30.5 68.75,0 195.75,0 195.75,-30.5"/>
+<polygon fill="white" stroke="#666666" points="195.75,-30.5 68.75,-30.5 68.75,0 195.75,0 195.75,-30.5"/>
 <text text-anchor="start" x="76.75" y="-16.05" font-family="Helvetica,sans-Serif" font-size="11.00">number_base&lt; f64, std</text>
 <text text-anchor="middle" x="132.25" y="-4.8" font-family="Helvetica,sans-Serif" font-size="11.00">::numbers::pi &gt;</text>
 </a>

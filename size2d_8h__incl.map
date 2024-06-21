@@ -1,13 +1,15 @@
 <map id="size2d.h" name="size2d.h">
-<area shape="rect" id="Node000001" title="A two&#45;dimensional size tagged with a unit." alt="" coords="367,5,441,31"/>
+<area shape="rect" id="Node000001" title="A two&#45;dimensional size tagged with a unit." alt="" coords="470,5,544,31"/>
 <area shape="rect" id="Node000002" href="$math_8h_source.html" title=" " alt="" coords="378,404,523,429"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="442,26,497,45,556,75,583,95,604,119,619,147,624,179,624,256,621,281,611,305,597,326,579,345,537,377,496,399,493,395,534,372,575,341,593,323,606,302,615,280,619,255,619,179,614,149,600,122,579,99,553,80,495,50,441,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="525,29,554,53,587,88,613,130,621,154,624,179,624,256,621,281,611,305,597,326,579,345,537,377,496,399,493,395,534,372,575,341,593,323,606,302,615,280,619,255,619,179,616,155,608,133,582,91,550,57,522,33"/>
 <area shape="rect" id="Node000012" href="$concepts_8h_source.html" title=" " alt="" coords="43,485,213,511"/>
-<area shape="poly" id="edge21_Node000001_Node000012" title=" " alt="" coords="367,29,269,50,150,83,95,104,49,127,19,153,11,166,8,179,8,337,10,358,17,379,40,417,69,449,99,473,95,477,65,453,35,420,12,381,5,359,3,337,3,179,6,164,15,149,46,123,92,99,148,78,268,45,366,24"/>
+<area shape="poly" id="edge21_Node000001_Node000012" title=" " alt="" coords="469,26,348,42,194,72,122,93,63,118,40,132,22,147,12,163,8,179,8,337,10,358,17,379,40,417,69,449,99,473,95,477,65,453,35,420,12,381,5,359,3,337,3,179,7,160,18,143,37,128,60,113,120,88,193,67,347,37,469,21"/>
 <area shape="rect" id="Node000020" href="$length_8h.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="429,168,584,193"/>
-<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="414,30,493,153,488,156,409,33"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="509,32,509,152,504,152,504,32"/>
 <area shape="rect" id="Node000029" href="$nt__traits2d_8h.html" title=" " alt="" coords="232,79,371,120"/>
-<area shape="poly" id="edge39_Node000001_Node000029" title=" " alt="" coords="390,34,340,72,337,67,387,29"/>
+<area shape="poly" id="edge39_Node000001_Node000029" title=" " alt="" coords="476,34,368,76,366,71,474,29"/>
+<area shape="rect" id="Node000034" title=" " alt="" coords="659,87,725,112"/>
+<area shape="poly" id="edge46_Node000001_Node000034" title=" " alt="" coords="536,29,651,78,649,83,534,34"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="339,485,400,511"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="440,432,395,476,391,472,436,428"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="424,485,477,511"/>

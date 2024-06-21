@@ -4,10 +4,10 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="417,88,507,88,507,94,417,94"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,71,176,111"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,88,224,88,224,94,192,94"/>
-<area shape="rect" id="Node000004" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" title=" " alt="" coords="705,5,862,46"/>
+<area shape="rect" id="Node000004" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" title="Formatter for floppy::meta::project_meta" alt="" coords="705,5,862,46"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="660,63,717,44,719,49,662,68"/>
-<area shape="rect" id="Node000005" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" title=" " alt="" coords="715,71,853,111"/>
+<area shape="rect" id="Node000005" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" title="Formatter for floppy::meta::version" alt="" coords="715,71,853,111"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="671,88,714,88,714,94,671,94"/>
-<area shape="rect" id="Node000006" href="$structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" title=" " alt="" coords="715,136,853,177"/>
+<area shape="rect" id="Node000006" href="$structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" title="Formatter for floppy::source_location" alt="" coords="715,136,853,177"/>
 <area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="662,114,719,133,717,138,660,119"/>
 </map>
