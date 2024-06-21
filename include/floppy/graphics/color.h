@@ -35,7 +35,9 @@ namespace floppy::gfx
       return v2 < v1 ? min(v2, args...) : min(v1, args...);
     }
 
-    template <typename T> constexpr auto max(T&& v) -> T { return std::forward<T>(v); }
+    template <typename T>
+    [[maybe_unused]] constexpr auto max(T&& v) -> T { return std::forward<T>(v); }
+
     template <typename T, typename... Args>
     constexpr auto max(T const& v1, T const& v2, Args const&... args) -> T {
       return v2 > v1 ? max(v2, args...) : max(v1, args...);
@@ -257,17 +259,17 @@ namespace floppy::gfx
         auto c = this->v * this->s ;
         auto x = c * (1.0F - std::abs(std::fmod(this->h / 60.0F, 2.0F) - 1.0F));
         auto m = this->v - c;
-        if (this->h < 60.F)
+        if(this->h < 60.F)
           tmp_rgb = {c, x ,0};
-        else if (this->h < 120.F)
+        else if(this->h < 120.F)
           tmp_rgb = {x, c, 0};
-        else if (this->h < 180.F)
+        else if(this->h < 180.F)
           tmp_rgb = {0, c, x};
-        else if (this->h < 240.F)
+        else if(this->h < 240.F)
           tmp_rgb = {0, x, c};
-        else if (this->h < 300.F)
+        else if(this->h < 300.F)
           tmp_rgb = {x, 0, c};
-        else if (this->h < 360.F)
+        else if(this->h < 360.F)
           tmp_rgb = {c, 0, x};
 
         rgb[0] = static_cast<u8>((tmp_rgb[0] + m) * 255.0F);
