@@ -121,7 +121,7 @@ namespace floppy::math
 
     /// \brief Returns this vector3d's length as scalar value.
     /// \return The length of this vector3d.
-    [[nodiscard]] constexpr auto length() const -> underlying_type {
+    [[nodiscard]] constexpr auto length_scalar() const -> underlying_type {
       return underlying_type(std::sqrt(this->length_squared()));
     }
 
@@ -162,7 +162,7 @@ namespace floppy::math
 
     /// \brief Returns the vector with length normalized.
     /// \return The normalized vector.
-    [[nodiscard]] constexpr auto normalized() const -> vector2d { return *this / this->length(); }
+    [[nodiscard]] constexpr auto normalized() const -> vector2d { return *this / this->length_scalar(); }
 
     /// \brief Returns this vector scaled to fit the provided length.
     /// \param l The length to scale to.
