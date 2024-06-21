@@ -37,6 +37,9 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     } // namespace detail
 
     /// \brief Version number structure.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup helpers
+    /// \see project_meta
     class version
     {
      public:
@@ -96,6 +99,9 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     static_assert(version(1, 2, 3).patch() == 3);
 
     /// \brief Project metadata constexpr structure.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup helpers
+    /// \see version
     class [[maybe_unused]] project_meta
     {
      public:
@@ -132,6 +138,8 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     };
 
     /// \brief Project metadata object, available at compile-time.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup helpers
     [[maybe_unused]] constexpr inline auto floppy_meta = project_meta(
       version(CMAKE_PROJECT_VERSION_MAJOR, CMAKE_PROJECT_VERSION_MINOR, CMAKE_PROJECT_VERSION_PATCH),
       std::string_view(stringify$(CMAKE_TARGET_NAME)),
@@ -175,14 +183,20 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
 /// \brief Alias for the main namespace \ref floppy.
 namespace fl = floppy; // NOLINT(*-unused-alias-decls)
 
-#if defined(QT_CORE_LIB) || __has_include("qtglobal.h") || __has_include("qcoreapplication.h")
+#if defined(QT_CORE_LIB) || __has_include("qtglobal.h") || __has_include("qcoreapplication.h") || defined(DOXYGEN_GENERATING_OUTPUT)
+/// \ingroup macros
+/// \brief Flag defined if Qt::Core library is available and linked.
 # define FL_QT_CORE
 #endif
 
-#if defined(QT_GUI_LIB) || __has_include("qpainter.h") || __has_include("qguiapplication.h")
+#if defined(QT_GUI_LIB) || __has_include("qpainter.h") || __has_include("qguiapplication.h") || defined(DOXYGEN_GENERATING_OUTPUT)
+/// \ingroup macros
+/// \brief Flag defined if Qt::Gui library is available and linked.
 # define FL_QT_GUI
 #endif
 
 #if defined(DOXYGEN_GENERATING_OUTPUT)
+/// \ingroup macros
+/// \brief Flag defined if documentation is being generated.
 # define FL_DOC
 #endif

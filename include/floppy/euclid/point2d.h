@@ -18,6 +18,7 @@ namespace floppy::math
 {
   /// \brief A two-dimensional point tagged with a unit.
   /// \headerfile floppy/euclid.h
+  /// \ingroup geometry
   /// \tparam U Associated unit of measurement. Default is \ref default_unit.
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   /// \see floppy::math::length
@@ -197,7 +198,7 @@ namespace floppy::math
       );
     }
 
-    /// \brief Calculates the least nonnegative remainder of </tt>self (mod other)</tt>.
+    /// \brief Calculates the least nonnegative remainder of <tt>self (mod other)</tt>.
     /// \tparam Q The type of the divisor. Can be <tt>point2d</tt> or <tt>size2d</tt>.
     /// \param other The divisor.
     /// \return The remainder.

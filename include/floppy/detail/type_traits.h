@@ -5,6 +5,8 @@
 namespace floppy
 {
   /// \brief Remove all cv qualifiers, references and pointers from a type.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup helpers
   /// \details E.g: <br> - <tt>std::string&</tt> becomes <tt>std::string</tt>;<br>
   /// - <tt>const int*</tt> becomes <tt>int</tt>.
   /// - <tt>int**</tt> becomes <tt>int</tt>.
@@ -22,10 +24,14 @@ namespace floppy
   };
 
   /// \brief Remove all cv qualifiers, references and pointers from a type.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup helpers
   template <typename T>
   using plain_type_t = typename plain_type<T>::type;
 
   /// \brief Checks if type is one of the given types.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup helpers
   /// \tparam U The type to check.
   /// \tparam T The types to check against.
   /// \sa one_of_v
@@ -36,6 +42,8 @@ namespace floppy
   };
 
   /// \brief Checks if type is one of the given types.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup helpers
   /// \tparam U The type to check.
   /// \tparam T The types to check against.
   /// \sa one_of
