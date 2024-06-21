@@ -36,6 +36,12 @@ var hierarchy =
       [ "formattable< color::hsla_t, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
         [ "hsla_t", "d2/d0e/structfloppy_1_1gfx_1_1color_1_1hsla__t.html", null ]
       ] ],
+      [ "formattable< color::hsv_t, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
+        [ "hsv_t", "df/de6/structfloppy_1_1gfx_1_1color_1_1hsv__t.html", null ]
+      ] ],
+      [ "formattable< color::hsva_t, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
+        [ "hsva_t", "dd/dc9/structfloppy_1_1gfx_1_1color_1_1hsva__t.html", null ]
+      ] ],
       [ "formattable< angle< f32 >, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", null ],
       [ "formattable< T, char >", "db/d59/structfloppy_1_1traits_1_1formattable.html", [
         [ "basic_two_dimensional_type< T, U, N >", "d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html", [
@@ -68,8 +74,6 @@ var hierarchy =
       [ "ostream_formatter< C >", "d4/de5/structfloppy_1_1ostream__formatter.html", null ]
     ] ],
     [ "formatter< T >", "d6/dc7/structfmt_1_1formatter_3_01T_01_4.html", null ],
-    [ "hsv_t", "df/de6/structfloppy_1_1gfx_1_1color_1_1hsv__t.html", null ],
-    [ "hsva_t", "dd/dc9/structfloppy_1_1gfx_1_1color_1_1hsva__t.html", null ],
     [ "non_copyable< T >", "d7/d83/structfloppy_1_1traits_1_1non__copyable.html", [
       [ "pin< T >", "d7/dac/structfloppy_1_1traits_1_1pin.html", [
         [ "singleton< T >", "d9/d8a/structfloppy_1_1traits_1_1singleton.html", null ]

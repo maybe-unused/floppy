@@ -11,8 +11,10 @@ var searchData=
   ['hsl_5ft_8',['hsl_t',['../dc/df5/structfloppy_1_1gfx_1_1color_1_1hsl__t.html',1,'color::hsl_t'],['../dc/df5/structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a76c21e15d483ee67873a04b0cbceeebd',1,'floppy::gfx::color::hsl_t::hsl_t()']]],
   ['hsla_9',['hsla',['../de/da8/classfloppy_1_1gfx_1_1color.html#afaf72956701e3a867b9ce319896bdb0d',1,'floppy::gfx::color']]],
   ['hsla_5ft_10',['hsla_t',['../d2/d0e/structfloppy_1_1gfx_1_1color_1_1hsla__t.html',1,'color::hsla_t'],['../d2/d0e/structfloppy_1_1gfx_1_1color_1_1hsla__t.html#acd023abb23e2d292dd93e7fe23e531d3',1,'floppy::gfx::color::hsla_t::hsla_t()']]],
-  ['hsv_5ft_11',['hsv_t',['../df/de6/structfloppy_1_1gfx_1_1color_1_1hsv__t.html',1,'floppy::gfx::color']]],
-  ['hsva_5ft_12',['hsva_t',['../dd/dc9/structfloppy_1_1gfx_1_1color_1_1hsva__t.html',1,'floppy::gfx::color']]],
-  ['hue_13',['hue',['../de/da8/classfloppy_1_1gfx_1_1color.html#acbb5da22fda7d5fc33c7327bbd9c19e8',1,'floppy::gfx::color']]],
-  ['huef_14',['huef',['../de/da8/classfloppy_1_1gfx_1_1color.html#a21461e0b7c7939fe088d26d4cd3fe32b',1,'floppy::gfx::color']]]
+  ['hsv_11',['hsv',['../de/da8/classfloppy_1_1gfx_1_1color.html#af6d5729507905f4ce221e18c2d36f3a9',1,'floppy::gfx::color']]],
+  ['hsv_5ft_12',['hsv_t',['../df/de6/structfloppy_1_1gfx_1_1color_1_1hsv__t.html',1,'color::hsv_t'],['../df/de6/structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a57c7332618240798b337dbcaa631d308',1,'floppy::gfx::color::hsv_t::hsv_t()']]],
+  ['hsva_13',['hsva',['../de/da8/classfloppy_1_1gfx_1_1color.html#a99eaea7fdfe9d8493594eefc83264d29',1,'floppy::gfx::color']]],
+  ['hsva_5ft_14',['hsva_t',['../dd/dc9/structfloppy_1_1gfx_1_1color_1_1hsva__t.html',1,'color::hsva_t'],['../dd/dc9/structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a2a82335045fae37c09e1dee1c9389e1a',1,'floppy::gfx::color::hsva_t::hsva_t()']]],
+  ['hue_15',['hue',['../de/da8/classfloppy_1_1gfx_1_1color.html#acbb5da22fda7d5fc33c7327bbd9c19e8',1,'floppy::gfx::color']]],
+  ['huef_16',['huef',['../de/da8/classfloppy_1_1gfx_1_1color.html#a21461e0b7c7939fe088d26d4cd3fe32b',1,'floppy::gfx::color']]]
 ];
