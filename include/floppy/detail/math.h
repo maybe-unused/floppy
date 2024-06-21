@@ -13,43 +13,66 @@ namespace floppy::math
   /// \brief Implementation details for math types.
   namespace detail
   {
+    /// \brief Base class for numbers.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup calc
+    /// \tparam T Number type. Must satisfy constraint <tt>floppy::concepts::num</tt>.
+    /// \tparam V Number value. Represented as <tt>f64</tt>.
     template <concepts::num T, f64 V>
     struct number_base
     {
+      /// \brief Underlying type.
       using type = T;
+
+      /// \brief Number value static member.
       static constexpr type value = T{V};
 
+      /// \brief Default constructor.
       constexpr number_base() = default;
+
+      /// \brief Conversion to underlying type.
       constexpr operator type() const { return this->value; }
 
+      /// \brief Arithmetic operator for subtraction.
       template <concepts::num U>
       constexpr auto operator-(U const& other) const -> type { return this->value - other; }
 
+      /// \brief Arithmetic operator for multiplication.
       template <concepts::num U>
       constexpr auto operator*(U const& other) const -> type { return this->value * other; }
 
+      /// \brief Arithmetic operator for division.
       template <concepts::num U>
       constexpr auto operator/(U const& other) const -> type { return this->value / other; }
 
+      /// \brief Arithmetic operator for addition.
       template <concepts::num U>
       constexpr auto operator+(U const& other) const -> type { return this->value + other; }
     };
   } // namespace detail
 
   /// \brief Numbers namespace.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
   inline namespace numbers
   {
+    /// \brief Pi number.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup calc
+    /// \tparam T Number type. Must satisfy constraint <tt>floppy::concepts::num</tt>. Defaults to <tt>f64</tt>.
     template <concepts::num T = f64>
     struct pi : detail::number_base<T, std::numbers::pi>
     {
      public:
-      [[maybe_unused]]
-      [[nodiscard]]
-      constexpr auto as_degrees() const -> T { return 180.0; } // NOLINT(*-magic-numbers)
+      /// \brief Returns pi as degrees value.
+      /// \return Pi as degrees
+      [[maybe_unused]] [[nodiscard]] constexpr auto as_degrees() const -> T { return 180.0; } // NOLINT(*-magic-numbers)
     };
   } // namespace numbers
 
-  /// \brief Returns true if numbers are equal
+  /// \brief Returns true if numbers are equal.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
   /// \details Compares floating point values using formula <tt>|a - b| <= epsilon</tt>
   /// \param a First number
   /// \param b Second number
@@ -64,8 +87,10 @@ namespace floppy::math
       return a == b;
   }
 
-  /// \brief Returns true if numbers are approximately equal
-  /// \details Compares floating point values using formula <tt>|a - b| <= epsilon * epsilon_factor</tt>
+  /// \brief Returns true if numbers are approximately equal.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
+  /// \details Compares floating point values using formula <tt>|a - b| <= epsilon * epsilon_factor</tt>.
   /// \param a First number
   /// \param b Second number
   /// \param epsilon_factor Epsilon factor for comparison
@@ -80,7 +105,9 @@ namespace floppy::math
       return a == b;
   }
 
-  /// \brief Returns true if type is equal to zero (number specific)
+  /// \brief Returns true if type is equal to zero (number specific).
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
   /// \param num Number
   /// \tparam T Number type
   /// \return True if number is equal to zero
@@ -89,6 +116,8 @@ namespace floppy::math
   [[nodiscard]] constexpr auto is_null(T num) -> bool { return eq(num, T(0.0)); }
 
   /// \brief Three-ways compare two numbers, forcing them to <i>strong_order</i>.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
   /// \param a First number
   /// \param b Second number
   /// \tparam T Number type
@@ -119,6 +148,8 @@ namespace floppy::math
   }
   
   /// \brief Converts degrees to radians
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
   /// \param deg Degrees
   /// \tparam T Degrees type
   /// \return Radians
@@ -129,6 +160,8 @@ namespace floppy::math
   }
 
   /// \brief Converts radians to degrees
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
   /// \param rad Radians
   /// \tparam T Radians type
   /// \return Degrees
@@ -139,6 +172,8 @@ namespace floppy::math
   }
 
   /// \brief Returns logarithm of a number in a given base.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
   /// \param base Base
   /// \param num Number
   /// \tparam T Number type
@@ -147,6 +182,8 @@ namespace floppy::math
   [[nodiscard]] constexpr auto log(T base, T num) -> T { return std::log(num) / std::log(base); }
 
   /// \brief Returns natural logarithm of a number.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
   /// \param num Number
   /// \tparam T Number type
   /// \return Natural logarithm of the number
@@ -154,6 +191,8 @@ namespace floppy::math
   [[nodiscard]] constexpr auto log(T num) -> T { return std::log(num); }
 
   /// \brief Calculates Euclidean division, the matching method for <b>rem_euclid</b>.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
   /// \param a Dividend
   /// \param b Divisor
   template <concepts::num T>
@@ -170,6 +209,8 @@ namespace floppy::math
   }
 
   /// \brief Calculates the least nonnegative remainder of <tt>self (mod rhs)</tt>.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup calc
   /// \param a Dividend
   /// \param b Divisor
   template <concepts::num T>
@@ -183,3 +224,6 @@ namespace floppy::math
     }
   }
 } // namespace floppy::math
+
+/// \defgroup calc Mathematical functions
+/// \brief Mathematical functions and classes

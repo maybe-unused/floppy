@@ -9,6 +9,8 @@
 namespace floppy // NOLINT(*-concat-nested-namespaces)
 {
   /// \brief Inline namespace for types and type aliases.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup aliases
   inline namespace types
   {
     using u8 = uint8_t;                       ///< 8-bit unsigned integer
@@ -25,38 +27,46 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     using f64 = double;                       ///< Float with 64-bit precision
     using f128 [[maybe_unused]] = long double;///< Float with 128-bit precision
 
-    /**
-     * \brief Safe alias for <tt>std::optional</tt>.
-     * \details Defaults to <tt>std::optional</tt> if available, otherwise <tt>std::experimental::optional</tt>.
-     * Example usage with helper functions:
-     * \code {.cpp}
-        template <typename T>
-        auto first(std::vector<T> const& vec) -> option<T> {
-          if(vec.empty())
-           return none;
-          return some(vec.front());
-        }
-     * \endcode
-     * \sa https://en.cppreference.com/w/cpp/utility/optional
-     */
+    /// \brief Safe alias for <tt>std::optional</tt>.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup aliases
+    /// \details Defaults to <tt>std::optional</tt> if available, otherwise <tt>std::experimental::optional</tt>.
+    /// Example usage with helper functions:
+    /// \code {.cpp}
+    ///  template <typename T>
+    ///  auto first(std::vector<T> const& vec) -> option<T> {
+    ///    if(vec.empty())
+    ///     return none;
+    ///    return some(vec.front());
+    ///  }
+    /// \endcode
+    /// \sa https://en.cppreference.com/w/cpp/utility/optional
     template <std::destructible T>
     using option = std::optional<T>;
 
     /// \brief Helper function for \ref option.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup aliases
     template <std::destructible T>
     auto some(T&& t) -> option<std::decay_t<T>> {
       return option<std::decay_t<T>>(std::forward<T>(t));
     }
 
     /// \brief Helper function for \ref option.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup aliases
     inline constexpr auto none = std::nullopt;
 
     /// \brief Shortcut for <tt>std::reference_wrapper</tt>.
+    /// \headerfile floppy/floppy.h
+    /// \ingroup aliases
     template <typename T>
     using ref = std::reference_wrapper<T>;
   } // namespace types
 
   /// \brief Inline namespace for literal operators.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup aliases
   inline namespace literals
   {
     #if !defined(__cpp_size_t_suffix)
@@ -116,3 +126,6 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     // NOLINTEND(*-pro-type-reinterpret-cast, *-no-int-to-ptr)
   } // namespace literals
 } // namespace floppy
+
+/// \defgroup aliases Aliases
+/// \brief Aliases for types.
