@@ -14,6 +14,10 @@
 /// \defgroup geometry Geometry
 /// \brief Classes for geometric types with a focus on 2d graphics and layout.
 
+/// \defgroup geometry_details Geometry Details
+/// \ingroup geometry
+/// \brief Implementation details for classes and functions related to \ref geometry.
+
 // todo: box2d
 // todo: box3d
 // todo: point3d

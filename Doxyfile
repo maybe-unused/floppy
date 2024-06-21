@@ -80,7 +80,7 @@ CREATE_SUBDIRS_LEVEL   = 8
 ALLOW_UNICODE_NAMES    = YES
 OUTPUT_LANGUAGE        = English
 BRIEF_MEMBER_DESC      = NO
-REPEAT_BRIEF           = NO
+REPEAT_BRIEF           = YES
 ABBREVIATE_BRIEF       = "The $name class" \
                          "The $name widget" \
                          "The $name file" \

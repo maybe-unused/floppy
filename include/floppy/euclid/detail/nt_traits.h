@@ -10,7 +10,7 @@ namespace floppy::math::detail
 {
   /// \brief CRTP base for trivially comparable numeric types.
   /// \headerfile floppy/euclid.h
-  /// \ingroup geometry
+  /// \ingroup geometry_details
   /// \tparam T The type itself.
   template <typename T>
   struct default_comparable
@@ -40,7 +40,7 @@ namespace floppy::math::detail
   };
 
   /// \brief CRTP base for numeric newtypes that can be compared.
-  /// \ingroup geometry
+  /// \ingroup geometry_details
   /// \headerfile floppy/euclid.h
   /// \tparam T The type itself.
   /// \tparam U The underlying number type.
@@ -129,7 +129,7 @@ namespace floppy::math::detail
   };
 
   /// \brief CRTP base for numeric newtypes containing math operations implementation.
-  /// \ingroup geometry
+  /// \ingroup geometry_details
   /// \headerfile floppy/euclid.h
   /// \tparam T The type itself.
   /// \tparam U The underlying number type.
