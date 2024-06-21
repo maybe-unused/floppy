@@ -249,33 +249,59 @@ namespace floppy::math
       return vector2d(angle, length);
     }
 
+    /// \brief Returns an unchanged copy of this vector.
+    /// \return An unchanged copy of this vector.
     [[nodiscard]] constexpr auto operator+() const -> vector2d { return *this; }
+
+    /// \brief Returns a negated copy of this vector.
+    /// \return A negated copy of this vector.
     [[nodiscard]] constexpr auto operator-() const -> vector2d { return vector2d(-this->x(), -this->y()); }
 
+    /// \brief Returns <tt>true</tt> if the vector is equal to the other vector.
+    /// \param other The other vector.
+    /// \return <tt>true</tt> if the vector is equal to the other vector.
     [[nodiscard]] constexpr auto operator==(vector2d const& other) const -> bool {
       return approx_eq(this->x(), other.x(), static_cast<underlying_type>(3.0F))
              and approx_eq(this->y(), other.y(), static_cast<underlying_type>(3.0F));
     }
 
+    /// \brief Returns <tt>true</tt> if the vector is not equal to the other vector.
+    /// \param other The other vector.
+    /// \return <tt>true</tt> if the vector is not equal to the other vector.
     [[nodiscard]] constexpr auto operator!=(vector2d const& other) const -> bool {
       return not approx_eq(this->x(), other.x(), static_cast<underlying_type>(3.0F))
              or not approx_eq(this->y(), other.y(), static_cast<underlying_type>(3.0F));
     }
 
+    /// \brief Adds vector and either point2d, size2d or vector2d.
+    /// \tparam Q The type of the summand. Can be <tt>point2d</tt>, <tt>vector2d</tt> or <tt>size2d</tt>.
+    /// \param other The summand.
+    /// \return The sum.
     template <concepts::any_of<vector2d, size2d_type> Q>
     [[nodiscard]] constexpr auto operator+(Q const& other) const -> vector2d {
       return vector2d(this->x() + other.x(), this->y() + other.y());
     }
 
+    /// \brief Subtracts vector and either point2d, size2d or vector2d.
+    /// \tparam Q The type of the subtrahend. Can be <tt>point2d</tt>, <tt>vector2d</tt> or <tt>size2d</tt>.
+    /// \param other The subtrahend.
+    /// \return The difference.
     template <concepts::any_of<vector2d, size2d_type> Q>
     [[nodiscard]] constexpr auto operator-(Q const& other) const -> vector2d {
       return vector2d(this->x() - other.x(), this->y() - other.y());
     }
 
+    /// \brief Multiplies vector by a scalar.
+    /// \param other The multiplier.
+    /// \return The result of multiplication.
     [[nodiscard]] constexpr auto operator*(underlying_type const& other) const -> vector2d {
       return vector2d(this->x() * other, this->y() * other);
     }
 
+    /// \brief Multiplies vector by a scale.
+    /// \tparam U2 The unit of the scale.
+    /// \tparam T2 The type of the scale.
+    /// \param other The scale.
     template <typename U2, concepts::num T2>
     [[nodiscard]] constexpr auto operator*(scale<unit_type, U2, T2> const& other) const -> vector2d<U2, underlying_type> {
       return vector2d<U2, underlying_type>(
@@ -284,10 +310,18 @@ namespace floppy::math
       );
     }
 
+    /// \brief Divides vector by a scalar.
+    /// \param other The divisor.
+    /// \return The result of division.
     [[nodiscard]] constexpr auto operator/(underlying_type const& other) const -> vector2d {
       return vector2d(this->x() / other, this->y() / other);
     }
 
+    /// \brief Divides vector by a scale.
+    /// \tparam U2 The unit of the scale.
+    /// \tparam T2 The type of the scale.
+    /// \param other The scale.
+    /// \return The result of division.
     template <typename U2, concepts::num T2>
     [[nodiscard]] constexpr auto operator/(scale<U2, unit_type, T2> const& other) const -> vector2d<U2, underlying_type> {
       return vector2d<U2, underlying_type>(
@@ -296,6 +330,10 @@ namespace floppy::math
       );
     }
 
+    /// \brief Adds vector and either point2d, size2d or vector2d.
+    /// \tparam Q The type of the summand. Can be <tt>point2d</tt>, <tt>vector2d</tt> or <tt>size2d</tt>.
+    /// \param other The summand.
+    /// \return The sum.
     template <concepts::any_of<vector2d, size2d_type> Q>
     constexpr auto operator+=(Q const& other) -> vector2d& {
       this->x_mut() += other.x();
@@ -303,6 +341,10 @@ namespace floppy::math
       return *this;
     }
 
+    /// \brief Subtracts vector and either point2d, size2d or vector2d.
+    /// \tparam Q The type of the subtrahend. Can be <tt>point2d</tt>, <tt>vector2d</tt> or <tt>size2d</tt>.
+    /// \param other The subtrahend.
+    /// \return The difference.
     template <concepts::any_of<vector2d, size2d_type> Q>
     constexpr auto operator-=(Q const& other) -> vector2d& {
       this->x_mut() -= other.x();
@@ -310,12 +352,18 @@ namespace floppy::math
       return *this;
     }
 
+    /// \brief Multiplication assignment operator.
+    /// \param other Scalar value.
+    /// \return Reference to this vector.
     constexpr auto operator*=(underlying_type const& other) -> vector2d& {
       this->x_mut() *= other;
       this->y_mut() *= other;
       return *this;
     }
 
+    /// \brief Division assignment operator.
+    /// \param other Scalar value.
+    /// \return Reference to this vector.
     constexpr auto operator/=(underlying_type const& other) -> vector2d& {
       this->x_mut() /= other;
       this->y_mut() /= other;

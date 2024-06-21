@@ -15,26 +15,51 @@ namespace floppy::math::detail
   template <typename T>
   struct default_comparable
   {
+    /// \brief Compares this and <i>other</i> with \ref strong_compare for equality.
+    /// \param other The other value to compare with.
     [[nodiscard]] constexpr auto operator==(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal); }
+
+    /// \brief Compares this and <i>other</i> with \ref strong_compare for inequality.
+    /// \param other The other value to compare with.
     [[nodiscard]] constexpr auto operator!=(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) != std::strong_ordering::equal); }
+
+    /// \brief Compares this and <i>other</i> with \ref strong_compare for less than.
+    /// \param other The other value to compare with.
     [[nodiscard]] constexpr auto operator<(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::less); }
+
+    /// \brief Compares this and <i>other</i> with \ref strong_compare for greater than.
+    /// \param other The other value to compare with.
     [[nodiscard]] constexpr auto operator>(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::greater); }
+
+    /// \brief Compares this and <i>other</i> with \ref strong_compare for less than or equal to.
+    /// \param other The other value to compare with.
     [[nodiscard]] constexpr auto operator<=(T const& other) const -> bool {
       return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::less
         or strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal);
     }
 
+    /// \brief Compares this and <i>other</i> with \ref strong_compare for greater than or equal to.
+    /// \param other The other value to compare with.
     [[nodiscard]] constexpr auto operator>=(T const& other) const -> bool {
       return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::greater
         or strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal);
     }
 
+    /// \brief Compares this and <i>other numeric value</i> with \ref strong_compare.
+    /// \tparam T2 Right hand side numeric type.
+    /// \param other The other value to compare with.
     template <concepts::num T2>
     [[nodiscard]] constexpr auto operator<=>(T2 const& other) const { return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)); }
 
+    /// \brief Compares this and <i>other numeric value</i> with \ref strong_compare for equality.
+    /// \tparam T2 Right hand side numeric type.
+    /// \param other The other value to compare with.
     template <concepts::num T2>
     [[nodiscard]] constexpr auto operator==(T2 const& other) const -> bool { return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)) == std::strong_ordering::equal; }
 
+    /// \brief Compares this and <i>other numeric value</i> with \ref strong_compare for inequality.
+    /// \tparam T2 Right hand side numeric type.
+    /// \param other The other value to compare with.
     template <concepts::num T2>
     [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool { return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)) != std::strong_ordering::equal; }
   };
@@ -114,18 +139,33 @@ namespace floppy::math::detail
     /// \brief Returns <b>atan</b>(this).
     [[nodiscard]] constexpr auto atan() const -> T { return std::atan(this->m_); }
 
+    /// \brief Increments the underlying value by <tt>1</tt>.
+    /// \return The incremented value.
     [[nodiscard]] constexpr auto operator++() -> T& { ++this->m_; return *this; }
+
+    /// \brief Increments the underlying value by <tt>1</tt>.
+    /// \return The incremented value.
     [[nodiscard]] constexpr auto operator++(int) -> T { auto ret = *this; ++this->m_; return ret; }
+
+    /// \brief Decrements the underlying value by <tt>1</tt>.
+    /// \return The decremented value.
     [[nodiscard]] constexpr auto operator--() -> T& { --this->m_; return *this; }
+
+    /// \brief Decrements the underlying value by <tt>1</tt>.
+    /// \return The decremented value.
     [[nodiscard]] constexpr auto operator--(int) -> T { auto ret = *this; --this->m_; return ret; }
 
     /// \brief Returns <tt>true</tt> if underlying value is not <tt>0</tt>.
     [[nodiscard]] constexpr explicit operator bool() const { return not is_null(this->m_); }
+
+    /// \brief Returns <tt>true</tt> if underlying value is <tt>0</tt>.
     [[nodiscard]] constexpr auto operator!() const -> bool { return not this->m_; }
+
+    /// \brief Returns the underlying value as <tt>underlying_type</tt>.
     [[nodiscard]] constexpr explicit operator underlying_type() const { return this->m_; }
 
    protected:
-    underlying_type m_;
+    underlying_type m_; ///< Underlying value.
   };
 
   /// \brief CRTP base for numeric newtypes containing math operations implementation.
@@ -143,38 +183,89 @@ namespace floppy::math::detail
     /// \return The underlying numeric scalar.
     [[nodiscard]] constexpr auto operator*() const -> U { return this->m_; }
 
+    /// \brief Returns the value.
     [[nodiscard]] constexpr auto operator+() const -> T { return *this; }
+
+    /// \brief Returns the negated value.
     [[nodiscard]] constexpr auto operator-() const -> T { return T(-this->m_); }
+
+    /// \brief Returns <tt>this + other</tt>.
+    /// \param other The other value.
     [[nodiscard]] constexpr auto operator+(T const& other) const -> T { return T(this->m_ + other.m_); }
+
+    /// \brief Returns <tt>this - other</tt>.
+    /// \param other The other value.
     [[nodiscard]] constexpr auto operator-(T const& other) const -> T { return T(this->m_ - other.m_); }
+
+    /// \brief Returns <tt>this * other</tt>.
+    /// \param other The other value.
     [[nodiscard]] constexpr auto operator*(T const& other) const -> T { return T(this->m_ * other.m_); }
+
+    /// \brief Returns <tt>this / other</tt>.
+    /// \param other The other value.
     [[nodiscard]] constexpr auto operator/(T const& other) const -> T { return T(this->m_ / other.m_); }
+
+    /// \brief Returns <tt>this += other</tt>.
+    /// \param other The other value.
     [[nodiscard]] constexpr auto operator+=(T const& other) -> T& { this->m_ += other.m_; return *this; }
+
+    /// \brief Returns <tt>this -= other</tt>.
+    /// \param other The other value.
     [[nodiscard]] constexpr auto operator-=(T const& other) -> T& { this->m_ -= other.m_; return *this; }
+
+    /// \brief Returns <tt>this *= other</tt>.
+    /// \param other The other value.
     [[nodiscard]] constexpr auto operator*=(T const& other) -> T& { this->m_ *= other.m_; return *this; }
+
+    /// \brief Returns <tt>this /= other</tt>.
+    /// \param other The other value.
     [[nodiscard]] constexpr auto operator/=(T const& other) -> T& { this->m_ /= other.m_; return *this; }
 
+    /// \brief Returns <tt>this * other</tt>.
+    /// \tparam U2 Right hand side numeric type.
+    /// \param other The other value.
     template <concepts::num U2>
     [[nodiscard]] constexpr auto operator*(U2 const& other) const -> T { return T(this->m_ * other); }
 
+    /// \brief Returns <tt>this / other</tt>.
+    /// \tparam U2 Right hand side numeric type.
+    /// \param other The other value.
     template <concepts::num U2>
     [[nodiscard]] constexpr auto operator/(U2 const& other) const -> T { return T(this->m_ / other); }
 
+    /// \brief Returns <tt>this + other</tt>.
+    /// \tparam U2 Right hand side numeric type.
+    /// \param other The other value.
     template <concepts::num U2>
     [[nodiscard]] constexpr auto operator+(U2 const& other) const -> T { return T(this->m_ + other); }
 
+    /// \brief Returns <tt>this - other</tt>.
+    /// \tparam U2 Right hand side numeric type.
+    /// \param other The other value.
     template <concepts::num U2>
     [[nodiscard]] constexpr auto operator-(U2 const& other) const -> T { return T(this->m_ - other); }
 
+    /// \brief Returns <tt>this += other</tt>.
+    /// \tparam U2 Right hand side numeric type.
+    /// \param other The other value.
     template <concepts::num U2>
     [[nodiscard]] constexpr auto operator+=(U2 const& other) -> T& { this->m_ += other; return *this; }
 
+    /// \brief Returns <tt>this -= other</tt>.
+    /// \tparam U2 Right hand side numeric type.
+    /// \param other The other value.
     template <concepts::num U2>
     [[nodiscard]] constexpr auto operator-=(U2 const& other) -> T& { this->m_ -= other; return *this; }
 
+    /// \brief Returns <tt>this *= other</tt>.
+    /// \tparam U2 Right hand side numeric type.
+    /// \param other The other value.
     template <concepts::num U2>
     [[nodiscard]] constexpr auto operator*=(U2& other) -> T& { this->m_ *= other; return *this; }
 
+    /// \brief Returns <tt>this /= other</tt>.
+    /// \tparam U2 Right hand side numeric type.
+    /// \param other The other value.
     template <concepts::num U2>
     [[nodiscard]] constexpr auto operator/=(U2 const& other) -> T& { this->m_ /= other; return *this; }
   };

@@ -247,7 +247,7 @@ namespace floppy::math::detail
     }
 
     /// \brief Returns <tt>true</tt> if underlying values is both not <tt>0</tt> and not <tt>NaN</tt> or <tt>Infinity</tt> in case of floating point.
-    /// \note Also returns <tt>false
+    /// \note Also returns <tt>false</tt> if underlying values is <tt>NaN</tt> or <tt>Infinity</tt> in case of floating point.
     [[nodiscard]] constexpr explicit operator bool() const {
       if constexpr(std::is_floating_point_v<underlying_type>) {
         if(not this->is_finite())
@@ -262,7 +262,7 @@ namespace floppy::math::detail
     [[nodiscard]] constexpr auto operator!() const -> bool { return not this->operator bool(); }
 
    protected:
-    underlying_type x_;
-    underlying_type y_;
+    underlying_type x_; ///< The underlying x-coordinate.
+    underlying_type y_; ///< The underlying y-coordinate.
   };
 } // namespace floppy::math::detail

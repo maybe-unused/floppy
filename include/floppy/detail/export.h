@@ -17,8 +17,8 @@
 # define FLOPPY_EXPORT
 #endif
 
-#define _stringify$(x) #x
-#define stringify$(x) _stringify$(x)
+#define _stringify$(x) #x // NOLINT(*-macro-usage)
+#define stringify$(x) _stringify$(x) // NOLINT(*-macro-usage)
 
 /// \brief Main namespace for the library.
 /// \note Use <tt>fl</tt> instead of <tt>floppy</tt> if you want shorter name.
@@ -27,12 +27,17 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
   namespace meta {
     namespace detail {
       // todo: this must be rewritten
+      /// \internal
       constexpr auto is_digit(char c) -> bool { return c <= '9' && c >= '0'; }
+
+      /// \internal
       constexpr auto stoi_impl(char const* str, int value = 0) -> int {
         return *str ? is_digit(*str)
           ? stoi_impl(str + 1, (*str - '0') + value * 10)
           : throw "compile-time-error: not a digit" : value;
       }
+
+      /// \internal
       constexpr auto stoi(char const* str) -> int { return stoi_impl(str); }
     } // namespace detail
 

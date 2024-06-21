@@ -40,6 +40,8 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     ///    return some(vec.front());
     ///  }
     /// \endcode
+    /// \see some
+    /// \see none
     /// \sa https://en.cppreference.com/w/cpp/utility/optional
     template <std::destructible T>
     using option = std::optional<T>;
@@ -47,6 +49,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \brief Helper function for \ref option.
     /// \headerfile floppy/floppy.h
     /// \ingroup aliases
+    /// \see none
     template <std::destructible T>
     auto some(T&& t) -> option<std::decay_t<T>> {
       return option<std::decay_t<T>>(std::forward<T>(t));
@@ -55,6 +58,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \brief Helper function for \ref option.
     /// \headerfile floppy/floppy.h
     /// \ingroup aliases
+    /// \see some
     inline constexpr auto none = std::nullopt;
 
     /// \brief Shortcut for <tt>std::reference_wrapper</tt>.

@@ -154,7 +154,10 @@ namespace floppy
     /// \return Values of configuration file.
     [[nodiscard]] auto operator()() -> T&;
 
+    /// \brief Default copy assignment.
     auto operator=(configuration_file const&) -> configuration_file& = default;
+
+    /// \brief Default move assignment.
     auto operator=(configuration_file&&) -> configuration_file& = default;
 
    protected:
