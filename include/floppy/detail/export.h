@@ -180,6 +180,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
 #undef _stringify$
 #undef stringify$
 
+/// \namespace fl
 /// \brief Alias for the main namespace \ref floppy.
 /// \headerfile floppy/floppy.h
 /// \ingroup aliases
