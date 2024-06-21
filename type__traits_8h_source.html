@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.1.5</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -142,35 +142,39 @@ $(function(){initNavTree('type__traits_8h_source.html',''); initResizable(); });
 <div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="group__helpers.html">   19</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="group__helpers.html#structfloppy_1_1plain__type">plain_type</a></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">using </span>type = std::remove_cvref_t&lt;std::remove_pointer_t&lt;T&gt;&gt;;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">using </span>const_type = std::add_const_t&lt;type&gt;;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">using </span>maybe_pointer_type = std::remove_cvref_t&lt;type&gt;;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  };</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="group__helpers.html#ab74e5607b5fabad62e6c021d4fca6b4d">   22</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="group__helpers.html#ab74e5607b5fabad62e6c021d4fca6b4d">type</a> = std::remove_cvref_t&lt;std::remove_pointer_t&lt;T&gt;&gt;;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="group__helpers.html#a60926b56740fc6359cc46e3cc51f9289">   25</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="group__helpers.html#a60926b56740fc6359cc46e3cc51f9289">const_type</a> = std::add_const_t&lt;type&gt;;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  };</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c">   30</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c">plain_type_t</a> = <span class="keyword">typename</span> plain_type&lt;T&gt;::type;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U, <span class="keyword">typename</span>... T&gt;</div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structfloppy_1_1one__of.html">   39</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structfloppy_1_1one__of.html">one_of</a> {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> value = std::disjunction_v&lt;std::is_same&lt;U, T&gt;...&gt;;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> value; }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  };</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c">   32</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c">plain_type_t</a> = <span class="keyword">typename</span> <a class="code hl_typedef" href="group__helpers.html#ab74e5607b5fabad62e6c021d4fca6b4d">plain_type&lt;T&gt;::type</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U, <span class="keyword">typename</span>... T&gt;</div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structfloppy_1_1one__of.html">   42</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structfloppy_1_1one__of.html">one_of</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structfloppy_1_1one__of.html#a5b4ee4ae6cba6bb75200ba7af1910873">   44</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structfloppy_1_1one__of.html#a5b4ee4ae6cba6bb75200ba7af1910873">value</a> = std::disjunction_v&lt;std::is_same&lt;U, T&gt;...&gt;;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structfloppy_1_1one__of.html#a7990d8e87d9eab2383f94c88c23a6488">   47</a></span>    <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() const noexcept { <span class="keywordflow">return</span> <a class="code hl_variable" href="structfloppy_1_1one__of.html#a5b4ee4ae6cba6bb75200ba7af1910873">value</a>; }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  };</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U, <span class="keyword">typename</span>... T&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group__helpers.html#gabd4d29634ca4f4ef8b64beeca2631026">   51</a></span>  <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="group__helpers.html#gabd4d29634ca4f4ef8b64beeca2631026">one_of_v</a> = <a class="code hl_struct" href="structfloppy_1_1one__of.html">one_of</a>&lt;U, T...&gt;::value;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keyword">static_assert</span>(not one_of_v&lt;char, int, int&gt;);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keyword">static_assert</span>(one_of_v&lt;std::string, std::basic_string&lt;char&gt;, std::basic_string&lt;wchar_t&gt;&gt;);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keyword">static_assert</span>(not one_of_v&lt;std::u8string, std::basic_string&lt;char&gt;, std::basic_string&lt;wchar_t&gt;&gt;);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>} <span class="comment">// namespace floppy</span></div>
-<div class="ttc" id="agroup__helpers_html_gabb6b740122d8db472da8ccec3de5ec9c"><div class="ttname"><a href="group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c">floppy::plain_type_t</a></div><div class="ttdeci">typename plain_type&lt; T &gt;::type plain_type_t</div><div class="ttdoc">Remove all cv qualifiers, references and pointers from a type.</div><div class="ttdef"><b>Definition</b> <a href="#l00030">type_traits.h:30</a></div></div>
-<div class="ttc" id="agroup__helpers_html_gabd4d29634ca4f4ef8b64beeca2631026"><div class="ttname"><a href="group__helpers.html#gabd4d29634ca4f4ef8b64beeca2631026">floppy::one_of_v</a></div><div class="ttdeci">constexpr bool one_of_v</div><div class="ttdoc">Checks if type is one of the given types.</div><div class="ttdef"><b>Definition</b> <a href="#l00051">type_traits.h:51</a></div></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U, <span class="keyword">typename</span>... T&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group__helpers.html#gabd4d29634ca4f4ef8b64beeca2631026">   58</a></span>  <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="group__helpers.html#gabd4d29634ca4f4ef8b64beeca2631026">one_of_v</a> = <a class="code hl_struct" href="structfloppy_1_1one__of.html">one_of</a>&lt;U, T...&gt;::value;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">static_assert</span>(not one_of_v&lt;char, int, int&gt;);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keyword">static_assert</span>(one_of_v&lt;std::string, std::basic_string&lt;char&gt;, std::basic_string&lt;wchar_t&gt;&gt;);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">static_assert</span>(not one_of_v&lt;std::u8string, std::basic_string&lt;char&gt;, std::basic_string&lt;wchar_t&gt;&gt;);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>} <span class="comment">// namespace floppy</span></div>
+<div class="ttc" id="agroup__helpers_html_a60926b56740fc6359cc46e3cc51f9289"><div class="ttname"><a href="group__helpers.html#a60926b56740fc6359cc46e3cc51f9289">floppy::plain_type::const_type</a></div><div class="ttdeci">std::add_const_t&lt; type &gt; const_type</div><div class="ttdoc">The type without qualifiers, references and pointers with a const qualifier.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">type_traits.h:25</a></div></div>
+<div class="ttc" id="agroup__helpers_html_ab74e5607b5fabad62e6c021d4fca6b4d"><div class="ttname"><a href="group__helpers.html#ab74e5607b5fabad62e6c021d4fca6b4d">floppy::plain_type::type</a></div><div class="ttdeci">std::remove_cvref_t&lt; std::remove_pointer_t&lt; T &gt; &gt; type</div><div class="ttdoc">The type without qualifiers, references and pointers.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">type_traits.h:22</a></div></div>
+<div class="ttc" id="agroup__helpers_html_gabb6b740122d8db472da8ccec3de5ec9c"><div class="ttname"><a href="group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c">floppy::plain_type_t</a></div><div class="ttdeci">typename plain_type&lt; T &gt;::type plain_type_t</div><div class="ttdoc">Remove all cv qualifiers, references and pointers from a type.</div><div class="ttdef"><b>Definition</b> <a href="#l00032">type_traits.h:32</a></div></div>
+<div class="ttc" id="agroup__helpers_html_gabd4d29634ca4f4ef8b64beeca2631026"><div class="ttname"><a href="group__helpers.html#gabd4d29634ca4f4ef8b64beeca2631026">floppy::one_of_v</a></div><div class="ttdeci">constexpr bool one_of_v</div><div class="ttdoc">Checks if type is one of the given types.</div><div class="ttdef"><b>Definition</b> <a href="#l00058">type_traits.h:58</a></div></div>
 <div class="ttc" id="agroup__helpers_html_structfloppy_1_1plain__type"><div class="ttname"><a href="group__helpers.html#structfloppy_1_1plain__type">floppy::plain_type</a></div><div class="ttdoc">Remove all cv qualifiers, references and pointers from a type.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">type_traits.h:20</a></div></div>
 <div class="ttc" id="anamespacefloppy_html"><div class="ttname"><a href="namespacefloppy.html">floppy</a></div><div class="ttdoc">Main namespace for the library.</div><div class="ttdef"><b>Definition</b> <a href="configuration_8h_source.html#l00010">configuration.h:11</a></div></div>
-<div class="ttc" id="astructfloppy_1_1one__of_html"><div class="ttname"><a href="structfloppy_1_1one__of.html">floppy::one_of</a></div><div class="ttdoc">Checks if type is one of the given types.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">type_traits.h:39</a></div></div>
+<div class="ttc" id="astructfloppy_1_1one__of_html"><div class="ttname"><a href="structfloppy_1_1one__of.html">floppy::one_of</a></div><div class="ttdoc">Checks if type is one of the given types.</div><div class="ttdef"><b>Definition</b> <a href="#l00042">type_traits.h:42</a></div></div>
+<div class="ttc" id="astructfloppy_1_1one__of_html_a5b4ee4ae6cba6bb75200ba7af1910873"><div class="ttname"><a href="structfloppy_1_1one__of.html#a5b4ee4ae6cba6bb75200ba7af1910873">floppy::one_of::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdoc">The result of the check.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">type_traits.h:44</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

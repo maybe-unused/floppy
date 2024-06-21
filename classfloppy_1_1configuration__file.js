@@ -16,6 +16,8 @@ var classfloppy_1_1configuration__file =
     [ "operator bool", "classfloppy_1_1configuration__file.html#a620c382a597e2b9291aa344ee8dadc38", null ],
     [ "operator()", "classfloppy_1_1configuration__file.html#ac5a48f5dc476c65cc6bda590740958b6", null ],
     [ "operator()", "classfloppy_1_1configuration__file.html#a7fea92ab79b6e98d0bcf0881ea45055d", null ],
+    [ "operator=", "classfloppy_1_1configuration__file.html#aa14bb8ba8c37312c3e9e6ff59f7ac581", null ],
+    [ "operator=", "classfloppy_1_1configuration__file.html#a7b44ff40f7dddb23bac14efb52538bc8", null ],
     [ "read_from_file", "classfloppy_1_1configuration__file.html#ad8f9109cc71f837b50e066ff431c8991", null ],
     [ "write_to_file", "classfloppy_1_1configuration__file.html#ab6e3af11c5997bfec5725512d50867c0", null ]
 ];

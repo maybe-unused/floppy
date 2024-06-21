@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.1.5</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -209,13 +209,13 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> () const -
 <p>For example if user named <em>Alice</em>, the following code: </p><div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_class" href="classfloppy_1_1filesystem_1_1application__dirs.html">floppy::filesystem::application_dirs</a>;</div>
 <div class="line"><span class="keyword">auto</span> dirs = <a class="code hl_function" href="#a1ceb7feef425111cbc554fa7553bb8d1">application_dirs</a>(<span class="stringliteral">&quot;com&quot;</span>, <span class="stringliteral">&quot;Foo Corp&quot;</span>, <span class="stringliteral">&quot;Bar App&quot;</span>);</div>
 <div class="line">std::cout &lt;&lt; dirs.config_dir() &lt;&lt; std::endl;</div>
-<div class="ttc" id="aclassfloppy_1_1filesystem_1_1application__dirs_html"><div class="ttname"><a href="classfloppy_1_1filesystem_1_1application__dirs.html">floppy::filesystem::application_dirs</a></div><div class="ttdoc">Class for getting location of system directories for a specific application.</div><div class="ttdef"><b>Definition</b> <a href="directories_8h_source.html#l00030">directories.h:31</a></div></div>
+<div class="ttc" id="aclassfloppy_1_1filesystem_1_1application__dirs_html"><div class="ttname"><a href="classfloppy_1_1filesystem_1_1application__dirs.html">floppy::filesystem::application_dirs</a></div><div class="ttdoc">Class for getting location of system directories for a specific application.</div><div class="ttdef"><b>Definition</b> <a href="directories_8h_source.html#l00028">directories.h:29</a></div></div>
 <div class="ttc" id="aclassfloppy_1_1filesystem_1_1application__dirs_html_a1ceb7feef425111cbc554fa7553bb8d1"><div class="ttname"><a href="#a1ceb7feef425111cbc554fa7553bb8d1">floppy::filesystem::application_dirs::application_dirs</a></div><div class="ttdeci">application_dirs(std::string_view qualifier, std::string_view organization, std::string_view application) noexcept(false)</div><div class="ttdoc">Creates an application_dirs class from values describing the project.</div></div>
 </div><!-- fragment --><p> will produce the following output: </p><div class="fragment"><div class="line">Linux:   &#39;/home/alice/.config/barapp&#39;</div>
 <div class="line">Windows: &#39;C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App&#39;</div>
 <div class="line">MacOS:   &#39;/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App&#39;</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="directories_8h_source.html#l00030">30</a> of file <a class="el" href="directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directories_8h_source.html#l00028">28</a> of file <a class="el" href="directories_8h_source.html">directories.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="aa671c41b56810ab4bfd94587e8507a75" name="aa671c41b56810ab4bfd94587e8507a75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa671c41b56810ab4bfd94587e8507a75">&#9670;&#160;</a></span>dir</h2>
@@ -257,7 +257,7 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> () const -
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="directories_8h_source.html#l00034">34</a> of file <a class="el" href="directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directories_8h_source.html#l00032">32</a> of file <a class="el" href="directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>
@@ -300,12 +300,48 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> () const -
 Directories will be created if they do not exist. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">qualifier</td><td>The reverse domain name notation of the application, excluding the organization or application name itself. Example values: <code>"com.example"</code>, <code>"org"</code>, <code>"uk.co"</code>, <code>"io"</code>, <code>""</code>. </td></tr>
-    <tr><td class="paramname">organization</td><td>The name of the organization that develops this application, or for which the application is developed. Example values: <code>"Foo Corp"</code>, <code>"Bar Inc."</code>, <code>""</code>. </td></tr>
-    <tr><td class="paramname">application</td><td>The name of the application itself. Example values: <code>"Bar App"</code>, <code>"ExampleProgram"</code>. </td></tr>
+    <tr><td class="paramname">qualifier</td><td>The reverse domain name notation of the application, excluding the organization or application name itself.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Example values: </p><ul>
+<li>
+<code>"com.example"</code> </li>
+<li>
+<code>"org"</code> </li>
+<li>
+<code>"uk.co"</code> </li>
+<li>
+<code>"io"</code> </li>
+<li>
+<code>""</code> </li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">organization</td><td>The name of the organization that develops this application, or for which the application is developed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Example values: </p><ul>
+<li>
+<code>"Foo Corp"</code> </li>
+<li>
+<code>"Bar Ltd"</code> </li>
+<li>
+<code>"Example Inc"</code> </li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">application</td><td>The name of the application itself.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Example values: </p><ul>
+<li>
+<code>"Bar App"</code> </li>
+<li>
+<code>"Foo App"</code> </li>
+</ul>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::runtime_error</td><td>if no valid home directory could be retrieved from the operating system. </td></tr>
@@ -429,12 +465,15 @@ Directories will be created if they do not exist. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the path to the project's cache directory. </p>
-<p>Values on different platforms:</p><ul>
-<li><b>Linux</b>: <code>$XDG_CACHE_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.cache/<code>project_path</code>, for example: <code>/home/alice/.cache/barapp</code></li>
-<li><b>MacOS</b>: <code>$HOME/Library/Caches</code>/<code>project_path</code>, for example: <code>/Users/Alice/Library/Caches/com.Foo-Corp.Bar-App</code></li>
-<li><b>Windows</b>: <code>LOCALAPPDATA%</code>\<code>project_path</code>\cache, for example: <code>C:\Users\Alice\AppData\Local\Foo Corp\Bar App\cache</code> <dl class="section return"><dt>Returns</dt><dd>The path to the project's cache directory. </dd></dl>
-</li>
+<p>Values on different platforms: </p><ul>
+<li>
+<b>Linux</b>: <code>$XDG_CACHE_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.cache/<code>project_path</code>, for example: <code>/home/alice/.cache/barapp</code> </li>
+<li>
+<b>MacOS</b>: <code>$HOME/Library/Caches</code>/<code>project_path</code>, for example: <code>/Users/Alice/Library/Caches/com.Foo-Corp.Bar-App</code> </li>
+<li>
+<b>Windows</b>: <code>LOCALAPPDATA%</code>\<code>project_path</code>\cache, for example: <code>C:\Users\Alice\AppData\Local\Foo Corp\Bar App\cache</code> </li>
 </ul>
+<dl class="section return"><dt>Returns</dt><dd>The path to the project's cache directory. </dd></dl>
 
 </div>
 </div>
@@ -454,12 +493,15 @@ Directories will be created if they do not exist. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the path to the project's config directory. </p>
-<p>Values on different platforms:</p><ul>
-<li><b>Linux</b>: <code>$XDG_CONFIG_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.config/<code>project_path</code>, for example: <code>/home/alice/.config/barapp</code></li>
-<li><b>MacOS</b>: <code>$HOME/Library/Application Support</code>/<code>project_path</code>, for example: <code>/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App</code></li>
-<li><b>Windows</b>: <code>APPDATA%</code>\<code>project_path</code>\config, for example: <code>C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App\config</code> <dl class="section return"><dt>Returns</dt><dd>The path to the project's config directory. </dd></dl>
-</li>
+<p>Values on different platforms: </p><ul>
+<li>
+<b>Linux</b>: <code>$XDG_CONFIG_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.config/<code>project_path</code>, for example: <code>/home/alice/.config/barapp</code> </li>
+<li>
+<b>MacOS</b>: <code>$HOME/Library/Application Support</code>/<code>project_path</code>, for example: <code>/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App</code> </li>
+<li>
+<b>Windows</b>: <code>APPDATA%</code>\<code>project_path</code>\config, for example: <code>C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App\config</code> </li>
 </ul>
+<dl class="section return"><dt>Returns</dt><dd>The path to the project's config directory. </dd></dl>
 
 </div>
 </div>
@@ -479,12 +521,15 @@ Directories will be created if they do not exist. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the path to the project's config_local directory. </p>
-<p>Values on different platforms:</p><ul>
-<li><b>Linux</b>: <code>$XDG_CONFIG_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.config/<code>project_path</code>, for example: <code>/home/alice/.config/barapp</code></li>
-<li><b>MacOS</b>: <code>$HOME/Library/Application Support</code>/<code>project_path</code>, for example: <code>/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App</code></li>
-<li><b>Windows</b>: <code>LOCALAPPDATA%</code>\<code>project_path</code>\config, for example: <code>C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App\config</code> <dl class="section return"><dt>Returns</dt><dd>The path to the project's config_local directory. </dd></dl>
-</li>
+<p>Values on different platforms: </p><ul>
+<li>
+<b>Linux</b>: <code>$XDG_CONFIG_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.config/<code>project_path</code>, for example: <code>/home/alice/.config/barapp</code> </li>
+<li>
+<b>MacOS</b>: <code>$HOME/Library/Application Support</code>/<code>project_path</code>, for example: <code>/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App</code> </li>
+<li>
+<b>Windows</b>: <code>LOCALAPPDATA%</code>\<code>project_path</code>\config, for example: <code>C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App\config</code> </li>
 </ul>
+<dl class="section return"><dt>Returns</dt><dd>The path to the project's config_local directory. </dd></dl>
 
 </div>
 </div>
@@ -504,12 +549,15 @@ Directories will be created if they do not exist. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the path to the project's data directory. </p>
-<p>Values on different platforms:</p><ul>
-<li><b>Linux</b>: <code>$XDG_DATA_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.local/share/<code>project_path</code>, for example: <code>/home/alice/.local/share/barapp</code></li>
-<li><b>MacOS</b>: <code>$HOME/Library/Application Support</code>/<code>project_path</code>, for example: <code>/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App</code></li>
-<li><b>Windows</b>: <code>LOCALAPPDATA%</code>\<code>project_path</code>\data, for example: <code>C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App\data</code> <dl class="section return"><dt>Returns</dt><dd>The path to the project's data directory. </dd></dl>
-</li>
+<p>Values on different platforms: </p><ul>
+<li>
+<b>Linux</b>: <code>$XDG_DATA_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.local/share/<code>project_path</code>, for example: <code>/home/alice/.local/share/barapp</code> </li>
+<li>
+<b>MacOS</b>: <code>$HOME/Library/Application Support</code>/<code>project_path</code>, for example: <code>/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App</code> </li>
+<li>
+<b>Windows</b>: <code>LOCALAPPDATA%</code>\<code>project_path</code>\data, for example: <code>C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App\data</code> </li>
 </ul>
+<dl class="section return"><dt>Returns</dt><dd>The path to the project's data directory. </dd></dl>
 
 </div>
 </div>
@@ -529,12 +577,15 @@ Directories will be created if they do not exist. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the path to the project's data_local directory. </p>
-<p>Values on different platforms:</p><ul>
-<li><b>Linux</b>: <code>$XDG_DATA_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.local/share/<code>project_path</code>, for example: <code>/home/alice/.local/share/barapp</code></li>
-<li><b>MacOS</b>: <code>$HOME/Library/Application Support</code>/<code>project_path</code>, for example: <code>/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App</code></li>
-<li><b>Windows</b>: <code>LOCALAPPDATA%</code>\<code>project_path</code>\data, for example: <code>C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App\data</code> <dl class="section return"><dt>Returns</dt><dd>The path to the project's data_local directory. </dd></dl>
-</li>
+<p>Values on different platforms: </p><ul>
+<li>
+<b>Linux</b>: <code>$XDG_DATA_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.local/share/<code>project_path</code>, for example: <code>/home/alice/.local/share/barapp</code> </li>
+<li>
+<b>MacOS</b>: <code>$HOME/Library/Application Support</code>/<code>project_path</code>, for example: <code>/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App</code> </li>
+<li>
+<b>Windows</b>: <code>LOCALAPPDATA%</code>\<code>project_path</code>\data, for example: <code>C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App\data</code> </li>
 </ul>
+<dl class="section return"><dt>Returns</dt><dd>The path to the project's data_local directory. </dd></dl>
 
 </div>
 </div>
@@ -554,12 +605,15 @@ Directories will be created if they do not exist. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the path to the project's preference directory. </p>
-<p>Values on different platforms:</p><ul>
-<li><b>Linux</b>: <code>$XDG_CONFIG_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.config/<code>project_path</code>, for example: <code>/home/alice/.config/barapp</code></li>
-<li><b>MacOS</b>: <code>$HOME</code>/Library/Preferences/<code>project_path</code>, for example: <code>/Users/Alice/Library/Preferences/com.Foo-Corp.Bar-App</code></li>
-<li><b>Windows</b>: <code>LOCALAPPDATA%</code>\<code>project_path</code>\config, for example: <code>C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App\config</code> <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-</li>
+<p>Values on different platforms: </p><ul>
+<li>
+<b>Linux</b>: <code>$XDG_CONFIG_HOME</code>/<code>project_path</code> or <code>$HOME</code>/.config/<code>project_path</code>, for example: <code>/home/alice/.config/barapp</code> </li>
+<li>
+<b>MacOS</b>: <code>$HOME</code>/Library/Preferences/<code>project_path</code>, for example: <code>/Users/Alice/Library/Preferences/com.Foo-Corp.Bar-App</code> </li>
+<li>
+<b>Windows</b>: <code>LOCALAPPDATA%</code>\<code>project_path</code>\config, for example: <code>C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App\config</code> </li>
 </ul>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -580,13 +634,16 @@ Directories will be created if they do not exist. </dd></dl>
 
 <p>Returns the path to the project's runtime directory. </p>
 <p>The runtime directory contains transient, non-essential data (like sockets or named pipes) that is expected to be cleared when the user's session ends.<br  />
- Values on different platforms:</p><ul>
-<li><b>Linux</b>: <code>XDG_RUNTIME_DIR</code>/<code>project_path</code>, for example: <code>/run/user/1001/barapp</code></li>
-<li><b>MacOS</b>: -</li>
-<li><b>Windows</b>: - <dl class="section note"><dt>Note</dt><dd>Only for Linux. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The path to the project's runtime directory or <code>none</code> if it is not available. </dd></dl>
-</li>
+ Values on different platforms: </p><ul>
+<li>
+<b>Linux</b>: <code>XDG_RUNTIME_DIR</code>/<code>project_path</code>, for example: <code>/run/user/1001/barapp</code> </li>
+<li>
+<b>MacOS</b>: - </li>
+<li>
+<b>Windows</b>: - </li>
 </ul>
+<dl class="section invariant"><dt>Invariant</dt><dd>Only for Linux. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The path to the project's runtime directory or <code>none</code> if it is not available. </dd></dl>
 
 </div>
 </div>
@@ -607,13 +664,16 @@ Directories will be created if they do not exist. </dd></dl>
 
 <p>Returns the path to the project's state directory. </p>
 <p>The state directory contains data that should be retained between sessions (unlike the runtime directory), but may not be important/portable enough to be synchronized across machines (unlike the config/preferences/data directories).<br  />
- Values on different platforms:</p><ul>
-<li><b>Linux</b>: <code>$XDG_STATE_HOME/<code>project_path</code> or <code>$HOME</code>/.local/state/<code>project_path</code>, for example: <code>/home/alice/.local/state/barapp</code></code></li>
-<li><code><b>MacOS</b>: -</code></li>
-<li><code><b>Windows</b>: - <dl class="section note"><dt>Note</dt><dd>Only for Linux. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The path to the project's state directory or <code>none</code> if it is not available. </dd></dl>
-</code></li>
+ Values on different platforms: </p><ul>
+<li>
+<b>Linux</b>: <code>$XDG_STATE_HOME/<code>project_path</code> or <code>$HOME</code>/.local/state/<code>project_path</code>, for example: <code>/home/alice/.local/state/barapp</code> </code></li>
+<li>
+<code><b>MacOS</b>: - </code></li>
+<li>
+<code><b>Windows</b>: - </code></li>
 </ul>
+<dl class="section invariant"><dt>Invariant</dt><dd><code> Only for Linux. </code></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code> The path to the project's state directory or <code>none</code> if it is not available. </code></dd></dl>
 
 </div>
 </div>

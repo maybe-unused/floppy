@@ -49,9 +49,9 @@ var namespacefloppy =
       [ "none", "group__aliases.html#ga9365b793fe547271e48fa719a7f4854d", null ]
     ] ],
     [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
-    [ "one_of", "structfloppy_1_1one__of.html", null ],
-    [ "ostream_formatter", "structfloppy_1_1ostream__formatter.html", null ],
-    [ "plain_type", "group__helpers.html#structfloppy_1_1plain__type", null ],
+    [ "one_of", "structfloppy_1_1one__of.html", "structfloppy_1_1one__of" ],
+    [ "ostream_formatter", "structfloppy_1_1ostream__formatter.html", "structfloppy_1_1ostream__formatter" ],
+    [ "plain_type", "group__helpers.html#structfloppy_1_1plain__type", "group__helpers_structfloppy_1_1plain__type" ],
     [ "platform", "classfloppy_1_1platform.html", "classfloppy_1_1platform" ],
     [ "source_location", "structfloppy_1_1source__location.html", "structfloppy_1_1source__location" ],
     [ "plain_type_t", "group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c", null ],

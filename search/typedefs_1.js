@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['destination_5ftype_0',['destination_type',['../structfloppy_1_1math_1_1scale.html#ade7958c1143337a2576cd6ef72ffe368',1,'floppy::math::scale']]]
+  ['const_5ftype_0',['const_type',['../group__helpers.html#a60926b56740fc6359cc46e3cc51f9289',1,'floppy::plain_type']]]
 ];

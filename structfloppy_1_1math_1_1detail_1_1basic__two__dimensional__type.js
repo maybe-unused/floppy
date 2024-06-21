@@ -38,5 +38,7 @@ var structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type =
     [ "from_pair", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a185ce55518e9f85808db6f1c09fa93de", null ],
     [ "operator bool", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ad0ed9dded3dc4405713f0b9270930a92", null ],
     [ "operator!", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#aa62cb136f618e0d16feed8b745225d05", null ],
-    [ "basic_string< C >", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#abb97ee5b3485f7cc5eb67cff00cd963a", null ]
+    [ "basic_string< C >", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#abb97ee5b3485f7cc5eb67cff00cd963a", null ],
+    [ "x_", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a856779037f8e9087083527b03e4f76c4", null ],
+    [ "y_", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a40f5c8c185ad93377d8f7257652a8d13", null ]
 ];

@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.1.5</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -160,13 +160,12 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga6a778dde2b29125b63c1101d454f3e76" id="r_ga6a778dde2b29125b63c1101d454f3e76"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6a778dde2b29125b63c1101d454f3e76">panic</a> (std::string_view message, <a class="el" href="structfloppy_1_1source__location.html">source_location</a> location=source_location::current()) -&gt; void</td></tr>
+<tr class="memitem:ga6a778dde2b29125b63c1101d454f3e76" id="r_ga6a778dde2b29125b63c1101d454f3e76"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6a778dde2b29125b63c1101d454f3e76">panic</a> (std::string_view message, <a class="el" href="structfloppy_1_1source__location.html">source_location</a> location=<a class="el" href="structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743">source_location::current</a>()) -&gt; void</td></tr>
 <tr class="separator:ga6a778dde2b29125b63c1101d454f3e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342" id="r_ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplParams" colspan="2">template&lt;concepts::num T, concepts::num U&gt; </td></tr>
 <tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga0bbd17556e1675c4a05316d9f6743342">narrow_cast</a> (U &amp;&amp;u) noexcept -&gt; T</td></tr>
 <tr class="separator:ga0bbd17556e1675c4a05316d9f6743342"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga67c6adb54f12fdf9e8ef12c2ef08c99a" id="r_ga67c6adb54f12fdf9e8ef12c2ef08c99a"><td class="memItemLeft" align="right" valign="top"><a id="ga67c6adb54f12fdf9e8ef12c2ef08c99a" name="ga67c6adb54f12fdf9e8ef12c2ef08c99a"></a>
-FLOPPY_EXPORT auto&#160;</td><td class="memItemRight" valign="bottom"><b>demangle</b> (char const *name) -&gt; std::string</td></tr>
+<tr class="memitem:ga67c6adb54f12fdf9e8ef12c2ef08c99a" id="r_ga67c6adb54f12fdf9e8ef12c2ef08c99a"><td class="memItemLeft" align="right" valign="top">FLOPPY_EXPORT auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67c6adb54f12fdf9e8ef12c2ef08c99a">demangle</a> (char const *name) -&gt; std::string</td></tr>
 <tr class="separator:ga67c6adb54f12fdf9e8ef12c2ef08c99a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaece47fc7440ee1c5e315c2b6c754f607" id="r_gaece47fc7440ee1c5e315c2b6c754f607"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gaece47fc7440ee1c5e315c2b6c754f607"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaece47fc7440ee1c5e315c2b6c754f607">type_name</a> () -&gt; std::string</td></tr>
@@ -223,19 +222,13 @@ struct floppy::plain_type&lt; T &gt;</div><p>Remove all cv qualifiers, reference
 <td class="fieldname">
 type std::remove_cvref_t&lt;std::remove_pointer_t&lt;T&gt;&gt;</td>
 <td class="fielddoc">
-</td></tr>
+The type without qualifiers, references and pointers. </td></tr>
 <tr><td class="fieldtype">
-<a id="a60926b56740fc6359cc46e3cc51f9289" name="a60926b56740fc6359cc46e3cc51f9289"></a>typedef add_const_t&lt; type &gt;</td>
+<a id="a60926b56740fc6359cc46e3cc51f9289" name="a60926b56740fc6359cc46e3cc51f9289"></a>typedef add_const_t&lt; <a class="el" href="#ab74e5607b5fabad62e6c021d4fca6b4d">type</a> &gt;</td>
 <td class="fieldname">
-const_type std::add_const_t&lt;type&gt;</td>
+const_type std::add_const_t&lt;<a class="el" href="#ab74e5607b5fabad62e6c021d4fca6b4d">type</a>&gt;</td>
 <td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a80fee5821500910afcc3912998efe0df" name="a80fee5821500910afcc3912998efe0df"></a>typedef remove_cvref_t&lt; type &gt;</td>
-<td class="fieldname">
-maybe_pointer_type std::remove_cvref_t&lt;type&gt;</td>
-<td class="fielddoc">
-</td></tr>
+The type without qualifiers, references and pointers with a const qualifier. </td></tr>
 </table>
 
 </div>
@@ -283,7 +276,7 @@ template&lt;typename T &gt; </div>
 
 <p>Remove all cv qualifiers, references and pointers from a type. </p>
 
-<p class="definition">Definition at line <a class="el" href="type__traits_8h_source.html#l00030">30</a> of file <a class="el" href="type__traits_8h_source.html">type_traits.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="type__traits_8h_source.html#l00032">32</a> of file <a class="el" href="type__traits_8h_source.html">type_traits.h</a>.</p>
 
 </div>
 </div>
@@ -305,7 +298,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structfloppy_1_1source__location.html">source_location</a></td>          <td class="paramname"><span class="paramname"><em>location</em><span class="paramdefsep"> = </span><span class="paramdefval">source_location::current()</span></span>&#160;) -&gt; void </td>
+          <td class="paramtype"><a class="el" href="structfloppy_1_1source__location.html">source_location</a></td>          <td class="paramname"><span class="paramname"><em>location</em><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743">source_location::current</a>()</span></span>&#160;) -&gt; void </td>
         </tr>
       </table>
   </td>
@@ -378,6 +371,35 @@ template&lt;concepts::num T, concepts::num U&gt; </div>
 
 </div>
 </div>
+<a id="ga67c6adb54f12fdf9e8ef12c2ef08c99a" name="ga67c6adb54f12fdf9e8ef12c2ef08c99a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67c6adb54f12fdf9e8ef12c2ef08c99a">&#9670;&#160;</a></span>demangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FLOPPY_EXPORT auto demangle </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> -&gt;  std::string</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Demangles C++ type name from string. </p>
+<dl class="section invariant"><dt>Invariant</dt><dd>Confirmed support on: <ul>
+<li>
+MSVC </li>
+<li>
+Clang </li>
+<li>
+GCC </li>
+</ul>
+</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gaece47fc7440ee1c5e315c2b6c754f607" title="Returns C++ type name or signature from typeid object using RTTI.">type_name</a> </dd></dl>
+
+</div>
+</div>
 <a id="gaece47fc7440ee1c5e315c2b6c754f607" name="gaece47fc7440ee1c5e315c2b6c754f607"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaece47fc7440ee1c5e315c2b6c754f607">&#9670;&#160;</a></span>type_name()</h2>
 
@@ -396,8 +418,23 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Returns C++ type name or signature from <b>typeid</b> object using RTTI. </p>
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> name = rtti::type_name&lt;int&gt;();</div>
+<div class="line">assert(name == <span class="stringliteral">&quot;int&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> name = rtti::type_name&lt;std::vector&lt;int&gt;&gt;();</div>
+<div class="line">assert(name == <span class="stringliteral">&quot;std::vector&lt;int&gt;&quot;</span>);</div>
+</div><!-- fragment --> <dl class="section invariant"><dt>Invariant</dt><dd>Confirmed support on: <ul>
+<li>
+MSVC </li>
+<li>
+Clang </li>
+<li>
+GCC </li>
+</ul>
+</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga67c6adb54f12fdf9e8ef12c2ef08c99a" title="Demangles C++ type name from string.">demangle</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00053">53</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00075">75</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
 
 </div>
 </div>
@@ -470,7 +507,7 @@ template&lt;typename... Args&gt; </div>
 </div><!-- fragment -->
 <p>Project metadata object, available at compile-time. </p>
 
-<p class="definition">Definition at line <a class="el" href="export_8h_source.html#l00143">143</a> of file <a class="el" href="export_8h_source.html">export.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="export_8h_source.html#l00148">148</a> of file <a class="el" href="export_8h_source.html">export.h</a>.</p>
 
 </div>
 </div>
@@ -504,9 +541,11 @@ template&lt;typename U , typename... T&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structfloppy_1_1one__of.html" title="Checks if type is one of the given types.">one_of</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structfloppy_1_1one__of.html" title="Checks if type is one of the given types.">one_of</a> </dd>
+<dd>
+<a class="el" href="conceptfloppy_1_1concepts_1_1any__of.html" title="Satisfied if T and any of given U are the same type.">floppy::concepts::any_of</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="type__traits_8h_source.html#l00051">51</a> of file <a class="el" href="type__traits_8h_source.html">type_traits.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="type__traits_8h_source.html#l00058">58</a> of file <a class="el" href="type__traits_8h_source.html">type_traits.h</a>.</p>
 
 </div>
 </div>

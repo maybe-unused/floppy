@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['none_0',['none',['../group__aliases.html#ga9365b793fe547271e48fa719a7f4854d',1,'floppy::none'],['../group__aliases.html#ga9365b793fe547271e48fa719a7f4854d',1,'floppy::types::none']]]
+  ['m_5f_0',['m_',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a60a44b6be66786ea152cc7d589c55426',1,'floppy::math::detail::basic_numeric_newtype']]]
 ];

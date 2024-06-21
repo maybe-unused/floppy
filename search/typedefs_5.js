@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['option_0',['option',['../group__aliases.html#gaa202473f296b2492d9239773369181af',1,'floppy::option'],['../group__aliases.html#gaa202473f296b2492d9239773369181af',1,'floppy::types::option']]]
+  ['length_5ftype_0',['length_type',['../classfloppy_1_1math_1_1vector2d.html#ad44f903f12ca849c1e42d024a10de5bd',1,'floppy::math::vector2d']]]
 ];

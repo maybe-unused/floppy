@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.1.5</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -150,38 +150,34 @@ $(function(){initNavTree('concepts_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1array.html">   27</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1array.html">array</a> = std::is_array_v&lt;T&gt;;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1object.html">   30</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1object.html">object</a> = std::is_object_v&lt;plain_type_t&lt;T&gt;&gt;;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1fn.html">   33</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1fn.html">fn</a> = std::is_function_v&lt;plain_type_t&lt;T&gt;&gt;;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1object.html">   33</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1object.html">object</a> = std::is_object_v&lt;T&gt;;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1ptr.html">   36</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1ptr.html">ptr</a> = std::is_pointer_v&lt;T&gt;;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1ref.html">   39</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1ref.html">ref</a> = std::is_reference_v&lt;T&gt;;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1enum__.html">   45</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1enum__.html">enum_</a> = std::is_enum_v&lt;plain_type_t&lt;T&gt;&gt;;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> C&gt;</div>
-<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1formattable.html">   52</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1formattable.html">formattable</a> = <span class="keyword">requires</span>(T t) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    { t.to_string() } -&gt; std::convertible_to&lt;std::basic_string&lt;C&gt;&gt;;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  };</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1ptr.html">   40</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1ptr.html">ptr</a> = std::is_pointer_v&lt;T&gt;;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1ref.html">   46</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1ref.html">ref</a> = std::is_reference_v&lt;T&gt;;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1enum__.html">   52</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1enum__.html">enum_</a> = std::is_enum_v&lt;plain_type_t&lt;T&gt;&gt;;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> C&gt;</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1concepts_1_1formattable.html">   59</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1concepts_1_1formattable.html">formattable</a> = <span class="keyword">requires</span>(T t) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    { t.to_string() } -&gt; std::convertible_to&lt;std::basic_string&lt;C&gt;&gt;;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  };</div>
 </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace floppy::concepts</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <span class="comment">// namespace floppy::concepts</span></div>
 </div>
 <div class="ttc" id="aconceptfloppy_1_1concepts_1_1any__of_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1any__of.html">floppy::concepts::any_of</a></div><div class="ttdoc">Satisfied if T and any of given U are the same type.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">concepts.h:14</a></div></div>
 <div class="ttc" id="aconceptfloppy_1_1concepts_1_1array_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1array.html">floppy::concepts::array</a></div><div class="ttdoc">Array concept.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">concepts.h:27</a></div></div>
-<div class="ttc" id="aconceptfloppy_1_1concepts_1_1enum___html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1enum__.html">floppy::concepts::enum_</a></div><div class="ttdoc">Enum concept.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">concepts.h:45</a></div></div>
-<div class="ttc" id="aconceptfloppy_1_1concepts_1_1fn_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1fn.html">floppy::concepts::fn</a></div><div class="ttdef"><b>Definition</b> <a href="#l00033">concepts.h:33</a></div></div>
-<div class="ttc" id="aconceptfloppy_1_1concepts_1_1formattable_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1formattable.html">floppy::concepts::formattable</a></div><div class="ttdoc">Formattable concept.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">concepts.h:52</a></div></div>
+<div class="ttc" id="aconceptfloppy_1_1concepts_1_1enum___html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1enum__.html">floppy::concepts::enum_</a></div><div class="ttdoc">Enum concept.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">concepts.h:52</a></div></div>
+<div class="ttc" id="aconceptfloppy_1_1concepts_1_1formattable_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1formattable.html">floppy::concepts::formattable</a></div><div class="ttdoc">Formattable concept.</div><div class="ttdef"><b>Definition</b> <a href="#l00059">concepts.h:59</a></div></div>
 <div class="ttc" id="aconceptfloppy_1_1concepts_1_1num_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1num.html">floppy::concepts::num</a></div><div class="ttdoc">Number concept.</div><div class="ttdef"><b>Definition</b> <a href="#l00021">concepts.h:21</a></div></div>
-<div class="ttc" id="aconceptfloppy_1_1concepts_1_1object_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1object.html">floppy::concepts::object</a></div><div class="ttdef"><b>Definition</b> <a href="#l00030">concepts.h:30</a></div></div>
-<div class="ttc" id="aconceptfloppy_1_1concepts_1_1ptr_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1ptr.html">floppy::concepts::ptr</a></div><div class="ttdef"><b>Definition</b> <a href="#l00036">concepts.h:36</a></div></div>
-<div class="ttc" id="aconceptfloppy_1_1concepts_1_1ref_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1ref.html">floppy::concepts::ref</a></div><div class="ttdef"><b>Definition</b> <a href="#l00039">concepts.h:39</a></div></div>
+<div class="ttc" id="aconceptfloppy_1_1concepts_1_1object_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1object.html">floppy::concepts::object</a></div><div class="ttdoc">Object concept.</div><div class="ttdef"><b>Definition</b> <a href="#l00033">concepts.h:33</a></div></div>
+<div class="ttc" id="aconceptfloppy_1_1concepts_1_1ptr_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1ptr.html">floppy::concepts::ptr</a></div><div class="ttdoc">Pointer concept.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">concepts.h:40</a></div></div>
+<div class="ttc" id="aconceptfloppy_1_1concepts_1_1ref_html"><div class="ttname"><a href="conceptfloppy_1_1concepts_1_1ref.html">floppy::concepts::ref</a></div><div class="ttdoc">Reference concept.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">concepts.h:46</a></div></div>
 <div class="ttc" id="anamespacefloppy_1_1concepts_html"><div class="ttname"><a href="namespacefloppy_1_1concepts.html">floppy::concepts</a></div><div class="ttdoc">Concepts namespace.</div><div class="ttdef"><b>Definition</b> <a href="#l00008">concepts.h:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

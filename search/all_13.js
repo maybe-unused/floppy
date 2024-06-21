@@ -37,6 +37,6 @@ var searchData=
   ['trace_34',['trace',['../namespacefloppy_1_1log.html#a1958617b608e95656ef732069cb6a51f',1,'floppy::log']]],
   ['trace_5fto_35',['trace_to',['../namespacefloppy_1_1log.html#afe5b43f7e92b1290fa979606a9d8bd59',1,'floppy::log']]],
   ['two_5fpi_36',['two_pi',['../structfloppy_1_1math_1_1angle.html#a8bf55a1f1d6b12c00a1a412d55e114d3',1,'floppy::math::angle']]],
-  ['type_37',['type',['../structfloppy_1_1math_1_1detail_1_1number__base.html#a834c467da58ea1d81821952d3c473b64',1,'floppy::math::detail::number_base']]],
+  ['type_37',['type',['../structfloppy_1_1math_1_1detail_1_1number__base.html#a834c467da58ea1d81821952d3c473b64',1,'floppy::math::detail::number_base::type'],['../group__helpers.html#ab74e5607b5fabad62e6c021d4fca6b4d',1,'floppy::plain_type::type']]],
   ['type_5fname_38',['type_name',['../group__helpers.html#gaece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
 ];

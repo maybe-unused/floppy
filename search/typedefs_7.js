@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ref_0',['ref',['../group__aliases.html#gae7d120016347ce3f021bc18dcefe2809',1,'floppy::ref'],['../group__aliases.html#gae7d120016347ce3f021bc18dcefe2809',1,'floppy::types::ref']]]
+  ['pimpl_0',['pimpl',['../namespacefloppy_1_1traits.html#ae8263662bb2da92276fbe82282582f5e',1,'floppy::traits']]],
+  ['plain_5ftype_5ft_1',['plain_type_t',['../group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c',1,'floppy']]]
 ];

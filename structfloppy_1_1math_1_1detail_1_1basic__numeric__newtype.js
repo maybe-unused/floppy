@@ -19,5 +19,21 @@ var structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype =
     [ "asin", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#add809373661187793ef5d2296d7f7eb3", null ],
     [ "acos", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#abf397172dd9d15d35fa64f78456a8e90", null ],
     [ "atan", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a2c5c1e764b8e4c7f8fb6407b0e78f22e", null ],
-    [ "operator bool", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#ad0ed9dded3dc4405713f0b9270930a92", null ]
+    [ "operator++", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a438fc4fcaa8b7d968ac543b7ab5233a7", null ],
+    [ "operator++", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#ad7081a8bedaf8b59d99196a270fc3826", null ],
+    [ "operator--", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a22f3a8c9d77d430f532d7c0d0fc34d71", null ],
+    [ "operator--", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#aa902d1c42474e7416e348300913b86d1", null ],
+    [ "operator bool", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#ad0ed9dded3dc4405713f0b9270930a92", null ],
+    [ "operator!", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#aa62cb136f618e0d16feed8b745225d05", null ],
+    [ "operator underlying_type", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#ac062a5759bf403cdd9f706130789d08a", null ],
+    [ "operator==", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a64c66a8822534eccc04b6db060e662e6", null ],
+    [ "operator==", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#aa9bc6ddbd6f135795bbfe5e2beafe6ba", null ],
+    [ "operator!=", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#aa0db1a4f3d41e44518761bbccf4ab4ab", null ],
+    [ "operator!=", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#aed221b43ccc2b82b9d6abef9e6911527", null ],
+    [ "operator<", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#af49cc34143aa01c6d8c377814b06e8a5", null ],
+    [ "operator>", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a79150b9359f7eb1ddbd88c75e0f36ae0", null ],
+    [ "operator<=", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a4724301a9f2b729342fcf61404718a3d", null ],
+    [ "operator>=", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a30185ebd68b0a4b333d2e6b4834989af", null ],
+    [ "operator<=>", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a3ac4e5c19e3aa5cc8f1179a6d2a6c22b", null ],
+    [ "m_", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a60a44b6be66786ea152cc7d589c55426", null ]
 ];

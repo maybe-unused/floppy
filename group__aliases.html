@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.1.5</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -187,12 +187,16 @@ template&lt;std::destructible T&gt; </div>
 <div class="line">   <span class="keywordflow">return</span> <a class="code hl_variable" href="#ga9365b793fe547271e48fa719a7f4854d">none</a>;</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code hl_function" href="#ga5b788689cac7bc0f3b593775123aaaee">some</a>(vec.front());</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__aliases_html_ga5b788689cac7bc0f3b593775123aaaee"><div class="ttname"><a href="#ga5b788689cac7bc0f3b593775123aaaee">floppy::types::some</a></div><div class="ttdeci">auto some(T &amp;&amp;t) -&gt; option&lt; std::decay_t&lt; T &gt; &gt;</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00051">types.h:51</a></div></div>
-<div class="ttc" id="agroup__aliases_html_ga9365b793fe547271e48fa719a7f4854d"><div class="ttname"><a href="#ga9365b793fe547271e48fa719a7f4854d">floppy::types::none</a></div><div class="ttdeci">constexpr auto none</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00058">types.h:58</a></div></div>
-<div class="ttc" id="agroup__aliases_html_gaa202473f296b2492d9239773369181af"><div class="ttname"><a href="#gaa202473f296b2492d9239773369181af">floppy::types::option</a></div><div class="ttdeci">std::optional&lt; T &gt; option</div><div class="ttdoc">&lt; Float with 128-bit precision</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00045">types.h:45</a></div></div>
-</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a href="https://en.cppreference.com/w/cpp/utility/optional">https://en.cppreference.com/w/cpp/utility/optional</a> </dd></dl>
+<div class="ttc" id="agroup__aliases_html_ga5b788689cac7bc0f3b593775123aaaee"><div class="ttname"><a href="#ga5b788689cac7bc0f3b593775123aaaee">floppy::types::some</a></div><div class="ttdeci">auto some(T &amp;&amp;t) -&gt; option&lt; std::decay_t&lt; T &gt; &gt;</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00054">types.h:54</a></div></div>
+<div class="ttc" id="agroup__aliases_html_ga9365b793fe547271e48fa719a7f4854d"><div class="ttname"><a href="#ga9365b793fe547271e48fa719a7f4854d">floppy::types::none</a></div><div class="ttdeci">constexpr auto none</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00062">types.h:62</a></div></div>
+<div class="ttc" id="agroup__aliases_html_gaa202473f296b2492d9239773369181af"><div class="ttname"><a href="#gaa202473f296b2492d9239773369181af">floppy::types::option</a></div><div class="ttdeci">std::optional&lt; T &gt; option</div><div class="ttdoc">&lt; Float with 128-bit precision</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00047">types.h:47</a></div></div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga5b788689cac7bc0f3b593775123aaaee" title="Helper function for option.">some</a> </dd>
+<dd>
+<a class="el" href="#ga9365b793fe547271e48fa719a7f4854d" title="Helper function for option.">none</a> </dd>
+<dd>
+<a href="https://en.cppreference.com/w/cpp/utility/optional">https://en.cppreference.com/w/cpp/utility/optional</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00045">45</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00047">47</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -212,7 +216,7 @@ template&lt;typename T &gt; </div>
 
 <p>Shortcut for <code>std::reference_wrapper</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00064">64</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00068">68</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -235,8 +239,9 @@ template&lt;std::destructible T&gt; </div>
 </div><div class="memdoc">
 
 <p>Helper function for <a class="el" href="#gaa202473f296b2492d9239773369181af">option</a>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga9365b793fe547271e48fa719a7f4854d" title="Helper function for option.">none</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00051">51</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00054">54</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -262,8 +267,9 @@ template&lt;std::destructible T&gt; </div>
 </div><div class="memdoc">
 
 <p>Helper function for <a class="el" href="#gaa202473f296b2492d9239773369181af">option</a>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga5b788689cac7bc0f3b593775123aaaee" title="Helper function for option.">some</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00058">58</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00062">62</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>

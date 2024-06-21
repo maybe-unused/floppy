@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.1.5</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -153,18 +153,19 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename C&gt;<br />
 struct floppy::ostream_formatter&lt; C &gt;</div><p>Formatter for types which support stream output. </p>
 <p>Example usage for <code>std::ostream</code>:</p>
-<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>fmt::formatter&lt;YourType&gt; : <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a>&lt;char&gt; {};</div>
-<div class="ttc" id="astructfloppy_1_1ostream__formatter_html"><div class="ttname"><a href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a></div><div class="ttdoc">Formatter for types which support stream output.</div><div class="ttdef"><b>Definition</b> <a href="formatters_8h_source.html#l00027">formatters.h:28</a></div></div>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>[[maybe_unused]] fmt::formatter&lt;YourType&gt; : <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a>&lt;char&gt; {};</div>
+<div class="ttc" id="astructfloppy_1_1ostream__formatter_html"><div class="ttname"><a href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a></div><div class="ttdoc">Formatter for types which support stream output.</div><div class="ttdef"><b>Definition</b> <a href="formatters_8h_source.html#l00028">formatters.h:29</a></div></div>
 </div><!-- fragment --><p>Example usage for <code>std::wostream</code>:</p>
-<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>fmt::formatter&lt;YourType&gt; : <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a>&lt;wchar_t&gt; {};</div>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>[[maybe_unused]] fmt::formatter&lt;YourType&gt; : <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a>&lt;wchar_t&gt; {};</div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">C</td><td>Type of the stream character type. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structfloppy_1_1traits_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt.">floppy::traits::formattable</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="formatters_8h_source.html#l00027">27</a> of file <a class="el" href="formatters_8h_source.html">formatters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="formatters_8h_source.html#l00028">28</a> of file <a class="el" href="formatters_8h_source.html">formatters.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a584238951fc0b892a57710ff668824b0" name="a584238951fc0b892a57710ff668824b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a584238951fc0b892a57710ff668824b0">&#9670;&#160;</a></span>format()</h2>
@@ -197,7 +198,9 @@ template&lt;typename T , typename OutputIt &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="formatters_8h_source.html#l00030">30</a> of file <a class="el" href="formatters_8h_source.html">formatters.h</a>.</p>
+<p>Required by <code>fmt</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="formatters_8h_source.html#l00032">32</a> of file <a class="el" href="formatters_8h_source.html">formatters.h</a>.</p>
 
 </div>
 </div>

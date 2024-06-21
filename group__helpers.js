@@ -15,9 +15,17 @@ var group__helpers =
       [ "domain", "classfloppy_1_1meta_1_1project__meta.html#adeb5281b7ff8433975b337a1f47562a5", null ],
       [ "organization", "classfloppy_1_1meta_1_1project__meta.html#af871cb1729b7c6415a60aad9e0fa67b4", null ]
     ] ],
-    [ "ostream_formatter< C >", "structfloppy_1_1ostream__formatter.html", null ],
-    [ "plain_type< T >", "group__helpers.html#structfloppy_1_1plain__type", null ],
-    [ "one_of< U, T >", "structfloppy_1_1one__of.html", null ],
+    [ "ostream_formatter< C >", "structfloppy_1_1ostream__formatter.html", [
+      [ "format", "structfloppy_1_1ostream__formatter.html#a584238951fc0b892a57710ff668824b0", null ]
+    ] ],
+    [ "plain_type< T >", "group__helpers.html#structfloppy_1_1plain__type", [
+      [ "type", "group__helpers.html#ab74e5607b5fabad62e6c021d4fca6b4d", null ],
+      [ "const_type", "group__helpers.html#a60926b56740fc6359cc46e3cc51f9289", null ]
+    ] ],
+    [ "one_of< U, T >", "structfloppy_1_1one__of.html", [
+      [ "operator bool", "structfloppy_1_1one__of.html#a7990d8e87d9eab2383f94c88c23a6488", null ],
+      [ "value", "structfloppy_1_1one__of.html#a5b4ee4ae6cba6bb75200ba7af1910873", null ]
+    ] ],
     [ "GTEST_PRINT", "group__helpers.html#ga5640226fcdabfd268993c1d43f34885e", null ],
     [ "plain_type_t", "group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c", null ],
     [ "panic", "group__helpers.html#ga6a778dde2b29125b63c1101d454f3e76", null ],

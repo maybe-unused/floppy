@@ -6,7 +6,6 @@ var concepts =
         [ "num", "conceptfloppy_1_1concepts_1_1num.html", null ],
         [ "array", "conceptfloppy_1_1concepts_1_1array.html", null ],
         [ "object", "conceptfloppy_1_1concepts_1_1object.html", null ],
-        [ "fn", "conceptfloppy_1_1concepts_1_1fn.html", null ],
         [ "ptr", "conceptfloppy_1_1concepts_1_1ptr.html", null ],
         [ "ref", "conceptfloppy_1_1concepts_1_1ref.html", null ],
         [ "enum_", "conceptfloppy_1_1concepts_1_1enum__.html", null ],
