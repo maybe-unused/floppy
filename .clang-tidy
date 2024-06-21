@@ -18,7 +18,10 @@ Checks:
   -readability-identifier-length,
   -readability-implicit-bool-conversion,
   -readability-braces-around-statements,
-  -cppcoreguidelines-explicit-virtual-functions
+  -readability-avoid-magic-numbers,
+  -readability-magic-numbers,
+  -cppcoreguidelines-explicit-virtual-functions,
+  -cppcoreguidelines-avoid-magic-numbers,
   -misc-non-private-member-variables-in-classes,
   -misc-include-cleaner
 

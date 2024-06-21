@@ -53,7 +53,7 @@ TEST(EuclidVector2D, Length)
 {
   auto const p1 = vector2d(3.0, 4.0);
 
-  EXPECT_FLOAT_EQ(p1.length(), 5.0);
+  EXPECT_FLOAT_EQ(p1.length_scalar(), 5.0);
 }
 
 TEST(EuclidVector2D, LengthSquared)

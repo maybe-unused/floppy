@@ -3,6 +3,7 @@
 #include <array>
 #include <tuple>
 #include <utility>
+#include <algorithm>
 #include <floppy/euclid/length.h>
 #include <floppy/euclid/detail/nt_traits.h>
 
@@ -162,7 +163,7 @@ namespace floppy::math::detail
     /// \brief Returns the smallest x and y values of this and another basic_two_dimensional_type.
     /// \param other The other basic_two_dimensional_type.
     /// \return basic_two_dimensional_type with the smallest x and y values.
-    [[nodiscard]] constexpr auto min(T const& other) const -> T {
+    [[nodiscard]] constexpr  auto min(T const& other) const -> T {
       return T(std::min(this->x_, other.x_), std::min(this->y_, other.y_));
     }
 
