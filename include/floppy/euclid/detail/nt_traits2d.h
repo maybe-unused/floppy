@@ -3,11 +3,21 @@
 #include <array>
 #include <tuple>
 #include <utility>
+#include <algorithm>
 #include <floppy/euclid/length.h>
 #include <floppy/euclid/detail/nt_traits.h>
 
 namespace floppy::math::detail
 {
+  /// \brief CRTP base class for two dimensional numerical types.
+  /// \headerfile floppy/euclid.h
+  /// \ingroup geometry
+  /// \tparam T The base class.
+  /// \tparam U The unit type.
+  /// \tparam N The number type. Must satisfy <i>floppy::concepts::num</i>.
+  /// \see floppy::math::point2d
+  /// \see floppy::math::vector2d
+  /// \see floppy::math::size2d
   template <typename T, typename U, concepts::num N>
   struct basic_two_dimensional_type : public traits::formattable<T, char>
   {
@@ -162,7 +172,7 @@ namespace floppy::math::detail
     /// \brief Returns the smallest x and y values of this and another basic_two_dimensional_type.
     /// \param other The other basic_two_dimensional_type.
     /// \return basic_two_dimensional_type with the smallest x and y values.
-    [[nodiscard]] constexpr auto min(T const& other) const -> T {
+    [[nodiscard]] constexpr  auto min(T const& other) const -> T {
       return T(std::min(this->x_, other.x_), std::min(this->y_, other.y_));
     }
 
