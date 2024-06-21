@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="d0/d3b/structfloppy_1_1math_1_1detail_1_1default__comparable.html" target="_top" xlink:title="CRTP base for trivially comparable numeric types.">
 <polygon fill="white" stroke="#666666" points="136.75,-774.5 0,-774.5 0,-755.25 136.75,-755.25 136.75,-774.5"/>
 <text text-anchor="middle" x="68.38" y="-760.05" font-family="Arial" font-size="11.00">default_comparable&lt; T &gt;</text>
 </a>
@@ -79,7 +79,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html" target="_top" xlink:title=" ">
+<g id="a_Node000004"><a xlink:href="d8/d03/structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html" target="_top" xlink:title="CRTP base for numeric newtypes that can be compared.">
 <polygon fill="white" stroke="#666666" points="304.25,-856.12 172.75,-856.12 172.75,-825.62 304.25,-825.62 304.25,-856.12"/>
 <text text-anchor="start" x="180.75" y="-841.67" font-family="Arial" font-size="11.00">basic_numeric_newtype</text>
 <text text-anchor="middle" x="238.5" y="-830.42" font-family="Arial" font-size="11.00">&lt; T, U &gt;</text>
@@ -117,7 +117,7 @@
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="d8/d97/structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html" target="_top" xlink:title=" ">
+<g id="a_Node000006"><a xlink:href="d8/d97/structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html" target="_top" xlink:title="CRTP base for numeric newtypes containing math operations implementation.">
 <polygon fill="white" stroke="#666666" points="487.88,-794.12 354.88,-794.12 354.88,-763.62 487.88,-763.62 487.88,-794.12"/>
 <text text-anchor="start" x="362.88" y="-779.67" font-family="Arial" font-size="11.00">advanced_numeric_type</text>
 <text text-anchor="middle" x="421.38" y="-768.42" font-family="Arial" font-size="11.00">&lt; T, U &gt;</text>
@@ -538,7 +538,7 @@
 <!-- Node27 -->
 <g id="Node000027" class="node">
 <title>Node27</title>
-<g id="a_Node000027"><a xlink:href="d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" target="_top" xlink:title=" ">
+<g id="a_Node000027"><a xlink:href="d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" target="_top" xlink:title="CRTP base class for two dimensional numerical types.">
 <polygon fill="white" stroke="#666666" points="484.5,-85.12 358.25,-85.12 358.25,-54.62 484.5,-54.62 484.5,-85.12"/>
 <text text-anchor="start" x="366.25" y="-70.67" font-family="Arial" font-size="11.00">basic_two_dimensional</text>
 <text text-anchor="middle" x="421.38" y="-59.42" font-family="Arial" font-size="11.00">_type&lt; T, U, N &gt;</text>

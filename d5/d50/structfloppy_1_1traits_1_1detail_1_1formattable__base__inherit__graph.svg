@@ -405,8 +405,8 @@ var sectionId = 'dynsection-0';
 <!-- Node14 -->
 <g id="Node000014" class="node">
 <title>Node14</title>
-<g id="a_Node000014"><a xlink:href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="465.75,-448.88 339.5,-448.88 339.5,-418.38 465.75,-418.38 465.75,-448.88"/>
+<g id="a_Node000014"><a xlink:href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" target="_top" xlink:title="CRTP base class for two dimensional numerical types.">
+<polygon fill="white" stroke="#666666" points="465.75,-448.88 339.5,-448.88 339.5,-418.38 465.75,-418.38 465.75,-448.88"/>
 <text text-anchor="start" x="347.5" y="-434.43" font-family="Arial" font-size="11.00">basic_two_dimensional</text>
 <text text-anchor="middle" x="402.62" y="-423.18" font-family="Arial" font-size="11.00">_type&lt; T, U, N &gt;</text>
 </a>
@@ -479,7 +479,7 @@ var sectionId = 'dynsection-0';
 <g id="Node000024" class="node">
 <title>Node24</title>
 <g id="a_Node000024"><a xlink:href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="483.75,-273.5 321.5,-273.5 321.5,-231.75 483.75,-231.75 483.75,-273.5"/>
+<polygon fill="white" stroke="#666666" points="483.75,-273.5 321.5,-273.5 321.5,-231.75 483.75,-231.75 483.75,-273.5"/>
 <text text-anchor="start" x="329.5" y="-259.05" font-family="Arial" font-size="11.00">basic_two_dimensional</text>
 <text text-anchor="start" x="329.5" y="-247.8" font-family="Arial" font-size="11.00">_type&lt; point2d&lt; default</text>
 <text text-anchor="middle" x="402.62" y="-236.55" font-family="Arial" font-size="11.00">_unit, f32 &gt;, default_unit, f32 &gt;</text>
@@ -499,7 +499,7 @@ var sectionId = 'dynsection-0';
 <g id="Node000025" class="node">
 <title>Node25</title>
 <g id="a_Node000025"><a xlink:href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="483.75,-213.5 321.5,-213.5 321.5,-171.75 483.75,-171.75 483.75,-213.5"/>
+<polygon fill="white" stroke="#666666" points="483.75,-213.5 321.5,-213.5 321.5,-171.75 483.75,-171.75 483.75,-213.5"/>
 <text text-anchor="start" x="329.5" y="-199.05" font-family="Arial" font-size="11.00">basic_two_dimensional</text>
 <text text-anchor="start" x="329.5" y="-187.8" font-family="Arial" font-size="11.00">_type&lt; size2d&lt; default</text>
 <text text-anchor="middle" x="402.62" y="-176.55" font-family="Arial" font-size="11.00">_unit, f32 &gt;, default_unit, f32 &gt;</text>
@@ -519,7 +519,7 @@ var sectionId = 'dynsection-0';
 <g id="Node000026" class="node">
 <title>Node26</title>
 <g id="a_Node000026"><a xlink:href="../../d7/dd8/structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="483.75,-153.5 321.5,-153.5 321.5,-111.75 483.75,-111.75 483.75,-153.5"/>
+<polygon fill="white" stroke="#666666" points="483.75,-153.5 321.5,-153.5 321.5,-111.75 483.75,-111.75 483.75,-153.5"/>
 <text text-anchor="start" x="329.5" y="-139.05" font-family="Arial" font-size="11.00">basic_two_dimensional</text>
 <text text-anchor="start" x="329.5" y="-127.8" font-family="Arial" font-size="11.00">_type&lt; vector2d&lt; default</text>
 <text text-anchor="middle" x="402.62" y="-116.55" font-family="Arial" font-size="11.00">_unit, f32 &gt;, default_unit, f32 &gt;</text>
