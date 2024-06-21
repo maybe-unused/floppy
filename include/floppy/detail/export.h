@@ -181,17 +181,19 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
 #undef stringify$
 
 /// \brief Alias for the main namespace \ref floppy.
+/// \headerfile floppy/floppy.h
+/// \ingroup aliases
 namespace fl = floppy; // NOLINT(*-unused-alias-decls)
 
 #if defined(QT_CORE_LIB) || __has_include("qtglobal.h") || __has_include("qcoreapplication.h") || defined(DOXYGEN_GENERATING_OUTPUT)
 /// \ingroup macros
-/// \brief Flag defined if Qt::Core library is available and linked.
+/// \brief Flag defined if <b>Qt::Core</b> library is available and linked.
 # define FL_QT_CORE
 #endif
 
 #if defined(QT_GUI_LIB) || __has_include("qpainter.h") || __has_include("qguiapplication.h") || defined(DOXYGEN_GENERATING_OUTPUT)
 /// \ingroup macros
-/// \brief Flag defined if Qt::Gui library is available and linked.
+/// \brief Flag defined if <b>Qt::Gui</b> library is available and linked.
 # define FL_QT_GUI
 #endif
 
