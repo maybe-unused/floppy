@@ -9,7 +9,7 @@ var searchData=
   ['hsla_6',['hsla',['../de/da8/classfloppy_1_1gfx_1_1color.html#afaf72956701e3a867b9ce319896bdb0d',1,'floppy::gfx::color']]],
   ['hsla_5ft_7',['hsla_t',['../d2/d0e/structfloppy_1_1gfx_1_1color_1_1hsla__t.html#acd023abb23e2d292dd93e7fe23e531d3',1,'floppy::gfx::color::hsla_t']]],
   ['hsv_8',['hsv',['../de/da8/classfloppy_1_1gfx_1_1color.html#af6d5729507905f4ce221e18c2d36f3a9',1,'floppy::gfx::color']]],
-  ['hsv_5ft_9',['hsv_t',['../df/de6/structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a3d2de22a87266e1a438983755a2592e1',1,'floppy::gfx::color::hsv_t']]],
+  ['hsv_5ft_9',['hsv_t',['../df/de6/structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a57c7332618240798b337dbcaa631d308',1,'floppy::gfx::color::hsv_t']]],
   ['hsva_10',['hsva',['../de/da8/classfloppy_1_1gfx_1_1color.html#a99eaea7fdfe9d8493594eefc83264d29',1,'floppy::gfx::color']]],
   ['hsva_5ft_11',['hsva_t',['../dd/dc9/structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a2a82335045fae37c09e1dee1c9389e1a',1,'floppy::gfx::color::hsva_t']]],
   ['hue_12',['hue',['../de/da8/classfloppy_1_1gfx_1_1color.html#acbb5da22fda7d5fc33c7327bbd9c19e8',1,'floppy::gfx::color']]],

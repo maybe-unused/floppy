@@ -20,7 +20,7 @@ var classfloppy_1_1math_1_1vector2d =
     [ "to_size2d", "d4/d33/classfloppy_1_1math_1_1vector2d.html#a8bcc32294a1de845431fc597dc25967e", null ],
     [ "to_point2d", "d4/d33/classfloppy_1_1math_1_1vector2d.html#afecc21081f1897b20615bfb6890f2141", null ],
     [ "to_untyped", "d4/d33/classfloppy_1_1math_1_1vector2d.html#a085ec4068b0bb63d32625607dd815dd7", null ],
-    [ "length_scalar", "d4/d33/classfloppy_1_1math_1_1vector2d.html#a741dbff2d91d1ad30440177f955fd0ae", null ],
+    [ "length", "d4/d33/classfloppy_1_1math_1_1vector2d.html#aef17904debacf9d12b7d6015e116fe17", null ],
     [ "length_typed", "d4/d33/classfloppy_1_1math_1_1vector2d.html#a4f5ef4f9a4fba01cb62118a1e0d11295", null ],
     [ "length_squared", "d4/d33/classfloppy_1_1math_1_1vector2d.html#aff3df7209cf3931e84164622e05fb547", null ],
     [ "project", "d4/d33/classfloppy_1_1math_1_1vector2d.html#ae0b17b38d47866c22c3b1ef76a7081f2", null ],
