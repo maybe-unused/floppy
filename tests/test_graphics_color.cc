@@ -56,3 +56,18 @@ TEST(GraphicsColor, Hsla)
 {
   EXPECT_EQ(color("32a85280").hsla(), color::hsla_t(136, 0.5412844F, 0.42745098F, 0.5019608F));
 }
+
+TEST(GraphicsColor, Hsv)
+{
+  EXPECT_EQ(color("32a85280").hsv(), color::hsv_t(136, 0.70238096F, 0.65882355F));
+}
+
+TEST(GraphicsColor, Hsva)
+{
+  EXPECT_EQ(color("32a85280").hsva(), color::hsva_t(136, 0.70238096, 0.65882355, 0.5019608F));
+}
+
+TEST(GraphicsColor, FromHsv)
+{
+  EXPECT_EQ(color::from_hsv({136, 0.70238096, 0.65882355}), color("32a851FF"));
+}

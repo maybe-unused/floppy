@@ -35,7 +35,9 @@ namespace floppy::gfx
       return v2 < v1 ? min(v2, args...) : min(v1, args...);
     }
 
-    template <typename T> constexpr auto max(T&& v) -> T { return std::forward<T>(v); }
+    template <typename T>
+    [[maybe_unused]] constexpr auto max(T&& v) -> T { return std::forward<T>(v); }
+
     template <typename T, typename... Args>
     constexpr auto max(T const& v1, T const& v2, Args const&... args) -> T {
       return v2 > v1 ? max(v2, args...) : max(v1, args...);
@@ -231,11 +233,116 @@ namespace floppy::gfx
       constexpr auto operator!=(color::hsla_t const& other) const -> bool { return not (*this == other); }
     };
 
-    struct hsv_t
+    /// \brief HSV color representation.
+    /// \headerfile floppy/graphics.h
+    /// \sa https://en.wikipedia.org/wiki/HSL_and_HSV
+    struct hsv_t : public traits::formattable<color::hsv_t, char>
     {
       u16 h = 0.0F;
       f32 s = 0.0F;
       f32 v = 0.0F;
+
+      /// \brief Constructs an HSL color.
+      /// \param h Hue
+      /// \param s Saturation
+      /// \param v Value
+      constexpr hsv_t(u16 h, f32 s, f32 v)
+        : h(h)
+        , s(s)
+        , v(v)
+      {}
+
+      /// \brief Converts the color to RGB format.
+      [[nodiscard]] constexpr auto to_rgb() const -> std::array<u8, 3> {
+        auto rgb = std::array<u8, 3>();
+        auto tmp_rgb  = std::array<f32, 3>();
+        auto c = this->v * this->s ;
+        auto x = c * (1.0F - std::abs(std::fmod(this->h / 60.0F, 2.0F) - 1.0F));
+        auto m = this->v - c;
+        if(this->h < 60.F)
+          tmp_rgb = {c, x ,0};
+        else if(this->h < 120.F)
+          tmp_rgb = {x, c, 0};
+        else if(this->h < 180.F)
+          tmp_rgb = {0, c, x};
+        else if(this->h < 240.F)
+          tmp_rgb = {0, x, c};
+        else if(this->h < 300.F)
+          tmp_rgb = {x, 0, c};
+        else if(this->h < 360.F)
+          tmp_rgb = {c, 0, x};
+
+        rgb[0] = static_cast<u8>((tmp_rgb[0] + m) * 255.0F);
+        rgb[1] = static_cast<u8>((tmp_rgb[1] + m) * 255.0F);
+        rgb[2] = static_cast<u8>((tmp_rgb[2] + m) * 255.0F);
+        return rgb;
+
+
+        // ---- old implementation ----
+//        auto rgb = std::array<f32, 3>();
+//        auto const fc = this->v * this->s;
+//        auto const fh_prime = std::fmod(this->h / 60.0F, 6.0F);
+//        auto const fx = fc * (1.0F - std::abs(std::fmod(fh_prime, 2.0F) - 1.0F));
+//        auto const fm = this->v - fc;
+//        if(0.F <= fh_prime and fh_prime < 1.F)
+//          rgb = { fc, fx, 0.F };
+//        else if(1.F <= fh_prime and fh_prime < 2.F)
+//          rgb = { fx, fc, 0.F };
+//        else if(2.F <= fh_prime and fh_prime < 3.F)
+//          rgb = { 0.F, fc, fx };
+//        else if(3.F <= fh_prime and fh_prime < 4.F)
+//          rgb = { 0.F, fx, fc };
+//        else if(4.F <= fh_prime and fh_prime < 5.F)
+//          rgb = { fx, 0.F, fc };
+//        else
+//          rgb = { 0.F, 0.F, 0.F };
+//        return {
+//          static_cast<u8>(fm + rgb[0] * 255.0F),
+//          static_cast<u8>(fm + rgb[1] * 255.0F),
+//          static_cast<u8>(fm + rgb[2] * 255.0F)
+//        };
+      }
+
+      /// \brief Constructs an HSL color from RGB values.
+      /// \param r Red
+      /// \param g Green
+      /// \param b Blue
+      [[nodiscard]] static constexpr auto from_rgb(u8 const r, u8 const g, u8 const b) -> hsv_t {
+        auto self = hsv_t(0, 0, 0);
+        auto const fr = static_cast<f32>(r) / 255.0F;
+        auto const fg = static_cast<f32>(g) / 255.0F;
+        auto const fb = static_cast<f32>(b) / 255.0F;
+        auto const c_max = detail::max(detail::max(fr, fg), fb);
+        auto const c_min = detail::min(detail::min(fr, fg), fb);
+        auto const delta = c_max - c_min;
+        if(delta > 0.F) {
+          if(c_max == fr)
+            self.h = 60.0F * (std::fmod(((fg - fb) / delta), 6.0F));
+          else if(c_max == fg)
+            self.h = 60.0F * (((fb - fr) / delta) + 2.0F);
+          else if(c_max == fb)
+            self.h = 60.0F * (((fr - fg) / delta) + 4.0F);
+          if(c_max > 0.F)
+            self.s = delta / c_max;
+          else
+            self.s = 0.F;
+          self.v = c_max;
+        } else {
+          self.h = 0.F;
+          self.s = 0.F;
+          self.v = c_max;
+        }
+        if(self.h < 0)
+          self.h += 360;
+        return self;
+      }
+
+      /// \brief Converts the color to a string.
+      /// \details Example: <code>(180 0.5 0.5)</code>.
+      /// \returns The string representation of the color.
+      [[nodiscard]] virtual auto to_string() const -> std::string override {
+        return fmt::format("({} {} {})", this->h, this->s, this->v);
+      }
 
       constexpr auto operator==(color::hsv_t const& other) const -> bool {
         return (this->h == other.h)
@@ -246,12 +353,45 @@ namespace floppy::gfx
       constexpr auto operator!=(color::hsv_t const& other) const -> bool { return not (*this == other); }
     };
 
-    struct hsva_t
+    /// \brief HSVA color representation.
+    /// \headerfile floppy/graphics.h
+    /// \sa https://en.wikipedia.org/wiki/HSL_and_HSV
+    struct hsva_t : public traits::formattable<color::hsva_t, char>
     {
       u16 h = 0.0F;
       f32 s = 0.0F;
       f32 v = 0.0F;
       f32 a = 1.0F;
+
+      /// \brief Constructs an HSVA color.
+      /// \param h Hue
+      /// \param s Saturation
+      /// \param v Value
+      /// \param a Alpha
+      constexpr hsva_t(u16 h, f32 s, f32 v, f32 a)
+        : h(h)
+        , s(s)
+        , v(v)
+        , a(a)
+      {}
+
+      /// \brief Converts the color to RGBA format.
+      [[nodiscard]] constexpr auto to_rgba() const -> std::array<u8, 4> {
+        auto rgb_ = color::hsv_t { this->h, this->s, this->v }.to_rgb();
+        return std::array<u8, 4> {
+          static_cast<u8>(rgb_[0]),
+          static_cast<u8>(rgb_[1]),
+          static_cast<u8>(rgb_[2]),
+          static_cast<u8>(this->a * 255.0F)
+        };
+      }
+
+      /// \brief Converts the color to a string.
+      /// \details Example: <code>(180 0.5 0.5 0.5)</code>.
+      /// \returns The string representation of the color.
+      [[nodiscard]] virtual auto to_string() const -> std::string override {
+        return fmt::format("({} {} {} {})", this->h, this->s, this->v, this->a);
+      }
 
       constexpr auto operator==(color::hsva_t const& other) const -> bool {
         return (this->h == other.h)
@@ -410,6 +550,30 @@ namespace floppy::gfx
       this->a_ = static_cast<f32>(t[3]) / mask<f32>;
     }
 
+    /// \brief Constructs a color from HSV values.
+    /// \param hsv HSV color value.
+    /// \see from_hsv
+    constexpr color(color::hsv_t const& hsv)
+      : a_(1.0F)
+    {
+      auto const t = hsv.to_rgb();
+      this->r_ = static_cast<f32>(t[0]) / mask<f32>;
+      this->g_ = static_cast<f32>(t[1]) / mask<f32>;
+      this->b_ = static_cast<f32>(t[2]) / mask<f32>;
+    }
+
+    /// \brief Constructs a color from HSVA values.
+    /// \param hsva HSVA color value.
+    /// \see from_hsva
+    constexpr color(color::hsva_t const& hsva)
+    {
+      auto const t = hsva.to_rgba();
+      this->r_ = static_cast<f32>(t[0]) / mask<f32>;
+      this->g_ = static_cast<f32>(t[1]) / mask<f32>;
+      this->b_ = static_cast<f32>(t[2]) / mask<f32>;
+      this->a_ = static_cast<f32>(t[3]) / mask<f32>;
+    }
+
     /// \brief Returns the string representation of the color.
     /// \details Example: <code>#RRGGBBAA</code>.
     /// \returns The string representation of the color.
@@ -486,41 +650,28 @@ namespace floppy::gfx
     /// \see alpha()
     [[nodiscard]] constexpr auto alphaf() const -> f32 { return a_; }
 
-    /// \brief Returns the hue color component (HSL/HSV) in range <code>0..255</code>.
+    /// \brief Returns the hue color component (HSL/HSV) in range <code>0..360</code>.
     /// \returns The hue color component (HSL/HSV) in range <code>0..255</code>.
     /// \see huef()
-    [[nodiscard]] constexpr auto hue() const -> u8 { return static_cast<u8>(this->hsl().h * mask<u8>); }
+    [[nodiscard]] constexpr auto hue() const -> u8 { return static_cast<u8>(this->hsl().h * 360.0F); }
 
     /// \brief Returns the hue color component (HSL/HSV) in range <code>0..1</code>.
     /// \returns The hue color component (HSL/HSV) in range <code>0..1</code>.
     /// \see hue()
     [[nodiscard]] constexpr auto huef() const -> f32 { return this->hsl().h; }
 
-    /// \brief Returns the lightness color component (HSL) in range <code>0..255</code>.
-    /// \returns The lightness color component (HSL) in range <code>0..255</code>.
-    /// \see lightnessf()
-    /// \see hsl()
-    [[nodiscard]] constexpr auto lightness() const -> u8 { return static_cast<u8>(this->hsl().l * mask<u8>); }
-
     /// \brief Returns the lightness color component (HSL) in range <code>0..1</code>.
     /// \returns The lightness color component (HSL) in range <code>0..1</code>.
     /// \see lightness()
     /// \see hsl()
-    [[nodiscard]] constexpr auto lightnessf() const -> f32 { return this->hsl().l; }
-
-    /// \brief Returns the saturation color component (HSL) in range <code>0..255</code>.
-    /// \returns The saturation color component (HSL) in range <code>0..255</code>.
-    /// \note This saturation is not the same as the HSV saturation. Use explicit \ref hsv() function to access it.
-    /// \see saturationf()
-    /// \see hsl()
-    [[nodiscard]] constexpr auto saturation() const -> u8 { return static_cast<u8>(this->hsl().s * mask<u8>); }
+    [[nodiscard]] constexpr auto lightness() const -> f32 { return this->hsl().l; }
 
     /// \brief Returns the saturation color component (HSL) in range <code>0..1</code>.
     /// \returns The saturation color component (HSL) in range <code>0..1</code>.
     /// \note This saturation is not the same as the HSV saturation. Use explicit \ref hsv() function to access it.
     /// \see saturation()
     /// \see hsl()
-    [[nodiscard]] constexpr auto saturationf() const -> f32 { return this->hsl().s; }
+    [[nodiscard]] constexpr auto saturation() const -> f32 { return this->hsl().s; }
 
     /// \brief Returns RGB color components as 32-bit unsigned integer.
     /// \details If you need the individual color components, use \ref red(), \ref green(), \ref blue(), \ref alpha() instead.
@@ -576,6 +727,32 @@ namespace floppy::gfx
         hsl.h,
         hsl.s,
         hsl.l,
+        this->alphaf()
+      };
+    }
+
+    /// \brief Returns HSV color components as <tt>color::hsv_t</tt> type.
+    /// \details If you need the individual color components, use \ref hue(), \ref saturation(), \ref value() instead.
+    /// \returns HSV color components as <tt>color::hsv_t</tt> type.
+    /// \see hsva()
+    /// \see cmyk()
+    /// \see rgb()
+    [[nodiscard]] constexpr auto hsv() const -> color::hsv_t {
+      return color::hsv_t::from_rgb(this->red(), this->green(), this->blue());
+    }
+
+    /// \brief Returns HSVA color components as <tt>color::hsva_t</tt> type.
+    /// \details If you need the individual color components, use \ref hue(), \ref saturation(), \ref value(), \ref alpha() instead.
+    /// \returns HSVA color components as <tt>color::hsva_t</tt> type.
+    /// \see hsv()
+    /// \see cmyka()
+    /// \see rgba()
+    [[nodiscard]] constexpr auto hsva() const -> color::hsva_t {
+      auto const hsv = this->hsv();
+      return {
+        hsv.h,
+        hsv.s,
+        hsv.v,
         this->alphaf()
       };
     }
@@ -692,13 +869,25 @@ namespace floppy::gfx
     /// \brief Constructs an opaque color from HSL values.
     /// \param hsl HSL color value.
     [[nodiscard]] static constexpr auto from_hsl(color::hsl_t const& hsl) -> color {
-      return color(hsl);
+      return { hsl };
     }
 
     /// \brief Constructs a color from HSLA values.
     /// \param hsla HSLA color value.
     [[nodiscard]] static constexpr auto from_hsla(color::hsla_t const& hsla) -> color {
-      return color(hsla);
+      return { hsla };
+    }
+
+    /// \brief Construct a color from HSV values.
+    /// \param hsv HSV color value.
+    [[nodiscard]] static constexpr auto from_hsv(color::hsv_t const& hsv) -> color {
+      return { hsv };
+    }
+
+    /// \brief Construct a color from HSVA values.
+    /// \param hsva HSVA color value.
+    [[nodiscard]] static constexpr auto from_hsva(color::hsva_t const& hsva) -> color {
+      return { hsva };
     }
 
   #if defined(FL_QT_GUI) || defined(FL_DOC)

@@ -3,8 +3,13 @@
 #include <floppy/detail/math.h>
 #include <floppy/detail/concepts.h>
 
+/// \brief Implementation details for math types.
 namespace floppy::math::detail
 {
+  /// \brief CRTP base for trivially comparable numeric types.
+  /// \headerfile floppy/euclid.h
+  /// \ingroup geometry
+  /// \tparam T The type itself.
   template <typename T>
   struct default_comparable
   {
@@ -32,6 +37,14 @@ namespace floppy::math::detail
     [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool { return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)) != std::strong_ordering::equal; }
   };
 
+  /// \brief CRTP base for numeric newtypes that can be compared.
+  /// \ingroup geometry
+  /// \headerfile floppy/euclid.h
+  /// \tparam T The type itself.
+  /// \tparam U The underlying number type.
+  /// \see floppy::math::angle
+  /// \see floppy::math::length
+  /// \see floppy::math::scale
   template <typename T, concepts::num U>
   struct basic_numeric_newtype : public default_comparable<T>
   {
@@ -58,7 +71,10 @@ namespace floppy::math::detail
     /// \brief Default destructor.
     ~basic_numeric_newtype() = default;
 
+    /// \brief Default copy assignment.
     constexpr auto operator=(basic_numeric_newtype const&) -> basic_numeric_newtype& = default;
+
+    /// \brief Default move assignment.
     constexpr auto operator=(basic_numeric_newtype&&) -> basic_numeric_newtype& = default;
 
     /// \brief Returns the underlying numeric scalar.
@@ -110,6 +126,12 @@ namespace floppy::math::detail
     underlying_type m_;
   };
 
+  /// \brief CRTP base for numeric newtypes containing math operations implementation.
+  /// \ingroup geometry
+  /// \headerfile floppy/euclid.h
+  /// \tparam T The type itself.
+  /// \tparam U The underlying number type.
+  /// \see floppy::math::angle
   template <typename T, concepts::num U>
   struct advanced_numeric_type : public basic_numeric_newtype<T, U>
   {
