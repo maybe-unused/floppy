@@ -1,6 +1,5 @@
-var namespacefloppy_1_1log =
+var group__logging =
 [
-    [ "level", "namespacefloppy_1_1log_1_1level.html", null ],
     [ "trace_to", "group__logging.html#gafe5b43f7e92b1290fa979606a9d8bd59", null ],
     [ "trace", "group__logging.html#ga1958617b608e95656ef732069cb6a51f", null ],
     [ "debug_to", "group__logging.html#ga710e2061116b4efb6ecf6669f2f9a421", null ],

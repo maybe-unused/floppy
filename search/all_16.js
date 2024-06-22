@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['warn_0',['warn',['../group__foundation.html#ga03e917030c7d8d1409cdab75da7ceecd',1,'floppy::log']]],
-  ['warn_5fto_1',['warn_to',['../group__foundation.html#ga4226f230f8451294f9117d972fc4d015',1,'floppy::log']]],
+  ['warn_0',['warn',['../group__logging.html#ga03e917030c7d8d1409cdab75da7ceecd',1,'floppy::log']]],
+  ['warn_5fto_1',['warn_to',['../group__logging.html#ga4226f230f8451294f9117d972fc4d015',1,'floppy::log']]],
   ['watcom_2',['watcom',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca503005b697234be331178bb28f375ce2',1,'floppy::platform']]],
   ['width_3',['width',['../classfloppy_1_1math_1_1size2d.html#a226de98a95484b710ee9b723eba2246f',1,'floppy::math::size2d']]],
   ['width_5fmut_4',['width_mut',['../classfloppy_1_1math_1_1size2d.html#a59ea1bf742f7c970a249f129ec40fa23',1,'floppy::math::size2d']]],

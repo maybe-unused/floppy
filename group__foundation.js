@@ -1,5 +1,6 @@
 var group__foundation =
 [
+    [ "Logging", "group__logging.html", "group__logging" ],
     [ "Traits", "group__traits.html", "group__traits" ],
     [ "serializable", "conceptfloppy_1_1serialization_1_1serializable.html", null ],
     [ "deserializable", "conceptfloppy_1_1serialization_1_1deserializable.html", null ],
@@ -71,18 +72,6 @@ var group__foundation =
       [ "toml", "group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85aec18ad9a83c312380533fa93ac6fc61c", null ],
       [ "yaml", "group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85a6eedc03a68a69933c763e674f2d7c42f", null ]
     ] ],
-    [ "trace_to", "group__foundation.html#gafe5b43f7e92b1290fa979606a9d8bd59", null ],
-    [ "debug", "group__foundation.html#gaebe2862c002ab7a673f4ba5038a905c7", null ],
-    [ "info_to", "group__foundation.html#ga394535db66a7496bb7117bad991d8b14", null ],
-    [ "info", "group__foundation.html#gafdaa6e366f8bbdcd865a50a82c970d9a", null ],
-    [ "warn_to", "group__foundation.html#ga4226f230f8451294f9117d972fc4d015", null ],
-    [ "warn", "group__foundation.html#ga03e917030c7d8d1409cdab75da7ceecd", null ],
-    [ "error_to", "group__foundation.html#ga195e878b0ed7408d61836109edc78794", null ],
-    [ "error", "group__foundation.html#ga534b29837e55ef023b77119e94c9c80b", null ],
-    [ "critical_to", "group__foundation.html#gabd43f0d810fd497d7ceb97fb453128af", null ],
-    [ "critical", "group__foundation.html#ga5bfd9e6e65784459fbcc3a8c8f3f3989", null ],
-    [ "log_to", "group__foundation.html#gae11a5862435d90c485efc280eb240a35", null ],
-    [ "log", "group__foundation.html#ga9eaa5f9efa4ba3467f22464b2a28ce91", null ],
     [ "serialize", "group__foundation.html#ga9ea974aff95bad2cc99b711105638e97", null ],
     [ "deserialize", "group__foundation.html#ga853fcffdf0e983b17478535a994706b0", null ]
 ];

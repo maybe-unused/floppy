@@ -2,8 +2,8 @@ var searchData=
 [
   ['data_5fdir_0',['data_dir',['../classfloppy_1_1filesystem_1_1application__dirs.html#ad1cec499f2df8913605950217aff41b0',1,'floppy::filesystem::application_dirs']]],
   ['data_5flocal_5fdir_1',['data_local_dir',['../classfloppy_1_1filesystem_1_1application__dirs.html#af250fd9669e9669be8cafbf336b54ab3',1,'floppy::filesystem::application_dirs']]],
-  ['debug_2',['debug',['../group__foundation.html#gaebe2862c002ab7a673f4ba5038a905c7',1,'floppy::log']]],
-  ['debug_5fto_3',['debug_to',['../namespacefloppy_1_1log.html#a710e2061116b4efb6ecf6669f2f9a421',1,'floppy::log']]],
+  ['debug_2',['debug',['../group__logging.html#gaebe2862c002ab7a673f4ba5038a905c7',1,'floppy::log']]],
+  ['debug_5fto_3',['debug_to',['../group__logging.html#ga710e2061116b4efb6ecf6669f2f9a421',1,'floppy::log']]],
   ['default_5fvalues_4',['default_values',['../classfloppy_1_1configuration__file.html#a11df8dff48e6889a837f5dec0da55bd9',1,'floppy::configuration_file']]],
   ['default_5fvalues_5fmut_5',['default_values_mut',['../classfloppy_1_1configuration__file.html#af982b8422f69b069613327fa141f4323',1,'floppy::configuration_file']]],
   ['degrees_6',['degrees',['../structfloppy_1_1math_1_1angle.html#a1d170f6c3273085f81efbef3b9d32abb',1,'floppy::math::angle']]],
