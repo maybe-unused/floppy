@@ -1,13 +1,25 @@
 <map id="ostream_formatter&lt; C &gt;" name="ostream_formatter&lt; C &gt;">
-<area shape="rect" id="Node000001" title="Formatter for types which support stream output." alt="" coords="225,78,401,104"/>
-<area shape="rect" id="Node000003" href="$structfloppy_1_1ostream__formatter.html" title=" " alt="" coords="507,71,656,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="417,88,507,88,507,94,417,94"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,71,176,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,88,224,88,224,94,192,94"/>
-<area shape="rect" id="Node000004" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" title="Formatter for floppy::meta::project_meta" alt="" coords="705,5,862,46"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="660,63,717,44,719,49,662,68"/>
-<area shape="rect" id="Node000005" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" title="Formatter for floppy::meta::version" alt="" coords="715,71,853,111"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="671,88,714,88,714,94,671,94"/>
-<area shape="rect" id="Node000006" href="$structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" title="Formatter for floppy::source_location" alt="" coords="715,136,853,177"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="662,114,719,133,717,138,660,119"/>
+<area shape="rect" id="Node000001" title="Formatter for types which support stream output." alt="" coords="225,288,401,313"/>
+<area shape="rect" id="Node000003" href="$structfloppy_1_1ostream__formatter.html" title=" " alt="" coords="507,280,656,321"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="417,298,507,298,507,303,417,303"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,280,176,321"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,298,224,298,224,303,192,303"/>
+<area shape="rect" id="Node000004" href="$structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1compiler_01_4.html" title="Formatter for floppy::platform::compiler." alt="" coords="708,5,878,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="589,264,605,218,628,163,661,106,703,57,721,44,724,49,707,61,665,109,633,165,610,220,594,266"/>
+<area shape="rect" id="Node000005" href="$structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1endianness_01_4.html" title="Formatter for floppy::platform::endianness." alt="" coords="705,71,880,111"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="596,265,638,193,668,154,703,121,721,110,724,114,707,125,672,158,642,196,601,268"/>
+<area shape="rect" id="Node000006" href="$structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1operating__system_01_4.html" title="Formatter for floppy::platform::operating_system." alt="" coords="708,135,878,191"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="615,267,656,234,704,201,725,189,727,194,706,205,660,238,619,272"/>
+<area shape="rect" id="Node000007" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" title="Formatter for floppy::meta::project_meta" alt="" coords="714,215,871,255"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="663,272,724,253,725,259,665,278"/>
+<area shape="rect" id="Node000008" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" title="Formatter for floppy::meta::version" alt="" coords="724,280,862,321"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="671,298,723,298,723,303,671,303"/>
+<area shape="rect" id="Node000009" href="$structfmt_1_1formatter_3_01floppy_1_1platform_01_4.html" title="Formatter for floppy::platform." alt="" coords="724,345,862,386"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="665,323,725,342,724,347,663,328"/>
+<area shape="rect" id="Node000010" href="$structfmt_1_1formatter_3_01floppy_1_1platform_1_1arch_01_4.html" title="Formatter for floppy::platform::arch." alt="" coords="724,411,862,451"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="618,329,659,363,706,395,732,408,729,413,704,400,656,368,614,334"/>
+<area shape="rect" id="Node000011" href="$structfmt_1_1formatter_3_01floppy_1_1platform_1_1vendor_01_4.html" title="Formatter for floppy::platform::vendor." alt="" coords="724,476,862,517"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="603,333,645,398,674,431,707,461,727,473,724,478,703,465,670,435,641,401,599,336"/>
+<area shape="rect" id="Node000012" href="$structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" title="Formatter for floppy::source_location" alt="" coords="724,541,862,582"/>
+<area shape="poly" id="edge11_Node000003_Node000012" title=" " alt="" coords="596,335,611,378,635,429,667,481,707,526,725,539,722,543,703,530,662,484,630,432,606,380,591,337"/>
 </map>

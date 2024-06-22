@@ -57,8 +57,14 @@ var annotated_dup =
       [ "source_location", "structfloppy_1_1source__location.html", "structfloppy_1_1source__location" ]
     ] ],
     [ "fmt", null, [
+      [ "formatter< enum floppy::platform::compiler >", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1compiler_01_4.html", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1compiler_01_4" ],
+      [ "formatter< enum floppy::platform::endianness >", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1endianness_01_4.html", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1endianness_01_4" ],
+      [ "formatter< enum floppy::platform::operating_system >", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1operating__system_01_4.html", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1operating__system_01_4" ],
       [ "formatter< floppy::meta::project_meta >", "structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4" ],
       [ "formatter< floppy::meta::version >", "structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4" ],
+      [ "formatter< floppy::platform >", "structfmt_1_1formatter_3_01floppy_1_1platform_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1platform_01_4" ],
+      [ "formatter< floppy::platform::arch >", "structfmt_1_1formatter_3_01floppy_1_1platform_1_1arch_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1platform_1_1arch_01_4" ],
+      [ "formatter< floppy::platform::vendor >", "structfmt_1_1formatter_3_01floppy_1_1platform_1_1vendor_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1platform_1_1vendor_01_4" ],
       [ "formatter< floppy::source_location >", "structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1source__location_01_4" ],
       [ "formatter< T >", "structfmt_1_1formatter_3_01T_01_4.html", "structfmt_1_1formatter_3_01T_01_4" ]
     ] ]

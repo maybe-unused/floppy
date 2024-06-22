@@ -11,5 +11,6 @@ var searchData=
   ['nt_5ftraits2d_2eh_8',['nt_traits2d.h',['../nt__traits2d_8h.html',1,'']]],
   ['number_5fbase_9',['number_base',['../structfloppy_1_1math_1_1detail_1_1number__base.html',1,'number_base&lt; T, V &gt;'],['../structfloppy_1_1math_1_1detail_1_1number__base.html#aad7c5a447333688c414b473f7437cdb6',1,'floppy::math::detail::number_base::number_base()']]],
   ['number_5fbase_3c_20f64_2c_20std_3a_3anumbers_3a_3api_20_3e_10',['number_base&lt; f64, std::numbers::pi &gt;',['../structfloppy_1_1math_1_1detail_1_1number__base.html',1,'floppy::math::detail']]],
-  ['nvcc_11',['nvcc',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cac0ee85ff66cf80206ac9ab7b03975213',1,'floppy::platform']]]
+  ['nvcc_11',['nvcc',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cac0ee85ff66cf80206ac9ab7b03975213',1,'floppy::platform']]],
+  ['nvidia_12',['nvidia',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2a540df7f83845146f0287ff6d2da77900',1,'floppy::platform']]]
 ];

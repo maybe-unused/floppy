@@ -71,7 +71,7 @@ var group__gfx =
       [ "from_hsla", "classfloppy_1_1gfx_1_1color.html#ae4b02edba5ad841c4d544b8c43e38eba", null ],
       [ "from_hsv", "classfloppy_1_1gfx_1_1color.html#a09357eff1cc95525c051bd5a53ec83eb", null ],
       [ "from_hsva", "classfloppy_1_1gfx_1_1color.html#a26839a72e032499f1a01a566987a7ff9", null ],
-      [ "from_qcolor", "classfloppy_1_1gfx_1_1color.html#aa863d9712ced8747a89b4ef66cd59eb6", null ],
+      [ "from_qcolor", "classfloppy_1_1gfx_1_1color.html#a2815b038e262dc051d1409deb1c7a842", null ],
       [ "basic_string< C >", "classfloppy_1_1gfx_1_1color.html#abb97ee5b3485f7cc5eb67cff00cd963a", null ]
     ] ]
 ];

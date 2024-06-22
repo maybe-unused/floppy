@@ -15,6 +15,7 @@ var searchData=
   ['as_5ff32_12',['as_f32',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a62f3e16f951b2635fd2e04be55f6d914',1,'floppy::math::detail::basic_numeric_newtype']]],
   ['as_5ff64_13',['as_f64',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#af00bbd3efca6624840346bba50ada2a3',1,'floppy::math::detail::basic_numeric_newtype']]],
   ['as_5fstr_14',['as_str',['../classfloppy_1_1meta_1_1version.html#a3fe8410e257f2d908f13220f47904be2',1,'floppy::meta::version']]],
-  ['asin_15',['asin',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#add809373661187793ef5d2296d7f7eb3',1,'floppy::math::detail::basic_numeric_newtype']]],
-  ['atan_16',['atan',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a2c5c1e764b8e4c7f8fb6407b0e78f22e',1,'floppy::math::detail::basic_numeric_newtype']]]
+  ['as_5ftarget_5ftriple_15',['as_target_triple',['../classfloppy_1_1platform.html#ab6b6118f6e44d82260fbabd42bfe8a75',1,'floppy::platform']]],
+  ['asin_16',['asin',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#add809373661187793ef5d2296d7f7eb3',1,'floppy::math::detail::basic_numeric_newtype']]],
+  ['atan_17',['atan',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a2c5c1e764b8e4c7f8fb6407b0e78f22e',1,'floppy::math::detail::basic_numeric_newtype']]]
 ];

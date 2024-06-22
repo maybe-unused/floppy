@@ -9,6 +9,7 @@ var searchData=
   ['config_6',['config',['../classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a2245023265ae4cf87d02c8b6ba991139',1,'floppy::filesystem::application_dirs']]],
   ['config_5flocal_7',['config_local',['../classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a63e5ccc32239b155c8691da2de09d8f1',1,'floppy::filesystem::application_dirs']]],
   ['convex_8',['convex',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ab9e9dd1fa31d98cf8eb1b96e735550ba',1,'floppy::platform']]],
-  ['cuda_9',['cuda',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a39466fe22b062a34cfe09f3cc8c24868',1,'floppy::platform']]],
-  ['cygwin_10',['cygwin',['../classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985ab8a4b4dbf3ef27d58f49352e3110161d',1,'floppy::platform']]]
+  ['csr_9',['csr',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2a1f8c50db95e9ead5645e32f8df5baa7b',1,'floppy::platform']]],
+  ['cuda_10',['cuda',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a39466fe22b062a34cfe09f3cc8c24868',1,'floppy::platform']]],
+  ['cygwin_11',['cygwin',['../classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985ab8a4b4dbf3ef27d58f49352e3110161d',1,'floppy::platform']]]
 ];

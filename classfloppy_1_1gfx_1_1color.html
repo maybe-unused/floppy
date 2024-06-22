@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.2.1</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -261,8 +261,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a09357eff1cc95525c051bd5a53ec83eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26839a72e032499f1a01a566987a7ff9" id="r_a26839a72e032499f1a01a566987a7ff9"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26839a72e032499f1a01a566987a7ff9">from_hsva</a> (<a class="el" href="structfloppy_1_1gfx_1_1color_1_1hsva__t.html">color::hsva_t</a> const &amp;<a class="el" href="#a99eaea7fdfe9d8493594eefc83264d29">hsva</a>) -&gt; <a class="el" href="classfloppy_1_1gfx_1_1color.html">color</a></td></tr>
 <tr class="separator:a26839a72e032499f1a01a566987a7ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa863d9712ced8747a89b4ef66cd59eb6" id="r_aa863d9712ced8747a89b4ef66cd59eb6"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa863d9712ced8747a89b4ef66cd59eb6">from_qcolor</a> (QColor const &amp;col) -&gt; <a class="el" href="classfloppy_1_1gfx_1_1color.html">color</a></td></tr>
-<tr class="separator:aa863d9712ced8747a89b4ef66cd59eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2815b038e262dc051d1409deb1c7a842" id="r_a2815b038e262dc051d1409deb1c7a842"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2815b038e262dc051d1409deb1c7a842">from_qcolor</a> (QColor const &amp;col) -&gt; <a class="el" href="classfloppy_1_1gfx_1_1color.html">color</a></td></tr>
+<tr class="separator:a2815b038e262dc051d1409deb1c7a842"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing a color. </p>
@@ -1334,7 +1334,7 @@ cmyka() </dd>
 <p>Returns the color as <code>QColor</code> object. </p>
 <dl class="section return"><dt>Returns</dt><dd>The color as <code>QColor</code> object. </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa863d9712ced8747a89b4ef66cd59eb6" title="Constructs a color from a QColor class instance.">from_qcolor()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2815b038e262dc051d1409deb1c7a842" title="Constructs a color from a QColor class instance.">from_qcolor()</a> </dd>
 <dd>
 <a href="https://doc.qt.io/qt-6/qcolor.html">https://doc.qt.io/qt-6/qcolor.html</a> </dd></dl>
 
@@ -1885,8 +1885,8 @@ cmyka() </dd>
 
 </div>
 </div>
-<a id="aa863d9712ced8747a89b4ef66cd59eb6" name="aa863d9712ced8747a89b4ef66cd59eb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa863d9712ced8747a89b4ef66cd59eb6">&#9670;&#160;</a></span>from_qcolor()</h2>
+<a id="a2815b038e262dc051d1409deb1c7a842" name="a2815b038e262dc051d1409deb1c7a842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2815b038e262dc051d1409deb1c7a842">&#9670;&#160;</a></span>from_qcolor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1895,7 +1895,7 @@ cmyka() </dd>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr auto from_qcolor </td>
+          <td class="memname">static auto from_qcolor </td>
           <td>(</td>
           <td class="paramtype">QColor const &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
           <td> -&gt; <a class="el" href="classfloppy_1_1gfx_1_1color.html">color</a> </td>
@@ -1903,7 +1903,7 @@ cmyka() </dd>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1964,7 +1964,7 @@ template&lt;typename C &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefloppy.html">floppy</a></li><li class="navelem"><a class="el" href="namespacefloppy_1_1gfx.html">gfx</a></li><li class="navelem"><a class="el" href="classfloppy_1_1gfx_1_1color.html">color</a></li>
-    <li class="footer">Generated on Fri Jun 21 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Sat Jun 22 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>
