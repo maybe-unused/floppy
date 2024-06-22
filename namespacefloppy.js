@@ -69,9 +69,9 @@ var namespacefloppy =
     [ "f64", "namespacefloppy_1_1types.html#abc2f107791bd7c1d49ecf0f168c085a3", null ],
     [ "option", "group__aliases.html#gaa202473f296b2492d9239773369181af", null ],
     [ "ref", "group__aliases.html#gae7d120016347ce3f021bc18dcefe2809", null ],
-    [ "saving_policy", "namespacefloppy.html#ae1e5f60a57661fe4d13cf754e0a8d6ae", [
-      [ "autosave", "namespacefloppy.html#ae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1", null ],
-      [ "explicit_", "namespacefloppy.html#ae1e5f60a57661fe4d13cf754e0a8d6aeac9c45ac5595e1bb329ad8e26396d93c5", null ]
+    [ "saving_policy", "group__foundation.html#gae1e5f60a57661fe4d13cf754e0a8d6ae", [
+      [ "autosave", "group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1", null ],
+      [ "explicit_", "group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeac9c45ac5595e1bb329ad8e26396d93c5", null ]
     ] ],
     [ "unreachable", "group__backports.html#gabb16b244632f4ab5f6fd117e5a75473e", null ],
     [ "to_underlying", "group__backports.html#ga0424b6d00fac262e879df80e00da46b6", null ],

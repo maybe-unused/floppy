@@ -128,11 +128,11 @@ $(function(){initNavTree('classfloppy_1_1filesystem_1_1application__dirs.html','
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classfloppy_1_1filesystem_1_1application__dirs-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">application_dirs Class Reference</div></div>
+  <div class="headertitle"><div class="title">application_dirs Class Reference<div class="ingroups"><a class="el" href="group__foundation.html">Foundation</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="directories_8h_source.html">directories.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="directories_8h_source.html">floppy/directories.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -209,13 +209,13 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> () const -
 <p>For example if user named <em>Alice</em>, the following code: </p><div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_class" href="classfloppy_1_1filesystem_1_1application__dirs.html">floppy::filesystem::application_dirs</a>;</div>
 <div class="line"><span class="keyword">auto</span> dirs = <a class="code hl_function" href="#a1ceb7feef425111cbc554fa7553bb8d1">application_dirs</a>(<span class="stringliteral">&quot;com&quot;</span>, <span class="stringliteral">&quot;Foo Corp&quot;</span>, <span class="stringliteral">&quot;Bar App&quot;</span>);</div>
 <div class="line">std::cout &lt;&lt; dirs.config_dir() &lt;&lt; std::endl;</div>
-<div class="ttc" id="aclassfloppy_1_1filesystem_1_1application__dirs_html"><div class="ttname"><a href="classfloppy_1_1filesystem_1_1application__dirs.html">floppy::filesystem::application_dirs</a></div><div class="ttdoc">Class for getting location of system directories for a specific application.</div><div class="ttdef"><b>Definition</b> <a href="directories_8h_source.html#l00028">directories.h:29</a></div></div>
+<div class="ttc" id="aclassfloppy_1_1filesystem_1_1application__dirs_html"><div class="ttname"><a href="classfloppy_1_1filesystem_1_1application__dirs.html">floppy::filesystem::application_dirs</a></div><div class="ttdoc">Class for getting location of system directories for a specific application.</div><div class="ttdef"><b>Definition</b> <a href="directories_8h_source.html#l00029">directories.h:30</a></div></div>
 <div class="ttc" id="aclassfloppy_1_1filesystem_1_1application__dirs_html_a1ceb7feef425111cbc554fa7553bb8d1"><div class="ttname"><a href="#a1ceb7feef425111cbc554fa7553bb8d1">floppy::filesystem::application_dirs::application_dirs</a></div><div class="ttdeci">application_dirs(std::string_view qualifier, std::string_view organization, std::string_view application) noexcept(false)</div><div class="ttdoc">Creates an application_dirs class from values describing the project.</div></div>
 </div><!-- fragment --><p> will produce the following output: </p><div class="fragment"><div class="line">Linux:   &#39;/home/alice/.config/barapp&#39;</div>
 <div class="line">Windows: &#39;C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App&#39;</div>
 <div class="line">MacOS:   &#39;/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App&#39;</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="directories_8h_source.html#l00028">28</a> of file <a class="el" href="directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directories_8h_source.html#l00029">29</a> of file <a class="el" href="directories_8h_source.html">directories.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="aa671c41b56810ab4bfd94587e8507a75" name="aa671c41b56810ab4bfd94587e8507a75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa671c41b56810ab4bfd94587e8507a75">&#9670;&#160;</a></span>dir</h2>
@@ -257,7 +257,7 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> () const -
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="directories_8h_source.html#l00032">32</a> of file <a class="el" href="directories_8h_source.html">directories.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directories_8h_source.html#l00033">33</a> of file <a class="el" href="directories_8h_source.html">directories.h</a>.</p>
 
 </div>
 </div>

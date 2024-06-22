@@ -6,5 +6,5 @@ var namespacefloppy_1_1traits =
     [ "non_movable", "structfloppy_1_1traits_1_1non__movable.html", null ],
     [ "pin", "structfloppy_1_1traits_1_1pin.html", null ],
     [ "singleton", "structfloppy_1_1traits_1_1singleton.html", "structfloppy_1_1traits_1_1singleton" ],
-    [ "pimpl", "namespacefloppy_1_1traits.html#ae8263662bb2da92276fbe82282582f5e", null ]
+    [ "pimpl", "group__traits.html#gae8263662bb2da92276fbe82282582f5e", null ]
 ];

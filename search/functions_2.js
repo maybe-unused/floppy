@@ -13,9 +13,9 @@ var searchData=
   ['configuration_5ffile_10',['configuration_file',['../classfloppy_1_1configuration__file.html#a9eaa6790b902913c6f1844b6bf8ef9eb',1,'floppy::configuration_file::configuration_file(std::filesystem::path path, saving_policy policy)'],['../classfloppy_1_1configuration__file.html#a11c3968bb530354cfddcd95fa1f62c76',1,'floppy::configuration_file::configuration_file(std::string_view filename, std::filesystem::path const &amp;folder, saving_policy policy)']]],
   ['cos_11',['cos',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a6dd7cf74119d22f24c8994d96abfa835',1,'floppy::math::detail::basic_numeric_newtype']]],
   ['create_12',['create',['../classfloppy_1_1filesystem_1_1application__dirs.html#a724c6ef6f60f37464f3abdbd2ba55b0f',1,'floppy::filesystem::application_dirs']]],
-  ['critical_13',['critical',['../namespacefloppy_1_1log.html#a5bfd9e6e65784459fbcc3a8c8f3f3989',1,'floppy::log']]],
+  ['critical_13',['critical',['../group__foundation.html#ga5bfd9e6e65784459fbcc3a8c8f3f3989',1,'floppy::log']]],
   ['critical_5fmessage_14',['critical_message',['../group__helpers.html#gabdcc54d31693c73090e4e02f31872ebd',1,'floppy::print_helpers']]],
-  ['critical_5fto_15',['critical_to',['../namespacefloppy_1_1log.html#abd43f0d810fd497d7ceb97fb453128af',1,'floppy::log']]],
+  ['critical_5fto_15',['critical_to',['../group__foundation.html#gabd43f0d810fd497d7ceb97fb453128af',1,'floppy::log']]],
   ['cross_16',['cross',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ab769a6a6b00145f928d222b94861840e',1,'floppy::math::detail::basic_two_dimensional_type']]],
   ['current_17',['current',['../structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743',1,'floppy::source_location::current()'],['../classfloppy_1_1platform.html#ae38f44be4199dfae927a98d8aa44d53a',1,'floppy::platform::current()']]]
 ];

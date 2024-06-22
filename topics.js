@@ -7,5 +7,6 @@ var topics =
     [ "Macros", "group__macros.html", "group__macros" ],
     [ "Aliases", "group__aliases.html", "group__aliases" ],
     [ "Geometry", "group__geometry.html", "group__geometry" ],
+    [ "Foundation", "group__foundation.html", "group__foundation" ],
     [ "Graphics", "group__gfx.html", "group__gfx" ]
 ];

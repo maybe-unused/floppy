@@ -152,61 +152,13 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ae8263662bb2da92276fbe82282582f5e" id="r_ae8263662bb2da92276fbe82282582f5e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae8263662bb2da92276fbe82282582f5e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae8263662bb2da92276fbe82282582f5e">pimpl</a> = std::experimental::propagate_const&lt;std::unique_ptr&lt;T&gt;&gt;</td></tr>
-<tr class="separator:ae8263662bb2da92276fbe82282582f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8263662bb2da92276fbe82282582f5e" id="r_gae8263662bb2da92276fbe82282582f5e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gae8263662bb2da92276fbe82282582f5e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__traits.html#gae8263662bb2da92276fbe82282582f5e">pimpl</a> = std::experimental::propagate_const&lt;std::unique_ptr&lt;T&gt;&gt;</td></tr>
+<tr class="separator:gae8263662bb2da92276fbe82282582f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace with traits for custom types and classes. </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="ae8263662bb2da92276fbe82282582f5e" name="ae8263662bb2da92276fbe82282582f5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8263662bb2da92276fbe82282582f5e">&#9670;&#160;</a></span>pimpl</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#ae8263662bb2da92276fbe82282582f5e">pimpl</a> = std::experimental::propagate_const&lt;std::unique_ptr&lt;T&gt;&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pointer-to-implementation pattern trait. </p>
-<p>Allows to use <b>Pimpl</b> pattern in custom types and classes. Example declaration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>TestPimpl : <span class="keyword">public</span> <a class="code hl_struct" href="structfloppy_1_1traits_1_1pin.html">traits::pin</a>&lt;TestPimpl&gt;</div>
-<div class="line">{</div>
-<div class="line"> <span class="keyword">public</span>:</div>
-<div class="line">  TestPimpl() = <span class="keywordflow">default</span>;</div>
-<div class="line"> </div>
-<div class="line">  [[nodiscard]] <span class="keyword">auto</span> add(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">const</span> -&gt; int;</div>
-<div class="line"> </div>
-<div class="line"> <span class="keyword">private</span>:</div>
-<div class="line">  <span class="keyword">struct </span>Impl;</div>
-<div class="line">  <a class="code hl_typedef" href="#ae8263662bb2da92276fbe82282582f5e">traits::pimpl&lt;struct Impl&gt;</a> impl;</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"> <span class="keyword">struct </span>TestPimpl::Impl {</div>
-<div class="line">  <span class="keyword">auto</span> add(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">const</span> -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> a + b; }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"> <span class="keyword">auto</span> TestPimpl::add(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">const</span> -&gt; <span class="keywordtype">int</span> {</div>
-<div class="line">  <span class="keywordflow">return</span> this-&gt;impl-&gt;add(a, b);</div>
-<div class="line">}</div>
-<div class="ttc" id="anamespacefloppy_1_1traits_html_ae8263662bb2da92276fbe82282582f5e"><div class="ttname"><a href="#ae8263662bb2da92276fbe82282582f5e">floppy::traits::pimpl</a></div><div class="ttdeci">std::experimental::propagate_const&lt; std::unique_ptr&lt; T &gt; &gt; pimpl</div><div class="ttdoc">Pointer-to-implementation pattern trait.</div><div class="ttdef"><b>Definition</b> <a href="traits_8h_source.html#l00136">traits.h:136</a></div></div>
-<div class="ttc" id="astructfloppy_1_1traits_1_1pin_html"><div class="ttname"><a href="structfloppy_1_1traits_1_1pin.html">floppy::traits::pin</a></div><div class="ttdoc">Disallow copy and move operations for a type.</div><div class="ttdef"><b>Definition</b> <a href="traits_8h_source.html#l00053">traits.h:53</a></div></div>
-</div><!-- fragment --> <dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Underlying type. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00136">136</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

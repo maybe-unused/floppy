@@ -16,8 +16,8 @@ var searchData=
   ['little_13',['little',['../classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637aaae6635e044ac56046b2893a529b5114',1,'floppy::platform']]],
   ['llvm_14',['llvm',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca7c7d2b9e8389cc541dc5a615e05bcf1e',1,'floppy::platform']]],
   ['load_15',['load',['../classfloppy_1_1configuration__file.html#a99cee9c7e5c0dd9718420e2f43695490',1,'floppy::configuration_file']]],
-  ['log_16',['log',['../group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3',1,'floppy::math::log(T base, T num) -&gt; T'],['../group__calc.html#ga1de30a44dfef08af9546a545e064b4bb',1,'floppy::math::log(T num) -&gt; T'],['../namespacefloppy_1_1log.html#a9eaa5f9efa4ba3467f22464b2a28ce91',1,'floppy::log::log(level::level_enum level, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void']]],
-  ['log_5fto_17',['log_to',['../namespacefloppy_1_1log.html#ae11a5862435d90c485efc280eb240a35',1,'floppy::log']]],
+  ['log_16',['log',['../group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3',1,'floppy::math::log(T base, T num) -&gt; T'],['../group__calc.html#ga1de30a44dfef08af9546a545e064b4bb',1,'floppy::math::log(T num) -&gt; T'],['../group__foundation.html#ga9eaa5f9efa4ba3467f22464b2a28ce91',1,'floppy::log::log(level::level_enum level, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void']]],
+  ['log_5fto_17',['log_to',['../group__foundation.html#gae11a5862435d90c485efc280eb240a35',1,'floppy::log']]],
   ['loongarch_18',['loongarch',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a4fd75bc52ec4368609c956ec4746d20e',1,'floppy::platform']]],
   ['lx_19',['lx',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a4a1740480a7289652d1e7bcdffe9807a',1,'floppy::math::detail::basic_two_dimensional_type']]],
   ['ly_20',['ly',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#accc043ce7ff2febe8af29365f34ef1de',1,'floppy::math::detail::basic_two_dimensional_type']]]

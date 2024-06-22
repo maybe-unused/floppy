@@ -8,6 +8,6 @@ var searchData=
   ['mips_5',['mips',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6af981200e230d2cd8e710f6137ca3fdfe',1,'floppy::platform::mips'],['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2af981200e230d2cd8e710f6137ca3fdfe',1,'floppy::platform::mips']]],
   ['mipspro_6',['mipspro',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cad88001a81cfc326b70c6132046495331',1,'floppy::platform']]],
   ['mpw_7',['mpw',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cac3e57e97f4c290780d0b9f7a20942870',1,'floppy::platform']]],
-  ['msgpack_8',['msgpack',['../namespacefloppy_1_1serialization.html#aab5efc62e072f3561d45db61e0c83b85ac40d516627022a54003ac2b74a82688a',1,'floppy::serialization']]],
+  ['msgpack_8',['msgpack',['../group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85ac40d516627022a54003ac2b74a82688a',1,'floppy::serialization']]],
   ['msvc_9',['msvc',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca3a69e825de46a19a06d800acd98739a9',1,'floppy::platform']]]
 ];

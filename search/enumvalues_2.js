@@ -1,7 +1,7 @@
 var searchData=
 [
   ['cache_0',['cache',['../classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a0fea6a13c52b4d4725368f24b045ca84',1,'floppy::filesystem::application_dirs']]],
-  ['cbor_1',['cbor',['../namespacefloppy_1_1serialization.html#aab5efc62e072f3561d45db61e0c83b85aaf9de350d652f0c9055ddab514bd23ea',1,'floppy::serialization']]],
+  ['cbor_1',['cbor',['../group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85aaf9de350d652f0c9055ddab514bd23ea',1,'floppy::serialization']]],
   ['clang_2',['clang',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca2c5517db7bc397f9b14ae357a7ce54ff',1,'floppy::platform']]],
   ['codewarrior_3',['codewarrior',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca3853651bd4f950bb3f5cc6e3dca950ae',1,'floppy::platform']]],
   ['comeau_4',['comeau',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca356e862cb23a4a6880d74c193e661a3e',1,'floppy::platform']]],

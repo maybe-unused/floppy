@@ -9,7 +9,7 @@ var searchData=
   ['pathscale_6',['pathscale',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca6d187e1e0278e55df4973764d97a18fd',1,'floppy::platform']]],
   ['pc_7',['pc',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2abc54f4d60f1cec0f9a6cb70e13f2127a',1,'floppy::platform']]],
   ['pi_8',['pi',['../structfloppy_1_1math_1_1numbers_1_1pi.html',1,'pi&lt; T &gt;'],['../structfloppy_1_1math_1_1numbers_1_1pi.html',1,'pi&lt; T &gt;'],['../structfloppy_1_1math_1_1angle.html#ae9b9250fe4977ecf81b030690815d4a8',1,'floppy::math::angle::pi()']]],
-  ['pimpl_9',['pimpl',['../namespacefloppy_1_1traits.html#ae8263662bb2da92276fbe82282582f5e',1,'floppy::traits']]],
+  ['pimpl_9',['pimpl',['../group__traits.html#gae8263662bb2da92276fbe82282582f5e',1,'floppy::traits']]],
   ['pin_10',['pin',['../structfloppy_1_1traits_1_1pin.html',1,'floppy::traits']]],
   ['plain_5ftype_11',['plain_type',['../group__helpers.html#structfloppy_1_1plain__type',1,'floppy']]],
   ['plain_5ftype_5ft_12',['plain_type_t',['../group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c',1,'floppy']]],

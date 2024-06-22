@@ -30,5 +30,5 @@ var searchData=
   ['as_5ftarget_5ftriple_27',['as_target_triple',['../classfloppy_1_1platform.html#ab6b6118f6e44d82260fbabd42bfe8a75',1,'floppy::platform']]],
   ['asin_28',['asin',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#add809373661187793ef5d2296d7f7eb3',1,'floppy::math::detail::basic_numeric_newtype']]],
   ['atan_29',['atan',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a2c5c1e764b8e4c7f8fb6407b0e78f22e',1,'floppy::math::detail::basic_numeric_newtype']]],
-  ['autosave_30',['autosave',['../namespacefloppy.html#ae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1',1,'floppy']]]
+  ['autosave_30',['autosave',['../group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1',1,'floppy']]]
 ];

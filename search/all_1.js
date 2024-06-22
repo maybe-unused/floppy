@@ -14,6 +14,6 @@ var searchData=
   ['blue_11',['blue',['../classfloppy_1_1gfx_1_1color.html#a54ee5bd5e1a714c38361dd8bb9e41149',1,'floppy::gfx::color']]],
   ['bluef_12',['bluef',['../classfloppy_1_1gfx_1_1color.html#a37bdde4097e35dfd595e1a5197d4d3de',1,'floppy::gfx::color']]],
   ['borland_13',['borland',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca3c7f77cc43338e14824c111671beef30',1,'floppy::platform']]],
-  ['bson_14',['bson',['../namespacefloppy_1_1serialization.html#aab5efc62e072f3561d45db61e0c83b85a0b6879b186bfb2b1ec65d2460e4eccd4',1,'floppy::serialization']]],
+  ['bson_14',['bson',['../group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85a0b6879b186bfb2b1ec65d2460e4eccd4',1,'floppy::serialization']]],
   ['bug_20list_15',['Bug List',['../bug.html',1,'']]]
 ];
