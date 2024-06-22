@@ -9,10 +9,11 @@
 namespace floppy::filesystem
 {
   /// \brief Class for getting location of system directories for a specific application.
+  /// \headerfile floppy/directories.h 
+  /// \ingroup foundation
   /// \details ProjectDirs computes the location of cache, config or data directories for a specific application,
   /// which are derived from the standard directories and the name of the project/organization.
   ///
-  /// \details
   /// For example if user named <i>Alice</i>, the following code:
   /// \code {.cpp}
   /// using floppy::filesystem::application_dirs;

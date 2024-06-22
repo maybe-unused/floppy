@@ -29,3 +29,7 @@ template <> struct [[maybe_unused]] fmt::formatter<enum floppy::platform::endian
 
 /// \brief Formatter for `floppy::platform`.
 template <> struct [[maybe_unused]] fmt::formatter<floppy::platform> : floppy::ostream_formatter<char> {};
+
+/// \defgroup foundation Foundation
+/// \brief The foundation classes of the library.
+/// \todo Add detailed description.

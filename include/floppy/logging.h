@@ -14,6 +14,8 @@ namespace floppy::log {
   } // namespace level
 
   /// \brief Logs message to given loger with level <b>trace</b>.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param logger Logger to log to.
   /// \param fmt Format string.
@@ -46,6 +48,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to default logger with level <b>debug</b>.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param fmt Format string.
   /// \param args Format arguments.
@@ -56,6 +60,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to given loger with level <b>info</b>.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param logger Logger to log to.
   /// \param fmt Format string.
@@ -67,6 +73,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to default logger with level <b>info</b>.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param fmt Format string.
   /// \param args Format arguments.
@@ -77,6 +85,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to given loger with level <b>warn</b>.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param logger Logger to log to.
   /// \param fmt Format string.
@@ -88,6 +98,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to default logger with level <b>warn</b>.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param fmt Format string.
   /// \param args Format arguments.
@@ -98,6 +110,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to given loger with level <b>err</b>.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param logger Logger to log to.
   /// \param fmt Format string.
@@ -109,6 +123,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to default logger with level <b>err</b>.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param fmt Format string.
   /// \param args Format arguments.
@@ -119,6 +135,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to given loger with level <b>critical</b>.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param logger Logger to log to.
   /// \param fmt Format string.
@@ -130,6 +148,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to default logger with level <b>critical</b>.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param fmt Format string.
   /// \param args Format arguments.
@@ -140,6 +160,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to given loger with given level.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param level Log level.
   /// \param logger Logger to log to.
@@ -152,6 +174,8 @@ namespace floppy::log {
   }
 
   /// \brief Logs message to default logger with given level.
+  /// \headerfile floppy/logging.h 
+  /// \ingroup foundation
   /// \tparam Args Format arguments.
   /// \param level Log level.
   /// \param fmt Format string.
