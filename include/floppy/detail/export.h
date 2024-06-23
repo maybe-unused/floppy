@@ -187,12 +187,14 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       return os;
     }
 
+#if defined(FLOPPY_TARGET_NAME)
     static_assert(floppy_meta.version().major() == FLOPPY_PROJECT_VERSION_MAJOR, "major version isn't the same");
     static_assert(floppy_meta.version().minor() == FLOPPY_PROJECT_VERSION_MINOR, "minor version isn't the same");
     static_assert(floppy_meta.version().patch() == FLOPPY_PROJECT_VERSION_PATCH, "patch version isn't the same");
     static_assert(floppy_meta.name() == std::string_view(stringify$(FLOPPY_TARGET_NAME)), "project name isn't the same");
     static_assert(floppy_meta.domain() == "io.github.whs31", "project domain isn't the same");
     static_assert(floppy_meta.organization() == "whs31", "project organization isn't the same");
+#endif
   } // namespace meta
 } // namespace floppy
 
