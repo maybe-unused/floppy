@@ -499,8 +499,12 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= project_meta(</div>
-<div class="line">      version(CMAKE_PROJECT_VERSION_MAJOR, CMAKE_PROJECT_VERSION_MINOR, CMAKE_PROJECT_VERSION_PATCH),</div>
-<div class="line">      std::string_view(stringify$(CMAKE_TARGET_NAME)),</div>
+<div class="line">      version(</div>
+<div class="line">        FLOPPY_PROJECT_VERSION_MAJOR,</div>
+<div class="line">        FLOPPY_PROJECT_VERSION_MINOR,</div>
+<div class="line">        FLOPPY_PROJECT_VERSION_PATCH</div>
+<div class="line">      ),</div>
+<div class="line">      std::string_view(stringify$(FLOPPY_TARGET_NAME)),</div>
 <div class="line">      <span class="stringliteral">&quot;io.github.whs31&quot;</span>,</div>
 <div class="line">      <span class="stringliteral">&quot;whs31&quot;</span></div>
 <div class="line">    )</div>
