@@ -61,6 +61,10 @@ class FloppyRecipe(ConanFile):
         tc.cache_variables["NO_SUBMODULES"] = True       # always set to true if invoked via conan
         tc.cache_variables["BUILD_SHARED_LIBS"] = self.options.shared
         tc.cache_variables["TESTS"] = self.options.test
+        tc.preprocessor_definitions["FLOPPY_TARGET_NAME"] = self.name
+        tc.preprocessor_definitions["FLOPPY_PROJECT_VERSION_MAJOR"] = int(self.version.split(".")[0])
+        tc.preprocessor_definitions["FLOPPY_PROJECT_VERSION_MINOR"] = int(self.version.split(".")[1])
+        tc.preprocessor_definitions["FLOPPY_PROJECT_VERSION_PATCH"] = int(self.version.split(".")[2])
         tc.generate()
 
     def build(self):

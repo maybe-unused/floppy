@@ -146,12 +146,20 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     /// \headerfile floppy/floppy.h
     /// \ingroup helpers
     [[maybe_unused]] constexpr inline auto floppy_meta = project_meta(
+#if defined(FLOPPY_PROJECT_VERSION_MAJOR)
       version(
         FLOPPY_PROJECT_VERSION_MAJOR,
         FLOPPY_PROJECT_VERSION_MINOR,
         FLOPPY_PROJECT_VERSION_PATCH
       ),
+#else
+      version(0, 0, 0),
+#endif
+#if defined(FLOPPY_TARGET_NAME)
       std::string_view(stringify$(FLOPPY_TARGET_NAME)),
+#else
+      std::string_view("floppy"),
+#endif
       "io.github.whs31",
       "whs31"
     );
