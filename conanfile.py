@@ -77,9 +77,9 @@ class FloppyRecipe(ConanFile):
         rmdir(self, os.path.join(self.package_folder, "share"))
 
     def package_info(self):
-        self.cpp_info.set_property("cmake_file_name", "leaf")
-        self.cpp_info.set_property("cmake_target_name", "leaf::leaf")
-        self.cpp_info.libs = ["leaf"]
+        self.cpp_info.set_property("cmake_file_name", "floppy")
+        self.cpp_info.set_property("cmake_target_name", "floppy::floppy")
+        self.cpp_info.libs = ["floppy"]
         self.cpp_info.requires = ["fmt::fmt", "spdlog::spdlog"]
         if self.settings.os == "Windows":
             self.cpp_info.requires.append("winapi20::winapi20")
