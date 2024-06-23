@@ -145,6 +145,8 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     /// \brief Project metadata object, available at compile-time.
     /// \headerfile floppy/floppy.h
     /// \ingroup helpers
+    /// \bug When building via Conan, this variable can be defined with default values instead of
+    /// actual version and target name. This will be fixed in the future releases.
     [[maybe_unused]] constexpr inline auto floppy_meta = project_meta(
 #if defined(FLOPPY_PROJECT_VERSION_MAJOR)
       version(
