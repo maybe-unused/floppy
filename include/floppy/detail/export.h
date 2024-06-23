@@ -146,8 +146,12 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     /// \headerfile floppy/floppy.h
     /// \ingroup helpers
     [[maybe_unused]] constexpr inline auto floppy_meta = project_meta(
-      version(CMAKE_PROJECT_VERSION_MAJOR, CMAKE_PROJECT_VERSION_MINOR, CMAKE_PROJECT_VERSION_PATCH),
-      std::string_view(stringify$(CMAKE_TARGET_NAME)),
+      version(
+        FLOPPY_PROJECT_VERSION_MAJOR,
+        FLOPPY_PROJECT_VERSION_MINOR,
+        FLOPPY_PROJECT_VERSION_PATCH
+      ),
+      std::string_view(stringify$(FLOPPY_TARGET_NAME)),
       "io.github.whs31",
       "whs31"
     );
@@ -173,10 +177,10 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       return os;
     }
 
-    static_assert(floppy_meta.version().major() == CMAKE_PROJECT_VERSION_MAJOR, "major version isn't the same");
-    static_assert(floppy_meta.version().minor() == CMAKE_PROJECT_VERSION_MINOR, "minor version isn't the same");
-    static_assert(floppy_meta.version().patch() == CMAKE_PROJECT_VERSION_PATCH, "patch version isn't the same");
-    static_assert(floppy_meta.name() == std::string_view(stringify$(CMAKE_TARGET_NAME)), "project name isn't the same");
+    static_assert(floppy_meta.version().major() == FLOPPY_PROJECT_VERSION_MAJOR, "major version isn't the same");
+    static_assert(floppy_meta.version().minor() == FLOPPY_PROJECT_VERSION_MINOR, "minor version isn't the same");
+    static_assert(floppy_meta.version().patch() == FLOPPY_PROJECT_VERSION_PATCH, "patch version isn't the same");
+    static_assert(floppy_meta.name() == std::string_view(stringify$(FLOPPY_TARGET_NAME)), "project name isn't the same");
     static_assert(floppy_meta.domain() == "io.github.whs31", "project domain isn't the same");
     static_assert(floppy_meta.organization() == "whs31", "project organization isn't the same");
   } // namespace meta
