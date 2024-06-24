@@ -48,6 +48,7 @@ var namespacefloppy =
       [ "some", "group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee", null ],
       [ "none", "group__aliases.html#ga9365b793fe547271e48fa719a7f4854d", null ]
     ] ],
+    [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
     [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
     [ "one_of", "structfloppy_1_1one__of.html", "structfloppy_1_1one__of" ],
     [ "ostream_formatter", "structfloppy_1_1ostream__formatter.html", "structfloppy_1_1ostream__formatter" ],
@@ -78,6 +79,9 @@ var namespacefloppy =
     [ "operator<<", "namespacefloppy.html#addcab788066267803ed3875e35a0042f", null ],
     [ "panic", "group__helpers.html#ga6a778dde2b29125b63c1101d454f3e76", null ],
     [ "narrow_cast", "group__helpers.html#ga0bbd17556e1675c4a05316d9f6743342", null ],
+    [ "make_box", "group__memory.html#gaf50958988fef4e2cf80c0473e1a3535b", null ],
+    [ "operator<=>", "group__memory.html#ga7a9c79f48e88aa5c76de0f9abef8db7b", null ],
+    [ "operator<<", "group__memory.html#ga024e0841fe0eda5f5568f8a6ef9af131", null ],
     [ "operator<<", "namespacefloppy.html#aa8f1563fb7ccde51c962eabc7df51492", null ],
     [ "operator<<", "namespacefloppy.html#a747be7360c72c661f52ff453662f369c", null ],
     [ "operator<<", "namespacefloppy.html#a7398b860b8780edd86e8ed0d66860e40", null ],

@@ -17,7 +17,7 @@ var searchData=
   ['degrees_14',['degrees',['../structfloppy_1_1math_1_1angle.html#a1d170f6c3273085f81efbef3b9d32abb',1,'floppy::math::angle']]],
   ['demangle_15',['demangle',['../group__helpers.html#ga67c6adb54f12fdf9e8ef12c2ef08c99a',1,'floppy::rtti']]],
   ['dependencies_16',['Dependencies',['../index.html#autotoc_md1',1,'']]],
-  ['deserialize_17',['deserialize',['../group__foundation.html#ga853fcffdf0e983b17478535a994706b0',1,'floppy::serialization']]],
+  ['deserialize_17',['deserialize',['../group__serialization.html#ga853fcffdf0e983b17478535a994706b0',1,'floppy::serialization']]],
   ['destination_5ftype_18',['destination_type',['../structfloppy_1_1math_1_1scale.html#ade7958c1143337a2576cd6ef72ffe368',1,'floppy::math::scale']]],
   ['details_19',['Graphics Details',['../group__gfx__details.html',1,'']]],
   ['diab_20',['diab',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca9d76d663f4feae3bb1bc63ed17388abd',1,'floppy::platform']]],

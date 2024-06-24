@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Floppy library" />
+<meta property="og:url" content="https://whs31.github.io/floppy" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Documentation for the Floppy library" />
+<meta name="twitter:description" content=""https://whs31.github.io/floppy" />
+<!-- END twitter metadata -->
+<title>Floppy: box&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/whs31/floppy" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Floppy
+   &#160;<span id="projectnumber">1.2.2</span>
+   </div>
+   <div id="projectbrief">Extensions for C++ stdlib</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classfloppy_1_1box.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classfloppy_1_1box-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">box&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__foundation.html">Foundation</a> &raquo; <a class="el" href="group__memory.html">Memory</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="floppy_8h_source.html">floppy/floppy.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad6f668a181a6af96075d815f6a52e940" id="r_ad6f668a181a6af96075d815f6a52e940"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ad6f668a181a6af96075d815f6a52e940"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad6f668a181a6af96075d815f6a52e940">box</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="separator:ad6f668a181a6af96075d815f6a52e940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f5e724c2e074ea70ddb3ed8abfb09e" id="r_a05f5e724c2e074ea70ddb3ed8abfb09e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05f5e724c2e074ea70ddb3ed8abfb09e">box</a> (std::unique_ptr&lt; T &gt; <a class="el" href="#a89b726d6fc71cdeea13f2684f5dc1649">ptr</a>) noexcept(false)</td></tr>
+<tr class="separator:a05f5e724c2e074ea70ddb3ed8abfb09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b5aceb8fa96bcafa0ab2036c2ce26e" id="r_aa4b5aceb8fa96bcafa0ab2036c2ce26e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4b5aceb8fa96bcafa0ab2036c2ce26e">box</a> ()</td></tr>
+<tr class="separator:aa4b5aceb8fa96bcafa0ab2036c2ce26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c6d362efdd6c6ed2c1a2072bdb7dbe" id="r_a28c6d362efdd6c6ed2c1a2072bdb7dbe"><td class="memItemLeft" align="right" valign="top"><a id="a28c6d362efdd6c6ed2c1a2072bdb7dbe" name="a28c6d362efdd6c6ed2c1a2072bdb7dbe"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>box</b> (<a class="el" href="classfloppy_1_1box.html">box</a> const &amp;other)=delete</td></tr>
+<tr class="separator:a28c6d362efdd6c6ed2c1a2072bdb7dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa45ba7b388b279185f68d20b6dfbb0b8" id="r_aa45ba7b388b279185f68d20b6dfbb0b8"><td class="memItemLeft" align="right" valign="top"><a id="aa45ba7b388b279185f68d20b6dfbb0b8" name="aa45ba7b388b279185f68d20b6dfbb0b8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>box</b> (<a class="el" href="classfloppy_1_1box.html">box</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:aa45ba7b388b279185f68d20b6dfbb0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8cc9017530df9d616762f4e8ba1139b" id="r_ad8cc9017530df9d616762f4e8ba1139b"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:ad8cc9017530df9d616762f4e8ba1139b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad8cc9017530df9d616762f4e8ba1139b">box</a> (<a class="el" href="classfloppy_1_1box.html">box</a>&lt; U &gt; &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:ad8cc9017530df9d616762f4e8ba1139b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac02901885f54462b91c3d36f2e24d4" id="r_a7ac02901885f54462b91c3d36f2e24d4"><td class="memItemLeft" align="right" valign="top"><a id="a7ac02901885f54462b91c3d36f2e24d4" name="a7ac02901885f54462b91c3d36f2e24d4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~box</b> ()=default</td></tr>
+<tr class="separator:a7ac02901885f54462b91c3d36f2e24d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27eef7ef487cbd9ec0677ae8c8ea9500" id="r_a27eef7ef487cbd9ec0677ae8c8ea9500"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27eef7ef487cbd9ec0677ae8c8ea9500">get</a> () noexcept -&gt; T *</td></tr>
+<tr class="separator:a27eef7ef487cbd9ec0677ae8c8ea9500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5027aa98228fd576b5863039fe758591" id="r_a5027aa98228fd576b5863039fe758591"><td class="memItemLeft" align="right" valign="top"><a id="a5027aa98228fd576b5863039fe758591" name="a5027aa98228fd576b5863039fe758591"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classfloppy_1_1box.html">box</a>&lt; T &gt; const &amp;other) -&gt; <a class="el" href="classfloppy_1_1box.html">box</a>&lt; T &gt; &amp;=delete</td></tr>
+<tr class="separator:a5027aa98228fd576b5863039fe758591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597f3a8c69828b5b41e39f0c04fefa6c" id="r_a597f3a8c69828b5b41e39f0c04fefa6c"><td class="memItemLeft" align="right" valign="top"><a id="a597f3a8c69828b5b41e39f0c04fefa6c" name="a597f3a8c69828b5b41e39f0c04fefa6c"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classfloppy_1_1box.html">box</a>&lt; T &gt; &amp;&amp;other) noexcept -&gt; <a class="el" href="classfloppy_1_1box.html">box</a>&lt; T &gt; &amp;=default</td></tr>
+<tr class="separator:a597f3a8c69828b5b41e39f0c04fefa6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b3dd05373473a1fb75a94f35b69280" id="r_a12b3dd05373473a1fb75a94f35b69280"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a12b3dd05373473a1fb75a94f35b69280"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a12b3dd05373473a1fb75a94f35b69280">operator=</a> (<a class="el" href="classfloppy_1_1box.html">box</a>&lt; U &gt; &amp;&amp;other) noexcept -&gt; <a class="el" href="classfloppy_1_1box.html">box</a>&lt; T &gt; &amp;</td></tr>
+<tr class="separator:a12b3dd05373473a1fb75a94f35b69280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2459f03302458f8a15f15b88f3f5a377" id="r_a2459f03302458f8a15f15b88f3f5a377"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2459f03302458f8a15f15b88f3f5a377">operator*</a> () noexcept -&gt; T &amp;</td></tr>
+<tr class="separator:a2459f03302458f8a15f15b88f3f5a377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af366fb16a5e7d5422cb839fb35fae885" id="r_af366fb16a5e7d5422cb839fb35fae885"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af366fb16a5e7d5422cb839fb35fae885">operator*</a> () const noexcept -&gt; T &amp;</td></tr>
+<tr class="separator:af366fb16a5e7d5422cb839fb35fae885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6683a42e7948defd39326105aa48e7b" id="r_ae6683a42e7948defd39326105aa48e7b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6683a42e7948defd39326105aa48e7b">operator-&gt;</a> () noexcept -&gt; T *</td></tr>
+<tr class="separator:ae6683a42e7948defd39326105aa48e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f9034e8668016b94c8f04a647e9d2a" id="r_a95f9034e8668016b94c8f04a647e9d2a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95f9034e8668016b94c8f04a647e9d2a">operator-&gt;</a> () const noexcept -&gt; T *</td></tr>
+<tr class="separator:a95f9034e8668016b94c8f04a647e9d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b726d6fc71cdeea13f2684f5dc1649" id="r_a89b726d6fc71cdeea13f2684f5dc1649"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89b726d6fc71cdeea13f2684f5dc1649">ptr</a> () noexcept -&gt; std::unique_ptr&lt; T &gt; &amp;</td></tr>
+<tr class="separator:a89b726d6fc71cdeea13f2684f5dc1649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7783d4339b6bfc442e165b72afcfe5c1" id="r_a7783d4339b6bfc442e165b72afcfe5c1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7783d4339b6bfc442e165b72afcfe5c1">ptr</a> () const noexcept -&gt; std::unique_ptr&lt; T &gt; const &amp;</td></tr>
+<tr class="separator:a7783d4339b6bfc442e165b72afcfe5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:acbd5fe9715101a8a3a46028c56ca3c75" id="r_acbd5fe9715101a8a3a46028c56ca3c75"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:acbd5fe9715101a8a3a46028c56ca3c75"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acbd5fe9715101a8a3a46028c56ca3c75">make</a> (Args &amp;&amp;... args) -&gt; <a class="el" href="classfloppy_1_1box.html">box</a>&lt; T &gt;</td></tr>
+<tr class="separator:acbd5fe9715101a8a3a46028c56ca3c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ae06e82d49946f46926ff88d912def" id="r_a31ae06e82d49946f46926ff88d912def"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31ae06e82d49946f46926ff88d912def">make</a> (std::unique_ptr&lt; T &gt; <a class="el" href="#a89b726d6fc71cdeea13f2684f5dc1649">ptr</a>) noexcept(false) -&gt; <a class="el" href="classfloppy_1_1box.html">box</a>&lt; T &gt;</td></tr>
+<tr class="separator:a31ae06e82d49946f46926ff88d912def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class floppy::box&lt; T &gt;</div><p>Box memory class. </p>
+<p>The box class behaves very similarly to the unique_ptr, but unlike the unique_ptr, it is 100% guaranteed to be filled at all times (unless the user tries to access it after calling std::move does something else that is clearly bad practice).</p>
+<p>Reference implementation is taken from the <b>reflect-cpp</b> library. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of data stored in the box. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/getml/reflect-cpp/blob/main/include/rfl/Box.hpp">https://github.com/getml/reflect-cpp/blob/main/include/rfl/Box.hpp</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00023">23</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad6f668a181a6af96075d815f6a52e940" name="ad6f668a181a6af96075d815f6a52e940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f668a181a6af96075d815f6a52e940">&#9670;&#160;</a></span>box() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfloppy_1_1box.html">box</a> </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs new box with given arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Args</td><td>Constructor arguments type. </td></tr>
+    <tr><td class="paramname">args</td><td>Constructor arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00030">30</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="a05f5e724c2e074ea70ddb3ed8abfb09e" name="a05f5e724c2e074ea70ddb3ed8abfb09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05f5e724c2e074ea70ddb3ed8abfb09e">&#9670;&#160;</a></span>box() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfloppy_1_1box.html">box</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tries to construct new box from <code>std::unique_ptr</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td><code>std::unique_ptr</code> to construct from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if <code>ptr</code> is not set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00035">35</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="aa4b5aceb8fa96bcafa0ab2036c2ce26e" name="aa4b5aceb8fa96bcafa0ab2036c2ce26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b5aceb8fa96bcafa0ab2036c2ce26e">&#9670;&#160;</a></span>box() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfloppy_1_1box.html">box</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00042">42</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="ad8cc9017530df9d616762f4e8ba1139b" name="ad8cc9017530df9d616762f4e8ba1139b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8cc9017530df9d616762f4e8ba1139b">&#9670;&#160;</a></span>box() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfloppy_1_1box.html">box</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfloppy_1_1box.html">box</a>&lt; U &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor. </p>
+<p>Takes ownership of <code>other</code> </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Underlying type of <code>other</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><code>box</code> to move from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00055">55</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a27eef7ef487cbd9ec0677ae8c8ea9500" name="a27eef7ef487cbd9ec0677ae8c8ea9500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27eef7ef487cbd9ec0677ae8c8ea9500">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> -&gt; T* </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the underlying object. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the underlying object. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00064">64</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="a12b3dd05373473a1fb75a94f35b69280" name="a12b3dd05373473a1fb75a94f35b69280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b3dd05373473a1fb75a94f35b69280">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfloppy_1_1box.html">box</a>&lt; U &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="classfloppy_1_1box.html">box</a>&lt;T&gt;&amp;
+    </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator. </p>
+<p>Takes ownership of <code>other</code> </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Underlying type of <code>other</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><code>box</code> to move from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to <code>*this</code>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00078">78</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="a2459f03302458f8a15f15b88f3f5a377" name="a2459f03302458f8a15f15b88f3f5a377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2459f03302458f8a15f15b88f3f5a377">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator* </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> -&gt; T&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the underlying object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The underlying object. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00087">87</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="af366fb16a5e7d5422cb839fb35fae885" name="af366fb16a5e7d5422cb839fb35fae885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af366fb16a5e7d5422cb839fb35fae885">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator* </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const -&gt; T&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the underlying object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The underlying object. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00091">91</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="ae6683a42e7948defd39326105aa48e7b" name="ae6683a42e7948defd39326105aa48e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6683a42e7948defd39326105aa48e7b">&#9670;&#160;</a></span>operator-&gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> -&gt; T* </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the underlying object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The underlying object. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00095">95</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="a95f9034e8668016b94c8f04a647e9d2a" name="a95f9034e8668016b94c8f04a647e9d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f9034e8668016b94c8f04a647e9d2a">&#9670;&#160;</a></span>operator-&gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const -&gt; T* </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the underlying object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The underlying object. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00099">99</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="a89b726d6fc71cdeea13f2684f5dc1649" name="a89b726d6fc71cdeea13f2684f5dc1649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b726d6fc71cdeea13f2684f5dc1649">&#9670;&#160;</a></span>ptr() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto ptr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> -&gt; std::unique_ptr&lt;T&gt;&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the underlying unique pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The underlying unique pointer. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00103">103</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="a7783d4339b6bfc442e165b72afcfe5c1" name="a7783d4339b6bfc442e165b72afcfe5c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7783d4339b6bfc442e165b72afcfe5c1">&#9670;&#160;</a></span>ptr() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto ptr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const -&gt; std::unique_ptr&lt;T&gt; const&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the constant underlying unique pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The underlying unique pointer. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00107">107</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="acbd5fe9715101a8a3a46028c56ca3c75" name="acbd5fe9715101a8a3a46028c56ca3c75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbd5fe9715101a8a3a46028c56ca3c75">&#9670;&#160;</a></span>make() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto make </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="classfloppy_1_1box.html">box</a>&lt;T&gt; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs new box with given arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Args</td><td>Constructor arguments type. </td></tr>
+    <tr><td class="paramname">args</td><td>Constructor arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00113">113</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<a id="a31ae06e82d49946f46926ff88d912def" name="a31ae06e82d49946f46926ff88d912def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ae06e82d49946f46926ff88d912def">&#9670;&#160;</a></span>make() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto make </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="classfloppy_1_1box.html">box</a>&lt;T&gt; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tries to construct new box from <code>std::unique_ptr</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td><code>std::unique_ptr</code> to construct from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if <code>ptr</code> is not set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00120">120</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="memory_8h_source.html">memory.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacefloppy.html">floppy</a></li><li class="navelem"><a class="el" href="classfloppy_1_1box.html">box</a></li>
+    <li class="footer">Generated on Mon Jun 24 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

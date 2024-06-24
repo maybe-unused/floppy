@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.1</span>
+   &#160;<span id="projectnumber">1.2.2</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -166,6 +166,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1box.html">box</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1configuration__file.html">configuration_file</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfloppy_1_1one__of.html">one_of</a></td></tr>
@@ -240,6 +242,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342" id="r_ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplParams" colspan="2">template&lt;concepts::num T, concepts::num U&gt; </td></tr>
 <tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__helpers.html#ga0bbd17556e1675c4a05316d9f6743342">narrow_cast</a> (U &amp;&amp;u) noexcept -&gt; T</td></tr>
 <tr class="separator:ga0bbd17556e1675c4a05316d9f6743342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf50958988fef4e2cf80c0473e1a3535b" id="r_gaf50958988fef4e2cf80c0473e1a3535b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:gaf50958988fef4e2cf80c0473e1a3535b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__memory.html#gaf50958988fef4e2cf80c0473e1a3535b">make_box</a> (Args &amp;&amp;... args) -&gt; <a class="el" href="classfloppy_1_1box.html">box</a>&lt; T &gt;</td></tr>
+<tr class="separator:gaf50958988fef4e2cf80c0473e1a3535b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a9c79f48e88aa5c76de0f9abef8db7b" id="r_ga7a9c79f48e88aa5c76de0f9abef8db7b"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:ga7a9c79f48e88aa5c76de0f9abef8db7b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__memory.html#ga7a9c79f48e88aa5c76de0f9abef8db7b">operator&lt;=&gt;</a> (<a class="el" href="classfloppy_1_1box.html">box</a>&lt; T1 &gt; const &amp;a, <a class="el" href="classfloppy_1_1box.html">box</a>&lt; T2 &gt; const &amp;b)</td></tr>
+<tr class="separator:ga7a9c79f48e88aa5c76de0f9abef8db7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga024e0841fe0eda5f5568f8a6ef9af131" id="r_ga024e0841fe0eda5f5568f8a6ef9af131"><td class="memTemplParams" colspan="2">template&lt;typename C , typename Traits , typename T &gt; </td></tr>
+<tr class="memitem:ga024e0841fe0eda5f5568f8a6ef9af131"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__memory.html#ga024e0841fe0eda5f5568f8a6ef9af131">operator&lt;&lt;</a> (std::basic_ostream&lt; C, Traits &gt; &amp;os, <a class="el" href="classfloppy_1_1box.html">box</a>&lt; T &gt; const &amp;b) -&gt; std::basic_ostream&lt; C, Traits &gt; &amp;</td></tr>
+<tr class="separator:ga024e0841fe0eda5f5568f8a6ef9af131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8f1563fb7ccde51c962eabc7df51492" id="r_aa8f1563fb7ccde51c962eabc7df51492"><td class="memTemplParams" colspan="2">template&lt;class E , class T &gt; </td></tr>
 <tr class="memitem:aa8f1563fb7ccde51c962eabc7df51492"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa8f1563fb7ccde51c962eabc7df51492">operator&lt;&lt;</a> (std::basic_ostream&lt; E, T &gt; &amp;os, enum <a class="el" href="classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985">platform::operating_system</a> const &amp;d) -&gt; std::basic_ostream&lt; E, T &gt; &amp;</td></tr>
 <tr class="separator:aa8f1563fb7ccde51c962eabc7df51492"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -593,7 +604,7 @@ requires std::is_same_v&lt;decltype(std::to_string(std::declval&lt;T&amp;&gt;())
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefloppy.html">floppy</a></li>
-    <li class="footer">Generated on Sun Jun 23 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Mon Jun 24 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.1</span>
+   &#160;<span id="projectnumber">1.2.2</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -162,7 +162,7 @@ $(function(){initNavTree('length_8h_source.html',''); initResizable(); });
 </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classfloppy_1_1math_1_1length.html#a2670941a8b4ee25c472c0a2b5450d6f2">   48</a></span>    [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1math_1_1length.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; std::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classfloppy_1_1math_1_1length.html#a2670941a8b4ee25c472c0a2b5450d6f2">   48</a></span>    [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1math_1_1length.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;)</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;{:.3f}&quot;</span>, this-&gt;<a class="code hl_variable" href="structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a60a44b6be66786ea152cc7d589c55426">m_</a>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keywordflow">else</span></div>
@@ -287,6 +287,7 @@ $(function(){initNavTree('length_8h_source.html',''); initResizable(); });
 <div class="ttc" id="aclassfloppy_1_1math_1_1length_html_af2ce70fb583f185e69b12ac98004e8f6"><div class="ttname"><a href="classfloppy_1_1math_1_1length.html#af2ce70fb583f185e69b12ac98004e8f6">floppy::math::length::operator/=</a></div><div class="ttdeci">constexpr auto operator/=(T2 value) -&gt; length &amp;</div><div class="ttdoc">Returns this /= value.</div><div class="ttdef"><b>Definition</b> <a href="#l00145">length.h:145</a></div></div>
 <div class="ttc" id="aclassfloppy_1_1math_1_1length_html_afcc6514a2ee0ce82b58bc15bf70417d2"><div class="ttname"><a href="classfloppy_1_1math_1_1length.html#afcc6514a2ee0ce82b58bc15bf70417d2">floppy::math::length::operator*=</a></div><div class="ttdeci">constexpr auto operator*=(length const &amp;other) -&gt; length &amp;</div><div class="ttdoc">Returns this *= other.</div><div class="ttdef"><b>Definition</b> <a href="#l00113">length.h:113</a></div></div>
 <div class="ttc" id="anamespacefloppy_1_1math_html"><div class="ttname"><a href="namespacefloppy_1_1math.html">floppy::math</a></div><div class="ttdoc">Math namespace.</div><div class="ttdef"><b>Definition</b> <a href="math_8h_source.html#l00011">math.h:12</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 <div class="ttc" id="ant__traits_8h_html"><div class="ttname"><a href="nt__traits_8h.html">nt_traits.h</a></div></div>
 <div class="ttc" id="ascale_8h_html"><div class="ttname"><a href="scale_8h.html">scale.h</a></div><div class="ttdoc">A scaling factor between two different units of measurement.</div></div>
 <div class="ttc" id="astructfloppy_1_1math_1_1detail_1_1basic__numeric__newtype_html"><div class="ttname"><a href="structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html">floppy::math::detail::basic_numeric_newtype</a></div><div class="ttdoc">CRTP base for numeric newtypes that can be compared.</div><div class="ttdef"><b>Definition</b> <a href="nt__traits_8h_source.html#l00076">nt_traits.h:77</a></div></div>
@@ -301,7 +302,7 @@ $(function(){initNavTree('length_8h_source.html',''); initResizable(); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><a class="el" href="dir_047d1c41069b6adef11ae34e0147700f.html">euclid</a></li><li class="navelem"><a class="el" href="length_8h.html">length.h</a></li>
-    <li class="footer">Generated on Sun Jun 23 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Mon Jun 24 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

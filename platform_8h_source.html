@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.1</span>
+   &#160;<span id="projectnumber">1.2.2</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -303,7 +303,7 @@ $(function(){initNavTree('platform_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> C&gt;</div>
 <div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classfloppy_1_1platform.html#ab6b6118f6e44d82260fbabd42bfe8a75">  189</a></span>    [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1platform.html#ab6b6118f6e44d82260fbabd42bfe8a75">as_target_triple</a>() const noexcept -&gt; std::basic_string&lt;C&gt; {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classfloppy_1_1platform.html#ab6b6118f6e44d82260fbabd42bfe8a75">  189</a></span>    [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1platform.html#ab6b6118f6e44d82260fbabd42bfe8a75">as_target_triple</a>() const noexcept -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::basic_string&lt;C&gt; {</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>      <span class="keywordflow">return</span> fmt::format(</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="stringliteral">&quot;{}-{}-{}{}&quot;</span>,</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        (std::basic_stringstream&lt;C&gt;() &lt;&lt; this-&gt;architecture).str(),</div>
@@ -768,13 +768,14 @@ $(function(){initNavTree('platform_8h_source.html',''); initResizable(); });
 <div class="ttc" id="anamespacefloppy_1_1types_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">floppy::types::u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8-bit unsigned integer</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00016">types.h:16</a></div></div>
 <div class="ttc" id="anamespacefloppy_html"><div class="ttname"><a href="namespacefloppy.html">floppy</a></div><div class="ttdoc">Main namespace for the library.</div><div class="ttdef"><b>Definition</b> <a href="configuration_8h_source.html#l00010">configuration.h:11</a></div></div>
 <div class="ttc" id="anamespacefloppy_html_addcab788066267803ed3875e35a0042f"><div class="ttname"><a href="namespacefloppy.html#addcab788066267803ed3875e35a0042f">floppy::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::basic_ostream&lt; E, T &gt; &amp;os, source_location const &amp;loc) -&gt; std::basic_ostream&lt; E, T &gt; &amp;</div><div class="ttdoc">Stream adaptor for source_location.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00232">backports.h:232</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><a class="el" href="dir_a70aa49210f20f6d80e3cfefc70580f7.html">detail</a></li><li class="navelem"><b>platform.h</b></li>
-    <li class="footer">Generated on Sun Jun 23 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Mon Jun 24 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

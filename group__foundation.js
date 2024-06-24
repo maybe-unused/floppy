@@ -1,10 +1,9 @@
 var group__foundation =
 [
+    [ "Memory", "group__memory.html", "group__memory" ],
     [ "Logging", "group__logging.html", "group__logging" ],
+    [ "Serialization", "group__serialization.html", "group__serialization" ],
     [ "Traits", "group__traits.html", "group__traits" ],
-    [ "serializable", "conceptfloppy_1_1serialization_1_1serializable.html", null ],
-    [ "deserializable", "conceptfloppy_1_1serialization_1_1deserializable.html", null ],
-    [ "serializable_and_deserializable", "conceptfloppy_1_1serialization_1_1serializable__and__deserializable.html", null ],
     [ "configuration_file< F, T >", "classfloppy_1_1configuration__file.html", [
       [ "configuration_file", "classfloppy_1_1configuration__file.html#a9eaa6790b902913c6f1844b6bf8ef9eb", null ],
       [ "configuration_file", "classfloppy_1_1configuration__file.html#a11c3968bb530354cfddcd95fa1f62c76", null ],
@@ -54,24 +53,8 @@ var group__foundation =
       [ "state_dir", "classfloppy_1_1filesystem_1_1application__dirs.html#a021aa8018cecc56780804ca78476a7f3", null ],
       [ "operator[]", "classfloppy_1_1filesystem_1_1application__dirs.html#acf223fac7271422435f20b4a73429a12", null ]
     ] ],
-    [ "serialization_error", "classfloppy_1_1serialization_1_1serialization__error.html", [
-      [ "serialization_error", "classfloppy_1_1serialization_1_1serialization__error.html#a38cc9815e09fa42f404f593fac1ae61e", null ],
-      [ "serialization_error", "classfloppy_1_1serialization_1_1serialization__error.html#a1ea46b781b9a93b4142be5c5b76f6821", null ]
-    ] ],
     [ "saving_policy", "group__foundation.html#gae1e5f60a57661fe4d13cf754e0a8d6ae", [
       [ "autosave", "group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1", null ],
       [ "explicit_", "group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeac9c45ac5595e1bb329ad8e26396d93c5", null ]
-    ] ],
-    [ "format", "group__foundation.html#gaab5efc62e072f3561d45db61e0c83b85", [
-      [ "json", "group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85a466deec76ecdf5fca6d38571f6324d54", null ],
-      [ "bson", "group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85a0b6879b186bfb2b1ec65d2460e4eccd4", null ],
-      [ "xml", "group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85a0f635d0e0f3874fff8b581c132e6c7a7", null ],
-      [ "cbor", "group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85aaf9de350d652f0c9055ddab514bd23ea", null ],
-      [ "flexbuffer", "group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85a8b3848376266fdcbf757a40a498549bb", null ],
-      [ "msgpack", "group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85ac40d516627022a54003ac2b74a82688a", null ],
-      [ "toml", "group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85aec18ad9a83c312380533fa93ac6fc61c", null ],
-      [ "yaml", "group__foundation.html#ggaab5efc62e072f3561d45db61e0c83b85a6eedc03a68a69933c763e674f2d7c42f", null ]
-    ] ],
-    [ "serialize", "group__foundation.html#ga9ea974aff95bad2cc99b711105638e97", null ],
-    [ "deserialize", "group__foundation.html#ga853fcffdf0e983b17478535a994706b0", null ]
+    ] ]
 ];

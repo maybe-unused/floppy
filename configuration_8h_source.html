@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.1</span>
+   &#160;<span id="projectnumber">1.2.2</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -197,14 +197,14 @@ $(function(){initNavTree('configuration_8h_source.html',''); initResizable(); })
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="classfloppy_1_1configuration__file.html#a7b44ff40f7dddb23bac14efb52538bc8">  165</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1configuration__file.html#a7b44ff40f7dddb23bac14efb52538bc8">operator=</a>(<a class="code hl_class" href="classfloppy_1_1configuration__file.html">configuration_file</a>&amp;&amp;) -&gt; <a class="code hl_class" href="classfloppy_1_1configuration__file.html">configuration_file</a>&amp; = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>   <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1configuration__file.html#ad8f9109cc71f837b50e066ff431c8991">read_from_file</a>() const noexcept(false) -&gt; std::<span class="keywordtype">string</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1configuration__file.html#ad8f9109cc71f837b50e066ff431c8991">read_from_file</a>() const noexcept(false) -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::<span class="keywordtype">string</span>;</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    auto <a class="code hl_function" href="classfloppy_1_1configuration__file.html#ab6e3af11c5997bfec5725512d50867c0">write_to_file</a>(std::string_view content) const noexcept(false) -&gt; <span class="keywordtype">void</span>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    auto <a class="code hl_function" href="classfloppy_1_1configuration__file.html#ab6e3af11c5997bfec5725512d50867c0">write_to_file</a>(<a class="code hl_namespace" href="namespacestd.html">std</a>::string_view content) const noexcept(false) -&gt; <span class="keywordtype">void</span>;</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>   private:</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    T values_;</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    T default_values_;</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    std::filesystem::<a class="code hl_function" href="classfloppy_1_1configuration__file.html#a8a9d6c204de1b0e268bca4dcf2f74488">path</a> path_;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_namespace" href="namespacestd.html">std</a>::filesystem::<a class="code hl_function" href="classfloppy_1_1configuration__file.html#a8a9d6c204de1b0e268bca4dcf2f74488">path</a> path_;</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    enum <a class="code hl_enumeration" href="group__foundation.html#gae1e5f60a57661fe4d13cf754e0a8d6ae">saving_policy</a> saving_policy_;</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">bool</span> valid_;</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  };</div>
@@ -236,13 +236,14 @@ $(function(){initNavTree('configuration_8h_source.html',''); initResizable(); })
 <div class="ttc" id="agroup__foundation_html_ggae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1"><div class="ttname"><a href="group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1">floppy::saving_policy::autosave</a></div><div class="ttdeci">@ autosave</div><div class="ttdoc">Saves configuration files automatically on closing.</div></div>
 <div class="ttc" id="anamespacefloppy_1_1types_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">floppy::types::u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8-bit unsigned integer</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00016">types.h:16</a></div></div>
 <div class="ttc" id="anamespacefloppy_html"><div class="ttname"><a href="namespacefloppy.html">floppy</a></div><div class="ttdoc">Main namespace for the library.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">configuration.h:11</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><b>configuration.h</b></li>
-    <li class="footer">Generated on Sun Jun 23 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Mon Jun 24 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

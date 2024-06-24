@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.1</span>
+   &#160;<span id="projectnumber">1.2.2</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -197,9 +197,9 @@ $(function(){initNavTree('traits_8h_source.html',''); initResizable(); });
 <div class="foldopen" id="foldopen00154" data-start="{" data-end="};">
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html">  154</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html">formattable_base</a></div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8">  158</a></span>      [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8">to_string</a>() const -&gt; std::basic_string&lt;C&gt; = 0;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8">  158</a></span>      [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8">to_string</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::basic_string&lt;C&gt; = 0;</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a">  163</a></span>      [[nodiscard]] explicit operator std::basic_string&lt;C&gt;()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8">to_string</a>(); }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a">  163</a></span>      [[nodiscard]] explicit operator <a class="code hl_namespace" href="namespacestd.html">std</a>::basic_string&lt;C&gt;()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8">to_string</a>(); }</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    };</div>
 </div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
@@ -285,6 +285,7 @@ $(function(){initNavTree('traits_8h_source.html',''); initResizable(); });
 <div class="ttc" id="anamespacefloppy_1_1traits_html"><div class="ttname"><a href="namespacefloppy_1_1traits.html">floppy::traits</a></div><div class="ttdoc">Namespace with traits for custom types and classes.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">traits.h:11</a></div></div>
 <div class="ttc" id="anamespacefloppy_html"><div class="ttname"><a href="namespacefloppy.html">floppy</a></div><div class="ttdoc">Main namespace for the library.</div><div class="ttdef"><b>Definition</b> <a href="configuration_8h_source.html#l00010">configuration.h:11</a></div></div>
 <div class="ttc" id="anamespacefloppy_html_a3b4c72879a9dbdecb0d928464fbba5f9"><div class="ttname"><a href="namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9">floppy::string_cast</a></div><div class="ttdeci">auto string_cast(T const &amp;t) -&gt; std::string</div><div class="ttdoc">Casts type to string.</div><div class="ttdef"><b>Definition</b> <a href="#l00209">traits.h:209</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 <div class="ttc" id="astructfloppy_1_1traits_1_1detail_1_1formattable__base_html"><div class="ttname"><a href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html">floppy::traits::detail::formattable_base</a></div><div class="ttdoc">Interface, providing to_string method.</div><div class="ttdef"><b>Definition</b> <a href="#l00154">traits.h:155</a></div></div>
 <div class="ttc" id="astructfloppy_1_1traits_1_1detail_1_1formattable__base_html_a6feb227ebbbc81da11e39f13b155eca8"><div class="ttname"><a href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8">floppy::traits::detail::formattable_base::to_string</a></div><div class="ttdeci">virtual auto to_string() const -&gt; std::basic_string&lt; C &gt;=0</div><div class="ttdoc">Returns string representation of the object.</div></div>
 <div class="ttc" id="astructfloppy_1_1traits_1_1formattable_html"><div class="ttname"><a href="structfloppy_1_1traits_1_1formattable.html">floppy::traits::formattable</a></div><div class="ttdoc">Allows type to be converted to string and printed via standard streams or fmt.</div><div class="ttdef"><b>Definition</b> <a href="#l00181">traits.h:182</a></div></div>
@@ -305,7 +306,7 @@ $(function(){initNavTree('traits_8h_source.html',''); initResizable(); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><b>traits.h</b></li>
-    <li class="footer">Generated on Sun Jun 23 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Mon Jun 24 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

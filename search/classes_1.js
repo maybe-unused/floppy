@@ -7,5 +7,6 @@ var searchData=
   ['basic_5ftwo_5fdimensional_5ftype_4',['basic_two_dimensional_type',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html',1,'floppy::math::detail']]],
   ['basic_5ftwo_5fdimensional_5ftype_3c_20point2d_3c_20default_5funit_2c_20f32_20_3e_2c_20default_5funit_2c_20f32_20_3e_5',['basic_two_dimensional_type&lt; point2d&lt; default_unit, f32 &gt;, default_unit, f32 &gt;',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html',1,'floppy::math::detail']]],
   ['basic_5ftwo_5fdimensional_5ftype_3c_20size2d_3c_20default_5funit_2c_20f32_20_3e_2c_20default_5funit_2c_20f32_20_3e_6',['basic_two_dimensional_type&lt; size2d&lt; default_unit, f32 &gt;, default_unit, f32 &gt;',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html',1,'floppy::math::detail']]],
-  ['basic_5ftwo_5fdimensional_5ftype_3c_20vector2d_3c_20default_5funit_2c_20f32_20_3e_2c_20default_5funit_2c_20f32_20_3e_7',['basic_two_dimensional_type&lt; vector2d&lt; default_unit, f32 &gt;, default_unit, f32 &gt;',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html',1,'floppy::math::detail']]]
+  ['basic_5ftwo_5fdimensional_5ftype_3c_20vector2d_3c_20default_5funit_2c_20f32_20_3e_2c_20default_5funit_2c_20f32_20_3e_7',['basic_two_dimensional_type&lt; vector2d&lt; default_unit, f32 &gt;, default_unit, f32 &gt;',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html',1,'floppy::math::detail']]],
+  ['box_8',['box',['../classfloppy_1_1box.html',1,'floppy']]]
 ];

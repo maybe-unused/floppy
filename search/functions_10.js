@@ -6,7 +6,7 @@ var searchData=
   ['scale_3',['scale',['../structfloppy_1_1math_1_1scale.html#a7ddcfd29802500a5f938e4eabc92bbff',1,'floppy::math::scale::scale()'],['../structfloppy_1_1math_1_1scale.html#ac3c5ffea5c89ad4d5571354a0da55813',1,'floppy::math::scale::scale(T s)']]],
   ['scaled_5fto_4',['scaled_to',['../classfloppy_1_1math_1_1vector2d.html#a2547fd2c7215eebf9bef50a0b867b496',1,'floppy::math::vector2d']]],
   ['serialization_5ferror_5',['serialization_error',['../classfloppy_1_1serialization_1_1serialization__error.html#a38cc9815e09fa42f404f593fac1ae61e',1,'floppy::serialization::serialization_error::serialization_error(format f, std::string_view details)'],['../classfloppy_1_1serialization_1_1serialization__error.html#a1ea46b781b9a93b4142be5c5b76f6821',1,'floppy::serialization::serialization_error::serialization_error(format f)']]],
-  ['serialize_6',['serialize',['../group__foundation.html#ga9ea974aff95bad2cc99b711105638e97',1,'floppy::serialization']]],
+  ['serialize_6',['serialize',['../group__serialization.html#ga9ea974aff95bad2cc99b711105638e97',1,'floppy::serialization']]],
   ['signed_5f_7',['signed_',['../structfloppy_1_1math_1_1angle.html#a16f668eb5ce16e45fb3f943ec204284b',1,'floppy::math::angle']]],
   ['sin_8',['sin',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#ad3b3c9e313da58838b6b703a6b2a17cd',1,'floppy::math::detail::basic_numeric_newtype']]],
   ['sin_5fcos_9',['sin_cos',['../structfloppy_1_1math_1_1angle.html#a674fd6ea0d22759616dce5de1d2c9398',1,'floppy::math::angle']]],
@@ -19,5 +19,6 @@ var searchData=
   ['str_5fto_5frgba_16',['str_to_rgba',['../namespacefloppy_1_1gfx_1_1detail.html#a902fdbfb01ae3a62fbae64bdd83baa4a',1,'floppy::gfx::detail']]],
   ['string_5fcast_17',['string_cast',['../namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9',1,'floppy::string_cast(T const &amp;t) -&gt; std::string'],['../namespacefloppy.html#ac931da5028dd2811b5d0e93caf0f23d4',1,'floppy::string_cast(T const &amp;t) -&gt; std::string']]],
   ['strong_5fcompare_18',['strong_compare',['../group__calc.html#ga000c8ac590dc1840dda974d4529f08b4',1,'floppy::math']]],
-  ['swap_5fendian_19',['swap_endian',['../classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32',1,'floppy::platform']]]
+  ['swap_19',['swap',['../namespacestd.html#a18abfca03e51fdc5c93a74f5c81a8b07',1,'std']]],
+  ['swap_5fendian_20',['swap_endian',['../classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32',1,'floppy::platform']]]
 ];

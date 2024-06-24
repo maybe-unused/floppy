@@ -1,3 +1,25 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structfmt_1_1formatter_3_01T_01_4.html" title="Formatter for types which can be easily converted to string." alt="" coords="5,5,120,31"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,317,85,343"/>
+<area shape="rect" id="Node000001" href="$structfloppy_1_1ostream__formatter.html" title=" " alt="" coords="147,280,295,321"/>
+<area shape="poly" id="edge40_Node000000_Node000001" title=" " alt="" coords="99,318,146,310,147,315,100,323"/>
+<area shape="rect" id="Node000011" href="$structfloppy_1_1ostream__formatter.html" title="Formatter for types which support stream output." alt="" coords="133,345,309,371"/>
+<area shape="poly" id="edge50_Node000000_Node000011" title=" " alt="" coords="101,336,137,342,136,347,100,341"/>
+<area shape="rect" id="Node000002" href="$structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1compiler_01_4.html" title="Formatter for floppy::platform::compiler." alt="" coords="360,5,530,46"/>
+<area shape="poly" id="edge41_Node000001_Node000002" title=" " alt="" coords="231,265,248,218,275,163,310,106,355,57,374,44,377,49,359,61,315,110,279,166,253,220,236,266"/>
+<area shape="rect" id="Node000003" href="$structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1endianness_01_4.html" title="Formatter for floppy::platform::endianness." alt="" coords="357,71,532,111"/>
+<area shape="poly" id="edge42_Node000001_Node000003" title=" " alt="" coords="238,265,285,193,318,154,355,121,374,110,377,114,359,125,322,158,289,196,242,268"/>
+<area shape="rect" id="Node000004" href="$structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1operating__system_01_4.html" title="Formatter for floppy::platform::operating_system." alt="" coords="360,135,530,191"/>
+<area shape="poly" id="edge43_Node000001_Node000004" title=" " alt="" coords="258,268,304,234,356,201,377,189,380,194,358,205,307,239,262,272"/>
+<area shape="rect" id="Node000005" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html" title="Formatter for floppy::meta::project_meta" alt="" coords="366,215,523,255"/>
+<area shape="poly" id="edge44_Node000001_Node000005" title=" " alt="" coords="307,273,372,253,373,259,308,278"/>
+<area shape="rect" id="Node000006" href="$structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html" title="Formatter for floppy::meta::version" alt="" coords="376,280,514,321"/>
+<area shape="poly" id="edge45_Node000001_Node000006" title=" " alt="" coords="311,298,375,298,375,303,311,303"/>
+<area shape="rect" id="Node000007" href="$structfmt_1_1formatter_3_01floppy_1_1platform_01_4.html" title="Formatter for floppy::platform." alt="" coords="376,345,514,386"/>
+<area shape="poly" id="edge46_Node000001_Node000007" title=" " alt="" coords="308,323,376,343,374,348,306,328"/>
+<area shape="rect" id="Node000008" href="$structfmt_1_1formatter_3_01floppy_1_1platform_1_1arch_01_4.html" title="Formatter for floppy::platform::arch." alt="" coords="376,411,514,451"/>
+<area shape="poly" id="edge47_Node000001_Node000008" title=" " alt="" coords="306,327,311,330,327,347,335,364,344,380,359,396,378,408,376,412,355,400,339,383,331,366,322,350,307,334,303,331"/>
+<area shape="rect" id="Node000009" href="$structfmt_1_1formatter_3_01floppy_1_1platform_1_1vendor_01_4.html" title="Formatter for floppy::platform::vendor." alt="" coords="376,476,514,517"/>
+<area shape="poly" id="edge48_Node000001_Node000009" title=" " alt="" coords="309,328,311,331,324,347,331,364,336,397,340,429,347,445,359,461,377,475,374,479,355,465,342,448,335,431,330,398,326,366,320,350,307,334,305,332"/>
+<area shape="rect" id="Node000010" href="$structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html" title="Formatter for floppy::source_location" alt="" coords="376,541,514,582"/>
+<area shape="poly" id="edge49_Node000001_Node000010" title=" " alt="" coords="309,328,311,331,328,356,336,381,337,406,336,430,334,454,336,478,343,502,359,527,377,541,373,545,355,530,338,504,330,479,329,454,331,430,332,406,331,382,323,358,307,334,305,332"/>
 </map>

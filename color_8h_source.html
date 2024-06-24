@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.1</span>
+   &#160;<span id="projectnumber">1.2.2</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -264,7 +264,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 </div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
 <div class="foldopen" id="foldopen00146" data-start="{" data-end="}">
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a3c96c5486dea994c4177d57e42640faf">  146</a></span>      [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a3c96c5486dea994c4177d57e42640faf">to_rgb</a>() const -&gt; std::array&lt;<a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a>, 3&gt; {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a3c96c5486dea994c4177d57e42640faf">  146</a></span>      [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a3c96c5486dea994c4177d57e42640faf">to_rgb</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::array&lt;<a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a>, 3&gt; {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">return</span> std::array&lt;u8, 3&gt; {</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>          <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="keyword">&gt;</span>((this-&gt;l - detail::hsl::a(this-&gt;s, this-&gt;l)</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            * detail::max(-1.0F, detail::min(detail::hsl::k(0, this-&gt;h) - 3.0F,</div>
@@ -292,7 +292,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 </div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
 <div class="foldopen" id="foldopen00177" data-start="{" data-end="}">
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">  177</a></span>      [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; std::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">  177</a></span>      [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;({} {} {})&quot;</span>, this-&gt;h, this-&gt;s, this-&gt;l);</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      }</div>
 </div>
@@ -325,7 +325,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 </div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
 <div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsla__t.html#a303fca537ab302123cfbfda46a61260d">  213</a></span>      [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsla__t.html#a303fca537ab302123cfbfda46a61260d">to_rgba</a>() const -&gt; std::array&lt;<a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a>, 4&gt; {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsla__t.html#a303fca537ab302123cfbfda46a61260d">  213</a></span>      [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsla__t.html#a303fca537ab302123cfbfda46a61260d">to_rgba</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::array&lt;<a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a>, 4&gt; {</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keyword">auto</span> rgb_ = <a class="code hl_struct" href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html">color::hsl_t</a> { this-&gt;h, this-&gt;s, this-&gt;l }.<a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a3c96c5486dea994c4177d57e42640faf">to_rgb</a>();</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keywordflow">return</span> std::array&lt;u8, 4&gt; {</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>          <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="keyword">&gt;</span>(rgb_[0]),</div>
@@ -337,7 +337,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 </div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
 <div class="foldopen" id="foldopen00226" data-start="{" data-end="}">
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsla__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">  226</a></span>      [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsla__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; std::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsla__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">  226</a></span>      [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsla__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;({} {} {} {})&quot;</span>, this-&gt;h, this-&gt;s, this-&gt;l, this-&gt;a);</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      }</div>
 </div>
@@ -369,7 +369,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 </div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
 <div class="foldopen" id="foldopen00260" data-start="{" data-end="}">
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a3c96c5486dea994c4177d57e42640faf">  260</a></span>      [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a3c96c5486dea994c4177d57e42640faf">to_rgb</a>() const -&gt; std::array&lt;<a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a>, 3&gt; {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a3c96c5486dea994c4177d57e42640faf">  260</a></span>      [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a3c96c5486dea994c4177d57e42640faf">to_rgb</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::array&lt;<a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a>, 3&gt; {</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keyword">auto</span> rgb = std::array&lt;u8, 3&gt;();</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keyword">auto</span> tmp_rgb  = std::array&lt;f32, 3&gt;();</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keyword">auto</span> c = this-&gt;v * this-&gt;s ;</div>
@@ -453,7 +453,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 </div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
 <div class="foldopen" id="foldopen00347" data-start="{" data-end="}">
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">  347</a></span>      [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; std::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">  347</a></span>      [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;({} {} {})&quot;</span>, this-&gt;h, this-&gt;s, this-&gt;v);</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      }</div>
 </div>
@@ -486,7 +486,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 </div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
 <div class="foldopen" id="foldopen00383" data-start="{" data-end="}">
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a303fca537ab302123cfbfda46a61260d">  383</a></span>      [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a303fca537ab302123cfbfda46a61260d">to_rgba</a>() const -&gt; std::array&lt;<a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a>, 4&gt; {</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a303fca537ab302123cfbfda46a61260d">  383</a></span>      [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a303fca537ab302123cfbfda46a61260d">to_rgba</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::array&lt;<a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a>, 4&gt; {</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        <span class="keyword">auto</span> rgb_ = <a class="code hl_struct" href="structfloppy_1_1gfx_1_1color_1_1hsv__t.html">color::hsv_t</a> { this-&gt;h, this-&gt;s, this-&gt;v }.<a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsv__t.html#a3c96c5486dea994c4177d57e42640faf">to_rgb</a>();</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        <span class="keywordflow">return</span> std::array&lt;u8, 4&gt; {</div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>          <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="keyword">&gt;</span>(rgb_[0]),</div>
@@ -498,7 +498,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 </div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span> </div>
 <div class="foldopen" id="foldopen00396" data-start="{" data-end="}">
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">  396</a></span>      [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; std::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno"><a class="line" href="structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">  396</a></span>      [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>        <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;({} {} {} {})&quot;</span>, this-&gt;h, this-&gt;s, this-&gt;v, this-&gt;a);</div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>      }</div>
 </div>
@@ -666,7 +666,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 </div>
 <div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
 <div class="foldopen" id="foldopen00584" data-start="{" data-end="}">
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno"><a class="line" href="classfloppy_1_1gfx_1_1color.html#a2670941a8b4ee25c472c0a2b5450d6f2">  584</a></span>    [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1gfx_1_1color.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; std::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno"><a class="line" href="classfloppy_1_1gfx_1_1color.html#a2670941a8b4ee25c472c0a2b5450d6f2">  584</a></span>    [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1gfx_1_1color.html#a2670941a8b4ee25c472c0a2b5450d6f2">to_string</a>() const -&gt; <a class="code hl_namespace" href="namespacestd.html">std</a>::<span class="keywordtype">string</span><span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>      <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;#{:02X}{:02X}{:02X}{:02X}&quot;</span>,</div>
 <div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>        <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="keyword">&gt;</span>(r_ * mask&lt;f32&gt;),</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>        <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="keyword">&gt;</span>(g_ * mask&lt;f32&gt;),</div>
@@ -964,6 +964,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 <div class="ttc" id="anamespacefloppy_1_1types_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">floppy::types::u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8-bit unsigned integer</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00016">types.h:16</a></div></div>
 <div class="ttc" id="anamespacefloppy_1_1types_html_ad34d88453d37b65a09797bad37f2f527"><div class="ttname"><a href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">floppy::types::f32</a></div><div class="ttdeci">float f32</div><div class="ttdoc">Float with 32-bit precision.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00026">types.h:26</a></div></div>
 <div class="ttc" id="anamespacefloppy_1_1types_html_aec41e5f8e4b7aef2540e84268692fa84"><div class="ttname"><a href="namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84">floppy::types::i32</a></div><div class="ttdeci">int32_t i32</div><div class="ttdoc">32-bit signed integer</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00022">types.h:22</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 <div class="ttc" id="astructfloppy_1_1gfx_1_1color_1_1cmyk__t_html"><div class="ttname"><a href="structfloppy_1_1gfx_1_1color_1_1cmyk__t.html">floppy::gfx::color::cmyk_t</a></div><div class="ttdef"><b>Definition</b> <a href="#l00410">color.h:411</a></div></div>
 <div class="ttc" id="astructfloppy_1_1gfx_1_1color_1_1cmyka__t_html"><div class="ttname"><a href="structfloppy_1_1gfx_1_1color_1_1cmyka__t.html">floppy::gfx::color::cmyka_t</a></div><div class="ttdef"><b>Definition</b> <a href="#l00427">color.h:428</a></div></div>
 <div class="ttc" id="astructfloppy_1_1gfx_1_1color_1_1hsl__t_html"><div class="ttname"><a href="structfloppy_1_1gfx_1_1color_1_1hsl__t.html">floppy::gfx::color::hsl_t</a></div><div class="ttdoc">HSL color representation.</div><div class="ttdef"><b>Definition</b> <a href="#l00129">color.h:130</a></div></div>
@@ -994,7 +995,7 @@ $(function(){initNavTree('color_8h_source.html',''); initResizable(); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><a class="el" href="dir_1470994300740420538078a3ee627803.html">graphics</a></li><li class="navelem"><a class="el" href="color_8h.html">color.h</a></li>
-    <li class="footer">Generated on Sun Jun 23 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Mon Jun 24 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>
