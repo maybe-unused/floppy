@@ -899,7 +899,7 @@ namespace floppy::gfx
     /// \param col <b>QColor</b> class instance.
     /// \remarks This function is only available if <b>Qt Gui</b> is linked against the TU this header is compiled for.
     /// \sa https://doc.qt.io/qt-5/qcolor.html
-    [[nodiscard]] static constexpr auto from_qcolor(QColor const& col) -> color {
+    [[nodiscard]] static auto from_qcolor(QColor const& col) -> color {
       return from_floats(
         static_cast<f32>(col.redF()),
         static_cast<f32>(col.greenF()),

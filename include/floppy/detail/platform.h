@@ -106,6 +106,25 @@ namespace floppy
       unknown     ///< Unknown endianness - unable to determine. <i>Corresponds to C preprocessor macro <tt>FLOPPY_ENDIAN_UNKNOWN</tt></i>.
     };
 
+    /// \brief Vendors enumeration.
+    enum class [[maybe_unused]] vendor : u8
+    {
+      apple,        ///< Apple.
+      pc,           ///< PC.
+      scei,         ///< SCEI.
+      freescale,    ///< Freescale.
+      ibm,          ///< IBM.
+      imagination,  ///< Imagination.
+      mips,         ///< MIPS.
+      nvidia,       ///< NVIDIA.
+      csr,          ///< CSR.
+      amd,          ///< AMD.
+      mesa,         ///< Mesa.
+      suse,         ///< SUSE.
+      open_embedded,///< Open Embedded.
+      unknown       ///< Unknown vendor.
+    };
+
     /// \brief Holds current operating system.
     operating_system operating_system;
 
@@ -147,10 +166,38 @@ namespace floppy
     [[nodiscard]] static consteval auto current() noexcept -> platform
     {
       return platform {
-        platform::current_system(),   platform::current_architecture(),
-        platform::current_compiler(), platform::current_endianness(),
-        platform::current_standard(), platform::current_path_separator(),
+        platform::current_system(),
+        platform::current_architecture(),
+        platform::current_compiler(),
+        platform::current_endianness(),
+        platform::current_standard(),
+        platform::current_path_separator(),
       };
+    }
+
+    /// \brief Returns platform information as target triple string.
+    /// \details Target triple string is a format that is used by LLVM. For example:
+    /// \code
+    /// x86_64-unknown-linux-gnu
+    /// arm-apple-darwin
+    /// \endcode
+    /// \note This is intended to be used purely for debugging or logging purposes. Do not expect it to be
+    /// a stable identifier for a target triple. If you need a stable identifier, use LLVM corresponding
+    /// functions.
+    /// \sa https://www.flother.is/til/llvm-target-triple/
+    template <typename C>
+    [[nodiscard]] auto as_target_triple() const noexcept -> std::basic_string<C> {
+      return fmt::format(
+        "{}-{}-{}{}",
+        (std::basic_stringstream<C>() << this->architecture).str(),
+        (std::basic_stringstream<C>() << platform::guess_vendor(this->operating_system)).str(),
+        (std::basic_stringstream<C>() << this->operating_system).str(),
+        this->compiler == compiler::unknown
+            or (this->operating_system != operating_system::windows
+                and this->operating_system != operating_system::gnu_linux)
+          ? ""
+          : fmt::format("-{}", (std::basic_stringstream<C>() << this->compiler).str())
+      );
     }
 
     /// \brief Swaps endianness of the given value.
@@ -364,7 +411,144 @@ namespace floppy
       else
         return '/';
     }
+
+    /// \brief Tries to guess a vendor from operating system name.
+    /// \note This function is not 100% reliable.
+    [[nodiscard]] static constexpr auto guess_vendor(enum operating_system const os) noexcept -> enum vendor {
+      switch(os) {
+        case operating_system::windows: return vendor::pc;
+        case operating_system::darwin: return vendor::apple;
+        default: return vendor::unknown;
+      }
+    }
   };
+
+  /// \brief Stream adaptor for floppy::platform::operating_system
+  template <class E, class T>
+  auto operator<<(std::basic_ostream<E, T>& os, enum platform::operating_system const& d) -> std::basic_ostream<E, T>& {
+    switch(d) {
+      case platform::operating_system::windows: os << "windows"; break;
+      case platform::operating_system::gnu_linux: os << "linux"; break;
+      case platform::operating_system::darwin: os << "darwin"; break;
+      case platform::operating_system::android: os << "android"; break;
+      case platform::operating_system::cygwin: os << "cygwin"; break;
+      case platform::operating_system::freebsd: os << "freebsd"; break;
+      case platform::operating_system::dragonfly: os << "dragonfly"; break;
+      case platform::operating_system::netbsd: os << "netbsd"; break;
+      case platform::operating_system::openbsd: os << "openbsd"; break;
+      case platform::operating_system::unknown: os << "unknown"; break;
+    }
+    return os;
+  }
+
+  /// \brief Stream adaptor for floppy::platform::arch
+  template <class E, class T>
+  auto operator<<(std::basic_ostream<E, T>& os, enum platform::arch const& d) -> std::basic_ostream<E, T>& {
+    switch(d) {
+      case platform::arch::x86_32: os << "x86_32"; break;
+      case platform::arch::x86_64: os << "x86_64"; break;
+      case platform::arch::alpha: os << "alpha"; break;
+      case platform::arch::arm: os << "arm"; break;
+      case platform::arch::bfin: os << "bfin"; break;
+      case platform::arch::convex: os << "convex"; break;
+      case platform::arch::e2k: os << "e2k"; break;
+      case platform::arch::ia64: os << "ia64"; break;
+      case platform::arch::loongarch: os << "loongarch"; break;
+      case platform::arch::m68k: os << "m68k"; break;
+      case platform::arch::mips: os << "mips"; break;
+      case platform::arch::hppa: os << "hppa"; break;
+      case platform::arch::powerpc: os << "powerpc"; break;
+      case platform::arch::cuda: os << "cuda"; break;
+      case platform::arch::pyramid: os << "pyramid"; break;
+      case platform::arch::riscv: os << "riscv"; break;
+      case platform::arch::rs6000: os << "rs6000"; break;
+      case platform::arch::sparc: os << "sparc"; break;
+      case platform::arch::superh: os << "superh"; break;
+      case platform::arch::s370: os << "s370"; break;
+      case platform::arch::s390: os << "s390"; break;
+      case platform::arch::sysz: os << "sysz"; break;
+      case platform::arch::unknown: os << "unknown"; break;
+    }
+    return os;
+  }
+
+  /// \brief Stream adaptor for floppy::platform::compiler
+  template <class E, class T>
+  auto operator<<(std::basic_ostream<E, T>& os, enum platform::compiler const& d) -> std::basic_ostream<E, T>& {
+    switch(d) {
+      case platform::compiler::borland: os << "borland"; break;
+      case platform::compiler::clang: os << "clang"; break;
+      case platform::compiler::comeau: os << "comeau"; break;
+      case platform::compiler::compaq: os << "compaq"; break;
+      case platform::compiler::diab: os << "diab"; break;
+      case platform::compiler::digitalmars: os << "digitalmars"; break;
+      case platform::compiler::dignussystem: os << "dignussystem"; break;
+      case platform::compiler::edg: os << "edg"; break;
+      case platform::compiler::pathscale: os << "pathscale"; break;
+      case platform::compiler::gcc: os << "gnu"; break;
+      case platform::compiler::greenhills: os << "greenhills"; break;
+      case platform::compiler::hpa: os << "hpa"; break;
+      case platform::compiler::iar: os << "iar"; break;
+      case platform::compiler::ibm: os << "ibm"; break;
+      case platform::compiler::intel: os << "intel"; break;
+      case platform::compiler::kai: os << "kai"; break;
+      case platform::compiler::llvm: os << "llvm"; break;
+      case platform::compiler::metaware: os << "metaware"; break;
+      case platform::compiler::codewarrior: os << "codewarrior"; break;
+      case platform::compiler::microtec: os << "microtec"; break;
+      case platform::compiler::mpw: os << "mpw"; break;
+      case platform::compiler::nvcc: os << "nvcc"; break;
+      case platform::compiler::palm: os << "palm"; break;
+      case platform::compiler::portlandgroup: os << "portlandgroup"; break;
+      case platform::compiler::mipspro: os << "mipspro"; break;
+      case platform::compiler::oracle: os << "oracle"; break;
+      case platform::compiler::tendra: os << "tendra"; break;
+      case platform::compiler::msvc: os << "msvc"; break;
+      case platform::compiler::watcom: os << "watcom"; break;
+      case platform::compiler::unknown: os << "unknown"; break;
+    }
+    return os;
+  }
+
+  /// \brief Stream adaptor for floppy::platform::endianness
+  template <class E, class T>
+  auto operator<<(std::basic_ostream<E, T>& os, enum platform::endianness const& d) -> std::basic_ostream<E, T>& {
+    switch(d) {
+      case platform::endianness::big: os << "big"; break;
+      case platform::endianness::little: os << "little"; break;
+      case platform::endianness::unknown: os << "unknown"; break;
+    }
+    return os;
+  }
+
+  /// \brief Stream adaptor for floppy::platform::vendor
+  template <class E, class T>
+  auto operator<<(std::basic_ostream<E, T>& os, enum platform::vendor const& d) -> std::basic_ostream<E, T>& {
+    switch(d) {
+      case platform::vendor::apple: os << "apple"; break;
+      case platform::vendor::pc: os << "pc"; break;
+      case platform::vendor::scei: os << "scei"; break;
+      case platform::vendor::freescale: os << "freescale"; break;
+      case platform::vendor::ibm: os << "ibm"; break;
+      case platform::vendor::imagination: os << "imagination"; break;
+      case platform::vendor::mips: os << "mips"; break;
+      case platform::vendor::nvidia: os << "nvidia"; break;
+      case platform::vendor::csr: os << "csr"; break;
+      case platform::vendor::amd: os << "amd"; break;
+      case platform::vendor::mesa: os << "mesa"; break;
+      case platform::vendor::suse: os << "suse"; break;
+      case platform::vendor::open_embedded: os << "open_embedded"; break;
+      case platform::vendor::unknown: os << "unknown"; break;
+    }
+    return os;
+  }
+
+  /// \brief Stream adaptor for floppy::platform
+  template <class E, class T>
+  auto operator<<(std::basic_ostream<E, T>& os, platform const& d) -> std::basic_ostream<E, T>& {
+    os << d.as_target_triple<char>();
+    return os;
+  }
 
   /// \brief Constant-initialized variable, containing current platform information.
   /// \headerfile floppy/floppy.h

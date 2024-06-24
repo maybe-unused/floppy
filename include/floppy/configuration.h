@@ -10,6 +10,8 @@
 namespace floppy
 {
   /// \brief Determines the policy used for autosaving configuration files.
+  /// \headerfile floppy/configuration.h 
+  /// \ingroup foundation
   enum class saving_policy : u8
   {
     autosave,  ///< Saves configuration files automatically on closing.
@@ -17,6 +19,8 @@ namespace floppy
   };
 
   /// \brief Configuration file that can be loaded and saved.
+  /// \headerfile floppy/configuration.h 
+  /// \ingroup foundation
   /// \details This class is used to store configuration values in a configuration file in given format.
   /// Accepts any type that implements \ref floppy::serialization::serializable_and_deserializable with character type char
   /// and given format.

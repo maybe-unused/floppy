@@ -145,9 +145,23 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     /// \brief Project metadata object, available at compile-time.
     /// \headerfile floppy/floppy.h
     /// \ingroup helpers
+    /// \bug When building via Conan, this variable can be defined with default values instead of
+    /// actual version and target name. This will be fixed in the future releases.
     [[maybe_unused]] constexpr inline auto floppy_meta = project_meta(
-      version(CMAKE_PROJECT_VERSION_MAJOR, CMAKE_PROJECT_VERSION_MINOR, CMAKE_PROJECT_VERSION_PATCH),
-      std::string_view(stringify$(CMAKE_TARGET_NAME)),
+#if defined(FLOPPY_PROJECT_VERSION_MAJOR)
+      version(
+        FLOPPY_PROJECT_VERSION_MAJOR,
+        FLOPPY_PROJECT_VERSION_MINOR,
+        FLOPPY_PROJECT_VERSION_PATCH
+      ),
+#else
+      version(0, 0, 0),
+#endif
+#if defined(FLOPPY_TARGET_NAME)
+      std::string_view(stringify$(FLOPPY_TARGET_NAME)),
+#else
+      std::string_view("floppy"),
+#endif
       "io.github.whs31",
       "whs31"
     );
@@ -173,12 +187,14 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       return os;
     }
 
-    static_assert(floppy_meta.version().major() == CMAKE_PROJECT_VERSION_MAJOR, "major version isn't the same");
-    static_assert(floppy_meta.version().minor() == CMAKE_PROJECT_VERSION_MINOR, "minor version isn't the same");
-    static_assert(floppy_meta.version().patch() == CMAKE_PROJECT_VERSION_PATCH, "patch version isn't the same");
-    static_assert(floppy_meta.name() == std::string_view(stringify$(CMAKE_TARGET_NAME)), "project name isn't the same");
+#if defined(FLOPPY_TARGET_NAME)
+    static_assert(floppy_meta.version().major() == FLOPPY_PROJECT_VERSION_MAJOR, "major version isn't the same");
+    static_assert(floppy_meta.version().minor() == FLOPPY_PROJECT_VERSION_MINOR, "minor version isn't the same");
+    static_assert(floppy_meta.version().patch() == FLOPPY_PROJECT_VERSION_PATCH, "patch version isn't the same");
+    static_assert(floppy_meta.name() == std::string_view(stringify$(FLOPPY_TARGET_NAME)), "project name isn't the same");
     static_assert(floppy_meta.domain() == "io.github.whs31", "project domain isn't the same");
     static_assert(floppy_meta.organization() == "whs31", "project organization isn't the same");
+#endif
   } // namespace meta
 } // namespace floppy
 

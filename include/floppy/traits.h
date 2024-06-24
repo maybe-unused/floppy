@@ -10,6 +10,8 @@
 namespace floppy::traits
 {
   /// \brief Disallow copy operations for a type
+  /// \headerfile floppy/traits.h 
+  /// \ingroup traits
   /// \details Example declaration:
   /// \code {.cpp}
   /// class Test : public fl::traits::non_copyable<Test> {}; // copy is not allowed for Test
@@ -26,6 +28,8 @@ namespace floppy::traits
   };
 
   /// \brief Disallow move operations for a type
+  /// \headerfile floppy/traits.h 
+  /// \ingroup traits
   /// \details Example declaration:
   /// \code {.cpp}
   /// class Test : public fl::traits::non_movable<Test> {}; // move is not allowed for Test
@@ -42,6 +46,8 @@ namespace floppy::traits
   };
 
   /// \brief Disallow copy and move operations for a type
+  /// \headerfile floppy/traits.h 
+  /// \ingroup traits
   /// \details Example declaration:
   /// \code {.cpp}
   /// class Test : public fl::traits::pin<Test> {}; // copy and move is not allowed for Test
@@ -53,6 +59,8 @@ namespace floppy::traits
   struct pin : public non_copyable<T>, public non_movable<T> {};
 
   /// \brief Singleton pattern trait.
+  /// \headerfile floppy/traits.h 
+  /// \ingroup traits
   /// \details Allows to use <b>Singleton</b> pattern in custom types and classes.
   /// Example declaration:
   /// \code {.cpp}
@@ -108,6 +116,8 @@ namespace floppy::traits
   };
 
   /// \brief Pointer-to-implementation pattern trait.
+  /// \headerfile floppy/traits.h 
+  /// \ingroup traits
   /// \details Allows to use <b>Pimpl</b> pattern in custom types and classes.
   /// Example declaration:
   /// \code {.cpp}
@@ -161,6 +171,8 @@ namespace floppy::traits
   } // namespace detail
 
   /// \brief Allows type to be converted to string and printed via standard streams or <b>fmt</b>.
+  /// \headerfile floppy/traits.h 
+  /// \ingroup traits
   /// \tparam T Type to convert.
   /// \tparam C Character type.
   /// \see detail::formattable_base
@@ -239,3 +251,8 @@ struct [[maybe_unused]] fmt::formatter<T>
     return fmt::format_to(ctx.out(), "{}", c.to_string());
   }
 };
+
+/// \defgroup traits Traits
+/// \ingroup foundation
+/// \brief Traits for your classes and types.
+/// \todo Add detailed description.

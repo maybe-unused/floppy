@@ -12,7 +12,7 @@ except ImportError:
 
 class FloppyRecipe(ConanFile):
     name = "floppy"
-    version = "1.2.0"
+    version = "1.2.2"
     description = "Library that augments and extends C++ standard library"
     author = "whs31 <whs31@github.io>"
     topics = ("logging", "coreutils", "utility")
@@ -77,9 +77,13 @@ class FloppyRecipe(ConanFile):
         rmdir(self, os.path.join(self.package_folder, "share"))
 
     def package_info(self):
-        self.cpp_info.set_property("cmake_file_name", "leaf")
-        self.cpp_info.set_property("cmake_target_name", "leaf::leaf")
-        self.cpp_info.libs = ["leaf"]
+        self.cpp_info.set_property("cmake_file_name", "floppy")
+        self.cpp_info.set_property("cmake_target_name", "floppy::floppy")
+        self.cpp_info.libs = ["floppy"]
         self.cpp_info.requires = ["fmt::fmt", "spdlog::spdlog"]
         if self.settings.os == "Windows":
             self.cpp_info.requires.append("winapi20::winapi20")
+        if self.options.test:
+            print(colored("▶ testing enabled. following libraries will be added to deps: gtest, tomlplusplus", "green"))
+            self.cpp_info.requires.append("gtest::gtest")
+            self.cpp_info.requires.append("tomlplusplus::tomlplusplus")

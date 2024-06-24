@@ -9,10 +9,11 @@
 namespace floppy::filesystem
 {
   /// \brief Class for getting location of system directories for a specific application.
+  /// \headerfile floppy/directories.h 
+  /// \ingroup foundation
   /// \details ProjectDirs computes the location of cache, config or data directories for a specific application,
   /// which are derived from the standard directories and the name of the project/organization.
   ///
-  /// \details
   /// For example if user named <i>Alice</i>, the following code:
   /// \code {.cpp}
   /// using floppy::filesystem::application_dirs;
@@ -190,7 +191,7 @@ namespace floppy::filesystem
      /// but may not be important/portable enough to be synchronized across machines (unlike the config/preferences/data directories).<br>
      /// Values on different platforms:
      /// <ul>
-     /// <li><b>Linux</b>: <tt>$XDG_STATE_HOME/<tt>project_path</tt> or <tt>$HOME</tt>/.local/state/<tt>project_path</tt>, for example: <tt>/home/alice/.local/state/barapp</tt></li>
+     /// <li><b>Linux</b>: <tt>$XDG_STATE_HOME</tt>/<tt>project_path</tt> or <tt>$HOME</tt>/.local/state/<tt>project_path</tt>, for example: <tt>/home/alice/.local/state/barapp</tt></li>
      /// <li><b>MacOS</b>: -</li>
      /// <li><b>Windows</b>: -</li>
      /// </ul>
@@ -207,6 +208,7 @@ namespace floppy::filesystem
      [[nodiscard]] auto operator[](dir directory_type) const noexcept(false) -> std::filesystem::path;
 
     private:
+     // todo: format members
      std::filesystem::path m_project_path;
      std::filesystem::path m_cache_dir;
      std::filesystem::path m_config_dir;
