@@ -256,20 +256,20 @@ namespace floppy::gfx
       [[nodiscard]] constexpr auto to_rgb() const -> std::array<u8, 3> {
         auto rgb = std::array<u8, 3>();
         auto tmp_rgb  = std::array<f32, 3>();
-        auto c = this->v * this->s ;
-        auto x = c * (1.0F - std::abs(std::fmod(this->h / 60.0F, 2.0F) - 1.0F));
-        auto m = this->v - c;
-        if(this->h < 60.F)
+        const auto c = this->v * this->s ;
+        const auto x = c * (1.0F - std::abs(std::fmod(static_cast<f32>(this->h) / 60.0F, 2.0F) - 1.0F));
+        const auto m = this->v - c;
+        if(static_cast<f32>(this->h)< 60.F)
           tmp_rgb = {c, x ,0};
-        else if(this->h < 120.F)
+        else if(static_cast<f32>(this->h) < 120.F)
           tmp_rgb = {x, c, 0};
-        else if(this->h < 180.F)
+        else if(static_cast<f32>(this->h) < 180.F)
           tmp_rgb = {0, c, x};
-        else if(this->h < 240.F)
+        else if(static_cast<f32>(this->h) < 240.F)
           tmp_rgb = {0, x, c};
-        else if(this->h < 300.F)
+        else if(static_cast<f32>(this->h) < 300.F)
           tmp_rgb = {x, 0, c};
-        else if(this->h < 360.F)
+        else if(static_cast<f32>(this->h)< 360.F)
           tmp_rgb = {c, 0, x};
 
         rgb[0] = static_cast<u8>((tmp_rgb[0] + m) * 255.0F);
@@ -315,25 +315,21 @@ namespace floppy::gfx
         auto const c_max = detail::max(detail::max(fr, fg), fb);
         auto const c_min = detail::min(detail::min(fr, fg), fb);
         auto const delta = c_max - c_min;
-        if(delta > 0.F) {
-          if(c_max == fr)
-            self.h = 60.0F * (std::fmod(((fg - fb) / delta), 6.0F));
-          else if(c_max == fg)
-            self.h = 60.0F * (((fb - fr) / delta) + 2.0F);
-          else if(c_max == fb)
-            self.h = 60.0F * (((fr - fg) / delta) + 4.0F);
-          if(c_max > 0.F)
-            self.s = delta / c_max;
-          else
-            self.s = 0.F;
-          self.v = c_max;
-        } else {
+
+        if (delta <= 0.F)
           self.h = 0.F;
-          self.s = 0.F;
-          self.v = c_max;
+        else {
+          if(c_max == fr)
+            self.h = std::lround(60.0F * std::fmod((fg - fb) / delta, 6.0F));
+          else if(c_max == fg)
+            self.h = std::lround(60.0F * ((fb - fr) / delta + 2.F));
+          else if(c_max == fb)
+            self.h = std::lround(60.0 * ((fr - fg) / delta + 4.F));
         }
-        if(self.h < 0)
-          self.h += 360;
+
+        self.s = c_max == 0.F ? 0.F : delta / c_max;
+        self.v = c_max;
+
         return self;
       }
 
@@ -368,7 +364,7 @@ namespace floppy::gfx
       /// \param s Saturation
       /// \param v Value
       /// \param a Alpha
-      constexpr hsva_t(u16 h, f32 s, f32 v, f32 a)
+      constexpr hsva_t(const u16 h, const f32 s, const f32 v, const f32 a)
         : h(h)
         , s(s)
         , v(v)
@@ -377,7 +373,7 @@ namespace floppy::gfx
 
       /// \brief Converts the color to RGBA format.
       [[nodiscard]] constexpr auto to_rgba() const -> std::array<u8, 4> {
-        auto rgb_ = color::hsv_t { this->h, this->s, this->v }.to_rgb();
+        const auto rgb_ = color::hsv_t { this->h, this->s, this->v }.to_rgb();
         return std::array<u8, 4> {
           static_cast<u8>(rgb_[0]),
           static_cast<u8>(rgb_[1]),
