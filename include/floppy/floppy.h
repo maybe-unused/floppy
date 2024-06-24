@@ -6,6 +6,7 @@
 #include <floppy/detail/export.h>
 #include <floppy/detail/formatters.h>
 #include <floppy/detail/math.h>
+#include <floppy/detail/memory.h>
 #include <floppy/detail/platform.h>
 #include <floppy/detail/predefs.h>
 #include <floppy/detail/print_helpers.h>
