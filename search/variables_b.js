@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_0',['value',['../structfloppy_1_1math_1_1detail_1_1number__base.html#a4e623d59499a5eabb9d0df9833c81734',1,'floppy::math::detail::number_base::value'],['../structfloppy_1_1one__of.html#a5b4ee4ae6cba6bb75200ba7af1910873',1,'floppy::one_of::value']]]
+  ['s_0',['s',['../dc/df5/structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a558ad47f5209f9b96db099d276ef0308',1,'floppy::gfx::color::hsl_t::s'],['../d2/d0e/structfloppy_1_1gfx_1_1color_1_1hsla__t.html#a558ad47f5209f9b96db099d276ef0308',1,'floppy::gfx::color::hsla_t::s']]]
 ];

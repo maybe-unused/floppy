@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['s_0',['s',['../structfloppy_1_1gfx_1_1color_1_1hsl__t.html#a558ad47f5209f9b96db099d276ef0308',1,'floppy::gfx::color::hsl_t::s'],['../structfloppy_1_1gfx_1_1color_1_1hsla__t.html#a558ad47f5209f9b96db099d276ef0308',1,'floppy::gfx::color::hsla_t::s']]]
+  ['patch_5f_0',['patch_',['../d9/dbf/classfloppy_1_1meta_1_1version.html#ae8df70d635c6206c51a15411127a9f21',1,'floppy::meta::version']]],
+  ['path_5fseparator_1',['path_separator',['../d6/d7f/classfloppy_1_1platform.html#a59111e456e3bfba78f27d52c59121b2a',1,'floppy::platform']]]
 ];

@@ -1,75 +1,64 @@
 var annotated_dup =
 [
-    [ "floppy", "namespacefloppy.html", [
-      [ "filesystem", "namespacefloppy_1_1filesystem.html", [
-        [ "application_dirs", "classfloppy_1_1filesystem_1_1application__dirs.html", "classfloppy_1_1filesystem_1_1application__dirs" ]
+    [ "floppy", "d3/d05/namespacefloppy.html", [
+      [ "filesystem", "d3/d3a/namespacefloppy_1_1filesystem.html", [
+        [ "application_dirs", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html", "d6/d2d/classfloppy_1_1filesystem_1_1application__dirs" ]
       ] ],
-      [ "gfx", "namespacefloppy_1_1gfx.html", [
-        [ "color", "classfloppy_1_1gfx_1_1color.html", "classfloppy_1_1gfx_1_1color" ]
+      [ "gfx", "d3/d33/namespacefloppy_1_1gfx.html", [
+        [ "color", "de/da8/classfloppy_1_1gfx_1_1color.html", "de/da8/classfloppy_1_1gfx_1_1color" ]
       ] ],
-      [ "math", "namespacefloppy_1_1math.html", [
-        [ "detail", "namespacefloppy_1_1math_1_1detail.html", [
-          [ "advanced_numeric_type", "structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html", "structfloppy_1_1math_1_1detail_1_1advanced__numeric__type" ],
-          [ "basic_numeric_newtype", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype" ],
-          [ "basic_two_dimensional_type", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type" ],
-          [ "default_comparable", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", "structfloppy_1_1math_1_1detail_1_1default__comparable" ],
-          [ "number_base", "structfloppy_1_1math_1_1detail_1_1number__base.html", "structfloppy_1_1math_1_1detail_1_1number__base" ]
+      [ "math", "d5/ddf/namespacefloppy_1_1math.html", [
+        [ "detail", null, [
+          [ "number_base", "d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html", null ]
         ] ],
-        [ "numbers", "namespacefloppy_1_1math_1_1numbers.html", [
-          [ "pi", "structfloppy_1_1math_1_1numbers_1_1pi.html", "structfloppy_1_1math_1_1numbers_1_1pi" ]
+        [ "numbers", "d4/d94/namespacefloppy_1_1math_1_1numbers.html", [
+          [ "detail", null, [
+            [ "number_base", "d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html", null ]
+          ] ],
+          [ "pi", "d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html", null ]
         ] ],
-        [ "angle", "structfloppy_1_1math_1_1angle.html", "structfloppy_1_1math_1_1angle" ],
-        [ "default_unit", "namespacefloppy_1_1math.html#structfloppy_1_1math_1_1default__unit", null ],
-        [ "length", "classfloppy_1_1math_1_1length.html", "classfloppy_1_1math_1_1length" ],
-        [ "pi", "structfloppy_1_1math_1_1numbers_1_1pi.html", "structfloppy_1_1math_1_1numbers_1_1pi" ],
-        [ "point2d", "classfloppy_1_1math_1_1point2d.html", "classfloppy_1_1math_1_1point2d" ],
-        [ "scale", "structfloppy_1_1math_1_1scale.html", "structfloppy_1_1math_1_1scale" ],
-        [ "size2d", "classfloppy_1_1math_1_1size2d.html", "classfloppy_1_1math_1_1size2d" ],
-        [ "vector2d", "classfloppy_1_1math_1_1vector2d.html", "classfloppy_1_1math_1_1vector2d" ]
+        [ "angle", "de/d4d/structfloppy_1_1math_1_1angle.html", "de/d4d/structfloppy_1_1math_1_1angle" ],
+        [ "default_unit", "d5/ddf/namespacefloppy_1_1math.html#d4/d45/structfloppy_1_1math_1_1default__unit", null ],
+        [ "length", "dd/dd1/classfloppy_1_1math_1_1length.html", "dd/dd1/classfloppy_1_1math_1_1length" ],
+        [ "pi", "d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html", null ],
+        [ "point2d", "db/d35/classfloppy_1_1math_1_1point2d.html", "db/d35/classfloppy_1_1math_1_1point2d" ],
+        [ "scale", "db/db2/structfloppy_1_1math_1_1scale.html", "db/db2/structfloppy_1_1math_1_1scale" ],
+        [ "size2d", "d0/d22/classfloppy_1_1math_1_1size2d.html", "d0/d22/classfloppy_1_1math_1_1size2d" ],
+        [ "vector2d", "d4/d33/classfloppy_1_1math_1_1vector2d.html", "d4/d33/classfloppy_1_1math_1_1vector2d" ]
       ] ],
-      [ "meta", "namespacefloppy_1_1meta.html", [
-        [ "project_meta", "classfloppy_1_1meta_1_1project__meta.html", "classfloppy_1_1meta_1_1project__meta" ],
-        [ "version", "classfloppy_1_1meta_1_1version.html", "classfloppy_1_1meta_1_1version" ]
+      [ "meta", "db/d67/namespacefloppy_1_1meta.html", [
+        [ "project_meta", "d2/de7/classfloppy_1_1meta_1_1project__meta.html", "d2/de7/classfloppy_1_1meta_1_1project__meta" ],
+        [ "version", "d9/dbf/classfloppy_1_1meta_1_1version.html", "d9/dbf/classfloppy_1_1meta_1_1version" ]
       ] ],
-      [ "ranges", "namespacefloppy_1_1ranges.html", [
-        [ "detail", "namespacefloppy_1_1ranges_1_1detail.html", [
-          [ "to_helper", "namespacefloppy_1_1ranges_1_1detail.html#structfloppy_1_1ranges_1_1detail_1_1to__helper", null ]
+      [ "ranges", "df/dd6/namespacefloppy_1_1ranges.html", [
+        [ "detail", null, [
+          [ "to_helper", "d2/d49/structfloppy_1_1ranges_1_1detail_1_1to__helper.html", null ]
         ] ]
       ] ],
-      [ "serialization", "namespacefloppy_1_1serialization.html", [
-        [ "serialization_error", "classfloppy_1_1serialization_1_1serialization__error.html", "classfloppy_1_1serialization_1_1serialization__error" ]
+      [ "serialization", "d0/da9/namespacefloppy_1_1serialization.html", [
+        [ "serialization_error", "db/d2a/classfloppy_1_1serialization_1_1serialization__error.html", "db/d2a/classfloppy_1_1serialization_1_1serialization__error" ]
       ] ],
-      [ "traits", "namespacefloppy_1_1traits.html", [
-        [ "detail", "namespacefloppy_1_1traits_1_1detail.html", [
-          [ "formattable_base", "structfloppy_1_1traits_1_1detail_1_1formattable__base.html", "structfloppy_1_1traits_1_1detail_1_1formattable__base" ]
+      [ "traits", "d7/db2/namespacefloppy_1_1traits.html", [
+        [ "detail", "d9/de1/namespacefloppy_1_1traits_1_1detail.html", [
+          [ "formattable_base", "d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html", "d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base" ]
         ] ],
-        [ "formattable", "structfloppy_1_1traits_1_1formattable.html", "structfloppy_1_1traits_1_1formattable" ],
-        [ "non_copyable", "structfloppy_1_1traits_1_1non__copyable.html", null ],
-        [ "non_movable", "structfloppy_1_1traits_1_1non__movable.html", null ],
-        [ "pin", "structfloppy_1_1traits_1_1pin.html", null ],
-        [ "singleton", "structfloppy_1_1traits_1_1singleton.html", "structfloppy_1_1traits_1_1singleton" ]
+        [ "formattable", "db/d59/structfloppy_1_1traits_1_1formattable.html", "db/d59/structfloppy_1_1traits_1_1formattable" ],
+        [ "non_copyable", "d7/d83/structfloppy_1_1traits_1_1non__copyable.html", null ],
+        [ "non_movable", "d2/df5/structfloppy_1_1traits_1_1non__movable.html", null ],
+        [ "pin", "d7/dac/structfloppy_1_1traits_1_1pin.html", null ],
+        [ "singleton", "d9/d8a/structfloppy_1_1traits_1_1singleton.html", "d9/d8a/structfloppy_1_1traits_1_1singleton" ]
       ] ],
-      [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
-      [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
-      [ "one_of", "structfloppy_1_1one__of.html", "structfloppy_1_1one__of" ],
-      [ "ostream_formatter", "structfloppy_1_1ostream__formatter.html", "structfloppy_1_1ostream__formatter" ],
-      [ "plain_type", "group__helpers.html#structfloppy_1_1plain__type", "group__helpers_structfloppy_1_1plain__type" ],
-      [ "platform", "classfloppy_1_1platform.html", "classfloppy_1_1platform" ],
-      [ "source_location", "structfloppy_1_1source__location.html", "structfloppy_1_1source__location" ]
+      [ "configuration_file", "dc/d2c/classfloppy_1_1configuration__file.html", "dc/d2c/classfloppy_1_1configuration__file" ],
+      [ "one_of", "d8/dca/structfloppy_1_1one__of.html", null ],
+      [ "ostream_formatter", "d4/de5/structfloppy_1_1ostream__formatter.html", null ],
+      [ "plain_type", "d3/d05/namespacefloppy.html#d8/d14/structfloppy_1_1plain__type", null ],
+      [ "platform", "d6/d7f/classfloppy_1_1platform.html", "d6/d7f/classfloppy_1_1platform" ],
+      [ "source_location", "d5/d44/structfloppy_1_1source__location.html", "d5/d44/structfloppy_1_1source__location" ]
     ] ],
     [ "fmt", null, [
-      [ "formatter< enum floppy::platform::compiler >", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1compiler_01_4.html", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1compiler_01_4" ],
-      [ "formatter< enum floppy::platform::endianness >", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1endianness_01_4.html", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1endianness_01_4" ],
-      [ "formatter< enum floppy::platform::operating_system >", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1operating__system_01_4.html", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1operating__system_01_4" ],
-      [ "formatter< floppy::meta::project_meta >", "structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4" ],
-      [ "formatter< floppy::meta::version >", "structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4" ],
-      [ "formatter< floppy::platform >", "structfmt_1_1formatter_3_01floppy_1_1platform_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1platform_01_4" ],
-      [ "formatter< floppy::platform::arch >", "structfmt_1_1formatter_3_01floppy_1_1platform_1_1arch_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1platform_1_1arch_01_4" ],
-      [ "formatter< floppy::platform::vendor >", "structfmt_1_1formatter_3_01floppy_1_1platform_1_1vendor_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1platform_1_1vendor_01_4" ],
-      [ "formatter< floppy::source_location >", "structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html", "structfmt_1_1formatter_3_01floppy_1_1source__location_01_4" ],
-      [ "formatter< T >", "structfmt_1_1formatter_3_01T_01_4.html", "structfmt_1_1formatter_3_01T_01_4" ]
-    ] ],
-    [ "std", "namespacestd.html", [
-      [ "hash< floppy::box< T > >", "structstd_1_1hash_3_01floppy_1_1box_3_01T_01_4_01_4.html", null ]
+      [ "formatter< floppy::meta::project_meta >", "d2/d87/structfmt_1_1formatter_3_01floppy_1_1meta_1_1project__meta_01_4.html", null ],
+      [ "formatter< floppy::meta::version >", "d1/de8/structfmt_1_1formatter_3_01floppy_1_1meta_1_1version_01_4.html", null ],
+      [ "formatter< floppy::source_location >", "db/d71/structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html", null ],
+      [ "formatter< T >", "d6/dc7/structfmt_1_1formatter_3_01T_01_4.html", null ]
     ] ]
 ];
