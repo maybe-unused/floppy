@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.15)
 include_guard(GLOBAL)
 
 project(floppy
-  VERSION 1.2.1
+  VERSION 1.2.2
   DESCRIPTION "Library that augments and extends C++ standard library"
   HOMEPAGE_URL "whs31.github.io/floppy"
   LANGUAGES C CXX

@@ -9,7 +9,7 @@ namespace floppy::serialization
 {
   /// \brief Supported serialization formats.
   /// \headerfile floppy/serialization.h 
-  /// \ingroup foundation
+  /// \ingroup serialization
   enum class format : u8
   {
     json,         ///< JSON format (JavaScript Object Notation)
@@ -46,7 +46,7 @@ namespace floppy::serialization
 
   /// \brief Exception thrown during serialization or deserialization.
   /// \headerfile floppy/serialization.h 
-  /// \ingroup foundation
+  /// \ingroup serialization
   /// \see serialize, deserialize
   class serialization_error : public std::runtime_error
   {
@@ -74,7 +74,7 @@ namespace floppy::serialization
 
   /// \brief Template base function for serialization given type.
   /// \headerfile floppy/serialization.h 
-  /// \ingroup foundation
+  /// \ingroup serialization
   /// \tparam F Format type. Must be value of enum \ref floppy::serialization::format.
   /// \tparam T Type to serialize.
   /// \tparam C Character type. Defaults to char.
@@ -90,7 +90,7 @@ namespace floppy::serialization
 
   /// \brief Template base function for deserialization given type.
   /// \headerfile floppy/serialization.h 
-  /// \ingroup foundation
+  /// \ingroup serialization
   /// \tparam F Format type. Must be value of enum \ref floppy::serialization::format.
   /// \tparam T Type to deserialize.
   /// \tparam C Character type. Defaults to char.
@@ -106,7 +106,7 @@ namespace floppy::serialization
 
   /// \brief Concept describing serializable types.
   /// \headerfile floppy/serialization.h 
-  /// \ingroup foundation
+  /// \ingroup serialization
   /// \tparam F Format type. Must be value of enum \ref floppy::serialization::format.
   /// \tparam T Type to serialize.
   /// \tparam C Character type. Defaults to char.
@@ -119,7 +119,7 @@ namespace floppy::serialization
 
   /// \brief Concept describing deserializable types.
   /// \headerfile floppy/serialization.h 
-  /// \ingroup foundation
+  /// \ingroup serialization
   /// \tparam F Format type. Must be value of enum \ref floppy::serialization::format.
   /// \tparam T Type to deserialize.
   /// \tparam C Character type. Defaults to char.
@@ -132,7 +132,7 @@ namespace floppy::serialization
 
   /// \brief Concept describing serializable and deserializable types.
   /// \headerfile floppy/serialization.h 
-  /// \ingroup foundation
+  /// \ingroup serialization
   /// \tparam F Format type. Must be value of enum \ref floppy::serialization::format.
   /// \tparam T Type to serialize and deserialize.
   /// \tparam C Character type. Defaults to char.
@@ -141,3 +141,7 @@ namespace floppy::serialization
   template <auto F, typename T, typename C = char>
   concept serializable_and_deserializable = serializable<F, T, C> and deserializable<F, T, C>;
 } // namespace floppy::serialization
+
+/// \defgroup serialization Serialization
+/// \ingroup foundation
+/// \brief Serialization-related functions.

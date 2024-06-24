@@ -191,7 +191,7 @@ namespace floppy::filesystem
      /// but may not be important/portable enough to be synchronized across machines (unlike the config/preferences/data directories).<br>
      /// Values on different platforms:
      /// <ul>
-     /// <li><b>Linux</b>: <tt>$XDG_STATE_HOME/<tt>project_path</tt> or <tt>$HOME</tt>/.local/state/<tt>project_path</tt>, for example: <tt>/home/alice/.local/state/barapp</tt></li>
+     /// <li><b>Linux</b>: <tt>$XDG_STATE_HOME</tt>/<tt>project_path</tt> or <tt>$HOME</tt>/.local/state/<tt>project_path</tt>, for example: <tt>/home/alice/.local/state/barapp</tt></li>
      /// <li><b>MacOS</b>: -</li>
      /// <li><b>Windows</b>: -</li>
      /// </ul>
@@ -208,6 +208,7 @@ namespace floppy::filesystem
      [[nodiscard]] auto operator[](dir directory_type) const noexcept(false) -> std::filesystem::path;
 
     private:
+     // todo: format members
      std::filesystem::path m_project_path;
      std::filesystem::path m_cache_dir;
      std::filesystem::path m_config_dir;

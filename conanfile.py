@@ -12,7 +12,7 @@ except ImportError:
 
 class FloppyRecipe(ConanFile):
     name = "floppy"
-    version = "1.2.1"
+    version = "1.2.2"
     description = "Library that augments and extends C++ standard library"
     author = "whs31 <whs31@github.io>"
     topics = ("logging", "coreutils", "utility")
@@ -61,10 +61,6 @@ class FloppyRecipe(ConanFile):
         tc.cache_variables["NO_SUBMODULES"] = True       # always set to true if invoked via conan
         tc.cache_variables["BUILD_SHARED_LIBS"] = self.options.shared
         tc.cache_variables["TESTS"] = self.options.test
-        tc.preprocessor_definitions["FLOPPY_TARGET_NAME"] = self.name
-        tc.preprocessor_definitions["FLOPPY_PROJECT_VERSION_MAJOR"] = int(self.version.split(".")[0])
-        tc.preprocessor_definitions["FLOPPY_PROJECT_VERSION_MINOR"] = int(self.version.split(".")[1])
-        tc.preprocessor_definitions["FLOPPY_PROJECT_VERSION_PATCH"] = int(self.version.split(".")[2])
         tc.generate()
 
     def build(self):
@@ -87,3 +83,7 @@ class FloppyRecipe(ConanFile):
         self.cpp_info.requires = ["fmt::fmt", "spdlog::spdlog"]
         if self.settings.os == "Windows":
             self.cpp_info.requires.append("winapi20::winapi20")
+        if self.options.test:
+            print(colored("▶ testing enabled. following libraries will be added to deps: gtest, tomlplusplus", "green"))
+            self.cpp_info.requires.append("gtest::gtest")
+            self.cpp_info.requires.append("tomlplusplus::tomlplusplus")
