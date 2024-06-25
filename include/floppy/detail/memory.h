@@ -17,8 +17,10 @@ namespace floppy
   /// clearly bad practice).
   ///
   /// Reference implementation is taken from the <b>reflect-cpp</b> library.
+  /// API reference matches (almost) the Rust Language implementation.
   /// \tparam T Type of data stored in the box.
   /// \sa https://github.com/getml/reflect-cpp/blob/main/include/rfl/Box.hpp
+  /// \sa https://doc.rust-lang.org/std/boxed/struct.Box.html
   template <typename T>
   class box
   {
@@ -53,15 +55,35 @@ namespace floppy
     /// \param other <tt>box</tt> to move from.
     template <typename U>
     box(box<U>&& other) noexcept
-      : ptr_(std::forward<std::unique_ptr<U>>(other.ptr()))
+      : ptr_(std::forward<std::unique_ptr<U>>(other.as_unique_ptr()))
     {}
 
     /// \brief Default destructor.
     ~box() = default;
 
-    /// \brief Returns a pointer to the underlying object.
-    /// \returns A pointer to the underlying object.
-    [[nodiscard]] auto get() noexcept -> T* { return this->ptr_.get(); }
+    /// \brief Returns a mutable pointer to the underlying object.
+    /// \returns A mutable pointer to the underlying object.
+    [[nodiscard]] auto ptr_mut() noexcept -> T* { return this->ptr_.get(); }
+
+    /// \brief Returns an immutable pointer to the underlying object.
+    /// \returns An immutable pointer to the underlying object.
+    [[nodiscard]] auto ptr() const noexcept -> T const* { return this->ptr_.get(); }
+
+    /// \brief Returns a mutable reference to the underlying object.
+    /// \returns A mutable reference to the underlying object.
+    [[nodiscard]] auto ref_mut() noexcept -> T& { return *this->ptr_; }
+
+    /// \brief Returns an immutable reference to the underlying object.
+    /// \returns An immutable reference to the underlying object.
+    [[nodiscard]] auto ref() const noexcept -> T const& { return *this->ptr_; }
+
+    /// \brief Returns a mutable reference to the underlying object.
+    /// \returns A mutable reference to the underlying object.
+    [[nodiscard]] auto operator*() noexcept -> T& { return *this->ptr_; }
+
+    /// \brief Returns an immutable reference to the underlying object.
+    /// \returns An immutable reference to the underlying object.
+    [[nodiscard]] auto operator*() const noexcept -> T const& { return *this->ptr_; }
 
     /// \brief Copy assignment operator (deleted).
     auto operator=(box<T> const& other) -> box<T>& = delete;
@@ -78,17 +100,9 @@ namespace floppy
     auto operator=(box<U>&& other) noexcept
       -> box<T>&
     {
-      this->ptr_ = std::forward<std::unique_ptr<U>>(other.ptr());
+      this->ptr_ = std::forward<std::unique_ptr<U>>(other.as_unique_ptr());
       return *this;
     }
-
-    /// \brief Returns the underlying object.
-    /// \returns The underlying object.
-    [[nodiscard]] auto operator*() noexcept -> T& { return *this->ptr_; }
-
-    /// \brief Returns the underlying object.
-    /// \returns The underlying object.
-    [[nodiscard]] auto operator*() const noexcept -> T& { return *this->ptr_; }
 
     /// \brief Returns the underlying object.
     /// \returns The underlying object.
@@ -100,11 +114,50 @@ namespace floppy
 
     /// \brief Returns the underlying unique pointer.
     /// \returns The underlying unique pointer.
-    [[nodiscard]] auto ptr() noexcept -> std::unique_ptr<T>& { return this->ptr_; }
+    [[nodiscard]] auto as_unique_ptr() noexcept -> std::unique_ptr<T>& { return this->ptr_; }
 
     /// \brief Returns the constant underlying unique pointer.
     /// \returns The underlying unique pointer.
-    [[nodiscard]] auto ptr() const noexcept -> std::unique_ptr<T> const& { return this->ptr_; }
+    [[nodiscard]] auto as_unique_ptr() const noexcept -> std::unique_ptr<T> const& { return this->ptr_; }
+
+    /// \brief Consumes and leaks the box, returning a mutable pointer to the underlying object.
+    /// \details The caller is responsible for deleting the returned pointer.
+    /// Calling this function leaves the <tt>box</tt> in an invalid state.
+    /// \returns A mutable unmanaged pointer to the underlying object.
+    [[nodiscard]] auto leak() noexcept -> T* {
+      return this->ptr_.release();
+    }
+
+    /// \brief Attempt to downcast the box to a concrete type.
+    /// \tparam U Type to downcast to.
+    /// \returns An mutable reference to the casted underlying object if successful, <tt>none</tt> otherwise.
+    template <typename U>
+    [[nodiscard]] auto downcast() -> option<fl::types::ref<U>> {
+      try {
+        auto& r = dynamic_cast<U&>(this->ref_mut());
+        return option<fl::types::ref<U>>{r};
+      } catch(std::bad_cast const&) {
+        return none;
+      } catch(...) {
+        return none;
+      }
+    }
+
+    /// \brief Casts the underlying pointer to given type.
+    /// \tparam U Type to cast to.
+    /// \returns An mutable pointer to the casted underlying object.
+    template <typename U>
+    [[nodiscard]] auto as() -> U* {
+      return static_cast<U*>(this->ptr_mut());
+    }
+
+    /// \brief Casts the underlying pointer to constant given type.
+    /// \tparam U Type to cast to.
+    /// \returns An constant pointer to the casted underlying object.
+    template <typename U>
+    [[nodiscard]] auto as() -> U const* {
+      return static_cast<U*>(this->ptr());
+    }
 
     /// \brief Constructs new box with given arguments.
     /// \param Args Constructor arguments type.
@@ -146,7 +199,7 @@ namespace floppy
   /// \returns The result of the comparison.
   template <typename T1, typename T2>
   auto operator<=>(box<T1> const& a, box<T2> const& b) {
-    return a.ptr() <=> b.ptr();
+    return a.as_unique_ptr() <=> b.as_unique_ptr();
   }
 
   /// \brief Prints a <tt>box</tt> to an output stream.
@@ -167,14 +220,14 @@ namespace std
   struct [[maybe_unused]] hash<floppy::box<T>>
   {
     [[nodiscard]] auto operator()(floppy::box<T> const& b) const -> std::size_t {
-      return std::hash<std::unique_ptr<T>>()(b.ptr());
+      return std::hash<std::unique_ptr<T>>()(b.as_unique_ptr());
     }
   };
 
   /// \brief Swaps two boxes.
   template <typename T>
   [[maybe_unused]] auto swap(floppy::box<T>& a, floppy::box<T>& b) noexcept -> void {
-    return std::swap(a.ptr(), b.ptr());
+    return std::swap(a.as_unique_ptr(), b.as_unique_ptr());
   }
 } // namespace std
 
