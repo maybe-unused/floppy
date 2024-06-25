@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['floppy_0',['Floppy',['../index.html',1,'']]]
+  ['bug_20list_0',['Bug List',['../bug.html',1,'']]]
 ];

@@ -1,0 +1,11 @@
+<map id="angle.h" name="angle.h">
+<area shape="rect" id="Node000001" title="Newtype describing an angle." alt="" coords="5,5,74,31"/>
+<area shape="rect" id="Node000002" href="$euclid_8h.html" title="Small collection of classes and functions for geometric types with a focus on 2d graphics and layout." alt="" coords="15,226,85,252"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,47,27,79,27,121,32,163,49,225,43,227,27,164,21,122,22,79,29,46"/>
+<area shape="rect" id="Node000003" href="$vector2d_8h.html" title="A two&#45;dimensional vector tagged with a unit." alt="" coords="37,79,125,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,43,76,77,72,80,52,46"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="78,120,55,226,50,225,73,119"/>
+<area shape="rect" id="Node000004" href="$point2d_8h.html" title="A two&#45;dimensional point tagged with a unit." alt="" coords="87,153,168,178"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="99,116,122,151,117,154,95,119"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="105,191,65,228,61,224,101,187"/>
+</map>

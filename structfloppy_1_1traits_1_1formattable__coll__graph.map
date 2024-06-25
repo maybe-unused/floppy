@@ -1,0 +1,5 @@
+<map id="formattable&lt; T, C &gt;" name="formattable&lt; T, C &gt;">
+<area shape="rect" id="Node000001" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="17,79,163,105"/>
+<area shape="rect" id="Node000002" href="$structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,5,175,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,46,93,79,87,79,87,46"/>
+</map>

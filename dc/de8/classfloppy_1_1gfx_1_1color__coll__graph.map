@@ -1,7 +1,0 @@
-<map id="color" name="color">
-<area shape="rect" id="Node000001" title="Class representing a color." alt="" coords="64,168,116,193"/>
-<area shape="rect" id="Node000002" href="$db/d59/structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="20,79,160,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,135,93,167,87,167,87,135"/>
-<area shape="rect" id="Node000003" href="$d5/d4f/structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,5,175,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,46,93,79,87,79,87,46"/>
-</map>

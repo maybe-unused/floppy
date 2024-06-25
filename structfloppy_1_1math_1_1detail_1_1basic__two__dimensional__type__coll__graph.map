@@ -1,0 +1,13 @@
+<map id="basic_two_dimensional_type&lt; T, U, N &gt;" name="basic_two_dimensional_type&lt; T, U, N &gt;">
+<area shape="rect" id="Node000001" title="CRTP base class for two dimensional numerical types." alt="" coords="90,273,258,313"/>
+<area shape="rect" id="Node000002" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="30,169,193,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,207,165,271,160,274,124,210"/>
+<area shape="rect" id="Node000003" href="$structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,80,175,106"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="99,121,111,168,106,169,94,122"/>
+<area shape="rect" id="Node000004" href="$structfloppy_1_1traits_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="198,80,345,106"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="237,116,135,171,133,166,234,111"/>
+<area shape="rect" id="Node000005" href="$structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="187,5,356,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="274,46,274,80,269,80,269,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="217,169,256,195"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="224,210,188,274,183,271,220,207"/>
+</map>

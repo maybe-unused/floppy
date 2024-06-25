@@ -1,0 +1,7 @@
+<map id="non_copyable&lt; T &gt;" name="non_copyable&lt; T &gt;">
+<area shape="rect" id="Node000001" title="Disallow copy operations for a type." alt="" coords="5,5,151,31"/>
+<area shape="rect" id="Node000002" href="$structfloppy_1_1traits_1_1pin.html" title="Disallow copy and move operations for a type." alt="" coords="40,79,116,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,46,81,79,75,79,75,46"/>
+<area shape="rect" id="Node000003" href="$structfloppy_1_1traits_1_1singleton.html" title="Singleton pattern trait." alt="" coords="21,153,135,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,120,81,152,75,152,75,120"/>
+</map>

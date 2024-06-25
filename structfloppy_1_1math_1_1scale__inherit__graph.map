@@ -1,0 +1,11 @@
+<map id="scale&lt; S, D, T &gt;" name="scale&lt; S, D, T &gt;">
+<area shape="rect" id="Node000001" title="A scaling factor between two different units of measurement." alt="" coords="126,168,252,193"/>
+<area shape="rect" id="Node000002" href="$structfloppy_1_1traits_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="24,87,170,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,120,176,165,173,169,120,124"/>
+<area shape="rect" id="Node000003" href="$structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,5,175,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,46,98,86,93,86,90,47"/>
+<area shape="rect" id="Node000004" href="$structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html" title="CRTP base for numeric newtypes that can be compared." alt="" coords="198,79,374,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="252,132,205,169,202,165,249,127"/>
+<area shape="rect" id="Node000005" href="$structfloppy_1_1math_1_1detail_1_1default__comparable.html" title="CRTP base for trivially comparable numeric types." alt="" coords="199,5,381,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="291,47,290,79,284,78,286,46"/>
+</map>

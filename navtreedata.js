@@ -25,6 +25,8 @@
 var NAVTREE =
 [
   [ "Floppy", "index.html", [
+    [ "Bug List", "bug.html", null ],
+    [ "Todo List", "todo.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -58,12 +60,12 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"d4/d33/classfloppy_1_1math_1_1vector2d.html",
-"d6/d2d/classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a0fea6a13c52b4d4725368f24b045ca84",
-"d9/dbf/classfloppy_1_1meta_1_1version.html#aa1911ff476ff2833dfa5e9c58137dfcf",
-"dc/d2c/classfloppy_1_1configuration__file.html#a620c382a597e2b9291aa344ee8dadc38",
-"de/da8/classfloppy_1_1gfx_1_1color.html#a5feb77b3bd9a1f541baa278f3afad81d"
+"angle_8h.html",
+"classfloppy_1_1math_1_1point2d.html#accf93c9612e0dad4bca6c9b034a3a18a",
+"classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678caa189c633d9995e11bf8607170ec9a4b8",
+"group__platform.html#ga63d543570df23de33f0904bd69eac8ce",
+"structfloppy_1_1math_1_1angle.html#a9335066d12bc690f95c8479c853853d4",
+"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a8c255cde5e08d8421772e8d16c9fb965"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
