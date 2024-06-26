@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['vector2d_0',['vector2d',['../classfloppy_1_1math_1_1vector2d.html',1,'floppy::math']]],
-  ['version_1',['version',['../classfloppy_1_1meta_1_1version.html',1,'floppy::meta']]]
+  ['to_5fhelper_0',['to_helper',['../namespacefloppy_1_1ranges_1_1detail.html#structfloppy_1_1ranges_1_1detail_1_1to__helper',1,'floppy::ranges::detail']]]
 ];

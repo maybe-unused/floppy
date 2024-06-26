@@ -12,11 +12,12 @@ var searchData=
   ['info_9',['info',['../group__logging.html#gafdaa6e366f8bbdcd865a50a82c970d9a',1,'floppy::log']]],
   ['info_5fto_10',['info_to',['../group__logging.html#ga394535db66a7496bb7117bad991d8b14',1,'floppy::log']]],
   ['intel_11',['intel',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca4e5bbaeafc82ab7aa1385bea8ef5d30a',1,'floppy::platform']]],
-  ['inverse_12',['inverse',['../structfloppy_1_1math_1_1scale.html#a4a4d7a13714974f6f102bb1150fcd38c',1,'floppy::math::scale']]],
-  ['inverted_13',['inverted',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a7b8dc05d46255ca6b170f882faa8e19f',1,'floppy::math::detail::basic_two_dimensional_type']]],
-  ['is_5ffinite_14',['is_finite',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a7bd2d4c1b6c2133b6040f0aff4361e4c',1,'floppy::math::detail::basic_numeric_newtype::is_finite()'],['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a7bd2d4c1b6c2133b6040f0aff4361e4c',1,'floppy::math::detail::basic_two_dimensional_type::is_finite()']]],
-  ['is_5fidentity_15',['is_identity',['../structfloppy_1_1math_1_1scale.html#a23f3d5bc522b2f52513c9c4aa8cf875f',1,'floppy::math::scale']]],
-  ['is_5fnull_16',['is_null',['../group__calc.html#gafb084ce4a1ef170a2a6e5c000f43398a',1,'floppy::math']]],
-  ['is_5fpositive_17',['is_positive',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ab5097399b32a3fd913b59abf05c62033',1,'floppy::math::detail::basic_two_dimensional_type']]],
-  ['isize_18',['isize',['../namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d',1,'floppy::isize'],['../namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d',1,'floppy::types::isize']]]
+  ['invalid_5fsmart_5fpointer_5faccess_12',['invalid_smart_pointer_access',['../classfloppy_1_1invalid__smart__pointer__access.html',1,'floppy']]],
+  ['inverse_13',['inverse',['../structfloppy_1_1math_1_1scale.html#a4a4d7a13714974f6f102bb1150fcd38c',1,'floppy::math::scale']]],
+  ['inverted_14',['inverted',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a7b8dc05d46255ca6b170f882faa8e19f',1,'floppy::math::detail::basic_two_dimensional_type']]],
+  ['is_5ffinite_15',['is_finite',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a7bd2d4c1b6c2133b6040f0aff4361e4c',1,'floppy::math::detail::basic_numeric_newtype::is_finite()'],['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a7bd2d4c1b6c2133b6040f0aff4361e4c',1,'floppy::math::detail::basic_two_dimensional_type::is_finite()']]],
+  ['is_5fidentity_16',['is_identity',['../structfloppy_1_1math_1_1scale.html#a23f3d5bc522b2f52513c9c4aa8cf875f',1,'floppy::math::scale']]],
+  ['is_5fnull_17',['is_null',['../group__calc.html#gafb084ce4a1ef170a2a6e5c000f43398a',1,'floppy::math']]],
+  ['is_5fpositive_18',['is_positive',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ab5097399b32a3fd913b59abf05c62033',1,'floppy::math::detail::basic_two_dimensional_type']]],
+  ['isize_19',['isize',['../namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d',1,'floppy::isize'],['../namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d',1,'floppy::types::isize']]]
 ];

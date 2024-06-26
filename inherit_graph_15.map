@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" href="$structfloppy_1_1traits_1_1non__copyable.html" title="Disallow copy operations for a type." alt="" coords="5,5,151,31"/>
 <area shape="rect" id="Node000001" href="$structfloppy_1_1traits_1_1pin.html" title="Disallow copy and move operations for a type." alt="" coords="199,31,274,56"/>
-<area shape="poly" id="edge51_Node000000_Node000001" title=" " alt="" coords="167,30,199,35,198,40,166,35"/>
+<area shape="poly" id="edge53_Node000000_Node000001" title=" " alt="" coords="167,30,199,35,198,40,166,35"/>
 <area shape="rect" id="Node000002" href="$structfloppy_1_1traits_1_1singleton.html" title="Singleton pattern trait." alt="" coords="322,31,435,56"/>
-<area shape="poly" id="edge52_Node000001_Node000002" title=" " alt="" coords="290,41,321,41,321,46,290,46"/>
+<area shape="poly" id="edge54_Node000001_Node000002" title=" " alt="" coords="290,41,321,41,321,46,290,46"/>
 <area shape="rect" id="Node000003" href="$structfloppy_1_1traits_1_1non__movable.html" title="Disallow move operations for a type." alt="" coords="7,55,149,80"/>
-<area shape="poly" id="edge53_Node000003_Node000001" title=" " alt="" coords="164,52,198,47,198,52,165,57"/>
+<area shape="poly" id="edge55_Node000003_Node000001" title=" " alt="" coords="164,52,198,47,198,52,165,57"/>
 </map>

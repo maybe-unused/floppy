@@ -1,7 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,5,88,31"/>
-<area shape="rect" id="Node000001" title=" " alt="" coords="136,5,244,31"/>
-<area shape="poly" id="edge38_Node000000_Node000001" title=" " alt="" coords="103,16,135,16,135,21,103,21"/>
-<area shape="rect" id="Node000002" href="$classfloppy_1_1serialization_1_1serialization__error.html" title="Exception thrown during serialization or deserialization." alt="" coords="292,5,427,31"/>
-<area shape="poly" id="edge39_Node000001_Node000002" title=" " alt="" coords="260,16,291,16,291,21,260,21"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,42,88,68"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="145,16,235,41"/>
+<area shape="poly" id="edge38_Node000000_Node000001" title=" " alt="" coords="102,42,144,34,145,39,103,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="136,66,244,92"/>
+<area shape="poly" id="edge40_Node000000_Node000003" title=" " alt="" coords="104,62,136,67,135,73,103,67"/>
+<area shape="rect" id="Node000002" href="$classfloppy_1_1invalid__smart__pointer__access.html" title="Exception thrown when trying to access invalid smart pointer." alt="" coords="292,5,449,46"/>
+<area shape="poly" id="edge39_Node000001_Node000002" title=" " alt="" coords="250,25,291,24,291,29,250,30"/>
+<area shape="rect" id="Node000004" href="$classfloppy_1_1serialization_1_1serialization__error.html" title="Exception thrown during serialization or deserialization." alt="" coords="303,70,438,96"/>
+<area shape="poly" id="edge41_Node000003_Node000004" title=" " alt="" coords="260,78,303,79,303,84,260,83"/>
 </map>

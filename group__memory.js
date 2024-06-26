@@ -1,5 +1,6 @@
 var group__memory =
 [
+    [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],
     [ "box< T >", "classfloppy_1_1box.html", [
       [ "box", "classfloppy_1_1box.html#ad6f668a181a6af96075d815f6a52e940", null ],
       [ "box", "classfloppy_1_1box.html#a05f5e724c2e074ea70ddb3ed8abfb09e", null ],

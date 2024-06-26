@@ -51,6 +51,7 @@ var annotated_dup =
       ] ],
       [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
       [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
+      [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],
       [ "one_of", "structfloppy_1_1one__of.html", "structfloppy_1_1one__of" ],
       [ "ostream_formatter", "structfloppy_1_1ostream__formatter.html", "structfloppy_1_1ostream__formatter" ],
       [ "plain_type", "group__helpers.html#structfloppy_1_1plain__type", "group__helpers_structfloppy_1_1plain__type" ],
