@@ -8,5 +8,5 @@ var searchData=
   ['vector2d_2eh_5',['vector2d.h',['../vector2d_8h.html',1,'']]],
   ['vector2d_5ftype_6',['vector2d_type',['../classfloppy_1_1math_1_1point2d.html#a4a066883065112917154dd322404e94e',1,'floppy::math::point2d']]],
   ['vendor_7',['vendor',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2',1,'floppy::platform']]],
-  ['version_8',['version',['../classfloppy_1_1meta_1_1version.html',1,'version'],['../classfloppy_1_1meta_1_1version.html#aa1911ff476ff2833dfa5e9c58137dfcf',1,'floppy::meta::version::version(int major, int minor, int patch)'],['../classfloppy_1_1meta_1_1version.html#a55949c3df6c0bb364b5d082ec2055fe9',1,'floppy::meta::version::version(std::string_view version) noexcept'],['../classfloppy_1_1meta_1_1project__meta.html#a5cf0d42ee33556be9f93283b1091460d',1,'floppy::meta::project_meta::version()']]]
+  ['version_8',['version',['../classfloppy_1_1meta_1_1version.html',1,'version'],['../classfloppy_1_1meta_1_1version.html#aa1911ff476ff2833dfa5e9c58137dfcf',1,'floppy::meta::version::version(int major, int minor, int patch)'],['../classfloppy_1_1meta_1_1version.html#ae9dff8b425123cf3994b8d8720ee8def',1,'floppy::meta::version::version(std::string_view version)'],['../classfloppy_1_1meta_1_1project__meta.html#a5cf0d42ee33556be9f93283b1091460d',1,'floppy::meta::project_meta::version()']]]
 ];

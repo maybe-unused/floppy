@@ -11,5 +11,5 @@ var searchData=
   ['green_8',['green',['../classfloppy_1_1gfx_1_1color.html#a11aac2ec28465c66ca4b591a7d797eb9',1,'floppy::gfx::color']]],
   ['greenf_9',['greenf',['../classfloppy_1_1gfx_1_1color.html#a6da3b1a89ed504e0b31bbc2d63d0b66f',1,'floppy::gfx::color']]],
   ['greenhills_10',['greenhills',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cabafbd5257cc137fe7822159bb464b4e5',1,'floppy::platform']]],
-  ['gtest_5fprint_11',['GTEST_PRINT',['../group__helpers.html#ga5640226fcdabfd268993c1d43f34885e',1,'print_helpers.h']]]
+  ['gtest_5fprint_11',['GTEST_PRINT',['../group__helpers.html#ga4b9cbab4e2fb2be3d387279d9faec37e',1,'print_helpers.h']]]
 ];

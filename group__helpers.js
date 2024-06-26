@@ -2,7 +2,7 @@ var group__helpers =
 [
     [ "version", "classfloppy_1_1meta_1_1version.html", [
       [ "version", "classfloppy_1_1meta_1_1version.html#aa1911ff476ff2833dfa5e9c58137dfcf", null ],
-      [ "version", "classfloppy_1_1meta_1_1version.html#a55949c3df6c0bb364b5d082ec2055fe9", null ],
+      [ "version", "classfloppy_1_1meta_1_1version.html#ae9dff8b425123cf3994b8d8720ee8def", null ],
       [ "major", "classfloppy_1_1meta_1_1version.html#a25907698935989d16bdd51b423c5e55d", null ],
       [ "minor", "classfloppy_1_1meta_1_1version.html#ae2b369982055499f81987d9229ea2807", null ],
       [ "patch", "classfloppy_1_1meta_1_1version.html#ad725472fc49ffcca298eabda9bc131ef", null ],
@@ -26,13 +26,13 @@ var group__helpers =
       [ "operator bool", "structfloppy_1_1one__of.html#a7990d8e87d9eab2383f94c88c23a6488", null ],
       [ "value", "structfloppy_1_1one__of.html#a5b4ee4ae6cba6bb75200ba7af1910873", null ]
     ] ],
-    [ "GTEST_PRINT", "group__helpers.html#ga5640226fcdabfd268993c1d43f34885e", null ],
     [ "plain_type_t", "group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c", null ],
     [ "panic", "group__helpers.html#ga6a778dde2b29125b63c1101d454f3e76", null ],
     [ "narrow_cast", "group__helpers.html#ga0bbd17556e1675c4a05316d9f6743342", null ],
     [ "demangle", "group__helpers.html#ga67c6adb54f12fdf9e8ef12c2ef08c99a", null ],
     [ "type_name", "group__helpers.html#gaece47fc7440ee1c5e315c2b6c754f607", null ],
     [ "critical_message", "group__helpers.html#gabdcc54d31693c73090e4e02f31872ebd", null ],
+    [ "GTEST_PRINT", "group__helpers.html#ga4b9cbab4e2fb2be3d387279d9faec37e", null ],
     [ "floppy_meta", "group__helpers.html#gae535ff44e9e406ace8fd25175aea0dfc", null ],
     [ "one_of_v", "group__helpers.html#gabd4d29634ca4f4ef8b64beeca2631026", null ]
 ];

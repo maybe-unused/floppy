@@ -126,7 +126,6 @@ $(function(){initNavTree('group__helpers.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -146,11 +145,6 @@ Classes</h2></td></tr>
 <tr class="separator:structfloppy_1_1plain__type"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfloppy_1_1one__of.html">one_of&lt; U, T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga5640226fcdabfd268993c1d43f34885e" id="r_ga5640226fcdabfd268993c1d43f34885e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5640226fcdabfd268993c1d43f34885e">GTEST_PRINT</a>(...)&#160;&#160;&#160;<a class="el" href="namespacefloppy_1_1print__helpers_1_1detail.html#af16c3ca8e24d92348feaa691921e8ffc">::floppy::print_helpers::detail::google_test_print</a>(__VA_ARGS__)</td></tr>
-<tr class="separator:ga5640226fcdabfd268993c1d43f34885e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -173,6 +167,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gabdcc54d31693c73090e4e02f31872ebd" id="r_gabdcc54d31693c73090e4e02f31872ebd"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:gabdcc54d31693c73090e4e02f31872ebd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gabdcc54d31693c73090e4e02f31872ebd">critical_message</a> (std::string_view format, Args &amp;&amp;... args) -&gt; void</td></tr>
 <tr class="separator:gabdcc54d31693c73090e4e02f31872ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b9cbab4e2fb2be3d387279d9faec37e" id="r_ga4b9cbab4e2fb2be3d387279d9faec37e"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga4b9cbab4e2fb2be3d387279d9faec37e"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga4b9cbab4e2fb2be3d387279d9faec37e">GTEST_PRINT</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;... args) -&gt; void</td></tr>
+<tr class="separator:ga4b9cbab4e2fb2be3d387279d9faec37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -230,32 +227,6 @@ const_type std::add_const_t&lt;<a class="el" href="#ab74e5607b5fabad62e6c021d4fc
 <td class="fielddoc">
 The type without qualifiers, references and pointers with a const qualifier. </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga5640226fcdabfd268993c1d43f34885e" name="ga5640226fcdabfd268993c1d43f34885e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5640226fcdabfd268993c1d43f34885e">&#9670;&#160;</a></span>GTEST_PRINT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GTEST_PRINT</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="namespacefloppy_1_1print__helpers_1_1detail.html#af16c3ca8e24d92348feaa691921e8ffc">::floppy::print_helpers::detail::google_test_print</a>(__VA_ARGS__)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Prints a message to the console with google test style. </p>
-<p>Use this macro to print messages in google test style. Example: </p><div class="fragment"><div class="line">GTEST_PRINT(<span class="stringliteral">&quot;Hello, {}!&quot;</span>, <span class="stringliteral">&quot;World&quot;</span>);</div>
-<div class="line">GTEST_PRINT(<span class="stringliteral">&quot;Hello, {}!&quot;</span>, 42);</div>
-</div><!-- fragment --><p> Output: </p><div class="fragment"><div class="line">[          ] Hello, World!</div>
-<div class="line">[          ] Hello, 42!</div>
-</div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="print__helpers_8h_source.html#l00057">57</a> of file <a class="el" href="print__helpers_8h_source.html">print_helpers.h</a>.</p>
 
 </div>
 </div>
@@ -475,6 +446,47 @@ template&lt;typename... Args&gt; </div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="print__helpers_8h_source.html#l00029">29</a> of file <a class="el" href="print__helpers_8h_source.html">print_helpers.h</a>.</p>
+
+</div>
+</div>
+<a id="ga4b9cbab4e2fb2be3d387279d9faec37e" name="ga4b9cbab4e2fb2be3d387279d9faec37e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b9cbab4e2fb2be3d387279d9faec37e">&#9670;&#160;</a></span>GTEST_PRINT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto GTEST_PRINT </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>format</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints a message to the console with google test style. </p>
+<p>Use this function to print messages in google test style. Example: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4b9cbab4e2fb2be3d387279d9faec37e">GTEST_PRINT</a>(<span class="stringliteral">&quot;Hello, {}!&quot;</span>, <span class="stringliteral">&quot;World&quot;</span>);</div>
+<div class="line"><a class="code hl_function" href="#ga4b9cbab4e2fb2be3d387279d9faec37e">GTEST_PRINT</a>(<span class="stringliteral">&quot;Hello, {}!&quot;</span>, 42);</div>
+<div class="ttc" id="agroup__helpers_html_ga4b9cbab4e2fb2be3d387279d9faec37e"><div class="ttname"><a href="#ga4b9cbab4e2fb2be3d387279d9faec37e">GTEST_PRINT</a></div><div class="ttdeci">constexpr auto GTEST_PRINT(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Prints a message to the console with google test style.</div><div class="ttdef"><b>Definition</b> <a href="print__helpers_8h_source.html#l00059">print_helpers.h:59</a></div></div>
+</div><!-- fragment --><p> Output: </p><div class="fragment"><div class="line">[          ] Hello, World!</div>
+<div class="line">[          ] Hello, 42!</div>
+</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>Since version <b>1.2.2</b>, this macro is replaced with template constexpr function. This is the reason it has all upper case name. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="print__helpers_8h_source.html#l00059">59</a> of file <a class="el" href="print__helpers_8h_source.html">print_helpers.h</a>.</p>
 
 </div>
 </div>
