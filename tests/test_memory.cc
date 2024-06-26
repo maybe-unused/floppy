@@ -1,13 +1,14 @@
 #include <gtest/gtest.h>
 #include <floppy/floppy.h>
 
+// NOLINTBEGIN
 struct A
 {
   A() = default;
   A(int a_, int b_) : a(a_), b(b_) {}
   int a = 5;
   int b = 42;
-  virtual auto name() const -> std::string { return "A"; }
+  [[nodiscard]] virtual auto name() const -> std::string { return "A"; }
 };
 
 struct B : public A
@@ -16,8 +17,9 @@ struct B : public A
   B(int a_, int b_, int c_, int d_) : A(a_, b_), c(c_), d(d_) {}
   int c = 3;
   int d = 7;
-  virtual auto name() const -> std::string { return "B"; }
+  [[nodiscard]] virtual auto name() const -> std::string override { return "B"; }
 };
+// NOLINTEND
 
 TEST(Memory, ConstructorVariadic)
 {
@@ -88,7 +90,7 @@ TEST(Memory, BoxLeak)
   auto* pointer = b.leak();
   EXPECT_THROW(std::ignore = b.ref(), floppy::invalid_smart_pointer_access);
   EXPECT_EQ(pointer->name(), "B");
-  delete pointer;
+  delete pointer; // NOLINT(*-owning-memory)
 }
 
 TEST(Memory, BoxAs)

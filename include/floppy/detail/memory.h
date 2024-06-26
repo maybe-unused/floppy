@@ -36,7 +36,7 @@ namespace floppy
   {
    public:
     /// \brief Default constructor.
-    box() : ptr_(std::make_unique<T>()) {}
+    box() : ptr_(std::make_unique<T>()) {} // NOLINT(*-use-equals-default)
 
     /// \brief Copy constructor (deleted).
     box(box const& other) = delete;
@@ -49,7 +49,7 @@ namespace floppy
     /// \tparam U Underlying type of <tt>other</tt>.
     /// \param other <tt>box</tt> to move from.
     template <typename U>
-    box(box<U>&& other) noexcept
+    box(box<U>&& other) noexcept // NOLINT(*-explicit-constructor, *-rvalue-reference-param-not-moved)
       : ptr_(std::forward<std::unique_ptr<U>>(other.as_unique_ptr()))
     {}
 
@@ -60,7 +60,7 @@ namespace floppy
     /// \returns A mutable pointer to the underlying object.
     [[nodiscard]] auto ptr_mut() -> T* {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       return this->ptr_.get();
     }
 
@@ -68,7 +68,7 @@ namespace floppy
     /// \returns An immutable pointer to the underlying object.
     [[nodiscard]] auto ptr() const -> T const* {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       return this->ptr_.get();
     }
 
@@ -76,7 +76,7 @@ namespace floppy
     /// \returns A mutable reference to the underlying object.
     [[nodiscard]] auto ref_mut() -> T& {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       return *this->ptr_;
     }
 
@@ -84,7 +84,7 @@ namespace floppy
     /// \returns An immutable reference to the underlying object.
     [[nodiscard]] auto ref() const -> T const& {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       return *this->ptr_;
     }
 
@@ -92,7 +92,7 @@ namespace floppy
     /// \returns A mutable reference to the underlying object.
     [[nodiscard]] auto operator*() -> T& {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       return *this->ptr_;
     }
 
@@ -100,7 +100,7 @@ namespace floppy
     /// \returns An immutable reference to the underlying object.
     [[nodiscard]] auto operator*() const -> T const& {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       return *this->ptr_;
     }
 
@@ -116,8 +116,7 @@ namespace floppy
     /// \param other <tt>box</tt> to move from.
     /// \returns A reference to <tt>*this</tt>.
     template <typename U>
-    auto operator=(box<U>&& other) noexcept
-      -> box<T>&
+    auto operator=(box<U>&& other) noexcept -> box<T>& // NOLINT(*-rvalue-reference-param-not-moved)
     {
       this->ptr_ = std::forward<std::unique_ptr<U>>(other.as_unique_ptr());
       return *this;
@@ -127,7 +126,7 @@ namespace floppy
     /// \returns The underlying object.
     [[nodiscard]] auto operator->() -> T* {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       return this->ptr_.get();
     }
 
@@ -135,7 +134,7 @@ namespace floppy
     /// \returns The underlying object.
     [[nodiscard]] auto operator->() const -> T* {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       return this->ptr_.get();
     }
 
@@ -161,7 +160,7 @@ namespace floppy
     template <typename U>
     [[nodiscard]] auto downcast() -> option<fl::types::ref<U>> {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       try {
         auto& r = dynamic_cast<U&>(this->ref_mut());
         return option<fl::types::ref<U>>{r};
@@ -178,7 +177,7 @@ namespace floppy
     template <typename U>
     [[nodiscard]] auto as() -> U* {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       return static_cast<U*>(this->ptr_mut());
     }
 
@@ -188,7 +187,7 @@ namespace floppy
     template <typename U>
     [[nodiscard]] auto as() const -> U const* {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+        throw invalid_smart_pointer_access("box::operator->: use after consume");
       return static_cast<U*>(this->ptr());
     }
 
