@@ -8,6 +8,16 @@
 
 namespace floppy
 {
+  /// \brief Exception thrown when trying to access invalid smart pointer.
+  /// \details Can be thrown when accessing a <tt>box</tt> that has been moved from or is leaked/consumed.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup memory
+  class invalid_smart_pointer_access : public std::logic_error
+  {
+    using std::logic_error::logic_error;
+    using std::logic_error::what;
+  };
+
   /// \brief Box memory class.
   /// \headerfile floppy/floppy.h
   /// \ingroup memory
@@ -63,27 +73,51 @@ namespace floppy
 
     /// \brief Returns a mutable pointer to the underlying object.
     /// \returns A mutable pointer to the underlying object.
-    [[nodiscard]] auto ptr_mut() noexcept -> T* { return this->ptr_.get(); }
+    [[nodiscard]] auto ptr_mut() noexcept -> T* {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+      return this->ptr_.get();
+    }
 
     /// \brief Returns an immutable pointer to the underlying object.
     /// \returns An immutable pointer to the underlying object.
-    [[nodiscard]] auto ptr() const noexcept -> T const* { return this->ptr_.get(); }
+    [[nodiscard]] auto ptr() const noexcept -> T const* {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+      return this->ptr_.get();
+    }
 
     /// \brief Returns a mutable reference to the underlying object.
     /// \returns A mutable reference to the underlying object.
-    [[nodiscard]] auto ref_mut() noexcept -> T& { return *this->ptr_; }
+    [[nodiscard]] auto ref_mut() noexcept -> T& {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+      return *this->ptr_;
+    }
 
     /// \brief Returns an immutable reference to the underlying object.
     /// \returns An immutable reference to the underlying object.
-    [[nodiscard]] auto ref() const noexcept -> T const& { return *this->ptr_; }
+    [[nodiscard]] auto ref() const noexcept -> T const& {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+      return *this->ptr_;
+    }
 
     /// \brief Returns a mutable reference to the underlying object.
     /// \returns A mutable reference to the underlying object.
-    [[nodiscard]] auto operator*() noexcept -> T& { return *this->ptr_; }
+    [[nodiscard]] auto operator*() noexcept -> T& {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+      return *this->ptr_;
+    }
 
     /// \brief Returns an immutable reference to the underlying object.
     /// \returns An immutable reference to the underlying object.
-    [[nodiscard]] auto operator*() const noexcept -> T const& { return *this->ptr_; }
+    [[nodiscard]] auto operator*() const noexcept -> T const& {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+      return *this->ptr_;
+    }
 
     /// \brief Copy assignment operator (deleted).
     auto operator=(box<T> const& other) -> box<T>& = delete;
@@ -106,11 +140,19 @@ namespace floppy
 
     /// \brief Returns the underlying object.
     /// \returns The underlying object.
-    [[nodiscard]] auto operator->() noexcept -> T* { return this->ptr_.get(); }
+    [[nodiscard]] auto operator->() noexcept -> T* {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+      return this->ptr_.get();
+    }
 
     /// \brief Returns the underlying object.
     /// \returns The underlying object.
-    [[nodiscard]] auto operator->() const noexcept -> T* { return this->ptr_.get(); }
+    [[nodiscard]] auto operator->() const noexcept -> T* {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
+      return this->ptr_.get();
+    }
 
     /// \brief Returns the underlying unique pointer.
     /// \returns The underlying unique pointer.
@@ -133,6 +175,8 @@ namespace floppy
     /// \returns An mutable reference to the casted underlying object if successful, <tt>none</tt> otherwise.
     template <typename U>
     [[nodiscard]] auto downcast() -> option<fl::types::ref<U>> {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
       try {
         auto& r = dynamic_cast<U&>(this->ref_mut());
         return option<fl::types::ref<U>>{r};
@@ -148,6 +192,8 @@ namespace floppy
     /// \returns An mutable pointer to the casted underlying object.
     template <typename U>
     [[nodiscard]] auto as() -> U* {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
       return static_cast<U*>(this->ptr_mut());
     }
 
@@ -156,6 +202,8 @@ namespace floppy
     /// \returns An constant pointer to the casted underlying object.
     template <typename U>
     [[nodiscard]] auto as() -> U const* {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::operator->: use after consumation");
       return static_cast<U*>(this->ptr());
     }
 
