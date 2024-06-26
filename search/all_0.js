@@ -22,7 +22,7 @@ var searchData=
   ['architecture_19',['architecture',['../classfloppy_1_1platform.html#a492279dec1a2fb493bfd9fb82076f90d',1,'floppy::platform']]],
   ['area_20',['area',['../classfloppy_1_1math_1_1size2d.html#a09936b23308281dcaf4fbe12397a025e',1,'floppy::math::size2d']]],
   ['arm_21',['arm',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6af926b3e222d7afee57071b2256839701',1,'floppy::platform']]],
-  ['as_22',['as',['../classfloppy_1_1box.html#a7b9b117b1ec433e9ecf1bcc16c83c8f2',1,'floppy::box::as() -&gt; U *'],['../classfloppy_1_1box.html#a361dec2a5fb3018bd5dc23520211cea0',1,'floppy::box::as() -&gt; U const *'],['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a7a5362991b043f043a2fd952fa9f3917',1,'floppy::math::detail::basic_numeric_newtype::as()']]],
+  ['as_22',['as',['../classfloppy_1_1box.html#a7b9b117b1ec433e9ecf1bcc16c83c8f2',1,'floppy::box::as() -&gt; U *'],['../classfloppy_1_1box.html#ac1bfa26d39683a6d49e66e5a606f1145',1,'floppy::box::as() const -&gt; U const *'],['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a7a5362991b043f043a2fd952fa9f3917',1,'floppy::math::detail::basic_numeric_newtype::as()']]],
   ['as_5fdegrees_23',['as_degrees',['../structfloppy_1_1math_1_1numbers_1_1pi.html#afe30ff732947e3c3436abf299ecc9c93',1,'floppy::math::numbers::pi']]],
   ['as_5ff32_24',['as_f32',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a62f3e16f951b2635fd2e04be55f6d914',1,'floppy::math::detail::basic_numeric_newtype']]],
   ['as_5ff64_25',['as_f64',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#af00bbd3efca6624840346bba50ada2a3',1,'floppy::math::detail::basic_numeric_newtype']]],
