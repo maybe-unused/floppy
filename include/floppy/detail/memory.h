@@ -58,46 +58,70 @@ namespace floppy
 
     /// \brief Returns a mutable pointer to the underlying object.
     /// \returns A mutable pointer to the underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    [[nodiscard]] auto get() -> T* {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::get: use after consume");
+      return this->ptr_.get();
+    }
+
+    /// \brief Returns a mutable pointer to the underlying object.
+    /// \returns A mutable pointer to the underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    [[nodiscard]] auto get() const -> T* {
+      if(not this->ptr_)
+        throw invalid_smart_pointer_access("box::get: use after consume");
+      return this->ptr_.get();
+    }
+
+    /// \brief Returns a mutable pointer to the underlying object.
+    /// \returns A mutable pointer to the underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     [[nodiscard]] auto ptr_mut() -> T* {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
+        throw invalid_smart_pointer_access("box::ptr_mut: use after consume");
       return this->ptr_.get();
     }
 
     /// \brief Returns an immutable pointer to the underlying object.
     /// \returns An immutable pointer to the underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     [[nodiscard]] auto ptr() const -> T const* {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
+        throw invalid_smart_pointer_access("box::ptr: use after consume");
       return this->ptr_.get();
     }
 
     /// \brief Returns a mutable reference to the underlying object.
     /// \returns A mutable reference to the underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     [[nodiscard]] auto ref_mut() -> T& {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
+        throw invalid_smart_pointer_access("box::ref_mut: use after consume");
       return *this->ptr_;
     }
 
     /// \brief Returns an immutable reference to the underlying object.
     /// \returns An immutable reference to the underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     [[nodiscard]] auto ref() const -> T const& {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
+        throw invalid_smart_pointer_access("box::ref: use after consume");
       return *this->ptr_;
     }
 
     /// \brief Returns a mutable reference to the underlying object.
     /// \returns A mutable reference to the underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     [[nodiscard]] auto operator*() -> T& {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
+        throw invalid_smart_pointer_access("box::operator*: use after consume");
       return *this->ptr_;
     }
 
     /// \brief Returns an immutable reference to the underlying object.
     /// \returns An immutable reference to the underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     [[nodiscard]] auto operator*() const -> T const& {
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::operator->: use after consume");
@@ -124,6 +148,7 @@ namespace floppy
 
     /// \brief Returns the underlying object.
     /// \returns The underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     [[nodiscard]] auto operator->() -> T* {
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::operator->: use after consume");
@@ -132,6 +157,7 @@ namespace floppy
 
     /// \brief Returns the underlying object.
     /// \returns The underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     [[nodiscard]] auto operator->() const -> T* {
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::operator->: use after consume");
@@ -157,10 +183,11 @@ namespace floppy
     /// \brief Attempt to downcast the box to a concrete type.
     /// \tparam U Type to downcast to.
     /// \returns An mutable reference to the casted underlying object if successful, <tt>none</tt> otherwise.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     template <typename U>
     [[nodiscard]] auto downcast() -> option<fl::types::ref<U>> {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
+        throw invalid_smart_pointer_access("box::downcast: use after consume");
       try {
         auto& r = dynamic_cast<U&>(this->ref_mut());
         return option<fl::types::ref<U>>{r};
@@ -174,20 +201,22 @@ namespace floppy
     /// \brief Casts the underlying pointer to given type.
     /// \tparam U Type to cast to.
     /// \returns An mutable pointer to the casted underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     template <typename U>
     [[nodiscard]] auto as() -> U* {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
+        throw invalid_smart_pointer_access("box::as: use after consume");
       return static_cast<U*>(this->ptr_mut());
     }
 
     /// \brief Casts the underlying pointer to constant given type.
     /// \tparam U Type to cast to.
     /// \returns An constant pointer to the casted underlying object.
+    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
     template <typename U>
     [[nodiscard]] auto as() const -> U const* {
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
+        throw invalid_smart_pointer_access("box::as: use after consume");
       return static_cast<U*>(this->ptr());
     }
 
