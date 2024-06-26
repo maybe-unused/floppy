@@ -7,6 +7,8 @@ var group__memory =
       [ "box", "classfloppy_1_1box.html#aa45ba7b388b279185f68d20b6dfbb0b8", null ],
       [ "box", "classfloppy_1_1box.html#ad8cc9017530df9d616762f4e8ba1139b", null ],
       [ "~box", "classfloppy_1_1box.html#a7ac02901885f54462b91c3d36f2e24d4", null ],
+      [ "get", "classfloppy_1_1box.html#a93ceb871f3598d732d60ccbbdf4c460f", null ],
+      [ "get", "classfloppy_1_1box.html#a59b3d122b068eb3327b82a51a2a810db", null ],
       [ "ptr_mut", "classfloppy_1_1box.html#a6b5fe10ebe4c41e8879f1622581d258b", null ],
       [ "ptr", "classfloppy_1_1box.html#a6468c65e52fd3919a4325f4995ce0860", null ],
       [ "ref_mut", "classfloppy_1_1box.html#a8956c8358607b6ceb130d552a02a6b92", null ],
