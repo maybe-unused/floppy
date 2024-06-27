@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Formatter for types which support stream output." alt="" coords="225,288,401,313"/>
 <area shape="rect" id="Node000003" href="$structfloppy_1_1ostream__formatter.html" title=" " alt="" coords="507,280,656,321"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="417,298,507,298,507,303,417,303"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,280,176,321"/>
+<area shape="rect" id="Node000002" href="$structfmt_1_1formatter.html" title="Formatter for types which can be easily converted to string." alt="" coords="5,280,176,321"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,298,224,298,224,303,192,303"/>
 <area shape="rect" id="Node000004" href="$structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1compiler_01_4.html" title="Formatter for floppy::platform::compiler." alt="" coords="708,5,878,46"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="589,264,605,218,628,163,661,106,703,57,721,44,724,49,707,61,665,109,633,165,610,220,594,266"/>

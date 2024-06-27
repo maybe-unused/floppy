@@ -40,11 +40,11 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="119.5,-187 0,-187 0,-145.25 119.5,-145.25 119.5,-187"/>
+<g id="a_Node000003"><a xlink:href="structfmt_1_1formatter.html" target="_top" xlink:title="Formatter for types which can be easily converted to string.">
+<polygon fill="white" stroke="#666666" points="119.5,-187 0,-187 0,-145.25 119.5,-145.25 119.5,-187"/>
 <text text-anchor="start" x="8" y="-172.55" font-family="Helvetica,sans-Serif" font-size="11.00">formatter&lt; std::basic</text>
-<text text-anchor="start" x="8" y="-161.3" font-family="Helvetica,sans-Serif" font-size="11.00">_string_view&lt; char &#160;&gt;</text>
-<text text-anchor="middle" x="59.75" y="-150.05" font-family="Helvetica,sans-Serif" font-size="11.00">, char &#160;&gt;</text>
+<text text-anchor="start" x="8" y="-161.3" font-family="Helvetica,sans-Serif" font-size="11.00">_string_view&lt; char &gt;,</text>
+<text text-anchor="middle" x="59.75" y="-150.05" font-family="Helvetica,sans-Serif" font-size="11.00"> char &gt;</text>
 </a>
 </g>
 </g>
@@ -79,8 +79,8 @@
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="267.62,-254.5 139.88,-254.5 139.88,-224 267.62,-224 267.62,-254.5"/>
+<g id="a_Node000005"><a xlink:href="structfmt_1_1formatter.html" target="_top" xlink:title="Formatter for types which can be easily converted to string.">
+<polygon fill="white" stroke="#666666" points="267.62,-254.5 139.88,-254.5 139.88,-224 267.62,-224 267.62,-254.5"/>
 <text text-anchor="start" x="147.88" y="-240.05" font-family="Helvetica,sans-Serif" font-size="11.00">formatter&lt; std::basic</text>
 <text text-anchor="middle" x="203.75" y="-228.8" font-family="Helvetica,sans-Serif" font-size="11.00">_string_view&lt; C &gt;, C &gt;</text>
 </a>

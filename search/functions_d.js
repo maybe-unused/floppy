@@ -1,7 +1,7 @@
 var searchData=
 [
   ['panic_0',['panic',['../group__helpers.html#ga6a778dde2b29125b63c1101d454f3e76',1,'floppy']]],
-  ['parse_1',['parse',['../structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714',1,'fmt::formatter&lt; T &gt;::parse(ParseContext &amp;ctx) const'],['../structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714',1,'fmt::formatter&lt; T &gt;::parse(ParseContext &amp;ctx) const']]],
+  ['parse_1',['parse',['../structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714',1,'fmt::formatter&lt; T &gt;']]],
   ['patch_2',['patch',['../classfloppy_1_1meta_1_1version.html#ad725472fc49ffcca298eabda9bc131ef',1,'floppy::meta::version']]],
   ['path_3',['path',['../classfloppy_1_1configuration__file.html#a8a9d6c204de1b0e268bca4dcf2f74488',1,'floppy::configuration_file']]],
   ['pi_4',['pi',['../structfloppy_1_1math_1_1angle.html#ae9b9250fe4977ecf81b030690815d4a8',1,'floppy::math::angle']]],

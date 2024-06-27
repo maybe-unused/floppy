@@ -13,7 +13,7 @@ var searchData=
   ['lightness_10',['lightness',['../classfloppy_1_1gfx_1_1color.html#a2e1c3164a27957fcc4797ec58e021ab2',1,'floppy::gfx::color']]],
   ['line_11',['line',['../structfloppy_1_1source__location.html#a045aa753ae450e5f2a63358a7778c7e2',1,'floppy::source_location']]],
   ['linux_5f_12',['linux_',['../classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985af3dfd03e84bb3efd1302688157a2a896',1,'floppy::platform']]],
-  ['list_13',['List',['../bug.html',1,'Bug List'],['../todo.html',1,'Todo List']]],
+  ['list_13',['List',['../bug.html',1,'Bug List'],['../deprecated.html',1,'Deprecated List'],['../todo.html',1,'Todo List']]],
   ['little_14',['little',['../classfloppy_1_1platform.html#a4ac0097bc135eadbd9eb7d88fe9b2637aaae6635e044ac56046b2893a529b5114',1,'floppy::platform']]],
   ['llvm_15',['llvm',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca7c7d2b9e8389cc541dc5a615e05bcf1e',1,'floppy::platform']]],
   ['load_16',['load',['../classfloppy_1_1configuration__file.html#a99cee9c7e5c0dd9718420e2f43695490',1,'floppy::configuration_file']]],

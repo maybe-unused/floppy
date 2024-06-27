@@ -2,10 +2,10 @@
 <area shape="rect" id="Node000001" title="Formatter for floppy::platform::endianness." alt="" coords="19,304,194,345"/>
 <area shape="rect" id="Node000002" href="$structfloppy_1_1ostream__formatter.html" title=" " alt="" coords="32,214,181,255"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,270,109,304,104,304,104,270"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,95,165,151"/>
+<area shape="rect" id="Node000003" href="$structfmt_1_1formatter.html" title="Formatter for types which can be easily converted to string." alt="" coords="5,95,165,151"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,166,105,213,100,214,91,167"/>
 <area shape="rect" id="Node000004" href="$structfloppy_1_1ostream__formatter.html" title="Formatter for types which support stream output." alt="" coords="189,110,365,136"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="247,147,138,216,135,211,244,142"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="192,5,362,46"/>
+<area shape="rect" id="Node000005" href="$structfmt_1_1formatter.html" title="Formatter for types which can be easily converted to string." alt="" coords="192,5,362,46"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="280,62,280,110,274,110,274,62"/>
 </map>

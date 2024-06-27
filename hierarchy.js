@@ -69,7 +69,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "formattable_base< char >", "structfloppy_1_1traits_1_1detail_1_1formattable__base.html", null ],
-    [ "formatter", null, [
+    [ "formatter", "structfmt_1_1formatter.html", [
       [ "ostream_formatter< char >", "structfloppy_1_1ostream__formatter.html", [
         [ "formatter< enum floppy::platform::compiler >", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1compiler_01_4.html", null ],
         [ "formatter< enum floppy::platform::endianness >", "structfmt_1_1formatter_3_01enum_01floppy_1_1platform_1_1endianness_01_4.html", null ],
@@ -83,6 +83,8 @@ var hierarchy =
       ] ],
       [ "ostream_formatter< C >", "structfloppy_1_1ostream__formatter.html", null ]
     ] ],
+    [ "formatter< std::basic_string_view< C >, C >", "structfmt_1_1formatter.html", null ],
+    [ "formatter< std::basic_string_view< char >, char >", "structfmt_1_1formatter.html", null ],
     [ "formatter< T >", "structfmt_1_1formatter_3_01T_01_4.html", null ],
     [ "hash< floppy::box< T > >", "structstd_1_1hash_3_01floppy_1_1box_3_01T_01_4_01_4.html", null ],
     [ "non_copyable< T >", "structfloppy_1_1traits_1_1non__copyable.html", [

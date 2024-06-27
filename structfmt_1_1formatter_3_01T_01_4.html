@@ -141,27 +141,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afd2f914952cb4c8eb4d0ea9df0c77f4a" id="r_afd2f914952cb4c8eb4d0ea9df0c77f4a"><td class="memTemplParams" colspan="2">template&lt;typename FormatContext &gt; </td></tr>
 <tr class="memitem:afd2f914952cb4c8eb4d0ea9df0c77f4a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afd2f914952cb4c8eb4d0ea9df0c77f4a">format</a> (T const &amp;c, FormatContext &amp;ctx) const</td></tr>
 <tr class="separator:afd2f914952cb4c8eb4d0ea9df0c77f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf66f4430a4e5f0c315278d657b83714" id="r_adf66f4430a4e5f0c315278d657b83714"><td class="memTemplParams" colspan="2">template&lt;typename ParseContext &gt; </td></tr>
-<tr class="memitem:adf66f4430a4e5f0c315278d657b83714"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adf66f4430a4e5f0c315278d657b83714">parse</a> (ParseContext &amp;ctx) const</td></tr>
-<tr class="separator:adf66f4430a4e5f0c315278d657b83714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd2f914952cb4c8eb4d0ea9df0c77f4a" id="r_afd2f914952cb4c8eb4d0ea9df0c77f4a"><td class="memTemplParams" colspan="2">template&lt;typename FormatContext &gt; </td></tr>
-<tr class="memitem:afd2f914952cb4c8eb4d0ea9df0c77f4a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afd2f914952cb4c8eb4d0ea9df0c77f4a">format</a> (T const &amp;c, FormatContext &amp;ctx) const</td></tr>
-<tr class="separator:afd2f914952cb4c8eb4d0ea9df0c77f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;std::convertible_to&lt; std::string &gt; T&gt;<br />
-struct fmt::formatter&lt; T &gt;</div><p>Formatter for types which can be easily converted to string. </p>
-<p>Formatter for types which derives from <code><a class="el" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html">formattable_base&lt;char&gt;</a></code>. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="conceptfloppy_1_1traits_1_1detail_1_1derived__from__formattable.html">floppy::traits::detail::derived_from_formattable</a>&lt; char &gt; T&gt;<br />
+struct fmt::formatter&lt; T &gt;</div><p>Formatter for types which derives from <code><a class="el" href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html">formattable_base&lt;char&gt;</a></code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00228">228</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00250">250</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adf66f4430a4e5f0c315278d657b83714" name="adf66f4430a4e5f0c315278d657b83714"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf66f4430a4e5f0c315278d657b83714">&#9670;&#160;</a></span>parse() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adf66f4430a4e5f0c315278d657b83714">&#9670;&#160;</a></span>parse()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;std::convertible_to&lt; std::string &gt; T&gt; </div>
+template&lt;<a class="el" href="conceptfloppy_1_1traits_1_1detail_1_1derived__from__formattable.html">floppy::traits::detail::derived_from_formattable</a>&lt; char &gt; T&gt; </div>
 <div class="memtemplate">
 template&lt;typename ParseContext &gt; </div>
 <table class="mlabels">
@@ -184,17 +177,17 @@ template&lt;typename ParseContext &gt; </div>
 
 <p>Required by <code>fmt</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00232">232</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00254">254</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
 
 </div>
 </div>
 <a id="afd2f914952cb4c8eb4d0ea9df0c77f4a" name="afd2f914952cb4c8eb4d0ea9df0c77f4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd2f914952cb4c8eb4d0ea9df0c77f4a">&#9670;&#160;</a></span>format() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afd2f914952cb4c8eb4d0ea9df0c77f4a">&#9670;&#160;</a></span>format()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;std::convertible_to&lt; std::string &gt; T&gt; </div>
+template&lt;<a class="el" href="conceptfloppy_1_1traits_1_1detail_1_1derived__from__formattable.html">floppy::traits::detail::derived_from_formattable</a>&lt; char &gt; T&gt; </div>
 <div class="memtemplate">
 template&lt;typename FormatContext &gt; </div>
 <table class="mlabels">
@@ -221,77 +214,7 @@ template&lt;typename FormatContext &gt; </div>
 
 <p>Required by <code>fmt</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00236">236</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
-
-</div>
-</div>
-<a id="adf66f4430a4e5f0c315278d657b83714" name="adf66f4430a4e5f0c315278d657b83714"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf66f4430a4e5f0c315278d657b83714">&#9670;&#160;</a></span>parse() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::convertible_to&lt; std::string &gt; T&gt; </div>
-<div class="memtemplate">
-template&lt;typename ParseContext &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto parse </td>
-          <td>(</td>
-          <td class="paramtype">ParseContext &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Required by <code>fmt</code>. </p>
-
-<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00247">247</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
-
-</div>
-</div>
-<a id="afd2f914952cb4c8eb4d0ea9df0c77f4a" name="afd2f914952cb4c8eb4d0ea9df0c77f4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd2f914952cb4c8eb4d0ea9df0c77f4a">&#9670;&#160;</a></span>format() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::convertible_to&lt; std::string &gt; T&gt; </div>
-<div class="memtemplate">
-template&lt;typename FormatContext &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto format </td>
-          <td>(</td>
-          <td class="paramtype">T const &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FormatContext &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>&#160;) const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Required by <code>fmt</code>. </p>
-
-<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00251">251</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00258">258</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
 
 </div>
 </div>
@@ -304,7 +227,7 @@ template&lt;typename FormatContext &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fmt</b></li><li class="navelem"><a class="el" href="structfmt_1_1formatter_3_01T_01_4.html">formatter&lt; T &gt;</a></li>
-    <li class="footer">Generated on Wed Jun 26 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Jun 27 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

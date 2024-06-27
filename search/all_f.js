@@ -2,7 +2,7 @@ var searchData=
 [
   ['palm_0',['palm',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca4ab4aca1c61c78b89338c3e3804e0e9d',1,'floppy::platform']]],
   ['panic_1',['panic',['../group__helpers.html#ga6a778dde2b29125b63c1101d454f3e76',1,'floppy']]],
-  ['parse_2',['parse',['../structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714',1,'fmt::formatter&lt; T &gt;::parse(ParseContext &amp;ctx) const'],['../structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714',1,'fmt::formatter&lt; T &gt;::parse(ParseContext &amp;ctx) const']]],
+  ['parse_2',['parse',['../structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714',1,'fmt::formatter&lt; T &gt;']]],
   ['patch_3',['patch',['../classfloppy_1_1meta_1_1version.html#ad725472fc49ffcca298eabda9bc131ef',1,'floppy::meta::version']]],
   ['path_4',['path',['../classfloppy_1_1configuration__file.html#a8a9d6c204de1b0e268bca4dcf2f74488',1,'floppy::configuration_file']]],
   ['path_5fseparator_5',['path_separator',['../classfloppy_1_1platform.html#a59111e456e3bfba78f27d52c59121b2a',1,'floppy::platform']]],

@@ -72,5 +72,6 @@ var annotated_dup =
     ] ],
     [ "std", "namespacestd.html", [
       [ "hash< floppy::box< T > >", "structstd_1_1hash_3_01floppy_1_1box_3_01T_01_4_01_4.html", null ]
-    ] ]
+    ] ],
+    [ "formatter", "structfmt_1_1formatter.html", null ]
 ];

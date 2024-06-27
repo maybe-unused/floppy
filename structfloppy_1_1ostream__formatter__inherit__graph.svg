@@ -86,8 +86,8 @@ var sectionId = 'dynsection-0';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="127.75,-226.5 0,-226.5 0,-196 127.75,-196 127.75,-226.5"/>
+<g id="a_Node000002"><a xlink:href="structfmt_1_1formatter.html" target="_top" xlink:title="Formatter for types which can be easily converted to string.">
+<polygon fill="white" stroke="#666666" points="127.75,-226.5 0,-226.5 0,-196 127.75,-196 127.75,-226.5"/>
 <text text-anchor="start" x="8" y="-212.05" font-family="Helvetica,sans-Serif" font-size="11.00">formatter&lt; std::basic</text>
 <text text-anchor="middle" x="63.88" y="-200.8" font-family="Helvetica,sans-Serif" font-size="11.00">_string_view&lt; C &gt;, C &gt;</text>
 </a>

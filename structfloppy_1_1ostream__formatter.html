@@ -153,10 +153,11 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename C&gt;<br />
 struct floppy::ostream_formatter&lt; C &gt;</div><p>Formatter for types which support stream output. </p>
 <p>Example usage for <code>std::ostream</code>:</p>
-<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>[[maybe_unused]] fmt::formatter&lt;YourType&gt; : <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a>&lt;char&gt; {};</div>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>[[maybe_unused]] fmt::<a class="code hl_struct" href="structfmt_1_1formatter.html">formatter</a>&lt;YourType&gt; : <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a>&lt;char&gt; {};</div>
 <div class="ttc" id="astructfloppy_1_1ostream__formatter_html"><div class="ttname"><a href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a></div><div class="ttdoc">Formatter for types which support stream output.</div><div class="ttdef"><b>Definition</b> <a href="formatters_8h_source.html#l00028">formatters.h:29</a></div></div>
+<div class="ttc" id="astructfmt_1_1formatter_html"><div class="ttname"><a href="structfmt_1_1formatter.html">formatter</a></div><div class="ttdoc">Formatter for types which can be easily converted to string.</div></div>
 </div><!-- fragment --><p>Example usage for <code>std::wostream</code>:</p>
-<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>[[maybe_unused]] fmt::formatter&lt;YourType&gt; : <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a>&lt;wchar_t&gt; {};</div>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>[[maybe_unused]] fmt::<a class="code hl_struct" href="structfmt_1_1formatter.html">formatter</a>&lt;YourType&gt; : <a class="code hl_struct" href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a>&lt;wchar_t&gt; {};</div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">C</td><td>Type of the stream character type. </td></tr>
@@ -213,7 +214,7 @@ template&lt;typename T , typename OutputIt &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefloppy.html">floppy</a></li><li class="navelem"><a class="el" href="structfloppy_1_1ostream__formatter.html">ostream_formatter</a></li>
-    <li class="footer">Generated on Wed Jun 26 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Jun 27 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

@@ -27,6 +27,7 @@ var NAVTREE =
   [ "Floppy", "index.html", [
     [ "Bug List", "bug.html", null ],
     [ "Todo List", "todo.html", null ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -63,8 +64,8 @@ var NAVTREEINDEX =
 "angle_8h.html",
 "classfloppy_1_1math_1_1point2d.html#accc043ce7ff2febe8af29365f34ef1de",
 "classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca9d76d663f4feae3bb1bc63ed17388abd",
-"group__platform.html#ga63d543570df23de33f0904bd69eac8ce",
-"structfloppy_1_1math_1_1angle.html#a8bf55a1f1d6b12c00a1a412d55e114d3",
+"group__platform.html#ga61707b98d2287ed4f0810fe92389a370",
+"structfloppy_1_1math_1_1angle.html#a8b67ad1f8ab287735ddf7ad085f6f52a",
 "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a86e683a1e79b42b7f61cc52ec8c8e9ef"
 ];
 
