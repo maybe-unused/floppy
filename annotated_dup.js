@@ -7,6 +7,12 @@ var annotated_dup =
       [ "gfx", "namespacefloppy_1_1gfx.html", [
         [ "color", "classfloppy_1_1gfx_1_1color.html", "classfloppy_1_1gfx_1_1color" ]
       ] ],
+      [ "log", "namespacefloppy_1_1log.html", [
+        [ "detail", "namespacefloppy_1_1log_1_1detail.html", [
+          [ "basic_log_helper", "classfloppy_1_1log_1_1detail_1_1basic__log__helper.html", null ]
+        ] ],
+        [ "log", "classfloppy_1_1log_1_1log.html", "classfloppy_1_1log_1_1log" ]
+      ] ],
       [ "math", "namespacefloppy_1_1math.html", [
         [ "detail", "namespacefloppy_1_1math_1_1detail.html", [
           [ "advanced_numeric_type", "structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html", "structfloppy_1_1math_1_1detail_1_1advanced__numeric__type" ],

@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "application_dirs", "classfloppy_1_1filesystem_1_1application__dirs.html", null ],
+    [ "basic_log_helper< L >", "classfloppy_1_1log_1_1detail_1_1basic__log__helper.html", null ],
     [ "box< T >", "classfloppy_1_1box.html", null ],
     [ "cmyk_t", "structfloppy_1_1gfx_1_1color_1_1cmyk__t.html", null ],
     [ "cmyka_t", "structfloppy_1_1gfx_1_1color_1_1cmyka__t.html", null ],
@@ -87,6 +88,7 @@ var hierarchy =
     [ "formatter< std::basic_string_view< char >, char >", "structfmt_1_1formatter.html", null ],
     [ "formatter< T >", "structfmt_1_1formatter_3_01T_01_4.html", null ],
     [ "hash< floppy::box< T > >", "structstd_1_1hash_3_01floppy_1_1box_3_01T_01_4_01_4.html", null ],
+    [ "log", "classfloppy_1_1log_1_1log.html", null ],
     [ "non_copyable< T >", "structfloppy_1_1traits_1_1non__copyable.html", [
       [ "pin< T >", "structfloppy_1_1traits_1_1pin.html", [
         [ "singleton< T >", "structfloppy_1_1traits_1_1singleton.html", null ]

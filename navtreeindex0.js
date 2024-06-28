@@ -117,6 +117,13 @@ var NAVTREEINDEX0 =
 "classfloppy_1_1gfx_1_1color.html#af6d5729507905f4ce221e18c2d36f3a9":[3,8,1,32],
 "classfloppy_1_1gfx_1_1color.html#afaf72956701e3a867b9ce319896bdb0d":[3,8,1,31],
 "classfloppy_1_1invalid__smart__pointer__access.html":[3,7,0,0],
+"classfloppy_1_1log_1_1detail_1_1basic__log__helper.html":[6,0,0,2,0,0],
+"classfloppy_1_1log_1_1detail_1_1basic__log__helper.html":[4,0,1,4,0,0],
+"classfloppy_1_1log_1_1log.html":[3,7,1,0],
+"classfloppy_1_1log_1_1log.html#a0d9297171a7d36cbab7f1cc430fbeec1":[3,7,1,0,3],
+"classfloppy_1_1log_1_1log.html#a472b9c3814dc6c063f85144e956a4499":[3,7,1,0,2],
+"classfloppy_1_1log_1_1log.html#a754405e39f8cf7aeadbae3f7e0b60310":[3,7,1,0,1],
+"classfloppy_1_1log_1_1log.html#ab5686bf434e786fc6b88550cedded5ec":[3,7,1,0,0],
 "classfloppy_1_1math_1_1length.html":[3,6,1],
 "classfloppy_1_1math_1_1length.html#a1034831e6b2e81736866878067e88624":[3,6,1,10],
 "classfloppy_1_1math_1_1length.html#a22f3a8c9d77d430f532d7c0d0fc34d71":[3,6,1,44],
@@ -242,12 +249,5 @@ var NAVTREEINDEX0 =
 "classfloppy_1_1math_1_1point2d.html#aaad517001a831eff7de9c3223d591b02":[3,6,2,20],
 "classfloppy_1_1math_1_1point2d.html#aaca5c75ae78b6c53d27cf63cd944ff62":[3,6,2,77],
 "classfloppy_1_1math_1_1point2d.html#aaf2377ebd7cf6d347b399dbbfa2cab9f":[3,6,2,11],
-"classfloppy_1_1math_1_1point2d.html#aaf50c9542ca5d12ff8aff81ba9966b95":[3,6,2,17],
-"classfloppy_1_1math_1_1point2d.html#ab02564c421f2910e0f71855f4ca22181":[3,6,2,44],
-"classfloppy_1_1math_1_1point2d.html#ab5097399b32a3fd913b59abf05c62033":[3,6,2,75],
-"classfloppy_1_1math_1_1point2d.html#ab769a6a6b00145f928d222b94861840e":[3,6,2,73],
-"classfloppy_1_1math_1_1point2d.html#abb97ee5b3485f7cc5eb67cff00cd963a":[3,6,2,84],
-"classfloppy_1_1math_1_1point2d.html#ac2d4121631c00f3759716859dc543324":[3,6,2,67],
-"classfloppy_1_1math_1_1point2d.html#ac37a2f9414fd51fa3be7fcdf58d4a084":[3,6,2,57],
-"classfloppy_1_1math_1_1point2d.html#aca72a4461756e412508447537c9d1443":[3,6,2,80]
+"classfloppy_1_1math_1_1point2d.html#aaf50c9542ca5d12ff8aff81ba9966b95":[3,6,2,17]
 };

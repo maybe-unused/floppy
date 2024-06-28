@@ -30,8 +30,6 @@ var searchData=
   ['to_5funtyped_27',['to_untyped',['../classfloppy_1_1math_1_1point2d.html#a750f0a04df8f60a5be6c024b0b458790',1,'floppy::math::point2d::to_untyped()'],['../classfloppy_1_1math_1_1size2d.html#acade6cee77bf48368a06db5ba705f2b7',1,'floppy::math::size2d::to_untyped()'],['../classfloppy_1_1math_1_1vector2d.html#a085ec4068b0bb63d32625607dd815dd7',1,'floppy::math::vector2d::to_untyped()']]],
   ['to_5fusize_28',['to_usize',['../classfloppy_1_1math_1_1point2d.html#af56833d841b976853a110eb34857ff02',1,'floppy::math::point2d::to_usize()'],['../classfloppy_1_1math_1_1size2d.html#aad90f117892502aa4067c174d461cdec',1,'floppy::math::size2d::to_usize()'],['../classfloppy_1_1math_1_1vector2d.html#ade0e5f38845d3689346c477eb389bd3c',1,'floppy::math::vector2d::to_usize()']]],
   ['to_5fvector2d_29',['to_vector2d',['../classfloppy_1_1math_1_1point2d.html#ace85064cd93ef68c5b2c81b4c71f9091',1,'floppy::math::point2d::to_vector2d()'],['../classfloppy_1_1math_1_1size2d.html#ace85064cd93ef68c5b2c81b4c71f9091',1,'floppy::math::size2d::to_vector2d()']]],
-  ['trace_30',['trace',['../group__logging.html#ga1958617b608e95656ef732069cb6a51f',1,'floppy::log']]],
-  ['trace_5fto_31',['trace_to',['../group__logging.html#gafe5b43f7e92b1290fa979606a9d8bd59',1,'floppy::log']]],
-  ['two_5fpi_32',['two_pi',['../structfloppy_1_1math_1_1angle.html#a8bf55a1f1d6b12c00a1a412d55e114d3',1,'floppy::math::angle']]],
-  ['type_5fname_33',['type_name',['../group__helpers.html#gaece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
+  ['two_5fpi_30',['two_pi',['../structfloppy_1_1math_1_1angle.html#a8bf55a1f1d6b12c00a1a412d55e114d3',1,'floppy::math::angle']]],
+  ['type_5fname_31',['type_name',['../group__helpers.html#gaece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
 ];

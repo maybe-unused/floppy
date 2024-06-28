@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.2</span>
+   &#160;<span id="projectnumber">1.2.3-logging-preview</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -125,6 +125,7 @@ $(function(){initNavTree('group__logging.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Logging<div class="ingroups"><a class="el" href="group__foundation.html">Foundation</a></div></div></div>
 </div><!--header-->
@@ -135,67 +136,36 @@ Collaboration diagram for Logging:</div>
 <div class="center"><iframe scrolling="no" frameborder="0" src="group__logging.svg" width="224" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1log_1_1log.html">log</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gafe5b43f7e92b1290fa979606a9d8bd59" id="r_gafe5b43f7e92b1290fa979606a9d8bd59"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:gafe5b43f7e92b1290fa979606a9d8bd59"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gafe5b43f7e92b1290fa979606a9d8bd59">trace_to</a> (spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:gafe5b43f7e92b1290fa979606a9d8bd59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1958617b608e95656ef732069cb6a51f" id="r_ga1958617b608e95656ef732069cb6a51f"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ga1958617b608e95656ef732069cb6a51f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga1958617b608e95656ef732069cb6a51f">trace</a> (fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:ga1958617b608e95656ef732069cb6a51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga710e2061116b4efb6ecf6669f2f9a421" id="r_ga710e2061116b4efb6ecf6669f2f9a421"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ga710e2061116b4efb6ecf6669f2f9a421"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga710e2061116b4efb6ecf6669f2f9a421">debug_to</a> (spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:ga710e2061116b4efb6ecf6669f2f9a421"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaebe2862c002ab7a673f4ba5038a905c7" id="r_gaebe2862c002ab7a673f4ba5038a905c7"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:gaebe2862c002ab7a673f4ba5038a905c7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaebe2862c002ab7a673f4ba5038a905c7">debug</a> (fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:gaebe2862c002ab7a673f4ba5038a905c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga394535db66a7496bb7117bad991d8b14" id="r_ga394535db66a7496bb7117bad991d8b14"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ga394535db66a7496bb7117bad991d8b14"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga394535db66a7496bb7117bad991d8b14">info_to</a> (spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:ga394535db66a7496bb7117bad991d8b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafdaa6e366f8bbdcd865a50a82c970d9a" id="r_gafdaa6e366f8bbdcd865a50a82c970d9a"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:gafdaa6e366f8bbdcd865a50a82c970d9a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gafdaa6e366f8bbdcd865a50a82c970d9a">info</a> (fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:gafdaa6e366f8bbdcd865a50a82c970d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4226f230f8451294f9117d972fc4d015" id="r_ga4226f230f8451294f9117d972fc4d015"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ga4226f230f8451294f9117d972fc4d015"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga4226f230f8451294f9117d972fc4d015">warn_to</a> (spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:ga4226f230f8451294f9117d972fc4d015"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga03e917030c7d8d1409cdab75da7ceecd" id="r_ga03e917030c7d8d1409cdab75da7ceecd"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ga03e917030c7d8d1409cdab75da7ceecd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga03e917030c7d8d1409cdab75da7ceecd">warn</a> (fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:ga03e917030c7d8d1409cdab75da7ceecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga195e878b0ed7408d61836109edc78794" id="r_ga195e878b0ed7408d61836109edc78794"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ga195e878b0ed7408d61836109edc78794"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga195e878b0ed7408d61836109edc78794">error_to</a> (spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:ga195e878b0ed7408d61836109edc78794"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga534b29837e55ef023b77119e94c9c80b" id="r_ga534b29837e55ef023b77119e94c9c80b"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ga534b29837e55ef023b77119e94c9c80b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga534b29837e55ef023b77119e94c9c80b">error</a> (fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:ga534b29837e55ef023b77119e94c9c80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabd43f0d810fd497d7ceb97fb453128af" id="r_gabd43f0d810fd497d7ceb97fb453128af"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:gabd43f0d810fd497d7ceb97fb453128af"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gabd43f0d810fd497d7ceb97fb453128af">critical_to</a> (spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:gabd43f0d810fd497d7ceb97fb453128af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5bfd9e6e65784459fbcc3a8c8f3f3989" id="r_ga5bfd9e6e65784459fbcc3a8c8f3f3989"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ga5bfd9e6e65784459fbcc3a8c8f3f3989"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5bfd9e6e65784459fbcc3a8c8f3f3989">critical</a> (fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:ga5bfd9e6e65784459fbcc3a8c8f3f3989"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae11a5862435d90c485efc280eb240a35" id="r_gae11a5862435d90c485efc280eb240a35"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:gae11a5862435d90c485efc280eb240a35"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gae11a5862435d90c485efc280eb240a35">log_to</a> (level::level_enum level, spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:gae11a5862435d90c485efc280eb240a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9eaa5f9efa4ba3467f22464b2a28ce91" id="r_ga9eaa5f9efa4ba3467f22464b2a28ce91"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ga9eaa5f9efa4ba3467f22464b2a28ce91"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga9eaa5f9efa4ba3467f22464b2a28ce91">log</a> (level::level_enum level, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</td></tr>
-<tr class="separator:ga9eaa5f9efa4ba3467f22464b2a28ce91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d508dd6ef0b0b0d9de2590b16d7a9f1" id="r_ga2d508dd6ef0b0b0d9de2590b16d7a9f1"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga2d508dd6ef0b0b0d9de2590b16d7a9f1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga2d508dd6ef0b0b0d9de2590b16d7a9f1">operator()</a> (spdlog::level::level_enum lvl, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) const</td></tr>
+<tr class="separator:ga2d508dd6ef0b0b0d9de2590b16d7a9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Logging-related functions. </p>
 <p>Provides convenient wrapper over <b>spdlog</b>. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gafe5b43f7e92b1290fa979606a9d8bd59" name="gafe5b43f7e92b1290fa979606a9d8bd59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafe5b43f7e92b1290fa979606a9d8bd59">&#9670;&#160;</a></span>trace_to()</h2>
+<a id="ga2d508dd6ef0b0b0d9de2590b16d7a9f1" name="ga2d508dd6ef0b0b0d9de2590b16d7a9f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d508dd6ef0b0b0d9de2590b16d7a9f1">&#9670;&#160;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto trace_to </td>
+          <td class="memname">void operator() </td>
           <td>(</td>
-          <td class="paramtype">spdlog::logger &amp;</td>          <td class="paramname"><span class="paramname"><em>logger</em>, </span></td>
+          <td class="paramtype">spdlog::level::level_enum</td>          <td class="paramname"><span class="paramname"><em>lvl</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -205,590 +175,14 @@ template&lt;typename... Args&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) const</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Logs message to given loger with level <b>trace</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logger</td><td>Logger to log to. </td></tr>
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga1958617b608e95656ef732069cb6a51f" title="Logs message to default logger with level trace.">trace</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00025">25</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="ga1958617b608e95656ef732069cb6a51f" name="ga1958617b608e95656ef732069cb6a51f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1958617b608e95656ef732069cb6a51f">&#9670;&#160;</a></span>trace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto trace </td>
-          <td>(</td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to default logger with level <b>trace</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gafe5b43f7e92b1290fa979606a9d8bd59" title="Logs message to given loger with level trace.">trace_to</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00037">37</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="ga710e2061116b4efb6ecf6669f2f9a421" name="ga710e2061116b4efb6ecf6669f2f9a421"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga710e2061116b4efb6ecf6669f2f9a421">&#9670;&#160;</a></span>debug_to()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto debug_to </td>
-          <td>(</td>
-          <td class="paramtype">spdlog::logger &amp;</td>          <td class="paramname"><span class="paramname"><em>logger</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to given loger with level <b>debug</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logger</td><td>Logger to log to. </td></tr>
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gaebe2862c002ab7a673f4ba5038a905c7" title="Logs message to default logger with level debug.">debug</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00050">50</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="gaebe2862c002ab7a673f4ba5038a905c7" name="gaebe2862c002ab7a673f4ba5038a905c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaebe2862c002ab7a673f4ba5038a905c7">&#9670;&#160;</a></span>debug()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto debug </td>
-          <td>(</td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to default logger with level <b>debug</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga710e2061116b4efb6ecf6669f2f9a421" title="Logs message to given loger with level debug.">debug_to</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00062">62</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="ga394535db66a7496bb7117bad991d8b14" name="ga394535db66a7496bb7117bad991d8b14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga394535db66a7496bb7117bad991d8b14">&#9670;&#160;</a></span>info_to()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto info_to </td>
-          <td>(</td>
-          <td class="paramtype">spdlog::logger &amp;</td>          <td class="paramname"><span class="paramname"><em>logger</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to given loger with level <b>info</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logger</td><td>Logger to log to. </td></tr>
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gafdaa6e366f8bbdcd865a50a82c970d9a" title="Logs message to default logger with level info.">info</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00075">75</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="gafdaa6e366f8bbdcd865a50a82c970d9a" name="gafdaa6e366f8bbdcd865a50a82c970d9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafdaa6e366f8bbdcd865a50a82c970d9a">&#9670;&#160;</a></span>info()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto info </td>
-          <td>(</td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to default logger with level <b>info</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga394535db66a7496bb7117bad991d8b14" title="Logs message to given loger with level info.">info_to</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00087">87</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="ga4226f230f8451294f9117d972fc4d015" name="ga4226f230f8451294f9117d972fc4d015"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4226f230f8451294f9117d972fc4d015">&#9670;&#160;</a></span>warn_to()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto warn_to </td>
-          <td>(</td>
-          <td class="paramtype">spdlog::logger &amp;</td>          <td class="paramname"><span class="paramname"><em>logger</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to given loger with level <b>warn</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logger</td><td>Logger to log to. </td></tr>
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga03e917030c7d8d1409cdab75da7ceecd" title="Logs message to default logger with level warn.">warn</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00100">100</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="ga03e917030c7d8d1409cdab75da7ceecd" name="ga03e917030c7d8d1409cdab75da7ceecd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga03e917030c7d8d1409cdab75da7ceecd">&#9670;&#160;</a></span>warn()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto warn </td>
-          <td>(</td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to default logger with level <b>warn</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga4226f230f8451294f9117d972fc4d015" title="Logs message to given loger with level warn.">warn_to</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00112">112</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="ga195e878b0ed7408d61836109edc78794" name="ga195e878b0ed7408d61836109edc78794"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga195e878b0ed7408d61836109edc78794">&#9670;&#160;</a></span>error_to()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto error_to </td>
-          <td>(</td>
-          <td class="paramtype">spdlog::logger &amp;</td>          <td class="paramname"><span class="paramname"><em>logger</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to given loger with level <b>err</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logger</td><td>Logger to log to. </td></tr>
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga534b29837e55ef023b77119e94c9c80b" title="Logs message to default logger with level err.">error</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00125">125</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="ga534b29837e55ef023b77119e94c9c80b" name="ga534b29837e55ef023b77119e94c9c80b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga534b29837e55ef023b77119e94c9c80b">&#9670;&#160;</a></span>error()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto error </td>
-          <td>(</td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to default logger with level <b>err</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga195e878b0ed7408d61836109edc78794" title="Logs message to given loger with level err.">error_to</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00137">137</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="gabd43f0d810fd497d7ceb97fb453128af" name="gabd43f0d810fd497d7ceb97fb453128af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabd43f0d810fd497d7ceb97fb453128af">&#9670;&#160;</a></span>critical_to()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto critical_to </td>
-          <td>(</td>
-          <td class="paramtype">spdlog::logger &amp;</td>          <td class="paramname"><span class="paramname"><em>logger</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to given loger with level <b>critical</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logger</td><td>Logger to log to. </td></tr>
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga5bfd9e6e65784459fbcc3a8c8f3f3989" title="Logs message to default logger with level critical.">critical</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00150">150</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="ga5bfd9e6e65784459fbcc3a8c8f3f3989" name="ga5bfd9e6e65784459fbcc3a8c8f3f3989"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5bfd9e6e65784459fbcc3a8c8f3f3989">&#9670;&#160;</a></span>critical()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto critical </td>
-          <td>(</td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to default logger with level <b>critical</b>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gabd43f0d810fd497d7ceb97fb453128af" title="Logs message to given loger with level critical.">critical_to</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00162">162</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="gae11a5862435d90c485efc280eb240a35" name="gae11a5862435d90c485efc280eb240a35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae11a5862435d90c485efc280eb240a35">&#9670;&#160;</a></span>log_to()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto log_to </td>
-          <td>(</td>
-          <td class="paramtype">level::level_enum</td>          <td class="paramname"><span class="paramname"><em>level</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">spdlog::logger &amp;</td>          <td class="paramname"><span class="paramname"><em>logger</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs message to given loger with given level. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">level</td><td>Log level. </td></tr>
-    <tr><td class="paramname">logger</td><td>Logger to log to. </td></tr>
-    <tr><td class="paramname">fmt</td><td>Format string. </td></tr>
-    <tr><td class="paramname">args</td><td>Format arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacefloppy_1_1log.html" title="Namespace providing access to logging facilities.">log</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00176">176</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
-
-</div>
-</div>
-<a id="ga9eaa5f9efa4ba3467f22464b2a28ce91" name="ga9eaa5f9efa4ba3467f22464b2a28ce91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9eaa5f9efa4ba3467f22464b2a28ce91">&#9670;&#160;</a></span>log()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto log </td>
-          <td>(</td>
-          <td class="paramtype">level::level_enum</td>          <td class="paramname"><span class="paramname"><em>level</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>fmt</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; void </td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Logs message to default logger with given level. </p>
@@ -806,9 +200,9 @@ template&lt;typename... Args&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gae11a5862435d90c485efc280eb240a35" title="Logs message to given loger with given level.">log_to</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classfloppy_1_1log_1_1log.html#a472b9c3814dc6c063f85144e956a4499" title="Logs message to default logger with given level.">write</a>, <a class="el" href="classfloppy_1_1log_1_1log.html#a754405e39f8cf7aeadbae3f7e0b60310" title="Logs message to given loger with given level.">write_to</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00189">189</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="logging_8h_source.html#l00142">142</a> of file <a class="el" href="logging_8h_source.html">logging.h</a>.</p>
 
 </div>
 </div>
@@ -817,7 +211,7 @@ template&lt;typename... Args&gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Jun 27 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Fri Jun 28 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

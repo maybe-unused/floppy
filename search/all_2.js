@@ -27,14 +27,12 @@ var searchData=
   ['convex_24',['convex',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ab9e9dd1fa31d98cf8eb1b96e735550ba',1,'floppy::platform']]],
   ['cos_25',['cos',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a6dd7cf74119d22f24c8994d96abfa835',1,'floppy::math::detail::basic_numeric_newtype']]],
   ['create_26',['create',['../classfloppy_1_1filesystem_1_1application__dirs.html#a724c6ef6f60f37464f3abdbd2ba55b0f',1,'floppy::filesystem::application_dirs']]],
-  ['critical_27',['critical',['../group__logging.html#ga5bfd9e6e65784459fbcc3a8c8f3f3989',1,'floppy::log']]],
-  ['critical_5fmessage_28',['critical_message',['../group__helpers.html#gabdcc54d31693c73090e4e02f31872ebd',1,'floppy::print_helpers']]],
-  ['critical_5fto_29',['critical_to',['../group__logging.html#gabd43f0d810fd497d7ceb97fb453128af',1,'floppy::log']]],
-  ['cross_30',['cross',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ab769a6a6b00145f928d222b94861840e',1,'floppy::math::detail::basic_two_dimensional_type']]],
-  ['csr_31',['csr',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2a1f8c50db95e9ead5645e32f8df5baa7b',1,'floppy::platform']]],
-  ['cuda_32',['cuda',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a39466fe22b062a34cfe09f3cc8c24868',1,'floppy::platform']]],
-  ['current_33',['current',['../structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743',1,'floppy::source_location::current()'],['../classfloppy_1_1platform.html#ae38f44be4199dfae927a98d8aa44d53a',1,'floppy::platform::current()']]],
-  ['current_5fplatform_34',['current_platform',['../group__platform.html#ga6a6470b3bb68e4a32f414478fac76058',1,'floppy']]],
-  ['cxx_5fstandard_35',['cxx_standard',['../classfloppy_1_1platform.html#afde0784b1e48a2bbb1fab830d24c0e64',1,'floppy::platform']]],
-  ['cygwin_36',['cygwin',['../classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985ab8a4b4dbf3ef27d58f49352e3110161d',1,'floppy::platform']]]
+  ['critical_5fmessage_27',['critical_message',['../group__helpers.html#gabdcc54d31693c73090e4e02f31872ebd',1,'floppy::print_helpers']]],
+  ['cross_28',['cross',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ab769a6a6b00145f928d222b94861840e',1,'floppy::math::detail::basic_two_dimensional_type']]],
+  ['csr_29',['csr',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2a1f8c50db95e9ead5645e32f8df5baa7b',1,'floppy::platform']]],
+  ['cuda_30',['cuda',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a39466fe22b062a34cfe09f3cc8c24868',1,'floppy::platform']]],
+  ['current_31',['current',['../structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743',1,'floppy::source_location::current()'],['../classfloppy_1_1platform.html#ae38f44be4199dfae927a98d8aa44d53a',1,'floppy::platform::current()']]],
+  ['current_5fplatform_32',['current_platform',['../group__platform.html#ga6a6470b3bb68e4a32f414478fac76058',1,'floppy']]],
+  ['cxx_5fstandard_33',['cxx_standard',['../classfloppy_1_1platform.html#afde0784b1e48a2bbb1fab830d24c0e64',1,'floppy::platform']]],
+  ['cygwin_34',['cygwin',['../classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985ab8a4b4dbf3ef27d58f49352e3110161d',1,'floppy::platform']]]
 ];

@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.2</span>
+   &#160;<span id="projectnumber">1.2.3-logging-preview</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -137,139 +137,201 @@ $(function(){initNavTree('logging_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;spdlog/spdlog.h&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;floppy/detail/types.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;floppy/detail/export.h&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>spdlog {} <span class="comment">// namespace spdlog</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1log.html">   10</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy_1_1log.html">floppy::log</a> {</div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1log_1_1level.html">   12</a></span>  <span class="keyword">namespace </span>level {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">using namespace </span>spdlog::level;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  } <span class="comment">// namespace level</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;floppy/detail/backports.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>spdlog {} <span class="comment">// namespace spdlog</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1log.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy_1_1log.html">floppy::log</a> {</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classfloppy_1_1log_1_1log.html">   30</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classfloppy_1_1log_1_1log.html">log</a> final</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>   <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classfloppy_1_1log_1_1log.html#ab5686bf434e786fc6b88550cedded5ec">   36</a></span>    <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <a class="code hl_function" href="classfloppy_1_1log_1_1log.html#ab5686bf434e786fc6b88550cedded5ec">log</a>(<a class="code hl_typedef" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option&lt;source_location&gt;</a> <span class="keyword">const</span>&amp; loc = <a class="code hl_function" href="structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743">source_location::current</a>())</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      : loc_(loc)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {}</div>
 </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="group__logging.html#gafe5b43f7e92b1290fa979606a9d8bd59">   25</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#gafe5b43f7e92b1290fa979606a9d8bd59">trace_to</a>(spdlog::logger&amp; logger, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    logger.trace(fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  }</div>
-</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="group__logging.html#ga1958617b608e95656ef732069cb6a51f">   37</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#ga1958617b608e95656ef732069cb6a51f">trace</a>(fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="group__logging.html#gafe5b43f7e92b1290fa979606a9d8bd59">trace_to</a>(*spdlog::default_logger(), fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
-</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group__logging.html#ga710e2061116b4efb6ecf6669f2f9a421">   50</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#ga710e2061116b4efb6ecf6669f2f9a421">debug_to</a>(spdlog::logger&amp; logger, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    logger.debug(fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classfloppy_1_1log_1_1log.html#a754405e39f8cf7aeadbae3f7e0b60310">   50</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1log_1_1log.html#a754405e39f8cf7aeadbae3f7e0b60310">write_to</a>(</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      spdlog::level::level_enum lvl,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      spdlog::logger&amp; logger,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      Args&amp;&amp;... args</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    ) <span class="keyword">const</span> -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keywordflow">switch</span>(lvl) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">case</span> spdlog::level::off: <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">case</span> spdlog::level::trace:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>          <span class="keywordflow">if</span>(not this-&gt;loc_)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            logger.trace(fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            logger.trace(<span class="stringliteral">&quot;{}: {}&quot;</span>, this-&gt;loc_-&gt;function_name(), fmt::format(fmt, std::forward&lt;Args&gt;(args)...));</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">case</span> spdlog::level::debug:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>          <span class="keywordflow">if</span>(not this-&gt;loc_)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            logger.debug(fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            logger.debug(<span class="stringliteral">&quot;{}: {}&quot;</span>, this-&gt;loc_-&gt;function_name(), fmt::format(fmt, std::forward&lt;Args&gt;(args)...));</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">case</span> spdlog::level::info:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>          <span class="keywordflow">if</span>(not this-&gt;loc_)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            logger.info(fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            logger.info(<span class="stringliteral">&quot;{}: {}&quot;</span>, this-&gt;loc_-&gt;function_name(), fmt::format(fmt, std::forward&lt;Args&gt;(args)...));</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">case</span> spdlog::level::warn:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>          <span class="keywordflow">if</span>(not this-&gt;loc_)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            logger.warn(fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            logger.warn(<span class="stringliteral">&quot;{}: {}&quot;</span>, this-&gt;loc_-&gt;function_name(), fmt::format(fmt, std::forward&lt;Args&gt;(args)...));</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">case</span> spdlog::level::err:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>          <span class="keywordflow">if</span>(not this-&gt;loc_)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            logger.error(fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            logger.error(<span class="stringliteral">&quot;{}: {}&quot;</span>, this-&gt;loc_-&gt;function_name(), fmt::format(fmt, std::forward&lt;Args&gt;(args)...));</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">case</span> spdlog::level::critical:</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>          <span class="keywordflow">if</span>(not this-&gt;loc_)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            logger.critical(fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            logger.critical(<span class="stringliteral">&quot;{}: {}&quot;</span>, this-&gt;loc_-&gt;function_name(), fmt::format(fmt, std::forward&lt;Args&gt;(args)...));</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">case</span> spdlog::level::n_levels: <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="group__logging.html#gaebe2862c002ab7a673f4ba5038a905c7">   62</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#gaebe2862c002ab7a673f4ba5038a905c7">debug</a>(fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_function" href="group__logging.html#ga710e2061116b4efb6ecf6669f2f9a421">debug_to</a>(*spdlog::default_logger(), fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classfloppy_1_1log_1_1log.html#a472b9c3814dc6c063f85144e956a4499">  107</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1log_1_1log.html#a472b9c3814dc6c063f85144e956a4499">write</a>(</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      spdlog::level::level_enum lvl,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      Args&amp;&amp;... args</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    ) <span class="keyword">const</span> -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      this-&gt;<a class="code hl_function" href="classfloppy_1_1log_1_1log.html#a754405e39f8cf7aeadbae3f7e0b60310">write_to</a>(lvl, *spdlog::default_logger(), fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
 </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="group__logging.html#ga394535db66a7496bb7117bad991d8b14">   75</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#ga394535db66a7496bb7117bad991d8b14">info_to</a>(spdlog::logger&amp; logger, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    logger.info(fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classfloppy_1_1log_1_1log.html#a0d9297171a7d36cbab7f1cc430fbeec1">  124</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="classfloppy_1_1log_1_1log.html#a0d9297171a7d36cbab7f1cc430fbeec1">operator()</a>(</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      spdlog::level::level_enum lvl,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      spdlog::logger&amp; logger,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      Args&amp;&amp;... args</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    ) <span class="keyword">const</span> -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      this-&gt;<a class="code hl_function" href="classfloppy_1_1log_1_1log.html#a754405e39f8cf7aeadbae3f7e0b60310">write_to</a>(lvl, logger, fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
 </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="group__logging.html#gafdaa6e366f8bbdcd865a50a82c970d9a">   87</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#gafdaa6e366f8bbdcd865a50a82c970d9a">info</a>(fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_function" href="group__logging.html#ga394535db66a7496bb7117bad991d8b14">info_to</a>(*spdlog::default_logger(), fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="group__logging.html#ga2d508dd6ef0b0b0d9de2590b16d7a9f1">  142</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="group__logging.html#ga2d508dd6ef0b0b0d9de2590b16d7a9f1">operator()</a>(spdlog::level::level_enum lvl, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      this-&gt;<a class="code hl_function" href="classfloppy_1_1log_1_1log.html#a472b9c3814dc6c063f85144e956a4499">write</a>(lvl, fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
 </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="group__logging.html#ga4226f230f8451294f9117d972fc4d015">  100</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#ga4226f230f8451294f9117d972fc4d015">warn_to</a>(spdlog::logger&amp; logger, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    logger.warn(fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <a class="code hl_typedef" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option&lt;source_location&gt;</a> loc_;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  };</div>
 </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="group__logging.html#ga03e917030c7d8d1409cdab75da7ceecd">  112</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#ga03e917030c7d8d1409cdab75da7ceecd">warn</a>(fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_function" href="group__logging.html#ga4226f230f8451294f9117d972fc4d015">warn_to</a>(*spdlog::default_logger(), fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1log_1_1detail.html">  151</a></span>  <span class="keyword">namespace </span>detail</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">template</span> &lt;auto L&gt;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keyword">requires</span> std::is_same_v&lt;<span class="keyword">decltype</span>(L), spdlog::level::level_enum&gt;</div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="};">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">  155</a></span>    <span class="keyword">class</span> <a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">basic_log_helper</a></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>     <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>       <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">basic_log_helper</a>(<a class="code hl_typedef" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option&lt;source_location&gt;</a> <span class="keyword">const</span>&amp; loc = <a class="code hl_function" href="structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743">source_location::current</a>())</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>         : loc_(loc)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>       {}</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>       <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>       <span class="keyword">auto</span> write_to(spdlog::logger&amp; logger, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) <span class="keyword">const</span> -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>         <a class="code hl_class" href="classfloppy_1_1log_1_1log.html">log</a>(this-&gt;loc_)(L, logger, fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>       }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>       <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>       <span class="keyword">auto</span> write(fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) <span class="keyword">const</span> -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>         <a class="code hl_class" href="classfloppy_1_1log_1_1log.html">log</a>(this-&gt;loc_)(L, fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>       }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>       <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>       <span class="keyword">auto</span> operator()(spdlog::logger&amp; logger, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) <span class="keyword">const</span> -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>         this-&gt;write_to(logger, fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>       }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>       <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>       <span class="keyword">auto</span> operator()(fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) <span class="keyword">const</span> -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>         this-&gt;write(fmt, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>       }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>     <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      <a class="code hl_typedef" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option&lt;source_location&gt;</a> loc_;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    };</div>
 </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="group__logging.html#ga195e878b0ed7408d61836109edc78794">  125</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#ga195e878b0ed7408d61836109edc78794">error_to</a>(spdlog::logger&amp; logger, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    logger.error(fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  }</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  } <span class="comment">// namespace detail</span></div>
 </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00137" data-start="{" data-end="}">
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="group__logging.html#ga534b29837e55ef023b77119e94c9c80b">  137</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#ga534b29837e55ef023b77119e94c9c80b">error</a>(fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_function" href="group__logging.html#ga195e878b0ed7408d61836109edc78794">error_to</a>(*spdlog::default_logger(), fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="comment">// \brief Logs message with &lt;b&gt;trace&lt;/b&gt; level.</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="comment">// \headerfile floppy/logging.h</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <span class="comment">// \ingroup logging</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <span class="comment">// \details</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="comment">// This class is a wrapper around spdlog::logger.</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="comment">// Provides source location information in log messages.</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="comment">// Example usage syntax:</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="comment">// \code {.cpp}</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="comment">// floppy::log::trace()(&quot;Message&quot;); // logs message at info level to default logger</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="comment">// floppy::log::trace()(&quot;Message {}&quot;, 1); // logs message at info level to default logger with 1 as argument</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <span class="comment">// floppy::log::trace()(*spdlog::default_logger(), &quot;Message {} and {}&quot;, 1, 2); // logs message at info level to selected logger with 1 and 2 as arguments</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <span class="comment">// \endcode</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="comment">// If you want to log message without source location, pass &lt;code&gt;none&lt;/code&gt; to first pair of brackets:</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="comment">// \code {.cpp}</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  <span class="comment">// floppy::log::trace(none)(&quot;Message {} and {}&quot;, 1, 2);</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <span class="comment">// \endcode</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="comment">// \see source_location</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <span class="comment">// \see log</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="comment">// \see debug, info, warn, error, critical</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="foldopen" id="foldopen00208" data-start="{" data-end="}">
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1log_1_1level.html">  208</a></span>  <span class="keyword">namespace </span>level {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keyword">using namespace </span>spdlog::level;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  } <span class="comment">// namespace level</span></div>
 </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="group__logging.html#gabd43f0d810fd497d7ceb97fb453128af">  150</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#gabd43f0d810fd497d7ceb97fb453128af">critical_to</a>(spdlog::logger&amp; logger, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    logger.critical(fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  }</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <span class="keyword">using </span><a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">trace</a> = <a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">detail::basic_log_helper&lt;level::trace&gt;</a>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <span class="keyword">using </span><a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">debug</a> = <a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">detail::basic_log_helper&lt;level::debug&gt;</a>;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="keyword">using </span><a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">info</a> = <a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">detail::basic_log_helper&lt;level::info&gt;</a>;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <span class="keyword">using </span><a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">warn</a> = <a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">detail::basic_log_helper&lt;level::warn&gt;</a>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <span class="keyword">using </span><a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">error</a> = <a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">detail::basic_log_helper&lt;level::err&gt;</a>;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="keyword">using </span><a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">critical</a> = <a class="code hl_class" href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">detail::basic_log_helper&lt;level::critical&gt;</a>;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>} <span class="comment">// namespace floppy::log</span></div>
 </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00162" data-start="{" data-end="}">
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="group__logging.html#ga5bfd9e6e65784459fbcc3a8c8f3f3989">  162</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#ga5bfd9e6e65784459fbcc3a8c8f3f3989">critical</a>(fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <a class="code hl_function" href="group__logging.html#gabd43f0d810fd497d7ceb97fb453128af">critical_to</a>(*spdlog::default_logger(), fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  }</div>
-</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="group__logging.html#gae11a5862435d90c485efc280eb240a35">  176</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="group__logging.html#gae11a5862435d90c485efc280eb240a35">log_to</a>(level::level_enum level, spdlog::logger&amp; logger, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    logger.log(level, fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  }</div>
-</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="group__logging.html#ga9eaa5f9efa4ba3467f22464b2a28ce91">  189</a></span>  <span class="keyword">auto</span> log(level::level_enum level, fmt::format_string&lt;Args...&gt; <span class="keyword">const</span>&amp; fmt, Args&amp;&amp;... args) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <a class="code hl_function" href="group__logging.html#gae11a5862435d90c485efc280eb240a35">log_to</a>(level, *spdlog::default_logger(), fmt, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  }</div>
-</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>} <span class="comment">// namespace floppy::log</span></div>
-</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="ttc" id="agroup__logging_html_ga03e917030c7d8d1409cdab75da7ceecd"><div class="ttname"><a href="group__logging.html#ga03e917030c7d8d1409cdab75da7ceecd">floppy::log::warn</a></div><div class="ttdeci">auto warn(fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to default logger with level warn.</div><div class="ttdef"><b>Definition</b> <a href="#l00112">logging.h:112</a></div></div>
-<div class="ttc" id="agroup__logging_html_ga1958617b608e95656ef732069cb6a51f"><div class="ttname"><a href="group__logging.html#ga1958617b608e95656ef732069cb6a51f">floppy::log::trace</a></div><div class="ttdeci">auto trace(fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to default logger with level trace.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">logging.h:37</a></div></div>
-<div class="ttc" id="agroup__logging_html_ga195e878b0ed7408d61836109edc78794"><div class="ttname"><a href="group__logging.html#ga195e878b0ed7408d61836109edc78794">floppy::log::error_to</a></div><div class="ttdeci">auto error_to(spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to given loger with level err.</div><div class="ttdef"><b>Definition</b> <a href="#l00125">logging.h:125</a></div></div>
-<div class="ttc" id="agroup__logging_html_ga394535db66a7496bb7117bad991d8b14"><div class="ttname"><a href="group__logging.html#ga394535db66a7496bb7117bad991d8b14">floppy::log::info_to</a></div><div class="ttdeci">auto info_to(spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to given loger with level info.</div><div class="ttdef"><b>Definition</b> <a href="#l00075">logging.h:75</a></div></div>
-<div class="ttc" id="agroup__logging_html_ga4226f230f8451294f9117d972fc4d015"><div class="ttname"><a href="group__logging.html#ga4226f230f8451294f9117d972fc4d015">floppy::log::warn_to</a></div><div class="ttdeci">auto warn_to(spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to given loger with level warn.</div><div class="ttdef"><b>Definition</b> <a href="#l00100">logging.h:100</a></div></div>
-<div class="ttc" id="agroup__logging_html_ga534b29837e55ef023b77119e94c9c80b"><div class="ttname"><a href="group__logging.html#ga534b29837e55ef023b77119e94c9c80b">floppy::log::error</a></div><div class="ttdeci">auto error(fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to default logger with level err.</div><div class="ttdef"><b>Definition</b> <a href="#l00137">logging.h:137</a></div></div>
-<div class="ttc" id="agroup__logging_html_ga5bfd9e6e65784459fbcc3a8c8f3f3989"><div class="ttname"><a href="group__logging.html#ga5bfd9e6e65784459fbcc3a8c8f3f3989">floppy::log::critical</a></div><div class="ttdeci">auto critical(fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to default logger with level critical.</div><div class="ttdef"><b>Definition</b> <a href="#l00162">logging.h:162</a></div></div>
-<div class="ttc" id="agroup__logging_html_ga710e2061116b4efb6ecf6669f2f9a421"><div class="ttname"><a href="group__logging.html#ga710e2061116b4efb6ecf6669f2f9a421">floppy::log::debug_to</a></div><div class="ttdeci">auto debug_to(spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to given loger with level debug.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">logging.h:50</a></div></div>
-<div class="ttc" id="agroup__logging_html_gabd43f0d810fd497d7ceb97fb453128af"><div class="ttname"><a href="group__logging.html#gabd43f0d810fd497d7ceb97fb453128af">floppy::log::critical_to</a></div><div class="ttdeci">auto critical_to(spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to given loger with level critical.</div><div class="ttdef"><b>Definition</b> <a href="#l00150">logging.h:150</a></div></div>
-<div class="ttc" id="agroup__logging_html_gae11a5862435d90c485efc280eb240a35"><div class="ttname"><a href="group__logging.html#gae11a5862435d90c485efc280eb240a35">floppy::log::log_to</a></div><div class="ttdeci">auto log_to(level::level_enum level, spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to given loger with given level.</div><div class="ttdef"><b>Definition</b> <a href="#l00176">logging.h:176</a></div></div>
-<div class="ttc" id="agroup__logging_html_gaebe2862c002ab7a673f4ba5038a905c7"><div class="ttname"><a href="group__logging.html#gaebe2862c002ab7a673f4ba5038a905c7">floppy::log::debug</a></div><div class="ttdeci">auto debug(fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to default logger with level debug.</div><div class="ttdef"><b>Definition</b> <a href="#l00062">logging.h:62</a></div></div>
-<div class="ttc" id="agroup__logging_html_gafdaa6e366f8bbdcd865a50a82c970d9a"><div class="ttname"><a href="group__logging.html#gafdaa6e366f8bbdcd865a50a82c970d9a">floppy::log::info</a></div><div class="ttdeci">auto info(fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to default logger with level info.</div><div class="ttdef"><b>Definition</b> <a href="#l00087">logging.h:87</a></div></div>
-<div class="ttc" id="agroup__logging_html_gafe5b43f7e92b1290fa979606a9d8bd59"><div class="ttname"><a href="group__logging.html#gafe5b43f7e92b1290fa979606a9d8bd59">floppy::log::trace_to</a></div><div class="ttdeci">auto trace_to(spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to given loger with level trace.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">logging.h:25</a></div></div>
-<div class="ttc" id="anamespacefloppy_1_1log_html"><div class="ttname"><a href="namespacefloppy_1_1log.html">floppy::log</a></div><div class="ttdoc">Namespace providing access to logging facilities.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">logging.h:10</a></div></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="ttc" id="aclassfloppy_1_1log_1_1detail_1_1basic__log__helper_html"><div class="ttname"><a href="classfloppy_1_1log_1_1detail_1_1basic__log__helper.html">floppy::log::detail::basic_log_helper</a></div><div class="ttdef"><b>Definition</b> <a href="#l00155">logging.h:156</a></div></div>
+<div class="ttc" id="aclassfloppy_1_1log_1_1log_html"><div class="ttname"><a href="classfloppy_1_1log_1_1log.html">floppy::log::log</a></div><div class="ttdoc">Logs message with given level.</div><div class="ttdef"><b>Definition</b> <a href="#l00030">logging.h:31</a></div></div>
+<div class="ttc" id="aclassfloppy_1_1log_1_1log_html_a0d9297171a7d36cbab7f1cc430fbeec1"><div class="ttname"><a href="classfloppy_1_1log_1_1log.html#a0d9297171a7d36cbab7f1cc430fbeec1">floppy::log::log::operator()</a></div><div class="ttdeci">auto operator()(spdlog::level::level_enum lvl, spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) const -&gt; void</div><div class="ttdoc">Logs message to given loger with given level.</div><div class="ttdef"><b>Definition</b> <a href="#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="aclassfloppy_1_1log_1_1log_html_a472b9c3814dc6c063f85144e956a4499"><div class="ttname"><a href="classfloppy_1_1log_1_1log.html#a472b9c3814dc6c063f85144e956a4499">floppy::log::log::write</a></div><div class="ttdeci">auto write(spdlog::level::level_enum lvl, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) const -&gt; void</div><div class="ttdoc">Logs message to default logger with given level.</div><div class="ttdef"><b>Definition</b> <a href="#l00107">logging.h:107</a></div></div>
+<div class="ttc" id="aclassfloppy_1_1log_1_1log_html_a754405e39f8cf7aeadbae3f7e0b60310"><div class="ttname"><a href="classfloppy_1_1log_1_1log.html#a754405e39f8cf7aeadbae3f7e0b60310">floppy::log::log::write_to</a></div><div class="ttdeci">auto write_to(spdlog::level::level_enum lvl, spdlog::logger &amp;logger, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) const -&gt; void</div><div class="ttdoc">Logs message to given loger with given level.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">logging.h:50</a></div></div>
+<div class="ttc" id="aclassfloppy_1_1log_1_1log_html_ab5686bf434e786fc6b88550cedded5ec"><div class="ttname"><a href="classfloppy_1_1log_1_1log.html#ab5686bf434e786fc6b88550cedded5ec">floppy::log::log::log</a></div><div class="ttdeci">constexpr log(option&lt; source_location &gt; const &amp;loc=source_location::current())</div><div class="ttdoc">Constructs log object with source location information.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">logging.h:36</a></div></div>
+<div class="ttc" id="agroup__aliases_html_gaa202473f296b2492d9239773369181af"><div class="ttname"><a href="group__aliases.html#gaa202473f296b2492d9239773369181af">floppy::types::option</a></div><div class="ttdeci">std::optional&lt; T &gt; option</div><div class="ttdoc">&lt; Alias for unsigned long long.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00050">types.h:50</a></div></div>
+<div class="ttc" id="agroup__logging_html_ga2d508dd6ef0b0b0d9de2590b16d7a9f1"><div class="ttname"><a href="group__logging.html#ga2d508dd6ef0b0b0d9de2590b16d7a9f1">floppy::log::log::operator()</a></div><div class="ttdeci">void operator()(spdlog::level::level_enum lvl, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) const</div><div class="ttdoc">Logs message to default logger with given level.</div><div class="ttdef"><b>Definition</b> <a href="#l00142">logging.h:142</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1log_html"><div class="ttname"><a href="namespacefloppy_1_1log.html">floppy::log</a></div><div class="ttdoc">Namespace providing access to logging facilities.</div><div class="ttdef"><b>Definition</b> <a href="#l00011">logging.h:11</a></div></div>
+<div class="ttc" id="astructfloppy_1_1source__location_html_aed70029e75ad4b575d62706be467e743"><div class="ttname"><a href="structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743">floppy::source_location::current</a></div><div class="ttdeci">static consteval auto current(char const *file=UNKNOWN, char const *function=UNKNOWN, uint_least32_t line=0, uint_least32_t column=0) noexcept -&gt; source_location</div><div class="ttdoc">Returns current source location.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00173">backports.h:173</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><b>logging.h</b></li>
-    <li class="footer">Generated on Thu Jun 27 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Fri Jun 28 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>
