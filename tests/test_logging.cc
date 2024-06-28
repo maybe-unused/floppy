@@ -3,17 +3,21 @@
 
 TEST(Logging, Simple)
 {
-  namespace log = floppy::log;
+  namespace llog = floppy::log;
   spdlog::set_level(spdlog::level::trace);
   auto str = std::string_view("Floppy");
-  log::log(log::level::trace, "Hello, {}!", str);
-  log::log(log::level::debug, "Hello, {}!", str);
-  log::log(log::level::info, "Hello, {}!", str);
-  log::log(log::level::warn, "Hello, {}!", str);
-  log::log(log::level::err, "Hello, {}!", str);
-  log::error("Hello, {}!", str);
-  log::warn("Hello, {}!", str);
-  log::info("Hello, {}!", str);
-  log::debug("Hello, {}!", str);
-  log::trace("Hello, {}!", str);
+  llog::log()(llog::level::trace, "{}", 1);
+  llog::log()(llog::level::debug, "{}", 2);
+  llog::log()(llog::level::info, "{}", 3);
+  llog::log()(llog::level::warn, "{}", 4);
+  llog::log()(llog::level::err, "{}", 5);
+  llog::log()(llog::level::critical, "{}", 6);
+  llog::log()(llog::level::off, "{}", 7);
+  llog::log()(llog::level::trace, "{}", str);
+  llog::log()(llog::level::debug, "{}", str);
+  llog::log()(llog::level::info, "{}", str);
+  llog::log()(llog::level::warn, "{}", str);
+  llog::log()(llog::level::err, "{}", str);
+  llog::log()(llog::level::critical, "{}", str);
+  llog::log()(llog::level::off, "{}", str);
 }
