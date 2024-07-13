@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>Floppy: math.h Source File</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="../../toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/whs31/floppy" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Floppy
+   &#160;<span id="projectnumber">1.1.5</span>
+   </div>
+   <div id="projectbrief">Extensions for C++ stdlib</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Search');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('df/db1/math_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">math.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;numbers&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;compare&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;floppy/detail/export.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;floppy/detail/concepts.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/ddf/namespacefloppy_1_1math.html">floppy::math</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d4/d94/namespacefloppy_1_1math_1_1numbers.html">   14</a></span>  <span class="keyword">inline</span> <span class="keyword">namespace </span>numbers</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">namespace </span>detail</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      <span class="keyword">template</span> &lt;concepts::num T, f64 V&gt;</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html">   19</a></span>      <span class="keyword">struct </span><a class="code hl_struct" href="../../d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html">number_base</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">using </span>type = T;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> type value = T{V};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">constexpr</span> <a class="code hl_struct" href="../../d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html">number_base</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">constexpr</span> <span class="keyword">operator</span> type()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;value; }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">template</span> &lt;concepts::num U&gt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">constexpr</span> <span class="keyword">auto</span> operator-(U <span class="keyword">const</span>&amp; other) <span class="keyword">const</span> -&gt; type { <span class="keywordflow">return</span> this-&gt;value - other; }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">template</span> &lt;concepts::num U&gt;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">constexpr</span> <span class="keyword">auto</span> operator*(U <span class="keyword">const</span>&amp; other) <span class="keyword">const</span> -&gt; type { <span class="keywordflow">return</span> this-&gt;value * other; }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">template</span> &lt;concepts::num U&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">constexpr</span> <span class="keyword">auto</span> operator/(U <span class="keyword">const</span>&amp; other) <span class="keyword">const</span> -&gt; type { <span class="keywordflow">return</span> this-&gt;value / other; }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">template</span> &lt;concepts::num U&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">constexpr</span> <span class="keyword">auto</span> operator+(U <span class="keyword">const</span>&amp; other) <span class="keyword">const</span> -&gt; type { <span class="keywordflow">return</span> this-&gt;value + other; }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      };</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    } <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">template</span> &lt;concepts::num T = f64&gt;</div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html">   42</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html">pi</a> : <a class="code hl_struct" href="../../d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html">detail::number_base</a>&lt;T, std::numbers::pi&gt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>     <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      [[maybe_unused]]</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      [[nodiscard]]</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keyword">constexpr</span> <span class="keyword">auto</span> as_degrees() <span class="keyword">const</span> -&gt; T { <span class="keywordflow">return</span> 180.0; } <span class="comment">// NOLINT(*-magic-numbers)</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    };</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  } <span class="comment">// namespace numbers</span></div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html#afcdfac7e6f7b9774e157db98c0d635c9">   59</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#afcdfac7e6f7b9774e157db98c0d635c9">eq</a>(T a, T b) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordflow">return</span> std::abs(a - b) &lt;= std::numeric_limits&lt;T&gt;::epsilon();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="keywordflow">return</span> a == b;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html#aa72828ebfa4d78b2f6a71812418cd483">   75</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#aa72828ebfa4d78b2f6a71812418cd483">approx_eq</a>(T a, T b, T epsilon_factor) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keywordflow">return</span> std::abs(a - b) &lt;= std::numeric_limits&lt;T&gt;::epsilon() * epsilon_factor;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keywordflow">return</span> a == b;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html#afb084ce4a1ef170a2a6e5c000f43398a">   88</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#afb084ce4a1ef170a2a6e5c000f43398a">is_null</a>(T num) -&gt; <span class="keywordtype">bool</span> { <span class="keywordflow">return</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#afcdfac7e6f7b9774e157db98c0d635c9">eq</a>(num, T(0.0)); }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html#a000c8ac590dc1840dda974d4529f08b4">   98</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#a000c8ac590dc1840dda974d4529f08b4">strong_compare</a>(T a, T b) -&gt; std::strong_ordering {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <span class="keywordflow">if</span>(std::isinf(a) and std::isinf(b))</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">return</span> std::strong_ordering::equal;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="keywordflow">if</span>(std::isnan(a) or std::isnan(b))</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span> std::strong_ordering::equal;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      <span class="keywordflow">return</span> std::abs(a - b) &lt;= std::numeric_limits&lt;T&gt;::epsilon()</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        ? std::strong_ordering::equal</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        : (a &lt; b</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            ? std::strong_ordering::less</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            : std::strong_ordering::greater</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>          );</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="keywordflow">return</span> a == b</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        ? std::strong_ordering::equal</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        : (a &lt; b</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            ? std::strong_ordering::less</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            : std::strong_ordering::greater</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>          );</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  }</div>
+</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
+<div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html#aa722c8b624bbd64c4cbdd47bfd285c5d">  126</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#aa722c8b624bbd64c4cbdd47bfd285c5d">to_radians</a>(T deg) -&gt; T {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(deg * std::numbers::pi_v&lt;T&gt; / <a class="code hl_struct" href="../../d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html">pi&lt;T&gt;</a>().as_degrees());</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  }</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
+<div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html#af2b111b7ea138d5c9b5e0a2aaaf8e98d">  136</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#af2b111b7ea138d5c9b5e0a2aaaf8e98d">to_degrees</a>(T rad) -&gt; T {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(rad * <a class="code hl_struct" href="../../d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html">pi&lt;T&gt;</a>().as_degrees() / std::numbers::pi_v&lt;T&gt;);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  }</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  <span class="keyword">template</span> &lt;std::<span class="keywordtype">float</span>ing_po<span class="keywordtype">int</span> T&gt;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html#a42b9d9a7dff8b3db60c6e956976745c3">  146</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#a42b9d9a7dff8b3db60c6e956976745c3">log</a>(T base, T num) -&gt; T { <span class="keywordflow">return</span> std::log(num) / std::log(base); }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html#a1de30a44dfef08af9546a545e064b4bb">  153</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#a42b9d9a7dff8b3db60c6e956976745c3">log</a>(T num) -&gt; T { <span class="keywordflow">return</span> std::log(num); }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html#a751139c04bc5de9f5873901e61a031ed">  159</a></span>  [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#a751139c04bc5de9f5873901e61a031ed">div_euclid</a>(T a, T b) -&gt; T {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keyword">auto</span> <span class="keyword">const</span> q = std::trunc(a / b);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      <span class="keywordflow">if</span>(std::fmod(a, b) &lt; 0.0)</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">return</span> b &gt; 0.0 ? q - 1.0 : q + 1.0;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      <span class="keywordflow">if</span>(a % b &lt; 0)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">return</span> b &gt; 0 ? q - 1 : q + 1;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">return</span> q;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  }</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="../../d5/ddf/namespacefloppy_1_1math.html#add770f95287eea461bee0dea63476fb2">  175</a></span>  [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/ddf/namespacefloppy_1_1math.html#add770f95287eea461bee0dea63476fb2">rem_euclid</a>(T a, T b) -&gt; T {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <span class="keyword">auto</span> <span class="keyword">const</span> r = std::fmod(a, b);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      <span class="keywordflow">return</span> r &lt; 0.0 ? r + std::abs(b) : r;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      <span class="keyword">auto</span> <span class="keyword">const</span> r = a % b;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>      <span class="keywordflow">return</span> r &lt; 0 ? r + std::abs(b) : r;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  }</div>
+</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>} <span class="comment">// namespace floppy::math</span></div>
+</div>
+<div class="ttc" id="anamespacefloppy_1_1math_html"><div class="ttname"><a href="../../d5/ddf/namespacefloppy_1_1math.html">floppy::math</a></div><div class="ttdoc">Math namespace.</div><div class="ttdef"><b>Definition</b> <a href="#l00011">math.h:12</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1math_html_a000c8ac590dc1840dda974d4529f08b4"><div class="ttname"><a href="../../d5/ddf/namespacefloppy_1_1math.html#a000c8ac590dc1840dda974d4529f08b4">floppy::math::strong_compare</a></div><div class="ttdeci">constexpr auto strong_compare(T a, T b) -&gt; std::strong_ordering</div><div class="ttdoc">Three-ways compare two numbers, forcing them to strong_order.</div><div class="ttdef"><b>Definition</b> <a href="#l00098">math.h:98</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1math_html_a42b9d9a7dff8b3db60c6e956976745c3"><div class="ttname"><a href="../../d5/ddf/namespacefloppy_1_1math.html#a42b9d9a7dff8b3db60c6e956976745c3">floppy::math::log</a></div><div class="ttdeci">constexpr auto log(T base, T num) -&gt; T</div><div class="ttdoc">Returns logarithm of a number in a given base.</div><div class="ttdef"><b>Definition</b> <a href="#l00146">math.h:146</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1math_html_a751139c04bc5de9f5873901e61a031ed"><div class="ttname"><a href="../../d5/ddf/namespacefloppy_1_1math.html#a751139c04bc5de9f5873901e61a031ed">floppy::math::div_euclid</a></div><div class="ttdeci">auto div_euclid(T a, T b) -&gt; T</div><div class="ttdoc">Calculates Euclidean division, the matching method for rem_euclid.</div><div class="ttdef"><b>Definition</b> <a href="#l00159">math.h:159</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1math_html_aa722c8b624bbd64c4cbdd47bfd285c5d"><div class="ttname"><a href="../../d5/ddf/namespacefloppy_1_1math.html#aa722c8b624bbd64c4cbdd47bfd285c5d">floppy::math::to_radians</a></div><div class="ttdeci">constexpr auto to_radians(T deg) -&gt; T</div><div class="ttdoc">Converts degrees to radians.</div><div class="ttdef"><b>Definition</b> <a href="#l00126">math.h:126</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1math_html_aa72828ebfa4d78b2f6a71812418cd483"><div class="ttname"><a href="../../d5/ddf/namespacefloppy_1_1math.html#aa72828ebfa4d78b2f6a71812418cd483">floppy::math::approx_eq</a></div><div class="ttdeci">constexpr auto approx_eq(T a, T b, T epsilon_factor) -&gt; bool</div><div class="ttdoc">Returns true if numbers are approximately equal.</div><div class="ttdef"><b>Definition</b> <a href="#l00075">math.h:75</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1math_html_add770f95287eea461bee0dea63476fb2"><div class="ttname"><a href="../../d5/ddf/namespacefloppy_1_1math.html#add770f95287eea461bee0dea63476fb2">floppy::math::rem_euclid</a></div><div class="ttdeci">auto rem_euclid(T a, T b) -&gt; T</div><div class="ttdoc">Calculates the least nonnegative remainder of self (mod rhs).</div><div class="ttdef"><b>Definition</b> <a href="#l00175">math.h:175</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1math_html_af2b111b7ea138d5c9b5e0a2aaaf8e98d"><div class="ttname"><a href="../../d5/ddf/namespacefloppy_1_1math.html#af2b111b7ea138d5c9b5e0a2aaaf8e98d">floppy::math::to_degrees</a></div><div class="ttdeci">constexpr auto to_degrees(T rad) -&gt; T</div><div class="ttdoc">Converts radians to degrees.</div><div class="ttdef"><b>Definition</b> <a href="#l00136">math.h:136</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1math_html_afb084ce4a1ef170a2a6e5c000f43398a"><div class="ttname"><a href="../../d5/ddf/namespacefloppy_1_1math.html#afb084ce4a1ef170a2a6e5c000f43398a">floppy::math::is_null</a></div><div class="ttdeci">constexpr auto is_null(T num) -&gt; bool</div><div class="ttdoc">Returns true if type is equal to zero (number specific)</div><div class="ttdef"><b>Definition</b> <a href="#l00088">math.h:88</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1math_html_afcdfac7e6f7b9774e157db98c0d635c9"><div class="ttname"><a href="../../d5/ddf/namespacefloppy_1_1math.html#afcdfac7e6f7b9774e157db98c0d635c9">floppy::math::eq</a></div><div class="ttdeci">constexpr auto eq(T a, T b) -&gt; bool</div><div class="ttdoc">Returns true if numbers are equal.</div><div class="ttdef"><b>Definition</b> <a href="#l00059">math.h:59</a></div></div>
+<div class="ttc" id="astructfloppy_1_1math_1_1numbers_1_1detail_1_1number__base_html"><div class="ttname"><a href="../../d9/d04/structfloppy_1_1math_1_1numbers_1_1detail_1_1number__base.html">floppy::math::numbers::detail::number_base</a></div><div class="ttdef"><b>Definition</b> <a href="#l00019">math.h:20</a></div></div>
+<div class="ttc" id="astructfloppy_1_1math_1_1numbers_1_1pi_html"><div class="ttname"><a href="../../d2/d47/structfloppy_1_1math_1_1numbers_1_1pi.html">floppy::math::numbers::pi</a></div><div class="ttdef"><b>Definition</b> <a href="#l00042">math.h:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><a class="el" href="../../dir_a70aa49210f20f6d80e3cfefc70580f7.html">detail</a></li><li class="navelem"><b>math.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
