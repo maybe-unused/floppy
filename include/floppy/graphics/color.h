@@ -377,12 +377,44 @@ namespace floppy::gfx
       constexpr auto operator!=(color::hsva_t const& other) const -> bool { return not (*this == other); }
     };
 
-    struct cmyk_t
+    struct cmyk_t : public traits::formattable<color::hsv_t, char>
     {
       f32 c = 0.0F;
       f32 m = 0.0F;
       f32 y = 0.0F;
       f32 k = 0.0F;
+
+      constexpr cmyk_t(const f32 c, const f32 m, const f32 y, const f32 k)
+        : c{c}
+        , m{m}
+        , y{y}
+        , k{k}
+      {}
+
+      [[nodiscard]] constexpr auto to_rgb() const -> std::array<u8, 3> {
+        return {
+          static_cast<u8>(255.0F * (1.0F - this->c) * (1.0F - this->k)),
+          static_cast<u8>(255.0F * (1.0F - this->m) * (1.0F - this->k)),
+          static_cast<u8>(255.0F * (1.0F - this->y) * (1.0F - this->k))
+        };
+      }
+
+      [[nodiscard]] static constexpr auto from_rgb(const u8 r, const u8 g, const u8 b) -> color::cmyk_t {
+        const auto tmp_rgb = std::array<f32, 3>{
+          static_cast<f32>(r) / 255.0F,
+          static_cast<f32>(g) / 255.0F,
+          static_cast<f32>(b) / 255.0F
+        };
+        const auto k = 1 - std::max(std::max(tmp_rgb[0], tmp_rgb[1]), tmp_rgb[2]);
+        const auto c = (1 - tmp_rgb[0] - k) / (1 - k);
+        const auto m = (1 - tmp_rgb[1] - k) / (1 - k);
+        const auto y = (1 - tmp_rgb[2] - k) / (1 - k);
+        return {c, m, y, k};
+      }
+
+      [[nodiscard]] virtual auto to_string() const -> std::string override {
+        return fmt::format("({} {} {} {})", this->c, this->m, this->y, this->k);
+      }
 
       constexpr auto operator==(color::cmyk_t const& other) const -> bool {
         return math::approx_eq(this->c, other.c, 3.0F)
@@ -391,16 +423,52 @@ namespace floppy::gfx
           and math::approx_eq(this->k, other.k, 3.0F);
       }
 
-      constexpr auto operator!=(color::cmyk_t const& other) const -> bool { return not (*this == other); }
+
+      constexpr auto operator!=(color::cmyk_t const& other) const -> bool
+      {
+        return not (*this == other);
+      }
     };
 
-    struct cmyka_t
+    struct cmyka_t : public traits::formattable<color::hsv_t, char>
     {
       f32 c = 0.0F;
       f32 m = 0.0F;
       f32 y = 0.0F;
       f32 k = 0.0F;
       f32 a = 1.0F;
+
+      constexpr cmyka_t(const f32 c, const f32 m, const f32 y, const f32 k, const f32 a)
+        : c{c}
+        , m{m}
+        , y{y}
+        , k{k}
+        , a{a}
+      {}
+
+      [[nodiscard]] constexpr auto to_rgba() const -> std::array<u8, 4> {
+        return {
+          static_cast<u8>(255.0F * (1.0F - this->c) * (1.0F - this->k)),
+          static_cast<u8>(255.0F * (1.0F - this->m) * (1.0F - this->k)),
+          static_cast<u8>(255.0F * (1.0F - this->y) * (1.0F - this->k)),
+          static_cast<u8>(255.0F * this->a)
+        };
+      }
+
+      [[nodiscard]] static constexpr auto from_rgba(const u8 r, const u8 g, const u8 b, const u8 a) -> color::cmyka_t
+      {
+        auto tmp_cmyk = cmyk_t::from_rgb(r, g, b);
+        return {
+          tmp_cmyk.c,
+          tmp_cmyk.m,
+          tmp_cmyk.y,
+          tmp_cmyk.k,
+          static_cast<f32>(a)/255.F};
+      }
+
+      [[nodiscard]] virtual auto to_string() const -> std::string override {
+        return fmt::format("({} {} {} {} {})", this->c, this->m, this->y, this->k, this->a);
+      }
 
       constexpr auto operator==(color::cmyka_t const& other) const -> bool {
         return math::approx_eq(this->c, other.c, 3.0F)
@@ -547,6 +615,31 @@ namespace floppy::gfx
       this->b_ = static_cast<f32>(t[2]) / mask<f32>;
       this->a_ = static_cast<f32>(t[3]) / mask<f32>;
     }
+
+    /// \brief Constructs a color from CMYK values.
+    /// \param cmyk CMYK color value.
+    /// \see from_cmyk
+    constexpr explicit color(color::cmyk_t const& cmyk)
+      : a_{1.0F}
+    {
+      auto const t = cmyk.to_rgb();
+      this->r_ = static_cast<f32>(t[0]) / mask<f32>;
+      this->g_ = static_cast<f32>(t[1]) / mask<f32>;
+      this->b_ = static_cast<f32>(t[2]) / mask<f32>;
+    }
+
+    /// \brief Constructs a color from CMYKA values.
+    /// \param cmyka CMYKA color value.
+    /// \see from_cmyka
+    constexpr explicit color(color::cmyka_t const& cmyka)
+    {
+      auto const t = cmyka.to_rgba();
+      this->r_ = static_cast<f32>(t[0]) / mask<f32>;
+      this->g_ = static_cast<f32>(t[1]) / mask<f32>;
+      this->b_ = static_cast<f32>(t[2]) / mask<f32>;
+      this->a_ = static_cast<f32>(t[3]) / mask<f32>;
+    }
+
 
     /// \brief Returns the string representation of the color.
     /// \details Example: <code>#RRGGBBAA</code>.
@@ -731,8 +824,23 @@ namespace floppy::gfx
       };
     }
 
-    // todo: hsv
-    // todo: cmyk
+    /// \brief Returns CMYK color components as <tt>color::cmyk_t</tt> type.
+    /// \details If you need the individual color components, use \ref cyan(), \ref magenta(), \ref yellow(), \ref black() instead.
+    /// \returns CMYK color components as <tt>color::cmyk_t</tt> type.
+    /// \see cmyka()
+    /// \see rgb()
+    [[nodiscard]] constexpr auto cmyk() const -> color::cmyk_t {
+      return color::cmyk_t::from_rgb(this->red(), this->green(), this->blue());
+    }
+
+    /// \brief Returns CMYKA color components as <tt>color::cmyka_t</tt> type.
+    /// \details If you need the individual color components, use \ref cyan(), \ref magenta(), \ref yellow(), \ref black(), \ref alpha() instead.
+    /// \returns CMYKA color components as <tt>color::cmyka_t</tt> type.
+    /// \see cmyk()
+    /// \see rgba()
+    [[nodiscard]] constexpr auto cmyka() const -> color::cmyka_t {
+      return color::cmyka_t::from_rgba(this->red(), this->green(), this->blue(), this->alpha());
+    }
 
   #if defined(FL_QT_GUI) || defined(FL_DOC)
     /// \brief Returns the color as <tt>QColor</tt> object.
@@ -869,6 +977,18 @@ namespace floppy::gfx
       return color(hsva);
     }
 
+    /// \brief Construct a color from CMYK values.
+    /// \param cmyk CMYK color value.
+    [[nodiscard]] static constexpr auto from_cmyk(color::cmyk_t const& cmyk) -> color {
+      return color(cmyk);
+    }
+
+    /// \brief Construct a color from CMYKA values.
+    /// \param cmyka CMYKA color value.
+    [[nodiscard]] static constexpr auto from_cmyka(color::cmyka_t const& cmyka) -> color {
+      return color(cmyka);
+    }
+
   #if defined(FL_QT_GUI) || defined(FL_DOC)
     /// \brief Constructs a color from a <b>QColor</b> class instance.
     /// \param col <b>QColor</b> class instance.
@@ -888,7 +1008,7 @@ namespace floppy::gfx
     f32 r_;
     f32 g_;
     f32 b_;
-    f32 a_;
+    f32 a_ {1.0F};
   };
 
   static_assert(color(50, 168, 82).rgb() == color(0x32A852FF).rgb());
