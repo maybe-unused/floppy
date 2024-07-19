@@ -12,7 +12,7 @@ namespace floppy
       this->load();
       this->valid_ = true;
     } catch(std::exception const& ex) {
-      log::error()("failed to load configuration file: {}", ex.what());
+      log::error("config: failed to load configuration file: {}", ex.what());
       this->valid_ = false;
     }
   }
@@ -32,7 +32,7 @@ namespace floppy
       try {
         this->save();
       } catch(std::exception const& ex) {
-        log::error()("config: failed to save configuration file: {}", ex.what());
+        log::error("config: failed to save configuration file: {}", ex.what());
       }
     }
   }
@@ -62,7 +62,7 @@ namespace floppy
   auto configuration_file<F, T>::load() noexcept(false) -> void {
     namespace fs = std::filesystem;
     if(not fs::exists(this->path())) {
-      log::debug()("file does not exists, creating default one");
+      log::debug("config: file does not exists, creating default one");
       this->revert_to_default();
       return;
     }
@@ -76,7 +76,7 @@ namespace floppy
 
   template <auto F, typename T> requires serialization::serializable_and_deserializable<F, T, char>
   auto configuration_file<F, T>::save() const noexcept(false) -> void try {
-    log::trace()("saving to {}", this->path().string());
+    log::trace("config: saving to {}", this->path().string());
     auto str = serialization::serialize<F, T>(this->values_);
     this->write_to_file(str);
   } catch(std::exception const& ex) {
@@ -125,11 +125,11 @@ namespace floppy
         | fs::perms::others_read
         | fs::perms::others_exec;
       fs::permissions(this->path(), permissions);
-      log::trace()("rw file permissions set to: {}", this->path().string());
+      log::trace("config: rw file permissions set to: {}", this->path().string());
     }
     handle << content;
     if(not handle.good())
       throw std::runtime_error("failed to write to file at " + this->path().string());
-    log::trace()("file ({} bytes) written to path: {}", content.size(), this->path().string());
+    log::trace("config: file ({} bytes) written to path: {}", content.size(), this->path().string());
   }
 } // namespace floppy
