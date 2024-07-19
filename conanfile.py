@@ -12,7 +12,7 @@ except ImportError:
 
 class FloppyRecipe(ConanFile):
     name = "floppy"
-    version = "1.2.2"
+    version = "1.2.3"
     description = "Library that augments and extends C++ standard library"
     author = "whs31 <whs31@github.io>"
     topics = ("logging", "coreutils", "utility")

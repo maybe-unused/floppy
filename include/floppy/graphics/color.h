@@ -10,7 +10,7 @@
 #include <floppy/traits.h>
 
 #if defined(FL_QT_GUI) || defined(FL_DOC)
-#  include <qcolor.h>
+# include <qcolor.h>
 #endif
 
 
@@ -21,16 +21,13 @@ namespace floppy::gfx
   namespace detail
   {
     [[nodiscard]] constexpr auto hex_to_dec(char const c) -> i32 {
-      if (c >= '0' and c <= '9') {
+      if (c >= '0' and c <= '9')
         return c - '0';
-      }
-      if (c >= 'a' and c <= 'f') {
+      if (c >= 'a' and c <= 'f') 
         return c - 'a' + 10;
-      }
-      if (c >= 'A' and c <= 'F') {
+      if (c >= 'A' and c <= 'F') 
         return c - 'A' + 10;
-      }
-        throw std::invalid_argument("invalid hex character");
+      throw std::invalid_argument("invalid hex character");
     }
 
     template <typename T> constexpr auto min(T&& v) -> T { return std::forward<T>(v); }
@@ -954,7 +951,8 @@ namespace floppy::gfx
         static_cast<u8>(r * mask<f32>),
         static_cast<u8>(g * mask<f32>),
         static_cast<u8>(b * mask<f32>),
-        static_cast<u8>(a * mask<f32>)};
+        static_cast<u8>(a * mask<f32>)
+      };
     }
 
     /// \brief Constructs an opaque color from HSL values.
@@ -1023,11 +1021,3 @@ namespace floppy::gfx
   static_assert(color("32a85280").rgba() == color(0x32A85280).rgba());
   static_assert(color::from_floats(0.1966F, 0.659F, 0.322F, 0.505F).rgba() == color("32a85280").rgba());
 } // namespace floppy::gfx
-
-// #32a852
-// 50 168 82 rgb
-// 0x32a852
-// 70% 0% 51% 34% cmyk
-// 136 70 66 hsv
-// 136 54 43 hsl
-// https://github.com/proxict/constexpr-color/blob/master/include/constexpr-color/constexpr-color.hpp
