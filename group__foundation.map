@@ -1,0 +1,7 @@
+<map id="Foundation" name="Foundation">
+<area shape="rect" id="Node000001" title="The foundation classes of the library." alt="" coords="5,80,99,106"/>
+<area shape="rect" id="Node000003" href="$group__logging.html" title="Logging&#45;related functions." alt="" coords="160,5,233,31"/>
+<area shape="rect" id="Node000002" href="$group__memory.html" title="Memory related classes and functions." alt="" coords="160,55,233,80"/>
+<area shape="rect" id="Node000004" href="$group__serialization.html" title="Serialization&#45;related functions." alt="" coords="147,104,246,130"/>
+<area shape="rect" id="Node000005" href="$group__traits.html" title="Traits for your classes and types." alt="" coords="168,153,225,179"/>
+</map>

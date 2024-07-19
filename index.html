@@ -8,13 +8,13 @@
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
 <meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
-<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
-<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<meta property="og:description" content="Documentation for the Floppy library" />
+<meta property="og:url" content="https://whs31.github.io/floppy" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
 <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
-<meta name="twitter:title" content="Doxygen Awesome" />
-<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta name="twitter:title" content="Documentation for the Floppy library" />
+<meta name="twitter:description" content=""https://whs31.github.io/floppy" />
 <!-- END twitter metadata -->
 <title>Floppy: Floppy</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -44,6 +44,7 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <!-- https://tholman.com/github-corners/ -->
@@ -55,9 +56,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.1.5</span>
+   &#160;<span id="projectnumber">1.2.2</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -129,16 +131,17 @@ $(function(){initNavTree('index.html',''); initResizable(); });
  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" alt="" height="30" width="0px" class="inline"/> Lightweight library that augments and extends C++ standard library <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" alt="" height="30" width="0px" class="inline"/><br  />
  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" alt="" height="30" width="0px" class="inline"/><br  />
  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&amp;logo=c%2B%2B&amp;logoColor=white" alt="cpp_badge" class="inline"/><img src="https://img.shields.io/badge/CMake-064F8C?style=flat-square&amp;logo=cmake&amp;logoColor=white" alt="cmake_badge" class="inline"/> </h3>
-<p><a href="https://whs31.github.io/floppy/index.html"><img src="https://img.shields.io/badge/documentation-doxygen-white?style=for-the-badge&amp;logo=readthedocs" alt="docs_badge" class="inline"/> </a> <a href="https://tmp-name-org.github.io/floppy/index.html"><img src="https://img.shields.io/badge/doxygen-sky?style=for-the-badge&amp;logo=readthedocs&amp;label=dev-documentation" alt="docs_badge" class="inline"/> </a></p>
-<h2><a class="anchor" id="autotoc_md1"></a>
-Changelog</h2>
-<h2><a class="anchor" id="autotoc_md2"></a>
-Dependencies</h2>
+<p><a href="https://whs31.github.io/floppy/index.html"><img src="https://img.shields.io/badge/documentation-doxygen-white?style=for-the-badge&amp;logo=readthedocs" alt="docs_badge" class="inline"/> </a> <a href="https://maybe-unused.github.io/floppy/index.html"><img src="https://img.shields.io/badge/doxygen-sky?style=for-the-badge&amp;logo=readthedocs&amp;label=dev-documentation" alt="docs_badge" class="inline"/> </a></p>
+<h3><a class="anchor" id="autotoc_md1"></a>
+Dependencies</h3>
 <ul>
 <li><img src="https://avatars.githubusercontent.com/u/7280830?s=16&amp;v=4" alt="fmt logo" class="inline"/><a href="https://github.com/fmtlib/fmt"><b>fmt</b></a> - modern formatting library (proposal for <code>std::format</code>) (<b>MIT</b>)</li>
+<li><img src="https://avatars.githubusercontent.com/u/6052198?s=16&amp;v=4" alt="spdlog logo" class="inline"/><a href="https://github.com/gabime/spdlog"><b>spdlog</b></a> - flexible logger implemented using <em>fmt</em> library (<b>MIT</b>)</li>
+<li><img src="https://avatars.githubusercontent.com/u/1342004?s=16&amp;v=4" alt="gtest logo" class="inline"/><a href="https://github.com/google/googletest"><b>gtest</b></a> - C++ testing framework (<b>BSD</b>)</li>
+<li><img src="https://avatars.githubusercontent.com/u/75864292?s=16&amp;v=4" alt="gtest logo" class="inline"/><a href="https://github.com/whs31/winapi20"><b>winapi20</b></a> - Windows API wrapper in modern C++20 (<b>MIT</b>)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Licensing</h2>
+<h3><a class="anchor" id="autotoc_md2"></a>
+Licensing</h3>
 <p><em>Floppy</em> library is distributed under the MIT license. See <a href="./LICENSE">LICENSE</a> for details. </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>
@@ -147,7 +150,7 @@ Licensing</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Fri Jul 19 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

@@ -8,13 +8,13 @@
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
 <meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
-<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
-<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<meta property="og:description" content="Documentation for the Floppy library" />
+<meta property="og:url" content="https://whs31.github.io/floppy" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
 <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
-<meta name="twitter:title" content="Doxygen Awesome" />
-<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta name="twitter:title" content="Documentation for the Floppy library" />
+<meta name="twitter:description" content=""https://whs31.github.io/floppy" />
 <!-- END twitter metadata -->
 <title>Floppy: Namespace Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -44,6 +44,7 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <!-- https://tholman.com/github-corners/ -->
@@ -55,9 +56,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.1.5</span>
+   &#160;<span id="projectnumber">1.2.2</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -123,29 +125,29 @@ $(function(){initNavTree('namespacemembers_type.html',''); initResizable(); });
 
 <div class="contents">
 <div class="textblock">Here is a list of all documented namespace typedefs with links to the namespaces they belong to:</div><ul>
-<li>f32&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">floppy::types</a></li>
-<li>f64&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#abc2f107791bd7c1d49ecf0f168c085a3">floppy::types</a></li>
-<li>i16&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8">floppy::types</a></li>
-<li>i32&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84">floppy::types</a></li>
-<li>i64&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd">floppy::types</a></li>
-<li>i8&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef">floppy::types</a></li>
-<li>isize&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">floppy::types</a></li>
-<li>option&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#aa202473f296b2492d9239773369181af">floppy::types</a></li>
-<li>pimpl&#160;:&#160;<a class="el" href="d7/db2/namespacefloppy_1_1traits.html#ae8263662bb2da92276fbe82282582f5e">floppy::traits</a></li>
-<li>plain_type_t&#160;:&#160;<a class="el" href="d3/d05/namespacefloppy.html#abb6b740122d8db472da8ccec3de5ec9c">floppy</a></li>
-<li>ref&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#ae7d120016347ce3f021bc18dcefe2809">floppy::types</a></li>
-<li>u16&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4">floppy::types</a></li>
-<li>u32&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41">floppy::types</a></li>
-<li>u64&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574">floppy::types</a></li>
-<li>u8&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">floppy::types</a></li>
-<li>usize&#160;:&#160;<a class="el" href="dd/d72/namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">floppy::types</a></li>
+<li>f32&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">floppy::types</a></li>
+<li>f64&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#abc2f107791bd7c1d49ecf0f168c085a3">floppy::types</a></li>
+<li>i16&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8">floppy::types</a></li>
+<li>i32&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84">floppy::types</a></li>
+<li>i64&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd">floppy::types</a></li>
+<li>i8&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef">floppy::types</a></li>
+<li>isize&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">floppy::types</a></li>
+<li>option&#160;:&#160;<a class="el" href="group__aliases.html#gaa202473f296b2492d9239773369181af">floppy::types</a></li>
+<li>pimpl&#160;:&#160;<a class="el" href="group__traits.html#gaa6694ecf510485baa4e46c63f5b99523">floppy::traits</a></li>
+<li>plain_type_t&#160;:&#160;<a class="el" href="group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c">floppy</a></li>
+<li>ref&#160;:&#160;<a class="el" href="group__aliases.html#gae7d120016347ce3f021bc18dcefe2809">floppy::types</a></li>
+<li>u16&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4">floppy::types</a></li>
+<li>u32&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41">floppy::types</a></li>
+<li>u64&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574">floppy::types</a></li>
+<li>u8&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">floppy::types</a></li>
+<li>usize&#160;:&#160;<a class="el" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">floppy::types</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Fri Jul 19 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

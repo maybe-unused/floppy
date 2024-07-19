@@ -1,0 +1,25 @@
+<map id="scale.h" name="scale.h">
+<area shape="rect" id="Node000001" title="A scaling factor between two different units of measurement." alt="" coords="42,5,108,31"/>
+<area shape="rect" id="Node000002" href="$euclid_8h.html" title="Small collection of classes and functions for geometric types with a focus on 2d graphics and layout." alt="" coords="204,447,274,473"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,44,25,98,13,130,8,164,8,314,14,345,29,371,52,393,81,412,146,437,204,451,203,456,144,442,79,416,49,398,25,375,9,347,3,314,3,164,8,129,20,95,53,42"/>
+<area shape="rect" id="Node000003" href="$length_8h.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="159,79,231,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="109,37,176,76,173,81,107,42"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="246,108,288,127,329,155,347,172,361,192,370,214,373,238,373,314,370,338,361,360,333,398,297,428,264,449,261,445,294,424,329,395,357,357,365,337,368,314,368,238,365,215,356,195,343,176,326,159,285,132,244,113"/>
+<area shape="rect" id="Node000004" href="$nt__traits2d_8h.html" title=" " alt="" coords="101,153,201,178"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="182,119,160,154,156,151,177,116"/>
+<area shape="rect" id="Node000005" href="$point2d_8h.html" title="A two&#45;dimensional point tagged with a unit." alt="" coords="117,374,198,399"/>
+<area shape="poly" id="edge14_Node000003_Node000005" title=" " alt="" coords="146,111,114,128,90,154,79,183,77,214,82,246,93,277,122,333,150,372,145,375,118,336,88,279,77,247,72,215,74,182,86,151,111,124,143,106"/>
+<area shape="rect" id="Node000006" href="$size2d_8h.html" title="A two&#45;dimensional size tagged with a unit." alt="" coords="195,226,269,252"/>
+<area shape="poly" id="edge15_Node000003_Node000006" title=" " alt="" coords="206,119,216,152,232,226,227,227,211,153,201,120"/>
+<area shape="rect" id="Node000007" href="$vector2d_8h.html" title="A two&#45;dimensional vector tagged with a unit." alt="" coords="195,300,283,326"/>
+<area shape="poly" id="edge16_Node000003_Node000007" title=" " alt="" coords="218,115,254,163,271,193,284,226,287,239,284,253,270,280,253,301,249,298,265,277,279,251,281,239,279,227,267,196,250,166,214,118"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="154,194,160,373,154,373,149,194"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="178,187,220,224,217,228,174,191"/>
+<area shape="poly" id="edge13_Node000004_Node000007" title=" " alt="" coords="160,192,170,221,185,251,205,277,226,298,223,301,201,280,180,253,165,223,155,194"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="184,408,227,445,223,449,181,412"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="265,260,283,277,297,299,303,320,303,342,291,384,271,421,251,448,247,445,266,418,286,382,298,341,298,321,292,301,279,280,261,263"/>
+<area shape="poly" id="edge9_Node000006_Node000005" title=" " alt="" coords="211,265,185,301,170,340,162,374,157,372,165,338,180,299,207,262"/>
+<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="237,267,240,299,235,300,232,268"/>
+<area shape="poly" id="edge11_Node000007_Node000002" title=" " alt="" coords="241,341,241,447,236,447,236,341"/>
+<area shape="poly" id="edge12_Node000007_Node000005" title=" " alt="" coords="215,338,173,375,169,371,212,334"/>
+</map>

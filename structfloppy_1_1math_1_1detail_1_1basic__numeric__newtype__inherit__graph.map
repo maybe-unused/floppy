@@ -1,0 +1,22 @@
+<map id="basic_numeric_newtype&lt; T, U &gt;" name="basic_numeric_newtype&lt; T, U &gt;">
+<area shape="rect" id="Node000001" title="CRTP base for numeric newtypes that can be compared." alt="" coords="237,159,412,199"/>
+<area shape="rect" id="Node000003" href="$structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html" title=" " alt="" coords="972,5,1149,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="358,146,394,118,435,93,503,63,574,41,648,25,721,16,859,9,971,14,971,19,859,15,722,21,649,31,576,46,505,68,438,97,397,123,362,150"/>
+<area shape="rect" id="Node000004" href="$structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html" title="CRTP base for numeric newtypes containing math operations implementation." alt="" coords="607,52,785,93"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="384,150,435,130,523,105,606,86,608,91,524,110,437,135,385,155"/>
+<area shape="rect" id="Node000006" href="$classfloppy_1_1math_1_1length.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="639,117,753,143"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="427,159,436,158,639,133,639,138,437,163,428,164"/>
+<area shape="rect" id="Node000007" href="$structfloppy_1_1math_1_1scale.html" title="A scaling factor between two different units of measurement." alt="" coords="633,166,759,192"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="428,176,633,176,633,182,428,182"/>
+<area shape="rect" id="Node000008" href="$structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html" title=" " alt="" coords="608,216,784,257"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="428,195,437,197,608,222,607,227,436,202,427,201"/>
+<area shape="rect" id="Node000009" href="$structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html" title=" " alt="" coords="608,281,784,336"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="363,207,398,232,437,253,480,269,524,281,608,297,607,302,523,286,478,274,435,258,395,236,360,212"/>
+<area shape="rect" id="Node000010" href="$structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html" title=" " alt="" coords="608,361,784,416"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="344,212,382,273,407,303,438,328,478,350,522,365,566,375,608,382,607,387,565,381,520,370,476,354,435,333,404,307,377,276,340,215"/>
+<area shape="rect" id="Node000002" href="$structfloppy_1_1math_1_1detail_1_1default__comparable.html" title="CRTP base for trivially comparable numeric types." alt="" coords="5,166,188,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,176,237,176,237,182,203,182"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="800,63,947,46,971,42,971,47,948,51,800,68"/>
+<area shape="rect" id="Node000005" href="$structfloppy_1_1math_1_1angle.html" title="Newtype describing an angle." alt="" coords="1015,81,1106,107"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="800,76,1014,88,1014,94,800,81"/>
+</map>

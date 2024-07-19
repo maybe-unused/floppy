@@ -4,12 +4,12 @@ var dir_ae0cb1af05f1ebdc47ed7b5efe67b30c =
     [ "euclid", "dir_047d1c41069b6adef11ae34e0147700f.html", "dir_047d1c41069b6adef11ae34e0147700f" ],
     [ "graphics", "dir_1470994300740420538078a3ee627803.html", "dir_1470994300740420538078a3ee627803" ],
     [ "inl", "dir_59ebea3516646c7d01fbca39d54537c0.html", "dir_59ebea3516646c7d01fbca39d54537c0" ],
-    [ "configuration.h", "d2/d2c/configuration_8h_source.html", null ],
-    [ "directories.h", "de/ddd/directories_8h_source.html", null ],
-    [ "euclid.h", "de/d44/euclid_8h.html", null ],
-    [ "floppy.h", "d7/d62/floppy_8h_source.html", null ],
-    [ "graphics.h", "d7/d04/graphics_8h.html", null ],
-    [ "logging.h", "d5/d77/logging_8h_source.html", null ],
-    [ "serialization.h", "dd/d50/serialization_8h_source.html", null ],
-    [ "traits.h", "dd/dff/traits_8h_source.html", null ]
+    [ "configuration.h", "configuration_8h_source.html", null ],
+    [ "directories.h", "directories_8h_source.html", null ],
+    [ "euclid.h", "euclid_8h.html", null ],
+    [ "floppy.h", "floppy_8h_source.html", null ],
+    [ "graphics.h", "graphics_8h.html", null ],
+    [ "logging.h", "logging_8h_source.html", null ],
+    [ "serialization.h", "serialization_8h_source.html", null ],
+    [ "traits.h", "traits_8h_source.html", null ]
 ];

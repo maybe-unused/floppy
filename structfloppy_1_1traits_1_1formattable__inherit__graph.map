@@ -1,0 +1,62 @@
+<map id="formattable&lt; T, C &gt;" name="formattable&lt; T, C &gt;">
+<area shape="rect" id="Node000001" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="224,711,370,737"/>
+<area shape="rect" id="Node000003" href="$structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="1156,5,1373,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="298,696,309,594,328,455,355,320,373,265,392,226,427,184,466,147,510,115,557,88,607,66,659,48,766,22,875,9,980,5,1075,8,1156,15,1156,20,1075,14,980,11,875,14,767,27,660,53,609,71,559,93,513,120,470,151,431,187,397,229,377,267,361,321,333,456,314,595,304,696"/>
+<area shape="rect" id="Node000004" href="$structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="1156,100,1373,156"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="299,696,310,608,330,493,357,382,374,338,392,308,458,240,521,192,584,158,649,136,718,122,793,111,972,84,1017,77,1052,75,1133,84,1187,97,1186,102,1132,89,1052,80,1017,82,973,89,794,116,719,127,650,141,586,163,524,196,462,244,396,311,378,340,362,384,335,494,316,609,304,696"/>
+<area shape="rect" id="Node000005" href="$structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title=" " alt="" coords="1156,372,1373,428"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="299,695,308,649,325,592,352,534,370,508,393,484,434,456,473,446,515,442,567,437,727,417,887,405,1035,398,1156,397,1156,402,1035,404,888,410,727,422,568,442,516,448,474,451,437,461,396,489,375,511,357,537,330,594,313,650,304,696"/>
+<area shape="rect" id="Node000006" href="$structfloppy_1_1math_1_1angle.html" title="Newtype describing an angle." alt="" coords="603,452,695,478"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="302,695,314,658,332,614,358,570,393,532,444,501,500,481,555,469,603,464,603,469,556,475,501,486,446,506,396,537,362,573,337,617,319,660,307,697"/>
+<area shape="rect" id="Node000007" href="$classfloppy_1_1math_1_1length.html" title="A one&#45;dimensional distance with associated unit of measurement." alt="" coords="592,502,706,527"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="307,695,339,636,363,604,393,578,441,551,494,532,546,521,592,515,592,520,547,526,495,537,444,556,396,582,367,608,344,639,312,698"/>
+<area shape="rect" id="Node000008" href="$structfloppy_1_1math_1_1scale.html" title="A scaling factor between two different units of measurement." alt="" coords="586,551,712,577"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="314,696,347,656,369,636,393,619,441,597,492,581,585,565,586,570,493,586,443,602,396,623,372,640,351,660,318,700"/>
+<area shape="rect" id="Node000009" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="579,601,719,642"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="336,701,393,676,489,649,578,630,579,635,490,654,395,681,338,706"/>
+<area shape="rect" id="Node000011" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="580,666,718,707"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="386,712,580,691,580,696,386,717"/>
+<area shape="rect" id="Node000013" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="580,732,718,772"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="386,733,395,734,580,746,580,752,394,739,385,738"/>
+<area shape="rect" id="Node000015" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="580,797,718,838"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="338,741,395,764,491,789,580,805,579,811,490,794,393,769,336,746"/>
+<area shape="rect" id="Node000017" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="580,862,718,903"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="318,747,352,784,396,818,441,839,490,855,581,873,579,879,488,860,439,844,393,822,348,788,314,750"/>
+<area shape="rect" id="Node000019" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="578,928,720,968"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="309,751,322,783,340,820,365,857,396,887,439,912,486,929,534,939,578,944,578,949,533,944,485,934,437,917,393,892,360,860,335,823,317,785,304,752"/>
+<area shape="rect" id="Node000020" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="567,306,731,331"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="296,695,299,633,313,553,325,510,342,468,364,429,392,394,431,364,476,343,523,329,567,321,568,326,524,334,478,348,434,368,396,398,369,432,347,470,330,512,318,554,305,634,301,695"/>
+<area shape="rect" id="Node000025" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="576,992,722,1048"/>
+<area shape="poly" id="edge27_Node000001_Node000025" title=" " alt="" coords="303,752,310,801,325,863,353,924,372,952,396,976,437,1001,484,1015,532,1022,576,1023,576,1029,531,1027,483,1020,435,1005,393,980,368,955,348,927,320,864,305,802,298,753"/>
+<area shape="rect" id="Node000026" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="572,1072,726,1128"/>
+<area shape="poly" id="edge28_Node000001_Node000026" title=" " alt="" coords="305,752,318,825,338,918,364,1004,380,1037,396,1059,436,1084,481,1098,528,1105,572,1106,572,1111,527,1110,480,1104,433,1089,393,1062,375,1040,359,1006,332,919,312,826,300,753"/>
+<area shape="rect" id="Node000027" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="572,1152,726,1192"/>
+<area shape="poly" id="edge29_Node000001_Node000027" title=" " alt="" coords="303,752,313,842,331,959,343,1018,358,1071,376,1113,396,1141,415,1155,435,1166,481,1179,527,1183,572,1182,572,1187,527,1189,479,1184,433,1171,412,1160,392,1145,371,1116,353,1073,338,1019,326,960,308,842,298,752"/>
+<area shape="rect" id="Node000028" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="575,1216,723,1272"/>
+<area shape="poly" id="edge30_Node000001_Node000028" title=" " alt="" coords="302,752,309,857,325,998,337,1069,353,1133,373,1185,396,1219,415,1233,436,1243,482,1256,530,1259,575,1256,575,1261,530,1264,481,1261,434,1248,412,1237,392,1222,368,1187,348,1135,332,1070,320,999,304,857,297,752"/>
+<area shape="rect" id="Node000029" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="568,1296,730,1352"/>
+<area shape="poly" id="edge31_Node000001_Node000029" title=" " alt="" coords="302,752,306,870,320,1035,332,1118,348,1193,370,1255,382,1278,396,1295,414,1309,434,1319,478,1333,524,1337,568,1335,568,1341,523,1342,477,1338,432,1324,411,1313,392,1298,378,1281,365,1257,343,1195,327,1119,315,1035,301,870,296,752"/>
+<area shape="rect" id="Node000002" href="$structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,711,175,737"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,721,224,721,224,727,190,727"/>
+<area shape="rect" id="Node000010" href="$classfloppy_1_1gfx_1_1color.html" title="Class representing a color." alt="" coords="838,608,890,634"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="734,619,838,619,838,624,734,624"/>
+<area shape="rect" id="Node000012" href="$structfloppy_1_1gfx_1_1color_1_1hsl__t.html" title="HSL color representation." alt="" coords="839,674,890,699"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="733,684,838,684,838,689,733,689"/>
+<area shape="rect" id="Node000014" href="$structfloppy_1_1gfx_1_1color_1_1hsla__t.html" title="HSLA color representation." alt="" coords="835,739,894,765"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="733,749,834,749,834,755,733,755"/>
+<area shape="rect" id="Node000016" href="$structfloppy_1_1gfx_1_1color_1_1hsv__t.html" title="HSV color representation." alt="" coords="837,804,892,830"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="733,815,836,815,836,820,733,820"/>
+<area shape="rect" id="Node000018" href="$structfloppy_1_1gfx_1_1color_1_1hsva__t.html" title="HSVA color representation." alt="" coords="833,870,896,895"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="733,880,832,880,832,885,733,885"/>
+<area shape="rect" id="Node000021" href="$structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html" title="CRTP base class for two dimensional numerical types." alt="" coords="780,252,948,292"/>
+<area shape="poly" id="edge20_Node000020_Node000021" title=" " alt="" coords="726,299,779,288,780,293,727,304"/>
+<area shape="poly" id="edge24_Node000021_Node000003" title=" " alt="" coords="889,238,926,198,971,160,1011,138,1067,111,1190,59,1192,64,1069,116,1013,142,974,165,930,202,893,241"/>
+<area shape="poly" id="edge25_Node000021_Node000004" title=" " alt="" coords="927,243,972,227,1017,215,1052,209,1088,203,1131,190,1212,154,1214,159,1133,195,1089,208,1053,214,1018,220,973,232,928,248"/>
+<area shape="poly" id="edge26_Node000021_Node000005" title=" " alt="" coords="898,301,933,328,973,352,1018,368,1065,380,1156,393,1156,398,1064,385,1017,373,971,357,930,333,895,305"/>
+<area shape="rect" id="Node000022" href="$classfloppy_1_1math_1_1point2d.html" title="A two&#45;dimensional point tagged with a unit." alt="" coords="1204,259,1325,285"/>
+<area shape="poly" id="edge21_Node000021_Node000022" title=" " alt="" coords="964,269,1203,269,1203,275,964,275"/>
+<area shape="rect" id="Node000023" href="$classfloppy_1_1math_1_1size2d.html" title="A two&#45;dimensional size2d tagged with a unit." alt="" coords="1207,308,1322,334"/>
+<area shape="poly" id="edge22_Node000021_Node000023" title=" " alt="" coords="964,281,1207,311,1206,317,963,287"/>
+<area shape="rect" id="Node000024" href="$classfloppy_1_1math_1_1vector2d.html" title="A two&#45;dimensional vector tagged with a unit." alt="" coords="1200,210,1329,235"/>
+<area shape="poly" id="edge23_Node000021_Node000024" title=" " alt="" coords="964,256,972,255,1199,227,1200,232,973,260,964,261"/>
+</map>

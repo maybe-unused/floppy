@@ -1,9 +1,0 @@
-<map id="singleton&lt; T &gt;" name="singleton&lt; T &gt;">
-<area shape="rect" id="Node000001" title="Singleton pattern trait." alt="" coords="105,153,219,178"/>
-<area shape="rect" id="Node000002" href="$d7/dac/structfloppy_1_1traits_1_1pin.html" title="Disallow copy and move operations for a type." alt="" coords="124,79,200,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,120,165,152,159,152,159,120"/>
-<area shape="rect" id="Node000003" href="$d7/d83/structfloppy_1_1traits_1_1non__copyable.html" title="Disallow copy operations for a type." alt="" coords="5,5,151,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,39,150,77,146,81,102,43"/>
-<area shape="rect" id="Node000004" href="$d2/df5/structfloppy_1_1traits_1_1non__movable.html" title="Disallow move operations for a type." alt="" coords="175,5,317,31"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="222,43,178,81,174,77,219,39"/>
-</map>

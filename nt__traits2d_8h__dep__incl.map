@@ -1,0 +1,16 @@
+<map id="nt_traits2d.h" name="nt_traits2d.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="73,5,173,31"/>
+<area shape="rect" id="Node000002" href="$point2d_8h.html" title="A two&#45;dimensional point tagged with a unit." alt="" coords="5,226,86,252"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,44,76,80,62,120,54,162,48,226,43,226,48,161,57,119,71,78,97,41"/>
+<area shape="rect" id="Node000004" href="$size2d_8h.html" title="A two&#45;dimensional size tagged with a unit." alt="" coords="86,79,160,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="126,46,126,79,120,79,120,46"/>
+<area shape="rect" id="Node000005" href="$vector2d_8h.html" title="A two&#45;dimensional vector tagged with a unit." alt="" coords="160,153,248,178"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="147,41,174,78,193,117,204,151,198,153,188,119,170,80,143,44"/>
+<area shape="rect" id="Node000003" href="$euclid_8h.html" title="Small collection of classes and functions for geometric types with a focus on 2d graphics and layout." alt="" coords="88,300,158,326"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="72,261,112,298,108,302,68,265"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="112,119,54,227,50,225,107,117"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="126,120,126,300,120,300,120,120"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="150,113,192,150,189,154,146,117"/>
+<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="165,187,74,228,71,223,163,183"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="192,193,132,301,127,298,188,190"/>
+</map>
