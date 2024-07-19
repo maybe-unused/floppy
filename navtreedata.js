@@ -62,11 +62,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "angle_8h.html",
-"classfloppy_1_1math_1_1point2d.html#accc043ce7ff2febe8af29365f34ef1de",
-"classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca9d76d663f4feae3bb1bc63ed17388abd",
-"group__platform.html#ga61707b98d2287ed4f0810fe92389a370",
-"structfloppy_1_1math_1_1angle.html#a8b67ad1f8ab287735ddf7ad085f6f52a",
-"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a86e683a1e79b42b7f61cc52ec8c8e9ef"
+"classfloppy_1_1math_1_1point2d.html#ab02564c421f2910e0f71855f4ca22181",
+"classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca4ab4aca1c61c78b89338c3e3804e0e9d",
+"group__platform.html#ga4c9ff13417c008e9b800ade286f11f0f",
+"structfloppy_1_1math_1_1angle.html#a62f3e16f951b2635fd2e04be55f6d914",
+"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a678d5175e08589fb5d1afd8b5e2e92d1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
