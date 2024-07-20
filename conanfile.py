@@ -36,9 +36,6 @@ class FloppyRecipe(ConanFile):
     def requirements(self):
         self.requires("fmt/[^10.1.0]", transitive_headers=True, transitive_libs=True)
         self.requires("spdlog/1.13.0", transitive_headers=True, transitive_libs=True)
-        if self.settings.os == "Windows":
-            print(colored("▶ targeting windows. following libraries will be added to deps: winapi20", "green"))
-            self.requires("winapi20/0.0.2")
         if self.options.test:
             self.requires("gtest/1.14.0")
             self.requires("tomlplusplus/[^3.0.0]", transitive_headers=True, transitive_libs=True)
@@ -58,7 +55,6 @@ class FloppyRecipe(ConanFile):
         deps = CMakeDeps(self)
         deps.generate()
         tc = CMakeToolchain(self)
-        tc.cache_variables["NO_SUBMODULES"] = True       # always set to true if invoked via conan
         tc.cache_variables["BUILD_SHARED_LIBS"] = self.options.shared
         tc.cache_variables["TESTS"] = self.options.test
         tc.generate()
@@ -81,8 +77,6 @@ class FloppyRecipe(ConanFile):
         self.cpp_info.set_property("cmake_target_name", "floppy::floppy")
         self.cpp_info.libs = ["floppy"]
         self.cpp_info.requires = ["fmt::fmt", "spdlog::spdlog"]
-        if self.settings.os == "Windows":
-            self.cpp_info.requires.append("winapi20::winapi20")
         if self.options.test:
             print(colored("▶ testing enabled. following libraries will be added to deps: gtest, tomlplusplus", "green"))
             self.cpp_info.requires.append("gtest::gtest")

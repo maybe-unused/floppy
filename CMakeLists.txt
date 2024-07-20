@@ -14,7 +14,6 @@ include(CMakePrintHelpers)
 
 option(TESTS "Enable integration tests" OFF)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
-option(NO_SUBMODULES "Build without submodules, relying on system or conan packages" OFF)
 
 if("${CMAKE_GENERATOR}" MATCHES "^Visual Studio")
   set(CMAKE_GENERATOR_PLATFORM "x64" CACHE STRING "" FORCE)
@@ -24,26 +23,9 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-# dependencies
-if(NO_SUBMODULES)
-  message(STATUS "[${PROJECT_NAME}] building without submodules, relying on system or conan packages")
-  find_package(fmt REQUIRED)
-  find_package(spdlog REQUIRED)
-  if(WIN32)
-    find_package(winapi20 REQUIRED)
-  endif()
-else()
-  message(STATUS "[${PROJECT_NAME}] building with git submodules")
-  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/extern/3rd-party/fmt)
-  if(TARGET spdlog::spdlog)
-    message(STATUS "[${PROJECT_NAME}] linked with spdlog")
-  else()
-    message(FATAL_ERROR "[${PROJECT_NAME}] failed to link with spdlog. don't forget to link with spdlog::spdlog in parent project!")
-  endif()
-  if(WIN32)
-    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/extern/winapi20)
-  endif()
-endif()
+# -- dependencies --
+find_package(fmt REQUIRED)
+find_package(spdlog REQUIRED)
 
 add_library(${PROJECT_NAME})
 add_library(${PROJECT_NAMESPACE}${PROJECT_NAME} ALIAS ${PROJECT_NAME})
@@ -73,8 +55,6 @@ target_link_libraries(${PROJECT_NAME}
   PUBLIC
     fmt::fmt
     spdlog::spdlog
-  PRIVATE
-    $<$<BOOL:${WIN32}>:winapi::winapi20>
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>$<INSTALL_INTERFACE:include> PRIVATE src/c++)
