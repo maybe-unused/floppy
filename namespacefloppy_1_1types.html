@@ -125,6 +125,7 @@ $(function(){initNavTree('namespacefloppy_1_1types.html',''); initResizable(); }
 
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -132,6 +133,11 @@ $(function(){initNavTree('namespacefloppy_1_1types.html',''); initResizable(); }
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacefloppy_1_1types_1_1detail" id="r_namespacefloppy_1_1types_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefloppy_1_1types_1_1detail.html">detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a987e4d6cf789cb59dbb390728271e4d6" id="r_a987e4d6cf789cb59dbb390728271e4d6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a987e4d6cf789cb59dbb390728271e4d6">u8</a> = uint8_t</td></tr>
@@ -161,12 +167,23 @@ Typedefs</h2></td></tr>
 <tr class="memitem:gaa202473f296b2492d9239773369181af" id="r_gaa202473f296b2492d9239773369181af"><td class="memTemplParams" colspan="2">template&lt;std::destructible T&gt; </td></tr>
 <tr class="memitem:gaa202473f296b2492d9239773369181af"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option</a> = std::optional&lt;T&gt;</td></tr>
 <tr class="separator:gaa202473f296b2492d9239773369181af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a100aaa5a4c5f9fe1f4b8175e360db8" id="r_a3a100aaa5a4c5f9fe1f4b8175e360db8"><td class="memTemplParams" colspan="2">template&lt;typename T  = void&gt; </td></tr>
+<tr class="memitem:a3a100aaa5a4c5f9fe1f4b8175e360db8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3a100aaa5a4c5f9fe1f4b8175e360db8">result</a> = detail::expected&lt;T, std::string&gt;</td></tr>
+<tr class="separator:a3a100aaa5a4c5f9fe1f4b8175e360db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae7d120016347ce3f021bc18dcefe2809" id="r_gae7d120016347ce3f021bc18dcefe2809"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gae7d120016347ce3f021bc18dcefe2809"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aliases.html#gae7d120016347ce3f021bc18dcefe2809">ref</a> = std::reference_wrapper&lt;T&gt;</td></tr>
 <tr class="separator:gae7d120016347ce3f021bc18dcefe2809"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga36694535c2e0b46d1e65a74f12130077" id="r_ga36694535c2e0b46d1e65a74f12130077"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga36694535c2e0b46d1e65a74f12130077"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aliases.html#ga36694535c2e0b46d1e65a74f12130077">error</a> (std::string_view format, Args &amp;&amp;... args) -&gt; detail::unexpected&lt; std::decay_t&lt; std::string &gt; &gt;</td></tr>
+<tr class="separator:ga36694535c2e0b46d1e65a74f12130077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6cd767346c4db58bd1b50716043dbe41" id="r_ga6cd767346c4db58bd1b50716043dbe41"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ga6cd767346c4db58bd1b50716043dbe41"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aliases.html#ga6cd767346c4db58bd1b50716043dbe41">ok</a> (T &amp;&amp;t) -&gt; detail::expected&lt; std::decay_t&lt; T &gt;, std::string &gt;</td></tr>
+<tr class="separator:ga6cd767346c4db58bd1b50716043dbe41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3601c452e64e71f68f515fa7e56a47f1" id="r_ga3601c452e64e71f68f515fa7e56a47f1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">ok</a> () -&gt; <a class="el" href="#a3a100aaa5a4c5f9fe1f4b8175e360db8">result</a>&lt;&gt;</td></tr>
+<tr class="separator:ga3601c452e64e71f68f515fa7e56a47f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5b788689cac7bc0f3b593775123aaaee" id="r_ga5b788689cac7bc0f3b593775123aaaee"><td class="memTemplParams" colspan="2">template&lt;std::destructible T&gt; </td></tr>
 <tr class="memitem:ga5b788689cac7bc0f3b593775123aaaee"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee">some</a> (T &amp;&amp;t) -&gt; <a class="el" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option</a>&lt; std::decay_t&lt; T &gt; &gt;</td></tr>
 <tr class="separator:ga5b788689cac7bc0f3b593775123aaaee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,7 +210,7 @@ Variables</h2></td></tr>
 
 <p>8-bit unsigned integer </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00016">16</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00017">17</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +228,7 @@ Variables</h2></td></tr>
 
 <p>16-bit unsigned integer </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00017">17</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00018">18</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -229,7 +246,7 @@ Variables</h2></td></tr>
 
 <p>32-bit unsigned integer </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00018">18</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00019">19</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -247,7 +264,7 @@ Variables</h2></td></tr>
 
 <p>64-bit unsigned integer </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00019">19</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00020">20</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +282,7 @@ Variables</h2></td></tr>
 
 <p>8-bit signed integer </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00020">20</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00021">21</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -283,7 +300,7 @@ Variables</h2></td></tr>
 
 <p>16-bit signed integer </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00021">21</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00022">22</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -301,7 +318,7 @@ Variables</h2></td></tr>
 
 <p>32-bit signed integer </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00022">22</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00023">23</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -319,7 +336,7 @@ Variables</h2></td></tr>
 
 <p>64-bit signed integer </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00023">23</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00024">24</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -337,7 +354,7 @@ Variables</h2></td></tr>
 
 <p>Unsigned integer with pointer size. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00024">24</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00025">25</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -355,7 +372,7 @@ Variables</h2></td></tr>
 
 <p>Signed integer with pointer size. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00025">25</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00026">26</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -373,7 +390,7 @@ Variables</h2></td></tr>
 
 <p>Float with 32-bit precision. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00026">26</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00027">27</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -391,7 +408,44 @@ Variables</h2></td></tr>
 
 <p>Float with 64-bit precision. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00027">27</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00028">28</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="a3a100aaa5a4c5f9fe1f4b8175e360db8" name="a3a100aaa5a4c5f9fe1f4b8175e360db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a100aaa5a4c5f9fe1f4b8175e360db8">&#9670;&#160;</a></span>result</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a3a100aaa5a4c5f9fe1f4b8175e360db8">result</a> = detail::expected&lt;T, std::string&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expected type with default error type (<code>std::string</code>). </p>
+<p>Provides result type, which defaults to <code>std::expected</code>, if available, or <code>tl::expected</code>/<code>std::experimental::expected</code> otherwise.</p>
+<p>Example usage with void return type: </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>fl::types;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> returns_void(<span class="keywordtype">int</span> x) -&gt; <a class="code hl_typedef" href="#a3a100aaa5a4c5f9fe1f4b8175e360db8">result&lt;&gt;</a> {</div>
+<div class="line">  <span class="keywordflow">if</span>(x &gt; 0)</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="group__aliases.html#ga36694535c2e0b46d1e65a74f12130077">error</a>(<span class="stringliteral">&quot;x is positive, should be negative ({})&quot;</span>, x);</div>
+<div class="line">  <span class="keywordflow">return</span> Ok();</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__aliases_html_ga36694535c2e0b46d1e65a74f12130077"><div class="ttname"><a href="group__aliases.html#ga36694535c2e0b46d1e65a74f12130077">floppy::types::error</a></div><div class="ttdeci">auto error(std::string_view format, Args &amp;&amp;... args) -&gt; detail::unexpected&lt; std::decay_t&lt; std::string &gt; &gt;</div><div class="ttdoc">Helper function for result.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00093">types.h:93</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_a3a100aaa5a4c5f9fe1f4b8175e360db8"><div class="ttname"><a href="#a3a100aaa5a4c5f9fe1f4b8175e360db8">floppy::types::result</a></div><div class="ttdeci">detail::expected&lt; T, std::string &gt; result</div><div class="ttdoc">Expected type with default error type (std::string).</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00085">types.h:85</a></div></div>
+</div><!-- fragment --><p>Example usage with non-void return type: </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>fl::types;</div>
+<div class="line"><span class="keyword">auto</span> divide_by_then_sqrt(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> x) -&gt; <a class="code hl_typedef" href="#a3a100aaa5a4c5f9fe1f4b8175e360db8">result&lt;f32&gt;</a> {</div>
+<div class="line">  <span class="keywordflow">if</span>(x == 0)</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="group__aliases.html#ga36694535c2e0b46d1e65a74f12130077">error</a>(<span class="stringliteral">&quot;division by zero&quot;</span>);</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code hl_function" href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">ok</a>(a / x).map(std::sqrt);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__aliases_html_ga3601c452e64e71f68f515fa7e56a47f1"><div class="ttname"><a href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">floppy::types::ok</a></div><div class="ttdeci">auto ok() -&gt; result&lt;&gt;</div><div class="ttdoc">Helper function for result.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00108">types.h:108</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00085">85</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>

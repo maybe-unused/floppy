@@ -1,6 +1,7 @@
 var namespacefloppy =
 [
     [ "concepts", "namespacefloppy_1_1concepts.html", "namespacefloppy_1_1concepts" ],
+    [ "detail", "namespacefloppy_1_1types_1_1detail.html", null ],
     [ "filesystem", "namespacefloppy_1_1filesystem.html", "namespacefloppy_1_1filesystem" ],
     [ "gfx", "namespacefloppy_1_1gfx.html", "namespacefloppy_1_1gfx" ],
     [ "literals", "namespacefloppy_1_1literals.html", [
@@ -30,24 +31,7 @@ var namespacefloppy =
     ] ],
     [ "serialization", "namespacefloppy_1_1serialization.html", "namespacefloppy_1_1serialization" ],
     [ "traits", "namespacefloppy_1_1traits.html", "namespacefloppy_1_1traits" ],
-    [ "types", "namespacefloppy_1_1types.html", [
-      [ "u8", "namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6", null ],
-      [ "u16", "namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4", null ],
-      [ "u32", "namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41", null ],
-      [ "u64", "namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574", null ],
-      [ "i8", "namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef", null ],
-      [ "i16", "namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8", null ],
-      [ "i32", "namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84", null ],
-      [ "i64", "namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd", null ],
-      [ "usize", "namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037", null ],
-      [ "isize", "namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d", null ],
-      [ "f32", "namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527", null ],
-      [ "f64", "namespacefloppy_1_1types.html#abc2f107791bd7c1d49ecf0f168c085a3", null ],
-      [ "option", "group__aliases.html#gaa202473f296b2492d9239773369181af", null ],
-      [ "ref", "group__aliases.html#gae7d120016347ce3f021bc18dcefe2809", null ],
-      [ "some", "group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee", null ],
-      [ "none", "group__aliases.html#ga9365b793fe547271e48fa719a7f4854d", null ]
-    ] ],
+    [ "types", "namespacefloppy_1_1types.html", "namespacefloppy_1_1types" ],
     [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
     [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
     [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],
@@ -71,6 +55,7 @@ var namespacefloppy =
     [ "f32", "namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527", null ],
     [ "f64", "namespacefloppy_1_1types.html#abc2f107791bd7c1d49ecf0f168c085a3", null ],
     [ "option", "group__aliases.html#gaa202473f296b2492d9239773369181af", null ],
+    [ "result", "namespacefloppy_1_1types.html#a3a100aaa5a4c5f9fe1f4b8175e360db8", null ],
     [ "ref", "group__aliases.html#gae7d120016347ce3f021bc18dcefe2809", null ],
     [ "saving_policy", "group__foundation.html#gae1e5f60a57661fe4d13cf754e0a8d6ae", [
       [ "autosave", "group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1", null ],
@@ -90,6 +75,9 @@ var namespacefloppy =
     [ "operator<<", "namespacefloppy.html#a719acfb66fc8c9e09da5feacc752067a", null ],
     [ "operator<<", "namespacefloppy.html#ab270b6bee291e9d50f9bb6a31bbafc81", null ],
     [ "operator<<", "namespacefloppy.html#aad74e47f0e5a3bb0abe7bc00495460e4", null ],
+    [ "error", "group__aliases.html#ga36694535c2e0b46d1e65a74f12130077", null ],
+    [ "ok", "group__aliases.html#ga6cd767346c4db58bd1b50716043dbe41", null ],
+    [ "ok", "group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1", null ],
     [ "some", "group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee", null ],
     [ "operator\"\"_z", "namespacefloppy_1_1literals.html#a2e8f3db7e297556ee0f952c0c06c234d", null ],
     [ "operator\"\"_Z", "namespacefloppy_1_1literals.html#ab68a34b157722e5e944e2fb4cb149090", null ],

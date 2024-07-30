@@ -9,12 +9,13 @@ var searchData=
   ['reflected_6',['reflected',['../classfloppy_1_1math_1_1vector2d.html#a1fcd9b3ef3eee8c2c5c3c771593b1e00',1,'floppy::math::vector2d']]],
   ['rem_5feuclid_7',['rem_euclid',['../classfloppy_1_1math_1_1point2d.html#af755f083e286f81fe8cfe00e8d76ab35',1,'floppy::math::point2d::rem_euclid()'],['../group__calc.html#gadd770f95287eea461bee0dea63476fb2',1,'floppy::math::rem_euclid()']]],
   ['remove_8',['remove',['../classfloppy_1_1filesystem_1_1application__dirs.html#a9e36998ffb1db201959e7adc47adb5cb',1,'floppy::filesystem::application_dirs']]],
-  ['revert_5fto_5fdefault_9',['revert_to_default',['../classfloppy_1_1configuration__file.html#af0a2e98094ed13472fbaa0e5d18e5c0d',1,'floppy::configuration_file']]],
-  ['rgb_10',['rgb',['../classfloppy_1_1gfx_1_1color.html#af36cde23fea649267c8ee87aac75d2ff',1,'floppy::gfx::color']]],
-  ['rgba_11',['rgba',['../classfloppy_1_1gfx_1_1color.html#a45fd232340920c56e2b8ac0fa5591ade',1,'floppy::gfx::color']]],
-  ['riscv_12',['riscv',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a8058d18cbe5eb5f9af15fe6c0b9510aa',1,'floppy::platform']]],
-  ['round_13',['round',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a8ede81b668ffa9d89d258e66c7b65b82',1,'floppy::math::detail::basic_two_dimensional_type']]],
-  ['rs6000_14',['rs6000',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ad270a41d40b1210d271c6994a97e3855',1,'floppy::platform']]],
-  ['runtime_15',['runtime',['../classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75ab4a619251c5c397f26d05c9b0e7bf97a',1,'floppy::filesystem::application_dirs']]],
-  ['runtime_5fdir_16',['runtime_dir',['../classfloppy_1_1filesystem_1_1application__dirs.html#a52ddda9c32961e71dd407082523492a1',1,'floppy::filesystem::application_dirs']]]
+  ['result_9',['result',['../namespacefloppy_1_1types.html#a3a100aaa5a4c5f9fe1f4b8175e360db8',1,'floppy::result'],['../namespacefloppy_1_1types.html#a3a100aaa5a4c5f9fe1f4b8175e360db8',1,'floppy::types::result']]],
+  ['revert_5fto_5fdefault_10',['revert_to_default',['../classfloppy_1_1configuration__file.html#af0a2e98094ed13472fbaa0e5d18e5c0d',1,'floppy::configuration_file']]],
+  ['rgb_11',['rgb',['../classfloppy_1_1gfx_1_1color.html#af36cde23fea649267c8ee87aac75d2ff',1,'floppy::gfx::color']]],
+  ['rgba_12',['rgba',['../classfloppy_1_1gfx_1_1color.html#a45fd232340920c56e2b8ac0fa5591ade',1,'floppy::gfx::color']]],
+  ['riscv_13',['riscv',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a8058d18cbe5eb5f9af15fe6c0b9510aa',1,'floppy::platform']]],
+  ['round_14',['round',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a8ede81b668ffa9d89d258e66c7b65b82',1,'floppy::math::detail::basic_two_dimensional_type']]],
+  ['rs6000_15',['rs6000',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ad270a41d40b1210d271c6994a97e3855',1,'floppy::platform']]],
+  ['runtime_16',['runtime',['../classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75ab4a619251c5c397f26d05c9b0e7bf97a',1,'floppy::filesystem::application_dirs']]],
+  ['runtime_5fdir_17',['runtime_dir',['../classfloppy_1_1filesystem_1_1application__dirs.html#a52ddda9c32961e71dd407082523492a1',1,'floppy::filesystem::application_dirs']]]
 ];
