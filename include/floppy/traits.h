@@ -1,11 +1,8 @@
 #pragma once
 
-#include <memory>
 #include <iostream>
 #include <experimental/propagate_const>
-#include <floppy/detail/export.h>
-#include <floppy/detail/formatters.h>
-#include <floppy/detail/memory.h>
+#include <floppy/floppy.h>
 
 /// \brief Namespace with traits for custom types and classes.
 namespace floppy::traits
