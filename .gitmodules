@@ -1,0 +1,3 @@
+[submodule "doxygen/preset"]
+	path = doxygen/preset
+	url = https://github.com/maybe-unused/doxygen-preset.git
