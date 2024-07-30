@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.3</span>
+   &#160;<span id="projectnumber">1.2.4</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -126,6 +126,7 @@ $(function(){initNavTree('group__memory.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Memory<div class="ingroups"><a class="el" href="group__foundation.html">Foundation</a></div></div></div>
 </div><!--header-->
@@ -143,6 +144,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1box.html">box&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga003e7028327d1c1243f546af6e61d80f" id="r_ga003e7028327d1c1243f546af6e61d80f"><td class="memTemplParams" colspan="2">template&lt;concepts::ptr T&gt; </td></tr>
+<tr class="memitem:ga003e7028327d1c1243f546af6e61d80f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga003e7028327d1c1243f546af6e61d80f">owner</a> = T</td></tr>
+<tr class="separator:ga003e7028327d1c1243f546af6e61d80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gaf50958988fef4e2cf80c0473e1a3535b" id="r_gaf50958988fef4e2cf80c0473e1a3535b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
@@ -157,6 +164,34 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Memory related classes and functions. </p>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga003e7028327d1c1243f546af6e61d80f" name="ga003e7028327d1c1243f546af6e61d80f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga003e7028327d1c1243f546af6e61d80f">&#9670;&#160;</a></span>owner</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;concepts::ptr T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga003e7028327d1c1243f546af6e61d80f">owner</a> = T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GSL-like owning raw pointer typedef. </p>
+<p><code><a class="el" href="#ga003e7028327d1c1243f546af6e61d80f" title="GSL-like owning raw pointer typedef.">fl::owner&lt;T&gt;</a></code> is designed as a safety mechanism for code that must deal directly with raw pointers that own memory. Ideally such code should be restricted to the implementation of low-level abstractions. <code><a class="el" href="#ga003e7028327d1c1243f546af6e61d80f" title="GSL-like owning raw pointer typedef.">fl::owner&lt;T&gt;</a></code> can also be used as a stepping point in converting legacy code to use more modern RAII constructs, such as smart pointers. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Pointer type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/microsoft/GSL/blob/main/include/gsl/pointers">https://github.com/microsoft/GSL/blob/main/include/gsl/pointers</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00033">33</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gaf50958988fef4e2cf80c0473e1a3535b" name="gaf50958988fef4e2cf80c0473e1a3535b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf50958988fef4e2cf80c0473e1a3535b">&#9670;&#160;</a></span>make_box()</h2>
@@ -177,7 +212,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Constructs a new box with given arguments. </p>
 
-<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00251">251</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00304">304</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
 
 </div>
 </div>
@@ -212,7 +247,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result of the comparison. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00262">262</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00315">315</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
 
 </div>
 </div>
@@ -246,7 +281,7 @@ template&lt;typename C , typename Traits , typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00272">272</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory_8h_source.html#l00325">325</a> of file <a class="el" href="memory_8h_source.html">memory.h</a>.</p>
 
 </div>
 </div>
@@ -255,7 +290,7 @@ template&lt;typename C , typename Traits , typename T &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Jul 19 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Tue Jul 30 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

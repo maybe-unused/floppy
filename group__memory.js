@@ -29,6 +29,7 @@ var group__memory =
       [ "make", "classfloppy_1_1box.html#acbd5fe9715101a8a3a46028c56ca3c75", null ],
       [ "make", "classfloppy_1_1box.html#a31ae06e82d49946f46926ff88d912def", null ]
     ] ],
+    [ "owner", "group__memory.html#ga003e7028327d1c1243f546af6e61d80f", null ],
     [ "make_box", "group__memory.html#gaf50958988fef4e2cf80c0473e1a3535b", null ],
     [ "operator<=>", "group__memory.html#ga7a9c79f48e88aa5c76de0f9abef8db7b", null ],
     [ "operator<<", "group__memory.html#ga024e0841fe0eda5f5568f8a6ef9af131", null ]

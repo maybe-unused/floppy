@@ -56,6 +56,7 @@ var namespacefloppy =
     [ "plain_type", "group__helpers.html#structfloppy_1_1plain__type", "group__helpers_structfloppy_1_1plain__type" ],
     [ "platform", "classfloppy_1_1platform.html", "classfloppy_1_1platform" ],
     [ "source_location", "structfloppy_1_1source__location.html", "structfloppy_1_1source__location" ],
+    [ "owner", "group__memory.html#ga003e7028327d1c1243f546af6e61d80f", null ],
     [ "plain_type_t", "group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c", null ],
     [ "u8", "namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6", null ],
     [ "u16", "namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4", null ],
