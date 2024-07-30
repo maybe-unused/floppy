@@ -5,6 +5,7 @@
 #include <stdexcept>
 #include <floppy/detail/export.h>
 #include <floppy/detail/formatters.h>
+#include <floppy/detail/concepts.h>
 
 namespace floppy
 {
@@ -17,6 +18,19 @@ namespace floppy
     using std::logic_error::logic_error;
     using std::logic_error::what;
   };
+
+  /// \brief GSL-like owning raw pointer typedef.
+  /// \headerfile floppy/floppy.h
+  /// \ingroup memory
+  /// \details <code>fl::owner<T></code> is designed as a safety mechanism for code that must deal
+  /// directly with raw pointers that own memory.
+  /// Ideally such code should be restricted to the implementation of low-level abstractions.
+  /// <code>fl::owner<T></code> can also be used
+  /// as a stepping point in converting legacy code to use more modern RAII constructs, such as smart pointers.
+  /// \tparam T Pointer type.
+  /// \sa https://github.com/microsoft/GSL/blob/main/include/gsl/pointers
+  template <concepts::ptr T>
+  using owner = T;
 
   /// \brief Box memory class.
   /// \headerfile floppy/floppy.h
