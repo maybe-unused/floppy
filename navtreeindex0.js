@@ -5,6 +5,7 @@ var NAVTREEINDEX0 =
 "annotated.html":[6,0],
 "backports_8h_source.html":[7,0,0,0,0,0],
 "bug.html":[0],
+"bytearray_8h_source.html":[7,0,0,0,4],
 "classes.html":[6,1],
 "classfloppy_1_1box.html":[3,7,0,1],
 "classfloppy_1_1box.html#a12b3dd05373473a1fb75a94f35b69280":[3,7,0,1,15],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classfloppy_1_1math_1_1point2d.html#aa9dd348d29b48f5544b5b1fb6f551f63":[3,6,2,14],
 "classfloppy_1_1math_1_1point2d.html#aaad517001a831eff7de9c3223d591b02":[3,6,2,20],
 "classfloppy_1_1math_1_1point2d.html#aaca5c75ae78b6c53d27cf63cd944ff62":[3,6,2,77],
-"classfloppy_1_1math_1_1point2d.html#aaf2377ebd7cf6d347b399dbbfa2cab9f":[3,6,2,11],
-"classfloppy_1_1math_1_1point2d.html#aaf50c9542ca5d12ff8aff81ba9966b95":[3,6,2,17]
+"classfloppy_1_1math_1_1point2d.html#aaf2377ebd7cf6d347b399dbbfa2cab9f":[3,6,2,11]
 };

@@ -14,7 +14,7 @@
 <!-- BEGIN twitter metadata -->
 <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
 <meta name="twitter:title" content="Documentation for the Floppy library" />
-<meta name="twitter:description" content=""https://whs31.github.io/floppy" />
+<meta name="twitter:description" content="https://whs31.github.io/floppy" />
 <!-- END twitter metadata -->
 <title>Floppy: Aliases</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -144,6 +144,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:gaa476e7c28990de9d1f5807d18d97d2ea" id="r_gaa476e7c28990de9d1f5807d18d97d2ea"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa476e7c28990de9d1f5807d18d97d2ea">bytearray</a> = std::vector&lt;std::byte&gt;</td></tr>
+<tr class="separator:gaa476e7c28990de9d1f5807d18d97d2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9910a22d4c37a8bbb94c1c8d9aedb6de" id="r_ga9910a22d4c37a8bbb94c1c8d9aedb6de"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9910a22d4c37a8bbb94c1c8d9aedb6de">bytearray_view</a> = std::span&lt;std::byte const&gt;</td></tr>
+<tr class="separator:ga9910a22d4c37a8bbb94c1c8d9aedb6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga648837c945db0be1ada62a296cbe6624" id="r_ga648837c945db0be1ada62a296cbe6624"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga648837c945db0be1ada62a296cbe6624">bytearray_view_mut</a> = std::span&lt;std::byte&gt;</td></tr>
+<tr class="separator:ga648837c945db0be1ada62a296cbe6624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa202473f296b2492d9239773369181af" id="r_gaa202473f296b2492d9239773369181af"><td class="memTemplParams" colspan="2">template&lt;std::destructible T&gt; </td></tr>
 <tr class="memitem:gaa202473f296b2492d9239773369181af"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaa202473f296b2492d9239773369181af">option</a> = std::optional&lt;T&gt;</td></tr>
 <tr class="separator:gaa202473f296b2492d9239773369181af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +179,66 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Aliases for types. </p>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="gaa476e7c28990de9d1f5807d18d97d2ea" name="gaa476e7c28990de9d1f5807d18d97d2ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa476e7c28990de9d1f5807d18d97d2ea">&#9670;&#160;</a></span>bytearray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gaa476e7c28990de9d1f5807d18d97d2ea">bytearray</a> = std::vector&lt;std::byte&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for <code>std::vector&lt;std::byte&gt;</code>. </p>
+<p>Provides owning byte array.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga9910a22d4c37a8bbb94c1c8d9aedb6de" title="Alias for std::span&lt;std::byte const&gt;.">bytearray_view</a>, <a class="el" href="#ga648837c945db0be1ada62a296cbe6624" title="Alias for std::span&lt;std::byte&gt;.">bytearray_view_mut</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bytearray_8h_source.html#l00013">13</a> of file <a class="el" href="bytearray_8h_source.html">bytearray.h</a>.</p>
+
+</div>
+</div>
+<a id="ga9910a22d4c37a8bbb94c1c8d9aedb6de" name="ga9910a22d4c37a8bbb94c1c8d9aedb6de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9910a22d4c37a8bbb94c1c8d9aedb6de">&#9670;&#160;</a></span>bytearray_view</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga9910a22d4c37a8bbb94c1c8d9aedb6de">bytearray_view</a> = std::span&lt;std::byte const&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for <code>std::span&lt;std::byte const&gt;</code>. </p>
+<p>Provides non-owning view over a byte array.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gaa476e7c28990de9d1f5807d18d97d2ea" title="Alias for std::vector&lt;std::byte&gt;.">bytearray</a>, <a class="el" href="#ga648837c945db0be1ada62a296cbe6624" title="Alias for std::span&lt;std::byte&gt;.">bytearray_view_mut</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bytearray_8h_source.html#l00020">20</a> of file <a class="el" href="bytearray_8h_source.html">bytearray.h</a>.</p>
+
+</div>
+</div>
+<a id="ga648837c945db0be1ada62a296cbe6624" name="ga648837c945db0be1ada62a296cbe6624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga648837c945db0be1ada62a296cbe6624">&#9670;&#160;</a></span>bytearray_view_mut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga648837c945db0be1ada62a296cbe6624">bytearray_view_mut</a> = std::span&lt;std::byte&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for <code>std::span&lt;std::byte&gt;</code>. </p>
+<p>Provides mutable non-owning view over a byte array.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gaa476e7c28990de9d1f5807d18d97d2ea" title="Alias for std::vector&lt;std::byte&gt;.">bytearray</a>, <a class="el" href="#ga9910a22d4c37a8bbb94c1c8d9aedb6de" title="Alias for std::span&lt;std::byte const&gt;.">bytearray_view</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bytearray_8h_source.html#l00027">27</a> of file <a class="el" href="bytearray_8h_source.html">bytearray.h</a>.</p>
+
+</div>
+</div>
 <a id="gaa202473f296b2492d9239773369181af" name="gaa202473f296b2492d9239773369181af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa202473f296b2492d9239773369181af">&#9670;&#160;</a></span>option</h2>
 

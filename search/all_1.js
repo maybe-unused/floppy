@@ -16,5 +16,8 @@ var searchData=
   ['borland_13',['borland',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca3c7f77cc43338e14824c111671beef30',1,'floppy::platform']]],
   ['box_14',['box',['../classfloppy_1_1box.html',1,'box&lt; T &gt;'],['../classfloppy_1_1box.html#aa4b5aceb8fa96bcafa0ab2036c2ce26e',1,'floppy::box::box()'],['../classfloppy_1_1box.html#a28c6d362efdd6c6ed2c1a2072bdb7dbe',1,'floppy::box::box(box const &amp;other)=delete'],['../classfloppy_1_1box.html#aa45ba7b388b279185f68d20b6dfbb0b8',1,'floppy::box::box(box &amp;&amp;other) noexcept=default'],['../classfloppy_1_1box.html#ad8cc9017530df9d616762f4e8ba1139b',1,'floppy::box::box(box&lt; U &gt; &amp;&amp;other) noexcept']]],
   ['bson_15',['bson',['../group__serialization.html#ggaab5efc62e072f3561d45db61e0c83b85a0b6879b186bfb2b1ec65d2460e4eccd4',1,'floppy::serialization']]],
-  ['bug_20list_16',['Bug List',['../bug.html',1,'']]]
+  ['bug_20list_16',['Bug List',['../bug.html',1,'']]],
+  ['bytearray_17',['bytearray',['../group__aliases.html#gaa476e7c28990de9d1f5807d18d97d2ea',1,'floppy']]],
+  ['bytearray_5fview_18',['bytearray_view',['../group__aliases.html#ga9910a22d4c37a8bbb94c1c8d9aedb6de',1,'floppy']]],
+  ['bytearray_5fview_5fmut_19',['bytearray_view_mut',['../group__aliases.html#ga648837c945db0be1ada62a296cbe6624',1,'floppy']]]
 ];
