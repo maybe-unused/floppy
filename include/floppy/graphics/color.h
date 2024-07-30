@@ -120,7 +120,7 @@ namespace floppy::gfx
   class color : public traits::formattable<color, char>
   {
     template <concepts::num T = u8>
-    static constexpr auto mask = static_cast<T>(std::numeric_limits<u8>::max());
+    static constexpr floppy::concepts::num auto mask = static_cast<T>(std::numeric_limits<u8>::max());
 
    public:
     /// \brief HSL color representation.
@@ -523,8 +523,7 @@ namespace floppy::gfx
     /// the next 8 bits are used as green component, the next 8 bits are used as blue component, and
     /// the last 8 bits are used as alpha component.
     /// \param rgba 32-bit unsigned integer.
-    constexpr explicit color(u32 rgba)
-    {
+    constexpr explicit color(u32 rgba) {
       if(rgba > 0xFFFFFF) {
         this->r_ = static_cast<f32>((rgba >> 24) & mask<u8>) / mask<f32>;
         this->g_ = static_cast<f32>((rgba >> 16) & mask<u8>) / mask<f32>;
@@ -548,8 +547,7 @@ namespace floppy::gfx
     /// </ul>
     /// \throws std::invalid_argument if the string is not a valid color.
     /// \param s String view.
-    constexpr explicit color(std::string_view s)
-    {
+    constexpr explicit color(std::string_view s) {
       if(s.starts_with("#"))
         s = s.substr(1);
       if (s.size() == 6) {
@@ -573,8 +571,7 @@ namespace floppy::gfx
     /// \param hsl HSL color value.
     /// \see from_hsl
     constexpr explicit color(color::hsl_t const& hsl)
-      : a_(1.0F)
-    {
+      : a_(1.0F) {
       auto const t = hsl.to_rgb();
       this->r_ = static_cast<f32>(t[0]) / mask<f32>;
       this->g_ = static_cast<f32>(t[1]) / mask<f32>;
@@ -584,8 +581,7 @@ namespace floppy::gfx
     /// \brief Constructs a color from HSLA values.
     /// \param hsla HSLA color value.
     /// \see from_hsla
-    explicit constexpr color(color::hsla_t const& hsla)
-    {
+    explicit constexpr color(color::hsla_t const& hsla) {
       auto const t = hsla.to_rgba();
       this->r_ = static_cast<f32>(t[0]) / mask<f32>;
       this->g_ = static_cast<f32>(t[1]) / mask<f32>;
@@ -597,8 +593,7 @@ namespace floppy::gfx
     /// \param hsv HSV color value.
     /// \see from_hsv
     explicit constexpr color(color::hsv_t const& hsv)
-      : a_(1.0F)
-    {
+      : a_(1.0F) {
       auto const t = hsv.to_rgb();
       this->r_ = static_cast<f32>(t[0]) / mask<f32>;
       this->g_ = static_cast<f32>(t[1]) / mask<f32>;
@@ -608,8 +603,7 @@ namespace floppy::gfx
     /// \brief Constructs a color from HSVA values.
     /// \param hsva HSVA color value.
     /// \see from_hsva
-    constexpr explicit color(color::hsva_t const& hsva)
-    {
+    constexpr explicit color(color::hsva_t const& hsva) {
       auto const t = hsva.to_rgba();
       this->r_ = static_cast<f32>(t[0]) / mask<f32>;
       this->g_ = static_cast<f32>(t[1]) / mask<f32>;
@@ -621,8 +615,7 @@ namespace floppy::gfx
     /// \param cmyk CMYK color value.
     /// \see from_cmyk
     constexpr explicit color(color::cmyk_t const& cmyk)
-      : a_{1.0F}
-    {
+      : a_{1.0F} {
       auto const t = cmyk.to_rgb();
       this->r_ = static_cast<f32>(t[0]) / mask<f32>;
       this->g_ = static_cast<f32>(t[1]) / mask<f32>;
@@ -632,8 +625,7 @@ namespace floppy::gfx
     /// \brief Constructs a color from CMYKA values.
     /// \param cmyka CMYKA color value.
     /// \see from_cmyka
-    constexpr explicit color(color::cmyka_t const& cmyka)
-    {
+    constexpr explicit color(color::cmyka_t const& cmyka) {
       auto const t = cmyka.to_rgba();
       this->r_ = static_cast<f32>(t[0]) / mask<f32>;
       this->g_ = static_cast<f32>(t[1]) / mask<f32>;
@@ -869,23 +861,39 @@ namespace floppy::gfx
     [[nodiscard]] constexpr auto operator!=(color const& other) const -> bool { return not (*this == other); }
 
     [[nodiscard]] constexpr auto operator+(color const& other) const -> color {
-      return {this->red() + other.red(), this->green() + other.green(),
-        this->blue() + other.blue(), this->alpha() + other.alpha()};
+      return {
+        static_cast<u8>(this->red() + other.red()),
+        static_cast<u8>(this->green() + other.green()),
+        static_cast<u8>(this->blue() + other.blue()),
+        static_cast<u8>(this->alpha() + other.alpha())
+      };
     }
 
     [[nodiscard]] constexpr auto operator-(color const& other) const -> color {
-      return {this->red() - other.red(), this->green() - other.green(),
-      this->blue() - other.blue(), this->alpha() - other.alpha()};
+      return {
+        static_cast<u8>(this->red() - other.red()),
+        static_cast<u8>(this->green() - other.green()),
+        static_cast<u8>(this->blue() - other.blue()),
+        static_cast<u8>(this->alpha() - other.alpha())
+      };
     }
 
     [[nodiscard]] constexpr auto operator*(color const& other) const -> color {
-      return {this->red() * other.red(), this->green() * other.green(),
-      this->blue() * other.blue(), this->alpha() * other.alpha()};
+      return {
+        static_cast<u8>(this->red() * other.red()),
+        static_cast<u8>(this->green() * other.green()),
+        static_cast<u8>(this->blue() * other.blue()),
+        static_cast<u8>(this->alpha() * other.alpha())
+      };
     }
 
     [[nodiscard]] constexpr auto operator/(color const& other) const -> color {
-      return {this->red() / other.red(), this->green() / other.green(),
-      this->blue() / other.blue(), this->alpha() / other.alpha()};
+      return {
+        static_cast<u8>(this->red() / other.red()),
+        static_cast<u8>(this->green() / other.green()),
+        static_cast<u8>(this->blue() / other.blue()),
+        static_cast<u8>(this->alpha() / other.alpha())
+      };
     }
 
     /// wtf ???
@@ -1004,7 +1012,7 @@ namespace floppy::gfx
         static_cast<f32>(col.alphaF())
       );
     }
-  #endif
+  #endif // FL_QT_GUI || FL_DOC
 
    private:
     f32 r_;

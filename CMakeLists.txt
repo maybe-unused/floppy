@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.15)
 include_guard(GLOBAL)
 
 project(floppy
-  VERSION 1.2.4
+  VERSION 1.2.5
   DESCRIPTION "Library that augments and extends C++ standard library"
   HOMEPAGE_URL "whs31.github.io/floppy"
   LANGUAGES C CXX
@@ -26,6 +26,7 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 # -- dependencies --
 find_package(fmt REQUIRED)
 find_package(spdlog REQUIRED)
+find_package(tl-expected REQUIRED)
 
 add_library(${PROJECT_NAME})
 add_library(${PROJECT_NAMESPACE}${PROJECT_NAME} ALIAS ${PROJECT_NAME})
@@ -55,6 +56,7 @@ target_link_libraries(${PROJECT_NAME}
   PUBLIC
     fmt::fmt
     spdlog::spdlog
+    tl::expected
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>$<INSTALL_INTERFACE:include> PRIVATE src/c++)
