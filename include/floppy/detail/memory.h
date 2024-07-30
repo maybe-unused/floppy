@@ -59,72 +59,96 @@ namespace floppy
     /// \brief Returns a mutable pointer to the underlying object.
     /// \returns A mutable pointer to the underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     [[nodiscard]] auto get() -> T* {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::get: use after consume");
+      #endif // FL_DEBUG
       return this->ptr_.get();
     }
 
     /// \brief Returns a mutable pointer to the underlying object.
     /// \returns A mutable pointer to the underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     [[nodiscard]] auto get() const -> T* {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::get: use after consume");
+      #endif // FL_DEBUG
       return this->ptr_.get();
     }
 
     /// \brief Returns a mutable pointer to the underlying object.
     /// \returns A mutable pointer to the underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     [[nodiscard]] auto ptr_mut() -> T* {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::ptr_mut: use after consume");
+      #endif // FL_DEBUG
       return this->ptr_.get();
     }
 
     /// \brief Returns an immutable pointer to the underlying object.
     /// \returns An immutable pointer to the underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     [[nodiscard]] auto ptr() const -> T const* {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::ptr: use after consume");
+      #endif // FL_DEBUG
       return this->ptr_.get();
     }
 
     /// \brief Returns a mutable reference to the underlying object.
     /// \returns A mutable reference to the underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     [[nodiscard]] auto ref_mut() -> T& {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::ref_mut: use after consume");
+      #endif // FL_DEBUG
       return *this->ptr_;
     }
 
     /// \brief Returns an immutable reference to the underlying object.
     /// \returns An immutable reference to the underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     [[nodiscard]] auto ref() const -> T const& {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::ref: use after consume");
+      #endif // FL_DEBUG
       return *this->ptr_;
     }
 
     /// \brief Returns a mutable reference to the underlying object.
     /// \returns A mutable reference to the underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     [[nodiscard]] auto operator*() -> T& {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::operator*: use after consume");
+      #endif // FL_DEBUG
       return *this->ptr_;
     }
 
     /// \brief Returns an immutable reference to the underlying object.
     /// \returns An immutable reference to the underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     [[nodiscard]] auto operator*() const -> T const& {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
+        throw invalid_smart_pointer_access("box::operator*: use after consume");
+      #endif // FL_DEBUG
       return *this->ptr_;
     }
 
@@ -149,18 +173,24 @@ namespace floppy
     /// \brief Returns the underlying object.
     /// \returns The underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     [[nodiscard]] auto operator->() -> T* {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::operator->: use after consume");
+      #endif // FL_DEBUG
       return this->ptr_.get();
     }
 
     /// \brief Returns the underlying object.
     /// \returns The underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     [[nodiscard]] auto operator->() const -> T* {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::operator->: use after consume");
+      #endif // FL_DEBUG
       return this->ptr_.get();
     }
 
@@ -184,10 +214,13 @@ namespace floppy
     /// \tparam U Type to downcast to.
     /// \returns An mutable reference to the casted underlying object if successful, <tt>none</tt> otherwise.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     template <typename U>
     [[nodiscard]] auto downcast() -> option<fl::types::ref<U>> {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::downcast: use after consume");
+      #endif // FL_DEBUG
       try {
         auto& r = dynamic_cast<U&>(this->ref_mut());
         return option<fl::types::ref<U>>{r};
@@ -202,10 +235,13 @@ namespace floppy
     /// \tparam U Type to cast to.
     /// \returns An mutable pointer to the casted underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     template <typename U>
     [[nodiscard]] auto as() -> U* {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::as: use after consume");
+      #endif // FL_DEBUG
       return static_cast<U*>(this->ptr_mut());
     }
 
@@ -213,10 +249,13 @@ namespace floppy
     /// \tparam U Type to cast to.
     /// \returns An constant pointer to the casted underlying object.
     /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     template <typename U>
     [[nodiscard]] auto as() const -> U const* {
+      #ifdef FL_DEBUG
       if(not this->ptr_)
         throw invalid_smart_pointer_access("box::as: use after consume");
+      #endif // FL_DEBUG
       return static_cast<U*>(this->ptr());
     }
 
