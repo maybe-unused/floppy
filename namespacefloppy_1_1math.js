@@ -1,11 +1,8 @@
 var namespacefloppy_1_1math =
 [
-    [ "detail", "namespacefloppy_1_1math_1_1detail.html", "namespacefloppy_1_1math_1_1detail" ],
-    [ "numbers", "namespacefloppy_1_1math_1_1numbers.html", "namespacefloppy_1_1math_1_1numbers" ],
     [ "angle", "structfloppy_1_1math_1_1angle.html", "structfloppy_1_1math_1_1angle" ],
     [ "default_unit", "namespacefloppy_1_1math.html#structfloppy_1_1math_1_1default__unit", null ],
     [ "length", "classfloppy_1_1math_1_1length.html", "classfloppy_1_1math_1_1length" ],
-    [ "pi", "structfloppy_1_1math_1_1numbers_1_1pi.html", "structfloppy_1_1math_1_1numbers_1_1pi" ],
     [ "point2d", "classfloppy_1_1math_1_1point2d.html", "classfloppy_1_1math_1_1point2d" ],
     [ "scale", "structfloppy_1_1math_1_1scale.html", "structfloppy_1_1math_1_1scale" ],
     [ "size2d", "classfloppy_1_1math_1_1size2d.html", "classfloppy_1_1math_1_1size2d" ],

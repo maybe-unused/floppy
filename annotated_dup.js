@@ -8,20 +8,15 @@ var annotated_dup =
         [ "color", "classfloppy_1_1gfx_1_1color.html", "classfloppy_1_1gfx_1_1color" ]
       ] ],
       [ "math", "namespacefloppy_1_1math.html", [
-        [ "detail", "namespacefloppy_1_1math_1_1detail.html", [
+        [ "detail", null, [
           [ "advanced_numeric_type", "structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html", "structfloppy_1_1math_1_1detail_1_1advanced__numeric__type" ],
           [ "basic_numeric_newtype", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype" ],
           [ "basic_two_dimensional_type", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html", "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type" ],
-          [ "default_comparable", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", "structfloppy_1_1math_1_1detail_1_1default__comparable" ],
-          [ "number_base", "structfloppy_1_1math_1_1detail_1_1number__base.html", "structfloppy_1_1math_1_1detail_1_1number__base" ]
-        ] ],
-        [ "numbers", "namespacefloppy_1_1math_1_1numbers.html", [
-          [ "pi", "structfloppy_1_1math_1_1numbers_1_1pi.html", "structfloppy_1_1math_1_1numbers_1_1pi" ]
+          [ "default_comparable", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", "structfloppy_1_1math_1_1detail_1_1default__comparable" ]
         ] ],
         [ "angle", "structfloppy_1_1math_1_1angle.html", "structfloppy_1_1math_1_1angle" ],
         [ "default_unit", "namespacefloppy_1_1math.html#structfloppy_1_1math_1_1default__unit", null ],
         [ "length", "classfloppy_1_1math_1_1length.html", "classfloppy_1_1math_1_1length" ],
-        [ "pi", "structfloppy_1_1math_1_1numbers_1_1pi.html", "structfloppy_1_1math_1_1numbers_1_1pi" ],
         [ "point2d", "classfloppy_1_1math_1_1point2d.html", "classfloppy_1_1math_1_1point2d" ],
         [ "scale", "structfloppy_1_1math_1_1scale.html", "structfloppy_1_1math_1_1scale" ],
         [ "size2d", "classfloppy_1_1math_1_1size2d.html", "classfloppy_1_1math_1_1size2d" ],

@@ -22,14 +22,13 @@ var searchData=
   ['architecture_19',['architecture',['../classfloppy_1_1platform.html#a492279dec1a2fb493bfd9fb82076f90d',1,'floppy::platform']]],
   ['area_20',['area',['../classfloppy_1_1math_1_1size2d.html#a09936b23308281dcaf4fbe12397a025e',1,'floppy::math::size2d']]],
   ['arm_21',['arm',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6af926b3e222d7afee57071b2256839701',1,'floppy::platform']]],
-  ['as_22',['as',['../classfloppy_1_1box.html#a7b9b117b1ec433e9ecf1bcc16c83c8f2',1,'floppy::box::as() -&gt; U *'],['../classfloppy_1_1box.html#ac1bfa26d39683a6d49e66e5a606f1145',1,'floppy::box::as() const -&gt; U const *'],['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a7a5362991b043f043a2fd952fa9f3917',1,'floppy::math::detail::basic_numeric_newtype::as()']]],
-  ['as_5fdegrees_23',['as_degrees',['../structfloppy_1_1math_1_1numbers_1_1pi.html#afe30ff732947e3c3436abf299ecc9c93',1,'floppy::math::numbers::pi']]],
-  ['as_5ff32_24',['as_f32',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a62f3e16f951b2635fd2e04be55f6d914',1,'floppy::math::detail::basic_numeric_newtype']]],
-  ['as_5ff64_25',['as_f64',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#af00bbd3efca6624840346bba50ada2a3',1,'floppy::math::detail::basic_numeric_newtype']]],
-  ['as_5fstr_26',['as_str',['../classfloppy_1_1meta_1_1version.html#a3fe8410e257f2d908f13220f47904be2',1,'floppy::meta::version']]],
-  ['as_5ftarget_5ftriple_27',['as_target_triple',['../classfloppy_1_1platform.html#ab6b6118f6e44d82260fbabd42bfe8a75',1,'floppy::platform']]],
-  ['as_5funique_5fptr_28',['as_unique_ptr',['../classfloppy_1_1box.html#a3a580fa48d3324190e355dd70fd09e78',1,'floppy::box::as_unique_ptr() noexcept -&gt; std::unique_ptr&lt; T &gt; &amp;'],['../classfloppy_1_1box.html#a235d3dbf246ae9fdaf8d372051467e5a',1,'floppy::box::as_unique_ptr() const noexcept -&gt; std::unique_ptr&lt; T &gt; const &amp;']]],
-  ['asin_29',['asin',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#add809373661187793ef5d2296d7f7eb3',1,'floppy::math::detail::basic_numeric_newtype']]],
-  ['atan_30',['atan',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a2c5c1e764b8e4c7f8fb6407b0e78f22e',1,'floppy::math::detail::basic_numeric_newtype']]],
-  ['autosave_31',['autosave',['../group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1',1,'floppy']]]
+  ['as_22',['as',['../classfloppy_1_1box.html#a7b9b117b1ec433e9ecf1bcc16c83c8f2',1,'floppy::box::as() -&gt; U *'],['../classfloppy_1_1box.html#ac1bfa26d39683a6d49e66e5a606f1145',1,'floppy::box::as() const -&gt; U const *'],['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a7a5362991b043f043a2fd952fa9f3917',1,'floppy::math::detail::basic_numeric_newtype::as() const -&gt; U2']]],
+  ['as_5ff32_23',['as_f32',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a62f3e16f951b2635fd2e04be55f6d914',1,'floppy::math::detail::basic_numeric_newtype']]],
+  ['as_5ff64_24',['as_f64',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#af00bbd3efca6624840346bba50ada2a3',1,'floppy::math::detail::basic_numeric_newtype']]],
+  ['as_5fstr_25',['as_str',['../classfloppy_1_1meta_1_1version.html#a3fe8410e257f2d908f13220f47904be2',1,'floppy::meta::version']]],
+  ['as_5ftarget_5ftriple_26',['as_target_triple',['../classfloppy_1_1platform.html#ab6b6118f6e44d82260fbabd42bfe8a75',1,'floppy::platform']]],
+  ['as_5funique_5fptr_27',['as_unique_ptr',['../classfloppy_1_1box.html#a3a580fa48d3324190e355dd70fd09e78',1,'floppy::box::as_unique_ptr() noexcept -&gt; std::unique_ptr&lt; T &gt; &amp;'],['../classfloppy_1_1box.html#a235d3dbf246ae9fdaf8d372051467e5a',1,'floppy::box::as_unique_ptr() const noexcept -&gt; std::unique_ptr&lt; T &gt; const &amp;']]],
+  ['asin_28',['asin',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#add809373661187793ef5d2296d7f7eb3',1,'floppy::math::detail::basic_numeric_newtype']]],
+  ['atan_29',['atan',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a2c5c1e764b8e4c7f8fb6407b0e78f22e',1,'floppy::math::detail::basic_numeric_newtype']]],
+  ['autosave_30',['autosave',['../group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1',1,'floppy']]]
 ];

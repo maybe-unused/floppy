@@ -8,7 +8,7 @@ var searchData=
   ['path_5fseparator_5',['path_separator',['../classfloppy_1_1platform.html#a59111e456e3bfba78f27d52c59121b2a',1,'floppy::platform']]],
   ['pathscale_6',['pathscale',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca6d187e1e0278e55df4973764d97a18fd',1,'floppy::platform']]],
   ['pc_7',['pc',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2abc54f4d60f1cec0f9a6cb70e13f2127a',1,'floppy::platform']]],
-  ['pi_8',['pi',['../structfloppy_1_1math_1_1numbers_1_1pi.html',1,'pi&lt; T &gt;'],['../structfloppy_1_1math_1_1numbers_1_1pi.html',1,'pi&lt; T &gt;'],['../structfloppy_1_1math_1_1angle.html#ae9b9250fe4977ecf81b030690815d4a8',1,'floppy::math::angle::pi()']]],
+  ['pi_8',['pi',['../structfloppy_1_1math_1_1angle.html#ae9b9250fe4977ecf81b030690815d4a8',1,'floppy::math::angle']]],
   ['pimpl_9',['pimpl',['../group__traits.html#gaa6694ecf510485baa4e46c63f5b99523',1,'floppy::traits']]],
   ['pin_10',['pin',['../structfloppy_1_1traits_1_1pin.html',1,'floppy::traits']]],
   ['plain_5ftype_11',['plain_type',['../group__helpers.html#structfloppy_1_1plain__type',1,'floppy']]],
