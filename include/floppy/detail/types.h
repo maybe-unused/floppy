@@ -58,6 +58,8 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     } // namespace detail
 
     /// \brief Expected type with default error type (<tt>std::string</tt>).
+    /// \headerfile floppy/floppy.h
+    /// \ingroup aliases
     /// \details Provides result type, which defaults to <tt>std::expected</tt>, if
     /// available, or <tt>tl::expected</tt>/<tt>std::experimental::expected</tt> otherwise.
     ///
@@ -125,6 +127,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \brief Shortcut for <tt>std::reference_wrapper</tt>.
     /// \headerfile floppy/floppy.h
     /// \ingroup aliases
+    /// \deprecated Use <code>std::ref</code> or <code>std::cref</code> instead.
     template <typename T>
     using ref = std::reference_wrapper<T>;
   } // namespace types
