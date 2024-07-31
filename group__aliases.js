@@ -7,6 +7,7 @@ var group__aliases =
     [ "bytearray_view", "group__aliases.html#ga9910a22d4c37a8bbb94c1c8d9aedb6de", null ],
     [ "bytearray_view_mut", "group__aliases.html#ga648837c945db0be1ada62a296cbe6624", null ],
     [ "option", "group__aliases.html#gaa202473f296b2492d9239773369181af", null ],
+    [ "result", "group__aliases.html#ga3a100aaa5a4c5f9fe1f4b8175e360db8", null ],
     [ "ref", "group__aliases.html#gae7d120016347ce3f021bc18dcefe2809", null ],
     [ "error", "group__aliases.html#ga36694535c2e0b46d1e65a74f12130077", null ],
     [ "ok", "group__aliases.html#ga6cd767346c4db58bd1b50716043dbe41", null ],

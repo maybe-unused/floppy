@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.2.5</span>
+   &#160;<span id="projectnumber">1.2.6</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -153,6 +153,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:gaa202473f296b2492d9239773369181af" id="r_gaa202473f296b2492d9239773369181af"><td class="memTemplParams" colspan="2">template&lt;std::destructible T&gt; </td></tr>
 <tr class="memitem:gaa202473f296b2492d9239773369181af"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaa202473f296b2492d9239773369181af">option</a> = std::optional&lt;T&gt;</td></tr>
 <tr class="separator:gaa202473f296b2492d9239773369181af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a100aaa5a4c5f9fe1f4b8175e360db8" id="r_ga3a100aaa5a4c5f9fe1f4b8175e360db8"><td class="memTemplParams" colspan="2">template&lt;typename T  = void&gt; </td></tr>
+<tr class="memitem:ga3a100aaa5a4c5f9fe1f4b8175e360db8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga3a100aaa5a4c5f9fe1f4b8175e360db8">result</a> = detail::expected&lt;T, std::string&gt;</td></tr>
+<tr class="separator:ga3a100aaa5a4c5f9fe1f4b8175e360db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae7d120016347ce3f021bc18dcefe2809" id="r_gae7d120016347ce3f021bc18dcefe2809"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gae7d120016347ce3f021bc18dcefe2809"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gae7d120016347ce3f021bc18dcefe2809">ref</a> = std::reference_wrapper&lt;T&gt;</td></tr>
 <tr class="separator:gae7d120016347ce3f021bc18dcefe2809"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,7 +168,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6cd767346c4db58bd1b50716043dbe41" id="r_ga6cd767346c4db58bd1b50716043dbe41"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:ga6cd767346c4db58bd1b50716043dbe41"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga6cd767346c4db58bd1b50716043dbe41">ok</a> (T &amp;&amp;t) -&gt; detail::expected&lt; std::decay_t&lt; T &gt;, std::string &gt;</td></tr>
 <tr class="separator:ga6cd767346c4db58bd1b50716043dbe41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3601c452e64e71f68f515fa7e56a47f1" id="r_ga3601c452e64e71f68f515fa7e56a47f1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3601c452e64e71f68f515fa7e56a47f1">ok</a> () -&gt; <a class="el" href="namespacefloppy_1_1types.html#a3a100aaa5a4c5f9fe1f4b8175e360db8">result</a>&lt;&gt;</td></tr>
+<tr class="memitem:ga3601c452e64e71f68f515fa7e56a47f1" id="r_ga3601c452e64e71f68f515fa7e56a47f1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3601c452e64e71f68f515fa7e56a47f1">ok</a> () -&gt; <a class="el" href="#ga3a100aaa5a4c5f9fe1f4b8175e360db8">result</a>&lt;&gt;</td></tr>
 <tr class="separator:ga3601c452e64e71f68f515fa7e56a47f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5b788689cac7bc0f3b593775123aaaee" id="r_ga5b788689cac7bc0f3b593775123aaaee"><td class="memTemplParams" colspan="2">template&lt;std::destructible T&gt; </td></tr>
 <tr class="memitem:ga5b788689cac7bc0f3b593775123aaaee"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5b788689cac7bc0f3b593775123aaaee">some</a> (T &amp;&amp;t) -&gt; <a class="el" href="#gaa202473f296b2492d9239773369181af">option</a>&lt; std::decay_t&lt; T &gt; &gt;</td></tr>
@@ -261,8 +264,8 @@ template&lt;std::destructible T&gt; </div>
 <div class="line">   <span class="keywordflow">return</span> <a class="code hl_variable" href="#ga9365b793fe547271e48fa719a7f4854d">none</a>;</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code hl_function" href="#ga5b788689cac7bc0f3b593775123aaaee">some</a>(vec.front());</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__aliases_html_ga5b788689cac7bc0f3b593775123aaaee"><div class="ttname"><a href="#ga5b788689cac7bc0f3b593775123aaaee">floppy::types::some</a></div><div class="ttdeci">auto some(T &amp;&amp;t) -&gt; option&lt; std::decay_t&lt; T &gt; &gt;</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00115">types.h:115</a></div></div>
-<div class="ttc" id="agroup__aliases_html_ga9365b793fe547271e48fa719a7f4854d"><div class="ttname"><a href="#ga9365b793fe547271e48fa719a7f4854d">floppy::types::none</a></div><div class="ttdeci">constexpr auto none</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00123">types.h:123</a></div></div>
+<div class="ttc" id="agroup__aliases_html_ga5b788689cac7bc0f3b593775123aaaee"><div class="ttname"><a href="#ga5b788689cac7bc0f3b593775123aaaee">floppy::types::some</a></div><div class="ttdeci">auto some(T &amp;&amp;t) -&gt; option&lt; std::decay_t&lt; T &gt; &gt;</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00117">types.h:117</a></div></div>
+<div class="ttc" id="agroup__aliases_html_ga9365b793fe547271e48fa719a7f4854d"><div class="ttname"><a href="#ga9365b793fe547271e48fa719a7f4854d">floppy::types::none</a></div><div class="ttdeci">constexpr auto none</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00125">types.h:125</a></div></div>
 <div class="ttc" id="agroup__aliases_html_gaa202473f296b2492d9239773369181af"><div class="ttname"><a href="#gaa202473f296b2492d9239773369181af">floppy::types::option</a></div><div class="ttdeci">std::optional&lt; T &gt; option</div><div class="ttdoc">&lt; Alias for unsigned long long.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00051">types.h:51</a></div></div>
 </div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga5b788689cac7bc0f3b593775123aaaee" title="Helper function for option.">some</a> </dd>
 <dd>
@@ -271,6 +274,43 @@ template&lt;std::destructible T&gt; </div>
 <a href="https://en.cppreference.com/w/cpp/utility/optional">https://en.cppreference.com/w/cpp/utility/optional</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00051">51</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a id="ga3a100aaa5a4c5f9fe1f4b8175e360db8" name="ga3a100aaa5a4c5f9fe1f4b8175e360db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a100aaa5a4c5f9fe1f4b8175e360db8">&#9670;&#160;</a></span>result</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga3a100aaa5a4c5f9fe1f4b8175e360db8">result</a> = detail::expected&lt;T, std::string&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expected type with default error type (<code>std::string</code>). </p>
+<p>Provides result type, which defaults to <code>std::expected</code>, if available, or <code>tl::expected</code>/<code>std::experimental::expected</code> otherwise.</p>
+<p>Example usage with void return type: </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>fl::types;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> returns_void(<span class="keywordtype">int</span> x) -&gt; <a class="code hl_typedef" href="#ga3a100aaa5a4c5f9fe1f4b8175e360db8">result&lt;&gt;</a> {</div>
+<div class="line">  <span class="keywordflow">if</span>(x &gt; 0)</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="#ga36694535c2e0b46d1e65a74f12130077">error</a>(<span class="stringliteral">&quot;x is positive, should be negative ({})&quot;</span>, x);</div>
+<div class="line">  <span class="keywordflow">return</span> Ok();</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__aliases_html_ga36694535c2e0b46d1e65a74f12130077"><div class="ttname"><a href="#ga36694535c2e0b46d1e65a74f12130077">floppy::types::error</a></div><div class="ttdeci">auto error(std::string_view format, Args &amp;&amp;... args) -&gt; detail::unexpected&lt; std::decay_t&lt; std::string &gt; &gt;</div><div class="ttdoc">Helper function for result.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00095">types.h:95</a></div></div>
+<div class="ttc" id="agroup__aliases_html_ga3a100aaa5a4c5f9fe1f4b8175e360db8"><div class="ttname"><a href="#ga3a100aaa5a4c5f9fe1f4b8175e360db8">floppy::types::result</a></div><div class="ttdeci">detail::expected&lt; T, std::string &gt; result</div><div class="ttdoc">Expected type with default error type (std::string).</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00087">types.h:87</a></div></div>
+</div><!-- fragment --><p>Example usage with non-void return type: </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>fl::types;</div>
+<div class="line"><span class="keyword">auto</span> divide_by_then_sqrt(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> x) -&gt; <a class="code hl_typedef" href="#ga3a100aaa5a4c5f9fe1f4b8175e360db8">result&lt;f32&gt;</a> {</div>
+<div class="line">  <span class="keywordflow">if</span>(x == 0)</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="#ga36694535c2e0b46d1e65a74f12130077">error</a>(<span class="stringliteral">&quot;division by zero&quot;</span>);</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code hl_function" href="#ga3601c452e64e71f68f515fa7e56a47f1">ok</a>(a / x).map(std::sqrt);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__aliases_html_ga3601c452e64e71f68f515fa7e56a47f1"><div class="ttname"><a href="#ga3601c452e64e71f68f515fa7e56a47f1">floppy::types::ok</a></div><div class="ttdeci">auto ok() -&gt; result&lt;&gt;</div><div class="ttdoc">Helper function for result.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00110">types.h:110</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00087">87</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -289,8 +329,9 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Shortcut for <code>std::reference_wrapper</code>. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated</a></b></dt><dd>Use <code>std::ref</code> or <code>std::cref</code> instead. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00129">129</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00132">132</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -318,7 +359,7 @@ template&lt;typename... Args&gt; </div>
 
 <p>Helper function for <code>result</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00093">93</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00095">95</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -341,7 +382,7 @@ template&lt;class T &gt; </div>
 
 <p>Helper function for <code>result</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00101">101</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00103">103</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -358,7 +399,7 @@ template&lt;class T &gt; </div>
           <td class="memname">auto ok </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> -&gt; <a class="el" href="namespacefloppy_1_1types.html#a3a100aaa5a4c5f9fe1f4b8175e360db8">result</a>&lt;&gt; </td>
+          <td> -&gt; <a class="el" href="#ga3a100aaa5a4c5f9fe1f4b8175e360db8">result</a>&lt;&gt; </td>
         </tr>
       </table>
   </td>
@@ -370,7 +411,7 @@ template&lt;class T &gt; </div>
 
 <p>Helper function for <code>result</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00108">108</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00110">110</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -394,7 +435,7 @@ template&lt;std::destructible T&gt; </div>
 <p>Helper function for <a class="el" href="#gaa202473f296b2492d9239773369181af">option</a>. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga9365b793fe547271e48fa719a7f4854d" title="Helper function for option.">none</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00115">115</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00117">117</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -422,7 +463,7 @@ template&lt;std::destructible T&gt; </div>
 <p>Helper function for <a class="el" href="#gaa202473f296b2492d9239773369181af">option</a>. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga5b788689cac7bc0f3b593775123aaaee" title="Helper function for option.">some</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00123">123</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00125">125</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -431,7 +472,7 @@ template&lt;std::destructible T&gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 30 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Wed Jul 31 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>
