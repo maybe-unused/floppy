@@ -15,6 +15,7 @@ namespace floppy
 {
   /// \brief <tt>std::ranges</tt> backports namespace.
   /// \details Includes full <tt>std::ranges</tt> namespace.
+  /// \invariant Available only in C++20 mode.
   namespace ranges
   {
     using namespace std::ranges; // NOLINT(*-build-using-namespace)

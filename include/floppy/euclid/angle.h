@@ -50,7 +50,7 @@ namespace floppy::math
 
     /// \brief Returns this angle as number in range \f$[0, 2\pi)\f$.
     [[nodiscard]] constexpr auto positive() const -> angle {
-      auto const tp = ::fl::math::pi<T>::value * T(2);
+      auto const tp = std::numbers::pi_v<T> * T(2);
       auto a = std::fmod(this->m_, tp);
       if(a < T(0.0))
         a += tp;
@@ -69,7 +69,7 @@ namespace floppy::math
     /// \param other Other angle
     /// \note Takes wrapping and signs into account.
     [[nodiscard]] constexpr auto angle_to(angle const& other) const -> angle {
-      auto const max = ::fl::math::pi<T>::value * T(2);
+      auto const max = std::numbers::pi_v<T> * T(2);
       auto const d = std::fmod(other.radians() - this->radians(), max);
       return angle::from_radians(std::fmod(T(2) * d, max) - d);
     }
@@ -106,18 +106,18 @@ namespace floppy::math
     [[nodiscard]] static constexpr auto zero() -> angle { return angle(static_cast<T>(0.0)); }
 
     /// \brief Constructs an angle with value \f$\pi\f$.
-    [[nodiscard]] static constexpr auto pi() -> angle { return angle(::fl::math::pi<T>::value); }
+    [[nodiscard]] static constexpr auto pi() -> angle { return angle(std::numbers::pi_v<T>); }
 
     /// \brief Constructs an angle with value \f$2\pi\f$.
-    [[nodiscard]] static constexpr auto two_pi() -> angle { return angle(T(2) * ::fl::math::pi<T>::value); }
+    [[nodiscard]] static constexpr auto two_pi() -> angle { return angle(T(2) * std::numbers::pi_v<T>); }
 
     /// \brief Constructs an angle with value \f$\frac{\pi}{2}\f$.
-    [[nodiscard]] static constexpr auto half_pi() -> angle { return angle(T(0.5) * ::fl::math::pi<T>::value); }
+    [[nodiscard]] static constexpr auto half_pi() -> angle { return angle(T(0.5) * std::numbers::pi_v<T>); }
 
     /// \brief Constructs an angle with value \f$\frac{\pi}{3}\f$.
-    [[nodiscard]] static constexpr auto third_pi() -> angle { return angle(::fl::math::pi<T>::value / T(3)); }
+    [[nodiscard]] static constexpr auto third_pi() -> angle { return angle(std::numbers::pi_v<T> / T(3)); }
 
     /// \brief Constructs an angle with value \f$\frac{\pi}{4}\f$.
-    [[nodiscard]] static constexpr auto quarter_pi() -> angle { return angle(T(0.25) * ::fl::math::pi<T>::value); }
+    [[nodiscard]] static constexpr auto quarter_pi() -> angle { return angle(T(0.25) * std::numbers::pi_v<T>); }
   };
 } // namespace floppy::math

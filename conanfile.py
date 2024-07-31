@@ -20,7 +20,7 @@ class FloppyRecipe(ConanFile):
     settings = "os", "arch", "compiler", "build_type"
     options = {
         "shared": [True, False],
-        "test": [True, False],
+        "test": [True, False]
     }
     default_options = {
         "shared": True,

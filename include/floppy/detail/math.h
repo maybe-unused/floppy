@@ -10,66 +10,6 @@
 /// \brief Math namespace.
 namespace floppy::math
 {
-  /// \brief Implementation details for math types.
-  namespace detail
-  {
-    /// \brief Base class for numbers.
-    /// \headerfile floppy/floppy.h
-    /// \ingroup calc
-    /// \tparam T Number type. Must satisfy constraint <tt>floppy::concepts::num</tt>.
-    /// \tparam V Number value. Represented as <tt>f64</tt>.
-    template <concepts::num T, f64 V>
-    struct number_base
-    {
-      /// \brief Underlying type.
-      using type = T;
-
-      /// \brief Number value static member.
-      static constexpr type value = T{V};
-
-      /// \brief Default constructor.
-      constexpr number_base() = default;
-
-      /// \brief Conversion to underlying type.
-      constexpr operator type() const { return this->value; }
-
-      /// \brief Arithmetic operator for subtraction.
-      template <concepts::num U>
-      constexpr auto operator-(U const& other) const -> type { return this->value - other; }
-
-      /// \brief Arithmetic operator for multiplication.
-      template <concepts::num U>
-      constexpr auto operator*(U const& other) const -> type { return this->value * other; }
-
-      /// \brief Arithmetic operator for division.
-      template <concepts::num U>
-      constexpr auto operator/(U const& other) const -> type { return this->value / other; }
-
-      /// \brief Arithmetic operator for addition.
-      template <concepts::num U>
-      constexpr auto operator+(U const& other) const -> type { return this->value + other; }
-    };
-  } // namespace detail
-
-  /// \brief Numbers namespace.
-  /// \headerfile floppy/floppy.h
-  /// \ingroup calc
-  inline namespace numbers
-  {
-    /// \brief Pi number.
-    /// \headerfile floppy/floppy.h
-    /// \ingroup calc
-    /// \tparam T Number type. Must satisfy constraint <tt>floppy::concepts::num</tt>. Defaults to <tt>f64</tt>.
-    template <concepts::num T = f64>
-    struct pi : detail::number_base<T, std::numbers::pi>
-    {
-     public:
-      /// \brief Returns pi as degrees value.
-      /// \return Pi as degrees
-      [[maybe_unused]] [[nodiscard]] constexpr auto as_degrees() const -> T { return 180.0; } // NOLINT(*-magic-numbers)
-    };
-  } // namespace numbers
-
   /// \brief Returns true if numbers are equal.
   /// \headerfile floppy/floppy.h
   /// \ingroup calc
@@ -156,7 +96,7 @@ namespace floppy::math
   /// \see to_degrees
   template <concepts::num T>
   [[nodiscard]] constexpr auto to_radians(T deg) -> T {
-    return static_cast<T>(deg * std::numbers::pi_v<T> / pi<T>().as_degrees());
+    return static_cast<T>(deg * std::numbers::pi_v<T> / 180.F);
   }
 
   /// \brief Converts radians to degrees
@@ -168,7 +108,7 @@ namespace floppy::math
   /// \see to_radians
   template <concepts::num T>
   [[nodiscard]] constexpr auto to_degrees(T rad) -> T {
-    return static_cast<T>(rad * pi<T>().as_degrees() / std::numbers::pi_v<T>);
+    return static_cast<T>(rad * 180.F / std::numbers::pi_v<T>);
   }
 
   /// \brief Returns logarithm of a number in a given base.

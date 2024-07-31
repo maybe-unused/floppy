@@ -38,9 +38,9 @@ TEST(EuclidAngle, Lerp)
   EXPECT_FLOAT_EQ(*a.lerp(b, 0.25F), 1.25F);
   EXPECT_FLOAT_EQ(*a.lerp(b, 0.5F), 1.5F);
   EXPECT_FLOAT_EQ(*a.lerp(b, 0.75F), 1.75F);
-  EXPECT_FLOAT_EQ(*a.lerp(b + 2.0F * fl::math::pi<f32>(), 0.75F), 1.75F);
-  EXPECT_FLOAT_EQ(*a.lerp(b - 2.0F * fl::math::pi<f32>(), 0.75F), 1.75F);
-  EXPECT_FLOAT_EQ(*a.lerp(b + 10.0F * fl::math::pi<f32>(), 0.75F), 1.75F);
+  EXPECT_FLOAT_EQ(*a.lerp(b + 2.0F * std::numbers::pi_v<f32>, 0.75F), 1.75F);
+  EXPECT_FLOAT_EQ(*a.lerp(b - 2.0F * std::numbers::pi_v<f32>, 0.75F), 1.75F);
+  EXPECT_FLOAT_EQ(*a.lerp(b + 10.0F * std::numbers::pi_v<f32>, 0.75F), 1.75F);
 }
 
 TEST(EuclidAngle, Sum)
