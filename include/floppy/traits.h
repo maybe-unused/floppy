@@ -4,25 +4,23 @@
 #include <experimental/propagate_const>
 #include <floppy/floppy.h>
 
-/// \brief Namespace with traits for custom types and classes.
-namespace floppy::traits
+namespace floppy
 {
   /// \brief Disallow copy operations for a type
   /// \headerfile floppy/traits.h 
   /// \ingroup traits
   /// \details Example declaration:
   /// \code {.cpp}
-  /// class Test : public fl::traits::non_copyable<Test> {}; // copy is not allowed for Test
+  /// class Test : fl::non_copyable {}; // copy is not allowed for Test
   /// \endcode
-  /// \tparam T Class type
   /// \see non_movable
   /// \see pin
-  template <typename T>
-  struct non_copyable
+  struct non_copyable // NOLINT(*-special-member-functions)
   {
     non_copyable() = default;
-    non_copyable(const T&) = delete;
-    auto operator=(const T&) -> T& = delete;
+    ~non_copyable() = default;
+    non_copyable(non_copyable const&) = delete;
+    auto operator=(non_copyable const&) -> non_copyable& = delete;
   };
 
   /// \brief Disallow move operations for a type
@@ -30,17 +28,16 @@ namespace floppy::traits
   /// \ingroup traits
   /// \details Example declaration:
   /// \code {.cpp}
-  /// class Test : public fl::traits::non_movable<Test> {}; // move is not allowed for Test
+  /// class Test : fl::non_movable<Test> {}; // move is not allowed for Test
   /// \endcode
-  /// \tparam T Class type
   /// \see non_copyable
   /// \see pin
-  template <typename T>
-  struct non_movable
+  struct non_movable // NOLINT(*-special-member-functions)
   {
     non_movable() = default;
-    non_movable(T&&) = delete;
-    auto operator=(T&&) -> T& = delete;
+    ~non_movable() = default;
+    non_movable(non_movable&&) = delete;
+    auto operator=(non_movable&&) noexcept -> non_movable& = delete;
   };
 
   /// \brief Disallow copy and move operations for a type
@@ -48,13 +45,11 @@ namespace floppy::traits
   /// \ingroup traits
   /// \details Example declaration:
   /// \code {.cpp}
-  /// class Test : public fl::traits::pin<Test> {}; // copy and move is not allowed for Test
+  /// class Test : fl::pin<Test> {}; // copy and move is not allowed for Test
   /// \endcode
-  /// \tparam T Class type
   /// \see non_movable
   /// \see non_copyable
-  template <typename T>
-  struct pin : public non_copyable<T>, public non_movable<T> {};
+  struct [[maybe_unused]] pin : public non_copyable, public non_movable {};
 
   /// \brief Singleton pattern trait.
   /// \headerfile floppy/traits.h 
@@ -62,9 +57,9 @@ namespace floppy::traits
   /// \details Allows to use <b>Singleton</b> pattern in custom types and classes.
   /// Example declaration:
   /// \code {.cpp}
-  /// class TestSingleton : public fl::traits::singleton<TestSingleton>
+  /// class TestSingleton : public fl::singleton<TestSingleton>
   /// {
-  ///   friend struct fl::traits::singleton<TestSingleton>;
+  ///   friend struct fl::singleton<TestSingleton>;
   ///
   ///  public:
   ///   ~TestSingleton() = default;
@@ -85,7 +80,7 @@ namespace floppy::traits
   /// \note Produced singleton is thread-safe.
   /// \tparam T Class type.
   template <typename T>
-  struct singleton : public pin<T>
+  struct singleton : pin
   {
     /// \brief Returns <i>mutable pointer</i> to the singleton instance.
     /// \return Mutable pointer to the singleton instance.
@@ -119,7 +114,7 @@ namespace floppy::traits
   /// \details Allows to use <b>Pimpl</b> pattern in custom types and classes.
   /// Example declaration:
   /// \code {.cpp}
-  /// class TestPimpl : public traits::pin<TestPimpl>
+  /// class TestPimpl : fl::pin
   /// {
   ///  public:
   ///   TestPimpl() = default;
@@ -128,7 +123,7 @@ namespace floppy::traits
   ///
   ///  private:
   ///   struct Impl;
-  ///   traits::pimpl<struct Impl> impl;
+  ///   fl::pimpl<struct Impl> impl;
   /// };
   ///
   ///  struct TestPimpl::Impl {
@@ -183,7 +178,7 @@ namespace floppy::traits
       return os << t.to_string();
     }
   };
-} // namespace floppy::traits
+} // namespace floppy
 
 namespace floppy
 {
@@ -193,7 +188,7 @@ namespace floppy
     /// \tparam C Character type.
     /// \tparam T Type to cast.
     /// \see floppy::traits::formattable
-    template <typename C, floppy::traits::detail::derived_from_formattable<C> T>
+    template <typename C, floppy::detail::derived_from_formattable<C> T>
     [[nodiscard]] auto str_cast(T const& t) noexcept -> std::string {
       return static_cast<std::string>(t);
     }
@@ -243,7 +238,7 @@ namespace floppy
 /// \deprecated Removed due to ambiguity with <tt>fmt</tt> impaired with <tt>spdlog</tt> library.
 
 /// \brief Formatter for types which derives from <tt>formattable_base<char></tt>.
-template <floppy::traits::detail::derived_from_formattable<char> T>
+template <floppy::detail::derived_from_formattable<char> T>
 struct [[maybe_unused]] fmt::formatter<T>
 {
   /// \brief Required by <tt>fmt</tt>.
