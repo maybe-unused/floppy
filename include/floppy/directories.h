@@ -5,8 +5,7 @@
 #include <floppy/detail/types.h>
 #include <floppy/detail/export.h>
 
-/// \brief Filesystem namespace.
-namespace floppy::filesystem
+namespace floppy
 {
   /// \brief Class for getting location of system directories for a specific application.
   /// \headerfile floppy/directories.h 

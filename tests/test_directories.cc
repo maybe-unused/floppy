@@ -4,8 +4,8 @@
 
 TEST(Directories, ApplicationDirs)
 {
-  using enum fl::filesystem::application_dirs::dir;
-  auto dirs = fl::filesystem::application_dirs("com", "Foo Corp", "Bar App");
+  using enum fl::application_dirs::dir;
+  auto dirs = fl::application_dirs("com", "Foo Corp", "Bar App");
   #if defined(FLOPPY_OS_WINDOWS)
   auto username = std::string(std::getenv("USERNAME"));
     EXPECT_EQ(dirs[cache].string(), R"(C:\Users\)" + username + R"(\AppData\Local\Foo Corp\Bar App\cache)");
