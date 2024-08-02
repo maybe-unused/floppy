@@ -18,32 +18,32 @@
 <area shape="poly" id="edge9_Node000004_Node000013" title=" " alt="" coords="409,54,413,57,427,75,434,93,439,127,443,161,449,178,461,196,491,221,525,238,523,243,488,225,457,199,444,181,437,162,433,128,429,94,422,78,409,61,405,57"/>
 <area shape="rect" id="Node000007" href="$structfloppy_1_1math_1_1angle.html" title="Newtype describing an angle." alt="" coords="742,222,834,248"/>
 <area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="637,124,677,145,732,184,774,220,771,224,729,188,674,149,635,129"/>
-<area shape="rect" id="Node000014" href="$structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="12,722,181,748"/>
-<area shape="rect" id="Node000015" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="253,649,394,690"/>
+<area shape="rect" id="Node000014" href="$structfloppy_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="12,722,181,748"/>
+<area shape="rect" id="Node000015" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="253,649,394,690"/>
 <area shape="poly" id="edge10_Node000014_Node000015" title=" " alt="" coords="158,715,252,687,253,692,159,720"/>
-<area shape="rect" id="Node000017" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="255,715,392,755"/>
+<area shape="rect" id="Node000017" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="255,715,392,755"/>
 <area shape="poly" id="edge12_Node000014_Node000017" title=" " alt="" coords="196,732,254,732,254,738,196,738"/>
-<area shape="rect" id="Node000021" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="255,780,392,821"/>
+<area shape="rect" id="Node000021" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="255,780,392,821"/>
 <area shape="poly" id="edge16_Node000014_Node000021" title=" " alt="" coords="159,750,255,778,253,783,157,755"/>
-<area shape="rect" id="Node000023" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="255,845,392,886"/>
+<area shape="rect" id="Node000023" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="255,845,392,886"/>
 <area shape="poly" id="edge18_Node000014_Node000023" title=" " alt="" coords="127,756,177,793,237,830,263,842,261,847,234,835,174,797,124,760"/>
-<area shape="rect" id="Node000025" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="255,911,392,951"/>
+<area shape="rect" id="Node000025" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="255,911,392,951"/>
 <area shape="poly" id="edge20_Node000014_Node000025" title=" " alt="" coords="116,760,166,827,199,863,237,895,258,908,256,912,234,900,196,867,161,830,112,763"/>
-<area shape="rect" id="Node000027" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="253,976,394,1017"/>
+<area shape="rect" id="Node000027" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="253,976,394,1017"/>
 <area shape="poly" id="edge22_Node000014_Node000027" title=" " alt="" coords="110,761,128,805,156,858,192,913,237,961,256,973,253,978,234,965,188,916,151,861,123,807,105,763"/>
-<area shape="rect" id="Node000028" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="242,1041,405,1067"/>
+<area shape="rect" id="Node000028" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="242,1041,405,1067"/>
 <area shape="poly" id="edge23_Node000014_Node000028" title=" " alt="" coords="106,763,120,819,145,890,162,927,183,963,208,997,237,1026,256,1038,253,1043,234,1030,204,1000,179,966,158,930,140,892,115,820,100,764"/>
-<area shape="rect" id="Node000033" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="251,1091,396,1147"/>
+<area shape="rect" id="Node000033" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="251,1091,396,1147"/>
 <area shape="poly" id="edge28_Node000014_Node000033" title=" " alt="" coords="105,763,117,826,142,909,160,954,181,998,207,1040,238,1077,252,1089,248,1093,234,1081,203,1043,176,1000,155,956,137,911,112,827,99,764"/>
-<area shape="rect" id="Node000034" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="247,295,400,351"/>
+<area shape="rect" id="Node000034" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="247,295,400,351"/>
 <area shape="poly" id="edge29_Node000014_Node000034" title=" " alt="" coords="98,706,110,638,134,547,151,498,174,449,201,403,234,361,247,349,251,353,238,365,205,406,178,452,156,500,139,549,115,640,104,707"/>
-<area shape="rect" id="Node000035" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="247,375,400,415"/>
+<area shape="rect" id="Node000035" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="247,375,400,415"/>
 <area shape="poly" id="edge30_Node000014_Node000035" title=" " alt="" coords="100,706,114,648,140,573,179,494,204,458,234,425,249,414,252,418,237,429,208,461,183,497,144,575,119,650,105,708"/>
-<area shape="rect" id="Node000036" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="250,439,397,495"/>
+<area shape="rect" id="Node000036" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="250,439,397,495"/>
 <area shape="poly" id="edge31_Node000014_Node000036" title=" " alt="" coords="105,707,124,664,152,611,189,555,234,505,250,493,253,497,237,509,193,558,157,613,129,666,110,709"/>
-<area shape="rect" id="Node000037" href="$structfloppy_1_1traits_1_1formattable.html" title=" " alt="" coords="243,519,404,575"/>
+<area shape="rect" id="Node000037" href="$structfloppy_1_1formattable.html" title=" " alt="" coords="243,519,404,575"/>
 <area shape="poly" id="edge32_Node000014_Node000037" title=" " alt="" coords="115,708,165,648,198,615,234,585,253,573,256,578,237,589,202,619,169,651,119,711"/>
-<area shape="rect" id="Node000008" href="$structfloppy_1_1traits_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="250,600,397,625"/>
+<area shape="rect" id="Node000008" href="$structfloppy_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="250,600,397,625"/>
 <area shape="poly" id="edge33_Node000014_Node000008" title=" " alt="" coords="123,710,173,672,234,635,265,623,267,628,237,640,176,676,126,714"/>
 <area shape="rect" id="Node000016" href="$classfloppy_1_1gfx_1_1color.html" title="Class representing a color." alt="" coords="541,653,593,679"/>
 <area shape="poly" id="edge11_Node000015_Node000016" title=" " alt="" coords="409,666,541,663,541,669,409,671"/>

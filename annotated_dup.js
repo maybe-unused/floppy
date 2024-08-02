@@ -31,24 +31,19 @@ var annotated_dup =
       [ "serialization", "namespacefloppy_1_1serialization.html", [
         [ "serialization_error", "classfloppy_1_1serialization_1_1serialization__error.html", "classfloppy_1_1serialization_1_1serialization__error" ]
       ] ],
-      [ "traits", "namespacefloppy_1_1traits.html", [
-        [ "detail", "namespacefloppy_1_1traits_1_1detail.html", [
-          [ "formattable_base", "structfloppy_1_1traits_1_1detail_1_1formattable__base.html", "structfloppy_1_1traits_1_1detail_1_1formattable__base" ]
-        ] ],
-        [ "formattable", "structfloppy_1_1traits_1_1formattable.html", "structfloppy_1_1traits_1_1formattable" ],
-        [ "non_copyable", "structfloppy_1_1traits_1_1non__copyable.html", null ],
-        [ "non_movable", "structfloppy_1_1traits_1_1non__movable.html", null ],
-        [ "pin", "structfloppy_1_1traits_1_1pin.html", null ],
-        [ "singleton", "structfloppy_1_1traits_1_1singleton.html", "structfloppy_1_1traits_1_1singleton" ]
-      ] ],
       [ "application_dirs", "classfloppy_1_1application__dirs.html", "classfloppy_1_1application__dirs" ],
       [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
       [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
+      [ "formattable", "structfloppy_1_1formattable.html", "structfloppy_1_1formattable" ],
       [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],
+      [ "non_copyable", "structfloppy_1_1non__copyable.html", null ],
+      [ "non_movable", "structfloppy_1_1non__movable.html", null ],
       [ "one_of", "structfloppy_1_1one__of.html", "structfloppy_1_1one__of" ],
       [ "ostream_formatter", "structfloppy_1_1ostream__formatter.html", "structfloppy_1_1ostream__formatter" ],
+      [ "pin", "structfloppy_1_1pin.html", null ],
       [ "plain_type", "group__helpers.html#structfloppy_1_1plain__type", "group__helpers_structfloppy_1_1plain__type" ],
       [ "platform", "classfloppy_1_1platform.html", "classfloppy_1_1platform" ],
+      [ "singleton", "structfloppy_1_1singleton.html", "structfloppy_1_1singleton" ],
       [ "source_location", "structfloppy_1_1source__location.html", "structfloppy_1_1source__location" ]
     ] ],
     [ "fmt", null, [

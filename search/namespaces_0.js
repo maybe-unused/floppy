@@ -18,8 +18,6 @@ var searchData=
   ['floppy_3a_3artti_15',['rtti',['../namespacefloppy_1_1rtti.html',1,'floppy']]],
   ['floppy_3a_3aserialization_16',['serialization',['../namespacefloppy_1_1serialization.html',1,'floppy']]],
   ['floppy_3a_3aserialization_3a_3adetail_17',['detail',['../namespacefloppy_1_1serialization_1_1detail.html',1,'floppy::serialization']]],
-  ['floppy_3a_3atraits_18',['traits',['../namespacefloppy_1_1traits.html',1,'floppy']]],
-  ['floppy_3a_3atraits_3a_3adetail_19',['detail',['../namespacefloppy_1_1traits_1_1detail.html',1,'floppy::traits']]],
-  ['floppy_3a_3atypes_20',['types',['../namespacefloppy_1_1types.html',1,'floppy']]],
-  ['floppy_3a_3atypes_3a_3adetail_21',['detail',['../namespacefloppy_1_1types_1_1detail.html',1,'floppy::types']]]
+  ['floppy_3a_3atypes_18',['types',['../namespacefloppy_1_1types.html',1,'floppy']]],
+  ['floppy_3a_3atypes_3a_3adetail_19',['detail',['../namespacefloppy_1_1types_1_1detail.html',1,'floppy::types']]]
 ];

@@ -190,7 +190,7 @@
 <!-- Node14 -->
 <g id="Node000014" class="node">
 <title>Node14</title>
-<g id="a_Node000014"><a xlink:href="structfloppy_1_1traits_1_1detail_1_1formattable__base.html" target="_top" xlink:title="Interface, providing to_string method.">
+<g id="a_Node000014"><a xlink:href="structfloppy_1_1detail_1_1formattable__base.html" target="_top" xlink:title="Interface, providing to_string method.">
 <polygon fill="white" stroke="#666666" points="131.88,-318.5 4.87,-318.5 4.87,-299.25 131.88,-299.25 131.88,-318.5"/>
 <text text-anchor="middle" x="68.38" y="-304.05" font-family="Helvetica,sans-Serif" font-size="11.00">formattable_base&lt; C &gt;</text>
 </a>
@@ -199,7 +199,7 @@
 <!-- Node15 -->
 <g id="Node000015" class="node">
 <title>Node15</title>
-<g id="a_Node000015"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000015"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="291.12,-373.12 185.88,-373.12 185.88,-342.62 291.12,-342.62 291.12,-373.12"/>
 <text text-anchor="start" x="193.88" y="-358.68" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; color,</text>
 <text text-anchor="middle" x="238.5" y="-347.43" font-family="Helvetica,sans-Serif" font-size="11.00"> char &gt;</text>
@@ -218,7 +218,7 @@
 <!-- Node17 -->
 <g id="Node000017" class="node">
 <title>Node17</title>
-<g id="a_Node000017"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000017"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="290,-324.12 187,-324.12 187,-293.62 290,-293.62 290,-324.12"/>
 <text text-anchor="start" x="195" y="-309.68" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; color</text>
 <text text-anchor="middle" x="238.5" y="-298.43" font-family="Helvetica,sans-Serif" font-size="11.00">::hsv_t, char &gt;</text>
@@ -237,7 +237,7 @@
 <!-- Node21 -->
 <g id="Node000021" class="node">
 <title>Node21</title>
-<g id="a_Node000021"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000021"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="290,-275.12 187,-275.12 187,-244.62 290,-244.62 290,-275.12"/>
 <text text-anchor="start" x="195" y="-260.68" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; color</text>
 <text text-anchor="middle" x="238.5" y="-249.43" font-family="Helvetica,sans-Serif" font-size="11.00">::hsl_t, char &gt;</text>
@@ -256,7 +256,7 @@
 <!-- Node23 -->
 <g id="Node000023" class="node">
 <title>Node23</title>
-<g id="a_Node000023"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000023"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="290,-226.12 187,-226.12 187,-195.62 290,-195.62 290,-226.12"/>
 <text text-anchor="start" x="195" y="-211.68" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; color</text>
 <text text-anchor="middle" x="238.5" y="-200.43" font-family="Helvetica,sans-Serif" font-size="11.00">::hsla_t, char &gt;</text>
@@ -275,7 +275,7 @@
 <!-- Node25 -->
 <g id="Node000025" class="node">
 <title>Node25</title>
-<g id="a_Node000025"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000025"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="290,-177.12 187,-177.12 187,-146.62 290,-146.62 290,-177.12"/>
 <text text-anchor="start" x="195" y="-162.68" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; color</text>
 <text text-anchor="middle" x="238.5" y="-151.43" font-family="Helvetica,sans-Serif" font-size="11.00">::hsva_t, char &gt;</text>
@@ -294,7 +294,7 @@
 <!-- Node27 -->
 <g id="Node000027" class="node">
 <title>Node27</title>
-<g id="a_Node000027"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000027"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="291.5,-128.12 185.5,-128.12 185.5,-97.62 291.5,-97.62 291.5,-128.12"/>
 <text text-anchor="start" x="193.5" y="-113.67" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; angle</text>
 <text text-anchor="middle" x="238.5" y="-102.42" font-family="Helvetica,sans-Serif" font-size="11.00">&lt; f32 &gt;, char &gt;</text>
@@ -313,7 +313,7 @@
 <!-- Node28 -->
 <g id="Node000028" class="node">
 <title>Node28</title>
-<g id="a_Node000028"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000028"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="299.75,-79.5 177.25,-79.5 177.25,-60.25 299.75,-60.25 299.75,-79.5"/>
 <text text-anchor="middle" x="238.5" y="-65.05" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; T, char &gt;</text>
 </a>
@@ -331,7 +331,7 @@
 <!-- Node33 -->
 <g id="Node000033" class="node">
 <title>Node33</title>
-<g id="a_Node000033"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000033"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="293,-41.75 184,-41.75 184,0 293,0 293,-41.75"/>
 <text text-anchor="start" x="192" y="-27.3" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; length</text>
 <text text-anchor="start" x="192" y="-16.05" font-family="Helvetica,sans-Serif" font-size="11.00">&lt; default_unit, f32</text>
@@ -351,7 +351,7 @@
 <!-- Node34 -->
 <g id="Node000034" class="node">
 <title>Node34</title>
-<g id="a_Node000034"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000034"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="296,-638.75 181,-638.75 181,-597 296,-597 296,-638.75"/>
 <text text-anchor="start" x="189" y="-624.3" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; point2d</text>
 <text text-anchor="start" x="189" y="-613.05" font-family="Helvetica,sans-Serif" font-size="11.00">&lt; default_unit, f32 &gt;</text>
@@ -371,7 +371,7 @@
 <!-- Node35 -->
 <g id="Node000035" class="node">
 <title>Node35</title>
-<g id="a_Node000035"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000035"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="296,-579.12 181,-579.12 181,-548.62 296,-548.62 296,-579.12"/>
 <text text-anchor="start" x="189" y="-564.67" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; scale</text>
 <text text-anchor="middle" x="238.5" y="-553.42" font-family="Helvetica,sans-Serif" font-size="11.00">&lt; S, D, f32 &gt;, char &gt;</text>
@@ -390,7 +390,7 @@
 <!-- Node36 -->
 <g id="Node000036" class="node">
 <title>Node36</title>
-<g id="a_Node000036"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000036"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="293.75,-530.75 183.25,-530.75 183.25,-489 293.75,-489 293.75,-530.75"/>
 <text text-anchor="start" x="191.25" y="-516.3" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; size2d</text>
 <text text-anchor="start" x="191.25" y="-505.05" font-family="Helvetica,sans-Serif" font-size="11.00">&lt; default_unit, f32</text>
@@ -410,7 +410,7 @@
 <!-- Node37 -->
 <g id="Node000037" class="node">
 <title>Node37</title>
-<g id="a_Node000037"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title=" ">
+<g id="a_Node000037"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="299,-470.75 178,-470.75 178,-429 299,-429 299,-470.75"/>
 <text text-anchor="start" x="186" y="-456.3" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; vector2d</text>
 <text text-anchor="start" x="186" y="-445.05" font-family="Helvetica,sans-Serif" font-size="11.00">&lt; default_unit, f32 &gt;</text>
@@ -430,7 +430,7 @@
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="structfloppy_1_1traits_1_1formattable.html" target="_top" xlink:title="Allows type to be converted to string and printed via standard streams or fmt.">
+<g id="a_Node000008"><a xlink:href="structfloppy_1_1formattable.html" target="_top" xlink:title="Allows type to be converted to string and printed via standard streams or fmt.">
 <polygon fill="white" stroke="#666666" points="293.38,-410.5 183.62,-410.5 183.62,-391.25 293.38,-391.25 293.38,-410.5"/>
 <text text-anchor="middle" x="238.5" y="-396.05" font-family="Helvetica,sans-Serif" font-size="11.00">formattable&lt; T, C &gt;</text>
 </a>

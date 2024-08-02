@@ -1,8 +1,8 @@
 <map id="angle&lt; T &gt;" name="angle&lt; T &gt;">
 <area shape="rect" id="Node000001" title="Newtype describing an angle." alt="" coords="142,274,233,300"/>
-<area shape="rect" id="Node000002" href="$structfloppy_1_1traits_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="22,192,169,217"/>
+<area shape="rect" id="Node000002" href="$structfloppy_1_1formattable.html" title="Allows type to be converted to string and printed via standard streams or fmt." alt="" coords="22,192,169,217"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,226,176,272,172,276,119,230"/>
-<area shape="rect" id="Node000003" href="$structfloppy_1_1traits_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,102,175,127"/>
+<area shape="rect" id="Node000003" href="$structfloppy_1_1detail_1_1formattable__base.html" title="Interface, providing to_string method." alt="" coords="5,102,175,127"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,143,97,191,92,191,89,143"/>
 <area shape="rect" id="Node000004" href="$structfloppy_1_1math_1_1detail_1_1advanced__numeric__type.html" title="CRTP base for numeric newtypes containing math operations implementation." alt="" coords="195,184,372,225"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="250,237,203,276,200,271,247,233"/>
