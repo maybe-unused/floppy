@@ -1,10 +1,10 @@
 var searchData=
 [
   ['darwin_0',['darwin',['../classfloppy_1_1platform.html#a25a1e653be2d434f69095f1dcd357985a3750c667d5cd8aecc0a9213b362066e9',1,'floppy::platform']]],
-  ['data_1',['data',['../classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a8d777f385d3dfec8815d20f7496026dc',1,'floppy::filesystem::application_dirs']]],
-  ['data_5fdir_2',['data_dir',['../classfloppy_1_1filesystem_1_1application__dirs.html#ad1cec499f2df8913605950217aff41b0',1,'floppy::filesystem::application_dirs']]],
-  ['data_5flocal_3',['data_local',['../classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a109d0fabf7fadeb851631940a8ce6e34',1,'floppy::filesystem::application_dirs']]],
-  ['data_5flocal_5fdir_4',['data_local_dir',['../classfloppy_1_1filesystem_1_1application__dirs.html#af250fd9669e9669be8cafbf336b54ab3',1,'floppy::filesystem::application_dirs']]],
+  ['data_1',['data',['../classfloppy_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a8d777f385d3dfec8815d20f7496026dc',1,'floppy::application_dirs']]],
+  ['data_5fdir_2',['data_dir',['../classfloppy_1_1application__dirs.html#ad1cec499f2df8913605950217aff41b0',1,'floppy::application_dirs']]],
+  ['data_5flocal_3',['data_local',['../classfloppy_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a109d0fabf7fadeb851631940a8ce6e34',1,'floppy::application_dirs']]],
+  ['data_5flocal_5fdir_4',['data_local_dir',['../classfloppy_1_1application__dirs.html#af250fd9669e9669be8cafbf336b54ab3',1,'floppy::application_dirs']]],
   ['debug_5',['debug',['../group__logging.html#gaebe2862c002ab7a673f4ba5038a905c7',1,'floppy::log']]],
   ['debug_5fto_6',['debug_to',['../group__logging.html#ga710e2061116b4efb6ecf6669f2f9a421',1,'floppy::log']]],
   ['default_5fcomparable_7',['default_comparable',['../structfloppy_1_1math_1_1detail_1_1default__comparable.html',1,'floppy::math::detail']]],
@@ -24,7 +24,7 @@ var searchData=
   ['diab_21',['diab',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca9d76d663f4feae3bb1bc63ed17388abd',1,'floppy::platform']]],
   ['digitalmars_22',['digitalmars',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca1000cda46e51b6348226da9e5a658583',1,'floppy::platform']]],
   ['dignussystem_23',['dignussystem',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678caa5a0674e6d06c76c324c9f7b3034c75d',1,'floppy::platform']]],
-  ['dir_24',['dir',['../classfloppy_1_1filesystem_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75',1,'floppy::filesystem::application_dirs']]],
+  ['dir_24',['dir',['../classfloppy_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75',1,'floppy::application_dirs']]],
   ['distance_5fto_25',['distance_to',['../classfloppy_1_1math_1_1point2d.html#a37dda189e7218258a4aaec77823d0cbc',1,'floppy::math::point2d']]],
   ['div_5feuclid_26',['div_euclid',['../classfloppy_1_1math_1_1point2d.html#a2e36f43b15dd31047fab42d0f48009ec',1,'floppy::math::point2d::div_euclid()'],['../group__calc.html#ga751139c04bc5de9f5873901e61a031ed',1,'floppy::math::div_euclid()']]],
   ['domain_27',['domain',['../classfloppy_1_1meta_1_1project__meta.html#adeb5281b7ff8433975b337a1f47562a5',1,'floppy::meta::project_meta']]],

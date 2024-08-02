@@ -1,6 +1,6 @@
 var hierarchy =
 [
-    [ "application_dirs", "classfloppy_1_1filesystem_1_1application__dirs.html", null ],
+    [ "application_dirs", "classfloppy_1_1application__dirs.html", null ],
     [ "box< T >", "classfloppy_1_1box.html", null ],
     [ "configuration_file< F, T >", "classfloppy_1_1configuration__file.html", null ],
     [ "default_comparable< T >", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", [

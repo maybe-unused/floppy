@@ -1,9 +1,6 @@
 var annotated_dup =
 [
     [ "floppy", "namespacefloppy.html", [
-      [ "filesystem", "namespacefloppy_1_1filesystem.html", [
-        [ "application_dirs", "classfloppy_1_1filesystem_1_1application__dirs.html", "classfloppy_1_1filesystem_1_1application__dirs" ]
-      ] ],
       [ "gfx", "namespacefloppy_1_1gfx.html", [
         [ "color", "classfloppy_1_1gfx_1_1color.html", "classfloppy_1_1gfx_1_1color" ]
       ] ],
@@ -44,6 +41,7 @@ var annotated_dup =
         [ "pin", "structfloppy_1_1traits_1_1pin.html", null ],
         [ "singleton", "structfloppy_1_1traits_1_1singleton.html", "structfloppy_1_1traits_1_1singleton" ]
       ] ],
+      [ "application_dirs", "classfloppy_1_1application__dirs.html", "classfloppy_1_1application__dirs" ],
       [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
       [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
       [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],

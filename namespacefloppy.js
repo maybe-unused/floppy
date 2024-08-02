@@ -2,7 +2,6 @@ var namespacefloppy =
 [
     [ "concepts", "namespacefloppy_1_1concepts.html", "namespacefloppy_1_1concepts" ],
     [ "detail", "namespacefloppy_1_1types_1_1detail.html", null ],
-    [ "filesystem", "namespacefloppy_1_1filesystem.html", "namespacefloppy_1_1filesystem" ],
     [ "gfx", "namespacefloppy_1_1gfx.html", "namespacefloppy_1_1gfx" ],
     [ "literals", "namespacefloppy_1_1literals.html", [
       [ "operator\"\"_z", "namespacefloppy_1_1literals.html#a2e8f3db7e297556ee0f952c0c06c234d", null ],
@@ -32,6 +31,7 @@ var namespacefloppy =
     [ "serialization", "namespacefloppy_1_1serialization.html", "namespacefloppy_1_1serialization" ],
     [ "traits", "namespacefloppy_1_1traits.html", "namespacefloppy_1_1traits" ],
     [ "types", "namespacefloppy_1_1types.html", "namespacefloppy_1_1types" ],
+    [ "application_dirs", "classfloppy_1_1application__dirs.html", "classfloppy_1_1application__dirs" ],
     [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
     [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
     [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],
