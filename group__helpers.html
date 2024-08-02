@@ -164,6 +164,22 @@ Functions</h2></td></tr>
 <tr class="memitem:gaece47fc7440ee1c5e315c2b6c754f607" id="r_gaece47fc7440ee1c5e315c2b6c754f607"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gaece47fc7440ee1c5e315c2b6c754f607"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaece47fc7440ee1c5e315c2b6c754f607">type_name</a> () -&gt; std::string</td></tr>
 <tr class="separator:gaece47fc7440ee1c5e315c2b6c754f607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb4f89dd7e6a414cd721976e1c318d50" id="r_gadb4f89dd7e6a414cd721976e1c318d50"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_or(e); } or requires(T e) { enum_flag(e); })</td></tr>
+<tr class="memitem:gadb4f89dd7e6a414cd721976e1c318d50"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gadb4f89dd7e6a414cd721976e1c318d50">operator|</a> (T const lhs, T const rhs) noexcept -&gt; T</td></tr>
+<tr class="separator:gadb4f89dd7e6a414cd721976e1c318d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5029b3c27dd760124ac11832c5c08468" id="r_ga5029b3c27dd760124ac11832c5c08468"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_and(e); } or requires(T e) { enum_flag(e); })</td></tr>
+<tr class="memitem:ga5029b3c27dd760124ac11832c5c08468"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5029b3c27dd760124ac11832c5c08468">operator&amp;</a> (T const lhs, T const rhs) noexcept -&gt; T</td></tr>
+<tr class="separator:ga5029b3c27dd760124ac11832c5c08468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9f14e5ed81acddc198dc33a515e994e" id="r_gaf9f14e5ed81acddc198dc33a515e994e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_xor(e); } or requires(T e) { enum_flag(e); })</td></tr>
+<tr class="memitem:gaf9f14e5ed81acddc198dc33a515e994e"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaf9f14e5ed81acddc198dc33a515e994e">operator^</a> (T const lhs, T const rhs) noexcept -&gt; T</td></tr>
+<tr class="separator:gaf9f14e5ed81acddc198dc33a515e994e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6fa39c8df8596cd28c97c3dc1eea8c6e" id="r_ga6fa39c8df8596cd28c97c3dc1eea8c6e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_not(e); } or requires(T e) { enum_flag(e); })</td></tr>
+<tr class="memitem:ga6fa39c8df8596cd28c97c3dc1eea8c6e"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga6fa39c8df8596cd28c97c3dc1eea8c6e">operator~</a> (T const value) noexcept -&gt; T</td></tr>
+<tr class="separator:ga6fa39c8df8596cd28c97c3dc1eea8c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabdcc54d31693c73090e4e02f31872ebd" id="r_gabdcc54d31693c73090e4e02f31872ebd"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:gabdcc54d31693c73090e4e02f31872ebd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gabdcc54d31693c73090e4e02f31872ebd">critical_message</a> (std::string_view format, Args &amp;&amp;... args) -&gt; void</td></tr>
 <tr class="separator:gabdcc54d31693c73090e4e02f31872ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -406,6 +422,254 @@ GCC </li>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga67c6adb54f12fdf9e8ef12c2ef08c99a" title="Demangles C++ type name from string.">demangle</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00075">75</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+
+</div>
+</div>
+<a id="gadb4f89dd7e6a414cd721976e1c318d50" name="gadb4f89dd7e6a414cd721976e1c318d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb4f89dd7e6a414cd721976e1c318d50">&#9670;&#160;</a></span>operator|()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_or(e); } or requires(T e) { enum_flag(e); })</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator| </td>
+          <td>(</td>
+          <td class="paramtype">T const</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) -&gt; T </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generic bitwise <b>or</b> operator for enum types. </p>
+<p>Requires opt-ins <code>enable_bitwise_or</code> or <code>enum_flag</code> to be defined for the enum type. Example: </p><div class="fragment"><div class="line"><span class="keyword">enum class</span> Example {</div>
+<div class="line">  A = 1,</div>
+<div class="line">  B = 2,</div>
+<div class="line">  C = 4</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// opt-in bitwise or</span></div>
+<div class="line"><span class="keywordtype">void</span> <span class="keyword">consteval</span> enable_bitwise_or(Example);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// alternatively, opt-in all operators</span></div>
+<div class="line"><span class="keywordtype">void</span> <span class="keyword">consteval</span> enum_flag(Example);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> value = Example::A | Example::B;</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Enum type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Left operand </td></tr>
+    <tr><td class="paramname">rhs</td><td>Right operand </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Result of bitwise or operation </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00111">111</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+
+</div>
+</div>
+<a id="ga5029b3c27dd760124ac11832c5c08468" name="ga5029b3c27dd760124ac11832c5c08468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5029b3c27dd760124ac11832c5c08468">&#9670;&#160;</a></span>operator&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_and(e); } or requires(T e) { enum_flag(e); })</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype">T const</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) -&gt; T </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generic bitwise <b>and</b> operator for enum types. </p>
+<p>Requires opt-ins <code>enable_bitwise_and</code> or <code>enum_flag</code> to be defined for the enum type. Example: </p><div class="fragment"><div class="line"><span class="keyword">enum class</span> Example {</div>
+<div class="line">  A = 1,</div>
+<div class="line">  B = 2,</div>
+<div class="line">  C = 4</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// opt-in bitwise and</span></div>
+<div class="line"><span class="keywordtype">void</span> <span class="keyword">consteval</span> enable_bitwise_and(Example);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// alternatively, opt-in all operators</span></div>
+<div class="line"><span class="keywordtype">void</span> <span class="keyword">consteval</span> enum_flag(Example);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> value = Example::A &amp; Example::B;</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Enum type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Left operand </td></tr>
+    <tr><td class="paramname">rhs</td><td>Right operand </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Result of bitwise and operation </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00146">146</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+
+</div>
+</div>
+<a id="gaf9f14e5ed81acddc198dc33a515e994e" name="gaf9f14e5ed81acddc198dc33a515e994e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9f14e5ed81acddc198dc33a515e994e">&#9670;&#160;</a></span>operator^()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_xor(e); } or requires(T e) { enum_flag(e); })</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator^ </td>
+          <td>(</td>
+          <td class="paramtype">T const</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) -&gt; T </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generic bitwise <b>xor</b> operator for enum types. </p>
+<p>Requires opt-ins <code>enable_bitwise_xor</code> or <code>enum_flag</code> to be defined for the enum type. Example: </p><div class="fragment"><div class="line"><span class="keyword">enum class</span> Example {</div>
+<div class="line">  A = 1,</div>
+<div class="line">  B = 2,</div>
+<div class="line">  C = 4</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// opt-in bitwise or</span></div>
+<div class="line"><span class="keywordtype">void</span> <span class="keyword">consteval</span> enable_bitwise_xor(Example);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// alternatively, opt-in all operators</span></div>
+<div class="line"><span class="keywordtype">void</span> <span class="keyword">consteval</span> enum_flag(Example);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> value = Example::A ^ Example::B;</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Enum type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Left operand </td></tr>
+    <tr><td class="paramname">rhs</td><td>Right operand </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Result of bitwise xor operation </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00181">181</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+
+</div>
+</div>
+<a id="ga6fa39c8df8596cd28c97c3dc1eea8c6e" name="ga6fa39c8df8596cd28c97c3dc1eea8c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6fa39c8df8596cd28c97c3dc1eea8c6e">&#9670;&#160;</a></span>operator~()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_not(e); } or requires(T e) { enum_flag(e); })</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator~ </td>
+          <td>(</td>
+          <td class="paramtype">T const</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td> -&gt; T </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generic bitwise <b>not</b> operator for enum types. </p>
+<p>Requires opt-ins <code>enable_bitwise_not</code> or <code>enum_flag</code> to be defined for the enum type. Example: </p><div class="fragment"><div class="line"><span class="keyword">enum class</span> Example {</div>
+<div class="line">  A = 1,</div>
+<div class="line">  B = 2,</div>
+<div class="line">  C = 4</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// opt-in bitwise not</span></div>
+<div class="line"><span class="keywordtype">void</span> <span class="keyword">consteval</span> enable_bitwise_not(Example);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// alternatively, opt-in all operators</span></div>
+<div class="line"><span class="keywordtype">void</span> <span class="keyword">consteval</span> enum_flag(Example);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> value = ~Example::A;</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Enum type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Left operand </td></tr>
+    <tr><td class="paramname">rhs</td><td>Right operand </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Result of bitwise not operation </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00216">216</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
 
 </div>
 </div>

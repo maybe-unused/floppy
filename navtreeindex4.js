@@ -1,5 +1,9 @@
 var NAVTREEINDEX4 =
 {
+"structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a2670941a8b4ee25c472c0a2b5450d6f2":[3,8,1,5,2],
+"structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a303fca537ab302123cfbfda46a61260d":[3,8,1,5,1],
+"structfloppy_1_1gfx_1_1color_1_1hsva__t.html#abb97ee5b3485f7cc5eb67cff00cd963a":[3,8,1,5,3],
+"structfloppy_1_1math_1_1angle.html":[3,6,0],
 "structfloppy_1_1math_1_1angle.html#a0b3265454614c3cb2c563ec74dfeb851":[3,6,0,1],
 "structfloppy_1_1math_1_1angle.html#a12b1477aadd91bc07fa93f5199021a5c":[3,6,0,32],
 "structfloppy_1_1math_1_1angle.html#a16f668eb5ce16e45fb3f943ec204284b":[3,6,0,7],
@@ -245,9 +249,5 @@ var NAVTREEINDEX4 =
 "structfloppy_1_1math_1_1scale.html#ad3b3c9e313da58838b6b703a6b2a17cd":[3,6,3,20],
 "structfloppy_1_1math_1_1scale.html#ad7081a8bedaf8b59d99196a270fc3826":[3,6,3,27],
 "structfloppy_1_1math_1_1scale.html#add809373661187793ef5d2296d7f7eb3":[3,6,3,23],
-"structfloppy_1_1math_1_1scale.html#ade7958c1143337a2576cd6ef72ffe368":[3,6,3,1],
-"structfloppy_1_1math_1_1scale.html#aed221b43ccc2b82b9d6abef9e6911527":[3,6,3,36],
-"structfloppy_1_1math_1_1scale.html#af00bbd3efca6624840346bba50ada2a3":[3,6,3,18],
-"structfloppy_1_1math_1_1scale.html#af49cc34143aa01c6d8c377814b06e8a5":[3,6,3,37],
-"structfloppy_1_1math_1_1scale.html#affe3bc70a9917c9da3da0a0972081386":[3,6,3,10]
+"structfloppy_1_1math_1_1scale.html#ade7958c1143337a2576cd6ef72ffe368":[3,6,3,1]
 };

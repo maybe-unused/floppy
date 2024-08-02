@@ -275,6 +275,22 @@ Functions</h2></td></tr>
 <tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342" id="r_ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplParams" colspan="2">template&lt;concepts::num T, concepts::num U&gt; </td></tr>
 <tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__helpers.html#ga0bbd17556e1675c4a05316d9f6743342">narrow_cast</a> (U &amp;&amp;u) noexcept -&gt; T</td></tr>
 <tr class="separator:ga0bbd17556e1675c4a05316d9f6743342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb4f89dd7e6a414cd721976e1c318d50" id="r_gadb4f89dd7e6a414cd721976e1c318d50"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_or(e); } or requires(T e) { enum_flag(e); })</td></tr>
+<tr class="memitem:gadb4f89dd7e6a414cd721976e1c318d50"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__helpers.html#gadb4f89dd7e6a414cd721976e1c318d50">operator|</a> (T const lhs, T const rhs) noexcept -&gt; T</td></tr>
+<tr class="separator:gadb4f89dd7e6a414cd721976e1c318d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5029b3c27dd760124ac11832c5c08468" id="r_ga5029b3c27dd760124ac11832c5c08468"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_and(e); } or requires(T e) { enum_flag(e); })</td></tr>
+<tr class="memitem:ga5029b3c27dd760124ac11832c5c08468"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__helpers.html#ga5029b3c27dd760124ac11832c5c08468">operator&amp;</a> (T const lhs, T const rhs) noexcept -&gt; T</td></tr>
+<tr class="separator:ga5029b3c27dd760124ac11832c5c08468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9f14e5ed81acddc198dc33a515e994e" id="r_gaf9f14e5ed81acddc198dc33a515e994e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_xor(e); } or requires(T e) { enum_flag(e); })</td></tr>
+<tr class="memitem:gaf9f14e5ed81acddc198dc33a515e994e"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__helpers.html#gaf9f14e5ed81acddc198dc33a515e994e">operator^</a> (T const lhs, T const rhs) noexcept -&gt; T</td></tr>
+<tr class="separator:gaf9f14e5ed81acddc198dc33a515e994e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6fa39c8df8596cd28c97c3dc1eea8c6e" id="r_ga6fa39c8df8596cd28c97c3dc1eea8c6e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_not(e); } or requires(T e) { enum_flag(e); })</td></tr>
+<tr class="memitem:ga6fa39c8df8596cd28c97c3dc1eea8c6e"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__helpers.html#ga6fa39c8df8596cd28c97c3dc1eea8c6e">operator~</a> (T const value) noexcept -&gt; T</td></tr>
+<tr class="separator:ga6fa39c8df8596cd28c97c3dc1eea8c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf50958988fef4e2cf80c0473e1a3535b" id="r_gaf50958988fef4e2cf80c0473e1a3535b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:gaf50958988fef4e2cf80c0473e1a3535b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__memory.html#gaf50958988fef4e2cf80c0473e1a3535b">make_box</a> (Args &amp;&amp;... args) -&gt; <a class="el" href="classfloppy_1_1box.html">box</a>&lt; T &gt;</td></tr>
 <tr class="separator:gaf50958988fef4e2cf80c0473e1a3535b"><td class="memSeparator" colspan="2">&#160;</td></tr>
