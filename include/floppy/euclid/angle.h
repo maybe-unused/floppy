@@ -16,7 +16,7 @@ namespace floppy::math
   /// \details Stores an angle in radians.
   /// \tparam T Number type. Must satisfy concept <tt>floppy::concepts::num</tt>. Default is \c f32.
   template <concepts::num T = f32>
-  struct angle : public traits::formattable<angle<T>, char>,
+  struct angle : public formattable<angle<T>, char>,
                  public detail::advanced_numeric_type<angle<T>, T>
   {
     /// \brief Constructs an empty angle.

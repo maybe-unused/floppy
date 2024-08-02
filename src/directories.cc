@@ -70,9 +70,9 @@ namespace
     }
     return str;
   }
-} // anonymous namespace
+} // namespace
 
-namespace floppy::filesystem
+namespace floppy
 {
   application_dirs::application_dirs(meta::project_meta const& meta) noexcept(false)
     : application_dirs(meta.domain(), meta.organization(), meta.name())
@@ -203,4 +203,4 @@ namespace floppy::filesystem
   auto application_dirs::operator[](application_dirs::dir directory_type) const noexcept(false) -> fs::path {
     return this->get(directory_type);
   }
-} // namespace floppy::filesystem
+} // namespace floppy

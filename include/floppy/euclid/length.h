@@ -23,7 +23,7 @@ namespace floppy::math
   /// \see floppy::math::scale
   /// \see floppy::math::angle
   template <typename U = default_unit, concepts::num T = f32>
-  class length : public traits::formattable<length<U, T>, char>,
+  class length : public formattable<length<U, T>, char>,
                  public detail::basic_numeric_newtype<length<U, T>, T>
   {
    public:

@@ -4,6 +4,7 @@
 #include <string_view>
 #include <iostream>
 #include <fmt/format.h>
+#include <floppy/detail/string_utils.h>
 
 #if defined(_WIN32)
 # if defined(FLOPPY_LIBRARY)
@@ -26,15 +27,13 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
   /// \brief Metadata definitions, such as library version or name.
   namespace meta {
     namespace detail {
-      // todo: this must be rewritten
-      /// \internal
-      constexpr auto is_digit(char c) -> bool { return c <= '9' && c >= '0'; }
-
       /// \internal
       constexpr auto stoi_impl(char const* str, int value = 0) -> int {
-        return *str ? is_digit(*str)
-          ? stoi_impl(str + 1, (*str - '0') + value * 10)
-          : throw "compile time error: not a digit" : value;
+        return *str
+          ? string_utils::is_digit(*str)
+            ? stoi_impl(str + 1, (*str - '0') + value * 10)
+            : throw exceptions::compile_time_error()
+          : value;
       }
 
       /// \internal

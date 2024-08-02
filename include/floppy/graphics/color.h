@@ -117,7 +117,7 @@ namespace floppy::gfx
   /// functions to convert between different color formats.
   /// \headerfile floppy/graphics.h
   /// \ingroup gfx
-  class color : public traits::formattable<color, char>
+  class color : public formattable<color, char>
   {
     template <concepts::num T = u8>
     static constexpr floppy::concepts::num auto mask = static_cast<T>(std::numeric_limits<u8>::max());
@@ -126,7 +126,7 @@ namespace floppy::gfx
     /// \brief HSL color representation.
     /// \headerfile floppy/graphics.h
     /// \sa https://en.wikipedia.org/wiki/HSL_and_HSV
-    struct hsl_t : public traits::formattable<color::hsl_t, char>
+    struct hsl_t : public formattable<color::hsl_t, char>
     {
       u16 h = 0;     ///< Hue
       f32 s = 0.0F;  ///< Saturation
@@ -190,7 +190,7 @@ namespace floppy::gfx
     /// \brief HSLA color representation.
     /// \headerfile floppy/graphics.h
     /// \sa https://en.wikipedia.org/wiki/HSL_and_HSV
-    struct hsla_t : public traits::formattable<color::hsla_t, char>
+    struct hsla_t : public formattable<color::hsla_t, char>
     {
       u16 h = 0;     ///< Hue
       f32 s = 0.0F;  ///< Saturation
@@ -240,7 +240,7 @@ namespace floppy::gfx
     /// \brief HSV color representation.
     /// \headerfile floppy/graphics.h
     /// \sa https://en.wikipedia.org/wiki/HSL_and_HSV
-    struct hsv_t : public traits::formattable<color::hsv_t, char>
+    struct hsv_t : public formattable<color::hsv_t, char>
     {
       u16 h = 0.0F;
       f32 s = 0.0F;
@@ -331,7 +331,7 @@ namespace floppy::gfx
     /// \brief HSVA color representation.
     /// \headerfile floppy/graphics.h
     /// \sa https://en.wikipedia.org/wiki/HSL_and_HSV
-    struct hsva_t : public traits::formattable<color::hsva_t, char>
+    struct hsva_t : public formattable<color::hsva_t, char>
     {
       u16 h = 0.0F;
       f32 s = 0.0F;
@@ -378,7 +378,7 @@ namespace floppy::gfx
       constexpr auto operator!=(color::hsva_t const& other) const -> bool { return not (*this == other); }
     };
 
-    struct cmyk_t : public traits::formattable<color::hsv_t, char>
+    struct cmyk_t : public formattable<color::hsv_t, char>
     {
       f32 c = 0.0F;
       f32 m = 0.0F;
@@ -431,7 +431,7 @@ namespace floppy::gfx
       }
     };
 
-    struct cmyka_t : public traits::formattable<color::hsv_t, char>
+    struct cmyka_t : public formattable<color::hsv_t, char>
     {
       f32 c = 0.0F;
       f32 m = 0.0F;

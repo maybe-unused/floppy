@@ -22,7 +22,7 @@ namespace floppy::math::detail
   /// \see floppy::math::vector2d
   /// \see floppy::math::size2d
   template <typename T, typename U, concepts::num N>
-  struct basic_two_dimensional_type : public traits::formattable<T, char>
+  struct basic_two_dimensional_type : public formattable<T, char>
   {
     /// \brief Associated unit type.
     using unit = U;

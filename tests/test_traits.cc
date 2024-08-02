@@ -4,9 +4,9 @@
 
 using namespace fl;
 
-class TestSingleton : public traits::singleton<TestSingleton>
+class TestSingleton : public singleton<TestSingleton>
 {
-  friend struct traits::singleton<TestSingleton>;
+  friend struct singleton<TestSingleton>;
 
  public:
   ~TestSingleton() = default;
@@ -17,7 +17,7 @@ class TestSingleton : public traits::singleton<TestSingleton>
   TestSingleton() = default;
 };
 
-class TestPimpl : public traits::pin<TestPimpl>
+class TestPimpl : public pin
 {
  public:
   TestPimpl() = default;
@@ -26,7 +26,7 @@ class TestPimpl : public traits::pin<TestPimpl>
 
  private:
   struct Impl;
-  traits::pimpl<struct Impl> impl;
+  pimpl<struct Impl> impl;
 };
 
 struct TestPimpl::Impl {
@@ -37,7 +37,7 @@ auto TestPimpl::add(int a, int b) const -> int {
   return this->impl->add(a, b);
 }
 
-struct Velocity : public traits::formattable<Velocity, char>
+struct Velocity : public formattable<Velocity, char>
 {
   f64 value;
   explicit Velocity(f64 value) : value(value) {}
