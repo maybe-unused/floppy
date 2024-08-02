@@ -21,6 +21,7 @@ var hierarchy =
     [ "default_comparable< scale< S, D, f32 > >", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", null ],
     [ "default_unit", "namespacefloppy_1_1math.html#structfloppy_1_1math_1_1default__unit", null ],
     [ "exception", null, [
+      [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", null ],
       [ "logic_error", null, [
         [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ]
       ] ],

@@ -15,6 +15,9 @@ var concepts =
         [ "serializable", "conceptfloppy_1_1serialization_1_1serializable.html", null ],
         [ "deserializable", "conceptfloppy_1_1serialization_1_1deserializable.html", null ],
         [ "serializable_and_deserializable", "conceptfloppy_1_1serialization_1_1serializable__and__deserializable.html", null ]
+      ] ],
+      [ "string_utils", "namespacefloppy_1_1string__utils.html", [
+        [ "char_type", "conceptfloppy_1_1string__utils_1_1char__type.html", null ]
       ] ]
     ] ]
 ];

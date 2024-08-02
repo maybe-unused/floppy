@@ -1,6 +1,8 @@
 var group__foundation =
 [
+    [ "Exceptions", "group__exceptions.html", "group__exceptions" ],
     [ "Memory", "group__memory.html", "group__memory" ],
+    [ "String utilities", "group__string__utils.html", "group__string__utils" ],
     [ "Logging", "group__logging.html", "group__logging" ],
     [ "Serialization", "group__serialization.html", "group__serialization" ],
     [ "Traits", "group__traits.html", "group__traits" ],

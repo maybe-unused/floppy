@@ -1,5 +1,20 @@
 var NAVTREEINDEX5 =
 {
+"structfloppy_1_1non__copyable.html":[3,7,5,0],
+"structfloppy_1_1non__movable.html":[3,7,5,1],
+"structfloppy_1_1one__of.html":[3,1,4],
+"structfloppy_1_1one__of.html#a5b4ee4ae6cba6bb75200ba7af1910873":[3,1,4,1],
+"structfloppy_1_1one__of.html#a7990d8e87d9eab2383f94c88c23a6488":[3,1,4,0],
+"structfloppy_1_1ostream__formatter.html":[3,1,2],
+"structfloppy_1_1ostream__formatter.html#a584238951fc0b892a57710ff668824b0":[3,1,2,0],
+"structfloppy_1_1pin.html":[3,7,5,2],
+"structfloppy_1_1singleton.html":[3,7,5,3],
+"structfloppy_1_1singleton.html#a2df12143bc88306c1f341d9f54877319":[3,7,5,3,3],
+"structfloppy_1_1singleton.html#a3668e49f287d02953577eeb995ab64e2":[3,7,5,3,1],
+"structfloppy_1_1singleton.html#af0163e5dd2cfaabe6e1126542874859a":[3,7,5,3,2],
+"structfloppy_1_1singleton.html#afce897b3503cc4e00c72624f156c04d2":[3,7,5,3,0],
+"structfloppy_1_1source__location.html":[3,0,0],
+"structfloppy_1_1source__location.html#a045aa753ae450e5f2a63358a7778c7e2":[3,0,0,5],
 "structfloppy_1_1source__location.html#a44ec96e0e5290e3988011ccee09b7ad2":[3,0,0,1],
 "structfloppy_1_1source__location.html#a7d3e32bc7888d35bc6b6096f16472644":[3,0,0,4],
 "structfloppy_1_1source__location.html#a8f1c9c6c6060cef15dda6a2ef11384d2":[3,0,0,3],
@@ -33,8 +48,8 @@ var NAVTREEINDEX5 =
 "todo.html":[2],
 "topics.html":[3],
 "traits_8h_source.html":[7,0,0,0,12],
-"type__traits_8h_source.html":[7,0,0,0,0,10],
-"types_8h_source.html":[7,0,0,0,0,11],
+"type__traits_8h_source.html":[7,0,0,0,0,12],
+"types_8h_source.html":[7,0,0,0,0,13],
 "vector2d_8h.html":[7,0,0,0,1,6],
 "vector2d_8h_source.html":[7,0,0,0,1,6]
 };

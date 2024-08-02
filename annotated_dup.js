@@ -1,6 +1,9 @@
 var annotated_dup =
 [
     [ "floppy", "namespacefloppy.html", [
+      [ "exceptions", "namespacefloppy_1_1exceptions.html", [
+        [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", "classfloppy_1_1exceptions_1_1compile__time__error" ]
+      ] ],
       [ "gfx", "namespacefloppy_1_1gfx.html", [
         [ "color", "classfloppy_1_1gfx_1_1color.html", "classfloppy_1_1gfx_1_1color" ]
       ] ],
@@ -33,6 +36,7 @@ var annotated_dup =
       ] ],
       [ "application_dirs", "classfloppy_1_1application__dirs.html", "classfloppy_1_1application__dirs" ],
       [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
+      [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", "classfloppy_1_1exceptions_1_1compile__time__error" ],
       [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
       [ "formattable", "structfloppy_1_1formattable.html", "structfloppy_1_1formattable" ],
       [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],

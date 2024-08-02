@@ -2,6 +2,7 @@ var namespacefloppy =
 [
     [ "concepts", "namespacefloppy_1_1concepts.html", "namespacefloppy_1_1concepts" ],
     [ "detail", "namespacefloppy_1_1types_1_1detail.html", null ],
+    [ "exceptions", "namespacefloppy_1_1exceptions.html", "namespacefloppy_1_1exceptions" ],
     [ "gfx", "namespacefloppy_1_1gfx.html", "namespacefloppy_1_1gfx" ],
     [ "literals", "namespacefloppy_1_1literals.html", [
       [ "operator\"\"_z", "namespacefloppy_1_1literals.html#a2e8f3db7e297556ee0f952c0c06c234d", null ],
@@ -29,9 +30,11 @@ var namespacefloppy =
       [ "type_name", "group__helpers.html#gaece47fc7440ee1c5e315c2b6c754f607", null ]
     ] ],
     [ "serialization", "namespacefloppy_1_1serialization.html", "namespacefloppy_1_1serialization" ],
+    [ "string_utils", "namespacefloppy_1_1string__utils.html", "namespacefloppy_1_1string__utils" ],
     [ "types", "namespacefloppy_1_1types.html", "namespacefloppy_1_1types" ],
     [ "application_dirs", "classfloppy_1_1application__dirs.html", "classfloppy_1_1application__dirs" ],
     [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
+    [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", "classfloppy_1_1exceptions_1_1compile__time__error" ],
     [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
     [ "formattable", "structfloppy_1_1formattable.html", "structfloppy_1_1formattable" ],
     [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],
@@ -83,6 +86,11 @@ var namespacefloppy =
     [ "operator<<", "namespacefloppy.html#a719acfb66fc8c9e09da5feacc752067a", null ],
     [ "operator<<", "namespacefloppy.html#ab270b6bee291e9d50f9bb6a31bbafc81", null ],
     [ "operator<<", "namespacefloppy.html#aad74e47f0e5a3bb0abe7bc00495460e4", null ],
+    [ "is_digit", "group__string__utils.html#ga327b624b2cd24b94e70d749258c228b4", null ],
+    [ "to_uppercase", "group__string__utils.html#ga084993186eb3d3ac0fd1b8b715461cee", null ],
+    [ "to_uppercase", "group__string__utils.html#gaee15293ec79d09adc8ddc94015ff4eee", null ],
+    [ "to_lowercase", "group__string__utils.html#gaade13aa1d37f37d5437c472d17a1f464", null ],
+    [ "to_lowercase", "group__string__utils.html#ga23090a5f59c4a96e2ee3ca1be03c70ed", null ],
     [ "error", "group__aliases.html#ga36694535c2e0b46d1e65a74f12130077", null ],
     [ "ok", "group__aliases.html#ga6cd767346c4db58bd1b50716043dbe41", null ],
     [ "ok", "group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1", null ],
