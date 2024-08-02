@@ -249,5 +249,5 @@ var NAVTREEINDEX4 =
 "structfloppy_1_1source__location.html#aa3cb6509b6b1bf6578be6a615bd953ff":[3,0,0,0],
 "structfloppy_1_1source__location.html#aa5435523d5e20e47d7a4fe6c44cea263":[3,0,0,6],
 "structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743":[3,0,0,2],
-"structfloppy_1_1traits_1_1detail_1_1formattable__base.html":[4,0,1,12,0,0]
+"structfloppy_1_1traits_1_1detail_1_1formattable__base.html":[6,0,0,6,0,0]
 };
