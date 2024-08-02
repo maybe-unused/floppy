@@ -46,7 +46,7 @@ namespace floppy::serialization
 
   /// \brief Exception thrown during serialization or deserialization.
   /// \headerfile floppy/serialization.h 
-  /// \ingroup serialization
+  /// \ingroup exceptions
   /// \see serialize, deserialize
   class serialization_error : public std::runtime_error
   {
