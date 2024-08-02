@@ -1,10 +1,10 @@
 var NAVTREEINDEX5 =
 {
-"structfloppy_1_1traits_1_1detail_1_1formattable__base.html":[4,0,1,12,0,0],
+"structfloppy_1_1traits_1_1detail_1_1formattable__base.html":[6,0,0,6,0,0],
 "structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8":[4,0,1,12,0,0,0],
 "structfloppy_1_1traits_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8":[6,0,0,6,0,0,0],
-"structfloppy_1_1traits_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a":[6,0,0,6,0,0,1],
 "structfloppy_1_1traits_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a":[4,0,1,12,0,0,1],
+"structfloppy_1_1traits_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a":[6,0,0,6,0,0,1],
 "structfloppy_1_1traits_1_1formattable.html":[3,7,3,4],
 "structfloppy_1_1traits_1_1formattable.html#a5033d519861ee33fdd6ab38f88699ae2":[3,7,3,4,2],
 "structfloppy_1_1traits_1_1formattable.html#a6feb227ebbbc81da11e39f13b155eca8":[3,7,3,4,0],
