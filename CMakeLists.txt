@@ -27,6 +27,7 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 find_package(fmt REQUIRED)
 find_package(spdlog REQUIRED)
 find_package(tl-expected REQUIRED)
+find_package(Backward REQUIRED)
 
 add_library(${PROJECT_NAME})
 add_library(${PROJECT_NAMESPACE}${PROJECT_NAME} ALIAS ${PROJECT_NAME})
@@ -57,6 +58,7 @@ target_link_libraries(${PROJECT_NAME}
     fmt::fmt
     spdlog::spdlog
     tl::expected
+    Backward::Backward
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>$<INSTALL_INTERFACE:include> PRIVATE src/c++)
@@ -88,6 +90,10 @@ endif()
 if(TESTS)
   enable_testing()
   add_subdirectory(tests)
+endif()
+
+if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+  add_subdirectory(bin)
 endif()
 
 message(STATUS "[${PROJECT_NAME}] compile integration tests status: ${INTEGRATION_TESTS}")
