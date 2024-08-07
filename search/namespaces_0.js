@@ -19,7 +19,8 @@ var searchData=
   ['floppy_3a_3artti_16',['rtti',['../namespacefloppy_1_1rtti.html',1,'floppy']]],
   ['floppy_3a_3aserialization_17',['serialization',['../namespacefloppy_1_1serialization.html',1,'floppy']]],
   ['floppy_3a_3aserialization_3a_3adetail_18',['detail',['../namespacefloppy_1_1serialization_1_1detail.html',1,'floppy::serialization']]],
-  ['floppy_3a_3astring_5futils_19',['string_utils',['../namespacefloppy_1_1string__utils.html',1,'floppy']]],
-  ['floppy_3a_3atypes_20',['types',['../namespacefloppy_1_1types.html',1,'floppy']]],
-  ['floppy_3a_3atypes_3a_3adetail_21',['detail',['../namespacefloppy_1_1types_1_1detail.html',1,'floppy::types']]]
+  ['floppy_3a_3astacktrace_19',['stacktrace',['../namespacefloppy_1_1stacktrace.html',1,'floppy']]],
+  ['floppy_3a_3astring_5futils_20',['string_utils',['../namespacefloppy_1_1string__utils.html',1,'floppy']]],
+  ['floppy_3a_3atypes_21',['types',['../namespacefloppy_1_1types.html',1,'floppy']]],
+  ['floppy_3a_3atypes_3a_3adetail_22',['detail',['../namespacefloppy_1_1types_1_1detail.html',1,'floppy::types']]]
 ];

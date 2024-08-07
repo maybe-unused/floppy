@@ -6,6 +6,8 @@ var group__foundation =
     [ "Logging", "group__logging.html", "group__logging" ],
     [ "Serialization", "group__serialization.html", "group__serialization" ],
     [ "Traits", "group__traits.html", "group__traits" ],
+    [ "floppy", "namespacefloppy.html", null ],
+    [ "stacktrace", "namespacefloppy_1_1stacktrace.html", null ],
     [ "configuration_file< F, T >", "classfloppy_1_1configuration__file.html", [
       [ "configuration_file", "classfloppy_1_1configuration__file.html#a9eaa6790b902913c6f1844b6bf8ef9eb", null ],
       [ "configuration_file", "classfloppy_1_1configuration__file.html#a11c3968bb530354cfddcd95fa1f62c76", null ],

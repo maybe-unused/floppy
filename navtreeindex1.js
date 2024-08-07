@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classfloppy_1_1math_1_1point2d.html#aa9dd348d29b48f5544b5b1fb6f551f63":[3,6,2,14],
 "classfloppy_1_1math_1_1point2d.html#aaad517001a831eff7de9c3223d591b02":[3,6,2,20],
 "classfloppy_1_1math_1_1point2d.html#aaca5c75ae78b6c53d27cf63cd944ff62":[3,6,2,77],
 "classfloppy_1_1math_1_1point2d.html#aaf2377ebd7cf6d347b399dbbfa2cab9f":[3,6,2,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca1000cda46e51b6348226da9e5a658583":[3,3,0,2,5],
 "classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca16ad5892d13a0b7c9220684e52a548b1":[3,3,0,2,3],
 "classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca2102385085e8c88953569f782aecf8fc":[3,3,0,2,19],
-"classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca21e4877ebcf75b3ffc961671a274f985":[3,3,0,2,23],
-"classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca2c5517db7bc397f9b14ae357a7ce54ff":[3,3,0,2,1]
+"classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca21e4877ebcf75b3ffc961671a274f985":[3,3,0,2,23]
 };

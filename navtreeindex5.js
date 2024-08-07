@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"structfloppy_1_1math_1_1scale.html#ade7958c1143337a2576cd6ef72ffe368":[3,6,3,1],
 "structfloppy_1_1math_1_1scale.html#aed221b43ccc2b82b9d6abef9e6911527":[3,6,3,36],
 "structfloppy_1_1math_1_1scale.html#af00bbd3efca6624840346bba50ada2a3":[3,6,3,18],
 "structfloppy_1_1math_1_1scale.html#af49cc34143aa01c6d8c377814b06e8a5":[3,6,3,37],
@@ -47,11 +48,11 @@ var NAVTREEINDEX5 =
 "structfmt_1_1formatter_3_01floppy_1_1platform_1_1vendor_01_4.html#a584238951fc0b892a57710ff668824b0":[6,0,1,7,0],
 "structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html":[6,0,1,8],
 "structfmt_1_1formatter_3_01floppy_1_1source__location_01_4.html#a584238951fc0b892a57710ff668824b0":[6,0,1,8,0],
-"structstd_1_1hash_3_01floppy_1_1box_3_01T_01_4_01_4.html":[4,0,2,0],
 "structstd_1_1hash_3_01floppy_1_1box_3_01T_01_4_01_4.html":[6,0,2,0],
+"structstd_1_1hash_3_01floppy_1_1box_3_01T_01_4_01_4.html":[4,0,2,0],
 "todo.html":[2],
 "topics.html":[3],
-"traits_8h_source.html":[7,0,0,0,12],
+"traits_8h_source.html":[7,0,0,0,13],
 "type__traits_8h_source.html":[7,0,0,0,0,12],
 "types_8h_source.html":[7,0,0,0,0,13],
 "vector2d_8h.html":[7,0,0,0,1,6],

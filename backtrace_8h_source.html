@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Documentation for the Floppy library" />
 <meta name="twitter:description" content="https://whs31.github.io/floppy" />
 <!-- END twitter metadata -->
-<title>Floppy: bytearray.h Source File</title>
+<title>Floppy: backtrace.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -103,7 +103,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('bytearray_8h_source.html',''); initResizable(); });
+$(function(){initNavTree('backtrace_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -129,32 +129,40 @@ $(function(){initNavTree('bytearray_8h_source.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">bytearray.h</div></div>
+  <div class="headertitle"><div class="title">backtrace.h</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;span&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;backward.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;floppy/detail/export.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy.html">floppy</a></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="group__aliases.html#gaa476e7c28990de9d1f5807d18d97d2ea">   13</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="group__aliases.html#gaa476e7c28990de9d1f5807d18d97d2ea">bytearray</a> = std::vector&lt;std::byte&gt;;</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespacefloppy.html">   10</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy_1_1stacktrace.html">floppy::stacktrace</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1stacktrace.html#a40566c93965309ed528d4ae6ae14784f">   13</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1stacktrace.html#a40566c93965309ed528d4ae6ae14784f">signal_handler</a> = backward::SignalHandling;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="group__aliases.html#ga9910a22d4c37a8bbb94c1c8d9aedb6de">   20</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="group__aliases.html#ga9910a22d4c37a8bbb94c1c8d9aedb6de">bytearray_view</a> = std::span&lt;std::byte const&gt;;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="group__aliases.html#ga648837c945db0be1ada62a296cbe6624">   27</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="group__aliases.html#ga648837c945db0be1ada62a296cbe6624">bytearray_view_mut</a> = std::span&lt;std::byte&gt;;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// namespace floppy</span></div>
-<div class="ttc" id="agroup__aliases_html_ga648837c945db0be1ada62a296cbe6624"><div class="ttname"><a href="group__aliases.html#ga648837c945db0be1ada62a296cbe6624">floppy::bytearray_view_mut</a></div><div class="ttdeci">std::span&lt; std::byte &gt; bytearray_view_mut</div><div class="ttdoc">Alias for std::span&lt;std::byte&gt;.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">bytearray.h:27</a></div></div>
-<div class="ttc" id="agroup__aliases_html_ga9910a22d4c37a8bbb94c1c8d9aedb6de"><div class="ttname"><a href="group__aliases.html#ga9910a22d4c37a8bbb94c1c8d9aedb6de">floppy::bytearray_view</a></div><div class="ttdeci">std::span&lt; std::byte const  &gt; bytearray_view</div><div class="ttdoc">Alias for std::span&lt;std::byte const&gt;.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">bytearray.h:20</a></div></div>
-<div class="ttc" id="agroup__aliases_html_gaa476e7c28990de9d1f5807d18d97d2ea"><div class="ttname"><a href="group__aliases.html#gaa476e7c28990de9d1f5807d18d97d2ea">floppy::bytearray</a></div><div class="ttdeci">std::vector&lt; std::byte &gt; bytearray</div><div class="ttdoc">Alias for std::vector&lt;std::byte&gt;.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">bytearray.h:13</a></div></div>
-<div class="ttc" id="anamespacefloppy_html"><div class="ttname"><a href="namespacefloppy.html">floppy</a></div><div class="ttdoc">Main namespace for the library.</div><div class="ttdef"><b>Definition</b> <a href="backtrace_8h_source.html#l00010">backtrace.h:11</a></div></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keyword">using </span>trace = backward::Trace;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keyword">using </span>resolved_trace = backward::ResolvedTrace;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keyword">using </span>stack_trace = backward::StackTrace;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">using </span>trace_resolver = backward::TraceResolver;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">using </span>source_file = backward::SourceFile;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keyword">using </span>snippet_factory = backward::SnippetFactory;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">using </span>printer = backward::Printer;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">using </span>colorize = backward::Colorize;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">namespace </span>color = backward::Color; <span class="comment">// NOLINT(*-unused-alias-decls)</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">namespace </span>color_mode = backward::ColorMode; <span class="comment">// NOLINT(*-unused-alias-decls)</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <span class="comment">// namespace floppy::stacktrace</span></div>
+</div>
+<div class="ttc" id="anamespacefloppy_1_1stacktrace_html"><div class="ttname"><a href="namespacefloppy_1_1stacktrace.html">floppy::stacktrace</a></div><div class="ttdoc">Stacktrace namespace.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">backtrace.h:11</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1stacktrace_html_a40566c93965309ed528d4ae6ae14784f"><div class="ttname"><a href="namespacefloppy_1_1stacktrace.html#a40566c93965309ed528d4ae6ae14784f">floppy::stacktrace::signal_handler</a></div><div class="ttdeci">backward::SignalHandling signal_handler</div><div class="ttdoc">Main.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">backtrace.h:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><b>bytearray.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><b>backtrace.h</b></li>
     <li class="footer">Generated on Wed Aug 7 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

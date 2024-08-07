@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a254dc50f938d40aa7aa8cfc1391d0935":[3,8,1,5,0],
 "structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a2670941a8b4ee25c472c0a2b5450d6f2":[3,8,1,5,2],
 "structfloppy_1_1gfx_1_1color_1_1hsva__t.html#a303fca537ab302123cfbfda46a61260d":[3,8,1,5,1],
 "structfloppy_1_1gfx_1_1color_1_1hsva__t.html#abb97ee5b3485f7cc5eb67cff00cd963a":[3,8,1,5,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "structfloppy_1_1math_1_1scale.html#ad0ed9dded3dc4405713f0b9270930a92":[3,6,3,30],
 "structfloppy_1_1math_1_1scale.html#ad3b3c9e313da58838b6b703a6b2a17cd":[3,6,3,20],
 "structfloppy_1_1math_1_1scale.html#ad7081a8bedaf8b59d99196a270fc3826":[3,6,3,27],
-"structfloppy_1_1math_1_1scale.html#add809373661187793ef5d2296d7f7eb3":[3,6,3,23],
-"structfloppy_1_1math_1_1scale.html#ade7958c1143337a2576cd6ef72ffe368":[3,6,3,1]
+"structfloppy_1_1math_1_1scale.html#add809373661187793ef5d2296d7f7eb3":[3,6,3,23]
 };
