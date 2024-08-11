@@ -83,7 +83,6 @@ namespace floppy::stacktrace {
 
 /*************** STACK TRACE ***************/
 
-// default implemention.
 template <typename TAG> class StackTraceImpl {
 public:
   size_t size() const { return 0; }
@@ -262,7 +261,7 @@ public:
 #endif
     }
 
-    for (;;) {
+    for(;;) {
       // NOTE: this only works if PDBs are already loaded!
       SetLastError(0);
       if (!StackWalk64(machine_type_, process, thd_, &s, ctx_, NULL,
