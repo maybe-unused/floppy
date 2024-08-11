@@ -15,8 +15,8 @@
 #include <floppy/backtrace/resolved_trace.h>
 #include <floppy/backtrace/snippet_factory.h>
 #include <floppy/backtrace/stack_trace.h>
-#include <floppy/backtrace/trace_resolver_concrete.h>
-#include <floppy/floppy.h>
+#include <floppy/backtrace/printer.h>
+//#include <floppy/floppy.h>
 #if defined(FLOPPY_OS_WINDOWS)
 # include <condition_variable>
 # include <mutex>
@@ -29,151 +29,10 @@
 /// \sa https://github.com/bombela/backward-cpp
 namespace floppy::stacktrace
 {
-class printer {
-public:
-  bool snippet;
-  bool address;
-  bool object;
-  int inliner_context_size;
-  int trace_context_size;
-  bool reverse;
-
-  printer()
-      : snippet(true), address(false),
-        object(false), inliner_context_size(5), trace_context_size(7),
-        reverse(true) {}
-
-  template <typename ST> FILE *print(ST &st, FILE *fp = stderr) {
-    print_stacktrace(st, fp);
-    return fp;
-  }
-
-  template <typename IT>
-  FILE *print(IT begin, IT end, FILE *fp = stderr, size_t thread_id = 0) {
-    print_stacktrace(begin, end, fp, thread_id);
-    return fp;
-  }
-
-  impl::trace_resolver const &resolver() const { return _resolver; }
-
-private:
-  impl::trace_resolver _resolver;
-  impl::snippet_factory _snippets;
-
-  template <typename ST>
-  void print_stacktrace(ST &st, std::FILE* out) {
-    printer::print_header(out, st.thread_id());
-    _resolver.load_stacktrace(st);
-    if(reverse)
-      for(size_t trace_idx = st.size(); trace_idx > 0; --trace_idx)
-        this->print_trace(out, _resolver.resolve(st[trace_idx - 1]));
-    else
-      for(size_t trace_idx = 0; trace_idx < st.size(); ++trace_idx)
-        this->print_trace(out, _resolver.resolve(st[trace_idx]));
-  }
-
-  template <typename IT>
-  auto print_stacktrace(IT begin, IT end, std::FILE* out, size_t thread_id) -> void {
-    printer::print_header(out, thread_id);
-    for (; begin != end; ++begin) {
-      this->print_trace(out, *begin);
-    }
-  }
-
-  static auto print_header(std::FILE* out, size_t thread_id) -> void {
-    fmt::print(
-      out,
-      fmt::emphasis::bold | fg(fmt::terminal_color::red),
-      "Stack trace (most recent call last){}:\n",
-      thread_id
-        ? " in thread " + std::to_string(thread_id)
-        : ""
-    );
-  }
-
-  static auto indent(std::FILE* out, size_t idx) -> void {
-    fmt::print(out, fmt::emphasis::bold | fg(fmt::terminal_color::red), "#{:<2}: ", idx);
-  }
-
-  auto print_trace(std::FILE* out, resolved_trace const& trace) -> void {
-    printer::indent(out, trace.idx);
-    auto already_indented = true;
-    if(trace.source.file_name().empty() or this->object) {
-      fmt::print(out, R"(   Object '{}' at '{}' in '{}')",
-        fmt::styled(trace.object_filename, fmt::emphasis::bold | fg(fmt::terminal_color::white)),
-        fmt::styled(trace.addr, fmt::emphasis::faint | fg(fmt::terminal_color::white)),
-        fmt::styled(trace.object_function, fg(fmt::terminal_color::yellow))
-      );
-      fmt::print(out, "\n");
-      already_indented = false;
-    }
-
-    for(size_t inliner_idx = trace.inliners.size(); inliner_idx > 0; --inliner_idx) {
-      if(not already_indented)
-        fmt::print(out, "    ");
-      auto const& inliner_loc = trace.inliners[inliner_idx - 1];
-      this->print_source_loc(out, " | ", inliner_loc);
-      if(snippet)
-        this->print_snippet(out, "    | ", inliner_loc, inliner_context_size);
-      already_indented = false;
-    }
-
-    if(not trace.source.file_name().empty()) {
-      if(not already_indented)
-        fmt::print(out, "    ");
-      this->print_source_loc(out, "   ", trace.source, trace.addr);
-      if(snippet)
-        this->print_snippet(out, "      ", trace.source, trace_context_size);
-    }
-  }
-
-  auto print_snippet(
-    std::FILE* out,
-    char const* indent,
-    resolved_trace::source_loc_t const& source_loc,
-    int context_size
-  ) -> void {
-    typedef impl::snippet_factory::lines_t lines_t;
-
-    lines_t lines = this->_snippets.get_snippet(
-      std::string(source_loc.file_name()),
-      source_loc.line(),
-      static_cast<unsigned>(context_size)
-    );
-
-    for(lines_t::const_iterator it = lines.begin(); it != lines.end(); ++it) {
-      auto highlight = false;
-      if(it->first == source_loc.line()) {
-        fmt::print(out, fmt::emphasis::bold | fg(fmt::terminal_color::bright_yellow), "{}>", indent);
-        highlight = true;
-      } else
-        fmt::print(out, fg(fmt::terminal_color::bright_magenta), "{} ", indent);
-      if(highlight)
-        fmt::print(out, fmt::emphasis::bold | fg(fmt::terminal_color::bright_yellow), "{:>4}: {}\n", it->first, it->second);
-      else
-        fmt::print(out, fg(fmt::terminal_color::bright_magenta), "{:>4}: {}\n", it->first, it->second);
-    }
-  }
-
-  auto print_source_loc(
-    std::FILE* out,
-    char const* indent,
-    resolved_trace::source_loc_t const& source_loc,
-    void* addr = nullptr
-  ) const -> void {
-    fmt::print(out, "{}Source \'{}\', line {} in {} {}\n",
-      indent,
-      fmt::styled(print_helpers::truncate(source_loc.file_name(), 45, direction::reverse), fg(fmt::terminal_color::white)),
-      fmt::styled(source_loc.line(), fg(fmt::terminal_color::white)),
-      fmt::styled(source_loc.function_name(), fg(fmt::terminal_color::yellow)),
-      fmt::styled(address and addr != nullptr ? fmt::format("[0x{:p}]", addr) : "", fmt::emphasis::faint | fg(fmt::terminal_color::white))
-    );
-  }
-};
-
 #if defined(FLOPPY_OS_LINUX) || defined(FLOPPY_OS_DARWIN)
 
-class signal_handler {
+class signal_handler
+{
 public:
   static std::vector<int> make_default_signals() {
     const int posix_signals[] = {
@@ -283,7 +142,7 @@ public:
       st.load_here(32, reinterpret_cast<void *>(uctx), info->si_addr);
     }
 
-    printer printer_;
+    impl::printer printer_;
     printer_.address = true;
     printer_.print(st, stderr);
 
@@ -455,7 +314,7 @@ private:
   }
 
   static auto handle_stacktrace(int skip_frames = 0) -> void {
-    auto p = printer();
+    auto p = impl::printer();
     auto st = impl::stack_trace();
     st.set_machine_type(p.resolver().machine_type());
     st.set_thread_handle(signal_handler::thread_handle());
