@@ -1,34 +1,5 @@
 var annotated_dup =
 [
-    [ "backward", null, [
-      [ "details", null, [
-        [ "default_delete", "structbackward_1_1details_1_1default__delete.html", null ],
-        [ "deleter", "structbackward_1_1details_1_1deleter.html", null ],
-        [ "demangler", "structbackward_1_1details_1_1demangler.html", null ],
-        [ "demangler_impl", "structbackward_1_1details_1_1demangler__impl.html", null ],
-        [ "handle", "classbackward_1_1details_1_1handle.html", null ],
-        [ "hashtable", "structbackward_1_1details_1_1hashtable.html", null ],
-        [ "rm_ptr", "structbackward_1_1details_1_1rm__ptr.html", null ],
-        [ "rm_ptr< const T * >", "structbackward_1_1details_1_1rm__ptr_3_01const_01T_01_5_01_4.html", null ],
-        [ "rm_ptr< T * >", "structbackward_1_1details_1_1rm__ptr_3_01T_01_5_01_4.html", null ]
-      ] ],
-      [ "cfile_streambuf", "classbackward_1_1cfile__streambuf.html", null ],
-      [ "Colorize", "classbackward_1_1Colorize.html", null ],
-      [ "Printer", "classbackward_1_1Printer.html", null ],
-      [ "ResolvedTrace", "structbackward_1_1ResolvedTrace.html", "structbackward_1_1ResolvedTrace" ],
-      [ "SignalHandling", "classbackward_1_1SignalHandling.html", null ],
-      [ "SnippetFactory", "classbackward_1_1SnippetFactory.html", null ],
-      [ "SourceFile", "classbackward_1_1SourceFile.html", "classbackward_1_1SourceFile" ],
-      [ "StackTrace", "classbackward_1_1StackTrace.html", null ],
-      [ "StackTraceImpl", "classbackward_1_1StackTraceImpl.html", null ],
-      [ "StackTraceImplBase", "classbackward_1_1StackTraceImplBase.html", null ],
-      [ "StackTraceImplHolder", "classbackward_1_1StackTraceImplHolder.html", null ],
-      [ "Trace", "structbackward_1_1Trace.html", null ],
-      [ "TraceResolver", "classbackward_1_1TraceResolver.html", null ],
-      [ "TraceResolverImpl", "classbackward_1_1TraceResolverImpl.html", null ],
-      [ "TraceResolverImpl< system_tag::unknown_tag >", "classbackward_1_1TraceResolverImpl_3_01system__tag_1_1unknown__tag_01_4.html", null ],
-      [ "TraceResolverImplBase", "classbackward_1_1TraceResolverImplBase.html", null ]
-    ] ],
     [ "floppy", "namespacefloppy.html", [
       [ "detail", "namespacefloppy_1_1detail.html", [
         [ "formattable_base", "structfloppy_1_1detail_1_1formattable__base.html", "structfloppy_1_1detail_1_1formattable__base" ]
@@ -65,6 +36,35 @@ var annotated_dup =
       ] ],
       [ "serialization", "namespacefloppy_1_1serialization.html", [
         [ "serialization_error", "classfloppy_1_1serialization_1_1serialization__error.html", "classfloppy_1_1serialization_1_1serialization__error" ]
+      ] ],
+      [ "stacktrace", "namespacefloppy_1_1stacktrace.html", [
+        [ "details", null, [
+          [ "default_delete", "structfloppy_1_1stacktrace_1_1details_1_1default__delete.html", null ],
+          [ "deleter", "structfloppy_1_1stacktrace_1_1details_1_1deleter.html", null ],
+          [ "demangler", "structfloppy_1_1stacktrace_1_1details_1_1demangler.html", null ],
+          [ "demangler_impl", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html", null ],
+          [ "handle", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
+          [ "hashtable", "structfloppy_1_1stacktrace_1_1details_1_1hashtable.html", null ],
+          [ "rm_ptr", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr.html", null ],
+          [ "rm_ptr< const T * >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01const_01T_01_5_01_4.html", null ],
+          [ "rm_ptr< T * >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01T_01_5_01_4.html", null ]
+        ] ],
+        [ "cfile_streambuf", "classfloppy_1_1stacktrace_1_1cfile__streambuf.html", null ],
+        [ "Colorize", "classfloppy_1_1stacktrace_1_1Colorize.html", null ],
+        [ "printer", "classfloppy_1_1stacktrace_1_1printer.html", null ],
+        [ "resolved_trace", "structfloppy_1_1stacktrace_1_1resolved__trace.html", "structfloppy_1_1stacktrace_1_1resolved__trace" ],
+        [ "signal_handler", "classfloppy_1_1stacktrace_1_1signal__handler.html", null ],
+        [ "snippet_factory", "classfloppy_1_1stacktrace_1_1snippet__factory.html", null ],
+        [ "source_file", "classfloppy_1_1stacktrace_1_1source__file.html", "classfloppy_1_1stacktrace_1_1source__file" ],
+        [ "stack_trace", "classfloppy_1_1stacktrace_1_1stack__trace.html", null ],
+        [ "StackTraceImpl", "classfloppy_1_1stacktrace_1_1StackTraceImpl.html", null ],
+        [ "StackTraceImplBase", "classfloppy_1_1stacktrace_1_1StackTraceImplBase.html", null ],
+        [ "StackTraceImplHolder", "classfloppy_1_1stacktrace_1_1StackTraceImplHolder.html", null ],
+        [ "trace", "structfloppy_1_1stacktrace_1_1trace.html", null ],
+        [ "trace_resolver", "classfloppy_1_1stacktrace_1_1trace__resolver.html", null ],
+        [ "TraceResolverImpl", "namespacefloppy_1_1stacktrace.html#classfloppy_1_1stacktrace_1_1TraceResolverImpl", null ],
+        [ "TraceResolverImpl< system_tag::unknown_tag >", "classfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1unknown__tag_01_4.html", null ],
+        [ "TraceResolverImplBase", "classfloppy_1_1stacktrace_1_1TraceResolverImplBase.html", null ]
       ] ],
       [ "application_dirs", "classfloppy_1_1application__dirs.html", "classfloppy_1_1application__dirs" ],
       [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],

@@ -2,7 +2,7 @@ var hierarchy =
 [
     [ "application_dirs", "classfloppy_1_1application__dirs.html", null ],
     [ "box< T >", "classfloppy_1_1box.html", null ],
-    [ "Colorize", "classbackward_1_1Colorize.html", null ],
+    [ "Colorize", "classfloppy_1_1stacktrace_1_1Colorize.html", null ],
     [ "configuration_file< F, T >", "classfloppy_1_1configuration__file.html", null ],
     [ "default_comparable< T >", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", [
       [ "basic_numeric_newtype< angle< f32 >, U >", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", null ],
@@ -20,12 +20,12 @@ var hierarchy =
     [ "default_comparable< angle< f32 > >", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", null ],
     [ "default_comparable< length< default_unit, f32 > >", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", null ],
     [ "default_comparable< scale< S, D, f32 > >", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", null ],
-    [ "default_delete< T >", "structbackward_1_1details_1_1default__delete.html", null ],
+    [ "default_delete< T >", "structfloppy_1_1stacktrace_1_1details_1_1default__delete.html", null ],
     [ "default_unit", "namespacefloppy_1_1math.html#structfloppy_1_1math_1_1default__unit", null ],
-    [ "deleter< R, T, F >", "structbackward_1_1details_1_1deleter.html", null ],
-    [ "demangler_impl< TAG >", "structbackward_1_1details_1_1demangler__impl.html", null ],
-    [ "demangler_impl< system_tag::current_tag >", "structbackward_1_1details_1_1demangler__impl.html", [
-      [ "demangler", "structbackward_1_1details_1_1demangler.html", null ]
+    [ "deleter< R, T, F >", "structfloppy_1_1stacktrace_1_1details_1_1deleter.html", null ],
+    [ "demangler_impl< TAG >", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html", null ],
+    [ "demangler_impl< system_tag::current_tag >", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html", [
+      [ "demangler", "structfloppy_1_1stacktrace_1_1details_1_1demangler.html", null ]
     ] ],
     [ "exception", null, [
       [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", null ],
@@ -94,11 +94,11 @@ var hierarchy =
     [ "formatter< std::basic_string_view< C >, C >", "structfmt_1_1formatter.html", null ],
     [ "formatter< std::basic_string_view< char >, char >", "structfmt_1_1formatter.html", null ],
     [ "formatter< T >", "structfmt_1_1formatter_3_01T_01_4.html", null ],
-    [ "handle< T, Deleter >", "classbackward_1_1details_1_1handle.html", null ],
-    [ "handle< std::ifstream *, backward::details::default_delete< std::ifstream * > >", "classbackward_1_1details_1_1handle.html", null ],
+    [ "handle< T, Deleter >", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
+    [ "handle< std::ifstream *, floppy::stacktrace::details::default_delete< std::ifstream * > >", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
     [ "hash< floppy::box< T > >", "structstd_1_1hash_3_01floppy_1_1box_3_01T_01_4_01_4.html", null ],
-    [ "hashtable< K, V >", "structbackward_1_1details_1_1hashtable.html", null ],
-    [ "hashtable< std::string, SourceFile >", "structbackward_1_1details_1_1hashtable.html", null ],
+    [ "hashtable< K, V >", "structfloppy_1_1stacktrace_1_1details_1_1hashtable.html", null ],
+    [ "hashtable< std::string, source_file >", "structfloppy_1_1stacktrace_1_1details_1_1hashtable.html", null ],
     [ "non_copyable", "structfloppy_1_1non__copyable.html", [
       [ "pin", "structfloppy_1_1pin.html", [
         [ "singleton< T >", "structfloppy_1_1singleton.html", null ]
@@ -107,44 +107,44 @@ var hierarchy =
     [ "non_movable", "structfloppy_1_1non__movable.html", [
       [ "pin", "structfloppy_1_1pin.html", null ]
     ] ],
-    [ "not_isempty", "structbackward_1_1SourceFile_1_1not__isempty.html", null ],
-    [ "not_isspace", "structbackward_1_1SourceFile_1_1not__isspace.html", null ],
+    [ "not_isempty", "structfloppy_1_1stacktrace_1_1source__file_1_1not__isempty.html", null ],
+    [ "not_isspace", "structfloppy_1_1stacktrace_1_1source__file_1_1not__isspace.html", null ],
     [ "one_of< U, T >", "structfloppy_1_1one__of.html", null ],
     [ "plain_type< T >", "group__helpers.html#structfloppy_1_1plain__type", null ],
     [ "platform", "classfloppy_1_1platform.html", null ],
-    [ "Printer", "classbackward_1_1Printer.html", null ],
+    [ "printer", "classfloppy_1_1stacktrace_1_1printer.html", null ],
     [ "project_meta", "classfloppy_1_1meta_1_1project__meta.html", null ],
-    [ "rm_ptr< T >", "structbackward_1_1details_1_1rm__ptr.html", null ],
-    [ "rm_ptr< const T * >", "structbackward_1_1details_1_1rm__ptr_3_01const_01T_01_5_01_4.html", null ],
-    [ "rm_ptr< T * >", "structbackward_1_1details_1_1rm__ptr_3_01T_01_5_01_4.html", null ],
-    [ "SignalHandling", "classbackward_1_1SignalHandling.html", null ],
-    [ "SnippetFactory", "classbackward_1_1SnippetFactory.html", null ],
+    [ "rm_ptr< T >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr.html", null ],
+    [ "rm_ptr< const T * >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01const_01T_01_5_01_4.html", null ],
+    [ "rm_ptr< T * >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01T_01_5_01_4.html", null ],
+    [ "signal_handler", "classfloppy_1_1stacktrace_1_1signal__handler.html", null ],
+    [ "snippet_factory", "classfloppy_1_1stacktrace_1_1snippet__factory.html", null ],
+    [ "source_file", "classfloppy_1_1stacktrace_1_1source__file.html", null ],
     [ "source_location", "structfloppy_1_1source__location.html", null ],
-    [ "SourceFile", "classbackward_1_1SourceFile.html", null ],
-    [ "SourceLoc", "structbackward_1_1ResolvedTrace_1_1SourceLoc.html", null ],
-    [ "StackTraceImpl< TAG >", "classbackward_1_1StackTraceImpl.html", null ],
-    [ "StackTraceImpl< system_tag::current_tag >", "classbackward_1_1StackTraceImpl.html", [
-      [ "StackTrace", "classbackward_1_1StackTrace.html", null ]
+    [ "SourceLoc", "structfloppy_1_1stacktrace_1_1resolved__trace_1_1SourceLoc.html", null ],
+    [ "StackTraceImpl< TAG >", "classfloppy_1_1stacktrace_1_1StackTraceImpl.html", null ],
+    [ "StackTraceImpl< system_tag::current_tag >", "classfloppy_1_1stacktrace_1_1StackTraceImpl.html", [
+      [ "stack_trace", "classfloppy_1_1stacktrace_1_1stack__trace.html", null ]
     ] ],
-    [ "StackTraceImplBase", "classbackward_1_1StackTraceImplBase.html", [
-      [ "StackTraceImplHolder", "classbackward_1_1StackTraceImplHolder.html", null ]
+    [ "StackTraceImplBase", "classfloppy_1_1stacktrace_1_1StackTraceImplBase.html", [
+      [ "StackTraceImplHolder", "classfloppy_1_1stacktrace_1_1StackTraceImplHolder.html", null ]
     ] ],
     [ "streambuf", null, [
-      [ "cfile_streambuf", "classbackward_1_1cfile__streambuf.html", null ]
+      [ "cfile_streambuf", "classfloppy_1_1stacktrace_1_1cfile__streambuf.html", null ]
     ] ],
     [ "T", null, [
       [ "propagate_const< T >", "classfloppy_1_1propagate__const.html", null ]
     ] ],
     [ "to_helper< C >", "namespacefloppy_1_1ranges_1_1detail.html#structfloppy_1_1ranges_1_1detail_1_1to__helper", null ],
-    [ "Trace", "structbackward_1_1Trace.html", [
-      [ "ResolvedTrace", "structbackward_1_1ResolvedTrace.html", null ]
+    [ "trace", "structfloppy_1_1stacktrace_1_1trace.html", [
+      [ "resolved_trace", "structfloppy_1_1stacktrace_1_1resolved__trace.html", null ]
     ] ],
-    [ "TraceResolverImpl< TAG >", "classbackward_1_1TraceResolverImpl.html", null ],
-    [ "TraceResolverImpl< system_tag::current_tag >", "classbackward_1_1TraceResolverImpl.html", [
-      [ "TraceResolver", "classbackward_1_1TraceResolver.html", null ]
+    [ "TraceResolverImpl< TAG >", "namespacefloppy_1_1stacktrace.html#classfloppy_1_1stacktrace_1_1TraceResolverImpl", null ],
+    [ "TraceResolverImpl< system_tag::current_tag >", "namespacefloppy_1_1stacktrace.html", [
+      [ "trace_resolver", "classfloppy_1_1stacktrace_1_1trace__resolver.html", null ]
     ] ],
-    [ "TraceResolverImplBase", "classbackward_1_1TraceResolverImplBase.html", [
-      [ "TraceResolverImpl< system_tag::unknown_tag >", "classbackward_1_1TraceResolverImpl_3_01system__tag_1_1unknown__tag_01_4.html", null ]
+    [ "TraceResolverImplBase", "classfloppy_1_1stacktrace_1_1TraceResolverImplBase.html", [
+      [ "TraceResolverImpl< system_tag::unknown_tag >", "classfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1unknown__tag_01_4.html", null ]
     ] ],
     [ "version", "classfloppy_1_1meta_1_1version.html", null ]
 ];

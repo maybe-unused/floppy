@@ -31,7 +31,7 @@ var namespacefloppy =
       [ "type_name", "group__helpers.html#gaece47fc7440ee1c5e315c2b6c754f607", null ]
     ] ],
     [ "serialization", "namespacefloppy_1_1serialization.html", "namespacefloppy_1_1serialization" ],
-    [ "stacktrace", "namespacefloppy_1_1stacktrace.html", null ],
+    [ "stacktrace", "namespacefloppy_1_1stacktrace.html", "namespacefloppy_1_1stacktrace" ],
     [ "string_utils", "namespacefloppy_1_1string__utils.html", "namespacefloppy_1_1string__utils" ],
     [ "types", "namespacefloppy_1_1types.html", "namespacefloppy_1_1types" ],
     [ "application_dirs", "classfloppy_1_1application__dirs.html", "classfloppy_1_1application__dirs" ],
