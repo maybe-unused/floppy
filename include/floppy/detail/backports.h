@@ -252,14 +252,14 @@ namespace floppy
     }
   #endif // __cpp_lib_source_location
 
-  auto operator==(source_location const& lhs, source_location const& rhs) noexcept -> bool {
+  inline auto operator==(source_location const& lhs, source_location const& rhs) noexcept -> bool {
     return lhs.file_name() == rhs.file_name()
       and lhs.line() == rhs.line()
       and lhs.function_name() == rhs.function_name()
       and lhs.column() == rhs.column();
   }
 
-  auto operator!=(source_location const& lhs, source_location const& rhs) noexcept -> bool {
+  inline auto operator!=(source_location const& lhs, source_location const& rhs) noexcept -> bool {
     return not (lhs == rhs);
   }
 } // namespace floppy
