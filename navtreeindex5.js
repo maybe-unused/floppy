@@ -1,5 +1,17 @@
 var NAVTREEINDEX5 =
 {
+"structfloppy_1_1math_1_1scale.html#aa0db1a4f3d41e44518761bbccf4ab4ab":[3,6,3,35],
+"structfloppy_1_1math_1_1scale.html#aa62cb136f618e0d16feed8b745225d05":[3,6,3,31],
+"structfloppy_1_1math_1_1scale.html#aa902d1c42474e7416e348300913b86d1":[3,6,3,29],
+"structfloppy_1_1math_1_1scale.html#aa9bc6ddbd6f135795bbfe5e2beafe6ba":[3,6,3,34],
+"structfloppy_1_1math_1_1scale.html#abb97ee5b3485f7cc5eb67cff00cd963a":[3,6,3,14],
+"structfloppy_1_1math_1_1scale.html#abf397172dd9d15d35fa64f78456a8e90":[3,6,3,24],
+"structfloppy_1_1math_1_1scale.html#ac062a5759bf403cdd9f706130789d08a":[3,6,3,32],
+"structfloppy_1_1math_1_1scale.html#ac3c5ffea5c89ad4d5571354a0da55813":[3,6,3,4],
+"structfloppy_1_1math_1_1scale.html#ad0ed9dded3dc4405713f0b9270930a92":[3,6,3,30],
+"structfloppy_1_1math_1_1scale.html#ad3b3c9e313da58838b6b703a6b2a17cd":[3,6,3,20],
+"structfloppy_1_1math_1_1scale.html#ad7081a8bedaf8b59d99196a270fc3826":[3,6,3,27],
+"structfloppy_1_1math_1_1scale.html#add809373661187793ef5d2296d7f7eb3":[3,6,3,23],
 "structfloppy_1_1math_1_1scale.html#ade7958c1143337a2576cd6ef72ffe368":[3,6,3,1],
 "structfloppy_1_1math_1_1scale.html#aed221b43ccc2b82b9d6abef9e6911527":[3,6,3,36],
 "structfloppy_1_1math_1_1scale.html#af00bbd3efca6624840346bba50ada2a3":[3,6,3,18],

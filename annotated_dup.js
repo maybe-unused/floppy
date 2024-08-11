@@ -1,6 +1,9 @@
 var annotated_dup =
 [
     [ "floppy", "namespacefloppy.html", [
+      [ "detail", "namespacefloppy_1_1detail.html", [
+        [ "formattable_base", "structfloppy_1_1detail_1_1formattable__base.html", "structfloppy_1_1detail_1_1formattable__base" ]
+      ] ],
       [ "exceptions", "namespacefloppy_1_1exceptions.html", [
         [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", "classfloppy_1_1exceptions_1_1compile__time__error" ]
       ] ],
@@ -47,6 +50,7 @@ var annotated_dup =
       [ "pin", "structfloppy_1_1pin.html", null ],
       [ "plain_type", "group__helpers.html#structfloppy_1_1plain__type", "group__helpers_structfloppy_1_1plain__type" ],
       [ "platform", "classfloppy_1_1platform.html", "classfloppy_1_1platform" ],
+      [ "propagate_const", "classfloppy_1_1propagate__const.html", null ],
       [ "singleton", "structfloppy_1_1singleton.html", "structfloppy_1_1singleton" ],
       [ "source_location", "structfloppy_1_1source__location.html", "structfloppy_1_1source__location" ]
     ] ],

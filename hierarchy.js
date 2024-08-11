@@ -101,6 +101,9 @@ var hierarchy =
     [ "platform", "classfloppy_1_1platform.html", null ],
     [ "project_meta", "classfloppy_1_1meta_1_1project__meta.html", null ],
     [ "source_location", "structfloppy_1_1source__location.html", null ],
+    [ "T", null, [
+      [ "propagate_const< T >", "classfloppy_1_1propagate__const.html", null ]
+    ] ],
     [ "to_helper< C >", "namespacefloppy_1_1ranges_1_1detail.html#structfloppy_1_1ranges_1_1detail_1_1to__helper", null ],
     [ "version", "classfloppy_1_1meta_1_1version.html", null ]
 ];

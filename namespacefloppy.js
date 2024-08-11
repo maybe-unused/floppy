@@ -1,7 +1,8 @@
 var namespacefloppy =
 [
     [ "concepts", "namespacefloppy_1_1concepts.html", "namespacefloppy_1_1concepts" ],
-    [ "detail", "namespacefloppy_1_1types_1_1detail.html", null ],
+    [ "detail", "namespacefloppy_1_1detail.html", "namespacefloppy_1_1detail" ],
+    [ "detail_", "namespacefloppy_1_1types_1_1detail__.html", null ],
     [ "exceptions", "namespacefloppy_1_1exceptions.html", "namespacefloppy_1_1exceptions" ],
     [ "gfx", "namespacefloppy_1_1gfx.html", "namespacefloppy_1_1gfx" ],
     [ "literals", "namespacefloppy_1_1literals.html", [
@@ -48,6 +49,7 @@ var namespacefloppy =
     [ "pin", "structfloppy_1_1pin.html", null ],
     [ "plain_type", "group__helpers.html#structfloppy_1_1plain__type", "group__helpers_structfloppy_1_1plain__type" ],
     [ "platform", "classfloppy_1_1platform.html", "classfloppy_1_1platform" ],
+    [ "propagate_const", "classfloppy_1_1propagate__const.html", null ],
     [ "singleton", "structfloppy_1_1singleton.html", "structfloppy_1_1singleton" ],
     [ "source_location", "structfloppy_1_1source__location.html", "structfloppy_1_1source__location" ],
     [ "bytearray", "group__aliases.html#gaa476e7c28990de9d1f5807d18d97d2ea", null ],
@@ -68,9 +70,9 @@ var namespacefloppy =
     [ "f32", "namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527", null ],
     [ "f64", "namespacefloppy_1_1types.html#abc2f107791bd7c1d49ecf0f168c085a3", null ],
     [ "option", "group__aliases.html#gaa202473f296b2492d9239773369181af", null ],
-    [ "result", "group__aliases.html#ga3a100aaa5a4c5f9fe1f4b8175e360db8", null ],
+    [ "result", "group__aliases.html#gae7b8a377a5b8651ef68a50f8e97bf706", null ],
     [ "ref", "group__aliases.html#gae7d120016347ce3f021bc18dcefe2809", null ],
-    [ "pimpl", "group__traits.html#gaa6694ecf510485baa4e46c63f5b99523", null ],
+    [ "pimpl", "group__traits.html#ga362793f7ec80eb5f2633c5da6901c510", null ],
     [ "saving_policy", "group__foundation.html#gae1e5f60a57661fe4d13cf754e0a8d6ae", [
       [ "autosave", "group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeaf47468435c3051a65ef52dbe8a7838b1", null ],
       [ "explicit_", "group__foundation.html#ggae1e5f60a57661fe4d13cf754e0a8d6aeac9c45ac5595e1bb329ad8e26396d93c5", null ]
@@ -98,8 +100,8 @@ var namespacefloppy =
     [ "to_uppercase", "group__string__utils.html#gaee15293ec79d09adc8ddc94015ff4eee", null ],
     [ "to_lowercase", "group__string__utils.html#gaade13aa1d37f37d5437c472d17a1f464", null ],
     [ "to_lowercase", "group__string__utils.html#ga23090a5f59c4a96e2ee3ca1be03c70ed", null ],
-    [ "error", "group__aliases.html#ga36694535c2e0b46d1e65a74f12130077", null ],
-    [ "ok", "group__aliases.html#ga6cd767346c4db58bd1b50716043dbe41", null ],
+    [ "error", "group__aliases.html#gaa97f40abb19a127cfa5eaaa537369f81", null ],
+    [ "ok", "group__aliases.html#ga78279b0c21308ae1fc78058b2cf10a0b", null ],
     [ "ok", "group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1", null ],
     [ "some", "group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee", null ],
     [ "operator\"\"_z", "namespacefloppy_1_1literals.html#a2e8f3db7e297556ee0f952c0c06c234d", null ],
