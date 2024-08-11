@@ -1,0 +1,14 @@
+<map id="stack_trace_impl&lt; system_tag::current &gt;" name="stack_trace_impl&lt; system_tag::current &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="17,346,204,387"/>
+<area shape="rect" id="Node000002" href="$classfloppy_1_1stacktrace_1_1impl_1_1stack__trace__impl__holder.html" title=" " alt="" coords="22,271,199,297"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,313,105,346,100,346,99,313"/>
+<area shape="poly" id="edge6_Node000001_Node000002" title=" " alt="" coords="122,313,121,346,115,346,116,313"/>
+<area shape="rect" id="Node000003" href="$classfloppy_1_1stacktrace_1_1impl_1_1stack__trace__impl__base.html" title=" " alt="" coords="5,183,173,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,223,110,270,105,272,93,224"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="197,183,320,208"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="226,219,133,273,130,268,223,214"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="211,94,306,120"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="261,135,261,182,256,182,256,135"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="239,5,278,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="261,47,261,94,256,94,256,47"/>
+</map>

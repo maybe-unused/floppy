@@ -2,27 +2,8 @@ var namespacefloppy_1_1stacktrace =
 [
     [ "details", "namespacefloppy_1_1stacktrace_1_1details.html", "namespacefloppy_1_1stacktrace_1_1details" ],
     [ "impl", "namespacefloppy_1_1stacktrace_1_1impl.html", "namespacefloppy_1_1stacktrace_1_1impl" ],
-    [ "get_mod_info", "classfloppy_1_1stacktrace_1_1get__mod__info.html", null ],
-    [ "module_data", "namespacefloppy_1_1stacktrace.html#structfloppy_1_1stacktrace_1_1module__data", null ],
     [ "printer", "classfloppy_1_1stacktrace_1_1printer.html", null ],
     [ "resolved_trace", "structfloppy_1_1stacktrace_1_1resolved__trace.html", "structfloppy_1_1stacktrace_1_1resolved__trace" ],
     [ "signal_handler", "classfloppy_1_1stacktrace_1_1signal__handler.html", null ],
-    [ "stack_trace", "classfloppy_1_1stacktrace_1_1stack__trace.html", null ],
-    [ "StackTraceImpl", "classfloppy_1_1stacktrace_1_1StackTraceImpl.html", null ],
-    [ "StackTraceImpl< system_tag::current >", "classfloppy_1_1stacktrace_1_1StackTraceImpl_3_01system__tag_1_1current_01_4.html", null ],
-    [ "StackTraceImplBase", "classfloppy_1_1stacktrace_1_1StackTraceImplBase.html", null ],
-    [ "StackTraceImplHolder", "classfloppy_1_1stacktrace_1_1StackTraceImplHolder.html", null ],
-    [ "trace", "structfloppy_1_1stacktrace_1_1trace.html", null ],
-    [ "trace_resolver", "classfloppy_1_1stacktrace_1_1trace__resolver.html", null ],
-    [ "TraceResolverDarwinImpl", "namespacefloppy_1_1stacktrace.html#classfloppy_1_1stacktrace_1_1TraceResolverDarwinImpl", null ],
-    [ "TraceResolverDarwinImpl< trace_resolver_tag::backtrace_symbol >", "classfloppy_1_1stacktrace_1_1TraceResolverDarwinImpl_3_01trace__resolver__tag_1_1backtrace__symbol_01_4.html", null ],
-    [ "TraceResolverImpl", "namespacefloppy_1_1stacktrace.html#classfloppy_1_1stacktrace_1_1TraceResolverImpl", null ],
-    [ "TraceResolverImpl< system_tag::darwin >", "classfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1darwin_01_4.html", null ],
-    [ "TraceResolverImpl< system_tag::linux_ >", "classfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1linux___01_4.html", null ],
-    [ "TraceResolverImpl< system_tag::unknown >", "classfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1unknown_01_4.html", null ],
-    [ "TraceResolverImpl< system_tag::windows >", "classfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1windows_01_4.html", "classfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1windows_01_4" ],
-    [ "TraceResolverImplBase", "classfloppy_1_1stacktrace_1_1TraceResolverImplBase.html", null ],
-    [ "TraceResolverLinuxBase", "classfloppy_1_1stacktrace_1_1TraceResolverLinuxBase.html", null ],
-    [ "TraceResolverLinuxImpl", "namespacefloppy_1_1stacktrace.html#classfloppy_1_1stacktrace_1_1TraceResolverLinuxImpl", null ],
-    [ "TraceResolverLinuxImpl< trace_resolver_tag::libdw >", "classfloppy_1_1stacktrace_1_1TraceResolverLinuxImpl_3_01trace__resolver__tag_1_1libdw_01_4.html", null ]
+    [ "trace", "structfloppy_1_1stacktrace_1_1trace.html", null ]
 ];

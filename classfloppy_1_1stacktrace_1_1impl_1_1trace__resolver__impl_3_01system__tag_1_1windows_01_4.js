@@ -1,0 +1,4 @@
+var classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__impl_3_01system__tag_1_1windows_01_4 =
+[
+    [ "symbol_t", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__impl_3_01system__tag_1_1windows_01_4.html#structfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__impl_3_01system__tag_1_1windows_01_4_1_1symbol__t", null ]
+];
