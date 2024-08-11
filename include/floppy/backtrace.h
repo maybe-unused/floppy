@@ -1,7 +1,11 @@
 #pragma once
 
-#include <backward.hpp>
-#include <floppy/detail/export.h>
+#include <floppy/floppy.h>
+#define BACKWARD_HAS_BACKTRACE 1
+#if defined(FLOPPY_OS_WINDOWS)
+# define BACKWARD_HAS_DW 1
+#endif // FLOPPY_OS_WINDOWS
+#include "backward.hpp"
 
 /// \brief Stacktrace namespace.
 /// \details Currently implemented using <a href="https://github.com/bombela/backward-cpp">backward-cpp</a> library.
@@ -9,7 +13,6 @@
 /// \sa https://github.com/bombela/backward-cpp
 namespace floppy::stacktrace
 {
-  /// \brief Main
   using signal_handler = backward::SignalHandling;
 
   using trace = backward::Trace;

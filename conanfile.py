@@ -37,7 +37,9 @@ class FloppyRecipe(ConanFile):
         self.requires("fmt/[^10.1.0]", transitive_headers=True, transitive_libs=True)
         self.requires("spdlog/1.13.0", transitive_headers=True, transitive_libs=True)
         self.requires("tl-expected/20190710", transitive_headers=True, transitive_libs=True)
-        self.requires("backward-cpp/1.6", transitive_headers=True, transitive_libs=True)
+        #self.requires("backward-cpp/1.6", transitive_headers=True, transitive_libs=True)
+        if self.settings.os != "Windows":
+            self.requires("elfutils/0.190", transitive_headers=True, transitive_libs=True)
         if self.options.test:
             self.requires("gtest/1.14.0")
             self.requires("tomlplusplus/[^3.0.0]", transitive_headers=True, transitive_libs=True)
@@ -52,9 +54,9 @@ class FloppyRecipe(ConanFile):
     def configure(self):
         self.options["spdlog/*"].shared = True
         self.options["fmt/*"].shared = True
-        self.options["backward-cpp/*"].header_only = True
-        self.options["backward-cpp/*"].stack_walking = 'backtrace'
-        self.options["backward-cpp/*"].stack_details = 'dw'
+        # self.options["backward-cpp/*"].header_only = True
+        # self.options["backward-cpp/*"].stack_walking = 'backtrace'
+        # self.options["backward-cpp/*"].stack_details = 'dw'
 
     def generate(self):
         deps = CMakeDeps(self)
@@ -90,3 +92,8 @@ class FloppyRecipe(ConanFile):
             print(colored("▶ testing enabled. following libraries will be added to deps: gtest, tomlplusplus", "green"))
             self.cpp_info.requires.append("gtest::gtest")
             self.cpp_info.requires.append("tomlplusplus::tomlplusplus")
+        if self.settings.os == "Windows":
+            self.cpp_info.system_libs.extend(["psapi", "dbghelp"])
+        if self.settings.os in ["Linux", "FreeBSD", "Android"]:
+            self.cpp_info.system_libs.extend(["dl", "m"])
+            self.cpp_info.requires.append("elfutils::elfutils")
