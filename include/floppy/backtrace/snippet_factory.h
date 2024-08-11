@@ -1,5 +1,7 @@
 #pragma once
 
+#include <unordered_map>
+#include <iterator>
 #include <floppy/backtrace/source_file.h>
 
 namespace floppy::stacktrace::impl

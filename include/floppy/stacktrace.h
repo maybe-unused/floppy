@@ -1,22 +1,18 @@
 #pragma once
 
 #include <cctype>
-#include <cstdio>
 #include <cstdlib>
 #include <csignal>
 #include <new>
 #include <sstream>
 #include <streambuf>
 #include <exception>
-#include <iterator>
-#include <unordered_map>
 #include <floppy/backtrace/trace_resolver_tag.h>
 #include <floppy/backtrace/trace.h>
 #include <floppy/backtrace/resolved_trace.h>
 #include <floppy/backtrace/snippet_factory.h>
 #include <floppy/backtrace/stack_trace.h>
 #include <floppy/backtrace/printer.h>
-//#include <floppy/floppy.h>
 #if defined(FLOPPY_OS_WINDOWS)
 # include <condition_variable>
 # include <mutex>
