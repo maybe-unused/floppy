@@ -312,9 +312,7 @@
 #include <condition_variable>
 #include <mutex>
 #include <thread>
-#include <fmt/format.h>
-#include <fmt/color.h>
-
+#include <floppy/detail/print_helpers.h>
 #include <basetsd.h>
 
 #ifdef _WIN64
@@ -4008,7 +4006,7 @@ private:
 
   template <typename ST>
   void print_stacktrace(ST &st, std::FILE* out) {
-    print_header(out, st.thread_id());
+    printer::print_header(out, st.thread_id());
     _resolver.load_stacktrace(st);
     if(reverse)
       for(size_t trace_idx = st.size(); trace_idx > 0; --trace_idx)
@@ -4020,33 +4018,37 @@ private:
 
   template <typename IT>
   auto print_stacktrace(IT begin, IT end, std::FILE* out, size_t thread_id) -> void {
-    this->print_header(out, thread_id);
+    printer::print_header(out, thread_id);
     for (; begin != end; ++begin) {
       this->print_trace(out, *begin);
     }
   }
 
-  auto print_header(std::FILE* out, size_t thread_id) -> void {
-    fmt::println(out, "Stack trace (most recent call last){}:",
+  static auto print_header(std::FILE* out, size_t thread_id) -> void {
+    fmt::print(
+      out,
+      fmt::emphasis::bold | fg(fmt::terminal_color::red),
+      "Stack trace (most recent call last){}:\n",
       thread_id
         ? " in thread " + std::to_string(thread_id)
         : ""
     );
   }
 
-  auto indent(std::FILE* out, size_t idx) -> void {
-    fmt::print(out, "#{:<2}: ", idx);
+  static auto indent(std::FILE* out, size_t idx) -> void {
+    fmt::print(out, fmt::emphasis::bold | fg(fmt::terminal_color::red), "#{:<2}: ", idx);
   }
 
   auto print_trace(std::FILE* out, resolved_trace const& trace) -> void {
-    this->indent(out, trace.idx);
+    printer::indent(out, trace.idx);
     auto already_indented = true;
-    if(not trace.source.filename.size() or this->object) {
+    if(trace.source.filename.empty() or this->object) {
       fmt::print(out, R"(   Object '{}' at '{}' in '{}')",
-        trace.object_filename,
-        trace.addr,
-        trace.object_function
+        fmt::styled(trace.object_filename, fmt::emphasis::bold | fg(fmt::terminal_color::white)),
+        fmt::styled(trace.addr, fmt::emphasis::faint | fg(fmt::terminal_color::white)),
+        fmt::styled(trace.object_function, fg(fmt::terminal_color::yellow))
       );
+      fmt::print(out, "\n");
       already_indented = false;
     }
 
@@ -4060,7 +4062,7 @@ private:
       already_indented = false;
     }
 
-    if(trace.source.filename.size()) {
+    if(not trace.source.filename.empty()) {
       if(not already_indented)
         fmt::print(out, "    ");
       this->print_source_loc(out, "   ", trace.source, trace.addr);
@@ -4087,15 +4089,14 @@ private:
     for(lines_t::const_iterator it = lines.begin(); it != lines.end(); ++it) {
       auto highlight = false;
       if(it->first == source_loc.line) {
-        fmt::print(out, "{}>", indent);
+        fmt::print(out, fmt::emphasis::bold | fg(fmt::terminal_color::bright_yellow), "{}>", indent);
         highlight = true;
-        //colorize.set_color(color_code);
       } else
-        fmt::print(out, "{} ", indent);
+        fmt::print(out, fg(fmt::terminal_color::bright_magenta), "{} ", indent);
       if(highlight)
-        fmt::print(out, "{:>4}: {}\n", it->first, it->second); // color it
+        fmt::print(out, fmt::emphasis::bold | fg(fmt::terminal_color::bright_yellow), "{:>4}: {}\n", it->first, it->second);
       else
-        fmt::print(out, "{:>4}: {}\n", it->first, it->second);
+        fmt::print(out, fg(fmt::terminal_color::bright_magenta), "{:>4}: {}\n", it->first, it->second);
     }
   }
 
@@ -4104,13 +4105,13 @@ private:
     char const* indent,
     resolved_trace::SourceLoc const& source_loc,
     void* addr = nullptr
-  ) -> void {
+  ) const -> void {
     fmt::print(out, "{}Source \'{}\', line {} in {} {}\n",
       indent,
-      source_loc.filename,
-      source_loc.line,
-      source_loc.function,
-      address and addr != nullptr ? fmt::format("[0x{:p}]", addr) : ""
+      fmt::styled(print_helpers::truncate(source_loc.filename, 45, direction::reverse), fg(fmt::terminal_color::white)),
+      fmt::styled(source_loc.line, fg(fmt::terminal_color::white)),
+      fmt::styled(source_loc.function, fg(fmt::terminal_color::yellow)),
+      fmt::styled(address and addr != nullptr ? fmt::format("[0x{:p}]", addr) : "", fmt::emphasis::faint | fg(fmt::terminal_color::white))
     );
   }
 };
