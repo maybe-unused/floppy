@@ -28,6 +28,9 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 find_package(fmt REQUIRED)
 find_package(spdlog REQUIRED)
 find_package(tl-expected REQUIRED)
+if(NOT WIN32)
+  find_package(elfutils REQUIRED)
+endif()
 
 add_library(${PROJECT_NAME})
 add_library(${PROJECT_NAMESPACE}${PROJECT_NAME} ALIAS ${PROJECT_NAME})
@@ -59,6 +62,9 @@ target_link_libraries(${PROJECT_NAME}
     spdlog::spdlog
     tl::expected
 )
+if(NOT WIN32)
+  target_link_libraries(${PROJECT_NAME} PUBLIC elfutils::elfutils)
+endif()
 
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>$<INSTALL_INTERFACE:include> PRIVATE src/c++)
 
