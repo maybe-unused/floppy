@@ -2,7 +2,7 @@
 
 #include <floppy/detail/types.h>
 
-namespace floppy::stacktrace
+namespace floppy::stacktrace::impl
 {
   struct trace
   {
@@ -19,4 +19,4 @@ namespace floppy::stacktrace
       , idx(index)
     {}
   };
-} // namespace floppy::stacktrace
+} // namespace floppy::stacktrace::impl

@@ -4,7 +4,7 @@
 #include <floppy/detail/backports.h>
 #include <floppy/backtrace/trace.h>
 
-namespace floppy::stacktrace
+namespace floppy::stacktrace::impl
 {
   struct resolved_trace : public trace
   {
@@ -35,4 +35,4 @@ namespace floppy::stacktrace
     /// (the attribute right above) is inlined. It is especially useful when you compiled with optimization.
     source_locs_t inliners;
   };
-} // namespace floppy::stacktrace
+} // namespace floppy::stacktrace::impl
