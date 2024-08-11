@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <gtest/gtest.h>
 #include <floppy/floppy.h>
 #include <floppy/euclid/length.h>

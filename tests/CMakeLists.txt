@@ -1,7 +1,7 @@
 find_package(GTest REQUIRED)
 find_package(tomlplusplus REQUIRED)
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui QUIET)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui QUIET)
+#find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui QUIET)
+#find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui QUIET)
 
 file(GLOB TEST_SOURCES "*.cc")
 
@@ -19,8 +19,8 @@ target_link_libraries(${PROJECT_NAME}-test
   GTest::Main
   ${PROJECT_NAME}
   tomlplusplus::tomlplusplus
-  Qt${QT_VERSION_MAJOR}::Core
-  Qt${QT_VERSION_MAJOR}::Gui
+#  Qt${QT_VERSION_MAJOR}::Core
+#  Qt${QT_VERSION_MAJOR}::Gui
 )
 
 if(WIN32)

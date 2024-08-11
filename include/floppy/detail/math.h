@@ -10,6 +10,32 @@
 /// \brief Math namespace.
 namespace floppy::math
 {
+  template <std::floating_point T>
+  [[nodiscard]] constexpr inline auto floor(T val) -> T {
+    auto const val_int = static_cast<i64>(val);
+    auto const fval_int = static_cast<T>(val_int);
+    return (val >= T(0) ? fval_int : (val == fval_int ? val : fval_int - T(1)));
+  }
+
+  template <typename T> constexpr auto min(T&& v) -> T { return std::forward<T>(v); }
+  template <typename T, typename... Args>
+  constexpr auto min(T const& v1, T const& v2, Args const&... args) -> T {
+    return v2 < v1 ? min(v2, args...) : min(v1, args...);
+  }
+
+  template <typename T>
+  [[maybe_unused]] constexpr auto max(T&& v) -> T { return std::forward<T>(v); }
+
+  template <typename T, typename... Args>
+  constexpr auto max(T const& v1, T const& v2, Args const&... args) -> T {
+    return v2 > v1 ? max(v2, args...) : max(v1, args...);
+  }
+
+  template <typename T>
+  constexpr auto abs(T const& v) -> T { return v < T(0) ? -v : v; }
+
+  constexpr auto fmod(f32 const x, f32 const y) -> f32 { return x - y * math::floor(x / y); }
+
   /// \brief Returns true if numbers are equal.
   /// \headerfile floppy/floppy.h
   /// \ingroup calc
@@ -71,7 +97,7 @@ namespace floppy::math
         return std::strong_ordering::equal;
       if(std::isnan(a) or std::isnan(b))
         return std::strong_ordering::equal;
-      return std::abs(a - b) <= std::numeric_limits<T>::epsilon()
+      return std::abs(a - b) <= std::numeric_limits<T>::epsilon() * T(2)
         ? std::strong_ordering::equal
         : (a < b
             ? std::strong_ordering::less
@@ -108,7 +134,7 @@ namespace floppy::math
   /// \see to_radians
   template <concepts::num T>
   [[nodiscard]] constexpr auto to_degrees(T rad) -> T {
-    return static_cast<T>(rad * 180.F / std::numbers::pi_v<T>);
+    return static_cast<T>(rad * 180.F / std::numbers::pi);
   }
 
   /// \brief Returns logarithm of a number in a given base.

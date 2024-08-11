@@ -1,4 +1,6 @@
+#include <cstdint>
 #include <gtest/gtest.h>
+#include <gmock/gmock.h>
 #include <floppy/floppy.h>
 
 using namespace fl;
@@ -29,5 +31,8 @@ TEST(CoreFn, Rtti)
   EXPECT_EQ(rtti::type_name<float>(), "float");
   EXPECT_EQ(rtti::type_name<double>(), "double");
   EXPECT_EQ(rtti::type_name<char>(), "char");
-  EXPECT_EQ(rtti::type_name<std::vector<int>>(), "std::vector<int, std::allocator<int> >");
+  EXPECT_THAT(rtti::type_name<std::vector<int>>(), testing::AnyOf(
+    "std::vector<int, std::allocator<int> >",
+    "class std::vector<int,class std::allocator<int> >"
+  ));
 }

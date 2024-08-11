@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.15)
 include_guard(GLOBAL)
 
 project(floppy
-  VERSION 1.3.0
+  VERSION 1.4.0
   DESCRIPTION "Library that augments and extends C++ standard library"
   HOMEPAGE_URL "whs31.github.io/floppy"
   LANGUAGES C CXX
@@ -11,6 +11,7 @@ project(floppy
 set(PROJECT_NAMESPACE ${PROJECT_NAME}::)
 
 include(CMakePrintHelpers)
+include(cmake/LinkMSVCRT.cmake)
 
 option(TESTS "Enable integration tests" OFF)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
@@ -27,6 +28,9 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 find_package(fmt REQUIRED)
 find_package(spdlog REQUIRED)
 find_package(tl-expected REQUIRED)
+if(NOT WIN32)
+  find_package(elfutils REQUIRED)
+endif()
 
 add_library(${PROJECT_NAME})
 add_library(${PROJECT_NAMESPACE}${PROJECT_NAME} ALIAS ${PROJECT_NAME})
@@ -58,6 +62,9 @@ target_link_libraries(${PROJECT_NAME}
     spdlog::spdlog
     tl::expected
 )
+if(NOT WIN32)
+  target_link_libraries(${PROJECT_NAME} PUBLIC elfutils::elfutils)
+endif()
 
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>$<INSTALL_INTERFACE:include> PRIVATE src/c++)
 
@@ -69,6 +76,14 @@ else()
   target_compile_definitions(${PROJECT_NAME} PUBLIC -DFLOPPY_STATIC_LIBRARY=1)
 endif()
 
+if(MINGW OR CYGWIN)
+  find_newest_msvcrt(NEWEST_MSVCRT)
+  foreach(LANG C CXX)
+    set(CMAKE_${LANG}_FLAGS "${CMAKE_${LANG}_FLAGS} -D__MSVCRT_VERSION__=0x${NEWEST_MSVCRT}0")
+    set(CMAKE_${LANG}_STANDARD_LIBRARIES "${CMAKE_${LANG}_STANDARD_LIBRARIES} -lmsvcr${NEWEST_MSVCRT} -ldbghelp")
+  endforeach()
+endif()
+
 target_compile_definitions(${PROJECT_NAME}
   PUBLIC
     -DFLOPPY_TARGET_NAME=${PROJECT_NAME}
@@ -76,6 +91,10 @@ target_compile_definitions(${PROJECT_NAME}
     -DFLOPPY_PROJECT_VERSION_MINOR=${PROJECT_VERSION_MINOR}
     -DFLOPPY_PROJECT_VERSION_PATCH=${PROJECT_VERSION_PATCH}
 )
+
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Debug)
+endif()
 
 if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
   message(STATUS "[${PROJECT_NAME}] adding compiler flags: -Wall -Wextra -Wpedantic -Werror")
@@ -88,6 +107,7 @@ endif()
 if(TESTS)
   enable_testing()
   add_subdirectory(tests)
+  add_subdirectory(bin)
 endif()
 
 message(STATUS "[${PROJECT_NAME}] compile integration tests status: ${INTEGRATION_TESTS}")
