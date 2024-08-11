@@ -245,7 +245,7 @@ public:
   static void handleSignal(int, siginfo_t *info, void *_ctx) {
     ucontext_t *uctx = static_cast<ucontext_t *>(_ctx);
 
-    stack_trace st;
+    impl::stack_trace st;
     void *error_addr = nullptr;
 #ifdef REG_RIP // x86_64
     error_addr = reinterpret_cast<void *>(uctx->uc_mcontext.gregs[REG_RIP]);
