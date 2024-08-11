@@ -11,6 +11,7 @@ project(floppy
 set(PROJECT_NAMESPACE ${PROJECT_NAME}::)
 
 include(CMakePrintHelpers)
+include(cmake/LinkMSVCRT.cmake)
 
 option(TESTS "Enable integration tests" OFF)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
@@ -71,6 +72,14 @@ else()
   target_compile_definitions(${PROJECT_NAME} PUBLIC -DFLOPPY_STATIC_LIBRARY=1)
 endif()
 
+if(MINGW OR CYGWIN)
+  find_newest_msvcrt(NEWEST_MSVCRT)
+  foreach(LANG C CXX)
+    set(CMAKE_${LANG}_FLAGS "${CMAKE_${LANG}_FLAGS} -D__MSVCRT_VERSION__=0x${NEWEST_MSVCRT}0")
+    set(CMAKE_${LANG}_STANDARD_LIBRARIES "${CMAKE_${LANG}_STANDARD_LIBRARIES} -lmsvcr${NEWEST_MSVCRT} -ldbghelp")
+  endforeach()
+endif()
+
 target_compile_definitions(${PROJECT_NAME}
   PUBLIC
     -DFLOPPY_TARGET_NAME=${PROJECT_NAME}
@@ -78,6 +87,10 @@ target_compile_definitions(${PROJECT_NAME}
     -DFLOPPY_PROJECT_VERSION_MINOR=${PROJECT_VERSION_MINOR}
     -DFLOPPY_PROJECT_VERSION_PATCH=${PROJECT_VERSION_PATCH}
 )
+
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Debug)
+endif()
 
 if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
   message(STATUS "[${PROJECT_NAME}] adding compiler flags: -Wall -Wextra -Wpedantic -Werror")
@@ -90,9 +103,6 @@ endif()
 if(TESTS)
   enable_testing()
   add_subdirectory(tests)
-endif()
-
-if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
   add_subdirectory(bin)
 endif()
 
