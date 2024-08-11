@@ -36,7 +36,7 @@ namespace floppy::print_helpers
     );
   }
 
-  [[nodiscard]] auto truncate(
+  [[nodiscard]] inline auto truncate(
     std::string_view str,
     std::size_t max_width,
     direction dir = direction::forward,
