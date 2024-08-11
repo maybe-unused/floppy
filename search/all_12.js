@@ -13,7 +13,7 @@ var searchData=
   ['serialization_10',['Serialization',['../group__serialization.html',1,'']]],
   ['serialization_5ferror_11',['serialization_error',['../classfloppy_1_1serialization_1_1serialization__error.html',1,'serialization_error'],['../classfloppy_1_1serialization_1_1serialization__error.html#a38cc9815e09fa42f404f593fac1ae61e',1,'floppy::serialization::serialization_error::serialization_error(format f, std::string_view details)'],['../classfloppy_1_1serialization_1_1serialization__error.html#a1ea46b781b9a93b4142be5c5b76f6821',1,'floppy::serialization::serialization_error::serialization_error(format f)']]],
   ['serialize_12',['serialize',['../group__serialization.html#ga9ea974aff95bad2cc99b711105638e97',1,'floppy::serialization']]],
-  ['signal_5fhandler_13',['signal_handler',['../classfloppy_1_1stacktrace_1_1signal__handler.html',1,'floppy::stacktrace']]],
+  ['signal_5fwatcher_13',['signal_watcher',['../classfloppy_1_1stacktrace_1_1signal__watcher.html',1,'floppy::stacktrace']]],
   ['signed_5f_14',['signed_',['../structfloppy_1_1math_1_1angle.html#a16f668eb5ce16e45fb3f943ec204284b',1,'floppy::math::angle']]],
   ['sin_15',['sin',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#ad3b3c9e313da58838b6b703a6b2a17cd',1,'floppy::math::detail::basic_numeric_newtype']]],
   ['sin_5fcos_16',['sin_cos',['../structfloppy_1_1math_1_1angle.html#a674fd6ea0d22759616dce5de1d2c9398',1,'floppy::math::angle']]],

@@ -70,7 +70,7 @@ var annotated_dup =
           [ "trace_resolver_linux_impl", "namespacefloppy_1_1stacktrace_1_1impl.html#classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__linux__impl", null ],
           [ "trace_resolver_linux_impl< trace_resolver_tag::libdw >", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__linux__impl_3_01trace__resolver__tag_1_1libdw_01_4.html", null ]
         ] ],
-        [ "signal_handler", "classfloppy_1_1stacktrace_1_1signal__handler.html", null ]
+        [ "signal_watcher", "classfloppy_1_1stacktrace_1_1signal__watcher.html", null ]
       ] ],
       [ "application_dirs", "classfloppy_1_1application__dirs.html", "classfloppy_1_1application__dirs" ],
       [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
