@@ -141,7 +141,7 @@ $(function(){initNavTree('file_8h_source.html',''); initResizable(); });
 <div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1stacktrace_1_1impl.html">    7</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy_1_1stacktrace_1_1impl.html">floppy::stacktrace::impl</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  [[maybe_unused]] [[nodiscard]] <span class="keyword">auto</span> make_crash_report_path(std::filesystem::path <span class="keyword">const</span>&amp; folder = std::filesystem::current_path() / <span class="stringliteral">&quot;crashdumps&quot;</span>)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  [[maybe_unused]] [[nodiscard]] <span class="keyword">auto</span> make_crash_report_path(std::filesystem::path <span class="keyword">const</span>&amp; folder = std::filesystem::current_path() / <span class="stringliteral">&quot;crash_reports&quot;</span>)</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    -&gt; std::filesystem::path {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">if</span>(not std::filesystem::exists(folder))</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>      std::filesystem::create_directories(folder);</div>
@@ -149,7 +149,7 @@ $(function(){initNavTree('file_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">auto</span> time = std::chrono::system_clock::to_time_t(current_time);</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">auto</span> ss = std::stringstream();</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    ss &lt;&lt; std::put_time(std::localtime(&amp;time), <span class="stringliteral">&quot;%Y-%m-%d_%H-%M-%S&quot;</span>);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">return</span> folder / (<span class="stringliteral">&quot;crash_reports_&quot;</span> + ss.str() + <span class="stringliteral">&quot;.log&quot;</span>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">return</span> folder / (<span class="stringliteral">&quot;crash_&quot;</span> + ss.str() + <span class="stringliteral">&quot;.log&quot;</span>);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  }</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>} <span class="comment">// namespace floppy::stacktrace::impl</span></div>
 </div>
