@@ -1,6 +1,6 @@
 #pragma once
 
-#include <floppy/detail/types.h>
+#include <floppy/detail/stdint.h>
 
 namespace floppy::stacktrace::impl
 {

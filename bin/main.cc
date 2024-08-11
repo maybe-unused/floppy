@@ -3,7 +3,7 @@
 #include <floppy/stacktrace.h>
 #include "obj.hh"
 
-[[maybe_unused]] fl::stacktrace::signal_watcher sw(fl::stacktrace::make_crash_report_path(std::filesystem::current_path() / "crash_reports"));
+[[maybe_unused]] fl::stacktrace::signal_watcher sw;
 
 auto bad_boy() -> void {
   char* x = nullptr;
