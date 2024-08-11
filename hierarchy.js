@@ -23,7 +23,7 @@ var hierarchy =
     [ "default_unit", "namespacefloppy_1_1math.html#structfloppy_1_1math_1_1default__unit", null ],
     [ "deleter< R, T, F >", "structfloppy_1_1stacktrace_1_1details_1_1deleter.html", null ],
     [ "demangler_impl< TAG >", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html", null ],
-    [ "demangler_impl< system_tag::current_tag >", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html", [
+    [ "demangler_impl< system_tag::current >", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html", [
       [ "demangler", "structfloppy_1_1stacktrace_1_1details_1_1demangler.html", null ]
     ] ],
     [ "exception", null, [
@@ -124,7 +124,7 @@ var hierarchy =
     [ "StackTraceImpl< TAG >", "classfloppy_1_1stacktrace_1_1StackTraceImpl.html", null ],
     [ "StackTraceImplBase", "classfloppy_1_1stacktrace_1_1StackTraceImplBase.html", [
       [ "StackTraceImplHolder", "classfloppy_1_1stacktrace_1_1StackTraceImplHolder.html", [
-        [ "StackTraceImpl< system_tag::current_tag >", "classfloppy_1_1stacktrace_1_1StackTraceImpl_3_01system__tag_1_1current__tag_01_4.html", [
+        [ "StackTraceImpl< system_tag::current >", "classfloppy_1_1stacktrace_1_1StackTraceImpl_3_01system__tag_1_1current_01_4.html", [
           [ "stack_trace", "classfloppy_1_1stacktrace_1_1stack__trace.html", null ]
         ] ]
       ] ]
@@ -137,11 +137,11 @@ var hierarchy =
       [ "resolved_trace", "structfloppy_1_1stacktrace_1_1resolved__trace.html", null ]
     ] ],
     [ "TraceResolverImpl< TAG >", "namespacefloppy_1_1stacktrace.html#classfloppy_1_1stacktrace_1_1TraceResolverImpl", null ],
-    [ "TraceResolverImpl< system_tag::current_tag >", "namespacefloppy_1_1stacktrace.html", [
+    [ "TraceResolverImpl< system_tag::current >", "namespacefloppy_1_1stacktrace.html", [
       [ "trace_resolver", "classfloppy_1_1stacktrace_1_1trace__resolver.html", null ]
     ] ],
     [ "TraceResolverImplBase", "classfloppy_1_1stacktrace_1_1TraceResolverImplBase.html", [
-      [ "TraceResolverImpl< system_tag::unknown_tag >", "classfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1unknown__tag_01_4.html", null ]
+      [ "TraceResolverImpl< system_tag::unknown >", "classfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1unknown_01_4.html", null ]
     ] ],
     [ "version", "classfloppy_1_1meta_1_1version.html", null ]
 ];

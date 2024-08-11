@@ -20,5 +20,5 @@ var searchData=
   ['critical_5fmessage_17',['critical_message',['../group__helpers.html#gabdcc54d31693c73090e4e02f31872ebd',1,'floppy::print_helpers']]],
   ['critical_5fto_18',['critical_to',['../group__logging.html#gabd43f0d810fd497d7ceb97fb453128af',1,'floppy::log']]],
   ['cross_19',['cross',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ab769a6a6b00145f928d222b94861840e',1,'floppy::math::detail::basic_two_dimensional_type']]],
-  ['current_20',['current',['../structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743',1,'floppy::source_location::current()'],['../classfloppy_1_1platform.html#ae38f44be4199dfae927a98d8aa44d53a',1,'floppy::platform::current()']]]
+  ['current_20',['current',['../structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743',1,'floppy::source_location::current()'],['../classfloppy_1_1platform.html#af83827a7823a37fac4c17066a082696d',1,'floppy::platform::current()']]]
 ];

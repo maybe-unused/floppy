@@ -1,7 +1,8 @@
 var NAVTREEINDEX4 =
 {
-"structfloppy_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a":[6,0,0,0,0,1],
+"structfloppy_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8":[4,0,1,1,0,0],
 "structfloppy_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a":[4,0,1,1,0,1],
+"structfloppy_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a":[6,0,0,0,0,1],
 "structfloppy_1_1formattable.html":[3,7,5,4],
 "structfloppy_1_1formattable.html#a5033d519861ee33fdd6ab38f88699ae2":[3,7,5,4,2],
 "structfloppy_1_1formattable.html#a6feb227ebbbc81da11e39f13b155eca8":[3,7,5,4,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "structfloppy_1_1math_1_1detail_1_1default__comparable.html#aa9bc6ddbd6f135795bbfe5e2beafe6ba":[6,0,0,3,0,3,7],
 "structfloppy_1_1math_1_1detail_1_1default__comparable.html#aed221b43ccc2b82b9d6abef9e6911527":[6,0,0,3,0,3,8],
 "structfloppy_1_1math_1_1detail_1_1default__comparable.html#af49cc34143aa01c6d8c377814b06e8a5":[6,0,0,3,0,3,2],
-"structfloppy_1_1math_1_1scale.html":[3,6,3],
-"structfloppy_1_1math_1_1scale.html#a1290ef5a2787eb9937be136cc262993a":[3,6,3,0]
+"structfloppy_1_1math_1_1scale.html":[3,6,3]
 };

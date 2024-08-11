@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"structfloppy_1_1math_1_1scale.html#a1290ef5a2787eb9937be136cc262993a":[3,6,3,0],
 "structfloppy_1_1math_1_1scale.html#a130c4985ac6a73ac9e683c514a1e34e1":[3,6,3,11],
 "structfloppy_1_1math_1_1scale.html#a1aa17b4eca3ee340d78ce8e3aa5c5848":[3,6,3,8],
 "structfloppy_1_1math_1_1scale.html#a22f3a8c9d77d430f532d7c0d0fc34d71":[3,6,3,28],
@@ -67,10 +68,10 @@ var NAVTREEINDEX5 =
 "structfloppy_1_1stacktrace_1_1details_1_1deleter.html":[6,0,0,7,0,1],
 "structfloppy_1_1stacktrace_1_1details_1_1demangler.html":[6,0,0,7,0,2],
 "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html":[6,0,0,7,0,3],
-"structfloppy_1_1stacktrace_1_1resolved__trace.html":[4,0,1,13,1],
 "structfloppy_1_1stacktrace_1_1resolved__trace.html":[6,0,0,7,2],
-"structfloppy_1_1stacktrace_1_1resolved__trace_1_1SourceLoc.html":[6,0,0,7,2,0],
+"structfloppy_1_1stacktrace_1_1resolved__trace.html":[4,0,1,13,1],
 "structfloppy_1_1stacktrace_1_1resolved__trace_1_1SourceLoc.html":[4,0,1,13,1,0],
+"structfloppy_1_1stacktrace_1_1resolved__trace_1_1SourceLoc.html":[6,0,0,7,2,0],
 "structfloppy_1_1stacktrace_1_1source__file_1_1not__isempty.html":[6,0,0,7,5,0],
 "structfloppy_1_1stacktrace_1_1source__file_1_1not__isempty.html":[4,0,1,13,4,0],
 "structfloppy_1_1stacktrace_1_1source__file_1_1not__isspace.html":[6,0,0,7,5,1],

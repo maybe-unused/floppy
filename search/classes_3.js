@@ -9,5 +9,5 @@ var searchData=
   ['deleter_6',['deleter',['../structfloppy_1_1stacktrace_1_1details_1_1deleter.html',1,'floppy::stacktrace::details']]],
   ['demangler_7',['demangler',['../structfloppy_1_1stacktrace_1_1details_1_1demangler.html',1,'floppy::stacktrace::details']]],
   ['demangler_5fimpl_8',['demangler_impl',['../structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html',1,'floppy::stacktrace::details']]],
-  ['demangler_5fimpl_3c_20system_5ftag_3a_3acurrent_5ftag_20_3e_9',['demangler_impl&lt; system_tag::current_tag &gt;',['../structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html',1,'floppy::stacktrace::details']]]
+  ['demangler_5fimpl_3c_20system_5ftag_3a_3acurrent_20_3e_9',['demangler_impl&lt; system_tag::current &gt;',['../structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html',1,'floppy::stacktrace::details']]]
 ];

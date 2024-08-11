@@ -31,7 +31,7 @@ var searchData=
   ['splat_28',['splat',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a64f9ee09d34b61616679129ce72807e7',1,'floppy::math::detail::basic_two_dimensional_type']]],
   ['stack_5ftrace_29',['stack_trace',['../classfloppy_1_1stacktrace_1_1stack__trace.html',1,'floppy::stacktrace']]],
   ['stacktraceimpl_30',['StackTraceImpl',['../classfloppy_1_1stacktrace_1_1StackTraceImpl.html',1,'floppy::stacktrace']]],
-  ['stacktraceimpl_3c_20system_5ftag_3a_3acurrent_5ftag_20_3e_31',['StackTraceImpl&lt; system_tag::current_tag &gt;',['../classfloppy_1_1stacktrace_1_1StackTraceImpl_3_01system__tag_1_1current__tag_01_4.html',1,'floppy::stacktrace']]],
+  ['stacktraceimpl_3c_20system_5ftag_3a_3acurrent_20_3e_31',['StackTraceImpl&lt; system_tag::current &gt;',['../classfloppy_1_1stacktrace_1_1StackTraceImpl_3_01system__tag_1_1current_01_4.html',1,'floppy::stacktrace']]],
   ['stacktraceimplbase_32',['StackTraceImplBase',['../classfloppy_1_1stacktrace_1_1StackTraceImplBase.html',1,'floppy::stacktrace']]],
   ['stacktraceimplholder_33',['StackTraceImplHolder',['../classfloppy_1_1stacktrace_1_1StackTraceImplHolder.html',1,'floppy::stacktrace']]],
   ['state_34',['state',['../classfloppy_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a9ed39e2ea931586b6a985a6942ef573e',1,'floppy::application_dirs']]],
