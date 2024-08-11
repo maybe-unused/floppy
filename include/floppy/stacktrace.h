@@ -364,9 +364,8 @@ public:
       // should go for the original executable file path.
       symbol_info.dli_fname = "/proc/self/exe";
       return exec_path_;
-    } else {
+    } else
       return symbol_info.dli_fname;
-    }
   }
 
 private:
@@ -383,13 +382,10 @@ private:
   static std::string read_symlink(std::string const &symlink_path) {
     std::string path;
     path.resize(100);
-
     while (true) {
-      isize len =
-          ::readlink(symlink_path.c_str(), &*path.begin(), path.size());
-      if (len < 0) {
+      isize len = ::readlink(symlink_path.c_str(), &*path.begin(), path.size());
+      if(len < 0)
         return "";
-      }
       if (static_cast<size_t>(len) == path.size()) {
         path.resize(path.size() * 2);
       } else {
@@ -412,122 +408,51 @@ public:
 
   resolved_trace resolve(resolved_trace trace) override {
     using namespace details;
-
     Dwarf_Addr trace_addr = reinterpret_cast<Dwarf_Addr>(trace.addr);
-
     if (!_dwfl_handle_initialized) {
-      // initialize dwfl...
       _dwfl_cb.reset(new Dwfl_Callbacks);
       _dwfl_cb->find_elf = &dwfl_linux_proc_find_elf;
       _dwfl_cb->find_debuginfo = &dwfl_standard_find_debuginfo;
       _dwfl_cb->debuginfo_path = 0;
-
       _dwfl_handle.reset(dwfl_begin(_dwfl_cb.get()));
       _dwfl_handle_initialized = true;
 
-      if (!_dwfl_handle) {
+      if(not _dwfl_handle)
         return trace;
-      }
 
-      // ...from the current process.
       dwfl_report_begin(_dwfl_handle.get());
       int r = dwfl_linux_proc_report(_dwfl_handle.get(), getpid());
       dwfl_report_end(_dwfl_handle.get(), NULL, NULL);
-      if (r < 0) {
+      if(r < 0)
         return trace;
-      }
     }
 
-    if (!_dwfl_handle) {
+    if(not _dwfl_handle)
       return trace;
-    }
-
-    // find the module (binary object) that contains the trace's address.
-    // This is not using any debug information, but the addresses ranges of
-    // all the currently loaded binary object.
     Dwfl_Module *mod = dwfl_addrmodule(_dwfl_handle.get(), trace_addr);
-    if (mod) {
-      // now that we found it, lets get the name of it, this will be the
-      // full path to the running binary or one of the loaded library.
+    if(mod) {
       const char *module_name = dwfl_module_info(mod, 0, 0, 0, 0, 0, 0, 0);
-      if (module_name) {
+      if(module_name)
         trace.object_filename = module_name;
-      }
-      // We also look after the name of the symbol, equal or before this
-      // address. This is found by walking the symtab. We should get the
-      // symbol corresponding to the function (mangled) containing the
-      // address. If the code corresponding to the address was inlined,
-      // this is the name of the out-most inliner function.
+
       const char *sym_name = dwfl_module_addrname(mod, trace_addr);
-      if (sym_name) {
+      if(sym_name)
         trace.object_function = demangle(sym_name);
-      }
     }
 
-    // now let's get serious, and find out the source location (file and
-    // line number) of the address.
-
-    // This function will look in .debug_aranges for the address and map it
-    // to the location of the compilation unit DIE in .debug_info and
-    // return it.
     Dwarf_Addr mod_bias = 0;
     Dwarf_Die *cudie = dwfl_module_addrdie(mod, trace_addr, &mod_bias);
-
-    if (!cudie) {
-      // Sadly clang does not generate the section .debug_aranges, thus
-      // dwfl_module_addrdie will fail early. Clang doesn't either set
-      // the lowpc/highpc/range info for every compilation unit.
-      //
-      // So in order to save the world:
-      // for every compilation unit, we will iterate over every single
-      // DIEs. Normally functions should have a lowpc/highpc/range, which
-      // we will use to infer the compilation unit.
-
-      // note that this is probably badly inefficient.
-      while ((cudie = dwfl_module_nextcu(mod, cudie, &mod_bias))) {
+    if(not cudie) {
+      while((cudie = dwfl_module_nextcu(mod, cudie, &mod_bias))) {
         Dwarf_Die die_mem;
-        Dwarf_Die *fundie =
-            find_fundie_by_pc(cudie, trace_addr - mod_bias, &die_mem);
-        if (fundie) {
+        Dwarf_Die *fundie = find_fundie_by_pc(cudie, trace_addr - mod_bias, &die_mem);
+        if(fundie)
           break;
-        }
       }
     }
 
-//#define BACKWARD_I_DO_NOT_RECOMMEND_TO_ENABLE_THIS_HORRIBLE_PIECE_OF_CODE
-#ifdef BACKWARD_I_DO_NOT_RECOMMEND_TO_ENABLE_THIS_HORRIBLE_PIECE_OF_CODE
-    if (!cudie) {
-      // If it's still not enough, lets dive deeper in the shit, and try
-      // to save the world again: for every compilation unit, we will
-      // load the corresponding .debug_line section, and see if we can
-      // find our address in it.
-
-      Dwarf_Addr cfi_bias;
-      Dwarf_CFI *cfi_cache = dwfl_module_eh_cfi(mod, &cfi_bias);
-
-      Dwarf_Addr bias;
-      while ((cudie = dwfl_module_nextcu(mod, cudie, &bias))) {
-        if (dwarf_getsrc_die(cudie, trace_addr - bias)) {
-
-          // ...but if we get a match, it might be a false positive
-          // because our (address - bias) might as well be valid in a
-          // different compilation unit. So we throw our last card on
-          // the table and lookup for the address into the .eh_frame
-          // section.
-
-          handle<Dwarf_Frame *> frame;
-          dwarf_cfi_addrframe(cfi_cache, trace_addr - cfi_bias, &frame);
-          if (frame) {
-            break;
-          }
-        }
-      }
-    }
-#endif
-
-    if (!cudie) {
+    if(not cudie)
       return trace; // this time we lost the game :/
-    }
 
     // Now that we have a compilation unit DIE, this function will be able
     // to load the corresponding section in .debug_line (if not already
@@ -538,22 +463,17 @@ public:
     if (srcloc) {
       const char *srcfile = dwarf_linesrc(srcloc, 0, 0);
       if (srcfile) {
-        trace.source.filename = srcfile;
+        trace.source.file_name_mut() = srcfile;
       }
       int line = 0, col = 0;
       dwarf_lineno(srcloc, &line);
       dwarf_linecol(srcloc, &col);
-      trace.source.line = static_cast<unsigned>(line);
-      trace.source.col = static_cast<unsigned>(col);
+      trace.source.line_mut() = static_cast<unsigned>(line);
+      trace.source.column_mut() = static_cast<unsigned>(col);
     }
-
-    deep_first_search_by_pc(cudie, trace_addr - mod_bias,
-                            inliners_search_cb(trace));
-    if (trace.source.function.size() == 0) {
-      // fallback.
-      trace.source.function = trace.object_function;
-    }
-
+    deep_first_search_by_pc(cudie, trace_addr - mod_bias, inliners_search_cb(trace));
+    if(trace.source.function_name().empty())
+      trace.source.function_name_mut() = trace.object_function;
     return trace;
   }
 
