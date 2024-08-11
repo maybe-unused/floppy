@@ -64,9 +64,9 @@ var NAVTREEINDEX =
 "angle_8h.html",
 "classfloppy_1_1math_1_1point2d.html#aaad517001a831eff7de9c3223d591b02",
 "classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca21e4877ebcf75b3ffc961671a274f985",
-"group__calc.html#gadd770f95287eea461bee0dea63476fb2",
-"namespacemembers_type.html",
-"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a79eefbf0838dc9c781d9e0f35996bf56"
+"group__calc.html#gaa72828ebfa4d78b2f6a71812418cd483",
+"namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84",
+"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a4a1740480a7289652d1e7bcdffe9807a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

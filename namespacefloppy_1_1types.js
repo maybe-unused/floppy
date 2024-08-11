@@ -13,6 +13,7 @@ var namespacefloppy_1_1types =
     [ "isize", "namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d", null ],
     [ "f32", "namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527", null ],
     [ "f64", "namespacefloppy_1_1types.html#abc2f107791bd7c1d49ecf0f168c085a3", null ],
+    [ "uptr", "namespacefloppy_1_1types.html#ab570f5f49c8b74c01d0895b1a1a8555f", null ],
     [ "option", "group__aliases.html#gaa202473f296b2492d9239773369181af", null ],
     [ "result", "group__aliases.html#gae7b8a377a5b8651ef68a50f8e97bf706", null ],
     [ "ref", "group__aliases.html#gae7d120016347ce3f021bc18dcefe2809", null ],

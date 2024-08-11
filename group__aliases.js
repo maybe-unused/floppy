@@ -1,8 +1,8 @@
 var group__aliases =
 [
     [ "fl", "namespacefl.html", null ],
-    [ "types", "namespacefloppy_1_1types.html", null ],
     [ "literals", "namespacefloppy_1_1literals.html", null ],
+    [ "types", "namespacefloppy_1_1types.html", null ],
     [ "bytearray", "group__aliases.html#gaa476e7c28990de9d1f5807d18d97d2ea", null ],
     [ "bytearray_view", "group__aliases.html#ga9910a22d4c37a8bbb94c1c8d9aedb6de", null ],
     [ "bytearray_view_mut", "group__aliases.html#ga648837c945db0be1ada62a296cbe6624", null ],

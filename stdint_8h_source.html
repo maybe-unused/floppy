@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Floppy library" />
+<meta property="og:url" content="https://whs31.github.io/floppy" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Documentation for the Floppy library" />
+<meta name="twitter:description" content="https://whs31.github.io/floppy" />
+<!-- END twitter metadata -->
+<title>Floppy: stdint.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/whs31/floppy" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Floppy
+   &#160;<span id="projectnumber">1.4.0</span>
+   </div>
+   <div id="projectbrief">Extensions for C++ stdlib</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('stdint_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">stdint.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy.html">floppy</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html">    8</a></span>  <span class="keyword">inline</span> <span class="keyword">namespace </span>types</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">   10</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a> = uint8_t;                       </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4">   11</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4">u16</a> = uint16_t;                     </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41">   12</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41">u32</a> = uint32_t;                     </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574">   13</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574">u64</a> = uint64_t;                     </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef">   14</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef">i8</a> = int8_t;                        </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8">   15</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8">i16</a> = int16_t;                      </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84">   16</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84">i32</a> = int32_t;                      </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd">   17</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd">i64</a> = int64_t;                      </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">   18</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">usize</a> = size_t;                     </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">   19</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">isize</a> = std::make_signed_t&lt;size_t&gt;; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">   20</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a> = float;                        </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#abc2f107791bd7c1d49ecf0f168c085a3">   21</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> = double;                       </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">using </span>f128 [[maybe_unused]] = <span class="keywordtype">long</span> double;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types.html#ab570f5f49c8b74c01d0895b1a1a8555f">   23</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#ab570f5f49c8b74c01d0895b1a1a8555f">uptr</a> = uintptr_t;                   </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">//NOLINTNEXTLINE(*-runtime-int)</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">using </span>ulonglong [[maybe_unused]] = <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> long; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">//NOLINTNEXTLINE(*-runtime-int)</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">using </span>uint [[maybe_unused]] = <span class="keywordtype">unsigned</span> int; </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  } <span class="comment">// namespace types</span></div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html">   35</a></span>  <span class="keyword">inline</span> <span class="keyword">namespace </span>literals</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">//#if !defined(__cpp_size_t_suffix)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#a2e8f3db7e297556ee0f952c0c06c234d">   41</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_z(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">isize</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">isize</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#ab68a34b157722e5e944e2fb4cb149090">   46</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_Z(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">isize</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">isize</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#aa46b0aefdb6b735c2e13c1b1d6ea7718">   51</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_zu(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">usize</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">usize</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#a92fd52a32fd0304afcf8d2dfc93e9f13">   56</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_ZU(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">usize</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">usize</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#a9efb3baa24626ffa4018edacda9cd0c1">   60</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_usize(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">usize</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">usize</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#afbe63284c7cc70e045c12577627dadfb">   64</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_isize(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">isize</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">isize</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">//#endif // defined(__cpp_size_t_suffix)</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#aa08fe6d6f5f57ce4bda0d05c6f1f0d32">   68</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_u8(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#ade3f004512d0469a35e286f8f124d12b">   71</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_u16(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4">u16</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4">u16</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#a399d47c1be6a78e54d73d29a1f221a2e">   74</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_u32(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41">u32</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41">u32</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#a782c5d762020d732191bdd3e5f4ab094">   77</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_u64(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574">u64</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574">u64</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#af1aaeec0437400ff0f7fbf4adb35be91">   80</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_i8(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef">i8</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef">i8</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#acb6d87ceb21a090d76803bd22a085162">   83</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_i16(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8">i16</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8">i16</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#ae67a42843a5c35bb675c3a847256a6c2">   86</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_i32(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84">i32</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84">i32</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#a96732ac4aace4bcab3e3062ab7d01c0f">   89</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_i64(ulonglong value) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd">i64</a> { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd">i64</a><span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#ad9c6fcc17a9686e7806ab6f404c3009e">   92</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_ptrdiff(ulonglong value) -&gt; std::ptrdiff_t { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::ptrdiff_t<span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// NOLINTBEGIN(*-pro-type-reinterpret-cast, *-no-int-to-ptr)</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1literals.html#a514cd59529b04e6124eca2e8fbb5a297">   98</a></span>    <span class="keyword">inline</span> <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_pvoid(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> value) -&gt; <span class="keywordtype">void</span>* { <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(value); }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// NOLINTEND(*-pro-type-reinterpret-cast, *-no-int-to-ptr)</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  } <span class="comment">// namespace literals</span></div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>} <span class="comment">// namespace floppy</span></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_a196513547113c3f96a078ee3e658a6ef"><div class="ttname"><a href="namespacefloppy_1_1types.html#a196513547113c3f96a078ee3e658a6ef">floppy::types::i8</a></div><div class="ttdeci">int8_t i8</div><div class="ttdoc">8-bit signed integer</div><div class="ttdef"><b>Definition</b> <a href="#l00014">stdint.h:14</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_a1af9f95651e921615e75917a6dd1b574"><div class="ttname"><a href="namespacefloppy_1_1types.html#a1af9f95651e921615e75917a6dd1b574">floppy::types::u64</a></div><div class="ttdeci">uint64_t u64</div><div class="ttdoc">64-bit unsigned integer</div><div class="ttdef"><b>Definition</b> <a href="#l00013">stdint.h:13</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_a6dbf9516e516c901604625282c174aa4"><div class="ttname"><a href="namespacefloppy_1_1types.html#a6dbf9516e516c901604625282c174aa4">floppy::types::u16</a></div><div class="ttdeci">uint16_t u16</div><div class="ttdoc">16-bit unsigned integer</div><div class="ttdef"><b>Definition</b> <a href="#l00011">stdint.h:11</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_a70c1fcc1a4e96af8f6580f708657cd41"><div class="ttname"><a href="namespacefloppy_1_1types.html#a70c1fcc1a4e96af8f6580f708657cd41">floppy::types::u32</a></div><div class="ttdeci">uint32_t u32</div><div class="ttdoc">32-bit unsigned integer</div><div class="ttdef"><b>Definition</b> <a href="#l00012">stdint.h:12</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_a86025ec3a0bc201ca893caac2cb2acbd"><div class="ttname"><a href="namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd">floppy::types::i64</a></div><div class="ttdeci">int64_t i64</div><div class="ttdoc">64-bit signed integer</div><div class="ttdef"><b>Definition</b> <a href="#l00017">stdint.h:17</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_a8a1acd2f98c9e2cb3db422251e294037"><div class="ttname"><a href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">floppy::types::usize</a></div><div class="ttdeci">size_t usize</div><div class="ttdoc">Unsigned integer with pointer size.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">stdint.h:18</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_a977685259fe8059c48e92450967d46a8"><div class="ttname"><a href="namespacefloppy_1_1types.html#a977685259fe8059c48e92450967d46a8">floppy::types::i16</a></div><div class="ttdeci">int16_t i16</div><div class="ttdoc">16-bit signed integer</div><div class="ttdef"><b>Definition</b> <a href="#l00015">stdint.h:15</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="namespacefloppy_1_1types.html#a987e4d6cf789cb59dbb390728271e4d6">floppy::types::u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8-bit unsigned integer</div><div class="ttdef"><b>Definition</b> <a href="#l00010">stdint.h:10</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_aa762e9e266c5c1f1b6cf1b0e8eeb407d"><div class="ttname"><a href="namespacefloppy_1_1types.html#aa762e9e266c5c1f1b6cf1b0e8eeb407d">floppy::types::isize</a></div><div class="ttdeci">std::make_signed_t&lt; size_t &gt; isize</div><div class="ttdoc">Signed integer with pointer size.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">stdint.h:19</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_ab570f5f49c8b74c01d0895b1a1a8555f"><div class="ttname"><a href="namespacefloppy_1_1types.html#ab570f5f49c8b74c01d0895b1a1a8555f">floppy::types::uptr</a></div><div class="ttdeci">uintptr_t uptr</div><div class="ttdoc">&lt; Float with 128-bit precision</div><div class="ttdef"><b>Definition</b> <a href="#l00023">stdint.h:23</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_abc2f107791bd7c1d49ecf0f168c085a3"><div class="ttname"><a href="namespacefloppy_1_1types.html#abc2f107791bd7c1d49ecf0f168c085a3">floppy::types::f64</a></div><div class="ttdeci">double f64</div><div class="ttdoc">Float with 64-bit precision.</div><div class="ttdef"><b>Definition</b> <a href="#l00021">stdint.h:21</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_ad34d88453d37b65a09797bad37f2f527"><div class="ttname"><a href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">floppy::types::f32</a></div><div class="ttdeci">float f32</div><div class="ttdoc">Float with 32-bit precision.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">stdint.h:20</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_aec41e5f8e4b7aef2540e84268692fa84"><div class="ttname"><a href="namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84">floppy::types::i32</a></div><div class="ttdeci">int32_t i32</div><div class="ttdoc">32-bit signed integer</div><div class="ttdef"><b>Definition</b> <a href="#l00016">stdint.h:16</a></div></div>
+<div class="ttc" id="anamespacefloppy_html"><div class="ttname"><a href="namespacefloppy.html">floppy</a></div><div class="ttdoc">Main namespace for the library.</div><div class="ttdef"><b>Definition</b> <a href="demangle_8h_source.html#l00009">demangle.h:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><a class="el" href="dir_a70aa49210f20f6d80e3cfefc70580f7.html">detail</a></li><li class="navelem"><b>stdint.h</b></li>
+    <li class="footer">Generated on Sun Aug 11 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
