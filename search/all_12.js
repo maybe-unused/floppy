@@ -23,7 +23,7 @@ var searchData=
   ['size2d_5ftype_20',['size2d_type',['../classfloppy_1_1math_1_1point2d.html#a73ecc204799830a20ed4a4332d16dd53',1,'floppy::math::point2d::size2d_type'],['../classfloppy_1_1math_1_1vector2d.html#a73ecc204799830a20ed4a4332d16dd53',1,'floppy::math::vector2d::size2d_type']]],
   ['snippet_5ffactory_21',['snippet_factory',['../classfloppy_1_1stacktrace_1_1impl_1_1snippet__factory.html',1,'floppy::stacktrace::impl']]],
   ['some_22',['some',['../group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee',1,'floppy::some()'],['../group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee',1,'floppy::types::some()']]],
-  ['source_23',['source',['../structfloppy_1_1stacktrace_1_1resolved__trace.html#aa937af8258ebabb08b68b64a983267b3',1,'floppy::stacktrace::resolved_trace']]],
+  ['source_23',['source',['../structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html#aa937af8258ebabb08b68b64a983267b3',1,'floppy::stacktrace::impl::resolved_trace']]],
   ['source_5ffile_24',['source_file',['../classfloppy_1_1stacktrace_1_1impl_1_1source__file.html',1,'floppy::stacktrace::impl']]],
   ['source_5flocation_25',['source_location',['../structfloppy_1_1source__location.html',1,'source_location'],['../structfloppy_1_1source__location.html#aa3cb6509b6b1bf6578be6a615bd953ff',1,'floppy::source_location::source_location() noexcept'],['../structfloppy_1_1source__location.html#a44ec96e0e5290e3988011ccee09b7ad2',1,'floppy::source_location::source_location(char const *file, uint_least32_t const line, char const *function, uint_least32_t const column=0) noexcept']]],
   ['source_5ftype_26',['source_type',['../structfloppy_1_1math_1_1scale.html#a1290ef5a2787eb9937be136cc262993a',1,'floppy::math::scale']]],

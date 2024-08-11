@@ -1,6 +1,6 @@
 <map id="resolved_trace" name="resolved_trace">
 <area shape="rect" id="Node000001" title=" " alt="" coords="114,286,230,312"/>
-<area shape="rect" id="Node000002" href="$structfloppy_1_1stacktrace_1_1trace.html" title=" " alt="" coords="5,183,59,208"/>
+<area shape="rect" id="Node000002" href="$structfloppy_1_1stacktrace_1_1impl_1_1trace.html" title=" " alt="" coords="5,183,59,208"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,218,102,260,144,283,141,288,98,265,51,222"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="83,183,139,208"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,224,108,243,114,261,126,274,141,284,138,288,122,278,110,264,103,244,103,224"/>

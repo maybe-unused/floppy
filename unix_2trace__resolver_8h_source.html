@@ -193,9 +193,9 @@ $(function(){initNavTree('unix_2trace__resolver_8h_source.html',''); initResizab
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>   <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_class" href="namespacefloppy_1_1stacktrace_1_1impl.html#classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__linux__impl">trace_resolver_linux_impl</a>() : _dwfl_handle_initialized(<span class="keyword">false</span>) {}</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1resolved__trace.html">resolved_trace</a> resolve(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1resolved__trace.html">resolved_trace</a> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html">resolved_trace</a> resolve(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html">resolved_trace</a> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keyword">using namespace </span>details;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      Dwarf_Addr trace_addr = <span class="keyword">reinterpret_cast&lt;</span>Dwarf_Addr<span class="keyword">&gt;</span>(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.addr);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      Dwarf_Addr trace_addr = <span class="keyword">reinterpret_cast&lt;</span>Dwarf_Addr<span class="keyword">&gt;</span>(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.addr);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keywordflow">if</span> (!_dwfl_handle_initialized) {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        _dwfl_cb.reset(<span class="keyword">new</span> Dwfl_Callbacks);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        _dwfl_cb-&gt;find_elf = &amp;dwfl_linux_proc_find_elf;</div>
@@ -205,26 +205,26 @@ $(function(){initNavTree('unix_2trace__resolver_8h_source.html',''); initResizab
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        _dwfl_handle_initialized = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">if</span>(not _dwfl_handle)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>          <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>          <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        dwfl_report_begin(_dwfl_handle.get());</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordtype">int</span> r = dwfl_linux_proc_report(_dwfl_handle.get(), getpid());</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        dwfl_report_end(_dwfl_handle.get(), NULL, NULL);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">if</span>(r &lt; 0)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>          <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>          <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      }</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordflow">if</span>(not _dwfl_handle)</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      Dwfl_Module *mod = dwfl_addrmodule(_dwfl_handle.get(), trace_addr);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <span class="keywordflow">if</span>(mod) {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *module_name = dwfl_module_info(mod, 0, 0, 0, 0, 0, 0, 0);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span>(module_name)</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>          <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.object_filename = module_name;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>          <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.object_filename = module_name;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *sym_name = dwfl_module_addrname(mod, trace_addr);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">if</span>(sym_name)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>          <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.object_function = demangle(sym_name);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>          <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.object_function = demangle(sym_name);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      }</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      Dwarf_Addr mod_bias = 0;</div>
@@ -239,7 +239,7 @@ $(function(){initNavTree('unix_2trace__resolver_8h_source.html',''); initResizab
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      <span class="keywordflow">if</span>(not cudie)</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>; <span class="comment">// this time we lost the game :/</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>; <span class="comment">// this time we lost the game :/</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="comment">// Now that we have a compilation unit DIE, this function will be able</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <span class="comment">// to load the corresponding section in .debug_line (if not already</span></div>
@@ -250,18 +250,18 @@ $(function(){initNavTree('unix_2trace__resolver_8h_source.html',''); initResizab
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordflow">if</span> (srcloc) {</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *srcfile = dwarf_linesrc(srcloc, 0, 0);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">if</span> (srcfile) {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>          <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.source.file_name_mut() = srcfile;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>          <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.source.file_name_mut() = srcfile;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordtype">int</span> line = 0, col = 0;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        dwarf_lineno(srcloc, &amp;line);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        dwarf_linecol(srcloc, &amp;col);</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.source.line_mut() = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(line);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.source.column_mut() = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(col);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.source.line_mut() = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(line);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.source.column_mut() = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(col);</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      }</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      deep_first_search_by_pc(cudie, trace_addr - mod_bias, inliners_search_cb(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>));</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <span class="keywordflow">if</span>(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.source.function_name().empty())</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.source.function_name_mut() = <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.object_function;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      deep_first_search_by_pc(cudie, trace_addr - mod_bias, inliners_search_cb(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>));</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <span class="keywordflow">if</span>(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.source.function_name().empty())</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.source.function_name_mut() = <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.object_function;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>;</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>   <span class="keyword">private</span>:</div>
@@ -278,7 +278,7 @@ $(function(){initNavTree('unix_2trace__resolver_8h_source.html',''); initResizab
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>          <span class="keyword">const</span> <span class="keywordtype">char</span> *name;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>          <span class="keywordflow">case</span> DW_TAG_subprogram:</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">if</span>((name = dwarf_diename(die)))</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>              <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.source.function_name_mut() = name;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>              <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.source.function_name_mut() = name;</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>          <span class="keywordflow">case</span> DW_TAG_inlined_subroutine:</div>
@@ -295,12 +295,12 @@ $(function(){initNavTree('unix_2trace__resolver_8h_source.html',''); initResizab
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            dwarf_formudata(dwarf_attr(die, DW_AT_call_column, &amp;attr_mem), &amp;col);</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            sloc.<a class="code hl_function" href="structfloppy_1_1source__location.html#acb2f8a08d7e658d3fbc7035f3dc7da5e">line_mut</a>() = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(line);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            sloc.<a class="code hl_function" href="structfloppy_1_1source__location.html#ab1af3a989db3811e3bf13822626d1479">column_mut</a>() = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(col);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.inliners.push_back(sloc);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.inliners.push_back(sloc);</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        };</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      }</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1resolved__trace.html">resolved_trace</a> &amp;<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      inliners_search_cb(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1resolved__trace.html">resolved_trace</a> &amp;t) : <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>(t) {}</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html">resolved_trace</a> &amp;<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      inliners_search_cb(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html">resolved_trace</a> &amp;t) : <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>(t) {}</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    };</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> die_has_pc(Dwarf_Die *die, Dwarf_Addr pc) {</div>
@@ -434,10 +434,10 @@ $(function(){initNavTree('unix_2trace__resolver_8h_source.html',''); initResizab
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      _symbols.reset(backtrace_symbols(addresses, address_count));</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1resolved__trace.html">resolved_trace</a> resolve(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1resolved__trace.html">resolved_trace</a> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html">resolved_trace</a> resolve(<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html">resolved_trace</a> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      <span class="comment">// parse:</span></div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      <span class="comment">// &lt;n&gt;  &lt;file&gt;  &lt;addr&gt;  &lt;mangled-name&gt; + &lt;offset&gt;</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      <span class="keywordtype">char</span> *filename = _symbols[<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.idx];</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      <span class="keywordtype">char</span> *filename = _symbols[<a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.idx];</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>      <span class="comment">// skip &quot;&lt;n&gt;  &quot;</span></div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      <span class="keywordflow">while</span>(*filename &amp;&amp; *filename != <span class="charliteral">&#39; &#39;</span>)</div>
@@ -478,19 +478,19 @@ $(function(){initNavTree('unix_2trace__resolver_8h_source.html',''); initResizab
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        filename_end = filename + strlen(filename);</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        funcname = filename_end;</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      }</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.object_filename.assign(</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.object_filename.assign(</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        filename, filename_end); <span class="comment">// ok even if filename_end is the ending \0</span></div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                                 <span class="comment">// (then we assign entire string)</span></div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>      <span class="keywordflow">if</span>(*funcname) { <span class="comment">// if it&#39;s not end of string</span></div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        *funcname_end = <span class="charliteral">&#39;\0&#39;</span>;</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.object_function = this-&gt;demangle(funcname);</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.object_function += <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.object_function += (funcname_end + 1);</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.source.function = <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>.object_function; <span class="comment">// we cannot do better.</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.object_function = this-&gt;demangle(funcname);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.object_function += <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.object_function += (funcname_end + 1);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.source.function = <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>.object_function; <span class="comment">// we cannot do better.</span></div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>      }</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>;</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      <span class="keywordflow">return</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">trace</a>;</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    }</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>   <span class="keyword">private</span>:</div>
@@ -517,8 +517,8 @@ $(function(){initNavTree('unix_2trace__resolver_8h_source.html',''); initResizab
 <div class="ttc" id="astructfloppy_1_1source__location_html_aa7be9d1665d31ff9e0ce78958e4ce32e"><div class="ttname"><a href="structfloppy_1_1source__location.html#aa7be9d1665d31ff9e0ce78958e4ce32e">floppy::source_location::function_name_mut</a></div><div class="ttdeci">constexpr auto function_name_mut() noexcept -&gt; std::string &amp;</div><div class="ttdoc">Returns a mutable reference to the function name.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00223">backports.h:223</a></div></div>
 <div class="ttc" id="astructfloppy_1_1source__location_html_ab1af3a989db3811e3bf13822626d1479"><div class="ttname"><a href="structfloppy_1_1source__location.html#ab1af3a989db3811e3bf13822626d1479">floppy::source_location::column_mut</a></div><div class="ttdeci">constexpr auto column_mut() noexcept -&gt; uint_least32_t &amp;</div><div class="ttdoc">Returns a mutable reference to the column number.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00235">backports.h:235</a></div></div>
 <div class="ttc" id="astructfloppy_1_1source__location_html_acb2f8a08d7e658d3fbc7035f3dc7da5e"><div class="ttname"><a href="structfloppy_1_1source__location.html#acb2f8a08d7e658d3fbc7035f3dc7da5e">floppy::source_location::line_mut</a></div><div class="ttdeci">constexpr auto line_mut() noexcept -&gt; uint_least32_t &amp;</div><div class="ttdoc">Returns a mutable reference to the line number.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00229">backports.h:229</a></div></div>
-<div class="ttc" id="astructfloppy_1_1stacktrace_1_1resolved__trace_html"><div class="ttname"><a href="structfloppy_1_1stacktrace_1_1resolved__trace.html">floppy::stacktrace::resolved_trace</a></div><div class="ttdef"><b>Definition</b> <a href="resolved__trace_8h_source.html#l00009">resolved_trace.h:10</a></div></div>
-<div class="ttc" id="astructfloppy_1_1stacktrace_1_1trace_html"><div class="ttname"><a href="structfloppy_1_1stacktrace_1_1trace.html">floppy::stacktrace::trace</a></div><div class="ttdef"><b>Definition</b> <a href="trace_8h_source.html#l00007">trace.h:8</a></div></div>
+<div class="ttc" id="astructfloppy_1_1stacktrace_1_1impl_1_1resolved__trace_html"><div class="ttname"><a href="structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html">floppy::stacktrace::impl::resolved_trace</a></div><div class="ttdef"><b>Definition</b> <a href="resolved__trace_8h_source.html#l00009">resolved_trace.h:10</a></div></div>
+<div class="ttc" id="astructfloppy_1_1stacktrace_1_1impl_1_1trace_html"><div class="ttname"><a href="structfloppy_1_1stacktrace_1_1impl_1_1trace.html">floppy::stacktrace::impl::trace</a></div><div class="ttdef"><b>Definition</b> <a href="trace_8h_source.html#l00007">trace.h:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

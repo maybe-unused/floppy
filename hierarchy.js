@@ -133,8 +133,8 @@ var hierarchy =
       [ "propagate_const< T >", "classfloppy_1_1propagate__const.html", null ]
     ] ],
     [ "to_helper< C >", "namespacefloppy_1_1ranges_1_1detail.html#structfloppy_1_1ranges_1_1detail_1_1to__helper", null ],
-    [ "trace", "structfloppy_1_1stacktrace_1_1trace.html", [
-      [ "resolved_trace", "structfloppy_1_1stacktrace_1_1resolved__trace.html", null ]
+    [ "trace", "structfloppy_1_1stacktrace_1_1impl_1_1trace.html", [
+      [ "resolved_trace", "structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html", null ]
     ] ],
     [ "trace_resolver_darwin_impl< STACKTRACE_TAG >", "namespacefloppy_1_1stacktrace_1_1impl.html#classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__darwin__impl", null ],
     [ "trace_resolver_darwin_impl< trace_resolver_tag::current >", "namespacefloppy_1_1stacktrace_1_1impl.html", [

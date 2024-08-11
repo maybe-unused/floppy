@@ -11,7 +11,7 @@ var searchData=
   ['imagination_8',['imagination',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2a9a003f819c75bd91b0dc5ca5a22ec7f6',1,'floppy::platform']]],
   ['info_9',['info',['../group__logging.html#gafdaa6e366f8bbdcd865a50a82c970d9a',1,'floppy::log']]],
   ['info_5fto_10',['info_to',['../group__logging.html#ga394535db66a7496bb7117bad991d8b14',1,'floppy::log']]],
-  ['inliners_11',['inliners',['../structfloppy_1_1stacktrace_1_1resolved__trace.html#aa8dc2bd07aaca8c87725caca03274cea',1,'floppy::stacktrace::resolved_trace']]],
+  ['inliners_11',['inliners',['../structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html#aa8dc2bd07aaca8c87725caca03274cea',1,'floppy::stacktrace::impl::resolved_trace']]],
   ['intel_12',['intel',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca4e5bbaeafc82ab7aa1385bea8ef5d30a',1,'floppy::platform']]],
   ['invalid_5fsmart_5fpointer_5faccess_13',['invalid_smart_pointer_access',['../classfloppy_1_1invalid__smart__pointer__access.html',1,'floppy']]],
   ['inverse_14',['inverse',['../structfloppy_1_1math_1_1scale.html#a4a4d7a13714974f6f102bb1150fcd38c',1,'floppy::math::scale']]],

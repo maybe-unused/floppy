@@ -36,7 +36,7 @@ var searchData=
   ['to_5fvector2d_33',['to_vector2d',['../classfloppy_1_1math_1_1point2d.html#ace85064cd93ef68c5b2c81b4c71f9091',1,'floppy::math::point2d::to_vector2d()'],['../classfloppy_1_1math_1_1size2d.html#ace85064cd93ef68c5b2c81b4c71f9091',1,'floppy::math::size2d::to_vector2d()']]],
   ['todo_20list_34',['Todo List',['../todo.html',1,'']]],
   ['toml_35',['toml',['../group__serialization.html#ggaab5efc62e072f3561d45db61e0c83b85aec18ad9a83c312380533fa93ac6fc61c',1,'floppy::serialization']]],
-  ['trace_36',['trace',['../structfloppy_1_1stacktrace_1_1trace.html',1,'trace'],['../group__logging.html#ga1958617b608e95656ef732069cb6a51f',1,'floppy::log::trace()']]],
+  ['trace_36',['trace',['../structfloppy_1_1stacktrace_1_1impl_1_1trace.html',1,'trace'],['../group__logging.html#ga1958617b608e95656ef732069cb6a51f',1,'floppy::log::trace()']]],
   ['trace_5fresolver_37',['trace_resolver',['../classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver.html',1,'floppy::stacktrace::impl']]],
   ['trace_5fresolver_5fdarwin_5fimpl_38',['trace_resolver_darwin_impl',['../namespacefloppy_1_1stacktrace_1_1impl.html#classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__darwin__impl',1,'floppy::stacktrace::impl']]],
   ['trace_5fresolver_5fdarwin_5fimpl_3c_20trace_5fresolver_5ftag_3a_3abacktrace_5fsymbol_20_3e_39',['trace_resolver_darwin_impl&lt; trace_resolver_tag::backtrace_symbol &gt;',['../classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__darwin__impl_3_01trace__resolver__tag_1_1backtrace__symbol_01_4.html',1,'floppy::stacktrace::impl']]],
