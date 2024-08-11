@@ -49,6 +49,8 @@ namespace floppy
   class box
   {
    public:
+    using element_type = T;
+
     /// \brief Default constructor.
     box() : ptr_(std::make_unique<T>()) {} // NOLINT(*-use-equals-default)
 

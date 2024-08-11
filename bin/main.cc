@@ -11,6 +11,6 @@ auto bad_boy() -> void {
 }
 
 auto main(int argc, char** argv) -> int {
-  bad_boy();
+  throw_it_like_its_hot();
   return 0;
 }

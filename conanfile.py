@@ -52,6 +52,7 @@ class FloppyRecipe(ConanFile):
     def configure(self):
         self.options["spdlog/*"].shared = True
         self.options["fmt/*"].shared = True
+        self.options["backward-cpp/*"].header_only = True
         self.options["backward-cpp/*"].stack_walking = 'backtrace'
         self.options["backward-cpp/*"].stack_details = 'dw'
 
