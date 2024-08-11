@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"namespaces.html":[4,0],
 "namespacestd.html":[4,0,2],
 "namespacestd.html#a18abfca03e51fdc5c93a74f5c81a8b07":[4,0,2,1],
 "nt__traits2d_8h.html":[7,0,0,0,2,0,1],
@@ -18,19 +19,20 @@ var NAVTREEINDEX4 =
 "serialization_8h_source.html":[7,0,0,0,12],
 "size2d_8h.html":[7,0,0,0,2,5],
 "size2d_8h_source.html":[7,0,0,0,2,5],
-"source__file_8h_source.html":[7,0,0,0,0,3],
+"snippet__factory_8h_source.html":[7,0,0,0,0,3],
+"source__file_8h_source.html":[7,0,0,0,0,4],
 "stacktrace_8h_source.html":[7,0,0,0,13],
 "string__utils_8h_source.html":[7,0,0,0,1,12],
 "structfloppy_1_1default__delete.html":[4,0,1,20],
 "structfloppy_1_1default__delete.html":[6,0,0,12],
-"structfloppy_1_1deleter.html":[4,0,1,21],
 "structfloppy_1_1deleter.html":[6,0,0,13],
+"structfloppy_1_1deleter.html":[4,0,1,21],
 "structfloppy_1_1detail_1_1formattable__base.html":[4,0,1,1,0],
 "structfloppy_1_1detail_1_1formattable__base.html":[6,0,0,0,0],
-"structfloppy_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8":[6,0,0,0,0,0],
 "structfloppy_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8":[4,0,1,1,0,0],
-"structfloppy_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a":[6,0,0,0,0,1],
+"structfloppy_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8":[6,0,0,0,0,0],
 "structfloppy_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a":[4,0,1,1,0,1],
+"structfloppy_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a":[6,0,0,0,0,1],
 "structfloppy_1_1formattable.html":[3,7,5,4],
 "structfloppy_1_1formattable.html#a5033d519861ee33fdd6ab38f88699ae2":[3,7,5,4,2],
 "structfloppy_1_1formattable.html#a6feb227ebbbc81da11e39f13b155eca8":[3,7,5,4,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a79eefbf0838dc9c781d9e0f35996bf56":[6,0,0,3,0,2,4],
 "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a7b8dc05d46255ca6b170f882faa8e19f":[6,0,0,3,0,2,6],
 "structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a7bd2d4c1b6c2133b6040f0aff4361e4c":[6,0,0,3,0,2,28],
-"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a856779037f8e9087083527b03e4f76c4":[6,0,0,3,0,2,39],
-"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a86e683a1e79b42b7f61cc52ec8c8e9ef":[6,0,0,3,0,2,2],
-"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a8c255cde5e08d8421772e8d16c9fb965":[6,0,0,3,0,2,15]
+"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a856779037f8e9087083527b03e4f76c4":[6,0,0,3,0,2,39]
 };
