@@ -43,7 +43,7 @@ var searchData=
   ['str_5fto_5frgba_40',['str_to_rgba',['../namespacefloppy_1_1gfx_1_1detail.html#a902fdbfb01ae3a62fbae64bdd83baa4a',1,'floppy::gfx::detail']]],
   ['string_20utilities_41',['String utilities',['../group__string__utils.html',1,'']]],
   ['string_5fcast_42',['string_cast',['../namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9',1,'floppy::string_cast(T const &amp;t) -&gt; std::string'],['../namespacefloppy.html#ac931da5028dd2811b5d0e93caf0f23d4',1,'floppy::string_cast(T const &amp;t) -&gt; std::string']]],
-  ['strong_5fcompare_43',['strong_compare',['../group__calc.html#ga000c8ac590dc1840dda974d4529f08b4',1,'floppy::math']]],
+  ['strong_5fcompare_43',['strong_compare',['../group__calc.html#ga8e70b7eea94377653661bc2eb8981dab',1,'floppy::math']]],
   ['superh_44',['superh',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a7073d3fffb222ee7ec5d8f2551638592',1,'floppy::platform']]],
   ['suse_45',['suse',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2af9dc32aae2d2341a550dd89f78cc49b3',1,'floppy::platform']]],
   ['swap_46',['swap',['../namespacestd.html#a18abfca03e51fdc5c93a74f5c81a8b07',1,'std']]],

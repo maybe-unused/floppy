@@ -156,7 +156,7 @@ Typedefs</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ga6a778dde2b29125b63c1101d454f3e76" id="r_ga6a778dde2b29125b63c1101d454f3e76"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6a778dde2b29125b63c1101d454f3e76">panic</a> (std::string_view message, <a class="el" href="structfloppy_1_1source__location.html">source_location</a> location=<a class="el" href="structfloppy_1_1source__location.html#a36a5ca92c062eb63ad192282858f1ab3">source_location::current</a>()) -&gt; void</td></tr>
 <tr class="separator:ga6a778dde2b29125b63c1101d454f3e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342" id="r_ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplParams" colspan="2">template&lt;concepts::num T, concepts::num U&gt; </td></tr>
+<tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342" id="r_ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplParams" colspan="2">template&lt;__wrap_concept__(concepts::num) T, __wrap_concept__(concepts::num) U&gt; </td></tr>
 <tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga0bbd17556e1675c4a05316d9f6743342">narrow_cast</a> (U &amp;&amp;u) noexcept -&gt; T</td></tr>
 <tr class="separator:ga0bbd17556e1675c4a05316d9f6743342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga67c6adb54f12fdf9e8ef12c2ef08c99a" id="r_ga67c6adb54f12fdf9e8ef12c2ef08c99a"><td class="memItemLeft" align="right" valign="top">FLOPPY_EXPORT auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67c6adb54f12fdf9e8ef12c2ef08c99a">demangle</a> (char const *name) -&gt; std::string</td></tr>
@@ -318,7 +318,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;concepts::num T, concepts::num U&gt; </div>
+template&lt;__wrap_concept__(concepts::num) T, __wrap_concept__(concepts::num) U&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -354,7 +354,7 @@ template&lt;concepts::num T, concepts::num U&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Converted number </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00037">37</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00036">36</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
 
 </div>
 </div>
@@ -421,7 +421,7 @@ GCC </li>
 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga67c6adb54f12fdf9e8ef12c2ef08c99a" title="Demangles C++ type name from string.">demangle</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00075">75</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00074">74</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
 
 </div>
 </div>
@@ -483,8 +483,9 @@ requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_or(e); } or
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Result of bitwise or operation </dd></dl>
+<dl class="section invariant"><dt>Invariant</dt><dd>Available only in C++20 or older. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00111">111</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00112">112</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
 
 </div>
 </div>
@@ -546,8 +547,9 @@ requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_and(e); } o
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Result of bitwise and operation </dd></dl>
+<dl class="section invariant"><dt>Invariant</dt><dd>Available only in C++20 or older. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00146">146</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00148">148</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
 
 </div>
 </div>
@@ -609,8 +611,9 @@ requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_xor(e); } o
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Result of bitwise xor operation </dd></dl>
+<dl class="section invariant"><dt>Invariant</dt><dd>Available only in C++20 or older. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00181">181</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00184">184</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
 
 </div>
 </div>
@@ -668,8 +671,9 @@ requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_not(e); } o
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Result of bitwise not operation </dd></dl>
+<dl class="section invariant"><dt>Invariant</dt><dd>Available only in C++20 or older. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00216">216</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="corefn_8h_source.html#l00220">220</a> of file <a class="el" href="corefn_8h_source.html">corefn.h</a>.</p>
 
 </div>
 </div>
@@ -797,7 +801,7 @@ template&lt;typename... Args&gt; </div>
 <p>Project metadata object, available at compile-time. </p>
 <dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug</a></b></dt><dd>When building via Conan, this variable can be defined with default values instead of actual version and target name. This will be fixed in the future releases. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="export_8h_source.html#l00149">149</a> of file <a class="el" href="export_8h_source.html">export.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="export_8h_source.html#l00153">153</a> of file <a class="el" href="export_8h_source.html">export.h</a>.</p>
 
 </div>
 </div>
@@ -833,7 +837,7 @@ template&lt;typename U , typename... T&gt; </div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structfloppy_1_1one__of.html" title="Checks if type is one of the given types.">one_of</a> </dd>
 <dd>
-<a class="el" href="conceptfloppy_1_1concepts_1_1any__of.html" title="Satisfied if T and any of given U are the same type.">floppy::concepts::any_of</a> </dd></dl>
+floppy::concepts::any_of </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="type__traits_8h_source.html#l00058">58</a> of file <a class="el" href="type__traits_8h_source.html">type_traits.h</a>.</p>
 

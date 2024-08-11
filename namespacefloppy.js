@@ -1,6 +1,5 @@
 var namespacefloppy =
 [
-    [ "concepts", "namespacefloppy_1_1concepts.html", "namespacefloppy_1_1concepts" ],
     [ "detail", "namespacefloppy_1_1detail.html", "namespacefloppy_1_1detail" ],
     [ "detail_", "namespacefloppy_1_1types_1_1detail__.html", null ],
     [ "exceptions", "namespacefloppy_1_1exceptions.html", "namespacefloppy_1_1exceptions" ],
@@ -34,7 +33,13 @@ var namespacefloppy =
     ] ],
     [ "serialization", "namespacefloppy_1_1serialization.html", "namespacefloppy_1_1serialization" ],
     [ "stacktrace", "namespacefloppy_1_1stacktrace.html", "namespacefloppy_1_1stacktrace" ],
-    [ "string_utils", "namespacefloppy_1_1string__utils.html", "namespacefloppy_1_1string__utils" ],
+    [ "string_utils", "namespacefloppy_1_1string__utils.html", [
+      [ "is_digit", "group__string__utils.html#ga327b624b2cd24b94e70d749258c228b4", null ],
+      [ "to_uppercase", "group__string__utils.html#ga084993186eb3d3ac0fd1b8b715461cee", null ],
+      [ "to_uppercase", "group__string__utils.html#gaee15293ec79d09adc8ddc94015ff4eee", null ],
+      [ "to_lowercase", "group__string__utils.html#gaade13aa1d37f37d5437c472d17a1f464", null ],
+      [ "to_lowercase", "group__string__utils.html#ga23090a5f59c4a96e2ee3ca1be03c70ed", null ]
+    ] ],
     [ "types", "namespacefloppy_1_1types.html", "namespacefloppy_1_1types" ],
     [ "application_dirs", "classfloppy_1_1application__dirs.html", "classfloppy_1_1application__dirs" ],
     [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],

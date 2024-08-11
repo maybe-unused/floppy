@@ -137,8 +137,6 @@ $(function(){initNavTree('namespacefloppy.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacefloppy_1_1concepts" id="r_namespacefloppy_1_1concepts"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefloppy_1_1concepts.html">concepts</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacefloppy_1_1detail" id="r_namespacefloppy_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefloppy_1_1detail.html">detail</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacefloppy_1_1types_1_1detail__" id="r_namespacefloppy_1_1types_1_1detail__"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefloppy_1_1types_1_1detail__.html">detail_</a></td></tr>
@@ -249,7 +247,7 @@ Typedefs</h2></td></tr>
 <tr class="memitem:gabb6b740122d8db472da8ccec3de5ec9c" id="r_gabb6b740122d8db472da8ccec3de5ec9c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gabb6b740122d8db472da8ccec3de5ec9c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__helpers.html#gabb6b740122d8db472da8ccec3de5ec9c">plain_type_t</a> = typename <a class="el" href="group__helpers.html#structfloppy_1_1plain__type">plain_type</a>&lt;T&gt;::type</td></tr>
 <tr class="separator:gabb6b740122d8db472da8ccec3de5ec9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa202473f296b2492d9239773369181af" id="r_gaa202473f296b2492d9239773369181af"><td class="memTemplParams" colspan="2">template&lt;std::destructible T&gt; </td></tr>
+<tr class="memitem:gaa202473f296b2492d9239773369181af" id="r_gaa202473f296b2492d9239773369181af"><td class="memTemplParams" colspan="2">template&lt;__wrap_concept__(std::destructible) T&gt; </td></tr>
 <tr class="memitem:gaa202473f296b2492d9239773369181af"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option</a> = std::optional&lt;T&gt;</td></tr>
 <tr class="separator:gaa202473f296b2492d9239773369181af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae7b8a377a5b8651ef68a50f8e97bf706" id="r_gae7b8a377a5b8651ef68a50f8e97bf706"><td class="memTemplParams" colspan="2">template&lt;typename T  = void&gt; </td></tr>
@@ -295,7 +293,7 @@ Functions</h2></td></tr>
 <tr class="separator:a8095527b13c77fa9a8d546682f7aaaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6a778dde2b29125b63c1101d454f3e76" id="r_ga6a778dde2b29125b63c1101d454f3e76"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__helpers.html#ga6a778dde2b29125b63c1101d454f3e76">panic</a> (std::string_view message, <a class="el" href="structfloppy_1_1source__location.html">source_location</a> location=<a class="el" href="structfloppy_1_1source__location.html#a36a5ca92c062eb63ad192282858f1ab3">source_location::current</a>()) -&gt; void</td></tr>
 <tr class="separator:ga6a778dde2b29125b63c1101d454f3e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342" id="r_ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplParams" colspan="2">template&lt;concepts::num T, concepts::num U&gt; </td></tr>
+<tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342" id="r_ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplParams" colspan="2">template&lt;__wrap_concept__(concepts::num) T, __wrap_concept__(concepts::num) U&gt; </td></tr>
 <tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__helpers.html#ga0bbd17556e1675c4a05316d9f6743342">narrow_cast</a> (U &amp;&amp;u) noexcept -&gt; T</td></tr>
 <tr class="separator:ga0bbd17556e1675c4a05316d9f6743342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadb4f89dd7e6a414cd721976e1c318d50" id="r_gadb4f89dd7e6a414cd721976e1c318d50"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
@@ -373,19 +371,19 @@ requires (std::is_enum_v&lt;T&gt; and requires(T e) { enable_bitwise_not(e); } o
 <tr class="separator:ad9c6fcc17a9686e7806ab6f404c3009e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a514cd59529b04e6124eca2e8fbb5a297" id="r_a514cd59529b04e6124eca2e8fbb5a297"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefloppy_1_1literals.html#a514cd59529b04e6124eca2e8fbb5a297">operator&quot;&quot;_pvoid</a> (unsigned long long value) -&gt; void *</td></tr>
 <tr class="separator:a514cd59529b04e6124eca2e8fbb5a297"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga327b624b2cd24b94e70d749258c228b4" id="r_ga327b624b2cd24b94e70d749258c228b4"><td class="memTemplParams" colspan="2">template&lt;char_type C&gt; </td></tr>
+<tr class="memitem:ga327b624b2cd24b94e70d749258c228b4" id="r_ga327b624b2cd24b94e70d749258c228b4"><td class="memTemplParams" colspan="2">template&lt;__wrap_concept__(char_type) C&gt; </td></tr>
 <tr class="memitem:ga327b624b2cd24b94e70d749258c228b4"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga327b624b2cd24b94e70d749258c228b4">is_digit</a> (C c) -&gt; bool</td></tr>
 <tr class="separator:ga327b624b2cd24b94e70d749258c228b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga084993186eb3d3ac0fd1b8b715461cee" id="r_ga084993186eb3d3ac0fd1b8b715461cee"><td class="memTemplParams" colspan="2">template&lt;char_type C&gt; </td></tr>
+<tr class="memitem:ga084993186eb3d3ac0fd1b8b715461cee" id="r_ga084993186eb3d3ac0fd1b8b715461cee"><td class="memTemplParams" colspan="2">template&lt;__wrap_concept__(char_type) C&gt; </td></tr>
 <tr class="memitem:ga084993186eb3d3ac0fd1b8b715461cee"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga084993186eb3d3ac0fd1b8b715461cee">to_uppercase</a> (C c) -&gt; C</td></tr>
 <tr class="separator:ga084993186eb3d3ac0fd1b8b715461cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaee15293ec79d09adc8ddc94015ff4eee" id="r_gaee15293ec79d09adc8ddc94015ff4eee"><td class="memTemplParams" colspan="2">template&lt;char_type C&gt; </td></tr>
+<tr class="memitem:gaee15293ec79d09adc8ddc94015ff4eee" id="r_gaee15293ec79d09adc8ddc94015ff4eee"><td class="memTemplParams" colspan="2">template&lt;__wrap_concept__(char_type) C&gt; </td></tr>
 <tr class="memitem:gaee15293ec79d09adc8ddc94015ff4eee"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__string__utils.html#gaee15293ec79d09adc8ddc94015ff4eee">to_uppercase</a> (std::basic_string_view&lt; C &gt; str) -&gt; std::basic_string&lt; C &gt;</td></tr>
 <tr class="separator:gaee15293ec79d09adc8ddc94015ff4eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaade13aa1d37f37d5437c472d17a1f464" id="r_gaade13aa1d37f37d5437c472d17a1f464"><td class="memTemplParams" colspan="2">template&lt;char_type C&gt; </td></tr>
+<tr class="memitem:gaade13aa1d37f37d5437c472d17a1f464" id="r_gaade13aa1d37f37d5437c472d17a1f464"><td class="memTemplParams" colspan="2">template&lt;__wrap_concept__(char_type) C&gt; </td></tr>
 <tr class="memitem:gaade13aa1d37f37d5437c472d17a1f464"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__string__utils.html#gaade13aa1d37f37d5437c472d17a1f464">to_lowercase</a> (C c) -&gt; C</td></tr>
 <tr class="separator:gaade13aa1d37f37d5437c472d17a1f464"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga23090a5f59c4a96e2ee3ca1be03c70ed" id="r_ga23090a5f59c4a96e2ee3ca1be03c70ed"><td class="memTemplParams" colspan="2">template&lt;char_type C&gt; </td></tr>
+<tr class="memitem:ga23090a5f59c4a96e2ee3ca1be03c70ed" id="r_ga23090a5f59c4a96e2ee3ca1be03c70ed"><td class="memTemplParams" colspan="2">template&lt;__wrap_concept__(char_type) C&gt; </td></tr>
 <tr class="memitem:ga23090a5f59c4a96e2ee3ca1be03c70ed"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga23090a5f59c4a96e2ee3ca1be03c70ed">to_lowercase</a> (std::basic_string_view&lt; C &gt; str) -&gt; std::basic_string&lt; C &gt;</td></tr>
 <tr class="separator:ga23090a5f59c4a96e2ee3ca1be03c70ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa97f40abb19a127cfa5eaaa537369f81" id="r_gaa97f40abb19a127cfa5eaaa537369f81"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
@@ -466,14 +464,14 @@ template&lt;class E , class T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structfloppy_1_1source__location.html">source_location</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>loc</em></span>&#160;) -&gt; std::basic_ostream&lt;E, T&gt;&amp;
-    </td>
+  </td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Stream adaptor for <a class="el" href="structfloppy_1_1source__location.html" title="Provides information about the location of the current source file.">source_location</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00240">240</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00233">233</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -504,7 +502,7 @@ template&lt;class E , class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00255">255</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00247">247</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -535,7 +533,7 @@ template&lt;class E , class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00262">262</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00254">254</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -747,8 +745,9 @@ requires std::is_same_v&lt;decltype(std::declval&lt;T const&amp;&gt;().to_string
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacefloppy_1_1detail.html#a5d45337f1be6120ab3a8e3a5fcb25d3c" title="Casts types which derives from formattable_base&lt;C&gt; to string.">detail::str_cast</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo</a></b></dt><dd>C++17 support </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00244">244</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00248">248</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
 
 </div>
 </div>
@@ -779,8 +778,9 @@ requires std::is_same_v&lt;decltype(std::to_string(std::declval&lt;T&amp;&gt;())
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacefloppy_1_1detail.html#a5d45337f1be6120ab3a8e3a5fcb25d3c" title="Casts types which derives from formattable_base&lt;C&gt; to string.">detail::str_cast</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo</a></b></dt><dd>C++17 support </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00254">254</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="traits_8h_source.html#l00259">259</a> of file <a class="el" href="traits_8h_source.html">traits.h</a>.</p>
 
 </div>
 </div>

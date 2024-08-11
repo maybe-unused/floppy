@@ -20,7 +20,7 @@ var searchData=
   ['str_5fto_5frgb_17',['str_to_rgb',['../namespacefloppy_1_1gfx_1_1detail.html#a7bc9d70b70ca084ef8a9bddb3c76443e',1,'floppy::gfx::detail']]],
   ['str_5fto_5frgba_18',['str_to_rgba',['../namespacefloppy_1_1gfx_1_1detail.html#a902fdbfb01ae3a62fbae64bdd83baa4a',1,'floppy::gfx::detail']]],
   ['string_5fcast_19',['string_cast',['../namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9',1,'floppy::string_cast(T const &amp;t) -&gt; std::string'],['../namespacefloppy.html#ac931da5028dd2811b5d0e93caf0f23d4',1,'floppy::string_cast(T const &amp;t) -&gt; std::string']]],
-  ['strong_5fcompare_20',['strong_compare',['../group__calc.html#ga000c8ac590dc1840dda974d4529f08b4',1,'floppy::math']]],
+  ['strong_5fcompare_20',['strong_compare',['../group__calc.html#ga8e70b7eea94377653661bc2eb8981dab',1,'floppy::math']]],
   ['swap_21',['swap',['../namespacestd.html#a18abfca03e51fdc5c93a74f5c81a8b07',1,'std']]],
   ['swap_5fendian_22',['swap_endian',['../classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32',1,'floppy::platform']]]
 ];

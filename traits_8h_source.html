@@ -243,81 +243,83 @@ $(function(){initNavTree('traits_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    };</div>
 </div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> C&gt;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1detail_1_1derived__from__formattable.html">  205</a></span>    <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1detail_1_1derived__from__formattable.html">derived_from_formattable</a> = std::is_base_of_v&lt;formattable_base&lt;C&gt;, T&gt;;</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  } <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">    #if defined(FL_CXX20) || defined(FL_DOC)</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> C&gt;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="conceptfloppy_1_1detail_1_1derived__from__formattable.html">  207</a></span>    <span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1detail_1_1derived__from__formattable.html">derived_from_formattable</a> = std::is_base_of_v&lt;formattable_base&lt;C&gt;, T&gt;;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">    #endif </span><span class="comment">// C++20</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  } <span class="comment">// namespace detail</span></div>
 </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> C&gt;</div>
-<div class="foldopen" id="foldopen00216" data-start="{" data-end="};">
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="structfloppy_1_1formattable.html">  216</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structfloppy_1_1formattable.html">formattable</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfloppy_1_1detail_1_1formattable__base.html">detail::formattable_base</a>&lt;C&gt;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> C&gt;</div>
 <div class="foldopen" id="foldopen00219" data-start="{" data-end="};">
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="structfloppy_1_1formattable.html#a5033d519861ee33fdd6ab38f88699ae2">  219</a></span>    <span class="keyword">friend</span> <span class="keyword">auto</span> <a class="code hl_friend" href="structfloppy_1_1formattable.html#a5033d519861ee33fdd6ab38f88699ae2">operator&lt;&lt;</a>(std::basic_ostream&lt;C&gt;&amp; os, T <span class="keyword">const</span>&amp; t) -&gt; std::basic_ostream&lt;C&gt;&amp; {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      <span class="keywordflow">return</span> os &lt;&lt; t.to_string();</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    }</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="structfloppy_1_1formattable.html">  219</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structfloppy_1_1formattable.html">formattable</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfloppy_1_1detail_1_1formattable__base.html">detail::formattable_base</a>&lt;C&gt;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  {</div>
+<div class="foldopen" id="foldopen00222" data-start="{" data-end="};">
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="structfloppy_1_1formattable.html#a5033d519861ee33fdd6ab38f88699ae2">  222</a></span>    <span class="keyword">friend</span> <span class="keyword">auto</span> <a class="code hl_friend" href="structfloppy_1_1formattable.html#a5033d519861ee33fdd6ab38f88699ae2">operator&lt;&lt;</a>(std::basic_ostream&lt;C&gt;&amp; os, T <span class="keyword">const</span>&amp; t) -&gt; std::basic_ostream&lt;C&gt;&amp; {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      <span class="keywordflow">return</span> os &lt;&lt; t.to_string();</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    }</div>
 </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  };</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  };</div>
 </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>} <span class="comment">// namespace floppy</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy.html">floppy</a></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>{</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  <span class="keyword">namespace </span>detail</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  {</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> C, floppy::detail::derived_from_formattable&lt;C&gt; T&gt;</div>
-<div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1detail.html#a5d45337f1be6120ab3a8e3a5fcb25d3c">  234</a></span>    [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="namespacefloppy_1_1detail.html#a5d45337f1be6120ab3a8e3a5fcb25d3c">str_cast</a>(T <span class="keyword">const</span>&amp; t) <span class="keyword">noexcept</span> -&gt; std::string {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::string<span class="keyword">&gt;</span>(t);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>} <span class="comment">// namespace floppy</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy.html">floppy</a></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>{</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keyword">namespace </span>detail</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> C, __wrap_concept__(floppy::detail::derived_from_formattable&lt;C&gt;) T&gt;</div>
+<div class="foldopen" id="foldopen00237" data-start="{" data-end="}">
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1detail.html#a5d45337f1be6120ab3a8e3a5fcb25d3c">  237</a></span>    [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="namespacefloppy_1_1detail.html#a5d45337f1be6120ab3a8e3a5fcb25d3c">str_cast</a>(T <span class="keyword">const</span>&amp; t) <span class="keyword">noexcept</span> -&gt; std::string {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::string<span class="keyword">&gt;</span>(t);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    }</div>
 </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  } <span class="comment">// namespace detail</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00244" data-start="{" data-end="}">
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9">  244</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9">string_cast</a>(T <span class="keyword">const</span>&amp; t) -&gt; std::string</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <span class="keyword">requires</span> std::is_same_v&lt;decltype(std::declval&lt;T const&amp;&gt;().to_string()), std::string&gt; {</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">return</span> t.to_string();</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  }</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  } <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00248" data-start="{" data-end="}">
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9">  248</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9">string_cast</a>(T <span class="keyword">const</span>&amp; t) -&gt; std::string</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  <span class="keyword">requires</span> std::is_same_v&lt;decltype(std::declval&lt;T const&amp;&gt;().to_string()), std::string&gt; {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordflow">return</span> t.to_string();</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  }</div>
 </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00254" data-start="{" data-end="}">
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="namespacefloppy.html#ac931da5028dd2811b5d0e93caf0f23d4">  254</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9">string_cast</a>(T <span class="keyword">const</span>&amp; t) -&gt; std::string</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <span class="keyword">requires</span> std::is_same_v&lt;decltype(std::to_string(std::declval&lt;T&amp;&gt;())), std::string&gt; {</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">return</span> std::to_string(t);</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00259" data-start="{" data-end="}">
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="namespacefloppy.html#ac931da5028dd2811b5d0e93caf0f23d4">  259</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9">string_cast</a>(T <span class="keyword">const</span>&amp; t) -&gt; std::string</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  <span class="keyword">requires</span> std::is_same_v&lt;decltype(std::to_string(std::declval&lt;T&amp;&gt;())), std::string&gt; {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">return</span> std::to_string(t);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  }</div>
 </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>} <span class="comment">// namespace floppy</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="keyword">template</span> &lt;floppy::detail::derived_from_formattable&lt;<span class="keywordtype">char</span>&gt; T&gt;</div>
-<div class="foldopen" id="foldopen00284" data-start="{" data-end="};">
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01T_01_4.html">  284</a></span><span class="keyword">struct </span>[[maybe_unused]] fmt::<a class="code hl_struct" href="structfmt_1_1formatter.html">formatter</a>&lt;T&gt;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>{</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ParseContext&gt;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714">  288</a></span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714">parse</a>(ParseContext&amp; ctx)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ctx.begin(); }</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatContext&gt;</div>
-<div class="foldopen" id="foldopen00292" data-start="{" data-end="}">
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01T_01_4.html#afd2f914952cb4c8eb4d0ea9df0c77f4a">  292</a></span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfmt_1_1formatter_3_01T_01_4.html#afd2f914952cb4c8eb4d0ea9df0c77f4a">format</a>(T <span class="keyword">const</span>&amp; c, FormatContext&amp; ctx)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, c.to_string());</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>} <span class="comment">// namespace floppy</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="keyword">template</span> &lt;__wrap_concept__(floppy::detail::derived_from_formattable&lt;<span class="keywordtype">char</span>&gt;) T&gt;</div>
+<div class="foldopen" id="foldopen00290" data-start="{" data-end="};">
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01T_01_4.html">  290</a></span><span class="keyword">struct </span>[[maybe_unused]] fmt::<a class="code hl_struct" href="structfmt_1_1formatter.html">formatter</a>&lt;T&gt;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>{</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ParseContext&gt;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714">  294</a></span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714">parse</a>(ParseContext&amp; ctx)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ctx.begin(); }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatContext&gt;</div>
+<div class="foldopen" id="foldopen00298" data-start="{" data-end="}">
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01T_01_4.html#afd2f914952cb4c8eb4d0ea9df0c77f4a">  298</a></span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structfmt_1_1formatter_3_01T_01_4.html#afd2f914952cb4c8eb4d0ea9df0c77f4a">format</a>(T <span class="keyword">const</span>&amp; c, FormatContext&amp; ctx)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, c.to_string());</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  }</div>
 </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>};</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>};</div>
 </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
 <div class="ttc" id="aclassfloppy_1_1propagate__const_html"><div class="ttname"><a href="classfloppy_1_1propagate__const.html">floppy::propagate_const</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">traits.h:11</a></div></div>
-<div class="ttc" id="aconceptfloppy_1_1detail_1_1derived__from__formattable_html"><div class="ttname"><a href="conceptfloppy_1_1detail_1_1derived__from__formattable.html">floppy::detail::derived_from_formattable</a></div><div class="ttdoc">Check if T is derived from formattable_base&lt;C&gt;.</div><div class="ttdef"><b>Definition</b> <a href="#l00205">traits.h:205</a></div></div>
-<div class="ttc" id="anamespacefloppy_1_1detail_html_a5d45337f1be6120ab3a8e3a5fcb25d3c"><div class="ttname"><a href="namespacefloppy_1_1detail.html#a5d45337f1be6120ab3a8e3a5fcb25d3c">floppy::detail::str_cast</a></div><div class="ttdeci">auto str_cast(T const &amp;t) noexcept -&gt; std::string</div><div class="ttdoc">Casts types which derives from formattable_base&lt;C&gt; to string.</div><div class="ttdef"><b>Definition</b> <a href="#l00234">traits.h:234</a></div></div>
+<div class="ttc" id="aconceptfloppy_1_1detail_1_1derived__from__formattable_html"><div class="ttname"><a href="conceptfloppy_1_1detail_1_1derived__from__formattable.html">floppy::detail::derived_from_formattable</a></div><div class="ttdoc">Check if T is derived from formattable_base&lt;C&gt;.</div><div class="ttdef"><b>Definition</b> <a href="#l00207">traits.h:207</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1detail_html_a5d45337f1be6120ab3a8e3a5fcb25d3c"><div class="ttname"><a href="namespacefloppy_1_1detail.html#a5d45337f1be6120ab3a8e3a5fcb25d3c">floppy::detail::str_cast</a></div><div class="ttdeci">auto str_cast(T const &amp;t) noexcept -&gt; std::string</div><div class="ttdoc">Casts types which derives from formattable_base&lt;C&gt; to string.</div><div class="ttdef"><b>Definition</b> <a href="#l00237">traits.h:237</a></div></div>
 <div class="ttc" id="anamespacefloppy_html"><div class="ttname"><a href="namespacefloppy.html">floppy</a></div><div class="ttdoc">Main namespace for the library.</div><div class="ttdef"><b>Definition</b> <a href="demangle_8h_source.html#l00009">demangle.h:10</a></div></div>
-<div class="ttc" id="anamespacefloppy_html_a3b4c72879a9dbdecb0d928464fbba5f9"><div class="ttname"><a href="namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9">floppy::string_cast</a></div><div class="ttdeci">auto string_cast(T const &amp;t) -&gt; std::string</div><div class="ttdoc">Casts type to string.</div><div class="ttdef"><b>Definition</b> <a href="#l00244">traits.h:244</a></div></div>
+<div class="ttc" id="anamespacefloppy_html_a3b4c72879a9dbdecb0d928464fbba5f9"><div class="ttname"><a href="namespacefloppy.html#a3b4c72879a9dbdecb0d928464fbba5f9">floppy::string_cast</a></div><div class="ttdeci">auto string_cast(T const &amp;t) -&gt; std::string</div><div class="ttdoc">Casts type to string.</div><div class="ttdef"><b>Definition</b> <a href="#l00248">traits.h:248</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 <div class="ttc" id="astructfloppy_1_1detail_1_1formattable__base_html"><div class="ttname"><a href="structfloppy_1_1detail_1_1formattable__base.html">floppy::detail::formattable_base</a></div><div class="ttdoc">Interface, providing to_string method.</div><div class="ttdef"><b>Definition</b> <a href="#l00189">traits.h:190</a></div></div>
 <div class="ttc" id="astructfloppy_1_1detail_1_1formattable__base_html_a6feb227ebbbc81da11e39f13b155eca8"><div class="ttname"><a href="structfloppy_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8">floppy::detail::formattable_base::to_string</a></div><div class="ttdeci">virtual auto to_string() const -&gt; std::basic_string&lt; C &gt;=0</div><div class="ttdoc">Returns string representation of the object.</div></div>
-<div class="ttc" id="astructfloppy_1_1formattable_html"><div class="ttname"><a href="structfloppy_1_1formattable.html">floppy::formattable</a></div><div class="ttdoc">Allows type to be converted to string and printed via standard streams or fmt.</div><div class="ttdef"><b>Definition</b> <a href="#l00216">traits.h:217</a></div></div>
-<div class="ttc" id="astructfloppy_1_1formattable_html_a5033d519861ee33fdd6ab38f88699ae2"><div class="ttname"><a href="structfloppy_1_1formattable.html#a5033d519861ee33fdd6ab38f88699ae2">floppy::formattable::operator&lt;&lt;</a></div><div class="ttdeci">friend auto operator&lt;&lt;(std::basic_ostream&lt; C &gt; &amp;os, T const &amp;t) -&gt; std::basic_ostream&lt; C &gt; &amp;</div><div class="ttdoc">Writes string representation of the object to the stream.</div><div class="ttdef"><b>Definition</b> <a href="#l00219">traits.h:219</a></div></div>
+<div class="ttc" id="astructfloppy_1_1formattable_html"><div class="ttname"><a href="structfloppy_1_1formattable.html">floppy::formattable</a></div><div class="ttdoc">Allows type to be converted to string and printed via standard streams or fmt.</div><div class="ttdef"><b>Definition</b> <a href="#l00219">traits.h:220</a></div></div>
+<div class="ttc" id="astructfloppy_1_1formattable_html_a5033d519861ee33fdd6ab38f88699ae2"><div class="ttname"><a href="structfloppy_1_1formattable.html#a5033d519861ee33fdd6ab38f88699ae2">floppy::formattable::operator&lt;&lt;</a></div><div class="ttdeci">friend auto operator&lt;&lt;(std::basic_ostream&lt; C &gt; &amp;os, T const &amp;t) -&gt; std::basic_ostream&lt; C &gt; &amp;</div><div class="ttdoc">Writes string representation of the object to the stream.</div><div class="ttdef"><b>Definition</b> <a href="#l00222">traits.h:222</a></div></div>
 <div class="ttc" id="astructfloppy_1_1non__copyable_html"><div class="ttname"><a href="structfloppy_1_1non__copyable.html">floppy::non_copyable</a></div><div class="ttdoc">Disallow copy operations for a type.</div><div class="ttdef"><b>Definition</b> <a href="#l00060">traits.h:61</a></div></div>
 <div class="ttc" id="astructfloppy_1_1non__movable_html"><div class="ttname"><a href="structfloppy_1_1non__movable.html">floppy::non_movable</a></div><div class="ttdoc">Disallow move operations for a type.</div><div class="ttdef"><b>Definition</b> <a href="#l00077">traits.h:78</a></div></div>
 <div class="ttc" id="astructfloppy_1_1pin_html"><div class="ttname"><a href="structfloppy_1_1pin.html">floppy::pin</a></div><div class="ttdoc">Disallow copy and move operations for a type.</div><div class="ttdef"><b>Definition</b> <a href="#l00094">traits.h:94</a></div></div>
@@ -326,8 +328,8 @@ $(function(){initNavTree('traits_8h_source.html',''); initResizable(); });
 <div class="ttc" id="astructfloppy_1_1singleton_html_a3668e49f287d02953577eeb995ab64e2"><div class="ttname"><a href="structfloppy_1_1singleton.html#a3668e49f287d02953577eeb995ab64e2">floppy::singleton::ptr</a></div><div class="ttdeci">static auto ptr() noexcept -&gt; T const *</div><div class="ttdoc">Returns pointer to the singleton instance.</div><div class="ttdef"><b>Definition</b> <a href="#l00138">traits.h:138</a></div></div>
 <div class="ttc" id="astructfloppy_1_1singleton_html_af0163e5dd2cfaabe6e1126542874859a"><div class="ttname"><a href="structfloppy_1_1singleton.html#af0163e5dd2cfaabe6e1126542874859a">floppy::singleton::ref</a></div><div class="ttdeci">static auto ref() noexcept -&gt; T const &amp;</div><div class="ttdoc">Returns constant reference to the singleton instance.</div><div class="ttdef"><b>Definition</b> <a href="#l00143">traits.h:143</a></div></div>
 <div class="ttc" id="astructfloppy_1_1singleton_html_afce897b3503cc4e00c72624f156c04d2"><div class="ttname"><a href="structfloppy_1_1singleton.html#afce897b3503cc4e00c72624f156c04d2">floppy::singleton::ptr_mut</a></div><div class="ttdeci">static auto ptr_mut() noexcept -&gt; T *</div><div class="ttdoc">Returns mutable pointer to the singleton instance.</div><div class="ttdef"><b>Definition</b> <a href="#l00130">traits.h:130</a></div></div>
-<div class="ttc" id="astructfmt_1_1formatter_3_01T_01_4_html_adf66f4430a4e5f0c315278d657b83714"><div class="ttname"><a href="structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714">fmt::formatter&lt; T &gt;::parse</a></div><div class="ttdeci">constexpr auto parse(ParseContext &amp;ctx) const</div><div class="ttdoc">Required by fmt.</div><div class="ttdef"><b>Definition</b> <a href="#l00288">traits.h:288</a></div></div>
-<div class="ttc" id="astructfmt_1_1formatter_3_01T_01_4_html_afd2f914952cb4c8eb4d0ea9df0c77f4a"><div class="ttname"><a href="structfmt_1_1formatter_3_01T_01_4.html#afd2f914952cb4c8eb4d0ea9df0c77f4a">fmt::formatter&lt; T &gt;::format</a></div><div class="ttdeci">constexpr auto format(T const &amp;c, FormatContext &amp;ctx) const</div><div class="ttdoc">Required by fmt.</div><div class="ttdef"><b>Definition</b> <a href="#l00292">traits.h:292</a></div></div>
+<div class="ttc" id="astructfmt_1_1formatter_3_01T_01_4_html_adf66f4430a4e5f0c315278d657b83714"><div class="ttname"><a href="structfmt_1_1formatter_3_01T_01_4.html#adf66f4430a4e5f0c315278d657b83714">fmt::formatter&lt; T &gt;::parse</a></div><div class="ttdeci">constexpr auto parse(ParseContext &amp;ctx) const</div><div class="ttdoc">Required by fmt.</div><div class="ttdef"><b>Definition</b> <a href="#l00294">traits.h:294</a></div></div>
+<div class="ttc" id="astructfmt_1_1formatter_3_01T_01_4_html_afd2f914952cb4c8eb4d0ea9df0c77f4a"><div class="ttname"><a href="structfmt_1_1formatter_3_01T_01_4.html#afd2f914952cb4c8eb4d0ea9df0c77f4a">fmt::formatter&lt; T &gt;::format</a></div><div class="ttdeci">constexpr auto format(T const &amp;c, FormatContext &amp;ctx) const</div><div class="ttdoc">Required by fmt.</div><div class="ttdef"><b>Definition</b> <a href="#l00298">traits.h:298</a></div></div>
 <div class="ttc" id="astructfmt_1_1formatter_html"><div class="ttname"><a href="structfmt_1_1formatter.html">formatter</a></div><div class="ttdoc">Formatter for types which can be easily converted to string.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

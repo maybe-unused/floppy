@@ -184,7 +184,7 @@ requires (not view&lt;C&gt;)</div>
 <dd>
 <a class="el" href="#ga67cbb0e75a528381cac61bff759a9a7f" title="The overloads of the range conversion function construct a new non-view object from a source range.">to</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00055">55</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00051">51</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +211,7 @@ requires (not view&lt;C&gt;)</div>
 <dd>
 <a class="el" href="#ga8028c6dff3e217c133bb0dfda2c25ba4" title="The overloads of the range conversion function construct a new non-view object from a source range.">collect</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00063">63</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00059">59</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -248,10 +248,10 @@ requires (not view&lt;C&gt;)</div>
 <div class="line">    <span class="keywordflow">default</span>: <a class="code hl_function" href="#gabb16b244632f4ab5f6fd117e5a75473e">fl::unreachable</a>();</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__backports_html_gabb16b244632f4ab5f6fd117e5a75473e"><div class="ttname"><a href="#gabb16b244632f4ab5f6fd117e5a75473e">floppy::unreachable</a></div><div class="ttdeci">auto unreachable() -&gt; void</div><div class="ttdoc">Invokes undefined behavior.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00084">backports.h:84</a></div></div>
+<div class="ttc" id="agroup__backports_html_gabb16b244632f4ab5f6fd117e5a75473e"><div class="ttname"><a href="#gabb16b244632f4ab5f6fd117e5a75473e">floppy::unreachable</a></div><div class="ttdeci">auto unreachable() -&gt; void</div><div class="ttdoc">Invokes undefined behavior.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00080">backports.h:80</a></div></div>
 </div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a href="https://en.cppreference.com/w/cpp/utility/unreachable">https://en.cppreference.com/w/cpp/utility/unreachable</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00084">84</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00080">80</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -290,7 +290,7 @@ template&lt;concepts::enum_ T&gt; </div>
 <div class="line">  fmt::print(<span class="stringliteral">&quot;c underlying type: {}, value: {}\n&quot;</span>, fl::rtti::type_name&lt;<span class="keyword">decltype</span>(<a class="code hl_function" href="#ga0424b6d00fac262e879df80e00da46b6">fl::to_underlying</a>(C::val))&gt;(), <a class="code hl_function" href="#ga0424b6d00fac262e879df80e00da46b6">fl::to_underlying</a>(C::val));</div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__backports_html_ga0424b6d00fac262e879df80e00da46b6"><div class="ttname"><a href="#ga0424b6d00fac262e879df80e00da46b6">floppy::to_underlying</a></div><div class="ttdeci">constexpr auto to_underlying(T t) noexcept -&gt; std::underlying_type_t&lt; T &gt;</div><div class="ttdoc">Converts enum type to its underlying type.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00120">backports.h:120</a></div></div>
+<div class="ttc" id="agroup__backports_html_ga0424b6d00fac262e879df80e00da46b6"><div class="ttname"><a href="#ga0424b6d00fac262e879df80e00da46b6">floppy::to_underlying</a></div><div class="ttdeci">constexpr auto to_underlying(T t) noexcept -&gt; std::underlying_type_t&lt; T &gt;</div><div class="ttdoc">Converts enum type to its underlying type.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00116">backports.h:116</a></div></div>
 </div><!-- fragment --><p>Output: </p><div class="fragment"><div class="line">a underlying type: char, value: 0</div>
 <div class="line">b underlying type: int, value: 0</div>
 <div class="line">c underlying type: short, value: 0</div>
@@ -309,7 +309,7 @@ template&lt;concepts::enum_ T&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Underlying value of the enum </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://en.cppreference.com/w/cpp/utility/to_underlying">https://en.cppreference.com/w/cpp/utility/to_underlying</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00120">120</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00116">116</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>

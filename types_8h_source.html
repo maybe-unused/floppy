@@ -138,66 +138,67 @@ $(function(){initNavTree('types_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;tl/expected.hpp&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;floppy/detail/stdint.h&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy.html">floppy</a> <span class="comment">// NOLINT(*-concat-nested-namespaces)</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keyword">inline</span> <span class="keyword">namespace </span>types</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">template</span> &lt;std::destructible T&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="group__aliases.html#gaa202473f296b2492d9239773369181af">   33</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option</a> = std::optional&lt;T&gt;;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types_1_1detail__.html">   36</a></span>    <span class="keyword">namespace </span>detail_</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="keyword">using </span>tl::expected;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="keyword">using </span>tl::unexpected;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    } <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;floppy/detail/cxx_ver.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;floppy/detail/stdint.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy.html">floppy</a> <span class="comment">// NOLINT(*-concat-nested-namespaces)</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keyword">inline</span> <span class="keyword">namespace </span>types</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">template</span> &lt;__wrap_concept__(std::destructible) T&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="group__aliases.html#gaa202473f296b2492d9239773369181af">   34</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option</a> = std::optional&lt;T&gt;;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1types_1_1detail__.html">   37</a></span>    <span class="keyword">namespace </span>detail_</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="keyword">using </span>tl::expected;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keyword">using </span>tl::unexpected;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    } <span class="comment">// namespace detail_</span></div>
 </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = <span class="keywordtype">void</span>&gt;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="group__aliases.html#gae7b8a377a5b8651ef68a50f8e97bf706">   69</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="group__aliases.html#gae7b8a377a5b8651ef68a50f8e97bf706">result</a> = detail_::expected&lt;T, std::string&gt;;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">static_assert</span>(std::is_same_v&lt;result&lt;&gt;, detail_::expected&lt;void, std::string&gt;&gt;);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group__aliases.html#gaa97f40abb19a127cfa5eaaa537369f81">   77</a></span>    [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="group__aliases.html#gaa97f40abb19a127cfa5eaaa537369f81">error</a>(std::string_view format, Args&amp;&amp;... args) -&gt; detail_::unexpected&lt;std::decay_t&lt;std::string&gt;&gt; {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keywordflow">return</span> detail_::unexpected&lt;std::decay_t&lt;std::string&gt;&gt;(fmt::format(fmt::runtime(format), std::forward&lt;Args&gt;(args)...));</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = <span class="keywordtype">void</span>&gt;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="group__aliases.html#gae7b8a377a5b8651ef68a50f8e97bf706">   70</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="group__aliases.html#gae7b8a377a5b8651ef68a50f8e97bf706">result</a> = detail_::expected&lt;T, std::string&gt;;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">static_assert</span>(std::is_same_v&lt;result&lt;&gt;, detail_::expected&lt;void, std::string&gt;&gt;);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group__aliases.html#gaa97f40abb19a127cfa5eaaa537369f81">   78</a></span>    [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="group__aliases.html#gaa97f40abb19a127cfa5eaaa537369f81">error</a>(std::string_view format, Args&amp;&amp;... args) -&gt; detail_::unexpected&lt;std::decay_t&lt;std::string&gt;&gt; {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keywordflow">return</span> detail_::unexpected&lt;std::decay_t&lt;std::string&gt;&gt;(fmt::format(fmt::runtime(format), std::forward&lt;Args&gt;(args)...));</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
 </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="group__aliases.html#ga78279b0c21308ae1fc78058b2cf10a0b">   85</a></span>    [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">ok</a>(T&amp;&amp; t) -&gt; detail_::expected&lt;std::decay_t&lt;T&gt;, std::string&gt; {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <span class="keywordflow">return</span> detail_::expected&lt;std::decay_t&lt;T&gt;, std::string&gt;(std::forward&lt;T&gt;(t));</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group__aliases.html#ga78279b0c21308ae1fc78058b2cf10a0b">   86</a></span>    [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">ok</a>(T&amp;&amp; t) -&gt; detail_::expected&lt;std::decay_t&lt;T&gt;, std::string&gt; {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <span class="keywordflow">return</span> detail_::expected&lt;std::decay_t&lt;T&gt;, std::string&gt;(std::forward&lt;T&gt;(t));</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
 </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">   92</a></span>    [[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">ok</a>() -&gt; <a class="code hl_typedef" href="group__aliases.html#gae7b8a377a5b8651ef68a50f8e97bf706">result&lt;&gt;</a> { <span class="keywordflow">return</span> {}; }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">template</span> &lt;std::destructible T&gt;</div>
-<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee">   99</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee">some</a>(T&amp;&amp; t) -&gt; <a class="code hl_typedef" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option&lt;std::decay_t&lt;T&gt;</a>&gt; {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <span class="keywordflow">return</span> <a class="code hl_typedef" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option&lt;std::decay_t&lt;T&gt;</a>&gt;(std::forward&lt;T&gt;(t));</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">   93</a></span>    [[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">ok</a>() -&gt; <a class="code hl_typedef" href="group__aliases.html#gae7b8a377a5b8651ef68a50f8e97bf706">result&lt;&gt;</a> { <span class="keywordflow">return</span> {}; }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">template</span> &lt;std::destructible T&gt;</div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee">  100</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee">some</a>(T&amp;&amp; t) -&gt; <a class="code hl_typedef" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option&lt;std::decay_t&lt;T&gt;</a>&gt; {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <span class="keywordflow">return</span> <a class="code hl_typedef" href="group__aliases.html#gaa202473f296b2492d9239773369181af">option&lt;std::decay_t&lt;T&gt;</a>&gt;(std::forward&lt;T&gt;(t));</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
 </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="group__aliases.html#ga9365b793fe547271e48fa719a7f4854d">  107</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_variable" href="group__aliases.html#ga9365b793fe547271e48fa719a7f4854d">none</a> = std::nullopt;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="group__aliases.html#gae7d120016347ce3f021bc18dcefe2809">  114</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="group__aliases.html#gae7d120016347ce3f021bc18dcefe2809">ref</a> = std::reference_wrapper&lt;T&gt;;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  } <span class="comment">// namespace types</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>} <span class="comment">// namespace floppy</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="ttc" id="agroup__aliases_html_ga3601c452e64e71f68f515fa7e56a47f1"><div class="ttname"><a href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">floppy::types::ok</a></div><div class="ttdeci">auto ok() -&gt; result&lt;&gt;</div><div class="ttdoc">Helper function for result.</div><div class="ttdef"><b>Definition</b> <a href="#l00092">types.h:92</a></div></div>
-<div class="ttc" id="agroup__aliases_html_ga5b788689cac7bc0f3b593775123aaaee"><div class="ttname"><a href="group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee">floppy::types::some</a></div><div class="ttdeci">auto some(T &amp;&amp;t) -&gt; option&lt; std::decay_t&lt; T &gt; &gt;</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="#l00099">types.h:99</a></div></div>
-<div class="ttc" id="agroup__aliases_html_ga9365b793fe547271e48fa719a7f4854d"><div class="ttname"><a href="group__aliases.html#ga9365b793fe547271e48fa719a7f4854d">floppy::types::none</a></div><div class="ttdeci">constexpr auto none</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="#l00107">types.h:107</a></div></div>
-<div class="ttc" id="agroup__aliases_html_gaa202473f296b2492d9239773369181af"><div class="ttname"><a href="group__aliases.html#gaa202473f296b2492d9239773369181af">floppy::types::option</a></div><div class="ttdeci">std::optional&lt; T &gt; option</div><div class="ttdoc">Safe alias for std::optional.</div><div class="ttdef"><b>Definition</b> <a href="#l00033">types.h:33</a></div></div>
-<div class="ttc" id="agroup__aliases_html_gaa97f40abb19a127cfa5eaaa537369f81"><div class="ttname"><a href="group__aliases.html#gaa97f40abb19a127cfa5eaaa537369f81">floppy::types::error</a></div><div class="ttdeci">auto error(std::string_view format, Args &amp;&amp;... args) -&gt; detail_::unexpected&lt; std::decay_t&lt; std::string &gt; &gt;</div><div class="ttdoc">Helper function for result.</div><div class="ttdef"><b>Definition</b> <a href="#l00077">types.h:77</a></div></div>
-<div class="ttc" id="agroup__aliases_html_gae7b8a377a5b8651ef68a50f8e97bf706"><div class="ttname"><a href="group__aliases.html#gae7b8a377a5b8651ef68a50f8e97bf706">floppy::types::result</a></div><div class="ttdeci">detail_::expected&lt; T, std::string &gt; result</div><div class="ttdoc">Expected type with default error type (std::string).</div><div class="ttdef"><b>Definition</b> <a href="#l00069">types.h:69</a></div></div>
-<div class="ttc" id="agroup__aliases_html_gae7d120016347ce3f021bc18dcefe2809"><div class="ttname"><a href="group__aliases.html#gae7d120016347ce3f021bc18dcefe2809">floppy::types::ref</a></div><div class="ttdeci">std::reference_wrapper&lt; T &gt; ref</div><div class="ttdoc">Shortcut for std::reference_wrapper.</div><div class="ttdef"><b>Definition</b> <a href="#l00114">types.h:114</a></div></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="group__aliases.html#ga9365b793fe547271e48fa719a7f4854d">  108</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_variable" href="group__aliases.html#ga9365b793fe547271e48fa719a7f4854d">none</a> = std::nullopt;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="group__aliases.html#gae7d120016347ce3f021bc18dcefe2809">  115</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="group__aliases.html#gae7d120016347ce3f021bc18dcefe2809">ref</a> = std::reference_wrapper&lt;T&gt;;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  } <span class="comment">// namespace types</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>} <span class="comment">// namespace floppy</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="ttc" id="agroup__aliases_html_ga3601c452e64e71f68f515fa7e56a47f1"><div class="ttname"><a href="group__aliases.html#ga3601c452e64e71f68f515fa7e56a47f1">floppy::types::ok</a></div><div class="ttdeci">auto ok() -&gt; result&lt;&gt;</div><div class="ttdoc">Helper function for result.</div><div class="ttdef"><b>Definition</b> <a href="#l00093">types.h:93</a></div></div>
+<div class="ttc" id="agroup__aliases_html_ga5b788689cac7bc0f3b593775123aaaee"><div class="ttname"><a href="group__aliases.html#ga5b788689cac7bc0f3b593775123aaaee">floppy::types::some</a></div><div class="ttdeci">auto some(T &amp;&amp;t) -&gt; option&lt; std::decay_t&lt; T &gt; &gt;</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="#l00100">types.h:100</a></div></div>
+<div class="ttc" id="agroup__aliases_html_ga9365b793fe547271e48fa719a7f4854d"><div class="ttname"><a href="group__aliases.html#ga9365b793fe547271e48fa719a7f4854d">floppy::types::none</a></div><div class="ttdeci">constexpr auto none</div><div class="ttdoc">Helper function for option.</div><div class="ttdef"><b>Definition</b> <a href="#l00108">types.h:108</a></div></div>
+<div class="ttc" id="agroup__aliases_html_gaa202473f296b2492d9239773369181af"><div class="ttname"><a href="group__aliases.html#gaa202473f296b2492d9239773369181af">floppy::types::option</a></div><div class="ttdeci">std::optional&lt; T &gt; option</div><div class="ttdoc">Safe alias for std::optional.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">types.h:34</a></div></div>
+<div class="ttc" id="agroup__aliases_html_gaa97f40abb19a127cfa5eaaa537369f81"><div class="ttname"><a href="group__aliases.html#gaa97f40abb19a127cfa5eaaa537369f81">floppy::types::error</a></div><div class="ttdeci">auto error(std::string_view format, Args &amp;&amp;... args) -&gt; detail_::unexpected&lt; std::decay_t&lt; std::string &gt; &gt;</div><div class="ttdoc">Helper function for result.</div><div class="ttdef"><b>Definition</b> <a href="#l00078">types.h:78</a></div></div>
+<div class="ttc" id="agroup__aliases_html_gae7b8a377a5b8651ef68a50f8e97bf706"><div class="ttname"><a href="group__aliases.html#gae7b8a377a5b8651ef68a50f8e97bf706">floppy::types::result</a></div><div class="ttdeci">detail_::expected&lt; T, std::string &gt; result</div><div class="ttdoc">Expected type with default error type (std::string).</div><div class="ttdef"><b>Definition</b> <a href="#l00070">types.h:70</a></div></div>
+<div class="ttc" id="agroup__aliases_html_gae7d120016347ce3f021bc18dcefe2809"><div class="ttname"><a href="group__aliases.html#gae7d120016347ce3f021bc18dcefe2809">floppy::types::ref</a></div><div class="ttdeci">std::reference_wrapper&lt; T &gt; ref</div><div class="ttdoc">Shortcut for std::reference_wrapper.</div><div class="ttdef"><b>Definition</b> <a href="#l00115">types.h:115</a></div></div>
 <div class="ttc" id="anamespacefloppy_html"><div class="ttname"><a href="namespacefloppy.html">floppy</a></div><div class="ttdoc">Main namespace for the library.</div><div class="ttdef"><b>Definition</b> <a href="demangle_8h_source.html#l00009">demangle.h:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

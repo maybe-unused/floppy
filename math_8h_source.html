@@ -144,140 +144,145 @@ $(function(){initNavTree('math_8h_source.html',''); initResizable(); });
 <div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1math.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy_1_1math.html">floppy::math</a></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keyword">template</span> &lt;std::<span class="keywordtype">float</span>ing_po<span class="keywordtype">int</span> T&gt;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keyword">template</span> &lt;__wrap_concept__(std::<span class="keywordtype">float</span>ing_po<span class="keywordtype">int</span>) T&gt;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">inline</span> <span class="keyword">auto</span> floor(T val) -&gt; T {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">auto</span> <span class="keyword">const</span> val_int = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd">i64</a><span class="keyword">&gt;</span>(val);</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">auto</span> <span class="keyword">const</span> fval_int = <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(val_int);</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">return</span> (val &gt;= T(0) ? fval_int : (val == fval_int ? val : fval_int - T(1)));</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  }</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">constexpr</span> <span class="keyword">auto</span> min(T&amp;&amp; v) -&gt; T { <span class="keywordflow">return</span> std::forward&lt;T&gt;(v); }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> min(T <span class="keyword">const</span>&amp; v1, T <span class="keyword">const</span>&amp; v2, Args <span class="keyword">const</span>&amp;... args) -&gt; T {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">return</span> v2 &lt; v1 ? min(v2, args...) : min(v1, args...);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  [[maybe_unused]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> max(T&amp;&amp; v) -&gt; T { <span class="keywordflow">return</span> std::forward&lt;T&gt;(v); }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> max(T <span class="keyword">const</span>&amp; v1, T <span class="keyword">const</span>&amp; v2, Args <span class="keyword">const</span>&amp;... args) -&gt; T {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">return</span> v2 &gt; v1 ? max(v2, args...) : max(v1, args...);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> abs(T <span class="keyword">const</span>&amp; v) -&gt; T { <span class="keywordflow">return</span> v &lt; T(0) ? -v : v; }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> fmod(<a class="code hl_typedef" href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a> <span class="keyword">const</span> x, <a class="code hl_typedef" href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a> <span class="keyword">const</span> y) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a> { <span class="keywordflow">return</span> x - y * math::floor(x / y); }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> min(T&amp;&amp; v) -&gt; T { <span class="keywordflow">return</span> std::forward&lt;T&gt;(v); }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> min(T <span class="keyword">const</span>&amp; v1, T <span class="keyword">const</span>&amp; v2, Args <span class="keyword">const</span>&amp;... args) -&gt; T {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">return</span> v2 &lt; v1 ? min(v2, args...) : min(v1, args...);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  [[maybe_unused]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> max(T&amp;&amp; v) -&gt; T { <span class="keywordflow">return</span> std::forward&lt;T&gt;(v); }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> max(T <span class="keyword">const</span>&amp; v1, T <span class="keyword">const</span>&amp; v2, Args <span class="keyword">const</span>&amp;... args) -&gt; T {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">return</span> v2 &gt; v1 ? max(v2, args...) : max(v1, args...);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> abs(T <span class="keyword">const</span>&amp; v) -&gt; T { <span class="keywordflow">return</span> v &lt; T(0) ? -v : v; }</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="group__calc.html#gafcdfac7e6f7b9774e157db98c0d635c9">   49</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gafcdfac7e6f7b9774e157db98c0d635c9">eq</a>(T a, T b) -&gt; <span class="keywordtype">bool</span> {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;)</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keywordflow">return</span> std::abs(a - b) &lt;= std::numeric_limits&lt;T&gt;::epsilon();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keywordflow">return</span> a == b;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> fmod(<a class="code hl_typedef" href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a> <span class="keyword">const</span> x, <a class="code hl_typedef" href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a> <span class="keyword">const</span> y) -&gt; <a class="code hl_typedef" href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">f32</a> { <span class="keywordflow">return</span> x - y * math::floor(x / y); }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group__calc.html#gafcdfac7e6f7b9774e157db98c0d635c9">   51</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gafcdfac7e6f7b9774e157db98c0d635c9">eq</a>(T a, T b) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keywordflow">return</span> std::abs(a - b) &lt;= std::numeric_limits&lt;T&gt;::epsilon();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordflow">return</span> a == b;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  }</div>
 </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__calc.html#gaa72828ebfa4d78b2f6a71812418cd483">   67</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gaa72828ebfa4d78b2f6a71812418cd483">approx_eq</a>(T a, T b, T epsilon_factor) -&gt; <span class="keywordtype">bool</span> {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <span class="keywordflow">return</span> std::abs(a - b) &lt;= std::numeric_limits&lt;T&gt;::epsilon() * epsilon_factor;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keywordflow">return</span> a == b;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="group__calc.html#gaa72828ebfa4d78b2f6a71812418cd483">   69</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gaa72828ebfa4d78b2f6a71812418cd483">approx_eq</a>(T a, T b, T epsilon_factor) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keywordflow">return</span> std::abs(a - b) &lt;= std::numeric_limits&lt;T&gt;::epsilon() * epsilon_factor;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordflow">return</span> a == b;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  }</div>
 </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="group__calc.html#gafb084ce4a1ef170a2a6e5c000f43398a">   82</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gafb084ce4a1ef170a2a6e5c000f43398a">is_null</a>(T num) -&gt; <span class="keywordtype">bool</span> { <span class="keywordflow">return</span> <a class="code hl_function" href="group__calc.html#gafcdfac7e6f7b9774e157db98c0d635c9">eq</a>(num, T(0.0)); }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
-<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="group__calc.html#ga000c8ac590dc1840dda974d4529f08b4">   94</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#ga000c8ac590dc1840dda974d4529f08b4">strong_compare</a>(T a, T b) -&gt; std::strong_ordering {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;) {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keywordflow">if</span>(std::isinf(a) and std::isinf(b))</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> std::strong_ordering::equal;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="keywordflow">if</span>(std::isnan(a) or std::isnan(b))</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> std::strong_ordering::equal;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <span class="keywordflow">return</span> std::abs(a - b) &lt;= std::numeric_limits&lt;T&gt;::epsilon() * T(2)</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        ? std::strong_ordering::equal</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        : (a &lt; b</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            ? std::strong_ordering::less</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            : std::strong_ordering::greater</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>          );</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <span class="keywordflow">return</span> a == b</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        ? std::strong_ordering::equal</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        : (a &lt; b</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            ? std::strong_ordering::less</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            : std::strong_ordering::greater</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>          );</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keyword">template</span> &lt;__wrap_concept__(concepts::num) T&gt;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="group__calc.html#gafb084ce4a1ef170a2a6e5c000f43398a">   84</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gafb084ce4a1ef170a2a6e5c000f43398a">is_null</a>(T num) -&gt; <span class="keywordtype">bool</span> { <span class="keywordflow">return</span> <a class="code hl_function" href="group__calc.html#gafcdfac7e6f7b9774e157db98c0d635c9">eq</a>(num, T(0.0)); }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keyword">template</span> &lt;__wrap_concept__(concepts::num) T&gt;</div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="group__calc.html#ga8e70b7eea94377653661bc2eb8981dab">   98</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#ga8e70b7eea94377653661bc2eb8981dab">strong_compare</a>(T a, T b)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    -&gt; __cxx20_or_cxx17__(std::strong_ordering, <span class="keywordtype">int</span>)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="keywordflow">if</span>(std::isinf(a) and std::isinf(b))</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span> __cxx20_or_cxx17__(std::strong_ordering::equal, 0);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      <span class="keywordflow">if</span>(std::isnan(a) or std::isnan(b))</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">return</span> __cxx20_or_cxx17__(std::strong_ordering::equal, 0);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <span class="keywordflow">return</span> std::abs(a - b) &lt;= std::numeric_limits&lt;T&gt;::epsilon() * T(2)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        ? __cxx20_or_cxx17__(std::strong_ordering::equal, 0)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        : (a &lt; b</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            ? __cxx20_or_cxx17__(std::strong_ordering::less, -1)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            : __cxx20_or_cxx17__(std::strong_ordering::greater, 1)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>          );</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <span class="keywordflow">return</span> a == b</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        ? __cxx20_or_cxx17__(std::strong_ordering::equal, 0)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        : (a &lt; b</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            ? __cxx20_or_cxx17__(std::strong_ordering::less, -1)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            : __cxx20_or_cxx17__(std::strong_ordering::greater, 1)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>          );</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  }</div>
 </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
-<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="group__calc.html#gaa722c8b624bbd64c4cbdd47bfd285c5d">  124</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gaa722c8b624bbd64c4cbdd47bfd285c5d">to_radians</a>(T deg) -&gt; T {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(deg * std::numbers::pi_v&lt;T&gt; / 180.F);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keyword">template</span> &lt;__wrap_concept__(concepts::num) T&gt;</div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="group__calc.html#gaa722c8b624bbd64c4cbdd47bfd285c5d">  130</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gaa722c8b624bbd64c4cbdd47bfd285c5d">to_radians</a>(T deg) -&gt; T {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(deg * std::numbers::pi_v&lt;T&gt; / 180.F);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  }</div>
 </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
-<div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="group__calc.html#gaf2b111b7ea138d5c9b5e0a2aaaf8e98d">  136</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gaf2b111b7ea138d5c9b5e0a2aaaf8e98d">to_degrees</a>(T rad) -&gt; T {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(rad * 180.F / std::numbers::pi);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <span class="keyword">template</span> &lt;__wrap_concept__(concepts::num) T&gt;</div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="group__calc.html#gaf2b111b7ea138d5c9b5e0a2aaaf8e98d">  142</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gaf2b111b7ea138d5c9b5e0a2aaaf8e98d">to_degrees</a>(T rad) -&gt; T {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(rad * 180.F / std::numbers::pi);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  }</div>
 </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <span class="keyword">template</span> &lt;std::<span class="keywordtype">float</span>ing_po<span class="keywordtype">int</span> T&gt;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3">  148</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3">log</a>(T base, T num) -&gt; T { <span class="keywordflow">return</span> std::log(num) / std::log(base); }</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="group__calc.html#ga1de30a44dfef08af9546a545e064b4bb">  157</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3">log</a>(T num) -&gt; T { <span class="keywordflow">return</span> std::log(num); }</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
-<div class="foldopen" id="foldopen00165" data-start="{" data-end="}">
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="group__calc.html#ga751139c04bc5de9f5873901e61a031ed">  165</a></span>  [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#ga751139c04bc5de9f5873901e61a031ed">div_euclid</a>(T a, T b) -&gt; T {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">auto</span> <span class="keyword">const</span> q = std::trunc(a / b);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;) {</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      <span class="keywordflow">if</span>(std::fmod(a, b) &lt; 0.0)</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">return</span> b &gt; 0.0 ? q - 1.0 : q + 1.0;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <span class="keywordflow">if</span>(a % b &lt; 0)</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordflow">return</span> b &gt; 0 ? q - 1 : q + 1;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    }</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordflow">return</span> q;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keyword">template</span> &lt;__wrap_concept__(std::<span class="keywordtype">float</span>ing_po<span class="keywordtype">int</span>) T&gt;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3">  154</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3">log</a>(T base, T num) -&gt; T { <span class="keywordflow">return</span> std::log(num) / std::log(base); }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="keyword">template</span> &lt;__wrap_concept__(concepts::num) T&gt;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="group__calc.html#ga1de30a44dfef08af9546a545e064b4bb">  163</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3">log</a>(T num) -&gt; T { <span class="keywordflow">return</span> std::log(num); }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keyword">template</span> &lt;__wrap_concept__(concepts::num) T&gt;</div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="group__calc.html#ga751139c04bc5de9f5873901e61a031ed">  171</a></span>  [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#ga751139c04bc5de9f5873901e61a031ed">div_euclid</a>(T a, T b) -&gt; T {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">auto</span> <span class="keyword">const</span> q = std::trunc(a / b);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;) {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      <span class="keywordflow">if</span>(std::fmod(a, b) &lt; 0.0)</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">return</span> b &gt; 0.0 ? q - 1.0 : q + 1.0;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <span class="keywordflow">if</span>(a % b &lt; 0)</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">return</span> b &gt; 0 ? q - 1 : q + 1;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordflow">return</span> q;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  }</div>
 </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="keyword">template</span> &lt;concepts::num T&gt;</div>
-<div class="foldopen" id="foldopen00183" data-start="{" data-end="}">
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="group__calc.html#gadd770f95287eea461bee0dea63476fb2">  183</a></span>  [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gadd770f95287eea461bee0dea63476fb2">rem_euclid</a>(T a, T b) -&gt; T {</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;) {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      <span class="keyword">auto</span> <span class="keyword">const</span> r = std::fmod(a, b);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>      <span class="keywordflow">return</span> r &lt; 0.0 ? r + std::abs(b) : r;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>      <span class="keyword">auto</span> <span class="keyword">const</span> r = a % b;</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>      <span class="keywordflow">return</span> r &lt; 0 ? r + std::abs(b) : r;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    }</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keyword">template</span> &lt;__wrap_concept__(concepts::num) T&gt;</div>
+<div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="group__calc.html#gadd770f95287eea461bee0dea63476fb2">  189</a></span>  [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="group__calc.html#gadd770f95287eea461bee0dea63476fb2">rem_euclid</a>(T a, T b) -&gt; T {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_floating_point_v&lt;T&gt;) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>      <span class="keyword">auto</span> <span class="keyword">const</span> r = std::fmod(a, b);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      <span class="keywordflow">return</span> r &lt; 0.0 ? r + std::abs(b) : r;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      <span class="keyword">auto</span> <span class="keyword">const</span> r = a % b;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      <span class="keywordflow">return</span> r &lt; 0 ? r + std::abs(b) : r;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  }</div>
 </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>} <span class="comment">// namespace floppy::math</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>} <span class="comment">// namespace floppy::math</span></div>
 </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="ttc" id="agroup__calc_html_ga000c8ac590dc1840dda974d4529f08b4"><div class="ttname"><a href="group__calc.html#ga000c8ac590dc1840dda974d4529f08b4">floppy::math::strong_compare</a></div><div class="ttdeci">constexpr auto strong_compare(T a, T b) -&gt; std::strong_ordering</div><div class="ttdoc">Three-ways compare two numbers, forcing them to strong_order.</div><div class="ttdef"><b>Definition</b> <a href="#l00094">math.h:94</a></div></div>
-<div class="ttc" id="agroup__calc_html_ga42b9d9a7dff8b3db60c6e956976745c3"><div class="ttname"><a href="group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3">floppy::math::log</a></div><div class="ttdeci">constexpr auto log(T base, T num) -&gt; T</div><div class="ttdoc">Returns logarithm of a number in a given base.</div><div class="ttdef"><b>Definition</b> <a href="#l00148">math.h:148</a></div></div>
-<div class="ttc" id="agroup__calc_html_ga751139c04bc5de9f5873901e61a031ed"><div class="ttname"><a href="group__calc.html#ga751139c04bc5de9f5873901e61a031ed">floppy::math::div_euclid</a></div><div class="ttdeci">auto div_euclid(T a, T b) -&gt; T</div><div class="ttdoc">Calculates Euclidean division, the matching method for rem_euclid.</div><div class="ttdef"><b>Definition</b> <a href="#l00165">math.h:165</a></div></div>
-<div class="ttc" id="agroup__calc_html_gaa722c8b624bbd64c4cbdd47bfd285c5d"><div class="ttname"><a href="group__calc.html#gaa722c8b624bbd64c4cbdd47bfd285c5d">floppy::math::to_radians</a></div><div class="ttdeci">constexpr auto to_radians(T deg) -&gt; T</div><div class="ttdoc">Converts degrees to radians.</div><div class="ttdef"><b>Definition</b> <a href="#l00124">math.h:124</a></div></div>
-<div class="ttc" id="agroup__calc_html_gaa72828ebfa4d78b2f6a71812418cd483"><div class="ttname"><a href="group__calc.html#gaa72828ebfa4d78b2f6a71812418cd483">floppy::math::approx_eq</a></div><div class="ttdeci">constexpr auto approx_eq(T a, T b, T epsilon_factor) -&gt; bool</div><div class="ttdoc">Returns true if numbers are approximately equal.</div><div class="ttdef"><b>Definition</b> <a href="#l00067">math.h:67</a></div></div>
-<div class="ttc" id="agroup__calc_html_gadd770f95287eea461bee0dea63476fb2"><div class="ttname"><a href="group__calc.html#gadd770f95287eea461bee0dea63476fb2">floppy::math::rem_euclid</a></div><div class="ttdeci">auto rem_euclid(T a, T b) -&gt; T</div><div class="ttdoc">Calculates the least nonnegative remainder of self (mod rhs).</div><div class="ttdef"><b>Definition</b> <a href="#l00183">math.h:183</a></div></div>
-<div class="ttc" id="agroup__calc_html_gaf2b111b7ea138d5c9b5e0a2aaaf8e98d"><div class="ttname"><a href="group__calc.html#gaf2b111b7ea138d5c9b5e0a2aaaf8e98d">floppy::math::to_degrees</a></div><div class="ttdeci">constexpr auto to_degrees(T rad) -&gt; T</div><div class="ttdoc">Converts radians to degrees.</div><div class="ttdef"><b>Definition</b> <a href="#l00136">math.h:136</a></div></div>
-<div class="ttc" id="agroup__calc_html_gafb084ce4a1ef170a2a6e5c000f43398a"><div class="ttname"><a href="group__calc.html#gafb084ce4a1ef170a2a6e5c000f43398a">floppy::math::is_null</a></div><div class="ttdeci">constexpr auto is_null(T num) -&gt; bool</div><div class="ttdoc">Returns true if type is equal to zero (number specific).</div><div class="ttdef"><b>Definition</b> <a href="#l00082">math.h:82</a></div></div>
-<div class="ttc" id="agroup__calc_html_gafcdfac7e6f7b9774e157db98c0d635c9"><div class="ttname"><a href="group__calc.html#gafcdfac7e6f7b9774e157db98c0d635c9">floppy::math::eq</a></div><div class="ttdeci">constexpr auto eq(T a, T b) -&gt; bool</div><div class="ttdoc">Returns true if numbers are equal.</div><div class="ttdef"><b>Definition</b> <a href="#l00049">math.h:49</a></div></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="ttc" id="agroup__calc_html_ga42b9d9a7dff8b3db60c6e956976745c3"><div class="ttname"><a href="group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3">floppy::math::log</a></div><div class="ttdeci">constexpr auto log(T base, T num) -&gt; T</div><div class="ttdoc">Returns logarithm of a number in a given base.</div><div class="ttdef"><b>Definition</b> <a href="#l00154">math.h:154</a></div></div>
+<div class="ttc" id="agroup__calc_html_ga751139c04bc5de9f5873901e61a031ed"><div class="ttname"><a href="group__calc.html#ga751139c04bc5de9f5873901e61a031ed">floppy::math::div_euclid</a></div><div class="ttdeci">auto div_euclid(T a, T b) -&gt; T</div><div class="ttdoc">Calculates Euclidean division, the matching method for rem_euclid.</div><div class="ttdef"><b>Definition</b> <a href="#l00171">math.h:171</a></div></div>
+<div class="ttc" id="agroup__calc_html_ga8e70b7eea94377653661bc2eb8981dab"><div class="ttname"><a href="group__calc.html#ga8e70b7eea94377653661bc2eb8981dab">floppy::math::strong_compare</a></div><div class="ttdeci">constexpr auto strong_compare(T a, T b) -&gt; __cxx20_or_cxx17__(std::strong_ordering, int)</div><div class="ttdoc">Three-ways compare two numbers, forcing them to strong_order.</div><div class="ttdef"><b>Definition</b> <a href="#l00098">math.h:98</a></div></div>
+<div class="ttc" id="agroup__calc_html_gaa722c8b624bbd64c4cbdd47bfd285c5d"><div class="ttname"><a href="group__calc.html#gaa722c8b624bbd64c4cbdd47bfd285c5d">floppy::math::to_radians</a></div><div class="ttdeci">constexpr auto to_radians(T deg) -&gt; T</div><div class="ttdoc">Converts degrees to radians.</div><div class="ttdef"><b>Definition</b> <a href="#l00130">math.h:130</a></div></div>
+<div class="ttc" id="agroup__calc_html_gaa72828ebfa4d78b2f6a71812418cd483"><div class="ttname"><a href="group__calc.html#gaa72828ebfa4d78b2f6a71812418cd483">floppy::math::approx_eq</a></div><div class="ttdeci">constexpr auto approx_eq(T a, T b, T epsilon_factor) -&gt; bool</div><div class="ttdoc">Returns true if numbers are approximately equal.</div><div class="ttdef"><b>Definition</b> <a href="#l00069">math.h:69</a></div></div>
+<div class="ttc" id="agroup__calc_html_gadd770f95287eea461bee0dea63476fb2"><div class="ttname"><a href="group__calc.html#gadd770f95287eea461bee0dea63476fb2">floppy::math::rem_euclid</a></div><div class="ttdeci">auto rem_euclid(T a, T b) -&gt; T</div><div class="ttdoc">Calculates the least nonnegative remainder of self (mod rhs).</div><div class="ttdef"><b>Definition</b> <a href="#l00189">math.h:189</a></div></div>
+<div class="ttc" id="agroup__calc_html_gaf2b111b7ea138d5c9b5e0a2aaaf8e98d"><div class="ttname"><a href="group__calc.html#gaf2b111b7ea138d5c9b5e0a2aaaf8e98d">floppy::math::to_degrees</a></div><div class="ttdeci">constexpr auto to_degrees(T rad) -&gt; T</div><div class="ttdoc">Converts radians to degrees.</div><div class="ttdef"><b>Definition</b> <a href="#l00142">math.h:142</a></div></div>
+<div class="ttc" id="agroup__calc_html_gafb084ce4a1ef170a2a6e5c000f43398a"><div class="ttname"><a href="group__calc.html#gafb084ce4a1ef170a2a6e5c000f43398a">floppy::math::is_null</a></div><div class="ttdeci">constexpr auto is_null(T num) -&gt; bool</div><div class="ttdoc">Returns true if type is equal to zero (number specific).</div><div class="ttdef"><b>Definition</b> <a href="#l00084">math.h:84</a></div></div>
+<div class="ttc" id="agroup__calc_html_gafcdfac7e6f7b9774e157db98c0d635c9"><div class="ttname"><a href="group__calc.html#gafcdfac7e6f7b9774e157db98c0d635c9">floppy::math::eq</a></div><div class="ttdeci">constexpr auto eq(T a, T b) -&gt; bool</div><div class="ttdoc">Returns true if numbers are equal.</div><div class="ttdef"><b>Definition</b> <a href="#l00051">math.h:51</a></div></div>
 <div class="ttc" id="anamespacefloppy_1_1math_html"><div class="ttname"><a href="namespacefloppy_1_1math.html">floppy::math</a></div><div class="ttdoc">Math namespace.</div><div class="ttdef"><b>Definition</b> <a href="#l00011">math.h:12</a></div></div>
 <div class="ttc" id="anamespacefloppy_1_1types_html_a86025ec3a0bc201ca893caac2cb2acbd"><div class="ttname"><a href="namespacefloppy_1_1types.html#a86025ec3a0bc201ca893caac2cb2acbd">floppy::types::i64</a></div><div class="ttdeci">int64_t i64</div><div class="ttdoc">64-bit signed integer</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00017">stdint.h:17</a></div></div>
 <div class="ttc" id="anamespacefloppy_1_1types_html_ad34d88453d37b65a09797bad37f2f527"><div class="ttname"><a href="namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527">floppy::types::f32</a></div><div class="ttdeci">float f32</div><div class="ttdoc">Float with 32-bit precision.</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00020">stdint.h:20</a></div></div>
