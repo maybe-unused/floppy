@@ -93,8 +93,8 @@ var group__platform =
         [ "open_embedded", "classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2aab1ac6811d2f3d4e133c7e3ea3bc61fc", null ],
         [ "unknown", "classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2aad921d60486366258809553a3db49a4a", null ]
       ] ],
-      [ "platform", "classfloppy_1_1platform.html#a0c323d436664f73248d9eea34061bf4b", null ],
-      [ "current", "classfloppy_1_1platform.html#af83827a7823a37fac4c17066a082696d", null ],
+      [ "platform", "classfloppy_1_1platform.html#afa0fafd60bf8f6496afb093953547e5d", null ],
+      [ "current", "classfloppy_1_1platform.html#ae38f44be4199dfae927a98d8aa44d53a", null ],
       [ "as_target_triple", "classfloppy_1_1platform.html#ab6b6118f6e44d82260fbabd42bfe8a75", null ],
       [ "swap_endian", "classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32", null ],
       [ "operating_system", "classfloppy_1_1platform.html#a82e09c39009db86033c546727eb900b8", null ],
@@ -102,8 +102,7 @@ var group__platform =
       [ "compiler", "classfloppy_1_1platform.html#aeec140132148d32f6a3881b7958019d7", null ],
       [ "endianness", "classfloppy_1_1platform.html#afcee39ad85bc97c977cc1c3f6a95ec7a", null ],
       [ "cxx_standard", "classfloppy_1_1platform.html#afde0784b1e48a2bbb1fab830d24c0e64", null ],
-      [ "path_separator", "classfloppy_1_1platform.html#a59111e456e3bfba78f27d52c59121b2a", null ],
-      [ "backward_path_delimiter", "classfloppy_1_1platform.html#a054ed2124e5f9db19e9b1c78c91a0151", null ]
+      [ "path_separator", "classfloppy_1_1platform.html#a59111e456e3bfba78f27d52c59121b2a", null ]
     ] ],
     [ "FLOPPY_OS_WINDOWS", "group__platform.html#gae6f3879950f3cfbfc6e0715cc64f508b", null ],
     [ "FLOPPY_OS_WINDOWS", "group__platform.html#gae6f3879950f3cfbfc6e0715cc64f508b", null ],

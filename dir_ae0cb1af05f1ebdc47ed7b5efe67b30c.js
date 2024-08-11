@@ -1,6 +1,5 @@
 var dir_ae0cb1af05f1ebdc47ed7b5efe67b30c =
 [
-    [ "backtrace", "dir_8c55877611ad138617c1a500919721d2.html", "dir_8c55877611ad138617c1a500919721d2" ],
     [ "detail", "dir_a70aa49210f20f6d80e3cfefc70580f7.html", "dir_a70aa49210f20f6d80e3cfefc70580f7" ],
     [ "euclid", "dir_047d1c41069b6adef11ae34e0147700f.html", "dir_047d1c41069b6adef11ae34e0147700f" ],
     [ "graphics", "dir_1470994300740420538078a3ee627803.html", "dir_1470994300740420538078a3ee627803" ],
@@ -13,6 +12,5 @@ var dir_ae0cb1af05f1ebdc47ed7b5efe67b30c =
     [ "graphics.h", "graphics_8h.html", null ],
     [ "logging.h", "logging_8h_source.html", null ],
     [ "serialization.h", "serialization_8h_source.html", null ],
-    [ "stacktrace.h", "stacktrace_8h_source.html", null ],
     [ "traits.h", "traits_8h_source.html", null ]
 ];

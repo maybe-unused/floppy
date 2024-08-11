@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['m_5f_0',['m_',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a60a44b6be66786ea152cc7d589c55426',1,'floppy::math::detail::basic_numeric_newtype']]]
+  ['one_5fof_5fv_0',['one_of_v',['../group__helpers.html#gabd4d29634ca4f4ef8b64beeca2631026',1,'floppy']]],
+  ['operating_5fsystem_1',['operating_system',['../classfloppy_1_1platform.html#a82e09c39009db86033c546727eb900b8',1,'floppy::platform']]]
 ];

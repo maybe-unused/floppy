@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['length_0',['length',['../classfloppy_1_1math_1_1length.html',1,'floppy::math']]]
+  ['non_5fcopyable_0',['non_copyable',['../structfloppy_1_1non__copyable.html',1,'floppy']]],
+  ['non_5fmovable_1',['non_movable',['../structfloppy_1_1non__movable.html',1,'floppy']]]
 ];

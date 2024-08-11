@@ -1,9 +1,6 @@
 var annotated_dup =
 [
     [ "floppy", "namespacefloppy.html", [
-      [ "detail", "namespacefloppy_1_1detail.html", [
-        [ "formattable_base", "structfloppy_1_1detail_1_1formattable__base.html", "structfloppy_1_1detail_1_1formattable__base" ]
-      ] ],
       [ "exceptions", "namespacefloppy_1_1exceptions.html", [
         [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", "classfloppy_1_1exceptions_1_1compile__time__error" ]
       ] ],
@@ -37,47 +34,10 @@ var annotated_dup =
       [ "serialization", "namespacefloppy_1_1serialization.html", [
         [ "serialization_error", "classfloppy_1_1serialization_1_1serialization__error.html", "classfloppy_1_1serialization_1_1serialization__error" ]
       ] ],
-      [ "stacktrace", "namespacefloppy_1_1stacktrace.html", [
-        [ "details", "namespacefloppy_1_1stacktrace_1_1details.html", [
-          [ "demangler", "structfloppy_1_1stacktrace_1_1details_1_1demangler.html", null ],
-          [ "demangler_impl", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html", null ],
-          [ "demangler_impl< system_tag::current >", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl_3_01system__tag_1_1current_01_4.html", null ],
-          [ "handle", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ]
-        ] ],
-        [ "impl", "namespacefloppy_1_1stacktrace_1_1impl.html", [
-          [ "get_mod_info", "classfloppy_1_1stacktrace_1_1impl_1_1get__mod__info.html", null ],
-          [ "module_data", "namespacefloppy_1_1stacktrace_1_1impl.html#structfloppy_1_1stacktrace_1_1impl_1_1module__data", null ],
-          [ "printer", "classfloppy_1_1stacktrace_1_1impl_1_1printer.html", null ],
-          [ "resolved_trace", "structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html", "structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace" ],
-          [ "snippet_factory", "classfloppy_1_1stacktrace_1_1impl_1_1snippet__factory.html", null ],
-          [ "source_file", "classfloppy_1_1stacktrace_1_1impl_1_1source__file.html", null ],
-          [ "stack_trace", "classfloppy_1_1stacktrace_1_1impl_1_1stack__trace.html", null ],
-          [ "stack_trace_impl", "classfloppy_1_1stacktrace_1_1impl_1_1stack__trace__impl.html", null ],
-          [ "stack_trace_impl< system_tag::current >", "classfloppy_1_1stacktrace_1_1impl_1_1stack__trace__impl_3_01system__tag_1_1current_01_4.html", null ],
-          [ "stack_trace_impl_base", "classfloppy_1_1stacktrace_1_1impl_1_1stack__trace__impl__base.html", null ],
-          [ "stack_trace_impl_holder", "classfloppy_1_1stacktrace_1_1impl_1_1stack__trace__impl__holder.html", null ],
-          [ "trace", "structfloppy_1_1stacktrace_1_1impl_1_1trace.html", null ],
-          [ "trace_resolver", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver.html", null ],
-          [ "trace_resolver_darwin_impl", "namespacefloppy_1_1stacktrace_1_1impl.html#classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__darwin__impl", null ],
-          [ "trace_resolver_darwin_impl< trace_resolver_tag::backtrace_symbol >", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__darwin__impl_3_01trace__resolver__tag_1_1backtrace__symbol_01_4.html", null ],
-          [ "trace_resolver_impl", "namespacefloppy_1_1stacktrace_1_1impl.html#classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__impl", null ],
-          [ "trace_resolver_impl< system_tag::darwin >", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__impl_3_01system__tag_1_1darwin_01_4.html", null ],
-          [ "trace_resolver_impl< system_tag::linux_ >", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__impl_3_01system__tag_1_1linux___01_4.html", null ],
-          [ "trace_resolver_impl< system_tag::unknown >", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__impl_3_01system__tag_1_1unknown_01_4.html", null ],
-          [ "trace_resolver_impl< system_tag::windows >", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__impl_3_01system__tag_1_1windows_01_4.html", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__impl_3_01system__tag_1_1windows_01_4" ],
-          [ "trace_resolver_impl_base", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__impl__base.html", null ],
-          [ "trace_resolver_linux_base", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__linux__base.html", null ],
-          [ "trace_resolver_linux_impl", "namespacefloppy_1_1stacktrace_1_1impl.html#classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__linux__impl", null ],
-          [ "trace_resolver_linux_impl< trace_resolver_tag::libdw >", "classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver__linux__impl_3_01trace__resolver__tag_1_1libdw_01_4.html", null ]
-        ] ],
-        [ "signal_watcher", "classfloppy_1_1stacktrace_1_1signal__watcher.html", null ]
-      ] ],
       [ "application_dirs", "classfloppy_1_1application__dirs.html", "classfloppy_1_1application__dirs" ],
       [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
       [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", "classfloppy_1_1exceptions_1_1compile__time__error" ],
       [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
-      [ "default_delete", "structfloppy_1_1default__delete.html", null ],
-      [ "deleter", "structfloppy_1_1deleter.html", null ],
       [ "formattable", "structfloppy_1_1formattable.html", "structfloppy_1_1formattable" ],
       [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],
       [ "non_copyable", "structfloppy_1_1non__copyable.html", null ],
@@ -87,7 +47,6 @@ var annotated_dup =
       [ "pin", "structfloppy_1_1pin.html", null ],
       [ "plain_type", "group__helpers.html#structfloppy_1_1plain__type", "group__helpers_structfloppy_1_1plain__type" ],
       [ "platform", "classfloppy_1_1platform.html", "classfloppy_1_1platform" ],
-      [ "propagate_const", "classfloppy_1_1propagate__const.html", null ],
       [ "singleton", "structfloppy_1_1singleton.html", "structfloppy_1_1singleton" ],
       [ "source_location", "structfloppy_1_1source__location.html", "structfloppy_1_1source__location" ]
     ] ],

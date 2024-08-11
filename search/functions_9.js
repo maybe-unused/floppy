@@ -8,10 +8,9 @@ var searchData=
   ['lerp_5',['lerp',['../structfloppy_1_1math_1_1angle.html#a6e7a33eae7ffeed2c276abcdca871506',1,'floppy::math::angle::lerp()'],['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ac2d4121631c00f3759716859dc543324',1,'floppy::math::detail::basic_two_dimensional_type::lerp()'],['../classfloppy_1_1math_1_1length.html#a8bfcb9b9011155f59d709ee8682c1a54',1,'floppy::math::length::lerp()']]],
   ['lightness_6',['lightness',['../classfloppy_1_1gfx_1_1color.html#a2e1c3164a27957fcc4797ec58e021ab2',1,'floppy::gfx::color']]],
   ['line_7',['line',['../structfloppy_1_1source__location.html#a045aa753ae450e5f2a63358a7778c7e2',1,'floppy::source_location']]],
-  ['line_5fmut_8',['line_mut',['../structfloppy_1_1source__location.html#acb2f8a08d7e658d3fbc7035f3dc7da5e',1,'floppy::source_location']]],
-  ['load_9',['load',['../classfloppy_1_1configuration__file.html#a99cee9c7e5c0dd9718420e2f43695490',1,'floppy::configuration_file']]],
-  ['log_10',['log',['../group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3',1,'floppy::math::log(T base, T num) -&gt; T'],['../group__calc.html#ga1de30a44dfef08af9546a545e064b4bb',1,'floppy::math::log(T num) -&gt; T'],['../group__logging.html#ga9eaa5f9efa4ba3467f22464b2a28ce91',1,'floppy::log::log(level::level_enum level, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void']]],
-  ['log_5fto_11',['log_to',['../group__logging.html#gae11a5862435d90c485efc280eb240a35',1,'floppy::log']]],
-  ['lx_12',['lx',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a4a1740480a7289652d1e7bcdffe9807a',1,'floppy::math::detail::basic_two_dimensional_type']]],
-  ['ly_13',['ly',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#accc043ce7ff2febe8af29365f34ef1de',1,'floppy::math::detail::basic_two_dimensional_type']]]
+  ['load_8',['load',['../classfloppy_1_1configuration__file.html#a99cee9c7e5c0dd9718420e2f43695490',1,'floppy::configuration_file']]],
+  ['log_9',['log',['../group__calc.html#ga42b9d9a7dff8b3db60c6e956976745c3',1,'floppy::math::log(T base, T num) -&gt; T'],['../group__calc.html#ga1de30a44dfef08af9546a545e064b4bb',1,'floppy::math::log(T num) -&gt; T'],['../group__logging.html#ga9eaa5f9efa4ba3467f22464b2a28ce91',1,'floppy::log::log(level::level_enum level, fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void']]],
+  ['log_5fto_10',['log_to',['../group__logging.html#gae11a5862435d90c485efc280eb240a35',1,'floppy::log']]],
+  ['lx_11',['lx',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a4a1740480a7289652d1e7bcdffe9807a',1,'floppy::math::detail::basic_two_dimensional_type']]],
+  ['ly_12',['ly',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#accc043ce7ff2febe8af29365f34ef1de',1,'floppy::math::detail::basic_two_dimensional_type']]]
 ];
