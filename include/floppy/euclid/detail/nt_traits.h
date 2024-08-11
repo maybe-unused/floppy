@@ -17,51 +17,68 @@ namespace floppy::math::detail
   {
     /// \brief Compares this and <i>other</i> with \ref strong_compare for equality.
     /// \param other The other value to compare with.
-    [[nodiscard]] constexpr auto operator==(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal); }
+    [[nodiscard]] constexpr auto operator==(T const& other) const -> bool {
+      return (strong_compare(**static_cast<T const*>(this), *other) == __cxx20_or_cxx17__(std::strong_ordering::equal, 0));
+    }
 
     /// \brief Compares this and <i>other</i> with \ref strong_compare for inequality.
     /// \param other The other value to compare with.
-    [[nodiscard]] constexpr auto operator!=(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) != std::strong_ordering::equal); }
+    [[nodiscard]] constexpr auto operator!=(T const& other) const -> bool {
+      return (strong_compare(**static_cast<T const*>(this), *other) != __cxx20_or_cxx17__(std::strong_ordering::equal, 0));
+    }
 
     /// \brief Compares this and <i>other</i> with \ref strong_compare for less than.
     /// \param other The other value to compare with.
-    [[nodiscard]] constexpr auto operator<(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::less); }
+    [[nodiscard]] constexpr auto operator<(T const& other) const -> bool {
+      return (strong_compare(**static_cast<T const*>(this), *other) == __cxx20_or_cxx17__(std::strong_ordering::less, -1));
+    }
 
     /// \brief Compares this and <i>other</i> with \ref strong_compare for greater than.
     /// \param other The other value to compare with.
-    [[nodiscard]] constexpr auto operator>(T const& other) const -> bool { return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::greater); }
+    [[nodiscard]] constexpr auto operator>(T const& other) const -> bool {
+      return (strong_compare(**static_cast<T const*>(this), *other) == __cxx20_or_cxx17__(std::strong_ordering::greater, 1));
+    }
 
     /// \brief Compares this and <i>other</i> with \ref strong_compare for less than or equal to.
     /// \param other The other value to compare with.
     [[nodiscard]] constexpr auto operator<=(T const& other) const -> bool {
-      return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::less
-        or strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal);
+      return (strong_compare(**static_cast<T const*>(this), *other) == __cxx20_or_cxx17__(std::strong_ordering::less, -1)
+        or strong_compare(**static_cast<T const*>(this), *other) == __cxx20_or_cxx17__(std::strong_ordering::equal, 0));
     }
 
     /// \brief Compares this and <i>other</i> with \ref strong_compare for greater than or equal to.
     /// \param other The other value to compare with.
     [[nodiscard]] constexpr auto operator>=(T const& other) const -> bool {
-      return (strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::greater
-        or strong_compare(**static_cast<T const*>(this), *other) == std::strong_ordering::equal);
+      return (strong_compare(**static_cast<T const*>(this), *other) == __cxx20_or_cxx17__(std::strong_ordering::greater, 1)
+        or strong_compare(**static_cast<T const*>(this), *other) == __cxx20_or_cxx17__(std::strong_ordering::equal, 0));
     }
 
     /// \brief Compares this and <i>other numeric value</i> with \ref strong_compare.
     /// \tparam T2 Right hand side numeric type.
     /// \param other The other value to compare with.
+    /// \invariant Available only in C++20 or older.
+    #if defined(FL_CXX20) || defined(FL_DOC)
     template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator<=>(T2 const& other) const { return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)); }
+    [[nodiscard]] constexpr auto operator<=>(T2 const& other) const {
+      return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other));
+    }
+    #endif // FL_CXX20
 
     /// \brief Compares this and <i>other numeric value</i> with \ref strong_compare for equality.
     /// \tparam T2 Right hand side numeric type.
     /// \param other The other value to compare with.
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator==(T2 const& other) const -> bool { return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)) == std::strong_ordering::equal; }
+    template <__wrap_concept__(concepts::num) T2>
+    [[nodiscard]] constexpr auto operator==(T2 const& other) const -> bool {
+      return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)) == __cxx20_or_cxx17__(std::strong_ordering::equal, 0);
+    }
 
     /// \brief Compares this and <i>other numeric value</i> with \ref strong_compare for inequality.
     /// \tparam T2 Right hand side numeric type.
     /// \param other The other value to compare with.
-    template <concepts::num T2>
-    [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool { return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)) != std::strong_ordering::equal; }
+    template <__wrap_concept__(concepts::num) T2>
+    [[nodiscard]] constexpr auto operator!=(T2 const& other) const -> bool {
+      return strong_compare(**static_cast<T const*>(this), static_cast<T::underlying_type>(other)) != __cxx20_or_cxx17__(std::strong_ordering::equal, 0);
+    }
   };
 
   /// \brief CRTP base for numeric newtypes that can be compared.
@@ -72,7 +89,7 @@ namespace floppy::math::detail
   /// \see floppy::math::angle
   /// \see floppy::math::length
   /// \see floppy::math::scale
-  template <typename T, concepts::num U>
+  template <typename T, __wrap_concept__(concepts::num) U>
   struct basic_numeric_newtype : public default_comparable<T>
   {
     /// \brief Underlying number type.
@@ -109,7 +126,7 @@ namespace floppy::math::detail
     [[nodiscard]] constexpr auto value() const -> underlying_type { return this->m_; }
 
     /// \brief Returns this numeric newtype as number in another numeric representation.
-    template <concepts::num U2>
+    template <__wrap_concept__(concepts::num) U2>
     [[nodiscard]] constexpr auto as() const -> U2 { return static_cast<U2>(this->m_); }
 
     /// \brief Returns this numeric newtype as 32-bit floating point number.
@@ -174,7 +191,7 @@ namespace floppy::math::detail
   /// \tparam T The type itself.
   /// \tparam U The underlying number type.
   /// \see floppy::math::angle
-  template <typename T, concepts::num U>
+  template <typename T, __wrap_concept__(concepts::num) U>
   struct advanced_numeric_type : public basic_numeric_newtype<T, U>
   {
     using basic_numeric_newtype<T, U>::basic_numeric_newtype;
@@ -224,49 +241,49 @@ namespace floppy::math::detail
     /// \brief Returns <tt>this * other</tt>.
     /// \tparam U2 Right hand side numeric type.
     /// \param other The other value.
-    template <concepts::num U2>
+    template <__wrap_concept__(concepts::num) U2>
     [[nodiscard]] constexpr auto operator*(U2 const& other) const -> T { return T(this->m_ * other); }
 
     /// \brief Returns <tt>this / other</tt>.
     /// \tparam U2 Right hand side numeric type.
     /// \param other The other value.
-    template <concepts::num U2>
+    template <__wrap_concept__(concepts::num) U2>
     [[nodiscard]] constexpr auto operator/(U2 const& other) const -> T { return T(this->m_ / other); }
 
     /// \brief Returns <tt>this + other</tt>.
     /// \tparam U2 Right hand side numeric type.
     /// \param other The other value.
-    template <concepts::num U2>
+    template <__wrap_concept__(concepts::num) U2>
     [[nodiscard]] constexpr auto operator+(U2 const& other) const -> T { return T(this->m_ + other); }
 
     /// \brief Returns <tt>this - other</tt>.
     /// \tparam U2 Right hand side numeric type.
     /// \param other The other value.
-    template <concepts::num U2>
+    template <__wrap_concept__(concepts::num) U2>
     [[nodiscard]] constexpr auto operator-(U2 const& other) const -> T { return T(this->m_ - other); }
 
     /// \brief Returns <tt>this += other</tt>.
     /// \tparam U2 Right hand side numeric type.
     /// \param other The other value.
-    template <concepts::num U2>
+    template <__wrap_concept__(concepts::num) U2>
     [[nodiscard]] constexpr auto operator+=(U2 const& other) -> T& { this->m_ += other; return *this; }
 
     /// \brief Returns <tt>this -= other</tt>.
     /// \tparam U2 Right hand side numeric type.
     /// \param other The other value.
-    template <concepts::num U2>
+    template <__wrap_concept__(concepts::num) U2>
     [[nodiscard]] constexpr auto operator-=(U2 const& other) -> T& { this->m_ -= other; return *this; }
 
     /// \brief Returns <tt>this *= other</tt>.
     /// \tparam U2 Right hand side numeric type.
     /// \param other The other value.
-    template <concepts::num U2>
+    template <__wrap_concept__(concepts::num) U2>
     [[nodiscard]] constexpr auto operator*=(U2& other) -> T& { this->m_ *= other; return *this; }
 
     /// \brief Returns <tt>this /= other</tt>.
     /// \tparam U2 Right hand side numeric type.
     /// \param other The other value.
-    template <concepts::num U2>
+    template <__wrap_concept__(concepts::num) U2>
     [[nodiscard]] constexpr auto operator/=(U2 const& other) -> T& { this->m_ /= other; return *this; }
   };
 } // namespace floppy::math::detail

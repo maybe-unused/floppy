@@ -21,7 +21,7 @@ namespace floppy::math::detail
   /// \see floppy::math::point2d
   /// \see floppy::math::vector2d
   /// \see floppy::math::size2d
-  template <typename T, typename U, concepts::num N>
+  template <typename T, typename U, __wrap_concept__(concepts::num) N>
   struct basic_two_dimensional_type : public formattable<T, char>
   {
     /// \brief Associated unit type.
@@ -227,7 +227,9 @@ namespace floppy::math::detail
     /// \brief Constructs new basic_two_dimensional_type from <tt>std::tuple</tt>.
     /// \param other The other <tt>std::tuple</tt>.
     template <typename... Args>
+    #if defined(FL_CXX20) || defined(FL_DOC)
     requires (std::tuple_size_v<std::tuple<Args...>> == 2)
+    #endif // FL_CXX20 || FL_DOC
     [[nodiscard]] static constexpr auto from_tuple(std::tuple<Args...> const& other) -> T {
       return T(std::get<0>(other), std::get<1>(other));
     }

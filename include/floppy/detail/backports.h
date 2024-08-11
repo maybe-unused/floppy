@@ -8,10 +8,6 @@
 #include <floppy/detail/concepts.h>
 #include <floppy/detail/formatters.h>
 
-#if 0//defined(__cpp_lib_source_location)
-# include <source_location>
-#endif // __cpp_lib_source_location
-
 namespace floppy
 {
   /// \brief <tt>std::ranges</tt> backports namespace.
@@ -146,111 +142,107 @@ namespace floppy
   /// \endcode
   /// \note This implementation can be aliased to `std::source_location`, if the compiler supports it.
   /// Otherwise, it is a self-contained port of C++20 std::source_location.
-  #if 0//defined(__cpp_lib_source_location)
-    using source_location = std::source_location;
-  #else // __cpp_lib_source_location
-    struct source_location
-    {
-     private:
-      constexpr static auto UNKNOWN = "(unknown)";
+  struct source_location
+  {
+   private:
+    constexpr static auto UNKNOWN = "(unknown)";
 
-     public:
-      /// \brief Returns current source location.
-      /// \note Returns actual current source location only if called with default arguments.
-      static constexpr auto current(
+   public:
+    /// \brief Returns current source location.
+    /// \note Returns actual current source location only if called with default arguments.
+    static constexpr auto current(
   #if not defined(__apple_build_version__) and defined(__clang__) and (__clang_major__ >= 9)
-        char const* file = __builtin_FILE(),
-        char const* function = __builtin_FUNCTION(),
-        uint_least32_t line = __builtin_LINE(),
-        uint_least32_t column = __builtin_COLUMN()
+      char const* file = __builtin_FILE(),
+      char const* function = __builtin_FUNCTION(),
+      uint_least32_t line = __builtin_LINE(),
+      uint_least32_t column = __builtin_COLUMN()
   #elif defined(__GNUC__) and (__GNUC__ > 4 or (__GNUC__ == 4 and __GNUC_MINOR__ >= 8))
-        char const* file = __builtin_FILE(),
+      char const* file = __builtin_FILE(),
         char const* function = __builtin_FUNCTION(),
         uint_least32_t line = __builtin_LINE(),
         uint_least32_t column = 0
   #else // compiler
-        char const* file = UNKNOWN,
-        char const* function = UNKNOWN,
-        uint_least32_t line = 0,
-        uint_least32_t column = 0
+      char const* file = UNKNOWN,
+      char const* function = UNKNOWN,
+      uint_least32_t line = 0,
+      uint_least32_t column = 0
   #endif // compiler
-      ) noexcept -> source_location {
-        return { file, line, function, column };
-      }
-
-     private:
-      std::string file_;
-      std::string function_;
-      uint_least32_t line_;
-      uint_least32_t column_;
-
-     public:
-      /// \brief Creates an empty invalid source_location.
-      constexpr source_location() noexcept
-        : file_(UNKNOWN)
-        , function_(UNKNOWN)
-        , line_(0)
-        , column_(0)
-      {}
-
-      /// \brief Creates a source_location from given parameters.
-      /// \param file File name
-      /// \param line Number of the line in the file. 0 if NULL
-      /// \param function Function name
-      /// \param column Column number in the function. Defaults to 0
-      constexpr source_location(
-        char const* file,
-        uint_least32_t const line,
-        char const* function,
-        uint_least32_t const column = 0
-      ) noexcept
-        : file_(file)
-        , function_(function)
-        , line_(line)
-        , column_(column)
-      {}
-
-      /// \brief Returns the file name.
-      [[nodiscard]] constexpr auto file_name() const noexcept -> std::string_view { return this->file_; }
-
-      /// \brief Returns a mutable reference to the file name.
-      [[nodiscard]] [[maybe_unused]]constexpr auto file_name_mut() noexcept -> std::string& { return this->file_; }
-
-      /// \brief Returns the function name. NULL if unknown or not available on compiler
-      [[nodiscard]] constexpr auto function_name() const noexcept -> std::string_view { return this->function_; }
-
-      /// \brief Returns a mutable reference to the function name.
-      [[nodiscard]] [[maybe_unused]] constexpr auto function_name_mut() noexcept -> std::string& { return this->function_; }
-
-      /// \brief Returns the line number. 0 if unknown or not available on compiler
-      [[nodiscard]] constexpr auto line() const noexcept -> uint_least32_t { return this->line_; }
-
-      /// \brief Returns a mutable reference to the line number.
-      [[nodiscard]] [[maybe_unused]] constexpr auto line_mut() noexcept -> uint_least32_t& { return this->line_; }
-
-      /// \brief Returns the column number. 0 if unknown or not available on compiler
-      [[nodiscard]] constexpr auto column() const noexcept -> uint_least32_t { return this->column_; }
-
-      /// \brief Returns a mutable reference to the column number.
-      [[nodiscard]] [[maybe_unused]] constexpr auto column_mut() noexcept -> uint_least32_t& { return this->column_; }
-    };
-
-    /// \brief Stream adaptor for source_location
-    template <class E, class T>
-    auto operator<<(std::basic_ostream<E, T>& os, source_location const& loc) -> std::basic_ostream<E, T>&
-    {
-      os.width(0);
-      if(loc.line() == 0)
-        os << "(unknown)";
-      else {
-        os << fmt::format("{}:{}", loc.file_name(), loc.line());
-        if(loc.column())
-          os << fmt::format(":{}", loc.column());
-        os << fmt::format(": in fn {} ", loc.function_name());
-      }
-      return os;
+    ) noexcept -> source_location {
+      return { file, line, function, column };
     }
-  #endif // __cpp_lib_source_location
+
+   private:
+    std::string file_;
+    std::string function_;
+    uint_least32_t line_;
+    uint_least32_t column_;
+
+   public:
+    /// \brief Creates an empty invalid source_location.
+    constexpr source_location() noexcept
+      : file_(UNKNOWN)
+      , function_(UNKNOWN)
+      , line_(0)
+      , column_(0)
+    {}
+
+    /// \brief Creates a source_location from given parameters.
+    /// \param file File name
+    /// \param line Number of the line in the file. 0 if NULL
+    /// \param function Function name
+    /// \param column Column number in the function. Defaults to 0
+    constexpr source_location(
+      char const* file,
+      uint_least32_t const line,
+      char const* function,
+      uint_least32_t const column = 0
+    ) noexcept
+      : file_(file)
+      , function_(function)
+      , line_(line)
+      , column_(column)
+    {}
+
+    /// \brief Returns the file name.
+    [[nodiscard]] constexpr auto file_name() const noexcept -> std::string_view { return this->file_; }
+
+    /// \brief Returns a mutable reference to the file name.
+    [[nodiscard]] [[maybe_unused]]constexpr auto file_name_mut() noexcept -> std::string& { return this->file_; }
+
+    /// \brief Returns the function name. NULL if unknown or not available on compiler
+    [[nodiscard]] constexpr auto function_name() const noexcept -> std::string_view { return this->function_; }
+
+    /// \brief Returns a mutable reference to the function name.
+    [[nodiscard]] [[maybe_unused]] constexpr auto function_name_mut() noexcept -> std::string& { return this->function_; }
+
+    /// \brief Returns the line number. 0 if unknown or not available on compiler
+    [[nodiscard]] constexpr auto line() const noexcept -> uint_least32_t { return this->line_; }
+
+    /// \brief Returns a mutable reference to the line number.
+    [[nodiscard]] [[maybe_unused]] constexpr auto line_mut() noexcept -> uint_least32_t& { return this->line_; }
+
+    /// \brief Returns the column number. 0 if unknown or not available on compiler
+    [[nodiscard]] constexpr auto column() const noexcept -> uint_least32_t { return this->column_; }
+
+    /// \brief Returns a mutable reference to the column number.
+    [[nodiscard]] [[maybe_unused]] constexpr auto column_mut() noexcept -> uint_least32_t& { return this->column_; }
+  };
+
+  /// \brief Stream adaptor for source_location
+  template <class E, class T>
+  auto operator<<(std::basic_ostream<E, T>& os, source_location const& loc) -> std::basic_ostream<E, T>&
+  {
+    os.width(0);
+    if(loc.line() == 0)
+      os << "(unknown)";
+    else {
+      os << fmt::format("{}:{}", loc.file_name(), loc.line());
+      if(loc.column())
+        os << fmt::format(":{}", loc.column());
+      os << fmt::format(": in fn {} ", loc.function_name());
+    }
+    return os;
+  }
 
   inline auto operator==(source_location const& lhs, source_location const& rhs) noexcept -> bool {
     return lhs.file_name() == rhs.file_name()

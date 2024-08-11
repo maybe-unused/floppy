@@ -10,14 +10,16 @@
 /// \brief Math namespace.
 namespace floppy::math
 {
-  template <std::floating_point T>
+  template <__wrap_concept__(std::floating_point) T>
   [[nodiscard]] constexpr inline auto floor(T val) -> T {
     auto const val_int = static_cast<i64>(val);
     auto const fval_int = static_cast<T>(val_int);
     return (val >= T(0) ? fval_int : (val == fval_int ? val : fval_int - T(1)));
   }
 
-  template <typename T> constexpr auto min(T&& v) -> T { return std::forward<T>(v); }
+  template <typename T>
+  constexpr auto min(T&& v) -> T { return std::forward<T>(v); }
+
   template <typename T, typename... Args>
   constexpr auto min(T const& v1, T const& v2, Args const&... args) -> T {
     return v2 < v1 ? min(v2, args...) : min(v1, args...);
@@ -78,7 +80,7 @@ namespace floppy::math
   /// \tparam T Number type
   /// \return True if number is equal to zero
   /// \see eq, approx_eq, strong_compare
-  template <concepts::num T>
+  template <__wrap_concept__(concepts::num) T>
   [[nodiscard]] constexpr auto is_null(T num) -> bool { return eq(num, T(0.0)); }
 
   /// \brief Three-ways compare two numbers, forcing them to <i>strong_order</i>.
@@ -90,26 +92,30 @@ namespace floppy::math
   /// \note Treats <tt>NaN</tt> as equal to <tt>NaN</tt> and <tt>inf</tt> as equal to <tt>inf</tt> in case of floating points.
   /// \see eq, approx_eq, is_null
   /// \return Comparison result
-  template <concepts::num T>
-  [[nodiscard]] constexpr auto strong_compare(T a, T b) -> std::strong_ordering {
+  /// \invariant Available only in C++20 or older.
+
+  template <__wrap_concept__(concepts::num) T>
+  [[nodiscard]] constexpr auto strong_compare(T a, T b)
+    -> __cxx20_or_cxx17__(std::strong_ordering, int)
+  {
     if constexpr(std::is_floating_point_v<T>) {
       if(std::isinf(a) and std::isinf(b))
-        return std::strong_ordering::equal;
+        return __cxx20_or_cxx17__(std::strong_ordering::equal, 0);
       if(std::isnan(a) or std::isnan(b))
-        return std::strong_ordering::equal;
+        return __cxx20_or_cxx17__(std::strong_ordering::equal, 0);
       return std::abs(a - b) <= std::numeric_limits<T>::epsilon() * T(2)
-        ? std::strong_ordering::equal
+        ? __cxx20_or_cxx17__(std::strong_ordering::equal, 0)
         : (a < b
-            ? std::strong_ordering::less
-            : std::strong_ordering::greater
+            ? __cxx20_or_cxx17__(std::strong_ordering::less, -1)
+            : __cxx20_or_cxx17__(std::strong_ordering::greater, 1)
           );
     }
     else
       return a == b
-        ? std::strong_ordering::equal
+        ? __cxx20_or_cxx17__(std::strong_ordering::equal, 0)
         : (a < b
-            ? std::strong_ordering::less
-            : std::strong_ordering::greater
+            ? __cxx20_or_cxx17__(std::strong_ordering::less, -1)
+            : __cxx20_or_cxx17__(std::strong_ordering::greater, 1)
           );
   }
   
@@ -120,7 +126,7 @@ namespace floppy::math
   /// \tparam T Degrees type
   /// \return Radians
   /// \see to_degrees
-  template <concepts::num T>
+  template <__wrap_concept__(concepts::num) T>
   [[nodiscard]] constexpr auto to_radians(T deg) -> T {
     return static_cast<T>(deg * std::numbers::pi_v<T> / 180.F);
   }
@@ -132,7 +138,7 @@ namespace floppy::math
   /// \tparam T Radians type
   /// \return Degrees
   /// \see to_radians
-  template <concepts::num T>
+  template <__wrap_concept__(concepts::num) T>
   [[nodiscard]] constexpr auto to_degrees(T rad) -> T {
     return static_cast<T>(rad * 180.F / std::numbers::pi);
   }
@@ -144,7 +150,7 @@ namespace floppy::math
   /// \param num Number
   /// \tparam T Number type
   /// \return Logarithm of the number in the given base
-  template <std::floating_point T>
+  template <__wrap_concept__(std::floating_point) T>
   [[nodiscard]] constexpr auto log(T base, T num) -> T { return std::log(num) / std::log(base); }
 
   /// \brief Returns natural logarithm of a number.
@@ -153,7 +159,7 @@ namespace floppy::math
   /// \param num Number
   /// \tparam T Number type
   /// \return Natural logarithm of the number
-  template <concepts::num T>
+  template <__wrap_concept__(concepts::num) T>
   [[nodiscard]] constexpr auto log(T num) -> T { return std::log(num); }
 
   /// \brief Calculates Euclidean division, the matching method for <b>rem_euclid</b>.
@@ -161,7 +167,7 @@ namespace floppy::math
   /// \ingroup calc
   /// \param a Dividend
   /// \param b Divisor
-  template <concepts::num T>
+  template <__wrap_concept__(concepts::num) T>
   [[nodiscard]] auto div_euclid(T a, T b) -> T {
     auto const q = std::trunc(a / b);
     if constexpr(std::is_floating_point_v<T>) {
@@ -179,7 +185,7 @@ namespace floppy::math
   /// \ingroup calc
   /// \param a Dividend
   /// \param b Divisor
-  template <concepts::num T>
+  template <__wrap_concept__(concepts::num) T>
   [[nodiscard]] auto rem_euclid(T a, T b) -> T {
     if constexpr(std::is_floating_point_v<T>) {
       auto const r = std::fmod(a, b);

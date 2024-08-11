@@ -18,6 +18,14 @@
 # define FLOPPY_EXPORT
 #endif // defined(_WIN32)
 
+#if defined(FL_CXX20)
+//NOLINTNEXTLINE(*-reserved-identifier, *-identifier-naming, *-macro-usage)
+# define __force_constexpr__ consteval
+#else // defined(FL_CXX20)
+//NOLINTNEXTLINE(*-reserved-identifier, *-identifier-naming, *-macro-usage)
+# define __force_constexpr__ constexpr
+#endif // defined(FL_CXX20)
+
 #define _stringify$(x) #x // NOLINT(*-macro-usage, *-identifier-naming)
 #define stringify$(x) _stringify$(x) // NOLINT(*-macro-usage)
 
@@ -98,10 +106,6 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       int patch_{}; ///< Patch version.
     };
 
-    static_assert(version(1, 2, 3).major() == 1);
-    static_assert(version(1, 2, 3).minor() == 2);
-    static_assert(version(1, 2, 3).patch() == 3);
-
     /// \brief Project metadata constexpr structure.
     /// \headerfile floppy/floppy.h
     /// \ingroup helpers
@@ -115,7 +119,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       /// \param domain Project domain.
       /// \param organization Project organization.
       /// \see project_name
-      consteval project_meta(class version version, std::string_view name, std::string_view domain, std::string_view organization)
+      __force_constexpr__ project_meta(class version version, std::string_view name, std::string_view domain, std::string_view organization)
         : version_(version)
         , name_(name)
         , domain_(domain)
@@ -147,21 +151,21 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
     /// \bug When building via Conan, this variable can be defined with default values instead of
     /// actual version and target name. This will be fixed in the future releases.
     [[maybe_unused]] constexpr inline auto floppy_meta = project_meta(
-#if defined(FLOPPY_PROJECT_VERSION_MAJOR)
+      #if defined(FLOPPY_PROJECT_VERSION_MAJOR)
       version(
         FLOPPY_PROJECT_VERSION_MAJOR,
         FLOPPY_PROJECT_VERSION_MINOR,
         FLOPPY_PROJECT_VERSION_PATCH
       ),
-#else // defined(FLOPPY_PROJECT_VERSION_MAJOR)
+      #else // defined(FLOPPY_PROJECT_VERSION_MAJOR)
       version(0, 0, 0),
-#endif // defined(FLOPPY_PROJECT_VERSION_MAJOR)
+      #endif // defined(FLOPPY_PROJECT_VERSION_MAJOR)
 
-#if defined(FLOPPY_TARGET_NAME)
+      #if defined(FLOPPY_TARGET_NAME)
       std::string_view(stringify$(FLOPPY_TARGET_NAME)),
-#else // defined(FLOPPY_TARGET_NAME)
+      #else // defined(FLOPPY_TARGET_NAME)
       std::string_view("floppy"),
-#endif // defined(FLOPPY_TARGET_NAME)
+      #endif // defined(FLOPPY_TARGET_NAME)
       "io.github.whs31",
       "whs31"
     );
@@ -186,15 +190,6 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       );
       return os;
     }
-
-#if defined(FLOPPY_TARGET_NAME)
-    static_assert(floppy_meta.version().major() == FLOPPY_PROJECT_VERSION_MAJOR, "major version isn't the same");
-    static_assert(floppy_meta.version().minor() == FLOPPY_PROJECT_VERSION_MINOR, "minor version isn't the same");
-    static_assert(floppy_meta.version().patch() == FLOPPY_PROJECT_VERSION_PATCH, "patch version isn't the same");
-    static_assert(floppy_meta.name() == std::string_view(stringify$(FLOPPY_TARGET_NAME)), "project name isn't the same");
-    static_assert(floppy_meta.domain() == "io.github.whs31", "project domain isn't the same");
-    static_assert(floppy_meta.organization() == "whs31", "project organization isn't the same");
-#endif // defined(FLOPPY_TARGET_NAME)
   } // namespace meta
 } // namespace floppy
 
@@ -232,8 +227,10 @@ namespace fl = floppy; // NOLINT(*-unused-alias-decls)
 #endif // defined(NDEBUG)  || defined(QT_NO_DEBUG)
 
 #ifndef _MSC_VER
+//NOLINTNEXTLINE(*-reserved-identifier, *-identifier-naming, *-macro-usage)
 # define __noinline__ __attribute__((noinline))
 #else // !_MSC_VER
+//NOLINTNEXTLINE(*-reserved-identifier, *-identifier-naming, *-macro-usage)
 # define __noinline__ __declspec(noinline)
 #endif // !_MSC_VER
 

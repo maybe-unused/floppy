@@ -217,4 +217,4 @@ namespace floppy
      option<std::filesystem::path> runtime_dir_;
      option<std::filesystem::path> state_dir_;
   };
-} // namespace floppy::filesystem
+} // namespace floppy

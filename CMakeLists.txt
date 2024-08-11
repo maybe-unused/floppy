@@ -84,7 +84,11 @@ if(MINGW OR CYGWIN)
   endforeach()
 endif()
 
-target_compile_definitions(${PROJECT_NAME}
+if(MSVC)
+  target_compile_options(${PROJECT_NAME} PUBLIC "/Zc:__cplusplus")
+endif()
+
+  target_compile_definitions(${PROJECT_NAME}
   PUBLIC
     -DFLOPPY_TARGET_NAME=${PROJECT_NAME}
     -DFLOPPY_PROJECT_VERSION_MAJOR=${PROJECT_VERSION_MAJOR}

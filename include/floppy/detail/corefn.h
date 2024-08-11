@@ -21,8 +21,7 @@ namespace floppy
     print_helpers::critical_message("panic in file `{}` line {}", location.file_name(), location.line());
     print_helpers::critical_message("in function `{}`", location.function_name());
     print_helpers::critical_message("reason: {}", message);
-    print_helpers::critical_message("terminate will be called now.");
-    std::terminate();
+    std::quick_exit(1);
   }
 
   /// \brief Converts number type to another number type.
@@ -33,7 +32,7 @@ namespace floppy
   /// \tparam U Source number type
   /// \param u Source number value
   /// \return Converted number
-  template <concepts::num T, concepts::num U>
+  template <__wrap_concept__(concepts::num) T, __wrap_concept__(concepts::num) U>
   constexpr auto narrow_cast(U&& u) noexcept -> T {
     return static_cast<T>(std::forward<U>(u));
   }
@@ -77,145 +76,151 @@ namespace floppy
     }
   } // namespace rtti
 
-  /// \brief Generic bitwise <b>or</b> operator for enum types.
-  /// \details Requires opt-ins <code>enable_bitwise_or</code> or <code>enum_flag</code> to be defined
-  /// for the enum type.
-  /// Example:
-  /// \code {.cpp}
-  /// enum class Example {
-  ///   A = 1,
-  ///   B = 2,
-  ///   C = 4
-  /// };
-  ///
-  /// // opt-in bitwise or
-  /// void consteval enable_bitwise_or(Example);
-  ///
-  /// // alternatively, opt-in all operators
-  /// void consteval enum_flag(Example);
-  ///
-  /// auto value = Example::A | Example::B;
-  /// \endcode
-  /// \ingroup helpers
-  /// \headerfile floppy/floppy.h
-  /// \tparam T Enum type
-  /// \param lhs Left operand
-  /// \param rhs Right operand
-  /// \return Result of bitwise or operation
-  template <typename T>
-  requires(std::is_enum_v<T> and requires(T e) {
-    enable_bitwise_or(e);
-  } or requires(T e) {
-    enum_flag(e);
-  })
-  constexpr auto operator|(T const lhs, T const rhs) noexcept -> T {
-    return static_cast<T>(to_underlying(lhs) | to_underlying(rhs));
-  }
+  #if defined(FL_CXX20) || defined(FL_DOC)
+    /// \brief Generic bitwise <b>or</b> operator for enum types.
+    /// \details Requires opt-ins <code>enable_bitwise_or</code> or <code>enum_flag</code> to be defined
+    /// for the enum type.
+    /// Example:
+    /// \code {.cpp}
+    /// enum class Example {
+    ///   A = 1,
+    ///   B = 2,
+    ///   C = 4
+    /// };
+    ///
+    /// // opt-in bitwise or
+    /// void consteval enable_bitwise_or(Example);
+    ///
+    /// // alternatively, opt-in all operators
+    /// void consteval enum_flag(Example);
+    ///
+    /// auto value = Example::A | Example::B;
+    /// \endcode
+    /// \ingroup helpers
+    /// \headerfile floppy/floppy.h
+    /// \tparam T Enum type
+    /// \param lhs Left operand
+    /// \param rhs Right operand
+    /// \return Result of bitwise or operation
+    /// \invariant Available only in C++20 or older.
+    template <typename T>
+    requires(std::is_enum_v<T> and requires(T e) {
+      enable_bitwise_or(e);
+    } or requires(T e) {
+      enum_flag(e);
+    })
+    constexpr auto operator|(T const lhs, T const rhs) noexcept -> T {
+      return static_cast<T>(to_underlying(lhs) | to_underlying(rhs));
+    }
 
-  /// \brief Generic bitwise <b>and</b> operator for enum types.
-  /// \details Requires opt-ins <code>enable_bitwise_and</code> or <code>enum_flag</code> to be defined
-  /// for the enum type.
-  /// Example:
-  /// \code {.cpp}
-  /// enum class Example {
-  ///   A = 1,
-  ///   B = 2,
-  ///   C = 4
-  /// };
-  ///
-  /// // opt-in bitwise and
-  /// void consteval enable_bitwise_and(Example);
-  ///
-  /// // alternatively, opt-in all operators
-  /// void consteval enum_flag(Example);
-  ///
-  /// auto value = Example::A & Example::B;
-  /// \endcode
-  /// \ingroup helpers
-  /// \headerfile floppy/floppy.h
-  /// \tparam T Enum type
-  /// \param lhs Left operand
-  /// \param rhs Right operand
-  /// \return Result of bitwise and operation
-  template <typename T>
-  requires(std::is_enum_v<T> and requires(T e) {
-    enable_bitwise_and(e);
-  } or requires(T e) {
-    enum_flag(e);
-  })
-  constexpr auto operator&(T const lhs, T const rhs) noexcept -> T {
-    return static_cast<T>(to_underlying(lhs) & to_underlying(rhs));
-  }
+    /// \brief Generic bitwise <b>and</b> operator for enum types.
+    /// \details Requires opt-ins <code>enable_bitwise_and</code> or <code>enum_flag</code> to be defined
+    /// for the enum type.
+    /// Example:
+    /// \code {.cpp}
+    /// enum class Example {
+    ///   A = 1,
+    ///   B = 2,
+    ///   C = 4
+    /// };
+    ///
+    /// // opt-in bitwise and
+    /// void consteval enable_bitwise_and(Example);
+    ///
+    /// // alternatively, opt-in all operators
+    /// void consteval enum_flag(Example);
+    ///
+    /// auto value = Example::A & Example::B;
+    /// \endcode
+    /// \ingroup helpers
+    /// \headerfile floppy/floppy.h
+    /// \tparam T Enum type
+    /// \param lhs Left operand
+    /// \param rhs Right operand
+    /// \return Result of bitwise and operation
+    /// \invariant Available only in C++20 or older.
+    template <typename T>
+    requires(std::is_enum_v<T> and requires(T e) {
+      enable_bitwise_and(e);
+    } or requires(T e) {
+      enum_flag(e);
+    })
+    constexpr auto operator&(T const lhs, T const rhs) noexcept -> T {
+      return static_cast<T>(to_underlying(lhs) & to_underlying(rhs));
+    }
 
-  /// \brief Generic bitwise <b>xor</b> operator for enum types.
-  /// \details Requires opt-ins <code>enable_bitwise_xor</code> or <code>enum_flag</code> to be defined
-  /// for the enum type.
-  /// Example:
-  /// \code {.cpp}
-  /// enum class Example {
-  ///   A = 1,
-  ///   B = 2,
-  ///   C = 4
-  /// };
-  ///
-  /// // opt-in bitwise or
-  /// void consteval enable_bitwise_xor(Example);
-  ///
-  /// // alternatively, opt-in all operators
-  /// void consteval enum_flag(Example);
-  ///
-  /// auto value = Example::A ^ Example::B;
-  /// \endcode
-  /// \ingroup helpers
-  /// \headerfile floppy/floppy.h
-  /// \tparam T Enum type
-  /// \param lhs Left operand
-  /// \param rhs Right operand
-  /// \return Result of bitwise xor operation
-  template <typename T>
-  requires(std::is_enum_v<T> and requires(T e) {
-    enable_bitwise_xor(e);
-  } or requires(T e) {
-    enum_flag(e);
-  })
-  constexpr auto operator^(T const lhs, T const rhs) noexcept -> T {
-    return static_cast<T>(to_underlying(lhs) ^ to_underlying(rhs));
-  }
+    /// \brief Generic bitwise <b>xor</b> operator for enum types.
+    /// \details Requires opt-ins <code>enable_bitwise_xor</code> or <code>enum_flag</code> to be defined
+    /// for the enum type.
+    /// Example:
+    /// \code {.cpp}
+    /// enum class Example {
+    ///   A = 1,
+    ///   B = 2,
+    ///   C = 4
+    /// };
+    ///
+    /// // opt-in bitwise or
+    /// void consteval enable_bitwise_xor(Example);
+    ///
+    /// // alternatively, opt-in all operators
+    /// void consteval enum_flag(Example);
+    ///
+    /// auto value = Example::A ^ Example::B;
+    /// \endcode
+    /// \ingroup helpers
+    /// \headerfile floppy/floppy.h
+    /// \tparam T Enum type
+    /// \param lhs Left operand
+    /// \param rhs Right operand
+    /// \return Result of bitwise xor operation
+    /// \invariant Available only in C++20 or older.
+    template <typename T>
+    requires(std::is_enum_v<T> and requires(T e) {
+      enable_bitwise_xor(e);
+    } or requires(T e) {
+      enum_flag(e);
+    })
+    constexpr auto operator^(T const lhs, T const rhs) noexcept -> T {
+      return static_cast<T>(to_underlying(lhs) ^ to_underlying(rhs));
+    }
 
-  /// \brief Generic bitwise <b>not</b> operator for enum types.
-  /// \details Requires opt-ins <code>enable_bitwise_not</code> or <code>enum_flag</code> to be defined
-  /// for the enum type.
-  /// Example:
-  /// \code {.cpp}
-  /// enum class Example {
-  ///   A = 1,
-  ///   B = 2,
-  ///   C = 4
-  /// };
-  ///
-  /// // opt-in bitwise not
-  /// void consteval enable_bitwise_not(Example);
-  ///
-  /// // alternatively, opt-in all operators
-  /// void consteval enum_flag(Example);
-  ///
-  /// auto value = ~Example::A;
-  /// \endcode
-  /// \ingroup helpers
-  /// \headerfile floppy/floppy.h
-  /// \tparam T Enum type
-  /// \param lhs Left operand
-  /// \param rhs Right operand
-  /// \return Result of bitwise not operation
-  template <typename T>
-  requires(std::is_enum_v<T> and requires(T e) {
-    enable_bitwise_not(e);
-  } or requires(T e) {
-    enum_flag(e);
-  })
-  constexpr auto operator~(T const value) noexcept -> T {
-    return static_cast<T>(~to_underlying(value));
-  }
+    /// \brief Generic bitwise <b>not</b> operator for enum types.
+    /// \details Requires opt-ins <code>enable_bitwise_not</code> or <code>enum_flag</code> to be defined
+    /// for the enum type.
+    /// Example:
+    /// \code {.cpp}
+    /// enum class Example {
+    ///   A = 1,
+    ///   B = 2,
+    ///   C = 4
+    /// };
+    ///
+    /// // opt-in bitwise not
+    /// void consteval enable_bitwise_not(Example);
+    ///
+    /// // alternatively, opt-in all operators
+    /// void consteval enum_flag(Example);
+    ///
+    /// auto value = ~Example::A;
+    /// \endcode
+    /// \ingroup helpers
+    /// \headerfile floppy/floppy.h
+    /// \tparam T Enum type
+    /// \param lhs Left operand
+    /// \param rhs Right operand
+    /// \return Result of bitwise not operation
+    /// \invariant Available only in C++20 or older.
+    template <typename T>
+    requires(std::is_enum_v<T> and requires(T e) {
+      enable_bitwise_not(e);
+    } or requires(T e) {
+      enum_flag(e);
+    })
+    constexpr auto operator~(T const value) noexcept -> T {
+      return static_cast<T>(~to_underlying(value));
+    }
+  #endif // FL_CXX20 || FL_DOC
 } // namespace floppy
 
 /// \defgroup helpers Helpers

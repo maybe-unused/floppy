@@ -4,6 +4,7 @@
 #include <type_traits>
 #include <fmt/format.h>
 #include <tl/expected.hpp>
+#include <floppy/detail/cxx_ver.h>
 #include <floppy/detail/stdint.h>
 
 namespace floppy // NOLINT(*-concat-nested-namespaces)
@@ -29,7 +30,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \see some
     /// \see none
     /// \sa https://en.cppreference.com/w/cpp/utility/optional
-    template <std::destructible T>
+    template <__wrap_concept__(std::destructible) T>
     using option = std::optional<T>;
 
     /// \brief Types implementation details.
@@ -37,7 +38,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     {
       using tl::expected;
       using tl::unexpected;
-    } // namespace detail
+    } // namespace detail_
 
     /// \brief Expected type with default error type (<tt>std::string</tt>).
     /// \headerfile floppy/floppy.h

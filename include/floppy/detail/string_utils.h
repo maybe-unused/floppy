@@ -4,6 +4,7 @@
 #include <string_view>
 #include <algorithm>
 #include <floppy/detail/exceptions.h>
+#include <floppy/detail/cxx_ver.h>
 
 namespace floppy // NOLINT(*-concat-nested-namespaces)
 {
@@ -13,10 +14,13 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \brief Satisfied if the given type is a character type, except for <code>char8_t</code>, <code>char16_t</code> and <code>char32_t</code>.
     /// \ingroup string_utils
     /// \headerfile floppy/floppy.h
+    /// \invariant Available only in C++20 or later.
+    #if defined(FL_CXX20) || defined(FL_DOC)
     template <typename T>
     concept char_type = std::is_same_v<T, char>
       or std::is_same_v<T, unsigned char>
       or std::is_same_v<T, wchar_t>;
+    #endif
 
     /// \brief Checks if the given character is a digit.
     /// \ingroup string_utils
@@ -24,7 +28,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \tparam C The character type. Must satisfy concept \ref char_type.
     /// \param c The character to check.
     /// \returns <code>true</code> if the character is a digit, <code>false</code> otherwise.
-    template <char_type C>
+    template <__wrap_concept__(char_type) C>
     [[nodiscard]] constexpr auto is_digit(C c) -> bool {
       if constexpr(std::is_same_v<C, wchar_t>)
         return c >= L'0' and c <= L'9';
@@ -40,7 +44,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \tparam C The character type. Must satisfy concept \ref char_type.
     /// \param c The character to convert.
     /// \returns The uppercase character.
-    template <char_type C>
+    template <__wrap_concept__(char_type) C>
     [[nodiscard]] constexpr auto to_uppercase(C c) -> C {
       if constexpr(std::is_same_v<C, wchar_t>)
         return c >= L'a' and c <= L'z' ? static_cast<wchar_t>(c - L'a' + L'A') : c;
@@ -54,7 +58,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \tparam C The string's character type. Must satisfy concept \ref char_type.
     /// \param str The string to convert.
     /// \returns The uppercase string.
-    template <char_type C>
+    template <__wrap_concept__(char_type) C>
     [[nodiscard]] auto to_uppercase(std::basic_string_view<C> str) -> std::basic_string<C> {
       auto result = std::basic_string<C>();
       std::transform(str.begin(), str.end(), std::back_inserter(result), to_uppercase<C>);
@@ -67,7 +71,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \tparam C The character type. Must satisfy concept \ref char_type.
     /// \param c The character to convert.
     /// \returns The lowercase character.
-    template <char_type C>
+    template <__wrap_concept__(char_type) C>
     [[nodiscard]] constexpr auto to_lowercase(C c) -> C {
       if constexpr(std::is_same_v<C, wchar_t>)
         return c >= L'A' and c <= L'Z' ? static_cast<wchar_t>(c - L'A' + L'a') : c;
@@ -81,7 +85,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \tparam C The string's character type. Must satisfy concept \ref char_type.
     /// \param str The string to convert.
     /// \returns The lowercase string.
-    template <char_type C>
+    template <__wrap_concept__(char_type) C>
     [[nodiscard]] auto to_lowercase(std::basic_string_view<C> str) -> std::basic_string<C> {
       auto result = std::basic_string<C>();
       std::transform(str.begin(), str.end(), std::back_inserter(result), to_lowercase<C>);

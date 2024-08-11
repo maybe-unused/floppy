@@ -1,11 +1,14 @@
 #pragma once
 
 #include <memory>
-#include <compare>
 #include <stdexcept>
 #include <floppy/detail/export.h>
 #include <floppy/detail/formatters.h>
 #include <floppy/detail/concepts.h>
+
+#if defined(FL_CXX20) || defined(FL_DOC)
+# include <compare>
+#endif // FL_CXX20
 
 namespace floppy
 {
@@ -330,10 +333,23 @@ namespace floppy
   /// \param a First box.
   /// \param b Second box.
   /// \returns The result of the comparison.
+  /// \invariant Available only in C++20 or older.
+  #if defined(FL_CXX20) || defined(FL_DOC)
   template <typename T1, typename T2>
   auto operator<=>(box<T1> const& a, box<T2> const& b) {
     return a.as_unique_ptr() <=> b.as_unique_ptr();
   }
+  #else // FL_CXX20
+  template <typename T>
+  auto operator==(box<T> const& a, box<T> const& b) -> bool {
+    return a.as_unique_ptr() == b.as_unique_ptr();
+  }
+
+  template <typename T>
+  auto operator!=(box<T> const& a, box<T> const& b) -> bool {
+    return a.as_unique_ptr() != b.as_unique_ptr();
+  }
+  #endif // FL_CXX20
 
   /// \brief Prints a <tt>box</tt> to an output stream.
   /// \headerfile floppy/floppy.h

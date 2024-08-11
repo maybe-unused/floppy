@@ -198,11 +198,14 @@ namespace floppy
       [[nodiscard]] explicit operator std::basic_string<C>() const { return this->to_string(); }
     };
 
+    #if defined(FL_CXX20) || defined(FL_DOC)
     /// \brief Check if T is derived from formattable_base<C>.
     /// \tparam T Type to check.
     /// \tparam C Character type.
+    /// \invariant Available in C++20 or above.
     template <typename T, typename C>
     concept derived_from_formattable = std::is_base_of_v<formattable_base<C>, T>;
+    #endif // C++20
   } // namespace detail
 
   /// \brief Allows type to be converted to string and printed via standard streams or <b>fmt</b>.
@@ -230,7 +233,7 @@ namespace floppy
     /// \tparam C Character type.
     /// \tparam T Type to cast.
     /// \see floppy::traits::formattable
-    template <typename C, floppy::detail::derived_from_formattable<C> T>
+    template <typename C, __wrap_concept__(floppy::detail::derived_from_formattable<C>) T>
     [[nodiscard]] auto str_cast(T const& t) noexcept -> std::string {
       return static_cast<std::string>(t);
     }
@@ -240,6 +243,7 @@ namespace floppy
   /// \details If the type has method <tt>to_string</tt>, calls it. Otherwise, calls <tt>std::to_string</tt>.
   /// \tparam T Type to cast.
   /// \see detail::str_cast
+  /// \todo C++17 support
   template <typename T>
   auto string_cast(T const& t) -> std::string
   requires std::is_same_v<decltype(std::declval<T const&>().to_string()), std::string> {
@@ -250,6 +254,7 @@ namespace floppy
   /// \details Specialization for method <tt>std::to_string</tt>.
   /// \tparam T Type to cast.
   /// \see detail::str_cast
+  /// \todo C++17 support
   template <typename T>
   auto string_cast(T const& t) -> std::string
   requires std::is_same_v<decltype(std::to_string(std::declval<T&>())), std::string> {
@@ -279,8 +284,9 @@ namespace floppy
 /// \headerfile floppy/traits.h
 /// \deprecated Removed due to ambiguity with <tt>fmt</tt> impaired with <tt>spdlog</tt> library.
 
-/// \brief Formatter for types which derives from <tt>formattable_base<char></tt>.
-template <floppy::detail::derived_from_formattable<char> T>
+/// \brief Formatter for types which derives from <tt>formattable_base<char></tt>
+/// \todo C++17 support.
+template <__wrap_concept__(floppy::detail::derived_from_formattable<char>) T>
 struct [[maybe_unused]] fmt::formatter<T>
 {
   /// \brief Required by <tt>fmt</tt>.
