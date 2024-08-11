@@ -1,0 +1,11 @@
+<map id="StackTraceImplHolder" name="StackTraceImplHolder">
+<area shape="rect" id="Node000001" title=" " alt="" coords="51,271,214,297"/>
+<area shape="rect" id="Node000002" href="$classbackward_1_1StackTraceImplBase.html" title=" " alt="" coords="5,183,159,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,220,128,270,123,272,94,223"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="182,183,305,208"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,220,150,273,147,269,215,216"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="196,94,291,120"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="246,135,246,182,241,182,241,135"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="224,5,263,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="246,47,246,94,241,94,241,47"/>
+</map>

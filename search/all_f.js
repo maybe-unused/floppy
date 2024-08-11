@@ -22,11 +22,12 @@ var searchData=
   ['powerpc_19',['powerpc',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ab2e2e41d11017681a62980c1762a4de8',1,'floppy::platform']]],
   ['preference_5fdir_20',['preference_dir',['../classfloppy_1_1application__dirs.html#a101ffce456ccf4276f0ba9d022a65aff',1,'floppy::application_dirs']]],
   ['preferences_21',['preferences',['../classfloppy_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a1ce027fe3518cc64ef3570b50a9a7c10',1,'floppy::application_dirs']]],
-  ['project_22',['project',['../classfloppy_1_1math_1_1vector2d.html#ae0b17b38d47866c22c3b1ef76a7081f2',1,'floppy::math::vector2d']]],
-  ['project_5fmeta_23',['project_meta',['../classfloppy_1_1meta_1_1project__meta.html',1,'project_meta'],['../classfloppy_1_1meta_1_1project__meta.html#aa78e91b1785f8ee1dce291227879dc9a',1,'floppy::meta::project_meta::project_meta()']]],
-  ['project_5fpath_24',['project_path',['../classfloppy_1_1application__dirs.html#a1a270c8866054abf1c0c92d573aa200f',1,'floppy::application_dirs']]],
-  ['propagate_5fconst_25',['propagate_const',['../classfloppy_1_1propagate__const.html',1,'floppy']]],
-  ['ptr_26',['ptr',['../classfloppy_1_1box.html#a6468c65e52fd3919a4325f4995ce0860',1,'floppy::box::ptr()'],['../structfloppy_1_1singleton.html#a3668e49f287d02953577eeb995ab64e2',1,'floppy::singleton::ptr()']]],
-  ['ptr_5fmut_27',['ptr_mut',['../classfloppy_1_1box.html#a6b5fe10ebe4c41e8879f1622581d258b',1,'floppy::box::ptr_mut()'],['../structfloppy_1_1singleton.html#afce897b3503cc4e00c72624f156c04d2',1,'floppy::singleton::ptr_mut()']]],
-  ['pyramid_28',['pyramid',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a437233c74e25fe505293cd2e8ecc2696',1,'floppy::platform']]]
+  ['printer_22',['Printer',['../classbackward_1_1Printer.html',1,'backward']]],
+  ['project_23',['project',['../classfloppy_1_1math_1_1vector2d.html#ae0b17b38d47866c22c3b1ef76a7081f2',1,'floppy::math::vector2d']]],
+  ['project_5fmeta_24',['project_meta',['../classfloppy_1_1meta_1_1project__meta.html',1,'project_meta'],['../classfloppy_1_1meta_1_1project__meta.html#aa78e91b1785f8ee1dce291227879dc9a',1,'floppy::meta::project_meta::project_meta()']]],
+  ['project_5fpath_25',['project_path',['../classfloppy_1_1application__dirs.html#a1a270c8866054abf1c0c92d573aa200f',1,'floppy::application_dirs']]],
+  ['propagate_5fconst_26',['propagate_const',['../classfloppy_1_1propagate__const.html',1,'floppy']]],
+  ['ptr_27',['ptr',['../classfloppy_1_1box.html#a6468c65e52fd3919a4325f4995ce0860',1,'floppy::box::ptr()'],['../structfloppy_1_1singleton.html#a3668e49f287d02953577eeb995ab64e2',1,'floppy::singleton::ptr()']]],
+  ['ptr_5fmut_28',['ptr_mut',['../classfloppy_1_1box.html#a6b5fe10ebe4c41e8879f1622581d258b',1,'floppy::box::ptr_mut()'],['../structfloppy_1_1singleton.html#afce897b3503cc4e00c72624f156c04d2',1,'floppy::singleton::ptr_mut()']]],
+  ['pyramid_29',['pyramid',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a437233c74e25fe505293cd2e8ecc2696',1,'floppy::platform']]]
 ];

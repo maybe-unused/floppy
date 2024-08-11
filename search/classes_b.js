@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['scale_0',['scale',['../structfloppy_1_1math_1_1scale.html',1,'floppy::math']]],
-  ['serialization_5ferror_1',['serialization_error',['../classfloppy_1_1serialization_1_1serialization__error.html',1,'floppy::serialization']]],
-  ['singleton_2',['singleton',['../structfloppy_1_1singleton.html',1,'floppy']]],
-  ['size2d_3',['size2d',['../classfloppy_1_1math_1_1size2d.html',1,'floppy::math']]],
-  ['source_5flocation_4',['source_location',['../structfloppy_1_1source__location.html',1,'floppy']]]
+  ['resolvedtrace_0',['ResolvedTrace',['../structbackward_1_1ResolvedTrace.html',1,'backward']]],
+  ['rm_5fptr_1',['rm_ptr',['../structbackward_1_1details_1_1rm__ptr.html',1,'backward::details']]],
+  ['rm_5fptr_3c_20const_20t_20_2a_20_3e_2',['rm_ptr&lt; const T * &gt;',['../structbackward_1_1details_1_1rm__ptr_3_01const_01T_01_5_01_4.html',1,'backward::details']]],
+  ['rm_5fptr_3c_20t_20_2a_20_3e_3',['rm_ptr&lt; T * &gt;',['../structbackward_1_1details_1_1rm__ptr_3_01T_01_5_01_4.html',1,'backward::details']]]
 ];

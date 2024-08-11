@@ -134,29 +134,41 @@ $(function(){initNavTree('backtrace_8h_source.html',''); initResizable(); });
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;backward.hpp&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;floppy/detail/export.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespacefloppy.html">   10</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy_1_1stacktrace.html">floppy::stacktrace</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacefloppy_1_1stacktrace.html#a40566c93965309ed528d4ae6ae14784f">   13</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="namespacefloppy_1_1stacktrace.html#a40566c93965309ed528d4ae6ae14784f">signal_handler</a> = backward::SignalHandling;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keyword">using </span>trace = backward::Trace;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keyword">using </span>resolved_trace = backward::ResolvedTrace;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keyword">using </span>stack_trace = backward::StackTrace;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">using </span>trace_resolver = backward::TraceResolver;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">using </span>source_file = backward::SourceFile;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keyword">using </span>snippet_factory = backward::SnippetFactory;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">using </span>printer = backward::Printer;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">using </span>colorize = backward::Colorize;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">namespace </span>color = backward::Color; <span class="comment">// NOLINT(*-unused-alias-decls)</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">namespace </span>color_mode = backward::ColorMode; <span class="comment">// NOLINT(*-unused-alias-decls)</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <span class="comment">// namespace floppy::stacktrace</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;floppy/floppy.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#define BACKWARD_HAS_BACKTRACE 1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#if defined(FLOPPY_OS_WINDOWS)</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor"># define BACKWARD_HAS_DW 1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#endif </span><span class="comment">// FLOPPY_OS_WINDOWS</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;backward.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacefloppy.html">   14</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy_1_1stacktrace.html">floppy::stacktrace</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keyword">using </span>signal_handler = <a class="code hl_class" href="classbackward_1_1SignalHandling.html">backward::SignalHandling</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">using </span>trace = <a class="code hl_struct" href="structbackward_1_1Trace.html">backward::Trace</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">using </span>resolved_trace = <a class="code hl_struct" href="structbackward_1_1ResolvedTrace.html">backward::ResolvedTrace</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keyword">using </span>stack_trace = <a class="code hl_class" href="classbackward_1_1StackTrace.html">backward::StackTrace</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">using </span>trace_resolver = <a class="code hl_class" href="classbackward_1_1TraceResolver.html">backward::TraceResolver</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">using </span>source_file = <a class="code hl_class" href="classbackward_1_1SourceFile.html">backward::SourceFile</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">using </span>snippet_factory = <a class="code hl_class" href="classbackward_1_1SnippetFactory.html">backward::SnippetFactory</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">using </span>printer = <a class="code hl_class" href="classbackward_1_1Printer.html">backward::Printer</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">using </span>colorize = <a class="code hl_class" href="classbackward_1_1Colorize.html">backward::Colorize</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keyword">namespace </span>color = backward::Color; <span class="comment">// NOLINT(*-unused-alias-decls)</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keyword">namespace </span>color_mode = backward::ColorMode; <span class="comment">// NOLINT(*-unused-alias-decls)</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// namespace floppy::stacktrace</span></div>
 </div>
-<div class="ttc" id="anamespacefloppy_1_1stacktrace_html"><div class="ttname"><a href="namespacefloppy_1_1stacktrace.html">floppy::stacktrace</a></div><div class="ttdoc">Stacktrace namespace.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">backtrace.h:11</a></div></div>
-<div class="ttc" id="anamespacefloppy_1_1stacktrace_html_a40566c93965309ed528d4ae6ae14784f"><div class="ttname"><a href="namespacefloppy_1_1stacktrace.html#a40566c93965309ed528d4ae6ae14784f">floppy::stacktrace::signal_handler</a></div><div class="ttdeci">backward::SignalHandling signal_handler</div><div class="ttdoc">Main.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">backtrace.h:13</a></div></div>
+<div class="ttc" id="aclassbackward_1_1Colorize_html"><div class="ttname"><a href="classbackward_1_1Colorize.html">backward::Colorize</a></div><div class="ttdef"><b>Definition</b> <a href="backward_8hpp_source.html#l03988">backward.hpp:3988</a></div></div>
+<div class="ttc" id="aclassbackward_1_1Printer_html"><div class="ttname"><a href="classbackward_1_1Printer.html">backward::Printer</a></div><div class="ttdef"><b>Definition</b> <a href="backward_8hpp_source.html#l03998">backward.hpp:3998</a></div></div>
+<div class="ttc" id="aclassbackward_1_1SignalHandling_html"><div class="ttname"><a href="classbackward_1_1SignalHandling.html">backward::SignalHandling</a></div><div class="ttdef"><b>Definition</b> <a href="backward_8hpp_source.html#l04485">backward.hpp:4485</a></div></div>
+<div class="ttc" id="aclassbackward_1_1SnippetFactory_html"><div class="ttname"><a href="classbackward_1_1SnippetFactory.html">backward::SnippetFactory</a></div><div class="ttdef"><b>Definition</b> <a href="backward_8hpp_source.html#l03847">backward.hpp:3847</a></div></div>
+<div class="ttc" id="aclassbackward_1_1SourceFile_html"><div class="ttname"><a href="classbackward_1_1SourceFile.html">backward::SourceFile</a></div><div class="ttdef"><b>Definition</b> <a href="backward_8hpp_source.html#l03699">backward.hpp:3699</a></div></div>
+<div class="ttc" id="aclassbackward_1_1StackTrace_html"><div class="ttname"><a href="classbackward_1_1StackTrace.html">backward::StackTrace</a></div><div class="ttdef"><b>Definition</b> <a href="backward_8hpp_source.html#l01223">backward.hpp:1223</a></div></div>
+<div class="ttc" id="aclassbackward_1_1TraceResolver_html"><div class="ttname"><a href="classbackward_1_1TraceResolver.html">backward::TraceResolver</a></div><div class="ttdef"><b>Definition</b> <a href="backward_8hpp_source.html#l03695">backward.hpp:3695</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1stacktrace_html"><div class="ttname"><a href="namespacefloppy_1_1stacktrace.html">floppy::stacktrace</a></div><div class="ttdoc">Stacktrace namespace.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">backtrace.h:15</a></div></div>
+<div class="ttc" id="astructbackward_1_1ResolvedTrace_html"><div class="ttname"><a href="structbackward_1_1ResolvedTrace.html">backward::ResolvedTrace</a></div><div class="ttdef"><b>Definition</b> <a href="backward_8hpp_source.html#l00676">backward.hpp:676</a></div></div>
+<div class="ttc" id="astructbackward_1_1Trace_html"><div class="ttname"><a href="structbackward_1_1Trace.html">backward::Trace</a></div><div class="ttdef"><b>Definition</b> <a href="backward_8hpp_source.html#l00667">backward.hpp:667</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

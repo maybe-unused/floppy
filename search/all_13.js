@@ -36,10 +36,16 @@ var searchData=
   ['to_5fvector2d_33',['to_vector2d',['../classfloppy_1_1math_1_1point2d.html#ace85064cd93ef68c5b2c81b4c71f9091',1,'floppy::math::point2d::to_vector2d()'],['../classfloppy_1_1math_1_1size2d.html#ace85064cd93ef68c5b2c81b4c71f9091',1,'floppy::math::size2d::to_vector2d()']]],
   ['todo_20list_34',['Todo List',['../todo.html',1,'']]],
   ['toml_35',['toml',['../group__serialization.html#ggaab5efc62e072f3561d45db61e0c83b85aec18ad9a83c312380533fa93ac6fc61c',1,'floppy::serialization']]],
-  ['trace_36',['trace',['../group__logging.html#ga1958617b608e95656ef732069cb6a51f',1,'floppy::log']]],
-  ['trace_5fto_37',['trace_to',['../group__logging.html#gafe5b43f7e92b1290fa979606a9d8bd59',1,'floppy::log']]],
-  ['traits_38',['Traits',['../group__traits.html',1,'']]],
-  ['two_5fpi_39',['two_pi',['../structfloppy_1_1math_1_1angle.html#a8bf55a1f1d6b12c00a1a412d55e114d3',1,'floppy::math::angle']]],
-  ['type_40',['type',['../group__helpers.html#ab74e5607b5fabad62e6c021d4fca6b4d',1,'floppy::plain_type']]],
-  ['type_5fname_41',['type_name',['../group__helpers.html#gaece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
+  ['trace_36',['Trace',['../structbackward_1_1Trace.html',1,'backward']]],
+  ['trace_37',['trace',['../group__logging.html#ga1958617b608e95656ef732069cb6a51f',1,'floppy::log']]],
+  ['trace_5fto_38',['trace_to',['../group__logging.html#gafe5b43f7e92b1290fa979606a9d8bd59',1,'floppy::log']]],
+  ['traceresolver_39',['TraceResolver',['../classbackward_1_1TraceResolver.html',1,'backward']]],
+  ['traceresolverimpl_40',['TraceResolverImpl',['../classbackward_1_1TraceResolverImpl.html',1,'backward']]],
+  ['traceresolverimpl_3c_20system_5ftag_3a_3acurrent_5ftag_20_3e_41',['TraceResolverImpl&lt; system_tag::current_tag &gt;',['../classbackward_1_1TraceResolverImpl.html',1,'backward']]],
+  ['traceresolverimpl_3c_20system_5ftag_3a_3aunknown_5ftag_20_3e_42',['TraceResolverImpl&lt; system_tag::unknown_tag &gt;',['../classbackward_1_1TraceResolverImpl_3_01system__tag_1_1unknown__tag_01_4.html',1,'backward']]],
+  ['traceresolverimplbase_43',['TraceResolverImplBase',['../classbackward_1_1TraceResolverImplBase.html',1,'backward']]],
+  ['traits_44',['Traits',['../group__traits.html',1,'']]],
+  ['two_5fpi_45',['two_pi',['../structfloppy_1_1math_1_1angle.html#a8bf55a1f1d6b12c00a1a412d55e114d3',1,'floppy::math::angle']]],
+  ['type_46',['type',['../group__helpers.html#ab74e5607b5fabad62e6c021d4fca6b4d',1,'floppy::plain_type']]],
+  ['type_5fname_47',['type_name',['../group__helpers.html#gaece47fc7440ee1c5e315c2b6c754f607',1,'floppy::rtti']]]
 ];
