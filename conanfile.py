@@ -37,7 +37,6 @@ class FloppyRecipe(ConanFile):
         self.requires("fmt/[^10.1.0]", transitive_headers=True, transitive_libs=True)
         self.requires("spdlog/1.13.0", transitive_headers=True, transitive_libs=True)
         self.requires("tl-expected/20190710", transitive_headers=True, transitive_libs=True)
-        #self.requires("backward-cpp/1.6", transitive_headers=True, transitive_libs=True)
         if self.settings.os != "Windows":
             self.requires("elfutils/0.190", transitive_headers=True, transitive_libs=True)
         if self.options.test:
@@ -54,9 +53,6 @@ class FloppyRecipe(ConanFile):
     def configure(self):
         self.options["spdlog/*"].shared = True
         self.options["fmt/*"].shared = True
-        # self.options["backward-cpp/*"].header_only = True
-        # self.options["backward-cpp/*"].stack_walking = 'backtrace'
-        # self.options["backward-cpp/*"].stack_details = 'dw'
 
     def generate(self):
         deps = CMakeDeps(self)
