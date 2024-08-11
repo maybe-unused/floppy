@@ -3,7 +3,7 @@
 #include <floppy/stacktrace.h>
 #include "obj.hh"
 
-[[maybe_unused]] fl::stacktrace::signal_handler sh;
+[[maybe_unused]] fl::stacktrace::signal_watcher sw;
 
 auto bad_boy() -> void {
   char* x = nullptr;
