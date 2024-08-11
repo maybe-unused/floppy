@@ -157,29 +157,24 @@ namespace floppy
      public:
       /// \brief Returns current source location.
       /// \note Returns actual current source location only if called with default arguments.
+      static constexpr auto current(
   #if not defined(__apple_build_version__) and defined(__clang__) and (__clang_major__ >= 9)
-      static consteval auto current(
         char const* file = __builtin_FILE(),
         char const* function = __builtin_FUNCTION(),
         uint_least32_t line = __builtin_LINE(),
         uint_least32_t column = __builtin_COLUMN()
-          ) noexcept -> source_location
   #elif defined(__GNUC__) and (__GNUC__ > 4 or (__GNUC__ == 4 and __GNUC_MINOR__ >= 8))
-      static consteval auto current(
         char const* file = __builtin_FILE(),
         char const* function = __builtin_FUNCTION(),
         uint_least32_t line = __builtin_LINE(),
         uint_least32_t column = 0
-        ) noexcept -> source_location
   #else // compiler
-      static consteval auto current(
         char const* file = UNKNOWN,
         char const* function = UNKNOWN,
         uint_least32_t line = 0,
         uint_least32_t column = 0
-        ) noexcept -> source_location
   #endif // compiler
-      {
+      ) noexcept -> source_location {
         return { file, line, function, column };
       }
 
@@ -190,7 +185,6 @@ namespace floppy
       uint_least32_t column_;
 
      public:
-
       /// \brief Creates an empty invalid source_location.
       constexpr source_location() noexcept
         : file_(UNKNOWN)
