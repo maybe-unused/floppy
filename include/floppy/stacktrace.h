@@ -4,7 +4,6 @@
 #include <cstdlib>
 #include <csignal>
 #include <new>
-#include <sstream>
 #include <streambuf>
 #include <exception>
 #include <floppy/backtrace/trace_resolver_tag.h>
@@ -13,6 +12,8 @@
 #include <floppy/backtrace/snippet_factory.h>
 #include <floppy/backtrace/stack_trace.h>
 #include <floppy/backtrace/printer.h>
+#include <floppy/backtrace/file.h>
+#include <floppy/traits.h>
 #if defined(FLOPPY_OS_WINDOWS)
 # include <condition_variable>
 # include <mutex>
@@ -27,34 +28,43 @@
 /// \sa https://github.com/bombela/backward-cpp
 namespace floppy::stacktrace
 {
-  class signal_watcher {
-  public:
-   explicit signal_watcher(
-     [[maybe_unused]] std::vector<int> const& posix_signals =
-      #if defined(FLOPPY_OS_LINUX) || defined(FLOPPY_OS_DARWIN)
-       impl::make_default_signals()
-      #else // FLOPPY_OS_LINUX || FLOPPY_OS_DARWIN
-       std::vector<int>()
-      #endif // FLOPPY_OS_LINUX || FLOPPY_OS_DARWIN
-   )
-    #if defined(FLOPPY_OS_LINUX) || defined(FLOPPY_OS_DARWIN)
-     : _loaded(false)
-    #elif defined(FLOPPY_OS_WINDOWS)
-     : reporter_thread_([]() {
-       {
-         std::unique_lock<std::mutex> lk(mtx());
-         cv().wait(lk, [] { return signal_watcher::crashed() != crash_status::running; });
-       }
-       if(crashed() == crash_status::crashed)
-         signal_watcher::handle_stacktrace(skip_recs());
-       {
-         std::unique_lock<std::mutex> const lk(mtx());
-         signal_watcher::crashed() = crash_status::ending;
-       }
-       cv().notify_one();
-     })
-    #endif // FLOPPY_OS_LINUX || FLOPPY_OS_DARWIN
+  enum class crash_behavior
+  {
+    print_to_console,
+    print_to_file,
+    print_all
+  };
 
+  template <auto Behavior>
+  requires std::is_same_v<decltype(Behavior), crash_behavior>
+  class signal_watcher : pin
+  {
+   public:
+    explicit signal_watcher(
+      [[maybe_unused]] std::vector<int> const& posix_signals =
+       #if defined(FLOPPY_OS_LINUX) || defined(FLOPPY_OS_DARWIN)
+        impl::make_default_signals()
+       #else // FLOPPY_OS_LINUX || FLOPPY_OS_DARWIN
+        std::vector<int>()
+       #endif // FLOPPY_OS_LINUX || FLOPPY_OS_DARWIN
+    )
+      #if defined(FLOPPY_OS_LINUX) || defined(FLOPPY_OS_DARWIN)
+       : _loaded(false)
+      #elif defined(FLOPPY_OS_WINDOWS)
+       : reporter_thread_([]() {
+         {
+           std::unique_lock<std::mutex> lk(mtx());
+           cv().wait(lk, [] { return signal_watcher::crashed() != crash_status::running; });
+         }
+         if(crashed() == crash_status::crashed)
+           signal_watcher::handle_stacktrace(skip_recs());
+         {
+           std::unique_lock<std::mutex> const lk(mtx());
+           signal_watcher::crashed() = crash_status::ending;
+         }
+         cv().notify_one();
+       })
+      #endif // FLOPPY_OS_LINUX || FLOPPY_OS_DARWIN
    {
     #if defined(FLOPPY_OS_LINUX) || defined(FLOPPY_OS_DARWIN)
       bool success = true;
@@ -171,10 +181,12 @@ namespace floppy::stacktrace
 
      impl::printer printer_;
      printer_.address = true;
-     printer_.print(st, stderr);
+     if constexpr(Behavior == crash_behavior::print_to_console or Behavior == crash_behavior::print_all)
+       printer_.print(st, stderr);
+     if constexpr(Behavior == crash_behavior::print_to_file or Behavior == crash_behavior::print_all)
+       printer_.print(st, impl::make_crash_report_path());
 
-    #if (defined(_XOPEN_SOURCE) && _XOPEN_SOURCE >= 700) || \
-      (defined(_POSIX_C_SOURCE) && _POSIX_C_SOURCE >= 200809L)
+    #if (defined(_XOPEN_SOURCE) && _XOPEN_SOURCE >= 700) || (defined(_POSIX_C_SOURCE) && _POSIX_C_SOURCE >= 200809L)
      psiginfo(info, nullptr);
     #else
      (void)info;
@@ -305,18 +317,12 @@ namespace floppy::stacktrace
      st.load_here(32 + skip_frames, ctx());
      st.skip_n_firsts(skip_frames);
      p.address = true;
-     p.print(st, stderr);
+
+     if constexpr(Behavior == crash_behavior::print_to_console or Behavior == crash_behavior::print_all)
+       p.print(st, stderr);
+     if constexpr(Behavior == crash_behavior::print_to_file or Behavior == crash_behavior::print_all)
+       p.print(st, impl::make_crash_report_path());
    }
   #endif // FLOPPY_OS_LINUX || FLOPPY_OS_DARWIN
   };
-
-//  [[maybe_unused]] [[nodiscard]] auto make_crash_report_path(std::filesystem::path const& folder = std::filesystem::current_path()) -> std::filesystem::path {
-//    if(not std::filesystem::exists(folder))
-//      std::filesystem::create_directories(folder);
-//    auto current_time = std::chrono::system_clock::now();
-//    auto time = std::chrono::system_clock::to_time_t(current_time);
-//    std::stringstream ss;
-//    ss << std::put_time(std::localtime(&time), "%Y-%m-%d_%H-%M-%S");
-//    return folder / ("crashdump_" + ss.str() + ".log");
-//  }
 } // namespace floppy::stacktrace
