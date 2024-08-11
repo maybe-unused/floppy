@@ -52,23 +52,23 @@ namespace floppy::stacktrace
                                   sizeof posix_signals / sizeof posix_signals[0]);
     }
 
-    signal_watcher(const std::vector<int> &posix_signals = make_default_signals())
-        : _loaded(false) {
+    signal_watcher(std::filesystem::path const& path = std::filesystem::path(), const std::vector<int> &posix_signals = make_default_signals())
+        : _loaded(false)
+        , _path(path) {
       bool success = true;
 
       const size_t stack_size = 1024 * 1024 * 8;
       _stack_content.reset(static_cast<char *>(malloc(stack_size)));
-      if (_stack_content) {
+      if(_stack_content) {
         stack_t ss;
         ss.ss_sp = _stack_content.get();
         ss.ss_size = stack_size;
         ss.ss_flags = 0;
-        if (sigaltstack(&ss, nullptr) < 0) {
+        if(sigaltstack(&ss, nullptr) < 0)
           success = false;
-        }
-      } else {
+      } else
         success = false;
-      }
+
 
       for (size_t i = 0; i < posix_signals.size(); ++i) {
         struct sigaction action;
@@ -140,6 +140,8 @@ namespace floppy::stacktrace
       impl::printer printer_;
       printer_.address = true;
       printer_.print(st, stderr);
+      if(this->_path != std::filesystem::path())
+        printer_.print(this->_path, out);
 
   #if (defined(_XOPEN_SOURCE) && _XOPEN_SOURCE >= 700) || \
       (defined(_POSIX_C_SOURCE) && _POSIX_C_SOURCE >= 200809L)
@@ -151,6 +153,7 @@ namespace floppy::stacktrace
 
   private:
     details::handle<char *> _stack_content;
+    std::filesystem::path _path;
     bool _loaded;
 
   #ifdef __GNUC__
@@ -173,14 +176,17 @@ namespace floppy::stacktrace
   #ifdef FLOPPY_OS_WINDOWS
   class signal_watcher {
   public:
-   explicit(false) signal_watcher(std::vector<int> const& = std::vector<int>())
-        : reporter_thread_([]() {
+   explicit(false) signal_watcher(
+     std::filesystem::path const& path = std::filesystem::path(),
+     [[maybe_unused]] std::vector<int> const& unused = std::vector<int>()
+   )
+        : reporter_thread_([path]() {
             {
               std::unique_lock<std::mutex> lk(mtx());
               cv().wait(lk, [] { return crashed() != crash_status::running; });
             }
             if(crashed() == crash_status::crashed)
-              signal_watcher::handle_stacktrace(skip_recs());
+              signal_watcher::handle_stacktrace(path, skip_recs());
             {
               std::unique_lock<std::mutex> const lk(mtx());
               signal_watcher::crashed() = crash_status::ending;
@@ -308,7 +314,7 @@ namespace floppy::stacktrace
       }
     }
 
-    static auto handle_stacktrace(int skip_frames = 0) -> void {
+    static auto handle_stacktrace(std::filesystem::path const& path, int skip_frames = 0) -> void {
       auto p = impl::printer();
       auto st = impl::stack_trace();
       st.set_machine_type(p.resolver().machine_type());
@@ -317,6 +323,8 @@ namespace floppy::stacktrace
       st.skip_n_firsts(skip_frames);
       p.address = true;
       p.print(st, stderr);
+      if(not path.empty())
+        p.print(st, path);
     }
   };
 
@@ -325,9 +333,19 @@ namespace floppy::stacktrace
   class signal_watcher
   {
     public:
-     signal_watcher(std::vector<int> const& = std::vector<int>()) {}
+     signal_watcher(std::filesystem::path const& path = std::filesystem::path(), std::vector<int> const& = std::vector<int>()) {}
      [[nodiscard]] auto init() -> bool { return false; }
      [[nodiscard]] auto loaded() -> bool { return false; }
   };
   #endif // FLOPPY_OS_UNKNOWN
+
+  [[maybe_unused]] [[nodiscard]] auto make_crash_report_path(std::filesystem::path const& folder = std::filesystem::current_path()) -> std::filesystem::path {
+    if(not std::filesystem::exists(folder))
+      std::filesystem::create_directories(folder);
+    auto current_time = std::chrono::system_clock::now();
+    auto time = std::chrono::system_clock::to_time_t(current_time);
+    std::stringstream ss;
+    ss << std::put_time(std::localtime(&time), "%Y-%m-%d_%H-%M-%S");
+    return folder / ("crashdump_" + ss.str() + ".log");
+  }
 } // namespace floppy::stacktrace
