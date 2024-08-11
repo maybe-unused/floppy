@@ -15,6 +15,7 @@
 #include <floppy/backtrace/demangle.h>
 #include <floppy/backtrace/trace.h>
 #include <floppy/backtrace/resolved_trace.h>
+#include <floppy/backtrace/source_file.h>
 #include <floppy/floppy.h>
 #if defined(FLOPPY_OS_LINUX)
 # include <cxxabi.h>
@@ -843,140 +844,6 @@ class trace_resolver : public TraceResolverImpl<system_tag::current> {};
 
 /*************** CODE SNIPPET ***************/
 
-class source_file {
-public:
-  typedef std::vector<std::pair<unsigned, std::string> > lines_t;
-
-  source_file() {}
-  source_file(const std::string &path) {
-    // 1. If BACKWARD_CXX_SOURCE_PREFIXES is set then assume it contains
-    //    a colon-separated list of path prefixes.  Try prepending each
-    //    to the given path until a valid file is found.
-    const std::vector<std::string> &prefixes = get_paths_from_env_variable();
-    for (size_t i = 0; i < prefixes.size(); ++i) {
-      // Double slashes (//) should not be a problem.
-      std::string new_path = prefixes[i] + '/' + path;
-      _file.reset(new std::ifstream(new_path.c_str()));
-      if (is_open())
-        break;
-    }
-    // 2. If no valid file found then fallback to opening the path as-is.
-    if (not _file || !is_open()) {
-      _file.reset(new std::ifstream(path.c_str()));
-    }
-  }
-  bool is_open() const { return _file->is_open(); }
-
-  lines_t &get_lines(unsigned line_start, unsigned line_count, lines_t &lines) {
-    using namespace std;
-    // This function make uses of the dumbest algo ever:
-    //	1) seek(0)
-    //	2) read lines one by one and discard until line_start
-    //	3) read line one by one until line_start + line_count
-    //
-    // If you are getting snippets many times from the same file, it is
-    // somewhat a waste of CPU, feel free to benchmark and propose a
-    // better solution ;)
-
-    _file->clear();
-    _file->seekg(0);
-    string line;
-    unsigned line_idx;
-
-    for (line_idx = 1; line_idx < line_start; ++line_idx) {
-      std::getline(*_file, line);
-      if (!*_file) {
-        return lines;
-      }
-    }
-
-    // think of it like a lambda in C++98 ;)
-    // but look, I will reuse it two times!
-    // What a good boy am I.
-    struct isspace {
-      bool operator()(char c) { return std::isspace(c); }
-    };
-
-    bool started = false;
-    for (; line_idx < line_start + line_count; ++line_idx) {
-      getline(*_file, line);
-      if (!*_file) {
-        return lines;
-      }
-      if (!started) {
-        if (std::find_if(line.begin(), line.end(), not_isspace()) == line.end())
-          continue;
-        started = true;
-      }
-      lines.push_back(make_pair(line_idx, line));
-    }
-
-    lines.erase(
-        std::find_if(lines.rbegin(), lines.rend(), not_isempty()).base(),
-        lines.end());
-    return lines;
-  }
-
-  lines_t get_lines(unsigned line_start, unsigned line_count) {
-    lines_t lines;
-    return get_lines(line_start, line_count, lines);
-  }
-
-  // there is no find_if_not in C++98, lets do something crappy to
-  // workaround.
-  struct not_isspace {
-    bool operator()(char c) { return !std::isspace(c); }
-  };
-  // and define this one here because C++98 is not happy with local defined
-  // struct passed to template functions, fuuuu.
-  struct not_isempty {
-    bool operator()(const lines_t::value_type &p) {
-      return !(std::find_if(p.second.begin(), p.second.end(), not_isspace()) ==
-               p.second.end());
-    }
-  };
-
-  void swap(source_file &b) { _file.swap(b._file); }
-
-  source_file(source_file &&from) : _file(nullptr) { swap(from); }
-  source_file &operator=(source_file &&from) {
-    swap(from);
-    return *this;
-  }
-
-  // Allow adding to paths gotten from BACKWARD_CXX_SOURCE_PREFIXES after loading the
-  // library; this can be useful when the library is loaded when the locations are unknown
-  // Warning: Because this edits the static paths variable, it is *not* intrinsiclly thread safe
-  static void add_paths_to_env_variable_impl(const std::string & to_add) {
-    get_mutable_paths_from_env_variable().push_back(to_add);
-  }
-
-private:
-  details::handle<std::ifstream *, default_delete<std::ifstream *> >
-      _file;
-
-  static std::vector<std::string> get_paths_from_env_variable_impl() {
-    std::vector<std::string> paths;
-    const char *prefixes_str = std::getenv("BACKWARD_CXX_SOURCE_PREFIXES");
-    if (prefixes_str && prefixes_str[0]) {
-      paths = details::split_source_prefixes(prefixes_str);
-    }
-    return paths;
-  }
-
-  static std::vector<std::string> &get_mutable_paths_from_env_variable() {
-    static volatile std::vector<std::string> paths = get_paths_from_env_variable_impl();
-    return const_cast<std::vector<std::string>&>(paths);
-  }
-
-  static const std::vector<std::string> &get_paths_from_env_variable() {
-    return get_mutable_paths_from_env_variable();
-  }
-
-  source_file(const source_file &) = delete;
-  source_file &operator=(const source_file &) = delete;
-};
-
 class snippet_factory {
 public:
   typedef source_file::lines_t lines_t;
@@ -997,7 +864,7 @@ public:
 
     lines_t lines =
         src_file_a.get_lines(line_a - context_size / 4, context_size / 2);
-    src_file_b.get_lines(line_b - context_size / 4, context_size / 2, lines);
+    std::ignore = src_file_b.get_lines(line_b - context_size / 4, context_size / 2, lines);
     return lines;
   }
 
@@ -1015,7 +882,7 @@ public:
     }
 
     lines_t lines = src_file.get_lines(a - context_size / 4, context_size / 2);
-    src_file.get_lines(b - context_size / 4, context_size / 2, lines);
+    std::ignore = src_file.get_lines(b - context_size / 4, context_size / 2, lines);
     return lines;
   }
 
