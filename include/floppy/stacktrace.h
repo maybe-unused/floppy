@@ -3,7 +3,6 @@
 #include <cctype>
 #include <cstdio>
 #include <cstdlib>
-#include <fstream>
 #include <new>
 #include <sstream>
 #include <streambuf>
@@ -11,11 +10,9 @@
 #include <iterator>
 #include <unordered_map>
 #include <floppy/backtrace/trace_resolver_tag.h>
-#include <floppy/backtrace/handle.h>
-#include <floppy/backtrace/demangle.h>
 #include <floppy/backtrace/trace.h>
 #include <floppy/backtrace/resolved_trace.h>
-#include <floppy/backtrace/source_file.h>
+#include <floppy/backtrace/snippet_factory.h>
 #include <floppy/floppy.h>
 #if defined(FLOPPY_OS_LINUX)
 # include <cxxabi.h>
@@ -86,15 +83,15 @@ namespace floppy::stacktrace {
 
 template <typename TAG> class StackTraceImpl {
 public:
-  size_t size() const { return 0; }
-  trace operator[](size_t) const { return trace(); }
-  size_t load_here(size_t = 0) { return 0; }
-  size_t load_from(void *, size_t = 0, void * = nullptr, void * = nullptr) {
+  auto size() const -> size_t { return 0; }
+  auto operator[]([[maybe_unused]] size_t _) const -> trace { return trace(); }
+  auto load_here(size_t = 0) -> size_t { return 0; }
+  auto load_from(void *, size_t = 0, void * = nullptr, void * = nullptr) -> size_t {
     return 0;
   }
-  size_t thread_id() const { return 0; }
-  void skip_n_firsts(size_t) {}
-  void *const *begin() const { return nullptr; }
+  auto thread_id() const -> size_t { return 0; }
+  auto skip_n_firsts([[maybe_unused]] size_t _) -> void {}
+  auto begin() const -> void* const* { return nullptr; }
 };
 
 class StackTraceImplBase {
@@ -102,7 +99,7 @@ public:
   StackTraceImplBase()
       : _thread_id(0), _skip(0), _context(nullptr), _error_addr(nullptr) {}
 
-  size_t thread_id() const { return _thread_id; }
+  auto thread_id() const -> size_t { return _thread_id; }
 
   void skip_n_firsts(size_t n) { _skip = n; }
 
@@ -129,12 +126,12 @@ protected:
   }
 
   void set_context(void *context) { _context = context; }
-  void *context() const { return _context; }
+  auto context() const -> void* { return _context; }
 
-  void set_error_addr(void *error_addr) { _error_addr = error_addr; }
-  void *error_addr() const { return _error_addr; }
+  void set_error_addr(void* error_addr) { _error_addr = error_addr; }
+  auto error_addr() const -> void* { return _error_addr; }
 
-  size_t skip_n_firsts() const { return _skip; }
+  auto skip_n_firsts() const -> size_t { return _skip; }
 
 private:
   size_t _thread_id;
@@ -145,26 +142,24 @@ private:
 
 class StackTraceImplHolder : public StackTraceImplBase {
 public:
-  size_t size() const {
-    return (_stacktrace.size() >= skip_n_firsts())
-               ? _stacktrace.size() - skip_n_firsts()
-               : 0;
+  auto size() const -> size_t {
+    return (_stacktrace.size() >= this->skip_n_firsts())
+      ? _stacktrace.size() - this->skip_n_firsts()
+      : 0;
   }
-  trace operator[](size_t idx) const {
-    if (idx >= size()) {
+  auto operator[](size_t idx) const -> trace {
+    if(idx >= this->size())
       return trace();
-    }
-    return trace(_stacktrace[idx + skip_n_firsts()], idx);
+    return trace(_stacktrace[idx + this->skip_n_firsts()], idx);
   }
-  void *const *begin() const {
-    if (size()) {
-      return &_stacktrace[skip_n_firsts()];
-    }
+  auto begin() const -> void* const* {
+    if(this->size())
+      return &this->_stacktrace[this->skip_n_firsts()];
     return nullptr;
   }
 
 protected:
-  std::vector<void *> _stacktrace;
+  std::vector<void*> _stacktrace;
 };
 
 #if defined(FLOPPY_OS_LINUX) || defined(FLOPPY_OS_DARWIN)
@@ -216,10 +211,13 @@ public:
   void set_thread_handle(HANDLE handle) { thd_ = handle; }
 
   __noinline__
-  size_t load_here(size_t depth = 32, void *context = nullptr,
-                   void *error_addr = nullptr) {
-    set_context(static_cast<CONTEXT*>(context));
-    set_error_addr(error_addr);
+  auto load_here(
+    size_t depth = 32,
+    void* context = nullptr,
+    void* error_addr = nullptr
+  ) -> size_t {
+    this->set_context(static_cast<CONTEXT*>(context));
+    this->set_error_addr(error_addr);
     CONTEXT localCtx; // used when no context is provided
 
     if (depth == 0) {
@@ -263,26 +261,34 @@ public:
     }
 
     for(;;) {
-      // NOTE: this only works if PDBs are already loaded!
-      SetLastError(0);
-      if (!StackWalk64(machine_type_, process, thd_, &s, ctx_, NULL,
-                       SymFunctionTableAccess64, SymGetModuleBase64, NULL))
+      ::SetLastError(0);
+      if(not ::StackWalk64(
+        machine_type_,
+        process,
+        thd_,
+        &s,
+        ctx_,
+        nullptr,
+        ::SymFunctionTableAccess64,
+        ::SymGetModuleBase64,
+        nullptr
+      ))
         break;
-
-      if (s.AddrReturn.Offset == 0)
+      if(s.AddrReturn.Offset == 0)
         break;
-
-      _stacktrace.push_back(reinterpret_cast<void *>(s.AddrPC.Offset));
-
-      if (size() >= depth)
+      this->_stacktrace.push_back(reinterpret_cast<void*>(s.AddrPC.Offset));
+      if(this->size() >= depth)
         break;
     }
-
-    return size();
+    return this->size();
   }
 
-  size_t load_from(void *addr, size_t depth = 32, void *context = nullptr,
-                   void *error_addr = nullptr) {
+  auto load_from(
+    void* addr,
+    size_t depth = 32,
+    void* context = nullptr,
+    void* error_addr = nullptr
+  ) -> size_t {
     load_here(depth + 8, context, error_addr);
 
     for (size_t i = 0; i < _stacktrace.size(); ++i) {
@@ -844,63 +850,6 @@ class trace_resolver : public TraceResolverImpl<system_tag::current> {};
 
 /*************** CODE SNIPPET ***************/
 
-class snippet_factory {
-public:
-  typedef source_file::lines_t lines_t;
-
-  lines_t get_snippet(const std::string &filename, unsigned line_start,
-                      unsigned context_size) {
-
-    source_file &src_file = get_src_file(filename);
-    unsigned start = line_start - context_size / 2;
-    return src_file.get_lines(start, context_size);
-  }
-
-  lines_t get_combined_snippet(const std::string &filename_a, unsigned line_a,
-                               const std::string &filename_b, unsigned line_b,
-                               unsigned context_size) {
-    source_file &src_file_a = get_src_file(filename_a);
-    source_file &src_file_b = get_src_file(filename_b);
-
-    lines_t lines =
-        src_file_a.get_lines(line_a - context_size / 4, context_size / 2);
-    std::ignore = src_file_b.get_lines(line_b - context_size / 4, context_size / 2, lines);
-    return lines;
-  }
-
-  lines_t get_coalesced_snippet(const std::string &filename, unsigned line_a,
-                                unsigned line_b, unsigned context_size) {
-    source_file &src_file = get_src_file(filename);
-
-    using std::max;
-    using std::min;
-    unsigned a = min(line_a, line_b);
-    unsigned b = max(line_a, line_b);
-
-    if ((b - a) < (context_size / 3)) {
-      return src_file.get_lines((a + b - context_size + 1) / 2, context_size);
-    }
-
-    lines_t lines = src_file.get_lines(a - context_size / 4, context_size / 2);
-    std::ignore = src_file.get_lines(b - context_size / 4, context_size / 2, lines);
-    return lines;
-  }
-
-private:
-  using src_files_t = std::unordered_map<std::string, source_file>;
-  src_files_t _src_files;
-
-  source_file &get_src_file(const std::string &filename) {
-    src_files_t::iterator it = _src_files.find(filename);
-    if (it != _src_files.end()) {
-      return it->second;
-    }
-    source_file &new_src_file = _src_files[filename];
-    new_src_file = source_file(filename);
-    return new_src_file;
-  }
-};
-
 class printer {
 public:
   bool snippet;
@@ -930,7 +879,7 @@ public:
 
 private:
   trace_resolver _resolver;
-  snippet_factory _snippets;
+  impl::snippet_factory _snippets;
 
   template <typename ST>
   void print_stacktrace(ST &st, std::FILE* out) {
@@ -1005,8 +954,7 @@ private:
     resolved_trace::source_loc_t const& source_loc,
     int context_size
   ) -> void {
-    using namespace std;
-    typedef snippet_factory::lines_t lines_t;
+    typedef impl::snippet_factory::lines_t lines_t;
 
     lines_t lines = this->_snippets.get_snippet(
       std::string(source_loc.file_name()),

@@ -9,7 +9,8 @@
 #include <floppy/backtrace/demangle.h>
 #include <floppy/backtrace/handle.h>
 
-namespace floppy::stacktrace
+/// \brief Underlying classes for stacktraces.
+namespace floppy::stacktrace::impl
 {
   class source_file final
   {
@@ -115,4 +116,4 @@ namespace floppy::stacktrace
       return source_file::get_mutable_paths_from_env_variable();
     }
   };
-} // namespace floppy::stacktrace
+} // namespace floppy::stacktrace::impl
