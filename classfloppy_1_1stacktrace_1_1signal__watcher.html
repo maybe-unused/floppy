@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Documentation for the Floppy library" />
 <meta name="twitter:description" content="https://whs31.github.io/floppy" />
 <!-- END twitter metadata -->
-<title>Floppy: signal_watcher Class Reference</title>
+<title>Floppy: signal_watcher&lt; Behavior &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -128,9 +128,19 @@ $(function(){initNavTree('classfloppy_1_1stacktrace_1_1signal__watcher.html','')
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classfloppy_1_1stacktrace_1_1signal__watcher-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">signal_watcher Class Reference</div></div>
+  <div class="headertitle"><div class="title">signal_watcher&lt; Behavior &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for signal_watcher&lt; Behavior &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classfloppy_1_1stacktrace_1_1signal__watcher__inherit__graph.svg" width="254" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for signal_watcher&lt; Behavior &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classfloppy_1_1stacktrace_1_1signal__watcher__coll__graph.svg" width="254" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -147,14 +157,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ab7ad763c6326ba26ec2b715a9e5d7dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00030">30</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;auto Behavior&gt;<br />
+requires std::is_same_v&lt;decltype(Behavior), crash_behavior&gt;<br />
+class floppy::stacktrace::signal_watcher&lt; Behavior &gt;</div>
+<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00040">40</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4637a6d0a584cb08301a62a65d15ac98" name="a4637a6d0a584cb08301a62a65d15ac98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4637a6d0a584cb08301a62a65d15ac98">&#9670;&#160;</a></span>signal_watcher()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;auto Behavior&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -173,7 +187,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00032">32</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00043">43</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
 
 </div>
 </div>
@@ -182,6 +196,8 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;auto Behavior&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -200,7 +216,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00104">104</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00114">114</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
 
 </div>
 </div>
@@ -210,6 +226,8 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;auto Behavior&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -228,7 +246,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00115">115</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00125">125</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
 
 </div>
 </div>
@@ -237,6 +255,8 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;auto Behavior&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -255,7 +275,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00123">123</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00133">133</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
 
 </div>
 </div>
@@ -264,6 +284,8 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;auto Behavior&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -291,7 +313,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00134">134</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stacktrace_8h_source.html#l00144">144</a> of file <a class="el" href="stacktrace_8h_source.html">stacktrace.h</a>.</p>
 
 </div>
 </div>

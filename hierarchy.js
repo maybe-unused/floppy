@@ -104,7 +104,8 @@ var hierarchy =
     [ "module_data", "namespacefloppy_1_1stacktrace_1_1impl.html#structfloppy_1_1stacktrace_1_1impl_1_1module__data", null ],
     [ "non_copyable", "structfloppy_1_1non__copyable.html", [
       [ "pin", "structfloppy_1_1pin.html", [
-        [ "singleton< T >", "structfloppy_1_1singleton.html", null ]
+        [ "singleton< T >", "structfloppy_1_1singleton.html", null ],
+        [ "signal_watcher< Behavior >", "classfloppy_1_1stacktrace_1_1signal__watcher.html", null ]
       ] ]
     ] ],
     [ "non_movable", "structfloppy_1_1non__movable.html", [
@@ -115,7 +116,6 @@ var hierarchy =
     [ "platform", "classfloppy_1_1platform.html", null ],
     [ "printer", "classfloppy_1_1stacktrace_1_1impl_1_1printer.html", null ],
     [ "project_meta", "classfloppy_1_1meta_1_1project__meta.html", null ],
-    [ "signal_watcher", "classfloppy_1_1stacktrace_1_1signal__watcher.html", null ],
     [ "snippet_factory", "classfloppy_1_1stacktrace_1_1impl_1_1snippet__factory.html", null ],
     [ "source_file", "classfloppy_1_1stacktrace_1_1impl_1_1source__file.html", null ],
     [ "source_location", "structfloppy_1_1source__location.html", null ],
