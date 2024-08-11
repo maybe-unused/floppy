@@ -38,17 +38,11 @@ var annotated_dup =
         [ "serialization_error", "classfloppy_1_1serialization_1_1serialization__error.html", "classfloppy_1_1serialization_1_1serialization__error" ]
       ] ],
       [ "stacktrace", "namespacefloppy_1_1stacktrace.html", [
-        [ "details", null, [
-          [ "default_delete", "structfloppy_1_1stacktrace_1_1details_1_1default__delete.html", null ],
-          [ "deleter", "structfloppy_1_1stacktrace_1_1details_1_1deleter.html", null ],
+        [ "details", "namespacefloppy_1_1stacktrace_1_1details.html", [
           [ "demangler", "structfloppy_1_1stacktrace_1_1details_1_1demangler.html", null ],
           [ "demangler_impl", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html", null ],
           [ "demangler_impl< system_tag::current >", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl_3_01system__tag_1_1current_01_4.html", null ],
-          [ "handle", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
-          [ "hashtable", "structfloppy_1_1stacktrace_1_1details_1_1hashtable.html", null ],
-          [ "rm_ptr", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr.html", null ],
-          [ "rm_ptr< const T * >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01const_01T_01_5_01_4.html", null ],
-          [ "rm_ptr< T * >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01T_01_5_01_4.html", null ]
+          [ "handle", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ]
         ] ],
         [ "get_mod_info", "classfloppy_1_1stacktrace_1_1get__mod__info.html", null ],
         [ "module_data", "namespacefloppy_1_1stacktrace.html#structfloppy_1_1stacktrace_1_1module__data", null ],
@@ -80,6 +74,8 @@ var annotated_dup =
       [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
       [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", "classfloppy_1_1exceptions_1_1compile__time__error" ],
       [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
+      [ "default_delete", "structfloppy_1_1default__delete.html", null ],
+      [ "deleter", "structfloppy_1_1deleter.html", null ],
       [ "formattable", "structfloppy_1_1formattable.html", "structfloppy_1_1formattable" ],
       [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],
       [ "non_copyable", "structfloppy_1_1non__copyable.html", null ],

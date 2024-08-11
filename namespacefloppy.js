@@ -38,6 +38,8 @@ var namespacefloppy =
     [ "box", "classfloppy_1_1box.html", "classfloppy_1_1box" ],
     [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", "classfloppy_1_1exceptions_1_1compile__time__error" ],
     [ "configuration_file", "classfloppy_1_1configuration__file.html", "classfloppy_1_1configuration__file" ],
+    [ "default_delete", "structfloppy_1_1default__delete.html", null ],
+    [ "deleter", "structfloppy_1_1deleter.html", null ],
     [ "formattable", "structfloppy_1_1formattable.html", "structfloppy_1_1formattable" ],
     [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],
     [ "non_copyable", "structfloppy_1_1non__copyable.html", null ],

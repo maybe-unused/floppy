@@ -1,5 +1,6 @@
 var namespacefloppy_1_1stacktrace =
 [
+    [ "details", "namespacefloppy_1_1stacktrace_1_1details.html", "namespacefloppy_1_1stacktrace_1_1details" ],
     [ "get_mod_info", "classfloppy_1_1stacktrace_1_1get__mod__info.html", null ],
     [ "module_data", "namespacefloppy_1_1stacktrace.html#structfloppy_1_1stacktrace_1_1module__data", null ],
     [ "printer", "classfloppy_1_1stacktrace_1_1printer.html", null ],

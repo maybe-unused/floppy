@@ -180,6 +180,10 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1configuration__file.html">configuration_file</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfloppy_1_1default__delete.html">default_delete</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfloppy_1_1deleter.html">deleter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfloppy_1_1formattable.html">formattable</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1invalid__smart__pointer__access.html">invalid_smart_pointer_access</a></td></tr>
@@ -283,6 +287,10 @@ Functions</h2></td></tr>
 <tr class="memitem:addcab788066267803ed3875e35a0042f" id="r_addcab788066267803ed3875e35a0042f"><td class="memTemplParams" colspan="2">template&lt;class E , class T &gt; </td></tr>
 <tr class="memitem:addcab788066267803ed3875e35a0042f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#addcab788066267803ed3875e35a0042f">operator&lt;&lt;</a> (std::basic_ostream&lt; E, T &gt; &amp;os, <a class="el" href="structfloppy_1_1source__location.html">source_location</a> const &amp;loc) -&gt; std::basic_ostream&lt; E, T &gt; &amp;</td></tr>
 <tr class="separator:addcab788066267803ed3875e35a0042f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ef1e0ce5d33105a811a12a6d6d7f04" id="r_af6ef1e0ce5d33105a811a12a6d6d7f04"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6ef1e0ce5d33105a811a12a6d6d7f04">operator==</a> (<a class="el" href="structfloppy_1_1source__location.html">source_location</a> const &amp;lhs, <a class="el" href="structfloppy_1_1source__location.html">source_location</a> const &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="separator:af6ef1e0ce5d33105a811a12a6d6d7f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8095527b13c77fa9a8d546682f7aaaa0" id="r_a8095527b13c77fa9a8d546682f7aaaa0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8095527b13c77fa9a8d546682f7aaaa0">operator!=</a> (<a class="el" href="structfloppy_1_1source__location.html">source_location</a> const &amp;lhs, <a class="el" href="structfloppy_1_1source__location.html">source_location</a> const &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="separator:a8095527b13c77fa9a8d546682f7aaaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6a778dde2b29125b63c1101d454f3e76" id="r_ga6a778dde2b29125b63c1101d454f3e76"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__helpers.html#ga6a778dde2b29125b63c1101d454f3e76">panic</a> (std::string_view message, <a class="el" href="structfloppy_1_1source__location.html">source_location</a> location=<a class="el" href="structfloppy_1_1source__location.html#aed70029e75ad4b575d62706be467e743">source_location::current</a>()) -&gt; void</td></tr>
 <tr class="separator:ga6a778dde2b29125b63c1101d454f3e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0bbd17556e1675c4a05316d9f6743342" id="r_ga0bbd17556e1675c4a05316d9f6743342"><td class="memTemplParams" colspan="2">template&lt;concepts::num T, concepts::num U&gt; </td></tr>
@@ -459,7 +467,69 @@ template&lt;class E , class T &gt; </div>
 
 <p>Stream adaptor for <a class="el" href="structfloppy_1_1source__location.html" title="Provides information about the location of the current source file.">source_location</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00233">233</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00246">246</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+
+</div>
+</div>
+<a id="af6ef1e0ce5d33105a811a12a6d6d7f04" name="af6ef1e0ce5d33105a811a12a6d6d7f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ef1e0ce5d33105a811a12a6d6d7f04">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfloppy_1_1source__location.html">source_location</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfloppy_1_1source__location.html">source_location</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) -&gt; bool </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00261">261</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+
+</div>
+</div>
+<a id="a8095527b13c77fa9a8d546682f7aaaa0" name="a8095527b13c77fa9a8d546682f7aaaa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8095527b13c77fa9a8d546682f7aaaa0">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfloppy_1_1source__location.html">source_location</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfloppy_1_1source__location.html">source_location</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) -&gt; bool </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00268">268</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>

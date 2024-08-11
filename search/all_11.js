@@ -15,11 +15,8 @@ var searchData=
   ['rgb_12',['rgb',['../classfloppy_1_1gfx_1_1color.html#af36cde23fea649267c8ee87aac75d2ff',1,'floppy::gfx::color']]],
   ['rgba_13',['rgba',['../classfloppy_1_1gfx_1_1color.html#a45fd232340920c56e2b8ac0fa5591ade',1,'floppy::gfx::color']]],
   ['riscv_14',['riscv',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a8058d18cbe5eb5f9af15fe6c0b9510aa',1,'floppy::platform']]],
-  ['rm_5fptr_15',['rm_ptr',['../structfloppy_1_1stacktrace_1_1details_1_1rm__ptr.html',1,'floppy::stacktrace::details']]],
-  ['rm_5fptr_3c_20const_20t_20_2a_20_3e_16',['rm_ptr&lt; const T * &gt;',['../structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01const_01T_01_5_01_4.html',1,'floppy::stacktrace::details']]],
-  ['rm_5fptr_3c_20t_20_2a_20_3e_17',['rm_ptr&lt; T * &gt;',['../structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01T_01_5_01_4.html',1,'floppy::stacktrace::details']]],
-  ['round_18',['round',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a8ede81b668ffa9d89d258e66c7b65b82',1,'floppy::math::detail::basic_two_dimensional_type']]],
-  ['rs6000_19',['rs6000',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ad270a41d40b1210d271c6994a97e3855',1,'floppy::platform']]],
-  ['runtime_20',['runtime',['../classfloppy_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75ab4a619251c5c397f26d05c9b0e7bf97a',1,'floppy::application_dirs']]],
-  ['runtime_5fdir_21',['runtime_dir',['../classfloppy_1_1application__dirs.html#a6b938155c040db653033eca8def85b9d',1,'floppy::application_dirs']]]
+  ['round_15',['round',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a8ede81b668ffa9d89d258e66c7b65b82',1,'floppy::math::detail::basic_two_dimensional_type']]],
+  ['rs6000_16',['rs6000',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ad270a41d40b1210d271c6994a97e3855',1,'floppy::platform']]],
+  ['runtime_17',['runtime',['../classfloppy_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75ab4a619251c5c397f26d05c9b0e7bf97a',1,'floppy::application_dirs']]],
+  ['runtime_5fdir_18',['runtime_dir',['../classfloppy_1_1application__dirs.html#a6b938155c040db653033eca8def85b9d',1,'floppy::application_dirs']]]
 ];

@@ -19,10 +19,10 @@ var hierarchy =
     [ "default_comparable< angle< f32 > >", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", null ],
     [ "default_comparable< length< default_unit, f32 > >", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", null ],
     [ "default_comparable< scale< S, D, f32 > >", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", null ],
-    [ "default_delete< T >", "structfloppy_1_1stacktrace_1_1details_1_1default__delete.html", null ],
+    [ "default_delete< T >", "structfloppy_1_1default__delete.html", null ],
     [ "default_unit", "namespacefloppy_1_1math.html#structfloppy_1_1math_1_1default__unit", null ],
-    [ "deleter< R, T, F >", "structfloppy_1_1stacktrace_1_1details_1_1deleter.html", null ],
-    [ "demangler_impl< TAG >", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html", null ],
+    [ "deleter< R, T, F >", "structfloppy_1_1deleter.html", null ],
+    [ "demangler_impl< Tag >", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html", null ],
     [ "demangler_impl< system_tag::current >", "structfloppy_1_1stacktrace_1_1details_1_1demangler__impl_3_01system__tag_1_1current_01_4.html", [
       [ "demangler", "structfloppy_1_1stacktrace_1_1details_1_1demangler.html", null ]
     ] ],
@@ -98,11 +98,9 @@ var hierarchy =
     [ "handle< char * >", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
     [ "handle< char ** >", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
     [ "handle< Dwfl *, details::deleter< void, Dwfl *, &dwfl_end > >", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
-    [ "handle< Dwfl_Callbacks *, floppy::stacktrace::details::default_delete< Dwfl_Callbacks * > >", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
-    [ "handle< std::ifstream *, floppy::stacktrace::details::default_delete< std::ifstream * > >", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
+    [ "handle< Dwfl_Callbacks *, details::default_delete< Dwfl_Callbacks * > >", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
+    [ "handle< std::ifstream *, floppy::default_delete< std::ifstream * > >", "classfloppy_1_1stacktrace_1_1details_1_1handle.html", null ],
     [ "hash< floppy::box< T > >", "structstd_1_1hash_3_01floppy_1_1box_3_01T_01_4_01_4.html", null ],
-    [ "hashtable< K, V >", "structfloppy_1_1stacktrace_1_1details_1_1hashtable.html", null ],
-    [ "hashtable< std::string, source_file >", "structfloppy_1_1stacktrace_1_1details_1_1hashtable.html", null ],
     [ "module_data", "namespacefloppy_1_1stacktrace.html#structfloppy_1_1stacktrace_1_1module__data", null ],
     [ "non_copyable", "structfloppy_1_1non__copyable.html", [
       [ "pin", "structfloppy_1_1pin.html", [
@@ -119,14 +117,10 @@ var hierarchy =
     [ "platform", "classfloppy_1_1platform.html", null ],
     [ "printer", "classfloppy_1_1stacktrace_1_1printer.html", null ],
     [ "project_meta", "classfloppy_1_1meta_1_1project__meta.html", null ],
-    [ "rm_ptr< T >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr.html", null ],
-    [ "rm_ptr< const T * >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01const_01T_01_5_01_4.html", null ],
-    [ "rm_ptr< T * >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01T_01_5_01_4.html", null ],
     [ "signal_handler", "classfloppy_1_1stacktrace_1_1signal__handler.html", null ],
     [ "snippet_factory", "classfloppy_1_1stacktrace_1_1snippet__factory.html", null ],
     [ "source_file", "classfloppy_1_1stacktrace_1_1source__file.html", null ],
     [ "source_location", "structfloppy_1_1source__location.html", null ],
-    [ "SourceLoc", "structfloppy_1_1stacktrace_1_1resolved__trace_1_1SourceLoc.html", null ],
     [ "StackTraceImpl< TAG >", "classfloppy_1_1stacktrace_1_1StackTraceImpl.html", null ],
     [ "StackTraceImplBase", "classfloppy_1_1stacktrace_1_1StackTraceImplBase.html", [
       [ "StackTraceImplHolder", "classfloppy_1_1stacktrace_1_1StackTraceImplHolder.html", [

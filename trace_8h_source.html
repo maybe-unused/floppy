@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Documentation for the Floppy library" />
 <meta name="twitter:description" content="https://whs31.github.io/floppy" />
 <!-- END twitter metadata -->
-<title>Floppy: hashtable&lt; K, V &gt; Struct Template Reference</title>
+<title>Floppy: trace.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -85,6 +85,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -98,7 +103,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('structfloppy_1_1stacktrace_1_1details_1_1hashtable.html',''); initResizable(); });
+$(function(){initNavTree('trace_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -124,55 +129,42 @@ $(function(){initNavTree('structfloppy_1_1stacktrace_1_1details_1_1hashtable.htm
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="structfloppy_1_1stacktrace_1_1details_1_1hashtable-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">hashtable&lt; K, V &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">trace.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Inheritance diagram for hashtable&lt; K, V &gt;:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structfloppy_1_1stacktrace_1_1details_1_1hashtable__inherit__graph.svg" width="222" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a87fbddb3556444f771e00362c37a9a1c" id="r_a87fbddb3556444f771e00362c37a9a1c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87fbddb3556444f771e00362c37a9a1c">type</a> = std::unordered_map&lt;K, V&gt;</td></tr>
-<tr class="separator:a87fbddb3556444f771e00362c37a9a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename K, typename V&gt;<br />
-struct floppy::stacktrace::details::hashtable&lt; K, V &gt;</div>
-<p class="definition">Definition at line <a class="el" href="backtrace_8h_source.html#l00083">83</a> of file <a class="el" href="backtrace_8h_source.html">backtrace.h</a>.</p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a87fbddb3556444f771e00362c37a9a1c" name="a87fbddb3556444f771e00362c37a9a1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87fbddb3556444f771e00362c37a9a1c">&#9670;&#160;</a></span>type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename K , typename V &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using type = std::unordered_map&lt;K, V&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="backtrace_8h_source.html#l00085">85</a> of file <a class="el" href="backtrace_8h_source.html">backtrace.h</a>.</p>
-
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;floppy/detail/types.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefloppy_1_1stacktrace.html">floppy::stacktrace</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="structfloppy_1_1stacktrace_1_1trace.html">    7</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">void</span>* addr;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">usize</a> idx;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>()</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>      : addr(<span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>      , idx(0)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">explicit</span> <a class="code hl_struct" href="structfloppy_1_1stacktrace_1_1trace.html">trace</a>(<span class="keywordtype">void</span>* address, <a class="code hl_typedef" href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">usize</a> index)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      : addr(address)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      , idx(index)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  };</div>
 </div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="backtrace_8h_source.html">backtrace.h</a></li>
-</ul>
-</div><!-- contents -->
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>} <span class="comment">// namespace floppy::stacktrace</span></div>
+<div class="ttc" id="anamespacefloppy_1_1stacktrace_html"><div class="ttname"><a href="namespacefloppy_1_1stacktrace.html">floppy::stacktrace</a></div><div class="ttdoc">Stacktrace namespace.</div><div class="ttdef"><b>Definition</b> <a href="demangle_8h_source.html#l00009">demangle.h:10</a></div></div>
+<div class="ttc" id="anamespacefloppy_1_1types_html_a8a1acd2f98c9e2cb3db422251e294037"><div class="ttname"><a href="namespacefloppy_1_1types.html#a8a1acd2f98c9e2cb3db422251e294037">floppy::types::usize</a></div><div class="ttdeci">size_t usize</div><div class="ttdoc">Unsigned integer with pointer size.</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00025">types.h:25</a></div></div>
+<div class="ttc" id="astructfloppy_1_1stacktrace_1_1trace_html"><div class="ttname"><a href="structfloppy_1_1stacktrace_1_1trace.html">floppy::stacktrace::trace</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">trace.h:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacefloppy.html">floppy</a></li><li class="navelem"><a class="el" href="namespacefloppy_1_1stacktrace.html">stacktrace</a></li><li class="navelem"><b>details</b></li><li class="navelem"><a class="el" href="structfloppy_1_1stacktrace_1_1details_1_1hashtable.html">hashtable</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><a class="el" href="dir_8c55877611ad138617c1a500919721d2.html">backtrace</a></li><li class="navelem"><b>trace.h</b></li>
     <li class="footer">Generated on Sun Aug 11 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
