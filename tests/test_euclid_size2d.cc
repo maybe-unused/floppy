@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <vector>
 #include <numeric>
 #include <gtest/gtest.h>
@@ -131,6 +132,7 @@ TEST(EuclidSize2D, NanEmpty)
   EXPECT_FALSE(c);
 }
 
+#if defined(FL_QT_CORE)
 TEST(EuclidSize2D, ToQSize)
 {
   EXPECT_EQ(size2d(1.0, 2.0).to_qsize(), QSize(1, 2));
@@ -144,6 +146,7 @@ TEST(EuclidSize2D, ToQSizeF)
   EXPECT_EQ(size2d(0.0, 0.0).to_qsizef(), QSizeF(0.0, 0.0));
   EXPECT_EQ(size2d(-1.0, -2.0).to_qsizef(), QSizeF(-1.0, -2.0));
 }
+#endif // defined(FL_QT_CORE)
 
 TEST(EuclidSize2D, ToPoint2D)
 {

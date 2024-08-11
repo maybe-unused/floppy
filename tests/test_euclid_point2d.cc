@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <vector>
 #include <numeric>
 #include <gtest/gtest.h>
@@ -165,6 +166,7 @@ TEST(EuclidPoint2D, DivEuclid)
   EXPECT_EQ(p.div_euclid(-s), point2d(-1.0, -2.0));
 }
 
+#if defined(FL_QT_CORE)
 TEST(EuclidPoint2D, ToQPoint)
 {
   auto const p = point2d(1.0, 2.0);
@@ -185,6 +187,7 @@ TEST(EuclidPoint2D, FromQPoint)
 
   EXPECT_EQ(point2d(p), point2d(1.0F, 2.0F));
 }
+#endif // FL_QT_CORE
 
 TEST(EuclidPoint2D, Map)
 {

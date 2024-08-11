@@ -1,13 +1,14 @@
 #pragma once
 
 #include <cstdint>
+#include <cstring>
 #include <ranges>
 #include <fmt/format.h>
 #include <floppy/detail/platform.h>
 #include <floppy/detail/concepts.h>
 #include <floppy/detail/formatters.h>
 
-#if defined(__cpp_lib_source_location)
+#if 0//defined(__cpp_lib_source_location)
 # include <source_location>
 #endif // __cpp_lib_source_location
 
@@ -145,7 +146,7 @@ namespace floppy
   /// \endcode
   /// \note This implementation can be aliased to `std::source_location`, if the compiler supports it.
   /// Otherwise, it is a self-contained port of C++20 std::source_location.
-  #if defined(__cpp_lib_source_location)
+  #if 0//defined(__cpp_lib_source_location)
     using source_location = std::source_location;
   #else // __cpp_lib_source_location
     struct source_location
@@ -156,46 +157,40 @@ namespace floppy
      public:
       /// \brief Returns current source location.
       /// \note Returns actual current source location only if called with default arguments.
+      static constexpr auto current(
   #if not defined(__apple_build_version__) and defined(__clang__) and (__clang_major__ >= 9)
-      static consteval auto current(
         char const* file = __builtin_FILE(),
         char const* function = __builtin_FUNCTION(),
         uint_least32_t line = __builtin_LINE(),
         uint_least32_t column = __builtin_COLUMN()
-          ) noexcept -> source_location
   #elif defined(__GNUC__) and (__GNUC__ > 4 or (__GNUC__ == 4 and __GNUC_MINOR__ >= 8))
-      static consteval auto current(
         char const* file = __builtin_FILE(),
         char const* function = __builtin_FUNCTION(),
         uint_least32_t line = __builtin_LINE(),
         uint_least32_t column = 0
-        ) noexcept -> source_location
   #else // compiler
-      static consteval auto current(
         char const* file = UNKNOWN,
         char const* function = UNKNOWN,
         uint_least32_t line = 0,
         uint_least32_t column = 0
-        ) noexcept -> source_location
   #endif // compiler
-      {
+      ) noexcept -> source_location {
         return { file, line, function, column };
       }
 
      private:
-      char const* m_file;
-      char const* m_function;
-      uint_least32_t m_line;
-      uint_least32_t m_column;
+      std::string file_;
+      std::string function_;
+      uint_least32_t line_;
+      uint_least32_t column_;
 
      public:
-
       /// \brief Creates an empty invalid source_location.
       constexpr source_location() noexcept
-        : m_file(UNKNOWN)
-        , m_function(UNKNOWN)
-        , m_line(0)
-        , m_column(0)
+        : file_(UNKNOWN)
+        , function_(UNKNOWN)
+        , line_(0)
+        , column_(0)
       {}
 
       /// \brief Creates a source_location from given parameters.
@@ -209,23 +204,35 @@ namespace floppy
         char const* function,
         uint_least32_t const column = 0
       ) noexcept
-        : m_file(file)
-        , m_function(function)
-        , m_line(line)
-        , m_column(column)
+        : file_(file)
+        , function_(function)
+        , line_(line)
+        , column_(column)
       {}
 
       /// \brief Returns the file name.
-      [[nodiscard]] constexpr auto file_name() const noexcept -> char const* { return this->m_file; }
+      [[nodiscard]] constexpr auto file_name() const noexcept -> std::string_view { return this->file_; }
+
+      /// \brief Returns a mutable reference to the file name.
+      [[nodiscard]] [[maybe_unused]]constexpr auto file_name_mut() noexcept -> std::string& { return this->file_; }
 
       /// \brief Returns the function name. NULL if unknown or not available on compiler
-      [[nodiscard]] constexpr auto function_name() const noexcept -> char const* { return this->m_function; }
+      [[nodiscard]] constexpr auto function_name() const noexcept -> std::string_view { return this->function_; }
+
+      /// \brief Returns a mutable reference to the function name.
+      [[nodiscard]] [[maybe_unused]] constexpr auto function_name_mut() noexcept -> std::string& { return this->function_; }
 
       /// \brief Returns the line number. 0 if unknown or not available on compiler
-      [[nodiscard]] constexpr auto line() const noexcept -> uint_least32_t { return this->m_line; }
+      [[nodiscard]] constexpr auto line() const noexcept -> uint_least32_t { return this->line_; }
+
+      /// \brief Returns a mutable reference to the line number.
+      [[nodiscard]] [[maybe_unused]] constexpr auto line_mut() noexcept -> uint_least32_t& { return this->line_; }
 
       /// \brief Returns the column number. 0 if unknown or not available on compiler
-      [[nodiscard]] constexpr auto column() const noexcept -> uint_least32_t { return this->m_column; }
+      [[nodiscard]] constexpr auto column() const noexcept -> uint_least32_t { return this->column_; }
+
+      /// \brief Returns a mutable reference to the column number.
+      [[nodiscard]] [[maybe_unused]] constexpr auto column_mut() noexcept -> uint_least32_t& { return this->column_; }
     };
 
     /// \brief Stream adaptor for source_location
@@ -244,6 +251,17 @@ namespace floppy
       return os;
     }
   #endif // __cpp_lib_source_location
+
+  inline auto operator==(source_location const& lhs, source_location const& rhs) noexcept -> bool {
+    return lhs.file_name() == rhs.file_name()
+      and lhs.line() == rhs.line()
+      and lhs.function_name() == rhs.function_name()
+      and lhs.column() == rhs.column();
+  }
+
+  inline auto operator!=(source_location const& lhs, source_location const& rhs) noexcept -> bool {
+    return not (lhs == rhs);
+  }
 } // namespace floppy
 
 /// \brief Formatter for `floppy::source_location`

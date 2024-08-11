@@ -2,6 +2,7 @@
 
 #include <fmt/format.h>
 #include <fmt/color.h>
+#include <floppy/detail/enumerations.h>
 
 /// \brief Print helpers namespace.
 namespace floppy::print_helpers
@@ -33,6 +34,20 @@ namespace floppy::print_helpers
       "fatal: {}\n",
       fmt::format(fmt::runtime(format), std::forward<Args>(args)...)
     );
+  }
+
+  [[nodiscard]] inline auto truncate(
+    std::string_view str,
+    std::size_t max_width,
+    direction dir = direction::forward,
+    bool show_ellipsis = true
+  ) -> std::string {
+    if(str.size() <= max_width)
+      return std::string(str);
+    if(dir == direction::forward)
+      return std::string(str.substr(0, max_width)) + (show_ellipsis ? "..." : "");
+    else
+      return (show_ellipsis ? "..." : "") + std::string(str.substr(str.size() - max_width));
   }
 } // namespace floppy::print_helpers
 

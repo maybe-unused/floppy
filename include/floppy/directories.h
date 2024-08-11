@@ -25,7 +25,7 @@ namespace floppy
   /// Windows: 'C:\Users\Alice\AppData\Roaming\Foo Corp\Bar App'
   /// MacOS:   '/Users/Alice/Library/Application Support/com.Foo-Corp.Bar-App'
   /// \endcode
-  class FLOPPY_EXPORT application_dirs
+  class application_dirs
   {
    public:
       /// \brief Supported directory types.
@@ -71,7 +71,7 @@ namespace floppy
      /// <li><tt>"Foo App"</tt></li>
      /// </ul>
      /// \throws std::runtime_error if no valid home directory could be retrieved from the operating system.
-     explicit application_dirs(
+     FLOPPY_EXPORT explicit application_dirs(
        std::string_view qualifier,
        std::string_view organization,
        std::string_view application
@@ -83,7 +83,7 @@ namespace floppy
      /// \param meta The project meta data.
      /// \throws std::runtime_error if no valid home directory could be retrieved from the operating system.
      /// \see floppy::meta::project_meta
-     explicit application_dirs(meta::project_meta const& meta) noexcept(false);
+     FLOPPY_EXPORT explicit application_dirs(meta::project_meta const& meta) noexcept(false);
 
      ~application_dirs() = default;
      application_dirs(application_dirs const&) = default;
@@ -97,18 +97,18 @@ namespace floppy
      /// \throws std::system_error If the directory does not exist on this platform.
      /// \note Use explicit functions such as \ref config_dir() to avoid this exception.
      /// \see operator[]
-     [[nodiscard]] auto get(dir directory_type) const noexcept(false) -> std::filesystem::path;
+     [[nodiscard]] FLOPPY_EXPORT auto get(dir directory_type) const noexcept(false) -> std::filesystem::path;
 
      /// \brief Creates the directories if they do not exist.
-     auto create() const -> void;
+     FLOPPY_EXPORT auto create() const -> void;
 
      /// \brief Removes the directories from the filesystem.
-     auto remove() const -> void;
+     FLOPPY_EXPORT auto remove() const -> void;
 
      /// \brief Returns the project path fragment used to compute the project's cache/config/data directories.
      /// \details The value is derived from the ProjectDirs::from call and is platform-dependent.
      /// \return The project path.
-     [[nodiscard]] auto project_path() const -> std::filesystem::path const&;
+     [[nodiscard]] FLOPPY_EXPORT auto project_path() const -> std::filesystem::path const&;
 
      /// \brief Returns the path to the project's cache directory.
      /// \details Values on different platforms:
@@ -118,7 +118,7 @@ namespace floppy
      /// <li><b>Windows</b>: <tt>%LOCALAPPDATA%</tt>\\<tt>project_path</tt>\\cache, for example: <tt>C:\\Users\\Alice\\AppData\\Local\\Foo Corp\\Bar App\\cache</tt></li>
      /// </ul>
      /// \return The path to the project's cache directory.
-     [[nodiscard]] auto cache_dir() const -> std::filesystem::path const&;
+     [[nodiscard]] FLOPPY_EXPORT auto cache_dir() const -> std::filesystem::path const&;
 
      /// \brief Returns the path to the project's config directory.
      /// \details Values on different platforms:
@@ -128,7 +128,7 @@ namespace floppy
      /// <li><b>Windows</b>: <tt>%APPDATA%</tt>\\<tt>project_path</tt>\\config, for example: <tt>C:\\Users\\Alice\\AppData\\Roaming\\Foo Corp\\Bar App\\config</tt></li>
      /// </ul>
      /// \return The path to the project's config directory.
-     [[nodiscard]] auto config_dir() const -> std::filesystem::path const&;
+     [[nodiscard]] FLOPPY_EXPORT auto config_dir() const -> std::filesystem::path const&;
 
      /// \brief Returns the path to the project's config_local directory.
      /// \details Values on different platforms:
@@ -138,7 +138,7 @@ namespace floppy
      /// <li><b>Windows</b>: <tt>%LOCALAPPDATA%</tt>\\<tt>project_path</tt>\\config, for example: <tt>C:\\Users\\Alice\\AppData\\Roaming\\Foo Corp\\Bar App\\config</tt></li>
      /// </ul>
      /// \return The path to the project's config_local directory.
-     [[nodiscard]] auto config_local_dir() const -> std::filesystem::path const&;
+     [[nodiscard]] FLOPPY_EXPORT auto config_local_dir() const -> std::filesystem::path const&;
 
      /// \brief Returns the path to the project's data directory.
      /// \details Values on different platforms:
@@ -148,7 +148,7 @@ namespace floppy
      /// <li><b>Windows</b>: <tt>%LOCALAPPDATA%</tt>\\<tt>project_path</tt>\\data, for example: <tt>C:\\Users\\Alice\\AppData\\Roaming\\Foo Corp\\Bar App\\data</tt></li>
      /// </ul>
      /// \return The path to the project's data directory.
-     [[nodiscard]] auto data_dir() const -> std::filesystem::path const&;
+     [[nodiscard]] FLOPPY_EXPORT auto data_dir() const -> std::filesystem::path const&;
 
      /// \brief Returns the path to the project's data_local directory.
      /// \details Values on different platforms:
@@ -158,7 +158,7 @@ namespace floppy
      /// <li><b>Windows</b>: <tt>%LOCALAPPDATA%</tt>\\<tt>project_path</tt>\\data, for example: <tt>C:\\Users\\Alice\\AppData\\Roaming\\Foo Corp\\Bar App\\data</tt></li>
      /// </ul>
      /// \return The path to the project's data_local directory.
-     [[nodiscard]] auto data_local_dir() const -> std::filesystem::path const&;
+     [[nodiscard]] FLOPPY_EXPORT auto data_local_dir() const -> std::filesystem::path const&;
 
      /// \brief Returns the path to the project's preference directory.
      /// \details Values on different platforms:
@@ -168,7 +168,7 @@ namespace floppy
      /// <li><b>Windows</b>: <tt>%LOCALAPPDATA%</tt>\\<tt>project_path</tt>\\config, for example: <tt>C:\\Users\\Alice\\AppData\\Roaming\\Foo Corp\\Bar App\\config</tt></li>
      /// </ul>
      /// \return
-     [[nodiscard]] auto preference_dir() const -> std::filesystem::path const&;
+     [[nodiscard]] FLOPPY_EXPORT auto preference_dir() const -> std::filesystem::path const&;
 
      /// \brief Returns the path to the project's runtime directory.
      /// \details
@@ -182,7 +182,7 @@ namespace floppy
      /// </ul>
      /// \invariant Only for Linux.
      /// \return The path to the project's runtime directory or <tt>none</tt> if it is not available.
-     [[nodiscard]] auto runtime_dir() const -> option<std::filesystem::path> const&;
+     [[nodiscard]] FLOPPY_EXPORT auto runtime_dir() const -> option<std::filesystem::path> const&;
 
      /// \brief Returns the path to the project's state directory.
      /// \details
@@ -196,7 +196,7 @@ namespace floppy
      /// </ul>
      /// \invariant Only for Linux.
      /// \return The path to the project's state directory or <tt>none</tt> if it is not available.
-     [[nodiscard]] auto state_dir() const -> option<std::filesystem::path> const&;
+     [[nodiscard]] FLOPPY_EXPORT auto state_dir() const -> option<std::filesystem::path> const&;
 
      /// \brief Shortcut for \ref get() function.
      /// \param directory_type The directory type.
@@ -204,18 +204,17 @@ namespace floppy
      /// \throws std::system_error If the directory does not exist on this platform.
      /// \note Use explicit functions such as \ref config_dir() to avoid this exception.
      /// \see get
-     [[nodiscard]] auto operator[](dir directory_type) const noexcept(false) -> std::filesystem::path;
+     [[nodiscard]] FLOPPY_EXPORT auto operator[](dir directory_type) const noexcept(false) -> std::filesystem::path;
 
     private:
-     // todo: format members
-     std::filesystem::path m_project_path;
-     std::filesystem::path m_cache_dir;
-     std::filesystem::path m_config_dir;
-     std::filesystem::path m_config_local_dir;
-     std::filesystem::path m_data_dir;
-     std::filesystem::path m_data_local_dir;
-     std::filesystem::path m_preference_dir;
-     option<std::filesystem::path> m_runtime_dir;
-     option<std::filesystem::path> m_state_dir;
+     std::filesystem::path project_path_;
+     std::filesystem::path cache_dir_;
+     std::filesystem::path config_dir_;
+     std::filesystem::path config_local_dir_;
+     std::filesystem::path data_dir_;
+     std::filesystem::path data_local_dir_;
+     std::filesystem::path preference_dir_;
+     option<std::filesystem::path> runtime_dir_;
+     option<std::filesystem::path> state_dir_;
   };
 } // namespace floppy::filesystem

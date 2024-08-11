@@ -12,7 +12,7 @@ except ImportError:
 
 class FloppyRecipe(ConanFile):
     name = "floppy"
-    version = "1.3.0"
+    version = "1.4.0"
     description = "Library that augments and extends C++ standard library"
     author = "whs31 <whs31@github.io>"
     topics = ("logging", "coreutils", "utility")
@@ -37,6 +37,8 @@ class FloppyRecipe(ConanFile):
         self.requires("fmt/[^10.1.0]", transitive_headers=True, transitive_libs=True)
         self.requires("spdlog/1.13.0", transitive_headers=True, transitive_libs=True)
         self.requires("tl-expected/20190710", transitive_headers=True, transitive_libs=True)
+        if self.settings.os != "Windows":
+            self.requires("elfutils/0.190", transitive_headers=True, transitive_libs=True)
         if self.options.test:
             self.requires("gtest/1.14.0")
             self.requires("tomlplusplus/[^3.0.0]", transitive_headers=True, transitive_libs=True)
@@ -78,7 +80,16 @@ class FloppyRecipe(ConanFile):
         self.cpp_info.set_property("cmake_target_name", "floppy::floppy")
         self.cpp_info.libs = ["floppy"]
         self.cpp_info.requires = ["fmt::fmt", "spdlog::spdlog", "tl-expected::tl-expected"]
+        self.cpp_info.defines.append(f"FLOPPY_TARGET_NAME={self.name}")
+        self.cpp_info.defines.append(f"FLOPPY_PROJECT_VERSION_MAJOR={self.version.split('.')[0]}")
+        self.cpp_info.defines.append(f"FLOPPY_PROJECT_VERSION_MINOR={self.version.split('.')[1]}")
+        self.cpp_info.defines.append(f"FLOPPY_PROJECT_VERSION_PATCH={self.version.split('.')[2]}")
         if self.options.test:
             print(colored("▶ testing enabled. following libraries will be added to deps: gtest, tomlplusplus", "green"))
             self.cpp_info.requires.append("gtest::gtest")
             self.cpp_info.requires.append("tomlplusplus::tomlplusplus")
+        if self.settings.os == "Windows":
+            self.cpp_info.system_libs.extend(["psapi", "dbghelp"])
+        if self.settings.os in ["Linux", "FreeBSD", "Android"]:
+            self.cpp_info.system_libs.extend(["dl", "m"])
+            self.cpp_info.requires.append("elfutils::elfutils")

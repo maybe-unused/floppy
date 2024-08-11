@@ -30,23 +30,6 @@ namespace floppy::gfx
       throw std::invalid_argument("invalid hex character");
     }
 
-    template <typename T> constexpr auto min(T&& v) -> T { return std::forward<T>(v); }
-    template <typename T, typename... Args>
-    constexpr auto min(T const& v1, T const& v2, Args const&... args) -> T {
-      return v2 < v1 ? min(v2, args...) : min(v1, args...);
-    }
-
-    template <typename T>
-    [[maybe_unused]] constexpr auto max(T&& v) -> T { return std::forward<T>(v); }
-
-    template <typename T, typename... Args>
-    constexpr auto max(T const& v1, T const& v2, Args const&... args) -> T {
-      return v2 > v1 ? max(v2, args...) : max(v1, args...);
-    }
-
-    template <typename T> constexpr auto abs(T const& v) -> T { return v < T(0) ? -v : v; }
-    constexpr auto fmod(f32 const x, f32 const y) -> f32 { return x - y * std::floor(x / y); }
-
     /// \brief Converts a hex string to an RGB color.
     /// \param str Hex string in RGB format as <i>C-string</i>.
     /// \return RGB color as <code>std::array<u8, 3></code>.
@@ -75,33 +58,33 @@ namespace floppy::gfx
     namespace hsl
     {
       [[nodiscard]] constexpr auto k(i32 const n, u16 const hue) -> f32 {
-        return fmod(static_cast<f32>(n) + static_cast<f32>(hue) / 30.0F, 12.0F);
+        return math::fmod(static_cast<f32>(n) + static_cast<f32>(hue) / 30.0F, 12.0F);
       }
 
       [[nodiscard]] constexpr auto a(f32 const saturation, f32 const lightness) -> f32 {
-        return saturation * min(lightness, 1.0F - lightness);
+        return saturation * math::min(lightness, 1.0F - lightness);
       }
 
       [[nodiscard]] constexpr auto chroma(std::array<u8, 3> const& rgb) -> f32 {
-        return static_cast<f32>(max(rgb[0], rgb[1], rgb[2]) - min(rgb[0], rgb[1], rgb[2])) / 255.0F;
+        return static_cast<f32>(math::max(rgb[0], rgb[1], rgb[2]) - math::min(rgb[0], rgb[1], rgb[2])) / 255.0F;
       }
 
       [[nodiscard]] constexpr auto h(std::array<u8, 3> const& rgb) -> f32 {
         return chroma(rgb) == 0.0F
           ? 0.0F
           : (
-            max(rgb[0], rgb[1], rgb[2]) == rgb[0]
+            math::max(rgb[0], rgb[1], rgb[2]) == rgb[0]
               ? static_cast<f32>(rgb[1] - rgb[2]) / 255.0F / chroma(rgb) + (rgb[1] < rgb[2]
                 ? 6.0F
                 : 0.0F)
-              : (max(rgb[0], rgb[1], rgb[2]) == rgb[1]
+              : (math::max(rgb[0], rgb[1], rgb[2]) == rgb[1]
                 ? static_cast<f32>(rgb[2] - rgb[0]) / 255.0F / chroma(rgb) + 2.0F
                 : (static_cast<f32>(rgb[0] - rgb[1]) / 255.0F / chroma(rgb) + 4.0F))
           );
       }
 
       [[nodiscard]] constexpr auto lightness(std::array<u8, 3> const& rgb) -> f32 {
-        return static_cast<f32>(min(rgb[0], rgb[1], rgb[2]) + max(rgb[0], rgb[1], rgb[2])) / 510.0F;
+        return static_cast<f32>(math::min(rgb[0], rgb[1], rgb[2]) + math::max(rgb[0], rgb[1], rgb[2])) / 510.0F;
       }
 
       [[nodiscard]] constexpr auto hue(f32 const h) -> u16 {
@@ -146,13 +129,13 @@ namespace floppy::gfx
       [[nodiscard]] constexpr auto to_rgb() const -> std::array<u8, 3> {
         return std::array<u8, 3> {
           static_cast<u8>((this->l - detail::hsl::a(this->s, this->l)
-            * detail::max(-1.0F, detail::min(detail::hsl::k(0, this->h) - 3.0F,
+            * math::max(-1.0F, math::min(detail::hsl::k(0, this->h) - 3.0F,
             9.0F - detail::hsl::k(0, this->h), 1.0F))) * 255.0F),
           static_cast<u8>((this->l - detail::hsl::a(this->s, this->l)
-            * detail::max(-1.0F, detail::min(detail::hsl::k(8, this->h) - 3.0F,
+            * math::max(-1.0F, math::min(detail::hsl::k(8, this->h) - 3.0F,
             9.0F - detail::hsl::k(8, this->h), 1.0F))) * 255.0F),
           static_cast<u8>((this->l - detail::hsl::a(this->s, this->l)
-            * detail::max(-1.0F, detail::min(detail::hsl::k(4, this->h) - 3.0F,
+            * math::max(-1.0F, math::min(detail::hsl::k(4, this->h) - 3.0F,
             9.0F - detail::hsl::k(4, this->h), 1.0F))) * 255.0F)
         };
       }
@@ -166,7 +149,7 @@ namespace floppy::gfx
           detail::hsl::hue(detail::hsl::h(std::array<u8, 3>{r, g, b})),
           detail::hsl::chroma(std::array<u8, 3>{r, g, b}) == 0.0F
             ? 0.0F
-            : detail::hsl::chroma(std::array<u8, 3>{r, g, b}) / (1 - detail::abs(2 * detail::hsl::lightness(std::array<u8, 3>{r, g, b}) - 1)),
+            : detail::hsl::chroma(std::array<u8, 3>{r, g, b}) / (1 - math::abs(2 * detail::hsl::lightness(std::array<u8, 3>{r, g, b}) - 1)),
           detail::hsl::lightness(std::array<u8, 3>{r, g, b})
         };
       }
@@ -261,7 +244,7 @@ namespace floppy::gfx
         auto rgb = std::array<u8, 3>();
         auto tmp_rgb  = std::array<f32, 3>();
         const auto c = this->v * this->s ;
-        const auto x = c * (1.0F - std::abs(std::fmod(static_cast<f32>(this->h) / 60.0F, 2.0F) - 1.0F));
+        const auto x = c * (1.0F - math::abs(math::fmod(static_cast<f32>(this->h) / 60.0F, 2.0F) - 1.0F));
         const auto m = this->v - c;
         if(static_cast<f32>(this->h)< 60.F)
           tmp_rgb = {c, x ,0};
@@ -291,8 +274,8 @@ namespace floppy::gfx
         auto const fr = static_cast<f32>(r) / 255.0F;
         auto const fg = static_cast<f32>(g) / 255.0F;
         auto const fb = static_cast<f32>(b) / 255.0F;
-        auto const c_max = detail::max(detail::max(fr, fg), fb);
-        auto const c_min = detail::min(detail::min(fr, fg), fb);
+        auto const c_max = math::max(math::max(fr, fg), fb);
+        auto const c_min = math::min(math::min(fr, fg), fb);
         auto const delta = c_max - c_min;
 
         if (delta <= 0.F)

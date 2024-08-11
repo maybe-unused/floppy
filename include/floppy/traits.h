@@ -1,11 +1,53 @@
 #pragma once
 
 #include <iostream>
-#include <experimental/propagate_const>
+#include <type_traits>
 #include <floppy/floppy.h>
 
 namespace floppy
 {
+  template <typename T>
+  class propagate_const : public T
+  {
+   public:
+    using T::operator=;
+
+    propagate_const() = default;
+
+    template <typename... Args>
+    inline propagate_const(Args&&... args)
+      : T(std::forward<Args>(args)...)
+    {}
+
+    [[nodiscard]] inline auto operator*() -> typename T::element_type& {
+      return T::operator*();
+    }
+
+    [[nodiscard]] inline auto operator*() const -> typename T::element_type const& {
+      return T::operator*();
+    }
+
+    [[nodiscard]] inline auto operator->() -> typename T::element_type* {
+      return T::operator->();
+    }
+
+    [[nodiscard]] inline auto operator->() const -> typename T::element_type const* {
+      return T::operator->();
+    }
+
+    [[nodiscard]] inline auto get() -> typename T::element_type* {
+      return T::get();
+    }
+
+    [[nodiscard]] inline auto get() const -> typename T::element_type const* {
+      return T::get();
+    }
+
+    [[nodiscard]] inline operator bool() const noexcept {
+      return T::operator bool();
+    }
+  };
+
   /// \brief Disallow copy operations for a type
   /// \headerfile floppy/traits.h 
   /// \ingroup traits
@@ -136,7 +178,7 @@ namespace floppy
   /// \endcode
   /// \tparam T Underlying type.
   template <typename T>
-  using pimpl = std::experimental::propagate_const<box<T>>;
+  using pimpl = propagate_const<box<T>>;
 
   /// \brief Implementation details of traits.
   namespace detail

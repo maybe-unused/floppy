@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <gtest/gtest.h>
 #include <toml++/toml.h>
 #include <floppy/configuration.h>

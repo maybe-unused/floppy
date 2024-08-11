@@ -91,29 +91,29 @@ namespace floppy
         throw std::runtime_error("no valid home directory could be retrieved from the operating system");
       auto const home = fs::path(home_c);
       auto* const xdg_runtime_dir = std::getenv("XDG_RUNTIME_DIR");
-      this->m_project_path = path;
-      this->m_cache_dir = home / ".cache" / path;
-      this->m_config_dir = home / ".config" / path;
-      this->m_config_local_dir = this->m_config_dir;
-      this->m_data_dir = home / ".local" / "share" / path;
-      this->m_data_local_dir = this->m_data_dir;
-      this->m_preference_dir = this->m_config_dir;
-      this->m_runtime_dir = xdg_runtime_dir ? option<fs::path>(fs::path(xdg_runtime_dir)) : none;
-      this->m_state_dir = home / ".local" / "state" / path;
+      this->project_path_ = path;
+      this->cache_dir_ = home / ".cache" / path;
+      this->config_dir_ = home / ".config" / path;
+      this->config_local_dir_ = this->config_dir_;
+      this->data_dir_ = home / ".local" / "share" / path;
+      this->data_local_dir_ = this->data_dir_;
+      this->preference_dir_ = this->config_dir_;
+      this->runtime_dir_ = xdg_runtime_dir ? option<fs::path>(fs::path(xdg_runtime_dir)) : none;
+      this->state_dir_ = home / ".local" / "state" / path;
     } else if constexpr(current_platform.operating_system == platform::operating_system::windows) {
       auto const path = fs::path(organization) / application;
       #if defined(FLOPPY_OS_WINDOWS)
         auto const appdata_roaming = ::known_folder_path(FOLDERID_RoamingAppData);
         auto const appdata_local = ::known_folder_path(FOLDERID_LocalAppData);
-        this->m_project_path = path;
-        this->m_cache_dir = appdata_local / path / "cache";
-        this->m_config_dir = appdata_roaming / path / "config";
-        this->m_config_local_dir = appdata_local / path / "config";
-        this->m_data_dir = appdata_roaming / path / "data";
-        this->m_data_local_dir = appdata_local / path / "data";
-        this->m_preference_dir = this->m_config_dir;
-        this->m_runtime_dir = none;
-        this->m_state_dir = none;
+        this->project_path_ = path;
+        this->cache_dir_ = appdata_local / path / "cache";
+        this->config_dir_ = appdata_roaming / path / "config";
+        this->config_local_dir_ = appdata_local / path / "config";
+        this->data_dir_ = appdata_roaming / path / "data";
+        this->data_local_dir_ = appdata_local / path / "data";
+        this->preference_dir_ = this->config_dir_;
+        this->runtime_dir_ = none;
+        this->state_dir_ = none;
       #endif
     } else if constexpr(current_platform.operating_system == platform::operating_system::macos) {
       auto replaced = [](string_view const str, char const what, char const with) {
@@ -133,15 +133,15 @@ namespace floppy
       if(not home_c)
         throw std::runtime_error("no valid home directory could be retrieved from the operating system");
       auto const home = fs::path(home_c);
-      this->m_project_path = path;
-      this->m_cache_dir = home / "Library" / "Caches" / path;
-      this->m_config_dir = home / "Library" / "Application Support" / path;
-      this->m_config_local_dir = this->m_config_dir;
-      this->m_data_dir = this->m_config_dir;
-      this->m_data_local_dir = this->m_config_dir;
-      this->m_preference_dir = this->m_config_dir;
-      this->m_runtime_dir = none;
-      this->m_state_dir = none;
+      this->project_path_ = path;
+      this->cache_dir_ = home / "Library" / "Caches" / path;
+      this->config_dir_ = home / "Library" / "Application Support" / path;
+      this->config_local_dir_ = this->config_dir_;
+      this->data_dir_ = this->config_dir_;
+      this->data_local_dir_ = this->config_dir_;
+      this->preference_dir_ = this->config_dir_;
+      this->runtime_dir_ = none;
+      this->state_dir_ = none;
     } else {
       throw std::runtime_error("unsupported operating system");
     }
@@ -152,10 +152,10 @@ namespace floppy
       if(auto const dir = this->get(static_cast<enum dir>(i)); not fs::exists(dir))
         fs::create_directories(dir);
     }
-    if(this->m_runtime_dir and not fs::exists(*this->m_runtime_dir))
-      fs::create_directory(*this->m_runtime_dir);
-    if(this->m_state_dir and not fs::exists(*this->m_state_dir))
-      fs::create_directory(*this->m_state_dir);
+    if(this->runtime_dir_ and not fs::exists(*this->runtime_dir_))
+      fs::create_directory(*this->runtime_dir_);
+    if(this->state_dir_ and not fs::exists(*this->state_dir_))
+      fs::create_directory(*this->state_dir_);
   }
 
   auto application_dirs::remove() const -> void {
@@ -163,38 +163,38 @@ namespace floppy
       if(auto const dir = this->get(static_cast<enum dir>(i)); fs::exists(dir))
         fs::remove_all(dir);
     }
-    if(this->m_runtime_dir and fs::exists(*this->m_runtime_dir))
-      fs::remove_all(*this->m_runtime_dir);
-    if(this->m_state_dir and fs::exists(*this->m_state_dir))
-      fs::remove_all(*this->m_state_dir);
+    if(this->runtime_dir_ and fs::exists(*this->runtime_dir_))
+      fs::remove_all(*this->runtime_dir_);
+    if(this->state_dir_ and fs::exists(*this->state_dir_))
+      fs::remove_all(*this->state_dir_);
   }
 
-  auto application_dirs::project_path() const -> fs::path const& { return this->m_project_path; }
-  auto application_dirs::cache_dir() const -> fs::path const& { return this->m_cache_dir; }
-  auto application_dirs::config_dir() const -> fs::path const& { return this->m_config_dir; }
-  auto application_dirs::config_local_dir() const -> fs::path const& { return this->m_config_local_dir; }
-  auto application_dirs::data_dir() const -> fs::path const& { return this->m_data_dir; }
-  auto application_dirs::data_local_dir() const -> fs::path const& { return this->m_data_local_dir; }
-  auto application_dirs::preference_dir() const -> fs::path const& { return this->m_preference_dir; }
-  auto application_dirs::runtime_dir() const -> option<fs::path> const& { return this->m_runtime_dir; }
-  auto application_dirs::state_dir() const -> option<fs::path> const& { return this->m_state_dir; }
+  auto application_dirs::project_path() const -> fs::path const& { return this->project_path_; }
+  auto application_dirs::cache_dir() const -> fs::path const& { return this->cache_dir_; }
+  auto application_dirs::config_dir() const -> fs::path const& { return this->config_dir_; }
+  auto application_dirs::config_local_dir() const -> fs::path const& { return this->config_local_dir_; }
+  auto application_dirs::data_dir() const -> fs::path const& { return this->data_dir_; }
+  auto application_dirs::data_local_dir() const -> fs::path const& { return this->data_local_dir_; }
+  auto application_dirs::preference_dir() const -> fs::path const& { return this->preference_dir_; }
+  auto application_dirs::runtime_dir() const -> option<fs::path> const& { return this->runtime_dir_; }
+  auto application_dirs::state_dir() const -> option<fs::path> const& { return this->state_dir_; }
 
   auto application_dirs::get(application_dirs::dir directory_type) const noexcept(false) -> fs::path
   {
     switch(directory_type) {
-      case dir::cache: return this->m_cache_dir;
-      case dir::config: return this->m_config_dir;
-      case dir::config_local: return this->m_config_local_dir;
-      case dir::data: return this->m_data_dir;
-      case dir::data_local: return this->m_data_local_dir;
-      case dir::preferences: return this->m_preference_dir;
+      case dir::cache: return this->cache_dir_;
+      case dir::config: return this->config_dir_;
+      case dir::config_local: return this->config_local_dir_;
+      case dir::data: return this->data_dir_;
+      case dir::data_local: return this->data_local_dir_;
+      case dir::preferences: return this->preference_dir_;
       case dir::runtime:
-        if(this->m_runtime_dir)
-          return *this->m_runtime_dir;
+        if(this->runtime_dir_)
+          return *this->runtime_dir_;
         throw std::system_error(std::make_error_code(std::errc::no_such_file_or_directory));
       case dir::state:
-        if(this->m_state_dir)
-          return *this->m_state_dir;
+        if(this->state_dir_)
+          return *this->state_dir_;
         throw std::system_error(std::make_error_code(std::errc::no_such_file_or_directory));
       default: throw std::system_error(std::make_error_code(std::errc::invalid_argument));
     }
