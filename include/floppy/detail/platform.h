@@ -7,6 +7,24 @@
 
 namespace floppy
 {
+  namespace system_tag
+  {
+    struct linux_;
+    struct darwin;
+    struct windows;
+    struct unknown;
+
+    #if defined(FLOPPY_OS_LINUX)
+    using current = linux_;
+    #elif defined(FLOPPY_OS_DARWIN)
+    using current = darwin;
+    #elif defined(FLOPPY_OS_WINDOWS)
+    using current = windows;
+    #else
+    using current = unknown;
+    #endif
+  } // namespace system_tag
+
   /// \brief Platform information.
   /// \headerfile floppy/floppy.h
   /// \ingroup platform
@@ -144,6 +162,9 @@ namespace floppy
     /// \brief Holds current path separator.
     char path_separator;
 
+    /// \brief Holds current backward path delimiter.
+    char backward_path_delimiter;
+
     /// \brief Constructs platform information for the current platform at compile-time.
     constexpr platform(
       enum operating_system operating_system_,
@@ -151,7 +172,8 @@ namespace floppy
       enum compiler compiler_,
       enum endianness endianness_,
       i16 cxx_standard_, // NOLINT(*-easily-swappable-parameters)
-      char path_separator_
+      char path_separator_,
+      char backward_path_delimiter_
     )
       : operating_system(operating_system_)
       , architecture(architecture_)
@@ -159,11 +181,12 @@ namespace floppy
       , endianness(endianness_)
       , cxx_standard(cxx_standard_)
       , path_separator(path_separator_)
+      , backward_path_delimiter(backward_path_delimiter_)
     {}
 
     /// \brief Returns platform information for the current platform at compile-time.
     /// \see floppy::current_platform
-    [[nodiscard]] static consteval auto current() noexcept -> platform
+    [[nodiscard]] static constexpr auto current() noexcept -> platform
     {
       return platform {
         platform::current_system(),
@@ -172,6 +195,7 @@ namespace floppy
         platform::current_endianness(),
         platform::current_standard(),
         platform::current_path_separator(),
+        platform::current_backward_path_delimiter()
       };
     }
 
@@ -219,7 +243,7 @@ namespace floppy
 
    private:
     /// \brief Returns constant-evaluated current operating system enumeration.
-    [[nodiscard]] static consteval auto current_system() noexcept -> enum operating_system
+    [[nodiscard]] static constexpr auto current_system() noexcept -> enum operating_system
     {
       #if defined(FLOPPY_OS_WINDOWS)
             return operating_system::windows;
@@ -247,7 +271,7 @@ namespace floppy
     }
 
     /// \brief Returns constant-evaluated current architecture enumeration.
-    [[nodiscard]] static consteval auto current_architecture() noexcept -> enum arch
+    [[nodiscard]] static constexpr auto current_architecture() noexcept -> enum arch
     {
       #if defined(FLOPPY_ARCH_X86_32)
             return arch::x86_32;
@@ -299,7 +323,7 @@ namespace floppy
     };
 
     /// \brief Returns constant-evaluated current compiler enumeration.
-    [[nodiscard]] static consteval auto current_compiler() noexcept -> enum compiler
+    [[nodiscard]] static constexpr auto current_compiler() noexcept -> enum compiler
     {
       #if defined(FLOPPY_COMPILER_BORLAND)
             return compiler::borland;
@@ -365,7 +389,7 @@ namespace floppy
     }
 
     /// \brief Returns constant-evaluated current endianness enumeration.
-    [[nodiscard]] static consteval auto current_endianness() noexcept -> enum endianness
+    [[nodiscard]] static constexpr auto current_endianness() noexcept -> enum endianness
     {
       #if defined(FLOPPY_ENDIAN_LITTLE)
             return endianness::little;
@@ -377,7 +401,7 @@ namespace floppy
     }
 
     /// \brief Returns constant-evaluated current language standard.
-    [[nodiscard]] static consteval auto current_standard() noexcept -> i16
+    [[nodiscard]] static constexpr auto current_standard() noexcept -> i16
     {
       #if defined(FLOPPY_LANGUAGE_C)
             return std::numeric_limits<i16>::min();
@@ -405,11 +429,18 @@ namespace floppy
     /// \brief Returns constant-evaluated file system path separator character on the current platform.
     /// \details Returns <tt>'/'</tt> for POSIX and <tt>'\\'</tt> for Windows.
     /// \return File system path separator character.
-    [[nodiscard]] static consteval auto current_path_separator() noexcept -> char {
+    [[nodiscard]] static constexpr auto current_path_separator() noexcept -> char {
       if constexpr(platform::current_system() == operating_system::windows)
         return '\\';
       else
         return '/';
+    }
+
+    [[nodiscard]] static constexpr auto current_backward_path_delimiter() noexcept -> char {
+      if constexpr(platform::current_system() == operating_system::windows)
+        return ';';
+      else
+        return ':';
     }
 
     /// \brief Tries to guess a vendor from operating system name.

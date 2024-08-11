@@ -54,19 +54,13 @@
 
 #define NOINLINE __attribute__((noinline))
 
-#include <algorithm>
 #include <cctype>
 #include <cstdio>
 #include <cstdlib>
-#include <cstring>
 #include <fstream>
-#include <iomanip>
-#include <iostream>
-#include <limits>
 #include <new>
 #include <sstream>
 #include <streambuf>
-#include <string>
 #include <vector>
 #include <exception>
 #include <iterator>
@@ -315,12 +309,6 @@
 #include <thread>
 #include <basetsd.h>
 
-#ifdef _WIN64
-typedef SSIZE_T ssize_t;
-#else
-typedef int ssize_t;
-#endif
-
 #ifndef NOMINMAX
 #define NOMINMAX
 #endif
@@ -328,7 +316,7 @@ typedef int ssize_t;
 #include <winnt.h>
 
 #include <psapi.h>
-#include <signal.h>
+#include <csignal>
 
 #ifndef __clang__
 #undef NOINLINE
@@ -388,68 +376,25 @@ extern "C" uintptr_t _Unwind_GetIPInfo(_Unwind_Context *, int *);
 #include <libunwind.h>
 #endif // BACKWARD_HAS_LIBUNWIND == 1
 
-#ifdef BACKWARD_ATLEAST_CXX11
 #include <unordered_map>
-#include <utility> // for std::swap
-namespace floppy::stacktrace {
-namespace details {
-template <typename K, typename V> struct hashtable {
-  typedef std::unordered_map<K, V> type;
-};
-using std::move;
-} // namespace details
-} // namespace floppy::stacktrace
-#else // NOT BACKWARD_ATLEAST_CXX11
-#define nullptr NULL
-#define override
-#include <map>
-namespace floppy::stacktrace {
-namespace details {
-template <typename K, typename V> struct hashtable {
-  typedef std::map<K, V> type;
-};
-template <typename T> const T &move(const T &v) { return v; }
-template <typename T> T &move(T &v) { return v; }
-} // namespace details
-} // namespace floppy::stacktrace
-#endif // BACKWARD_ATLEAST_CXX11
 
-namespace floppy::stacktrace {
-namespace details {
-#if defined(BACKWARD_SYSTEM_WINDOWS)
-const char kBackwardPathDelimiter[] = ";";
-#else
-const char kBackwardPathDelimiter[] = ":";
-#endif
-} // namespace details
-} // namespace floppy::stacktrace
+namespace floppy::stacktrace::details
+{
+  template <typename K, typename V>
+  struct hashtable
+  {
+    using type = std::unordered_map<K, V>;
+  };
+
+  using std::move;
+} // namespace floppy::stacktrace::details
+
 
 /// \brief Stacktrace namespace.
 /// \details Currently implemented using reworked <a href="https://github.com/bombela/backward-cpp">backward-cpp</a> library.
 /// \ingroup foundation
 /// \sa https://github.com/bombela/backward-cpp
 namespace floppy::stacktrace {
-
-namespace system_tag {
-struct linux_tag; // seems that I cannot call that "linux" because the name
-// is already defined... so I am adding _tag everywhere.
-struct darwin_tag;
-struct windows_tag;
-struct unknown_tag;
-
-#if defined(BACKWARD_SYSTEM_LINUX)
-typedef linux_tag current_tag;
-#elif defined(BACKWARD_SYSTEM_DARWIN)
-typedef darwin_tag current_tag;
-#elif defined(BACKWARD_SYSTEM_WINDOWS)
-typedef windows_tag current_tag;
-#elif defined(BACKWARD_SYSTEM_UNKNOWN)
-typedef unknown_tag current_tag;
-#else
-#error "May I please get my system defines?"
-#endif
-} // namespace system_tag
-
 namespace trace_resolver_tag {
 #if defined(BACKWARD_SYSTEM_LINUX)
 struct libdw;
@@ -595,7 +540,7 @@ template <typename TAG> struct demangler_impl {
 
 #if defined(BACKWARD_SYSTEM_LINUX) || defined(BACKWARD_SYSTEM_DARWIN)
 
-template <> struct demangler_impl<system_tag::current_tag> {
+template <> struct demangler_impl<system_tag::current> {
   demangler_impl() : _demangle_buffer_length(0) {}
 
   std::string demangle(const char *funcname) {
@@ -616,7 +561,7 @@ private:
 
 #endif // BACKWARD_SYSTEM_LINUX || BACKWARD_SYSTEM_DARWIN
 
-struct demangler : public demangler_impl<system_tag::current_tag> {};
+struct demangler : public demangler_impl<system_tag::current> {};
 
 // Split a string on the platform's PATH delimiter.  Example: if delimiter
 // is ":" then:
@@ -630,8 +575,8 @@ inline std::vector<std::string> split_source_prefixes(const std::string &s) {
   std::vector<std::string> out;
   size_t last = 0;
   size_t next = 0;
-  size_t delimiter_size = sizeof(kBackwardPathDelimiter) - 1;
-  while ((next = s.find(kBackwardPathDelimiter, last)) != std::string::npos) {
+  size_t delimiter_size = 1;
+  while((next = s.find(platform::current().backward_path_delimiter, last)) != std::string::npos) {
     out.push_back(s.substr(last, next - last));
     last = next + delimiter_size;
   }
@@ -802,7 +747,7 @@ public:
 
 private:
   F *_f;
-  ssize_t _index;
+  isize _index;
   size_t _depth;
 
   static _Unwind_Reason_Code backtrace_trampoline(_Unwind_Context *ctx,
@@ -845,7 +790,7 @@ template <typename F> size_t unwind(F f, size_t depth) {
 } // namespace details
 
 template <>
-class StackTraceImpl<system_tag::current_tag> : public StackTraceImplHolder {
+class StackTraceImpl<system_tag::current> : public StackTraceImplHolder {
 public:
   NOINLINE
   size_t load_here(size_t depth = 32, void *context = nullptr,
@@ -889,7 +834,7 @@ private:
 #elif BACKWARD_HAS_LIBUNWIND == 1
 
 template <>
-class StackTraceImpl<system_tag::current_tag> : public StackTraceImplHolder {
+class StackTraceImpl<system_tag::current> : public StackTraceImplHolder {
 public:
   __attribute__((noinline)) size_t load_here(size_t depth = 32,
                                              void *_context = nullptr,
@@ -1066,7 +1011,7 @@ public:
 #elif defined(BACKWARD_HAS_BACKTRACE)
 
 template <>
-class StackTraceImpl<system_tag::current_tag> : public StackTraceImplHolder {
+class StackTraceImpl<system_tag::current> : public StackTraceImplHolder {
 public:
   NOINLINE
   size_t load_here(size_t depth = 32, void *context = nullptr,
@@ -1104,7 +1049,7 @@ public:
 #elif defined(BACKWARD_SYSTEM_WINDOWS)
 
 template <>
-class StackTraceImpl<system_tag::current_tag> : public StackTraceImplHolder {
+class StackTraceImpl<system_tag::current> : public StackTraceImplHolder {
 public:
   // We have to load the machine type from the image info
   // So we first initialize the resolver, and it tells us this info
@@ -1201,7 +1146,7 @@ private:
 
 #endif
 
-class stack_trace : public StackTraceImpl<system_tag::current_tag> {};
+class stack_trace : public StackTraceImpl<system_tag::current> {};
 
 /*************** TRACE RESOLVER ***************/
 
@@ -1233,7 +1178,7 @@ template <typename TAG> class TraceResolverImpl;
 
 #ifdef BACKWARD_SYSTEM_UNKNOWN
 
-template <> class TraceResolverImpl<system_tag::unknown_tag>
+template <> class TraceResolverImpl<system_tag::unknown>
     : public TraceResolverImplBase {};
 
 #endif
@@ -1283,7 +1228,7 @@ private:
     path.resize(100);
 
     while (true) {
-      ssize_t len =
+      isize len =
           ::readlink(symlink_path.c_str(), &*path.begin(), path.size());
       if (len < 0) {
         return "";
@@ -1590,9 +1535,9 @@ private:
       return r; // that's what happen when you forget to compile in debug.
     }
 
-    ssize_t symtab_storage_size = bfd_get_symtab_upper_bound(bfd_handle.get());
+    isize symtab_storage_size = bfd_get_symtab_upper_bound(bfd_handle.get());
 
-    ssize_t dyn_symtab_storage_size =
+    isize dyn_symtab_storage_size =
         bfd_get_dynamic_symtab_upper_bound(bfd_handle.get());
 
     if (symtab_storage_size <= 0 && dyn_symtab_storage_size <= 0) {
@@ -1600,7 +1545,7 @@ private:
     }
 
     bfd_symtab_t symtab, dynamic_symtab;
-    ssize_t symcount = 0, dyn_symcount = 0;
+    isize symcount = 0, dyn_symcount = 0;
 
     if (symtab_storage_size > 0) {
       symtab.reset(static_cast<bfd_symbol **>(
@@ -3456,7 +3401,7 @@ private:
 #endif // BACKWARD_HAS_DWARF == 1
 
 template <>
-class TraceResolverImpl<system_tag::linux_tag>
+class TraceResolverImpl<system_tag::linux_>
     : public TraceResolverLinuxImpl<trace_resolver_tag::current> {};
 
 #endif // BACKWARD_SYSTEM_LINUX
@@ -3540,7 +3485,7 @@ private:
 };
 
 template <>
-class TraceResolverImpl<system_tag::darwin_tag>
+class TraceResolverImpl<system_tag::darwin>
     : public TraceResolverDarwinImpl<trace_resolver_tag::current> {};
 
 #endif // BACKWARD_SYSTEM_DARWIN
@@ -3586,7 +3531,7 @@ public:
   }
 };
 
-template <> class TraceResolverImpl<system_tag::windows_tag>
+template <> class TraceResolverImpl<system_tag::windows>
     : public TraceResolverImplBase {
 public:
   TraceResolverImpl() {
@@ -3673,7 +3618,7 @@ private:
 
 #endif
 
-class trace_resolver : public TraceResolverImpl<system_tag::current_tag> {};
+class trace_resolver : public TraceResolverImpl<system_tag::current> {};
 
 /*************** CODE SNIPPET ***************/
 
