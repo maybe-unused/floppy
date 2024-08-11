@@ -66,7 +66,7 @@ var NAVTREEINDEX =
 "classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678ca21e4877ebcf75b3ffc961671a274f985",
 "group__calc.html#gadd770f95287eea461bee0dea63476fb2",
 "namespacemembers_type.html",
-"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a7b8dc05d46255ca6b170f882faa8e19f"
+"structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a79eefbf0838dc9c781d9e0f35996bf56"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

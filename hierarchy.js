@@ -113,7 +113,7 @@ var hierarchy =
     [ "one_of< U, T >", "structfloppy_1_1one__of.html", null ],
     [ "plain_type< T >", "group__helpers.html#structfloppy_1_1plain__type", null ],
     [ "platform", "classfloppy_1_1platform.html", null ],
-    [ "printer", "classfloppy_1_1stacktrace_1_1printer.html", null ],
+    [ "printer", "classfloppy_1_1stacktrace_1_1impl_1_1printer.html", null ],
     [ "project_meta", "classfloppy_1_1meta_1_1project__meta.html", null ],
     [ "signal_handler", "classfloppy_1_1stacktrace_1_1signal__handler.html", null ],
     [ "snippet_factory", "classfloppy_1_1stacktrace_1_1impl_1_1snippet__factory.html", null ],
