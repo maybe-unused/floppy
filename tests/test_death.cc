@@ -1,7 +1,7 @@
 #include <cstdint>
 #include <gtest/gtest.h>
 #include <floppy/floppy.h>
-#include <floppy/backtrace.h>
+#include <floppy/stacktrace.h>
 
 using namespace fl;
 

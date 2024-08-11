@@ -7,10 +7,14 @@
 #include <new>
 #include <sstream>
 #include <streambuf>
-#include <vector>
 #include <exception>
 #include <iterator>
 #include <unordered_map>
+#include <floppy/backtrace/trace_resolver_tag.h>
+#include <floppy/backtrace/handle.h>
+#include <floppy/backtrace/demangle.h>
+#include <floppy/backtrace/trace.h>
+#include <floppy/backtrace/resolved_trace.h>
 #include <floppy/floppy.h>
 #if defined(FLOPPY_OS_LINUX)
 # include <cxxabi.h>
@@ -76,223 +80,6 @@
 /// \ingroup foundation
 /// \sa https://github.com/bombela/backward-cpp
 namespace floppy::stacktrace {
-  namespace details
-  {
-    using std::move;
-    template <typename K, typename V>
-    struct hashtable
-    {
-      using type = std::unordered_map<K, V>;
-    };
-  } // namespace details
-
-  namespace trace_resolver_tag
-  {
-    #if defined(FLOPPY_OS_LINUX)
-    struct libdw;
-    struct libbfd;
-    struct libdwarf;
-    struct backtrace_symbol;
-
-    typedef libdw current;
-    #elif defined(FLOPPY_OS_DARWIN)
-    struct backtrace_symbol;
-
-    #elif defined(FLOPPY_OS_WINDOWS)
-    struct pdb_symbol;
-    typedef pdb_symbol current;
-    #endif
-  } // namespace trace_resolver_tag
-
-  namespace details
-  {
-    template <typename T> struct rm_ptr { typedef T type; };
-    template <typename T> struct rm_ptr<T *> { typedef T type; };
-    template <typename T> struct rm_ptr<const T *> { typedef const T type; };
-
-    template <typename R, typename T, R (*F)(T)> struct deleter {
-      template <typename U> void operator()(U &ptr) const { (*F)(ptr); }
-    };
-
-    template <typename T> struct default_delete {
-      void operator()(T &ptr) const { delete ptr; }
-    };
-
-    template <typename T, typename Deleter = deleter<void, void *, &::free> >
-    class handle {
-      struct dummy;
-      T _val;
-      bool _empty;
-
-      handle(const handle &) = delete;
-      handle &operator=(const handle &) = delete;
-
-    public:
-      ~handle() {
-        if (!_empty) {
-          Deleter()(_val);
-        }
-      }
-
-      explicit handle() : _val(), _empty(true) {}
-      explicit handle(T val) : _val(val), _empty(false) {
-        if (!_val)
-          _empty = true;
-      }
-
-      handle(handle &&from) : _empty(true) { swap(from); }
-      handle &operator=(handle &&from) {
-        swap(from);
-        return *this;
-      }
-
-      void reset(T new_val) {
-        handle tmp(new_val);
-        swap(tmp);
-      }
-
-      void update(T new_val) {
-        _val = new_val;
-        _empty = !static_cast<bool>(new_val);
-      }
-
-      operator const dummy *() const {
-        if (_empty) {
-          return nullptr;
-        }
-        return reinterpret_cast<const dummy *>(_val);
-      }
-      auto get() -> T { return _val; }
-      auto release() -> T {
-        _empty = true;
-        return _val;
-      }
-
-      auto swap(handle &b) noexcept -> void {
-        std::swap(b._val, _val);
-        std::swap(b._empty, _empty);
-      }
-
-      auto operator->() -> T & { return _val; }
-      auto operator->() const -> const T & { return _val; }
-
-      using ref_t = std::remove_pointer_t<T>&;
-      using const_ref_t = std::remove_pointer_t<T> const&;
-
-      auto operator*() -> ref_t { return *_val; }
-      auto operator*() const -> const_ref_t { return *_val; }
-      auto operator[](size_t idx) -> ref_t { return _val[idx]; }
-
-      // Watch out, we've got a badass over here
-      auto operator&() -> T * {
-        _empty = false;
-        return &_val;
-      }
-    };
-
-    // Default demangler implementation (do nothing).
-    template <typename TAG> struct demangler_impl {
-      static std::string demangle(const char *funcname) { return funcname; }
-    };
-
-    #if defined(FLOPPY_OS_LINUX) || defined(FLOPPY_OS_DARWIN)
-
-    template <> struct demangler_impl<system_tag::current> {
-      demangler_impl() : _demangle_buffer_length(0) {}
-
-      std::string demangle(const char *funcname) {
-        using namespace details;
-        char *result = abi::__cxa_demangle(funcname, _demangle_buffer.get(),
-                                           &_demangle_buffer_length, nullptr);
-        if (result) {
-          _demangle_buffer.update(result);
-          return result;
-        }
-        return funcname;
-      }
-
-    private:
-      details::handle<char *> _demangle_buffer;
-      size_t _demangle_buffer_length;
-    };
-
-    #endif // FLOPPY_OS_LINUX || FLOPPY_OS_LINUX
-
-    struct demangler : public demangler_impl<system_tag::current> {};
-
-    // Split a string on the platform's PATH delimiter.  Example: if delimiter
-    // is ":" then:
-    //   ""              --> []
-    //   ":"             --> ["",""]
-    //   "::"            --> ["","",""]
-    //   "/a/b/c"        --> ["/a/b/c"]
-    //   "/a/b/c:/d/e/f" --> ["/a/b/c","/d/e/f"]
-    //   etc.
-    inline std::vector<std::string> split_source_prefixes(const std::string &s) {
-      std::vector<std::string> out;
-      size_t last = 0;
-      size_t next = 0;
-      size_t delimiter_size = 1;
-      while((next = s.find(platform::current().backward_path_delimiter, last)) != std::string::npos) {
-        out.push_back(s.substr(last, next - last));
-        last = next + delimiter_size;
-      }
-      if (last <= s.length()) {
-        out.push_back(s.substr(last));
-      }
-      return out;
-    }
-  } // namespace details
-
-struct trace {
-  void *addr;
-  size_t idx;
-
-  trace() : addr(nullptr), idx(0) {}
-
-  explicit trace(void *_addr, size_t _idx) : addr(_addr), idx(_idx) {}
-};
-
-struct resolved_trace : public trace {
-
-  struct SourceLoc {
-    std::string function;
-    std::string filename;
-    unsigned line;
-    unsigned col;
-
-    SourceLoc() : line(0), col(0) {}
-
-    bool operator==(const SourceLoc &b) const {
-      return function == b.function && filename == b.filename &&
-             line == b.line && col == b.col;
-    }
-
-    bool operator!=(const SourceLoc &b) const { return !(*this == b); }
-  };
-
-  // In which binary object this trace is located.
-  std::string object_filename;
-
-  // The function in the object that contain the trace. This is not the same
-  // as source.function which can be an function inlined in object_function.
-  std::string object_function;
-
-  // The source location of this trace. It is possible for filename to be
-  // empty and for line/col to be invalid (value 0) if this information
-  // couldn't be deduced, for example if there is no debug information in the
-  // binary object.
-  SourceLoc source;
-
-  // An optionals list of "inliners". All the successive sources location
-  // from where the source location of the trace (the attribute right above)
-  // is inlined. It is especially useful when you compiled with optimization.
-  typedef std::vector<SourceLoc> source_locs_t;
-  source_locs_t inliners;
-
-  resolved_trace() : trace() {}
-  resolved_trace(const trace &mini_trace) : trace(mini_trace) {}
-};
 
 /*************** STACK TRACE ***************/
 
@@ -1136,14 +923,13 @@ public:
 
     DWORD offset = 0;
     IMAGEHLP_LINE line;
-    if (SymGetLineFromAddr(process, (ULONG64)t.addr, &offset, &line)) {
+    if(SymGetLineFromAddr(process, (ULONG64)t.addr, &offset, &line)) {
       t.object_filename = line.FileName;
-      t.source.filename = line.FileName;
-      t.source.line = line.LineNumber;
-      t.source.col = offset;
+      t.source.file_name_mut() = line.FileName;
+      t.source.line_mut() = line.LineNumber;
+      t.source.column_mut() = offset;
     }
-
-    t.source.function = name;
+    t.source.function_name_mut() = name;
     t.object_filename = "";
     t.object_function = name;
 
@@ -1180,7 +966,7 @@ public:
         break;
     }
     // 2. If no valid file found then fallback to opening the path as-is.
-    if (!_file || !is_open()) {
+    if (not _file || !is_open()) {
       _file.reset(new std::ifstream(path.c_str()));
     }
   }
@@ -1193,7 +979,7 @@ public:
     //	2) read lines one by one and discard until line_start
     //	3) read line one by one until line_start + line_count
     //
-    // If you are getting snippets many time from the same file, it is
+    // If you are getting snippets many times from the same file, it is
     // somewhat a waste of CPU, feel free to benchmark and propose a
     // better solution ;)
 
@@ -1271,7 +1057,7 @@ public:
   }
 
 private:
-  details::handle<std::ifstream *, details::default_delete<std::ifstream *> >
+  details::handle<std::ifstream *, default_delete<std::ifstream *> >
       _file;
 
   static std::vector<std::string> get_paths_from_env_variable_impl() {
@@ -1339,7 +1125,7 @@ public:
   }
 
 private:
-  typedef details::hashtable<std::string, source_file>::type src_files_t;
+  using src_files_t = std::unordered_map<std::string, source_file>;
   src_files_t _src_files;
 
   source_file &get_src_file(const std::string &filename) {
@@ -1422,7 +1208,7 @@ private:
   auto print_trace(std::FILE* out, resolved_trace const& trace) -> void {
     printer::indent(out, trace.idx);
     auto already_indented = true;
-    if(trace.source.filename.empty() or this->object) {
+    if(trace.source.file_name().empty() or this->object) {
       fmt::print(out, R"(   Object '{}' at '{}' in '{}')",
         fmt::styled(trace.object_filename, fmt::emphasis::bold | fg(fmt::terminal_color::white)),
         fmt::styled(trace.addr, fmt::emphasis::faint | fg(fmt::terminal_color::white)),
@@ -1442,7 +1228,7 @@ private:
       already_indented = false;
     }
 
-    if(not trace.source.filename.empty()) {
+    if(not trace.source.file_name().empty()) {
       if(not already_indented)
         fmt::print(out, "    ");
       this->print_source_loc(out, "   ", trace.source, trace.addr);
@@ -1454,21 +1240,21 @@ private:
   auto print_snippet(
     std::FILE* out,
     char const* indent,
-    resolved_trace::SourceLoc const& source_loc,
+    resolved_trace::source_loc_t const& source_loc,
     int context_size
   ) -> void {
     using namespace std;
     typedef snippet_factory::lines_t lines_t;
 
     lines_t lines = this->_snippets.get_snippet(
-      source_loc.filename,
-      source_loc.line,
+      std::string(source_loc.file_name()),
+      source_loc.line(),
       static_cast<unsigned>(context_size)
     );
 
     for(lines_t::const_iterator it = lines.begin(); it != lines.end(); ++it) {
       auto highlight = false;
-      if(it->first == source_loc.line) {
+      if(it->first == source_loc.line()) {
         fmt::print(out, fmt::emphasis::bold | fg(fmt::terminal_color::bright_yellow), "{}>", indent);
         highlight = true;
       } else
@@ -1483,14 +1269,14 @@ private:
   auto print_source_loc(
     std::FILE* out,
     char const* indent,
-    resolved_trace::SourceLoc const& source_loc,
+    resolved_trace::source_loc_t const& source_loc,
     void* addr = nullptr
   ) const -> void {
     fmt::print(out, "{}Source \'{}\', line {} in {} {}\n",
       indent,
-      fmt::styled(print_helpers::truncate(source_loc.filename, 45, direction::reverse), fg(fmt::terminal_color::white)),
-      fmt::styled(source_loc.line, fg(fmt::terminal_color::white)),
-      fmt::styled(source_loc.function, fg(fmt::terminal_color::yellow)),
+      fmt::styled(print_helpers::truncate(source_loc.file_name(), 45, direction::reverse), fg(fmt::terminal_color::white)),
+      fmt::styled(source_loc.line(), fg(fmt::terminal_color::white)),
+      fmt::styled(source_loc.function_name(), fg(fmt::terminal_color::yellow)),
       fmt::styled(address and addr != nullptr ? fmt::format("[0x{:p}]", addr) : "", fmt::emphasis::faint | fg(fmt::terminal_color::white))
     );
   }

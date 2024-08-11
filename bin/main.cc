@@ -1,6 +1,6 @@
 #include <floppy/floppy.h>
 #include <floppy/logging.h>
-#include <floppy/backtrace.h>
+#include <floppy/stacktrace.h>
 #include "obj.hh"
 
 [[maybe_unused]] fl::stacktrace::signal_handler sh;

@@ -9,6 +9,23 @@
 
 namespace floppy
 {
+  template <typename R, typename T, R (*F)(T)>
+  struct deleter
+  {
+    template <typename U>
+    auto operator()(U &ptr) const -> void {
+      (*F)(ptr);
+    }
+  };
+
+  template <typename T>
+  struct default_delete
+  {
+    auto operator()(T &ptr) const -> void {
+      delete ptr;
+    }
+  };
+
   /// \brief Exception thrown when trying to access invalid smart pointer.
   /// \details Can be thrown when accessing a <tt>box</tt> that has been moved from or is leaked/consumed.
   /// \headerfile floppy/floppy.h
