@@ -14,5 +14,5 @@ var group__traits =
       [ "basic_string< C >", "structfloppy_1_1formattable.html#abb97ee5b3485f7cc5eb67cff00cd963a", null ],
       [ "operator<<", "structfloppy_1_1formattable.html#a5033d519861ee33fdd6ab38f88699ae2", null ]
     ] ],
-    [ "pimpl", "group__traits.html#gaa6694ecf510485baa4e46c63f5b99523", null ]
+    [ "pimpl", "group__traits.html#ga362793f7ec80eb5f2633c5da6901c510", null ]
 ];

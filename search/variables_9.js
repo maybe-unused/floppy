@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['path_5fseparator_0',['path_separator',['../classfloppy_1_1platform.html#a59111e456e3bfba78f27d52c59121b2a',1,'floppy::platform']]]
+  ['none_0',['none',['../group__aliases.html#ga9365b793fe547271e48fa719a7f4854d',1,'floppy::none'],['../group__aliases.html#ga9365b793fe547271e48fa719a7f4854d',1,'floppy::types::none']]]
 ];

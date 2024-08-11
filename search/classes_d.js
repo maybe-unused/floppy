@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['vector2d_0',['vector2d',['../classfloppy_1_1math_1_1vector2d.html',1,'floppy::math']]],
-  ['version_1',['version',['../classfloppy_1_1meta_1_1version.html',1,'floppy::meta']]]
+  ['resolved_5ftrace_0',['resolved_trace',['../structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html',1,'floppy::stacktrace::impl']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['m_5f_0',['m_',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a60a44b6be66786ea152cc7d589c55426',1,'floppy::math::detail::basic_numeric_newtype']]]
+  ['inliners_0',['inliners',['../structfloppy_1_1stacktrace_1_1impl_1_1resolved__trace.html#aa8dc2bd07aaca8c87725caca03274cea',1,'floppy::stacktrace::impl::resolved_trace']]]
 ];

@@ -59,7 +59,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo-tmp.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Floppy
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.0</span>
    </div>
    <div id="projectbrief">Extensions for C++ stdlib</div>
   </td>
@@ -140,41 +140,49 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa3cb6509b6b1bf6578be6a615bd953ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44ec96e0e5290e3988011ccee09b7ad2" id="r_a44ec96e0e5290e3988011ccee09b7ad2"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44ec96e0e5290e3988011ccee09b7ad2">source_location</a> (char const *file, uint_least32_t const <a class="el" href="#a045aa753ae450e5f2a63358a7778c7e2">line</a>, char const *function, uint_least32_t const <a class="el" href="#aa5435523d5e20e47d7a4fe6c44cea263">column</a>=0) noexcept</td></tr>
 <tr class="separator:a44ec96e0e5290e3988011ccee09b7ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f1c9c6c6060cef15dda6a2ef11384d2" id="r_a8f1c9c6c6060cef15dda6a2ef11384d2"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f1c9c6c6060cef15dda6a2ef11384d2">file_name</a> () const noexcept -&gt; char const *</td></tr>
-<tr class="separator:a8f1c9c6c6060cef15dda6a2ef11384d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d3e32bc7888d35bc6b6096f16472644" id="r_a7d3e32bc7888d35bc6b6096f16472644"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d3e32bc7888d35bc6b6096f16472644">function_name</a> () const noexcept -&gt; char const *</td></tr>
-<tr class="separator:a7d3e32bc7888d35bc6b6096f16472644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d0788c5bdc873f99ba146f9ac6e631d" id="r_a3d0788c5bdc873f99ba146f9ac6e631d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d0788c5bdc873f99ba146f9ac6e631d">file_name</a> () const noexcept -&gt; std::string_view</td></tr>
+<tr class="separator:a3d0788c5bdc873f99ba146f9ac6e631d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2322cd8972d6c53c51177e8ac48755fc" id="r_a2322cd8972d6c53c51177e8ac48755fc"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2322cd8972d6c53c51177e8ac48755fc">file_name_mut</a> () noexcept -&gt; std::string &amp;</td></tr>
+<tr class="separator:a2322cd8972d6c53c51177e8ac48755fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9fd8efb9bab8d887bc488d2300aa15" id="r_a1a9fd8efb9bab8d887bc488d2300aa15"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a9fd8efb9bab8d887bc488d2300aa15">function_name</a> () const noexcept -&gt; std::string_view</td></tr>
+<tr class="separator:a1a9fd8efb9bab8d887bc488d2300aa15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7be9d1665d31ff9e0ce78958e4ce32e" id="r_aa7be9d1665d31ff9e0ce78958e4ce32e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7be9d1665d31ff9e0ce78958e4ce32e">function_name_mut</a> () noexcept -&gt; std::string &amp;</td></tr>
+<tr class="separator:aa7be9d1665d31ff9e0ce78958e4ce32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a045aa753ae450e5f2a63358a7778c7e2" id="r_a045aa753ae450e5f2a63358a7778c7e2"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a045aa753ae450e5f2a63358a7778c7e2">line</a> () const noexcept -&gt; uint_least32_t</td></tr>
 <tr class="separator:a045aa753ae450e5f2a63358a7778c7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2f8a08d7e658d3fbc7035f3dc7da5e" id="r_acb2f8a08d7e658d3fbc7035f3dc7da5e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb2f8a08d7e658d3fbc7035f3dc7da5e">line_mut</a> () noexcept -&gt; uint_least32_t &amp;</td></tr>
+<tr class="separator:acb2f8a08d7e658d3fbc7035f3dc7da5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5435523d5e20e47d7a4fe6c44cea263" id="r_aa5435523d5e20e47d7a4fe6c44cea263"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5435523d5e20e47d7a4fe6c44cea263">column</a> () const noexcept -&gt; uint_least32_t</td></tr>
 <tr class="separator:aa5435523d5e20e47d7a4fe6c44cea263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1af3a989db3811e3bf13822626d1479" id="r_ab1af3a989db3811e3bf13822626d1479"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1af3a989db3811e3bf13822626d1479">column_mut</a> () noexcept -&gt; uint_least32_t &amp;</td></tr>
+<tr class="separator:ab1af3a989db3811e3bf13822626d1479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aed70029e75ad4b575d62706be467e743" id="r_aed70029e75ad4b575d62706be467e743"><td class="memItemLeft" align="right" valign="top">static consteval auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed70029e75ad4b575d62706be467e743">current</a> (char const *file=UNKNOWN, char const *function=UNKNOWN, uint_least32_t <a class="el" href="#a045aa753ae450e5f2a63358a7778c7e2">line</a>=0, uint_least32_t <a class="el" href="#aa5435523d5e20e47d7a4fe6c44cea263">column</a>=0) noexcept -&gt; <a class="el" href="structfloppy_1_1source__location.html">source_location</a></td></tr>
-<tr class="separator:aed70029e75ad4b575d62706be467e743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a5ca92c062eb63ad192282858f1ab3" id="r_a36a5ca92c062eb63ad192282858f1ab3"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36a5ca92c062eb63ad192282858f1ab3">current</a> (char const *file=UNKNOWN, char const *function=UNKNOWN, uint_least32_t <a class="el" href="#a045aa753ae450e5f2a63358a7778c7e2">line</a>=0, uint_least32_t <a class="el" href="#aa5435523d5e20e47d7a4fe6c44cea263">column</a>=0) noexcept -&gt; <a class="el" href="structfloppy_1_1source__location.html">source_location</a></td></tr>
+<tr class="separator:a36a5ca92c062eb63ad192282858f1ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides information about the location of the current source file. </p>
 <p>Class provides information about the location of the current source file. This class is a port of C++20 std::source_location. Example usage: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> main() -&gt; <span class="keywordtype">int</span> {</div>
 <div class="line">  <a class="code hl_function" href="group__logging.html#gaebe2862c002ab7a673f4ba5038a905c7">log::debug</a>(<span class="stringliteral">&quot;I am called from {}, {}:{} in file {}!&quot;</span>,</div>
-<div class="line">    lf::source_location::current().<a class="code hl_function" href="#a7d3e32bc7888d35bc6b6096f16472644">function_name</a>(),</div>
+<div class="line">    lf::source_location::current().<a class="code hl_function" href="#a1a9fd8efb9bab8d887bc488d2300aa15">function_name</a>(),</div>
 <div class="line">    lf::source_location::current().<a class="code hl_function" href="#a045aa753ae450e5f2a63358a7778c7e2">line</a>(),</div>
 <div class="line">    lf::source_location::current().<a class="code hl_function" href="#aa5435523d5e20e47d7a4fe6c44cea263">column</a>(),</div>
-<div class="line">    lf::source_location::current().<a class="code hl_function" href="#a8f1c9c6c6060cef15dda6a2ef11384d2">file_name</a>()</div>
+<div class="line">    lf::source_location::current().<a class="code hl_function" href="#a3d0788c5bdc873f99ba146f9ac6e631d">file_name</a>()</div>
 <div class="line">  );</div>
 <div class="line">  <a class="code hl_function" href="group__logging.html#gaebe2862c002ab7a673f4ba5038a905c7">log::debug</a>(<span class="stringliteral">&quot;I am called from {}&quot;</span>, lf::source_location::current());</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__logging_html_gaebe2862c002ab7a673f4ba5038a905c7"><div class="ttname"><a href="group__logging.html#gaebe2862c002ab7a673f4ba5038a905c7">floppy::log::debug</a></div><div class="ttdeci">auto debug(fmt::format_string&lt; Args... &gt; const &amp;fmt, Args &amp;&amp;... args) -&gt; void</div><div class="ttdoc">Logs message to default logger with level debug.</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00062">logging.h:62</a></div></div>
-<div class="ttc" id="astructfloppy_1_1source__location_html_a045aa753ae450e5f2a63358a7778c7e2"><div class="ttname"><a href="#a045aa753ae450e5f2a63358a7778c7e2">floppy::source_location::line</a></div><div class="ttdeci">constexpr auto line() const noexcept -&gt; uint_least32_t</div><div class="ttdoc">Returns the line number. 0 if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00225">backports.h:225</a></div></div>
-<div class="ttc" id="astructfloppy_1_1source__location_html_a7d3e32bc7888d35bc6b6096f16472644"><div class="ttname"><a href="#a7d3e32bc7888d35bc6b6096f16472644">floppy::source_location::function_name</a></div><div class="ttdeci">constexpr auto function_name() const noexcept -&gt; char const *</div><div class="ttdoc">Returns the function name. NULL if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00222">backports.h:222</a></div></div>
-<div class="ttc" id="astructfloppy_1_1source__location_html_a8f1c9c6c6060cef15dda6a2ef11384d2"><div class="ttname"><a href="#a8f1c9c6c6060cef15dda6a2ef11384d2">floppy::source_location::file_name</a></div><div class="ttdeci">constexpr auto file_name() const noexcept -&gt; char const *</div><div class="ttdoc">Returns the file name.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00219">backports.h:219</a></div></div>
-<div class="ttc" id="astructfloppy_1_1source__location_html_aa5435523d5e20e47d7a4fe6c44cea263"><div class="ttname"><a href="#aa5435523d5e20e47d7a4fe6c44cea263">floppy::source_location::column</a></div><div class="ttdeci">constexpr auto column() const noexcept -&gt; uint_least32_t</div><div class="ttdoc">Returns the column number. 0 if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00228">backports.h:228</a></div></div>
+<div class="ttc" id="astructfloppy_1_1source__location_html_a045aa753ae450e5f2a63358a7778c7e2"><div class="ttname"><a href="#a045aa753ae450e5f2a63358a7778c7e2">floppy::source_location::line</a></div><div class="ttdeci">constexpr auto line() const noexcept -&gt; uint_least32_t</div><div class="ttdoc">Returns the line number. 0 if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00226">backports.h:226</a></div></div>
+<div class="ttc" id="astructfloppy_1_1source__location_html_a1a9fd8efb9bab8d887bc488d2300aa15"><div class="ttname"><a href="#a1a9fd8efb9bab8d887bc488d2300aa15">floppy::source_location::function_name</a></div><div class="ttdeci">constexpr auto function_name() const noexcept -&gt; std::string_view</div><div class="ttdoc">Returns the function name. NULL if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00220">backports.h:220</a></div></div>
+<div class="ttc" id="astructfloppy_1_1source__location_html_a3d0788c5bdc873f99ba146f9ac6e631d"><div class="ttname"><a href="#a3d0788c5bdc873f99ba146f9ac6e631d">floppy::source_location::file_name</a></div><div class="ttdeci">constexpr auto file_name() const noexcept -&gt; std::string_view</div><div class="ttdoc">Returns the file name.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00214">backports.h:214</a></div></div>
+<div class="ttc" id="astructfloppy_1_1source__location_html_aa5435523d5e20e47d7a4fe6c44cea263"><div class="ttname"><a href="#aa5435523d5e20e47d7a4fe6c44cea263">floppy::source_location::column</a></div><div class="ttdeci">constexpr auto column() const noexcept -&gt; uint_least32_t</div><div class="ttdoc">Returns the column number. 0 if unknown or not available on compiler.</div><div class="ttdef"><b>Definition</b> <a href="backports_8h_source.html#l00232">backports.h:232</a></div></div>
 </div><!-- fragment --><p>Output: </p><div class="fragment"><div class="line">I am called from main, 5:7 in file main.c++!</div>
 <div class="line">I am called from main.c++:main 6:7</div>
 </div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>This implementation can be aliased to <code>std::source_location</code>, if the compiler supports it. Otherwise, it is a self-contained port of C++20 std::source_location. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00151">151</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00152">152</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa3cb6509b6b1bf6578be6a615bd953ff" name="aa3cb6509b6b1bf6578be6a615bd953ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3cb6509b6b1bf6578be6a615bd953ff">&#9670;&#160;</a></span>source_location() <span class="overload">[1/2]</span></h2>
@@ -201,7 +209,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Creates an empty invalid <a class="el" href="structfloppy_1_1source__location.html" title="Provides information about the location of the current source file.">source_location</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00194">194</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00189">189</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -253,13 +261,13 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00206">206</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00201">201</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aed70029e75ad4b575d62706be467e743" name="aed70029e75ad4b575d62706be467e743"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed70029e75ad4b575d62706be467e743">&#9670;&#160;</a></span>current()</h2>
+<a id="a36a5ca92c062eb63ad192282858f1ab3" name="a36a5ca92c062eb63ad192282858f1ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a5ca92c062eb63ad192282858f1ab3">&#9670;&#160;</a></span>current()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,7 +276,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static consteval auto current </td>
+          <td class="memname">static constexpr auto current </td>
           <td>(</td>
           <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>file</em><span class="paramdefsep"> = </span><span class="paramdefval">UNKNOWN</span>, </span></td>
         </tr>
@@ -285,14 +293,12 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint_least32_t</td>          <td class="paramname"><span class="paramname"><em>column</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) -&gt; <a class="el" href="structfloppy_1_1source__location.html">source_location</a>
-
-      </td>
+          <td class="paramtype">uint_least32_t</td>          <td class="paramname"><span class="paramname"><em>column</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) -&gt; <a class="el" href="structfloppy_1_1source__location.html">source_location</a> </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -300,12 +306,12 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns current source location. </p>
 <dl class="section note"><dt>Note</dt><dd>Returns actual current source location only if called with default arguments. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00174">174</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00160">160</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
-<a id="a8f1c9c6c6060cef15dda6a2ef11384d2" name="a8f1c9c6c6060cef15dda6a2ef11384d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f1c9c6c6060cef15dda6a2ef11384d2">&#9670;&#160;</a></span>file_name()</h2>
+<a id="a3d0788c5bdc873f99ba146f9ac6e631d" name="a3d0788c5bdc873f99ba146f9ac6e631d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d0788c5bdc873f99ba146f9ac6e631d">&#9670;&#160;</a></span>file_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,7 +323,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">constexpr auto file_name </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> const -&gt; char const* </td>
+          <td> const -&gt; std::string_view </td>
         </tr>
       </table>
   </td>
@@ -329,12 +335,41 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns the file name. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00219">219</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00214">214</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
-<a id="a7d3e32bc7888d35bc6b6096f16472644" name="a7d3e32bc7888d35bc6b6096f16472644"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d3e32bc7888d35bc6b6096f16472644">&#9670;&#160;</a></span>function_name()</h2>
+<a id="a2322cd8972d6c53c51177e8ac48755fc" name="a2322cd8972d6c53c51177e8ac48755fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2322cd8972d6c53c51177e8ac48755fc">&#9670;&#160;</a></span>file_name_mut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto file_name_mut </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> -&gt; std::string&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the file name. </p>
+
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00217">217</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+
+</div>
+</div>
+<a id="a1a9fd8efb9bab8d887bc488d2300aa15" name="a1a9fd8efb9bab8d887bc488d2300aa15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9fd8efb9bab8d887bc488d2300aa15">&#9670;&#160;</a></span>function_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,7 +381,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">constexpr auto function_name </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> const -&gt; char const* </td>
+          <td> const -&gt; std::string_view </td>
         </tr>
       </table>
   </td>
@@ -358,7 +393,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns the function name. NULL if unknown or not available on compiler. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00222">222</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00220">220</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+
+</div>
+</div>
+<a id="aa7be9d1665d31ff9e0ce78958e4ce32e" name="aa7be9d1665d31ff9e0ce78958e4ce32e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7be9d1665d31ff9e0ce78958e4ce32e">&#9670;&#160;</a></span>function_name_mut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto function_name_mut </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> -&gt; std::string&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the function name. </p>
+
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00223">223</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +451,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns the line number. 0 if unknown or not available on compiler. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00225">225</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00226">226</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+
+</div>
+</div>
+<a id="acb2f8a08d7e658d3fbc7035f3dc7da5e" name="acb2f8a08d7e658d3fbc7035f3dc7da5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2f8a08d7e658d3fbc7035f3dc7da5e">&#9670;&#160;</a></span>line_mut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto line_mut </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> -&gt; uint_least32_t&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the line number. </p>
+
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00229">229</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -416,7 +509,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns the column number. 0 if unknown or not available on compiler. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00228">228</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00232">232</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+
+</div>
+</div>
+<a id="ab1af3a989db3811e3bf13822626d1479" name="ab1af3a989db3811e3bf13822626d1479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1af3a989db3811e3bf13822626d1479">&#9670;&#160;</a></span>column_mut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto column_mut </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> -&gt; uint_least32_t&amp; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the column number. </p>
+
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00235">235</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
