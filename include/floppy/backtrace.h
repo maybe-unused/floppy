@@ -71,182 +71,178 @@
 # pragma pack(pop, before_imagehlp)
 #endif // defined(FLOPPY_OS_WINDOWS)
 
-namespace floppy::stacktrace::details
-{
-  template <typename K, typename V>
-  struct hashtable
-  {
-    using type = std::unordered_map<K, V>;
-  };
-
-  using std::move;
-} // namespace floppy::stacktrace::details
-
-
 /// \brief Stacktrace namespace.
 /// \details Currently implemented using reworked <a href="https://github.com/bombela/backward-cpp">backward-cpp</a> library.
 /// \ingroup foundation
 /// \sa https://github.com/bombela/backward-cpp
 namespace floppy::stacktrace {
-namespace trace_resolver_tag {
-#if defined(FLOPPY_OS_LINUX)
-struct libdw;
-struct libbfd;
-struct libdwarf;
-struct backtrace_symbol;
+  namespace details
+  {
+    using std::move;
+    template <typename K, typename V>
+    struct hashtable
+    {
+      using type = std::unordered_map<K, V>;
+    };
+  } // namespace details
 
-typedef libdw current;
-#elif defined(FLOPPY_OS_DARWIN)
-struct backtrace_symbol;
+  namespace trace_resolver_tag
+  {
+    #if defined(FLOPPY_OS_LINUX)
+    struct libdw;
+    struct libbfd;
+    struct libdwarf;
+    struct backtrace_symbol;
 
-#elif defined(FLOPPY_OS_WINDOWS)
-struct pdb_symbol;
-typedef pdb_symbol current;
-#endif
-} // namespace trace_resolver_tag
+    typedef libdw current;
+    #elif defined(FLOPPY_OS_DARWIN)
+    struct backtrace_symbol;
 
-namespace details {
+    #elif defined(FLOPPY_OS_WINDOWS)
+    struct pdb_symbol;
+    typedef pdb_symbol current;
+    #endif
+  } // namespace trace_resolver_tag
 
-template <typename T> struct rm_ptr { typedef T type; };
-template <typename T> struct rm_ptr<T *> { typedef T type; };
-template <typename T> struct rm_ptr<const T *> { typedef const T type; };
+  namespace details
+  {
+    template <typename T> struct rm_ptr { typedef T type; };
+    template <typename T> struct rm_ptr<T *> { typedef T type; };
+    template <typename T> struct rm_ptr<const T *> { typedef const T type; };
 
-template <typename R, typename T, R (*F)(T)> struct deleter {
-  template <typename U> void operator()(U &ptr) const { (*F)(ptr); }
-};
+    template <typename R, typename T, R (*F)(T)> struct deleter {
+      template <typename U> void operator()(U &ptr) const { (*F)(ptr); }
+    };
 
-template <typename T> struct default_delete {
-  void operator()(T &ptr) const { delete ptr; }
-};
+    template <typename T> struct default_delete {
+      void operator()(T &ptr) const { delete ptr; }
+    };
 
-template <typename T, typename Deleter = deleter<void, void *, &::free> >
-class handle {
-  struct dummy;
-  T _val;
-  bool _empty;
+    template <typename T, typename Deleter = deleter<void, void *, &::free> >
+    class handle {
+      struct dummy;
+      T _val;
+      bool _empty;
 
-  handle(const handle &) = delete;
-  handle &operator=(const handle &) = delete;
+      handle(const handle &) = delete;
+      handle &operator=(const handle &) = delete;
 
-public:
-  ~handle() {
-    if (!_empty) {
-      Deleter()(_val);
+    public:
+      ~handle() {
+        if (!_empty) {
+          Deleter()(_val);
+        }
+      }
+
+      explicit handle() : _val(), _empty(true) {}
+      explicit handle(T val) : _val(val), _empty(false) {
+        if (!_val)
+          _empty = true;
+      }
+
+      handle(handle &&from) : _empty(true) { swap(from); }
+      handle &operator=(handle &&from) {
+        swap(from);
+        return *this;
+      }
+
+      void reset(T new_val) {
+        handle tmp(new_val);
+        swap(tmp);
+      }
+
+      void update(T new_val) {
+        _val = new_val;
+        _empty = !static_cast<bool>(new_val);
+      }
+
+      operator const dummy *() const {
+        if (_empty) {
+          return nullptr;
+        }
+        return reinterpret_cast<const dummy *>(_val);
+      }
+      auto get() -> T { return _val; }
+      auto release() -> T {
+        _empty = true;
+        return _val;
+      }
+
+      auto swap(handle &b) noexcept -> void {
+        std::swap(b._val, _val);
+        std::swap(b._empty, _empty);
+      }
+
+      auto operator->() -> T & { return _val; }
+      auto operator->() const -> const T & { return _val; }
+
+      using ref_t = std::remove_pointer_t<T>&;
+      using const_ref_t = std::remove_pointer_t<T> const&;
+
+      auto operator*() -> ref_t { return *_val; }
+      auto operator*() const -> const_ref_t { return *_val; }
+      auto operator[](size_t idx) -> ref_t { return _val[idx]; }
+
+      // Watch out, we've got a badass over here
+      auto operator&() -> T * {
+        _empty = false;
+        return &_val;
+      }
+    };
+
+    // Default demangler implementation (do nothing).
+    template <typename TAG> struct demangler_impl {
+      static std::string demangle(const char *funcname) { return funcname; }
+    };
+
+    #if defined(FLOPPY_OS_LINUX) || defined(FLOPPY_OS_DARWIN)
+
+    template <> struct demangler_impl<system_tag::current> {
+      demangler_impl() : _demangle_buffer_length(0) {}
+
+      std::string demangle(const char *funcname) {
+        using namespace details;
+        char *result = abi::__cxa_demangle(funcname, _demangle_buffer.get(),
+                                           &_demangle_buffer_length, nullptr);
+        if (result) {
+          _demangle_buffer.update(result);
+          return result;
+        }
+        return funcname;
+      }
+
+    private:
+      details::handle<char *> _demangle_buffer;
+      size_t _demangle_buffer_length;
+    };
+
+    #endif // FLOPPY_OS_LINUX || FLOPPY_OS_LINUX
+
+    struct demangler : public demangler_impl<system_tag::current> {};
+
+    // Split a string on the platform's PATH delimiter.  Example: if delimiter
+    // is ":" then:
+    //   ""              --> []
+    //   ":"             --> ["",""]
+    //   "::"            --> ["","",""]
+    //   "/a/b/c"        --> ["/a/b/c"]
+    //   "/a/b/c:/d/e/f" --> ["/a/b/c","/d/e/f"]
+    //   etc.
+    inline std::vector<std::string> split_source_prefixes(const std::string &s) {
+      std::vector<std::string> out;
+      size_t last = 0;
+      size_t next = 0;
+      size_t delimiter_size = 1;
+      while((next = s.find(platform::current().backward_path_delimiter, last)) != std::string::npos) {
+        out.push_back(s.substr(last, next - last));
+        last = next + delimiter_size;
+      }
+      if (last <= s.length()) {
+        out.push_back(s.substr(last));
+      }
+      return out;
     }
-  }
-
-  explicit handle() : _val(), _empty(true) {}
-  explicit handle(T val) : _val(val), _empty(false) {
-    if (!_val)
-      _empty = true;
-  }
-
-  handle(handle &&from) : _empty(true) { swap(from); }
-  handle &operator=(handle &&from) {
-    swap(from);
-    return *this;
-  }
-
-  void reset(T new_val) {
-    handle tmp(new_val);
-    swap(tmp);
-  }
-
-  void update(T new_val) {
-    _val = new_val;
-    _empty = !static_cast<bool>(new_val);
-  }
-
-  operator const dummy *() const {
-    if (_empty) {
-      return nullptr;
-    }
-    return reinterpret_cast<const dummy *>(_val);
-  }
-  auto get() -> T { return _val; }
-  auto release() -> T {
-    _empty = true;
-    return _val;
-  }
-
-  auto swap(handle &b) noexcept -> void {
-    std::swap(b._val, _val);
-    std::swap(b._empty, _empty);
-  }
-
-  auto operator->() -> T & { return _val; }
-  auto operator->() const -> const T & { return _val; }
-
-  using ref_t = std::remove_pointer_t<T>&;
-  using const_ref_t = std::remove_pointer_t<T> const&;
-
-  auto operator*() -> ref_t { return *_val; }
-  auto operator*() const -> const_ref_t { return *_val; }
-  auto operator[](size_t idx) -> ref_t { return _val[idx]; }
-
-  // Watch out, we've got a badass over here
-  auto operator&() -> T * {
-    _empty = false;
-    return &_val;
-  }
-};
-
-// Default demangler implementation (do nothing).
-template <typename TAG> struct demangler_impl {
-  static std::string demangle(const char *funcname) { return funcname; }
-};
-
-#if defined(FLOPPY_OS_LINUX) || defined(FLOPPY_OS_DARWIN)
-
-template <> struct demangler_impl<system_tag::current> {
-  demangler_impl() : _demangle_buffer_length(0) {}
-
-  std::string demangle(const char *funcname) {
-    using namespace details;
-    char *result = abi::__cxa_demangle(funcname, _demangle_buffer.get(),
-                                       &_demangle_buffer_length, nullptr);
-    if (result) {
-      _demangle_buffer.update(result);
-      return result;
-    }
-    return funcname;
-  }
-
-private:
-  details::handle<char *> _demangle_buffer;
-  size_t _demangle_buffer_length;
-};
-
-#endif // FLOPPY_OS_LINUX || FLOPPY_OS_LINUX
-
-struct demangler : public demangler_impl<system_tag::current> {};
-
-// Split a string on the platform's PATH delimiter.  Example: if delimiter
-// is ":" then:
-//   ""              --> []
-//   ":"             --> ["",""]
-//   "::"            --> ["","",""]
-//   "/a/b/c"        --> ["/a/b/c"]
-//   "/a/b/c:/d/e/f" --> ["/a/b/c","/d/e/f"]
-//   etc.
-inline std::vector<std::string> split_source_prefixes(const std::string &s) {
-  std::vector<std::string> out;
-  size_t last = 0;
-  size_t next = 0;
-  size_t delimiter_size = 1;
-  while((next = s.find(platform::current().backward_path_delimiter, last)) != std::string::npos) {
-    out.push_back(s.substr(last, next - last));
-    last = next + delimiter_size;
-  }
-  if (last <= s.length()) {
-    out.push_back(s.substr(last));
-  }
-  return out;
-}
-
-} // namespace details
-
-/*************** A TRACE ***************/
+  } // namespace details
 
 struct trace {
   void *addr;
@@ -1648,30 +1644,21 @@ private:
 #ifdef FLOPPY_OS_WINDOWS
 class signal_handler {
 public:
- explicit(false) signal_handler(const std::vector<int> & = std::vector<int>())
+ explicit(false) signal_handler(std::vector<int> const& = std::vector<int>())
       : reporter_thread_([]() {
-          /* We handle crashes in a utility thread:
-            backward structures and some Windows functions called here
-            need stack space, which we do not have when we encounter a
-            stack overflow.
-            To support reporting stack traces during a stack overflow,
-            we create a utility thread at startup, which waits until a
-            crash happens or the program exits normally. */
-
           {
             std::unique_lock<std::mutex> lk(mtx());
             cv().wait(lk, [] { return crashed() != crash_status::running; });
           }
-          if (crashed() == crash_status::crashed) {
-            handle_stacktrace(skip_recs());
-          }
+          if(crashed() == crash_status::crashed)
+            signal_handler::handle_stacktrace(skip_recs());
           {
-            std::unique_lock<std::mutex> lk(mtx());
-            crashed() = crash_status::ending;
+            std::unique_lock<std::mutex> const lk(mtx());
+            signal_handler::crashed() = crash_status::ending;
           }
           cv().notify_one();
         }) {
-    SetUnhandledExceptionFilter(crash_handler);
+    ::SetUnhandledExceptionFilter(signal_handler::crash_handler);
 
     signal(SIGABRT, signal_handler_);
     _set_abort_behavior(0, _WRITE_ABORT_MSG | _CALL_REPORTFAULT);
@@ -1687,31 +1674,35 @@ public:
       std::unique_lock<std::mutex> const lk(mtx());
       crashed() = crash_status::normal_exit;
     }
-
     cv().notify_one();
-
     reporter_thread_.join();
   }
 
 private:
-  static CONTEXT *ctx() {
+  static auto ctx() -> CONTEXT* {
     static CONTEXT data;
     return &data;
   }
 
-  enum class crash_status { running, crashed, normal_exit, ending };
+  enum class crash_status : int
+  {
+    running,
+    crashed,
+    normal_exit,
+    ending
+  };
 
-  static crash_status &crashed() {
+  static auto crashed() -> crash_status& {
     static crash_status data;
     return data;
   }
 
-  static std::mutex &mtx() {
+  static auto mtx() -> std::mutex& {
     static std::mutex data;
     return data;
   }
 
-  static std::condition_variable &cv() {
+  static auto cv() -> std::condition_variable& {
     static std::condition_variable data;
     return data;
   }
@@ -1723,8 +1714,7 @@ private:
 
   std::thread reporter_thread_;
 
-  // TODO: how not to hardcode these?
-  static const constexpr int signal_skip_recs =
+  static const constexpr auto signal_skip_recs =
 #ifdef __clang__
       4
 #else
@@ -1732,74 +1722,72 @@ private:
 #endif
       ;
 
-  static int &skip_recs() {
+  static auto skip_recs() -> int& {
     static int data;
     return data;
   }
 
-  static inline void terminator() {
-    crash_handler(signal_skip_recs);
-    abort();
+  static inline auto terminator() -> void {
+    signal_handler::crash_handler(signal_handler::signal_skip_recs);
+    std::abort();
   }
 
-  static inline void signal_handler_(int) {
-    crash_handler(signal_skip_recs);
-    abort();
+  static inline auto signal_handler_([[maybe_unused]] int unused) -> void {
+    signal_handler::crash_handler(signal_handler::signal_skip_recs);
+    std::abort();
   }
 
-  static inline void __cdecl invalid_parameter_handler(const wchar_t *,
-                                                       const wchar_t *,
-                                                       const wchar_t *,
-                                                       unsigned int,
-                                                       uintptr_t) {
-    crash_handler(signal_skip_recs);
-    abort();
+  static inline auto __cdecl invalid_parameter_handler(
+    [[maybe_unused]] wchar_t const* _unused1,
+    [[maybe_unused]] wchar_t const* _unused2,
+    [[maybe_unused]] wchar_t const* _unused3,
+    [[maybe_unused]] unsigned int _unused4,
+    [[maybe_unused]] uintptr_t _unused5
+  ) -> void {
+    signal_handler::crash_handler(signal_handler::signal_skip_recs);
+    std::abort();
   }
 
-  __noinline__ static LONG WINAPI crash_handler(EXCEPTION_POINTERS *info) {
-    // The exception info supplies a trace from exactly where the issue was,
-    // no need to skip records
-    crash_handler(0, info->ContextRecord);
+  __noinline__ static auto WINAPI crash_handler(EXCEPTION_POINTERS* info) -> long {
+    signal_handler::crash_handler(0, info->ContextRecord);
     return EXCEPTION_CONTINUE_SEARCH;
   }
 
-  __noinline__ static void crash_handler(int skip, CONTEXT *ct = nullptr) {
-
-    if (ct == nullptr) {
-      RtlCaptureContext(ctx());
-    } else {
-      memcpy(ctx(), ct, sizeof(CONTEXT));
-    }
-    DuplicateHandle(GetCurrentProcess(), GetCurrentThread(),
-                    GetCurrentProcess(), &thread_handle(), 0, FALSE,
-                    DUPLICATE_SAME_ACCESS);
-
+  __noinline__ static auto crash_handler(int skip, CONTEXT* ct = nullptr) -> void {
+    if(ct == nullptr)
+      ::RtlCaptureContext(ctx());
+    else
+      std::memcpy(ctx(), ct, sizeof(CONTEXT));
+    ::DuplicateHandle(
+      ::GetCurrentProcess(),
+      ::GetCurrentThread(),
+      ::GetCurrentProcess(),
+      &signal_handler::thread_handle(),
+      0,
+      FALSE,
+      DUPLICATE_SAME_ACCESS
+    );
     skip_recs() = skip;
-
     {
       std::unique_lock<std::mutex> const lk(mtx());
       crashed() = crash_status::crashed;
     }
-
     cv().notify_one();
-
     {
       std::unique_lock<std::mutex> lk(mtx());
       cv().wait(lk, [] { return crashed() != crash_status::crashed; });
     }
   }
 
-  static void handle_stacktrace(int skip_frames = 0) {
-    printer printer_;
-
-    stack_trace st;
-    st.set_machine_type(printer_.resolver().machine_type());
-    st.set_thread_handle(thread_handle());
+  static auto handle_stacktrace(int skip_frames = 0) -> void {
+    auto p = printer();
+    auto st = stack_trace();
+    st.set_machine_type(p.resolver().machine_type());
+    st.set_thread_handle(signal_handler::thread_handle());
     st.load_here(32 + skip_frames, ctx());
     st.skip_n_firsts(skip_frames);
-
-    printer_.address = true;
-    printer_.print(st, stderr);
+    p.address = true;
+    p.print(st, stderr);
   }
 };
 

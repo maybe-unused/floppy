@@ -21,7 +21,6 @@ target_link_libraries(${PROJECT_NAME}-test
   tomlplusplus::tomlplusplus
 #  Qt${QT_VERSION_MAJOR}::Core
 #  Qt${QT_VERSION_MAJOR}::Gui
-  Backward::Backward
 )
 
 if(WIN32)
