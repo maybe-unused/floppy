@@ -137,9 +137,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0bc56dfc8245508f562dce1e05201680" id="r_a0bc56dfc8245508f562dce1e05201680"><td class="memTemplParams" colspan="2">template&lt;typename St &gt; </td></tr>
 <tr class="memitem:a0bc56dfc8245508f562dce1e05201680"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0bc56dfc8245508f562dce1e05201680">print</a> (St &amp;st, FILE *fp=stderr) -&gt; std::FILE *</td></tr>
 <tr class="separator:a0bc56dfc8245508f562dce1e05201680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3135e6ffb860e018ec02527d70a55760" id="r_a3135e6ffb860e018ec02527d70a55760"><td class="memTemplParams" colspan="2">template&lt;typename St &gt; </td></tr>
+<tr class="memitem:a3135e6ffb860e018ec02527d70a55760"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3135e6ffb860e018ec02527d70a55760">print</a> (St &amp;st, std::filesystem::path const &amp;path) -&gt; void</td></tr>
+<tr class="separator:a3135e6ffb860e018ec02527d70a55760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c270d0642cbe731050cbf0718be9a2e" id="r_a6c270d0642cbe731050cbf0718be9a2e"><td class="memTemplParams" colspan="2">template&lt;typename It &gt; </td></tr>
 <tr class="memitem:a6c270d0642cbe731050cbf0718be9a2e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6c270d0642cbe731050cbf0718be9a2e">print</a> (It begin, It end, std::FILE *fp=stderr, size_t thread_id=0) -&gt; std::FILE *</td></tr>
 <tr class="separator:a6c270d0642cbe731050cbf0718be9a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c293ff80033f30888eeda6775ef2af" id="r_af5c293ff80033f30888eeda6775ef2af"><td class="memTemplParams" colspan="2">template&lt;typename It &gt; </td></tr>
+<tr class="memitem:af5c293ff80033f30888eeda6775ef2af"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af5c293ff80033f30888eeda6775ef2af">print</a> (It begin, It end, std::filesystem::path const &amp;path, size_t thread_id=0) -&gt; void</td></tr>
+<tr class="separator:af5c293ff80033f30888eeda6775ef2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af61e824a74dad750d55571a16657ac58" id="r_af61e824a74dad750d55571a16657ac58"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af61e824a74dad750d55571a16657ac58">resolver</a> () const -&gt; <a class="el" href="classfloppy_1_1stacktrace_1_1impl_1_1trace__resolver.html">trace_resolver</a> const &amp;</td></tr>
 <tr class="separator:af61e824a74dad750d55571a16657ac58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -160,7 +166,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00010">10</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00013">13</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a249131a63a6131f35a32386929766c6e" name="a249131a63a6131f35a32386929766c6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a249131a63a6131f35a32386929766c6e">&#9670;&#160;</a></span>printer()</h2>
@@ -185,13 +191,13 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00020">20</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00023">23</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0bc56dfc8245508f562dce1e05201680" name="a0bc56dfc8245508f562dce1e05201680"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bc56dfc8245508f562dce1e05201680">&#9670;&#160;</a></span>print() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc56dfc8245508f562dce1e05201680">&#9670;&#160;</a></span>print() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,12 +225,45 @@ template&lt;typename St &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00030">30</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00033">33</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+
+</div>
+</div>
+<a id="a3135e6ffb860e018ec02527d70a55760" name="a3135e6ffb860e018ec02527d70a55760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3135e6ffb860e018ec02527d70a55760">&#9670;&#160;</a></span>print() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename St &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto print </td>
+          <td>(</td>
+          <td class="paramtype">St &amp;</td>          <td class="paramname"><span class="paramname"><em>st</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::filesystem::path const &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span>&#160;) -&gt; void </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00039">39</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 
 </div>
 </div>
 <a id="a6c270d0642cbe731050cbf0718be9a2e" name="a6c270d0642cbe731050cbf0718be9a2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c270d0642cbe731050cbf0718be9a2e">&#9670;&#160;</a></span>print() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c270d0642cbe731050cbf0718be9a2e">&#9670;&#160;</a></span>print() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,7 +301,50 @@ template&lt;typename It &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00036">36</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00045">45</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+
+</div>
+</div>
+<a id="af5c293ff80033f30888eeda6775ef2af" name="af5c293ff80033f30888eeda6775ef2af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5c293ff80033f30888eeda6775ef2af">&#9670;&#160;</a></span>print() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename It &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto print </td>
+          <td>(</td>
+          <td class="paramtype">It</td>          <td class="paramname"><span class="paramname"><em>begin</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">It</td>          <td class="paramname"><span class="paramname"><em>end</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::filesystem::path const &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>thread_id</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) -&gt; void </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00051">51</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 
 </div>
 </div>
@@ -289,7 +371,7 @@ template&lt;typename It &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00041">41</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00056">56</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 
 </div>
 </div>
@@ -306,7 +388,7 @@ template&lt;typename It &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00013">13</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00016">16</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 
 </div>
 </div>
@@ -322,7 +404,7 @@ template&lt;typename It &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00014">14</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00017">17</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 
 </div>
 </div>
@@ -338,7 +420,7 @@ template&lt;typename It &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00015">15</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00018">18</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 
 </div>
 </div>
@@ -354,7 +436,7 @@ template&lt;typename It &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00016">16</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00019">19</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 
 </div>
 </div>
@@ -370,7 +452,7 @@ template&lt;typename It &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00017">17</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00020">20</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 
 </div>
 </div>
@@ -386,7 +468,7 @@ template&lt;typename It &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00018">18</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="printer_8h_source.html#l00021">21</a> of file <a class="el" href="printer_8h_source.html">printer.h</a>.</p>
 
 </div>
 </div>
