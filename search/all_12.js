@@ -47,5 +47,6 @@ var searchData=
   ['suse_44',['suse',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2af9dc32aae2d2341a550dd89f78cc49b3',1,'floppy::platform']]],
   ['swap_45',['swap',['../namespacestd.html#a18abfca03e51fdc5c93a74f5c81a8b07',1,'std']]],
   ['swap_5fendian_46',['swap_endian',['../classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32',1,'floppy::platform']]],
-  ['sysz_47',['sysz',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ab43271928aae50d1357de5ecdf60e1c7',1,'floppy::platform']]]
+  ['symbol_5ft_47',['symbol_t',['../classfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1windows_01_4.html#structfloppy_1_1stacktrace_1_1TraceResolverImpl_3_01system__tag_1_1windows_01_4_1_1symbol__t',1,'floppy::stacktrace::TraceResolverImpl&lt; system_tag::windows &gt;']]],
+  ['sysz_48',['sysz',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ab43271928aae50d1357de5ecdf60e1c7',1,'floppy::platform']]]
 ];

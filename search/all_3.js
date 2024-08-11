@@ -20,7 +20,7 @@ var searchData=
   ['demangle_17',['demangle',['../group__helpers.html#ga67c6adb54f12fdf9e8ef12c2ef08c99a',1,'floppy::rtti']]],
   ['demangler_18',['demangler',['../structfloppy_1_1stacktrace_1_1details_1_1demangler.html',1,'floppy::stacktrace::details']]],
   ['demangler_5fimpl_19',['demangler_impl',['../structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html',1,'floppy::stacktrace::details']]],
-  ['demangler_5fimpl_3c_20system_5ftag_3a_3acurrent_20_3e_20',['demangler_impl&lt; system_tag::current &gt;',['../structfloppy_1_1stacktrace_1_1details_1_1demangler__impl.html',1,'floppy::stacktrace::details']]],
+  ['demangler_5fimpl_3c_20system_5ftag_3a_3acurrent_20_3e_20',['demangler_impl&lt; system_tag::current &gt;',['../structfloppy_1_1stacktrace_1_1details_1_1demangler__impl_3_01system__tag_1_1current_01_4.html',1,'floppy::stacktrace::details']]],
   ['dependencies_21',['Dependencies',['../index.html#autotoc_md1',1,'']]],
   ['deprecated_20list_22',['Deprecated List',['../deprecated.html',1,'']]],
   ['deserialize_23',['deserialize',['../group__serialization.html#ga853fcffdf0e983b17478535a994706b0',1,'floppy::serialization']]],
