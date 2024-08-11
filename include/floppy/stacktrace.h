@@ -558,42 +558,36 @@ public:
   }
 
 private:
-  typedef details::handle<Dwfl *, details::deleter<void, Dwfl *, &dwfl_end> >
+  typedef details::handle<Dwfl *, deleter<void, Dwfl *, &dwfl_end> >
       dwfl_handle_t;
-  details::handle<Dwfl_Callbacks *, details::default_delete<Dwfl_Callbacks *> >
+  details::handle<Dwfl_Callbacks *, default_delete<Dwfl_Callbacks *> >
       _dwfl_cb;
   dwfl_handle_t _dwfl_handle;
   bool _dwfl_handle_initialized;
 
-  // defined here because in C++98, template function cannot take locally
-  // defined types... grrr.
   struct inliners_search_cb {
     void operator()(Dwarf_Die *die) {
       switch (dwarf_tag(die)) {
         const char *name;
       case DW_TAG_subprogram:
-        if ((name = dwarf_diename(die))) {
-          trace.source.function = name;
-        }
+        if((name = dwarf_diename(die)))
+          trace.source.function_name_mut() = name;
         break;
 
       case DW_TAG_inlined_subroutine:
-        resolved_trace::SourceLoc sloc;
+        resolved_trace::source_loc_t sloc;
         Dwarf_Attribute attr_mem;
 
-        if ((name = dwarf_diename(die))) {
-          sloc.function = name;
-        }
-        if ((name = die_call_file(die))) {
-          sloc.filename = name;
-        }
+        if((name = dwarf_diename(die)))
+          sloc.function_name_mut() = name;
+        if((name = die_call_file(die)))
+          sloc.file_name_mut() = name;
 
         Dwarf_Word line = 0, col = 0;
         dwarf_formudata(dwarf_attr(die, DW_AT_call_line, &attr_mem), &line);
         dwarf_formudata(dwarf_attr(die, DW_AT_call_column, &attr_mem), &col);
-        sloc.line = static_cast<unsigned>(line);
-        sloc.col = static_cast<unsigned>(col);
-
+        sloc.line_mut() = static_cast<unsigned>(line);
+        sloc.column_mut() = static_cast<unsigned>(col);
         trace.inliners.push_back(sloc);
         break;
       };
@@ -607,16 +601,14 @@ private:
 
     // continuous range
     if (dwarf_hasattr(die, DW_AT_low_pc) && dwarf_hasattr(die, DW_AT_high_pc)) {
-      if (dwarf_lowpc(die, &low) != 0) {
+      if(dwarf_lowpc(die, &low) != 0)
         return false;
-      }
-      if (dwarf_highpc(die, &high) != 0) {
+      if(dwarf_highpc(die, &high) != 0) {
         Dwarf_Attribute attr_mem;
         Dwarf_Attribute *attr = dwarf_attr(die, DW_AT_high_pc, &attr_mem);
         Dwarf_Word value;
-        if (dwarf_formudata(attr, &value) != 0) {
+        if(dwarf_formudata(attr, &value) != 0)
           return false;
-        }
         high = low + value;
       }
       return pc >= low && pc < high;
@@ -626,44 +618,40 @@ private:
     Dwarf_Addr base;
     ptrdiff_t offset = 0;
     while ((offset = dwarf_ranges(die, offset, &base, &low, &high)) > 0) {
-      if (pc >= low && pc < high) {
+      if(pc >= low && pc < high)
         return true;
-      }
     }
     return false;
   }
 
   static Dwarf_Die *find_fundie_by_pc(Dwarf_Die *parent_die, Dwarf_Addr pc,
                                       Dwarf_Die *result) {
-    if (dwarf_child(parent_die, result) != 0) {
+    if(dwarf_child(parent_die, result) != 0)
       return 0;
-    }
-
     Dwarf_Die *die = result;
     do {
       switch (dwarf_tag(die)) {
       case DW_TAG_subprogram:
       case DW_TAG_inlined_subroutine:
-        if (die_has_pc(die, pc)) {
+        if(die_has_pc(die, pc))
           return result;
-        }
       };
       bool declaration = false;
       Dwarf_Attribute attr_mem;
       dwarf_formflag(dwarf_attr(die, DW_AT_declaration, &attr_mem),
                      &declaration);
-      if (!declaration) {
+      if(not declaration) {
         // let's be curious and look deeper in the tree,
         // function are not necessarily at the first level, but
         // might be nested inside a namespace, structure etc.
         Dwarf_Die die_mem;
         Dwarf_Die *indie = find_fundie_by_pc(die, pc, &die_mem);
-        if (indie) {
+        if(indie) {
           *result = die_mem;
           return result;
         }
       }
-    } while (dwarf_siblingof(die, result) == 0);
+    } while(dwarf_siblingof(die, result) == 0);
     return 0;
   }
 
@@ -671,9 +659,8 @@ private:
   static bool deep_first_search_by_pc(Dwarf_Die *parent_die, Dwarf_Addr pc,
                                       CB cb) {
     Dwarf_Die die_mem;
-    if (dwarf_child(parent_die, &die_mem) != 0) {
+    if(dwarf_child(parent_die, &die_mem) != 0)
       return false;
-    }
 
     bool branch_has_pc = false;
     Dwarf_Die *die = &die_mem;
@@ -689,39 +676,29 @@ private:
         // function etc.
         branch_has_pc = deep_first_search_by_pc(die, pc, cb);
       }
-      if (!branch_has_pc) {
+      if(not branch_has_pc)
         branch_has_pc = die_has_pc(die, pc);
-      }
-      if (branch_has_pc) {
+      if(branch_has_pc)
         cb(die);
-      }
-    } while (dwarf_siblingof(die, &die_mem) == 0);
+    } while(dwarf_siblingof(die, &die_mem) == 0);
     return branch_has_pc;
   }
 
-  static const char *die_call_file(Dwarf_Die *die) {
+  static const char* die_call_file(Dwarf_Die *die) {
     Dwarf_Attribute attr_mem;
     Dwarf_Word file_idx = 0;
-
     dwarf_formudata(dwarf_attr(die, DW_AT_call_file, &attr_mem), &file_idx);
-
-    if (file_idx == 0) {
+    if(file_idx == 0)
       return 0;
-    }
-
     Dwarf_Die die_mem;
     Dwarf_Die *cudie = dwarf_diecu(die, &die_mem, 0, 0);
-    if (!cudie) {
+    if(not cudie)
       return 0;
-    }
-
     Dwarf_Files *files = 0;
     size_t nfiles;
     dwarf_getsrcfiles(cudie, &files, &nfiles);
-    if (!files) {
+    if(not files)
       return 0;
-    }
-
     return dwarf_filesrc(files, file_idx, 0, 0);
   }
 };
@@ -741,9 +718,8 @@ class TraceResolverDarwinImpl<trace_resolver_tag::backtrace_symbol>
     : public TraceResolverImplBase {
 public:
   void load_addresses(void *const*addresses, int address_count) override {
-    if (address_count == 0) {
+    if(address_count == 0)
       return;
-    }
     _symbols.reset(backtrace_symbols(addresses, address_count));
   }
 
@@ -753,40 +729,40 @@ public:
     char *filename = _symbols[trace.idx];
 
     // skip "<n>  "
-    while (*filename && *filename != ' ')
+    while(*filename && *filename != ' ')
       filename++;
-    while (*filename == ' ')
+    while(*filename == ' ')
       filename++;
 
     // find start of <mangled-name> from end (<file> may contain a space)
     char *p = filename + strlen(filename) - 1;
     // skip to start of " + <offset>"
-    while (p > filename && *p != ' ')
+    while(p > filename && *p != ' ')
       p--;
-    while (p > filename && *p == ' ')
+    while(p > filename && *p == ' ')
       p--;
-    while (p > filename && *p != ' ')
+    while(p > filename && *p != ' ')
       p--;
-    while (p > filename && *p == ' ')
+    while(p > filename && *p == ' ')
       p--;
     char *funcname_end = p + 1;
 
     // skip to start of "<manged-name>"
-    while (p > filename && *p != ' ')
+    while(p > filename && *p != ' ')
       p--;
     char *funcname = p + 1;
 
     // skip to start of "  <addr>  "
-    while (p > filename && *p == ' ')
+    while(p > filename && *p == ' ')
       p--;
-    while (p > filename && *p != ' ')
+    while(p > filename && *p != ' ')
       p--;
-    while (p > filename && *p == ' ')
+    while(p > filename && *p == ' ')
       p--;
 
     // skip "<file>", handling the case where it contains a
     char *filename_end = p + 1;
-    if (p == filename) {
+    if(p == filename) {
       // something went wrong, give up
       filename_end = filename + strlen(filename);
       funcname = filename_end;
@@ -795,7 +771,7 @@ public:
         filename, filename_end); // ok even if filename_end is the ending \0
                                  // (then we assign entire string)
 
-    if (*funcname) { // if it's not end of string
+    if(*funcname) { // if it's not end of string
       *funcname_end = '\0';
 
       trace.object_function = this->demangle(funcname);
