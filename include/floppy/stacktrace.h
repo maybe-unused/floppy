@@ -94,7 +94,7 @@ namespace floppy::stacktrace
       _loaded = success;
     }
 
-    bool loaded() const { return _loaded; }
+    bool loaded() const { return this->_loaded; }
 
     static void handleSignal(int, siginfo_t *info, void *_ctx) {
       ucontext_t *uctx = static_cast<ucontext_t *>(_ctx);
@@ -130,18 +130,16 @@ namespace floppy::stacktrace
   #else
   #warning ":/ sorry, ain't know no nothing none not of your architecture!"
   #endif
-      if (error_addr) {
-        st.load_from(error_addr, 32, reinterpret_cast<void *>(uctx),
-                     info->si_addr);
-      } else {
+      if (error_addr)
+        st.load_from(error_addr, 32, reinterpret_cast<void *>(uctx), info->si_addr);
+      else
         st.load_here(32, reinterpret_cast<void *>(uctx), info->si_addr);
-      }
 
       impl::printer printer_;
       printer_.address = true;
       printer_.print(st, stderr);
-      if(this->_path != std::filesystem::path())
-        printer_.print(this->_path, out);
+//      if(this->_path != std::filesystem::path())
+//        printer_.print(this->_path, out);
 
   #if (defined(_XOPEN_SOURCE) && _XOPEN_SOURCE >= 700) || \
       (defined(_POSIX_C_SOURCE) && _POSIX_C_SOURCE >= 200809L)
@@ -152,22 +150,14 @@ namespace floppy::stacktrace
     }
 
   private:
-    details::handle<char *> _stack_content;
+    details::handle<char*> _stack_content;
     std::filesystem::path _path;
     bool _loaded;
 
-  #ifdef __GNUC__
-    __attribute__((noreturn))
-  #endif
-    static void
-    sig_handler(int signo, siginfo_t *info, void *_ctx) {
+    [[noreturn]] static void sig_handler(int signo, siginfo_t *info, void *_ctx) {
       handleSignal(signo, info, _ctx);
-
-      // try to forward the signal.
       raise(info->si_signo);
-
-      // terminate the process immediately.
-      puts("watf? exit");
+      puts("forcing exit");
       _exit(EXIT_FAILURE);
     }
   };
