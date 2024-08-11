@@ -1,6 +1,6 @@
 var NAVTREEINDEX4 =
 {
-"namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527":[4,0,1,15,11],
+"namespacefloppy_1_1types.html#ad34d88453d37b65a09797bad37f2f527":[4,0,1,48],
 "namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84":[4,0,1,44],
 "namespacefloppy_1_1types.html#aec41e5f8e4b7aef2540e84268692fa84":[4,0,1,15,7],
 "namespacefloppy_1_1types_1_1detail__.html":[4,0,1,2],
@@ -38,10 +38,10 @@ var NAVTREEINDEX4 =
 "string__utils_8h_source.html":[7,0,0,0,1,13],
 "structfloppy_1_1default__delete.html":[6,0,0,12],
 "structfloppy_1_1default__delete.html":[4,0,1,20],
-"structfloppy_1_1deleter.html":[4,0,1,21],
 "structfloppy_1_1deleter.html":[6,0,0,13],
-"structfloppy_1_1detail_1_1formattable__base.html":[4,0,1,1,0],
+"structfloppy_1_1deleter.html":[4,0,1,21],
 "structfloppy_1_1detail_1_1formattable__base.html":[6,0,0,0,0],
+"structfloppy_1_1detail_1_1formattable__base.html":[4,0,1,1,0],
 "structfloppy_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8":[4,0,1,1,0,0],
 "structfloppy_1_1detail_1_1formattable__base.html#a6feb227ebbbc81da11e39f13b155eca8":[6,0,0,0,0,0],
 "structfloppy_1_1detail_1_1formattable__base.html#abb97ee5b3485f7cc5eb67cff00cd963a":[4,0,1,1,0,1],
