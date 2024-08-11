@@ -231,6 +231,12 @@ namespace fl = floppy; // NOLINT(*-unused-alias-decls)
 # define FL_DEBUG
 #endif // defined(NDEBUG)  || defined(QT_NO_DEBUG)
 
+#ifndef _MSC_VER
+# define __noinline__ __attribute__((noinline))
+#else // !_MSC_VER
+# define __noinline__ __declspec(noinline)
+#endif // !_MSC_VER
+
 /// \def FL_NO_DEBUG
 /// \brief Flag defined if debug mode is disabled.
 /// \details This macro disables some runtime checks, which are enabled in debug mode.
