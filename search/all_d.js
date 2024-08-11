@@ -7,10 +7,8 @@ var searchData=
   ['non_5fmovable_4',['non_movable',['../structfloppy_1_1non__movable.html',1,'floppy']]],
   ['none_5',['none',['../group__aliases.html#ga9365b793fe547271e48fa719a7f4854d',1,'floppy::none'],['../group__aliases.html#ga9365b793fe547271e48fa719a7f4854d',1,'floppy::types::none']]],
   ['normalized_6',['normalized',['../classfloppy_1_1math_1_1vector2d.html#af388a85736dc9dbebbd26d385e0cfe47',1,'floppy::math::vector2d']]],
-  ['not_5fisempty_7',['not_isempty',['../structfloppy_1_1stacktrace_1_1source__file_1_1not__isempty.html',1,'floppy::stacktrace::source_file']]],
-  ['not_5fisspace_8',['not_isspace',['../structfloppy_1_1stacktrace_1_1source__file_1_1not__isspace.html',1,'floppy::stacktrace::source_file']]],
-  ['nt_5ftraits_2eh_9',['nt_traits.h',['../nt__traits_8h.html',1,'']]],
-  ['nt_5ftraits2d_2eh_10',['nt_traits2d.h',['../nt__traits2d_8h.html',1,'']]],
-  ['nvcc_11',['nvcc',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cac0ee85ff66cf80206ac9ab7b03975213',1,'floppy::platform']]],
-  ['nvidia_12',['nvidia',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2a540df7f83845146f0287ff6d2da77900',1,'floppy::platform']]]
+  ['nt_5ftraits_2eh_7',['nt_traits.h',['../nt__traits_8h.html',1,'']]],
+  ['nt_5ftraits2d_2eh_8',['nt_traits2d.h',['../nt__traits2d_8h.html',1,'']]],
+  ['nvcc_9',['nvcc',['../classfloppy_1_1platform.html#a866af73ee3000fd42ac2778c7d15678cac0ee85ff66cf80206ac9ab7b03975213',1,'floppy::platform']]],
+  ['nvidia_10',['nvidia',['../classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2a540df7f83845146f0287ff6d2da77900',1,'floppy::platform']]]
 ];

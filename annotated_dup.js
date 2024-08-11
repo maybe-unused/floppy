@@ -50,7 +50,7 @@ var annotated_dup =
         [ "resolved_trace", "structfloppy_1_1stacktrace_1_1resolved__trace.html", "structfloppy_1_1stacktrace_1_1resolved__trace" ],
         [ "signal_handler", "classfloppy_1_1stacktrace_1_1signal__handler.html", null ],
         [ "snippet_factory", "classfloppy_1_1stacktrace_1_1snippet__factory.html", null ],
-        [ "source_file", "classfloppy_1_1stacktrace_1_1source__file.html", "classfloppy_1_1stacktrace_1_1source__file" ],
+        [ "source_file", "classfloppy_1_1stacktrace_1_1source__file.html", null ],
         [ "stack_trace", "classfloppy_1_1stacktrace_1_1stack__trace.html", null ],
         [ "StackTraceImpl", "classfloppy_1_1stacktrace_1_1StackTraceImpl.html", null ],
         [ "StackTraceImpl< system_tag::current >", "classfloppy_1_1stacktrace_1_1StackTraceImpl_3_01system__tag_1_1current_01_4.html", null ],

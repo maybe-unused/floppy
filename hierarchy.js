@@ -110,8 +110,6 @@ var hierarchy =
     [ "non_movable", "structfloppy_1_1non__movable.html", [
       [ "pin", "structfloppy_1_1pin.html", null ]
     ] ],
-    [ "not_isempty", "structfloppy_1_1stacktrace_1_1source__file_1_1not__isempty.html", null ],
-    [ "not_isspace", "structfloppy_1_1stacktrace_1_1source__file_1_1not__isspace.html", null ],
     [ "one_of< U, T >", "structfloppy_1_1one__of.html", null ],
     [ "plain_type< T >", "group__helpers.html#structfloppy_1_1plain__type", null ],
     [ "platform", "classfloppy_1_1platform.html", null ],
