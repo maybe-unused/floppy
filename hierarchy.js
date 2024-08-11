@@ -2,7 +2,6 @@ var hierarchy =
 [
     [ "application_dirs", "classfloppy_1_1application__dirs.html", null ],
     [ "box< T >", "classfloppy_1_1box.html", null ],
-    [ "Colorize", "classfloppy_1_1stacktrace_1_1Colorize.html", null ],
     [ "configuration_file< F, T >", "classfloppy_1_1configuration__file.html", null ],
     [ "default_comparable< T >", "structfloppy_1_1math_1_1detail_1_1default__comparable.html", [
       [ "basic_numeric_newtype< angle< f32 >, U >", "structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html", null ],
@@ -123,14 +122,12 @@ var hierarchy =
     [ "source_location", "structfloppy_1_1source__location.html", null ],
     [ "SourceLoc", "structfloppy_1_1stacktrace_1_1resolved__trace_1_1SourceLoc.html", null ],
     [ "StackTraceImpl< TAG >", "classfloppy_1_1stacktrace_1_1StackTraceImpl.html", null ],
-    [ "StackTraceImpl< system_tag::current_tag >", "classfloppy_1_1stacktrace_1_1StackTraceImpl.html", [
-      [ "stack_trace", "classfloppy_1_1stacktrace_1_1stack__trace.html", null ]
-    ] ],
     [ "StackTraceImplBase", "classfloppy_1_1stacktrace_1_1StackTraceImplBase.html", [
-      [ "StackTraceImplHolder", "classfloppy_1_1stacktrace_1_1StackTraceImplHolder.html", null ]
-    ] ],
-    [ "streambuf", null, [
-      [ "cfile_streambuf", "classfloppy_1_1stacktrace_1_1cfile__streambuf.html", null ]
+      [ "StackTraceImplHolder", "classfloppy_1_1stacktrace_1_1StackTraceImplHolder.html", [
+        [ "StackTraceImpl< system_tag::current_tag >", "classfloppy_1_1stacktrace_1_1StackTraceImpl_3_01system__tag_1_1current__tag_01_4.html", [
+          [ "stack_trace", "classfloppy_1_1stacktrace_1_1stack__trace.html", null ]
+        ] ]
+      ] ]
     ] ],
     [ "T", null, [
       [ "propagate_const< T >", "classfloppy_1_1propagate__const.html", null ]

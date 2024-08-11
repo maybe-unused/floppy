@@ -49,8 +49,6 @@ var annotated_dup =
           [ "rm_ptr< const T * >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01const_01T_01_5_01_4.html", null ],
           [ "rm_ptr< T * >", "structfloppy_1_1stacktrace_1_1details_1_1rm__ptr_3_01T_01_5_01_4.html", null ]
         ] ],
-        [ "cfile_streambuf", "classfloppy_1_1stacktrace_1_1cfile__streambuf.html", null ],
-        [ "Colorize", "classfloppy_1_1stacktrace_1_1Colorize.html", null ],
         [ "printer", "classfloppy_1_1stacktrace_1_1printer.html", null ],
         [ "resolved_trace", "structfloppy_1_1stacktrace_1_1resolved__trace.html", "structfloppy_1_1stacktrace_1_1resolved__trace" ],
         [ "signal_handler", "classfloppy_1_1stacktrace_1_1signal__handler.html", null ],
@@ -58,6 +56,7 @@ var annotated_dup =
         [ "source_file", "classfloppy_1_1stacktrace_1_1source__file.html", "classfloppy_1_1stacktrace_1_1source__file" ],
         [ "stack_trace", "classfloppy_1_1stacktrace_1_1stack__trace.html", null ],
         [ "StackTraceImpl", "classfloppy_1_1stacktrace_1_1StackTraceImpl.html", null ],
+        [ "StackTraceImpl< system_tag::current_tag >", "classfloppy_1_1stacktrace_1_1StackTraceImpl_3_01system__tag_1_1current__tag_01_4.html", null ],
         [ "StackTraceImplBase", "classfloppy_1_1stacktrace_1_1StackTraceImplBase.html", null ],
         [ "StackTraceImplHolder", "classfloppy_1_1stacktrace_1_1StackTraceImplHolder.html", null ],
         [ "trace", "structfloppy_1_1stacktrace_1_1trace.html", null ],

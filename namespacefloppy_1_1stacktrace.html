@@ -125,18 +125,13 @@ $(function(){initNavTree('namespacefloppy_1_1stacktrace.html',''); initResizable
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">floppy::stacktrace Namespace Reference<div class="ingroups"><a class="el" href="group__foundation.html">Foundation</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1stacktrace_1_1cfile__streambuf.html">cfile_streambuf</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1stacktrace_1_1Colorize.html">Colorize</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1stacktrace_1_1printer.html">printer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfloppy_1_1stacktrace_1_1resolved__trace.html">resolved_trace</a></td></tr>
@@ -150,6 +145,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1stacktrace_1_1stack__trace.html">stack_trace</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1stacktrace_1_1StackTraceImpl.html">StackTraceImpl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1stacktrace_1_1StackTraceImpl_3_01system__tag_1_1current__tag_01_4.html">StackTraceImpl&lt; system_tag::current_tag &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1stacktrace_1_1StackTraceImplBase.html">StackTraceImplBase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,15 +162,10 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfloppy_1_1stacktrace_1_1TraceResolverImplBase.html">TraceResolverImplBase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a7104cbc1e56e5fcead92a71853e5064c" id="r_a7104cbc1e56e5fcead92a71853e5064c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7104cbc1e56e5fcead92a71853e5064c">colorize</a> = <a class="el" href="classfloppy_1_1stacktrace_1_1Colorize.html">Colorize</a></td></tr>
-<tr class="separator:a7104cbc1e56e5fcead92a71853e5064c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stacktrace namespace. </p>
-<p>Currently implemented using <a href="https://github.com/bombela/backward-cpp">backward-cpp</a> library.</p>
+<p>Currently implemented using reworked <a href="https://github.com/bombela/backward-cpp">backward-cpp</a> library.</p>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/bombela/backward-cpp">https://github.com/bombela/backward-cpp</a> </dd></dl>
 </div><hr/><h2 class="groupheader">Class Documentation</h2>
 <a name="classfloppy_1_1stacktrace_1_1TraceResolverImpl" id="classfloppy_1_1stacktrace_1_1TraceResolverImpl"></a>
@@ -189,29 +181,12 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename TAG&gt;<br />
 class floppy::stacktrace::TraceResolverImpl&lt; TAG &gt;</div>
-<p class="definition">Definition at line <a class="el" href="backward_8hpp_source.html#l01228">1228</a> of file <a class="el" href="backward_8hpp_source.html">backward.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backtrace_8h_source.html#l01232">1232</a> of file <a class="el" href="backtrace_8h_source.html">backtrace.h</a>.</p>
 </div><div class="dynheader">
 Inheritance diagram for TraceResolverImpl&lt; TAG &gt;:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classfloppy_1_1stacktrace_1_1TraceResolverImpl__inherit__graph.svg" width="250" height="246"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a7104cbc1e56e5fcead92a71853e5064c" name="a7104cbc1e56e5fcead92a71853e5064c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7104cbc1e56e5fcead92a71853e5064c">&#9670;&#160;</a></span>colorize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classfloppy_1_1stacktrace_1_1Colorize.html">colorize</a> = <a class="el" href="classfloppy_1_1stacktrace_1_1Colorize.html">Colorize</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="backtrace_8h_source.html#l00016">16</a> of file <a class="el" href="backtrace_8h_source.html">backtrace.h</a>.</p>
 
 </div>
 </div>

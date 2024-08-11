@@ -5,7 +5,6 @@ var dir_ae0cb1af05f1ebdc47ed7b5efe67b30c =
     [ "graphics", "dir_1470994300740420538078a3ee627803.html", "dir_1470994300740420538078a3ee627803" ],
     [ "inl", "dir_59ebea3516646c7d01fbca39d54537c0.html", "dir_59ebea3516646c7d01fbca39d54537c0" ],
     [ "backtrace.h", "backtrace_8h_source.html", null ],
-    [ "backward.hpp", "backward_8hpp_source.html", null ],
     [ "bytearray.h", "bytearray_8h_source.html", null ],
     [ "configuration.h", "configuration_8h_source.html", null ],
     [ "directories.h", "directories_8h_source.html", null ],

@@ -11,7 +11,7 @@ var searchData=
   ['sourceloc_8',['SourceLoc',['../structfloppy_1_1stacktrace_1_1resolved__trace_1_1SourceLoc.html',1,'floppy::stacktrace::resolved_trace']]],
   ['stack_5ftrace_9',['stack_trace',['../classfloppy_1_1stacktrace_1_1stack__trace.html',1,'floppy::stacktrace']]],
   ['stacktraceimpl_10',['StackTraceImpl',['../classfloppy_1_1stacktrace_1_1StackTraceImpl.html',1,'floppy::stacktrace']]],
-  ['stacktraceimpl_3c_20system_5ftag_3a_3acurrent_5ftag_20_3e_11',['StackTraceImpl&lt; system_tag::current_tag &gt;',['../classfloppy_1_1stacktrace_1_1StackTraceImpl.html',1,'floppy::stacktrace']]],
+  ['stacktraceimpl_3c_20system_5ftag_3a_3acurrent_5ftag_20_3e_11',['StackTraceImpl&lt; system_tag::current_tag &gt;',['../classfloppy_1_1stacktrace_1_1StackTraceImpl_3_01system__tag_1_1current__tag_01_4.html',1,'floppy::stacktrace']]],
   ['stacktraceimplbase_12',['StackTraceImplBase',['../classfloppy_1_1stacktrace_1_1StackTraceImplBase.html',1,'floppy::stacktrace']]],
   ['stacktraceimplholder_13',['StackTraceImplHolder',['../classfloppy_1_1stacktrace_1_1StackTraceImplHolder.html',1,'floppy::stacktrace']]]
 ];

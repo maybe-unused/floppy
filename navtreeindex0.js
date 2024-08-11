@@ -5,9 +5,8 @@ var NAVTREEINDEX0 =
 "annotated.html":[6,0],
 "backports_8h_source.html":[7,0,0,0,0,0],
 "backtrace_8h_source.html":[7,0,0,0,4],
-"backward_8hpp_source.html":[7,0,0,0,5],
 "bug.html":[0],
-"bytearray_8h_source.html":[7,0,0,0,6],
+"bytearray_8h_source.html":[7,0,0,0,5],
 "classes.html":[6,1],
 "classfloppy_1_1application__dirs.html":[3,7,9],
 "classfloppy_1_1application__dirs.html#a101ffce456ccf4276f0ba9d022a65aff":[3,7,9,12],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "classfloppy_1_1math_1_1point2d.html#a8ede81b668ffa9d89d258e66c7b65b82":[3,6,2,64],
 "classfloppy_1_1math_1_1point2d.html#a8feee4243a367cf6378cf20cc4315505":[3,6,2,7],
 "classfloppy_1_1math_1_1point2d.html#a91be9d7b9115205872e8a75f9b6998ed":[3,6,2,29],
-"classfloppy_1_1math_1_1point2d.html#aa62cb136f618e0d16feed8b745225d05":[3,6,2,83]
+"classfloppy_1_1math_1_1point2d.html#aa62cb136f618e0d16feed8b745225d05":[3,6,2,83],
+"classfloppy_1_1math_1_1point2d.html#aa65e359771aa0604379b1cc72458e54a":[3,6,2,55]
 };
