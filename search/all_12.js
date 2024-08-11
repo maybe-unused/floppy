@@ -27,7 +27,7 @@ var searchData=
   ['sparc_24',['sparc',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6a45f540823942570f0f663af23049a49d',1,'floppy::platform']]],
   ['splat_25',['splat',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#a64f9ee09d34b61616679129ce72807e7',1,'floppy::math::detail::basic_two_dimensional_type']]],
   ['state_26',['state',['../classfloppy_1_1application__dirs.html#aa671c41b56810ab4bfd94587e8507a75a9ed39e2ea931586b6a985a6942ef573e',1,'floppy::application_dirs']]],
-  ['state_5fdir_27',['state_dir',['../classfloppy_1_1application__dirs.html#a021aa8018cecc56780804ca78476a7f3',1,'floppy::application_dirs']]],
+  ['state_5fdir_27',['state_dir',['../classfloppy_1_1application__dirs.html#a3e66049ba0629f6d615d49909e466330',1,'floppy::application_dirs']]],
   ['std_28',['std',['../namespacestd.html',1,'']]],
   ['str_5fto_5frgb_29',['str_to_rgb',['../namespacefloppy_1_1gfx_1_1detail.html#a7bc9d70b70ca084ef8a9bddb3c76443e',1,'floppy::gfx::detail']]],
   ['str_5fto_5frgba_30',['str_to_rgba',['../namespacefloppy_1_1gfx_1_1detail.html#a902fdbfb01ae3a62fbae64bdd83baa4a',1,'floppy::gfx::detail']]],
