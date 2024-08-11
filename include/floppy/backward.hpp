@@ -1,26 +1,3 @@
-/*
- * backward.hpp
- * Copyright 2013 Google Inc. All Rights Reserved.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
 #ifndef H_6B9572DA_A64B_49E6_B234_051480991C89
 #define H_6B9572DA_A64B_49E6_B234_051480991C89
 
@@ -414,19 +391,19 @@ extern "C" uintptr_t _Unwind_GetIPInfo(_Unwind_Context *, int *);
 #ifdef BACKWARD_ATLEAST_CXX11
 #include <unordered_map>
 #include <utility> // for std::swap
-namespace backward {
+namespace floppy::stacktrace {
 namespace details {
 template <typename K, typename V> struct hashtable {
   typedef std::unordered_map<K, V> type;
 };
 using std::move;
 } // namespace details
-} // namespace backward
+} // namespace floppy::stacktrace
 #else // NOT BACKWARD_ATLEAST_CXX11
 #define nullptr NULL
 #define override
 #include <map>
-namespace backward {
+namespace floppy::stacktrace {
 namespace details {
 template <typename K, typename V> struct hashtable {
   typedef std::map<K, V> type;
@@ -434,10 +411,10 @@ template <typename K, typename V> struct hashtable {
 template <typename T> const T &move(const T &v) { return v; }
 template <typename T> T &move(T &v) { return v; }
 } // namespace details
-} // namespace backward
+} // namespace floppy::stacktrace
 #endif // BACKWARD_ATLEAST_CXX11
 
-namespace backward {
+namespace floppy::stacktrace {
 namespace details {
 #if defined(BACKWARD_SYSTEM_WINDOWS)
 const char kBackwardPathDelimiter[] = ";";
@@ -445,9 +422,9 @@ const char kBackwardPathDelimiter[] = ";";
 const char kBackwardPathDelimiter[] = ":";
 #endif
 } // namespace details
-} // namespace backward
+} // namespace floppy::stacktrace
 
-namespace backward {
+namespace floppy::stacktrace {
 
 namespace system_tag {
 struct linux_tag; // seems that I cannot call that "linux" because the name
@@ -664,16 +641,16 @@ inline std::vector<std::string> split_source_prefixes(const std::string &s) {
 
 /*************** A TRACE ***************/
 
-struct Trace {
+struct trace {
   void *addr;
   size_t idx;
 
-  Trace() : addr(nullptr), idx(0) {}
+  trace() : addr(nullptr), idx(0) {}
 
-  explicit Trace(void *_addr, size_t _idx) : addr(_addr), idx(_idx) {}
+  explicit trace(void *_addr, size_t _idx) : addr(_addr), idx(_idx) {}
 };
 
-struct ResolvedTrace : public Trace {
+struct resolved_trace : public trace {
 
   struct SourceLoc {
     std::string function;
@@ -710,8 +687,8 @@ struct ResolvedTrace : public Trace {
   typedef std::vector<SourceLoc> source_locs_t;
   source_locs_t inliners;
 
-  ResolvedTrace() : Trace() {}
-  ResolvedTrace(const Trace &mini_trace) : Trace(mini_trace) {}
+  resolved_trace() : trace() {}
+  resolved_trace(const trace &mini_trace) : trace(mini_trace) {}
 };
 
 /*************** STACK TRACE ***************/
@@ -720,7 +697,7 @@ struct ResolvedTrace : public Trace {
 template <typename TAG> class StackTraceImpl {
 public:
   size_t size() const { return 0; }
-  Trace operator[](size_t) const { return Trace(); }
+  trace operator[](size_t) const { return trace(); }
   size_t load_here(size_t = 0) { return 0; }
   size_t load_from(void *, size_t = 0, void * = nullptr, void * = nullptr) {
     return 0;
@@ -783,11 +760,11 @@ public:
                ? _stacktrace.size() - skip_n_firsts()
                : 0;
   }
-  Trace operator[](size_t idx) const {
+  trace operator[](size_t idx) const {
     if (idx >= size()) {
-      return Trace();
+      return trace();
     }
-    return Trace(_stacktrace[idx + skip_n_firsts()], idx);
+    return trace(_stacktrace[idx + skip_n_firsts()], idx);
   }
   void *const *begin() const {
     if (size()) {
@@ -1220,7 +1197,7 @@ private:
 
 #endif
 
-class StackTrace : public StackTraceImpl<system_tag::current_tag> {};
+class stack_trace : public StackTraceImpl<system_tag::current_tag> {};
 
 /*************** TRACE RESOLVER ***************/
 
@@ -1237,7 +1214,7 @@ public:
     load_addresses(st.begin(), static_cast<int>(st.size()));
   }
 
-  virtual ResolvedTrace resolve(ResolvedTrace t) { return t; }
+  virtual resolved_trace resolve(resolved_trace t) { return t; }
 
 protected:
   std::string demangle(const char *funcname) {
@@ -1334,7 +1311,7 @@ public:
     _symbols.reset(backtrace_symbols(addresses, address_count));
   }
 
-  ResolvedTrace resolve(ResolvedTrace trace) override {
+  resolved_trace resolve(resolved_trace trace) override {
     char *filename = _symbols[trace.idx];
     char *funcname = filename;
     while (*funcname && *funcname != '(') {
@@ -1371,7 +1348,7 @@ class TraceResolverLinuxImpl<trace_resolver_tag::libbfd>
 public:
   TraceResolverLinuxImpl() : _bfd_loaded(false) {}
 
-  ResolvedTrace resolve(ResolvedTrace trace) override {
+  resolved_trace resolve(resolved_trace trace) override {
     Dl_info symbol_info;
 
     // trace.addr is a virtual address in memory pointing to some code.
@@ -1533,7 +1510,7 @@ public:
 							symbol_info.dli_fbase);
 
 					if (details.found) {
-						ResolvedTrace::SourceLoc diy_inliner;
+						resolved_trace::SourceLoc diy_inliner;
 						diy_inliner.line = details.line;
 						if (details.filename) {
 							diy_inliner.filename = details.filename;
@@ -1731,11 +1708,11 @@ private:
 #endif
   }
 
-  ResolvedTrace::source_locs_t
+  resolved_trace::source_locs_t
   backtrace_inliners(bfd_fileobject *fobj, find_sym_result previous_result) {
     // This function can be called ONLY after a SUCCESSFUL call to
     // find_symbol_details. The state is global to the bfd_handle.
-    ResolvedTrace::source_locs_t results;
+    resolved_trace::source_locs_t results;
     while (previous_result.found) {
       find_sym_result result;
       result.found = bfd_find_inliner_info(fobj->handle.get(), &result.filename,
@@ -1749,7 +1726,7 @@ private:
                             and result.line == previous_result.line
                             )) */
       {
-        ResolvedTrace::SourceLoc src_loc;
+        resolved_trace::SourceLoc src_loc;
         src_loc.line = result.line;
         if (result.filename) {
           src_loc.filename = result.filename;
@@ -1781,7 +1758,7 @@ class TraceResolverLinuxImpl<trace_resolver_tag::libdw>
 public:
   TraceResolverLinuxImpl() : _dwfl_handle_initialized(false) {}
 
-  ResolvedTrace resolve(ResolvedTrace trace) override {
+  resolved_trace resolve(resolved_trace trace) override {
     using namespace details;
 
     Dwarf_Addr trace_addr = reinterpret_cast<Dwarf_Addr>(trace.addr);
@@ -1951,7 +1928,7 @@ private:
         break;
 
       case DW_TAG_inlined_subroutine:
-        ResolvedTrace::SourceLoc sloc;
+        resolved_trace::SourceLoc sloc;
         Dwarf_Attribute attr_mem;
 
         if ((name = dwarf_diename(die))) {
@@ -1971,8 +1948,8 @@ private:
         break;
       };
     }
-    ResolvedTrace &trace;
-    inliners_search_cb(ResolvedTrace &t) : trace(t) {}
+    resolved_trace &trace;
+    inliners_search_cb(resolved_trace &t) : trace(t) {}
   };
 
   static bool die_has_pc(Dwarf_Die *die, Dwarf_Addr pc) {
@@ -2108,7 +2085,7 @@ class TraceResolverLinuxImpl<trace_resolver_tag::libdwarf>
 public:
   TraceResolverLinuxImpl() : _dwarf_loaded(false) {}
 
-  ResolvedTrace resolve(ResolvedTrace trace) override {
+  resolved_trace resolve(resolved_trace trace) override {
     // trace.addr is a virtual address in memory pointing to some code.
     // Let's try to find from which loaded object it comes from.
     // The loaded object can be yourself btw.
@@ -3129,7 +3106,7 @@ private:
         break;
 
       case DW_TAG_inlined_subroutine:
-        ResolvedTrace::SourceLoc sloc;
+        resolved_trace::SourceLoc sloc;
 
         if (dwarf_diename(die, &name, &error) == DW_DLV_OK) {
           sloc.function = std::string(name);
@@ -3169,10 +3146,10 @@ private:
         break;
       };
     }
-    ResolvedTrace &trace;
+    resolved_trace &trace;
     dwarf_fileobject &fobj;
     Dwarf_Die cu_die;
-    inliners_search_cb(ResolvedTrace &t, dwarf_fileobject &f, Dwarf_Die c)
+    inliners_search_cb(resolved_trace &t, dwarf_fileobject &f, Dwarf_Die c)
         : trace(t), fobj(f), cu_die(c) {}
   };
 
@@ -3495,7 +3472,7 @@ public:
     _symbols.reset(backtrace_symbols(addresses, address_count));
   }
 
-  ResolvedTrace resolve(ResolvedTrace trace) override {
+  resolved_trace resolve(resolved_trace trace) override {
     // parse:
     // <n>  <file>  <addr>  <mangled-name> + <offset>
     char *filename = _symbols[trace.idx];
@@ -3641,7 +3618,7 @@ public:
 
   DWORD64 displacement;
 
-  ResolvedTrace resolve(ResolvedTrace t) override {
+  resolved_trace resolve(resolved_trace t) override {
     HANDLE process = GetCurrentProcess();
 
     char name[256];
@@ -3692,16 +3669,16 @@ private:
 
 #endif
 
-class TraceResolver : public TraceResolverImpl<system_tag::current_tag> {};
+class trace_resolver : public TraceResolverImpl<system_tag::current_tag> {};
 
 /*************** CODE SNIPPET ***************/
 
-class SourceFile {
+class source_file {
 public:
   typedef std::vector<std::pair<unsigned, std::string> > lines_t;
 
-  SourceFile() {}
-  SourceFile(const std::string &path) {
+  source_file() {}
+  source_file(const std::string &path) {
     // 1. If BACKWARD_CXX_SOURCE_PREFIXES is set then assume it contains
     //    a colon-separated list of path prefixes.  Try prepending each
     //    to the given path until a valid file is found.
@@ -3789,22 +3766,22 @@ public:
     }
   };
 
-  void swap(SourceFile &b) { _file.swap(b._file); }
+  void swap(source_file &b) { _file.swap(b._file); }
 
 #ifdef BACKWARD_ATLEAST_CXX11
-  SourceFile(SourceFile &&from) : _file(nullptr) { swap(from); }
-  SourceFile &operator=(SourceFile &&from) {
+  source_file(source_file &&from) : _file(nullptr) { swap(from); }
+  source_file &operator=(source_file &&from) {
     swap(from);
     return *this;
   }
 #else
-  explicit SourceFile(const SourceFile &from) {
+  explicit source_file(const source_file &from) {
     // some sort of poor man's move semantic.
-    swap(const_cast<SourceFile &>(from));
+    swap(const_cast<source_file &>(from));
   }
-  SourceFile &operator=(const SourceFile &from) {
+  source_file &operator=(const source_file &from) {
     // some sort of poor man's move semantic.
-    swap(const_cast<SourceFile &>(from));
+    swap(const_cast<source_file &>(from));
     return *this;
   }
 #endif
@@ -3839,19 +3816,19 @@ private:
   }
 
 #ifdef BACKWARD_ATLEAST_CXX11
-  SourceFile(const SourceFile &) = delete;
-  SourceFile &operator=(const SourceFile &) = delete;
+  source_file(const source_file &) = delete;
+  source_file &operator=(const source_file &) = delete;
 #endif
 };
 
-class SnippetFactory {
+class snippet_factory {
 public:
-  typedef SourceFile::lines_t lines_t;
+  typedef source_file::lines_t lines_t;
 
   lines_t get_snippet(const std::string &filename, unsigned line_start,
                       unsigned context_size) {
 
-    SourceFile &src_file = get_src_file(filename);
+    source_file &src_file = get_src_file(filename);
     unsigned start = line_start - context_size / 2;
     return src_file.get_lines(start, context_size);
   }
@@ -3859,8 +3836,8 @@ public:
   lines_t get_combined_snippet(const std::string &filename_a, unsigned line_a,
                                const std::string &filename_b, unsigned line_b,
                                unsigned context_size) {
-    SourceFile &src_file_a = get_src_file(filename_a);
-    SourceFile &src_file_b = get_src_file(filename_b);
+    source_file &src_file_a = get_src_file(filename_a);
+    source_file &src_file_b = get_src_file(filename_b);
 
     lines_t lines =
         src_file_a.get_lines(line_a - context_size / 4, context_size / 2);
@@ -3870,7 +3847,7 @@ public:
 
   lines_t get_coalesced_snippet(const std::string &filename, unsigned line_a,
                                 unsigned line_b, unsigned context_size) {
-    SourceFile &src_file = get_src_file(filename);
+    source_file &src_file = get_src_file(filename);
 
     using std::max;
     using std::min;
@@ -3887,21 +3864,21 @@ public:
   }
 
 private:
-  typedef details::hashtable<std::string, SourceFile>::type src_files_t;
+  typedef details::hashtable<std::string, source_file>::type src_files_t;
   src_files_t _src_files;
 
-  SourceFile &get_src_file(const std::string &filename) {
+  source_file &get_src_file(const std::string &filename) {
     src_files_t::iterator it = _src_files.find(filename);
     if (it != _src_files.end()) {
       return it->second;
     }
-    SourceFile &new_src_file = _src_files[filename];
-    new_src_file = SourceFile(filename);
+    source_file &new_src_file = _src_files[filename];
+    new_src_file = source_file(filename);
     return new_src_file;
   }
 };
 
-/*************** PRINTER ***************/
+/*************** printer ***************/
 
 namespace ColorMode {
 enum type { automatic, never, always };
@@ -3995,7 +3972,7 @@ public:
 
 #endif // BACKWARD_SYSTEM_LINUX
 
-class Printer {
+class printer {
 public:
   bool snippet;
   ColorMode::type color_mode;
@@ -4005,7 +3982,7 @@ public:
   int trace_context_size;
   bool reverse;
 
-  Printer()
+  printer()
       : snippet(true), color_mode(ColorMode::automatic), address(false),
         object(false), inliner_context_size(5), trace_context_size(7),
         reverse(true) {}
@@ -4045,11 +4022,11 @@ public:
     return os;
   }
 
-  TraceResolver const &resolver() const { return _resolver; }
+  trace_resolver const &resolver() const { return _resolver; }
 
 private:
-  TraceResolver _resolver;
-  SnippetFactory _snippets;
+  trace_resolver _resolver;
+  snippet_factory _snippets;
 
   template <typename ST>
   void print_stacktrace(ST &st, std::ostream &os, Colorize &colorize) {
@@ -4083,7 +4060,7 @@ private:
     os << ":\n";
   }
 
-  void print_trace(std::ostream &os, const ResolvedTrace &trace,
+  void print_trace(std::ostream &os, const resolved_trace &trace,
                    Colorize &colorize) {
     os << "#" << std::left << std::setw(2) << trace.idx << std::right;
     bool already_indented = true;
@@ -4099,7 +4076,7 @@ private:
       if (!already_indented) {
         os << "   ";
       }
-      const ResolvedTrace::SourceLoc &inliner_loc =
+      const resolved_trace::SourceLoc &inliner_loc =
           trace.inliners[inliner_idx - 1];
       print_source_loc(os, " | ", inliner_loc);
       if (snippet) {
@@ -4122,11 +4099,11 @@ private:
   }
 
   void print_snippet(std::ostream &os, const char *indent,
-                     const ResolvedTrace::SourceLoc &source_loc,
+                     const resolved_trace::SourceLoc &source_loc,
                      Colorize &colorize, Color::type color_code,
                      int context_size) {
     using namespace std;
-    typedef SnippetFactory::lines_t lines_t;
+    typedef snippet_factory::lines_t lines_t;
 
     lines_t lines = _snippets.get_snippet(source_loc.filename, source_loc.line,
                                           static_cast<unsigned>(context_size));
@@ -4146,7 +4123,7 @@ private:
   }
 
   void print_source_loc(std::ostream &os, const char *indent,
-                        const ResolvedTrace::SourceLoc &source_loc,
+                        const resolved_trace::SourceLoc &source_loc,
                         void *addr = nullptr) {
     os << indent << "Source \"" << source_loc.filename << "\", line "
        << source_loc.line << ", in " << source_loc.function;
@@ -4162,7 +4139,7 @@ private:
 
 #if defined(BACKWARD_SYSTEM_LINUX) || defined(BACKWARD_SYSTEM_DARWIN)
 
-class SignalHandling {
+class signal_handler {
 public:
   static std::vector<int> make_default_signals() {
     const int posix_signals[] = {
@@ -4187,7 +4164,7 @@ public:
                                 sizeof posix_signals / sizeof posix_signals[0]);
   }
 
-  SignalHandling(const std::vector<int> &posix_signals = make_default_signals())
+  signal_handler(const std::vector<int> &posix_signals = make_default_signals())
       : _loaded(false) {
     bool success = true;
 
@@ -4234,7 +4211,7 @@ public:
   static void handleSignal(int, siginfo_t *info, void *_ctx) {
     ucontext_t *uctx = static_cast<ucontext_t *>(_ctx);
 
-    StackTrace st;
+    stack_trace st;
     void *error_addr = nullptr;
 #ifdef REG_RIP // x86_64
     error_addr = reinterpret_cast<void *>(uctx->uc_mcontext.gregs[REG_RIP]);
@@ -4272,9 +4249,9 @@ public:
       st.load_here(32, reinterpret_cast<void *>(uctx), info->si_addr);
     }
 
-    Printer printer;
-    printer.address = true;
-    printer.print(st, stderr);
+    printer printer_;
+    printer_.address = true;
+    printer_.print(st, stderr);
 
 #if (defined(_XOPEN_SOURCE) && _XOPEN_SOURCE >= 700) || \
     (defined(_POSIX_C_SOURCE) && _POSIX_C_SOURCE >= 200809L)
@@ -4308,9 +4285,9 @@ private:
 
 #ifdef BACKWARD_SYSTEM_WINDOWS
 
-class SignalHandling {
+class signal_handler {
 public:
-  SignalHandling(const std::vector<int> & = std::vector<int>())
+ signal_handler(const std::vector<int> & = std::vector<int>())
       : reporter_thread_([]() {
           /* We handle crashes in a utility thread:
             backward structures and some Windows functions called here
@@ -4335,7 +4312,7 @@ public:
         }) {
     SetUnhandledExceptionFilter(crash_handler);
 
-    signal(SIGABRT, signal_handler);
+    signal(SIGABRT, signal_handler_);
     _set_abort_behavior(0, _WRITE_ABORT_MSG | _CALL_REPORTFAULT);
 
     std::set_terminate(&terminator);
@@ -4347,7 +4324,7 @@ public:
   }
   bool loaded() const { return true; }
 
-  ~SignalHandling() {
+  ~signal_handler() {
     {
       std::unique_lock<std::mutex> lk(mtx());
       crashed() = crash_status::normal_exit;
@@ -4412,7 +4389,7 @@ private:
     abort();
   }
 
-  static inline void signal_handler(int) {
+  static inline void signal_handler_(int) {
     crash_handler(signal_skip_recs);
     abort();
   }
@@ -4460,21 +4437,21 @@ private:
   }
 
   static void handle_stacktrace(int skip_frames = 0) {
-    // printer creates the TraceResolver, which can supply us a machine type
-    // for stack walking. Without this, StackTrace can only guess using some
+    // printer creates the trace_resolver, which can supply us a machine type
+    // for stack walking. Without this, stack_trace can only guess using some
     // macros.
-    // StackTrace also requires that the PDBs are already loaded, which is done
-    // in the constructor of TraceResolver
-    Printer printer;
+    // stack_trace also requires that the PDBs are already loaded, which is done
+    // in the constructor of trace_resolver
+    printer printer_;
 
-    StackTrace st;
-    st.set_machine_type(printer.resolver().machine_type());
+    stack_trace st;
+    st.set_machine_type(printer_.resolver().machine_type());
     st.set_thread_handle(thread_handle());
     st.load_here(32 + skip_frames, ctx());
     st.skip_n_firsts(skip_frames);
 
-    printer.address = true;
-    printer.print(st, std::cerr);
+    printer_.address = true;
+    printer_.print(st, std::cerr);
   }
 };
 
@@ -4482,15 +4459,15 @@ private:
 
 #ifdef BACKWARD_SYSTEM_UNKNOWN
 
-class SignalHandling {
+class signal_handler {
 public:
-  SignalHandling(const std::vector<int> & = std::vector<int>()) {}
+ signal_handler(const std::vector<int> & = std::vector<int>()) {}
   bool init() { return false; }
   bool loaded() { return false; }
 };
 
 #endif // BACKWARD_SYSTEM_UNKNOWN
 
-} // namespace backward
+} // namespace floppy::stacktrace
 
 #endif /* H_GUARD */
