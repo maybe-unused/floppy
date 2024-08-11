@@ -312,6 +312,8 @@
 #include <condition_variable>
 #include <mutex>
 #include <thread>
+#include <fmt/format.h>
+#include <fmt/color.h>
 
 #include <basetsd.h>
 
@@ -3988,38 +3990,14 @@ public:
         reverse(true) {}
 
   template <typename ST> FILE *print(ST &st, FILE *fp = stderr) {
-    cfile_streambuf obuf(fp);
-    std::ostream os(&obuf);
-    Colorize colorize(os);
-    colorize.activate(color_mode, fp);
-    print_stacktrace(st, os, colorize);
+    print_stacktrace(st, fp);
     return fp;
-  }
-
-  template <typename ST> std::ostream &print(ST &st, std::ostream &os) {
-    Colorize colorize(os);
-    colorize.activate(color_mode);
-    print_stacktrace(st, os, colorize);
-    return os;
   }
 
   template <typename IT>
   FILE *print(IT begin, IT end, FILE *fp = stderr, size_t thread_id = 0) {
-    cfile_streambuf obuf(fp);
-    std::ostream os(&obuf);
-    Colorize colorize(os);
-    colorize.activate(color_mode, fp);
-    print_stacktrace(begin, end, os, thread_id, colorize);
+    print_stacktrace(begin, end, fp, thread_id);
     return fp;
-  }
-
-  template <typename IT>
-  std::ostream &print(IT begin, IT end, std::ostream &os,
-                      size_t thread_id = 0) {
-    Colorize colorize(os);
-    colorize.activate(color_mode);
-    print_stacktrace(begin, end, os, thread_id, colorize);
-    return os;
   }
 
   trace_resolver const &resolver() const { return _resolver; }
@@ -4029,109 +4007,111 @@ private:
   snippet_factory _snippets;
 
   template <typename ST>
-  void print_stacktrace(ST &st, std::ostream &os, Colorize &colorize) {
-    print_header(os, st.thread_id());
+  void print_stacktrace(ST &st, std::FILE* out) {
+    print_header(out, st.thread_id());
     _resolver.load_stacktrace(st);
-    if ( reverse ) {
-      for (size_t trace_idx = st.size(); trace_idx > 0; --trace_idx) {
-        print_trace(os, _resolver.resolve(st[trace_idx - 1]), colorize);
-      }
-    } else {
-      for (size_t trace_idx = 0; trace_idx < st.size(); ++trace_idx) {
-        print_trace(os, _resolver.resolve(st[trace_idx]), colorize);
-      }
-    }
+    if(reverse)
+      for(size_t trace_idx = st.size(); trace_idx > 0; --trace_idx)
+        this->print_trace(out, _resolver.resolve(st[trace_idx - 1]));
+    else
+      for(size_t trace_idx = 0; trace_idx < st.size(); ++trace_idx)
+        this->print_trace(out, _resolver.resolve(st[trace_idx]));
   }
 
   template <typename IT>
-  void print_stacktrace(IT begin, IT end, std::ostream &os, size_t thread_id,
-                        Colorize &colorize) {
-    print_header(os, thread_id);
+  auto print_stacktrace(IT begin, IT end, std::FILE* out, size_t thread_id) -> void {
+    this->print_header(out, thread_id);
     for (; begin != end; ++begin) {
-      print_trace(os, *begin, colorize);
+      this->print_trace(out, *begin);
     }
   }
 
-  void print_header(std::ostream &os, size_t thread_id) {
-    os << "Stack trace (most recent call last)";
-    if (thread_id) {
-      os << " in thread " << thread_id;
-    }
-    os << ":\n";
+  auto print_header(std::FILE* out, size_t thread_id) -> void {
+    fmt::println(out, "Stack trace (most recent call last){}:",
+      thread_id
+        ? " in thread " + std::to_string(thread_id)
+        : ""
+    );
   }
 
-  void print_trace(std::ostream &os, const resolved_trace &trace,
-                   Colorize &colorize) {
-    os << "#" << std::left << std::setw(2) << trace.idx << std::right;
-    bool already_indented = true;
+  auto indent(std::FILE* out, size_t idx) -> void {
+    fmt::print(out, "#{:<2}: ", idx);
+  }
 
-    if (!trace.source.filename.size() || object) {
-      os << "   Object \"" << trace.object_filename << "\", at " << trace.addr
-         << ", in " << trace.object_function << "\n";
+  auto print_trace(std::FILE* out, resolved_trace const& trace) -> void {
+    this->indent(out, trace.idx);
+    auto already_indented = true;
+    if(not trace.source.filename.size() or this->object) {
+      fmt::print(out, R"(   Object '{}' at '{}' in '{}')",
+        trace.object_filename,
+        trace.addr,
+        trace.object_function
+      );
       already_indented = false;
     }
 
-    for (size_t inliner_idx = trace.inliners.size(); inliner_idx > 0;
-         --inliner_idx) {
-      if (!already_indented) {
-        os << "   ";
-      }
-      const resolved_trace::SourceLoc &inliner_loc =
-          trace.inliners[inliner_idx - 1];
-      print_source_loc(os, " | ", inliner_loc);
-      if (snippet) {
-        print_snippet(os, "    | ", inliner_loc, colorize, Color::purple,
-                      inliner_context_size);
-      }
+    for(size_t inliner_idx = trace.inliners.size(); inliner_idx > 0; --inliner_idx) {
+      if(not already_indented)
+        fmt::print(out, "    ");
+      auto const& inliner_loc = trace.inliners[inliner_idx - 1];
+      this->print_source_loc(out, " | ", inliner_loc);
+      if(snippet)
+        this->print_snippet(out, "    | ", inliner_loc, inliner_context_size);
       already_indented = false;
     }
 
-    if (trace.source.filename.size()) {
-      if (!already_indented) {
-        os << "   ";
-      }
-      print_source_loc(os, "   ", trace.source, trace.addr);
-      if (snippet) {
-        print_snippet(os, "      ", trace.source, colorize, Color::yellow,
-                      trace_context_size);
-      }
+    if(trace.source.filename.size()) {
+      if(not already_indented)
+        fmt::print(out, "    ");
+      this->print_source_loc(out, "   ", trace.source, trace.addr);
+      if(snippet)
+        this->print_snippet(out, "      ", trace.source, trace_context_size);
     }
   }
 
-  void print_snippet(std::ostream &os, const char *indent,
-                     const resolved_trace::SourceLoc &source_loc,
-                     Colorize &colorize, Color::type color_code,
-                     int context_size) {
+  auto print_snippet(
+    std::FILE* out,
+    char const* indent,
+    resolved_trace::SourceLoc const& source_loc,
+    int context_size
+  ) -> void {
     using namespace std;
     typedef snippet_factory::lines_t lines_t;
 
-    lines_t lines = _snippets.get_snippet(source_loc.filename, source_loc.line,
-                                          static_cast<unsigned>(context_size));
+    lines_t lines = this->_snippets.get_snippet(
+      source_loc.filename,
+      source_loc.line,
+      static_cast<unsigned>(context_size)
+    );
 
-    for (lines_t::const_iterator it = lines.begin(); it != lines.end(); ++it) {
-      if (it->first == source_loc.line) {
-        colorize.set_color(color_code);
-        os << indent << ">";
-      } else {
-        os << indent << " ";
-      }
-      os << std::setw(4) << it->first << ": " << it->second << "\n";
-      if (it->first == source_loc.line) {
-        colorize.set_color(Color::reset);
-      }
+    for(lines_t::const_iterator it = lines.begin(); it != lines.end(); ++it) {
+      auto highlight = false;
+      if(it->first == source_loc.line) {
+        fmt::print(out, "{}>", indent);
+        highlight = true;
+        //colorize.set_color(color_code);
+      } else
+        fmt::print(out, "{} ", indent);
+      if(highlight)
+        fmt::print(out, "{:>4}: {}\n", it->first, it->second); // color it
+      else
+        fmt::print(out, "{:>4}: {}\n", it->first, it->second);
     }
   }
 
-  void print_source_loc(std::ostream &os, const char *indent,
-                        const resolved_trace::SourceLoc &source_loc,
-                        void *addr = nullptr) {
-    os << indent << "Source \"" << source_loc.filename << "\", line "
-       << source_loc.line << ", in " << source_loc.function;
-
-    if (address && addr != nullptr) {
-      os << " [" << addr << "]";
-    }
-    os << "\n";
+  auto print_source_loc(
+    std::FILE* out,
+    char const* indent,
+    resolved_trace::SourceLoc const& source_loc,
+    void* addr = nullptr
+  ) -> void {
+    fmt::print(out, "{}Source \'{}\', line {} in {} {}\n",
+      indent,
+      source_loc.filename,
+      source_loc.line,
+      source_loc.function,
+      address and addr != nullptr ? fmt::format("[0x{:p}]", addr) : ""
+    );
   }
 };
 
@@ -4451,7 +4431,7 @@ private:
     st.skip_n_firsts(skip_frames);
 
     printer_.address = true;
-    printer_.print(st, std::cerr);
+    printer_.print(st, stderr);
   }
 };
 
