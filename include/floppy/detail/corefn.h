@@ -17,7 +17,7 @@ namespace floppy
   /// \sa https://en.cppreference.com/w/cpp/error/terminate_handler
   /// \param message Error message.
   /// \param location Source location of the panic. Defaults to current location.
-  [[noreturn]] inline auto panic(std::string_view message, source_location location = source_location::current()) -> void {
+  [[noreturn]] inline void panic(std::string_view message, source_location location = source_location::current()) {
     print_helpers::critical_message("panic in file `{}` line {}", location.file_name(), location.line());
     print_helpers::critical_message("in function `{}`", location.function_name());
     print_helpers::critical_message("reason: {}", message);
@@ -34,7 +34,7 @@ namespace floppy
   /// \param u Source number value
   /// \return Converted number
   template <concepts::num T, concepts::num U>
-  constexpr auto narrow_cast(U&& u) noexcept -> T {
+  constexpr T narrow_cast(U&& u) noexcept {
     return static_cast<T>(std::forward<U>(u));
   }
 
@@ -51,7 +51,7 @@ namespace floppy
     ///   <li>GCC</li>
     /// </ul>
     /// \see type_name
-    [[nodiscard]] FLOPPY_EXPORT auto demangle(char const* name) -> std::string;
+    [[nodiscard]] FLOPPY_EXPORT std::string demangle(char const* name);
 
     /// \brief Returns C++ type name or signature from <b>typeid</b> object using RTTI.
     /// \headerfile floppy/floppy.h
@@ -72,7 +72,7 @@ namespace floppy
     /// </ul>
     /// \see demangle
     template <typename T>
-    [[nodiscard]] auto type_name() -> std::string {
+    [[nodiscard]] std::string type_name() {
       return rtti::demangle(typeid(T).name());
     }
   } // namespace rtti
@@ -108,7 +108,7 @@ namespace floppy
   } or requires(T e) {
     enum_flag(e);
   })
-  constexpr auto operator|(T const lhs, T const rhs) noexcept -> T {
+  constexpr T operator|(T const lhs, T const rhs) noexcept {
     return static_cast<T>(to_underlying(lhs) | to_underlying(rhs));
   }
 
@@ -143,7 +143,7 @@ namespace floppy
   } or requires(T e) {
     enum_flag(e);
   })
-  constexpr auto operator&(T const lhs, T const rhs) noexcept -> T {
+  constexpr T operator&(T const lhs, T const rhs) noexcept {
     return static_cast<T>(to_underlying(lhs) & to_underlying(rhs));
   }
 
@@ -178,7 +178,7 @@ namespace floppy
   } or requires(T e) {
     enum_flag(e);
   })
-  constexpr auto operator^(T const lhs, T const rhs) noexcept -> T {
+  constexpr T operator^(T const lhs, T const rhs) noexcept {
     return static_cast<T>(to_underlying(lhs) ^ to_underlying(rhs));
   }
 
@@ -213,7 +213,7 @@ namespace floppy
   } or requires(T e) {
     enum_flag(e);
   })
-  constexpr auto operator~(T const value) noexcept -> T {
+  constexpr T operator~(T const value) noexcept {
     return static_cast<T>(~to_underlying(value));
   }
 } // namespace floppy

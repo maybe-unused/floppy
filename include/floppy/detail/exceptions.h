@@ -19,7 +19,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
 
       /// \brief Returns the message of the exception.
       /// \returns The message of the exception.
-      [[nodiscard]] auto what() const noexcept -> char const* override {
+      [[nodiscard]] char const* what() const noexcept override {
         return "compile time error occurred";
       }
     };

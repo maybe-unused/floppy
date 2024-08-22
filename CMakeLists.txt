@@ -107,8 +107,9 @@ endif()
 if(TESTS)
   enable_testing()
   add_subdirectory(tests)
-  add_subdirectory(bin)
+
 endif()
+add_subdirectory(bin)
 
 message(STATUS "[${PROJECT_NAME}] compile integration tests status: ${INTEGRATION_TESTS}")
 message(STATUS "[${PROJECT_NAME}] installing ${PROJECT_NAME} in namespace ${PROJECT_NAMESPACE}")

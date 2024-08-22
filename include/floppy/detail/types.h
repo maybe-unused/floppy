@@ -37,7 +37,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     {
       using tl::expected;
       using tl::unexpected;
-    } // namespace detail
+    } // namespace detail_
 
     /// \brief Expected type with default error type (<tt>std::string</tt>).
     /// \headerfile floppy/floppy.h
@@ -73,30 +73,30 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \brief Helper function for <tt>result</tt>.
     /// \headerfile floppy/floppy.h
     /// \ingroup aliases
-    template<typename... Args>
-    [[nodiscard]] auto error(std::string_view format, Args&&... args) -> detail_::unexpected<std::decay_t<std::string>> {
+    template <typename... Args>
+    [[nodiscard]] detail_::unexpected<std::decay_t<std::string>> error(std::string_view format, Args&&... args) {
       return detail_::unexpected<std::decay_t<std::string>>(fmt::format(fmt::runtime(format), std::forward<Args>(args)...));
     }
 
     /// \brief Helper function for <tt>result</tt>.
     /// \headerfile floppy/floppy.h
     /// \ingroup aliases
-    template <class T>
-    [[nodiscard]] auto ok(T&& t) -> detail_::expected<std::decay_t<T>, std::string> {
+    template <typename T>
+    [[nodiscard]] detail_::expected<std::decay_t<T>, std::string> ok(T&& t) {
       return detail_::expected<std::decay_t<T>, std::string>(std::forward<T>(t));
     }
 
     /// \brief Helper function for <tt>result</tt>.
     /// \headerfile floppy/floppy.h
     /// \ingroup aliases
-    [[nodiscard]] inline auto ok() -> result<> { return {}; }
+    [[nodiscard]] inline result<> ok() { return {}; }
 
     /// \brief Helper function for \ref option.
     /// \headerfile floppy/floppy.h
     /// \ingroup aliases
     /// \see none
     template <std::destructible T>
-    auto some(T&& t) -> option<std::decay_t<T>> {
+    [[nodiscard]] option<std::decay_t<T>> some(T&& t) {
       return option<std::decay_t<T>>(std::forward<T>(t));
     }
 
