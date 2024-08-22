@@ -8,11 +8,11 @@
 #ifdef FL_DEBUG
 # define __floppy_internal_remove_in_release__(...) __VA_ARGS__ // NOLINT(*-reserved-identifier, *-identifier-naming, *-macro-usage)
 # define __constant_evaluated__  // NOLINT(*-reserved-identifier, *-identifier-naming, *-macro-usage)
-# define __release_only_maybe_unused__
+# define __release_only_maybe_unused__ // NOLINT(*-reserved-identifier, *-identifier-naming, *-macro-usage)
 #else // FL_NO_DEBUG
 # define __floppy_internal_remove_in_release__(...) // NOLINT(*-reserved-identifier, *-identifier-naming, *-macro-usage)
-# define __constant_evaluated__ consteval
-# define __release_only_maybe_unused__ [[maybe_unused]]
+# define __constant_evaluated__ consteval // NOLINT(*-reserved-identifier, *-identifier-naming, *-macro-usage)
+# define __release_only_maybe_unused__ [[maybe_unused]] // NOLINT(*-reserved-identifier, *-identifier-naming, *-macro-usage)
 #endif // FL_DEBUG/FL_NO_DEBUG
 
 namespace floppy::contracts
@@ -39,45 +39,6 @@ namespace floppy::contracts
 
   __forceinline__
   __constant_evaluated__
-  void expects(
-    __release_only_maybe_unused__ bool condition,
-    __release_only_maybe_unused__ std::string_view message = "failed precondition contract check",
-    __release_only_maybe_unused__ std::source_location location = std::source_location::current()
-  ) {
-    __floppy_internal_remove_in_release__(
-      if(not condition)
-        raise_contract_violation(message, location);
-    )
-  }
-
-  __forceinline__
-  __constant_evaluated__
-  void ensures(
-    __release_only_maybe_unused__ bool condition,
-    __release_only_maybe_unused__ std::string_view message = "failed postcondition contract check",
-    __release_only_maybe_unused__ std::source_location location = std::source_location::current()
-  ) {
-    __floppy_internal_remove_in_release__(
-      if(not condition)
-        raise_contract_violation(message, location);
-    )
-  }
-
-  __forceinline__
-  __constant_evaluated__
-  void invariant(
-    __release_only_maybe_unused__ bool condition,
-    __release_only_maybe_unused__ std::string_view message = "failed invariant contract check",
-    __release_only_maybe_unused__ std::source_location location = std::source_location::current()
-  ) {
-    __floppy_internal_remove_in_release__(
-      if(not condition)
-        raise_contract_violation(message, location);
-    )
-  }
-
-  __forceinline__
-  __constant_evaluated__
   void asserts(
     __release_only_maybe_unused__ bool condition,
     __release_only_maybe_unused__ std::string_view message = "failed assertion",
@@ -87,6 +48,73 @@ namespace floppy::contracts
       if(not condition)
         raise_contract_violation(message, location);
     )
+  }
+
+  __forceinline__
+  __constant_evaluated__
+  void broken_assert(
+    __release_only_maybe_unused__ std::string_view message = "failed assertion",
+    __release_only_maybe_unused__ std::source_location location = std::source_location::current()
+  ) {
+    __floppy_internal_remove_in_release__(raise_contract_violation(message, location);)
+  }
+
+  __forceinline__
+  __constant_evaluated__
+  void expects(
+    __release_only_maybe_unused__ bool condition,
+    __release_only_maybe_unused__ std::source_location location = std::source_location::current()
+  ) {
+    __floppy_internal_remove_in_release__(asserts(condition, "failed precondition contract check", location);)
+  }
+
+  __forceinline__
+  __constant_evaluated__
+  void broken_precondition(
+    __release_only_maybe_unused__ std::source_location location = std::source_location::current()
+  ) {
+    __floppy_internal_remove_in_release__(expects(false, location);)
+  }
+
+  __forceinline__
+  __constant_evaluated__
+  void ensures(
+    __release_only_maybe_unused__ bool condition,
+    __release_only_maybe_unused__ std::source_location location = std::source_location::current()
+  ) {
+    __floppy_internal_remove_in_release__(asserts(condition, "failed postcondition contract check", location);)
+  }
+
+  __forceinline__
+  __constant_evaluated__
+  void broken_postcondition(
+    __release_only_maybe_unused__ std::source_location location = std::source_location::current()
+  ) {
+    __floppy_internal_remove_in_release__(ensures(false, location);)
+  }
+
+  __forceinline__
+  __constant_evaluated__
+  void invariant(
+    __release_only_maybe_unused__ bool condition,
+    __release_only_maybe_unused__ std::source_location location = std::source_location::current()
+  ) {
+    __floppy_internal_remove_in_release__(ensures(condition, "failed invariant contract check", location);)
+  }
+
+  __forceinline__
+  __constant_evaluated__
+  void broken_invariant(
+    __release_only_maybe_unused__ std::source_location location = std::source_location::current()
+  ) {
+    __floppy_internal_remove_in_release__(invariant(false, location);)
+  }
+
+  // not implemented
+  __forceinline__
+  __constant_evaluated__
+  void not_implemented(__release_only_maybe_unused__ std::source_location location = std::source_location::current()) {
+    __floppy_internal_remove_in_release__(broken_assert("not implemented", location);)
   }
 } // namespace floppy::contracts
 
