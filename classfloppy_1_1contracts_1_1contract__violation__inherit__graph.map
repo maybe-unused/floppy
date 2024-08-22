@@ -1,9 +1,17 @@
 <map id="contract_violation" name="contract_violation">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,226,138,252"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="6,153,137,178"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,194,74,226,69,226,69,194"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="27,79,116,105"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,120,74,152,69,152,69,120"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="30,5,113,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="74,46,74,79,69,79,69,46"/>
+<area shape="rect" id="Node000001" title="Base class for all contract violations." alt="" coords="451,112,584,137"/>
+<area shape="rect" id="Node000005" href="$classfloppy_1_1contracts_1_1assertion__contract__violation.html" title="Contract violation for assertions." alt="" coords="645,5,783,46"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="551,101,630,57,658,44,660,49,633,61,554,105"/>
+<area shape="rect" id="Node000006" href="$classfloppy_1_1contracts_1_1invariant__contract__violation.html" title="Contract violation for invariants." alt="" coords="647,71,781,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="598,108,646,100,647,105,599,113"/>
+<area shape="rect" id="Node000007" href="$classfloppy_1_1contracts_1_1postcondition__contract__violation.html" title="Contract violation for postconditions." alt="" coords="632,136,796,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="599,135,632,140,631,146,598,140"/>
+<area shape="rect" id="Node000008" href="$classfloppy_1_1contracts_1_1precondition__contract__violation.html" title="Contract violation for preconditions." alt="" coords="635,201,793,242"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="554,143,633,186,660,198,658,203,630,191,552,148"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="273,112,403,137"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="419,122,451,122,451,127,419,127"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="136,112,225,137"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,122,273,122,273,127,240,127"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,112,88,137"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="103,122,135,122,135,127,103,127"/>
 </map>

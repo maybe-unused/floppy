@@ -1,15 +1,23 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,55,88,80"/>
-<area shape="rect" id="Node000001" href="$classfloppy_1_1exceptions_1_1compile__time__error.html" title="Indicates a compile time error." alt="" coords="136,5,280,31"/>
-<area shape="poly" id="edge41_Node000000_Node000001" title=" " alt="" coords="102,48,163,29,164,34,104,53"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="163,55,253,80"/>
-<area shape="poly" id="edge42_Node000000_Node000002" title=" " alt="" coords="103,65,163,65,163,70,103,70"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="154,104,262,130"/>
-<area shape="poly" id="edge45_Node000000_Node000005" title=" " alt="" coords="104,82,164,101,163,106,102,87"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="331,55,461,80"/>
-<area shape="poly" id="edge43_Node000002_Node000003" title=" " alt="" coords="268,65,330,65,330,70,268,70"/>
-<area shape="rect" id="Node000004" href="$classfloppy_1_1contracts_1_1contract__violation.html" title=" " alt="" coords="511,55,644,80"/>
-<area shape="poly" id="edge44_Node000003_Node000004" title=" " alt="" coords="476,65,511,65,511,70,476,70"/>
-<area shape="rect" id="Node000006" href="$classfloppy_1_1serialization_1_1serialization__error.html" title="Exception thrown during serialization or deserialization." alt="" coords="328,104,463,130"/>
-<area shape="poly" id="edge46_Node000005_Node000006" title=" " alt="" coords="277,114,327,114,327,120,277,120"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,112,88,137"/>
+<area shape="rect" id="Node000001" href="$classfloppy_1_1exceptions_1_1compile__time__error.html" title="Indicates a compile time error." alt="" coords="136,62,280,88"/>
+<area shape="poly" id="edge41_Node000000_Node000001" title=" " alt="" coords="102,105,163,86,164,91,104,110"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="163,112,253,137"/>
+<area shape="poly" id="edge42_Node000000_Node000002" title=" " alt="" coords="103,122,163,122,163,127,103,127"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="154,161,262,187"/>
+<area shape="poly" id="edge49_Node000000_Node000009" title=" " alt="" coords="104,139,164,158,163,163,102,144"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="331,112,461,137"/>
+<area shape="poly" id="edge43_Node000002_Node000003" title=" " alt="" coords="268,122,330,122,330,127,268,127"/>
+<area shape="rect" id="Node000004" href="$classfloppy_1_1contracts_1_1contract__violation.html" title="Base class for all contract violations." alt="" coords="511,112,644,137"/>
+<area shape="poly" id="edge44_Node000003_Node000004" title=" " alt="" coords="476,122,511,122,511,127,476,127"/>
+<area shape="rect" id="Node000005" href="$classfloppy_1_1contracts_1_1assertion__contract__violation.html" title="Contract violation for assertions." alt="" coords="705,5,843,46"/>
+<area shape="poly" id="edge45_Node000004_Node000005" title=" " alt="" coords="611,101,690,57,718,44,720,49,693,61,614,105"/>
+<area shape="rect" id="Node000006" href="$classfloppy_1_1contracts_1_1invariant__contract__violation.html" title="Contract violation for invariants." alt="" coords="707,71,841,111"/>
+<area shape="poly" id="edge46_Node000004_Node000006" title=" " alt="" coords="658,108,706,100,707,105,659,113"/>
+<area shape="rect" id="Node000007" href="$classfloppy_1_1contracts_1_1postcondition__contract__violation.html" title="Contract violation for postconditions." alt="" coords="692,136,856,177"/>
+<area shape="poly" id="edge47_Node000004_Node000007" title=" " alt="" coords="659,135,692,140,691,146,658,140"/>
+<area shape="rect" id="Node000008" href="$classfloppy_1_1contracts_1_1precondition__contract__violation.html" title="Contract violation for preconditions." alt="" coords="695,201,853,242"/>
+<area shape="poly" id="edge48_Node000004_Node000008" title=" " alt="" coords="614,143,693,186,720,198,718,203,690,191,612,148"/>
+<area shape="rect" id="Node000010" href="$classfloppy_1_1serialization_1_1serialization__error.html" title="Exception thrown during serialization or deserialization." alt="" coords="328,161,463,187"/>
+<area shape="poly" id="edge50_Node000009_Node000010" title=" " alt="" coords="277,171,327,171,327,176,277,176"/>
 </map>

@@ -28,7 +28,7 @@ var searchData=
   ['config_5flocal_5fdir_25',['config_local_dir',['../classfloppy_1_1application__dirs.html#a90a289eea7dc564e16f0b9b74d358cc3',1,'floppy::application_dirs']]],
   ['configuration_5ffile_26',['configuration_file',['../classfloppy_1_1configuration__file.html',1,'configuration_file&lt; F, T &gt;'],['../classfloppy_1_1configuration__file.html#a9eaa6790b902913c6f1844b6bf8ef9eb',1,'floppy::configuration_file::configuration_file(std::filesystem::path path, saving_policy policy)'],['../classfloppy_1_1configuration__file.html#a11c3968bb530354cfddcd95fa1f62c76',1,'floppy::configuration_file::configuration_file(std::string_view filename, std::filesystem::path const &amp;folder, saving_policy policy)']]],
   ['const_5ftype_27',['const_type',['../group__helpers.html#a60926b56740fc6359cc46e3cc51f9289',1,'floppy::plain_type']]],
-  ['contract_5fviolation_28',['contract_violation',['../classfloppy_1_1contracts_1_1contract__violation.html',1,'floppy::contracts']]],
+  ['contract_5fviolation_28',['contract_violation',['../classfloppy_1_1contracts_1_1contract__violation.html',1,'contract_violation'],['../classfloppy_1_1contracts_1_1contract__violation.html#acb00aa62a7c030411b049bd6eb8a9d1a',1,'floppy::contracts::contract_violation::contract_violation()']]],
   ['convex_29',['convex',['../classfloppy_1_1platform.html#a8c680d8fb41ad5da68fd9454583858c6ab9e9dd1fa31d98cf8eb1b96e735550ba',1,'floppy::platform']]],
   ['cos_30',['cos',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a6dd7cf74119d22f24c8994d96abfa835',1,'floppy::math::detail::basic_numeric_newtype']]],
   ['create_31',['create',['../classfloppy_1_1application__dirs.html#aaf6ebb52741437b64b306498af3d537e',1,'floppy::application_dirs']]],

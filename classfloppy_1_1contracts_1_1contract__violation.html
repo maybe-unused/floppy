@@ -130,10 +130,12 @@ $(function(){initNavTree('classfloppy_1_1contracts_1_1contract__violation.html',
   <div class="headertitle"><div class="title">contract_violation Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="floppy_8h_source.html">floppy/floppy.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for contract_violation:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classfloppy_1_1contracts_1_1contract__violation__inherit__graph.svg" width="143" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfloppy_1_1contracts_1_1contract__violation__inherit__graph.svg" width="100%" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for contract_violation:</div>
@@ -143,15 +145,17 @@ Collaboration diagram for contract_violation:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4f0016161b37d96b2c7992793b646ee7" id="r_a4f0016161b37d96b2c7992793b646ee7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f0016161b37d96b2c7992793b646ee7">contract_violation</a> (std::string_view message, std::source_location location=std::source_location::current())</td></tr>
-<tr class="separator:a4f0016161b37d96b2c7992793b646ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb00aa62a7c030411b049bd6eb8a9d1a" id="r_acb00aa62a7c030411b049bd6eb8a9d1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb00aa62a7c030411b049bd6eb8a9d1a">contract_violation</a> (std::string_view message, std::string_view prefix_text=&quot;&quot;, std::source_location location=std::source_location::current())</td></tr>
+<tr class="separator:acb00aa62a7c030411b049bd6eb8a9d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="contracts_8h_source.html#l00020">20</a> of file <a class="el" href="contracts_8h_source.html">contracts.h</a>.</p>
+<div class="textblock"><p>Base class for all contract violations. </p>
+<p>All contract violations inherit from this class. Example output: </p><div class="fragment"><div class="line">contract violation at file <span class="stringliteral">&#39;main.cpp&#39;</span> line 42 in function <span class="stringliteral">&#39;foo()&#39;</span>: message</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="contracts_8h_source.html#l00029">29</a> of file <a class="el" href="contracts_8h_source.html">contracts.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4f0016161b37d96b2c7992793b646ee7" name="a4f0016161b37d96b2c7992793b646ee7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f0016161b37d96b2c7992793b646ee7">&#9670;&#160;</a></span>contract_violation()</h2>
+<a id="acb00aa62a7c030411b049bd6eb8a9d1a" name="acb00aa62a7c030411b049bd6eb8a9d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb00aa62a7c030411b049bd6eb8a9d1a">&#9670;&#160;</a></span>contract_violation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,6 +171,11 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>prefix_text</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::source_location</td>          <td class="paramname"><span class="paramname"><em>location</em><span class="paramdefsep"> = </span><span class="paramdefval">std::source_location::current()</span></span>&#160;)</td>
         </tr>
       </table>
@@ -177,7 +186,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="contracts_8h_source.html#l00025">25</a> of file <a class="el" href="contracts_8h_source.html">contracts.h</a>.</p>
+<p>Creates contract violation object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Error message. </td></tr>
+    <tr><td class="paramname">prefix_text</td><td>Prefix text. Can be empty (default). </td></tr>
+    <tr><td class="paramname">location</td><td>Source location of the violation (default is current). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="contracts_8h_source.html#l00038">38</a> of file <a class="el" href="contracts_8h_source.html">contracts.h</a>.</p>
 
 </div>
 </div>

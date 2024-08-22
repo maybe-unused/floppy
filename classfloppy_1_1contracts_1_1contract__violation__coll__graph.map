@@ -1,5 +1,5 @@
 <map id="contract_violation" name="contract_violation">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,226,138,252"/>
+<area shape="rect" id="Node000001" title="Base class for all contract violations." alt="" coords="5,226,138,252"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="6,153,137,178"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,194,74,226,69,226,69,194"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="27,79,116,105"/>

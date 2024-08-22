@@ -17,5 +17,6 @@ var searchData=
   ['as_5ftarget_5ftriple_14',['as_target_triple',['../classfloppy_1_1platform.html#a2f278d682e1f2066bf95e3aaec2327cc',1,'floppy::platform']]],
   ['as_5funique_5fptr_15',['as_unique_ptr',['../classfloppy_1_1box.html#ab2cbad5be2b0bf928a451bbcc0a89cd6',1,'floppy::box::as_unique_ptr() noexcept'],['../classfloppy_1_1box.html#a14052c7e4af965834bfa168e81ec5c85',1,'floppy::box::as_unique_ptr() const noexcept']]],
   ['asin_16',['asin',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#add809373661187793ef5d2296d7f7eb3',1,'floppy::math::detail::basic_numeric_newtype']]],
-  ['atan_17',['atan',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a2c5c1e764b8e4c7f8fb6407b0e78f22e',1,'floppy::math::detail::basic_numeric_newtype']]]
+  ['assertion_5fcontract_5fviolation_17',['assertion_contract_violation',['../classfloppy_1_1contracts_1_1assertion__contract__violation.html#a3c86ecea77bf3f074be79b4fcd4e7b58',1,'floppy::contracts::assertion_contract_violation']]],
+  ['atan_18',['atan',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a2c5c1e764b8e4c7f8fb6407b0e78f22e',1,'floppy::math::detail::basic_numeric_newtype']]]
 ];

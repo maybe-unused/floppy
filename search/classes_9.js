@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['non_5fcopyable_0',['non_copyable',['../structfloppy_1_1non__copyable.html',1,'floppy']]],
-  ['non_5fmovable_1',['non_movable',['../structfloppy_1_1non__movable.html',1,'floppy']]]
+  ['module_5fdata_0',['module_data',['../namespacefloppy_1_1stacktrace_1_1impl.html#structfloppy_1_1stacktrace_1_1impl_1_1module__data',1,'floppy::stacktrace::impl']]]
 ];

@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="Base class for all contract violations.">
 <polygon fill="#999999" stroke="#666666" points="99.25,-19.25 0,-19.25 0,0 99.25,0 99.25,-19.25"/>
 <text text-anchor="middle" x="49.62" y="-4.8" font-family="Helvetica,sans-Serif" font-size="11.00">contract_violation</text>
 </a>

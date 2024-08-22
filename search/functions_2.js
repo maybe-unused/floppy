@@ -15,11 +15,12 @@ var searchData=
   ['config_5fdir_12',['config_dir',['../classfloppy_1_1application__dirs.html#a3927646aa108ca93f24fdd90cd374c37',1,'floppy::application_dirs']]],
   ['config_5flocal_5fdir_13',['config_local_dir',['../classfloppy_1_1application__dirs.html#a90a289eea7dc564e16f0b9b74d358cc3',1,'floppy::application_dirs']]],
   ['configuration_5ffile_14',['configuration_file',['../classfloppy_1_1configuration__file.html#a9eaa6790b902913c6f1844b6bf8ef9eb',1,'floppy::configuration_file::configuration_file(std::filesystem::path path, saving_policy policy)'],['../classfloppy_1_1configuration__file.html#a11c3968bb530354cfddcd95fa1f62c76',1,'floppy::configuration_file::configuration_file(std::string_view filename, std::filesystem::path const &amp;folder, saving_policy policy)']]],
-  ['cos_15',['cos',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a6dd7cf74119d22f24c8994d96abfa835',1,'floppy::math::detail::basic_numeric_newtype']]],
-  ['create_16',['create',['../classfloppy_1_1application__dirs.html#aaf6ebb52741437b64b306498af3d537e',1,'floppy::application_dirs']]],
-  ['critical_17',['critical',['../group__logging.html#ga5bfd9e6e65784459fbcc3a8c8f3f3989',1,'floppy::log']]],
-  ['critical_5fmessage_18',['critical_message',['../group__helpers.html#gac79e4b11fead469d6e61a1f4464490e2',1,'floppy::print_helpers']]],
-  ['critical_5fto_19',['critical_to',['../group__logging.html#gabd43f0d810fd497d7ceb97fb453128af',1,'floppy::log']]],
-  ['cross_20',['cross',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ab769a6a6b00145f928d222b94861840e',1,'floppy::math::detail::basic_two_dimensional_type']]],
-  ['current_21',['current',['../structfloppy_1_1source__location.html#ae482a2019c650f30efba6ab59198eabe',1,'floppy::source_location::current()'],['../classfloppy_1_1platform.html#a4a123235810dabd7d5456d8cf7daf8c5',1,'floppy::platform::current()']]]
+  ['contract_5fviolation_15',['contract_violation',['../classfloppy_1_1contracts_1_1contract__violation.html#acb00aa62a7c030411b049bd6eb8a9d1a',1,'floppy::contracts::contract_violation']]],
+  ['cos_16',['cos',['../structfloppy_1_1math_1_1detail_1_1basic__numeric__newtype.html#a6dd7cf74119d22f24c8994d96abfa835',1,'floppy::math::detail::basic_numeric_newtype']]],
+  ['create_17',['create',['../classfloppy_1_1application__dirs.html#aaf6ebb52741437b64b306498af3d537e',1,'floppy::application_dirs']]],
+  ['critical_18',['critical',['../group__logging.html#ga5bfd9e6e65784459fbcc3a8c8f3f3989',1,'floppy::log']]],
+  ['critical_5fmessage_19',['critical_message',['../group__helpers.html#gac79e4b11fead469d6e61a1f4464490e2',1,'floppy::print_helpers']]],
+  ['critical_5fto_20',['critical_to',['../group__logging.html#gabd43f0d810fd497d7ceb97fb453128af',1,'floppy::log']]],
+  ['cross_21',['cross',['../structfloppy_1_1math_1_1detail_1_1basic__two__dimensional__type.html#ab769a6a6b00145f928d222b94861840e',1,'floppy::math::detail::basic_two_dimensional_type']]],
+  ['current_22',['current',['../structfloppy_1_1source__location.html#ae482a2019c650f30efba6ab59198eabe',1,'floppy::source_location::current()'],['../classfloppy_1_1platform.html#a4a123235810dabd7d5456d8cf7daf8c5',1,'floppy::platform::current()']]]
 ];

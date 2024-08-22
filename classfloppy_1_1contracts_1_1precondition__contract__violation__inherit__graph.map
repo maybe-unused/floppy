@@ -1,0 +1,11 @@
+<map id="precondition_contract_violation" name="precondition_contract_violation">
+<area shape="rect" id="Node000001" title="Contract violation for preconditions." alt="" coords="5,300,164,341"/>
+<area shape="rect" id="Node000002" href="$classfloppy_1_1contracts_1_1contract__violation.html" title="Base class for all contract violations." alt="" coords="18,226,151,252"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,267,87,300,82,300,82,267"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="19,153,150,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,194,87,226,82,226,82,194"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="40,79,129,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,120,87,152,82,152,82,120"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="43,5,126,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,46,87,79,82,79,82,46"/>
+</map>

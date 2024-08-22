@@ -2,7 +2,11 @@ var annotated_dup =
 [
     [ "floppy", "namespacefloppy.html", [
       [ "contracts", null, [
-        [ "contract_violation", "classfloppy_1_1contracts_1_1contract__violation.html", null ]
+        [ "assertion_contract_violation", "classfloppy_1_1contracts_1_1assertion__contract__violation.html", "classfloppy_1_1contracts_1_1assertion__contract__violation" ],
+        [ "contract_violation", "classfloppy_1_1contracts_1_1contract__violation.html", "classfloppy_1_1contracts_1_1contract__violation" ],
+        [ "invariant_contract_violation", "classfloppy_1_1contracts_1_1invariant__contract__violation.html", "classfloppy_1_1contracts_1_1invariant__contract__violation" ],
+        [ "postcondition_contract_violation", "classfloppy_1_1contracts_1_1postcondition__contract__violation.html", "classfloppy_1_1contracts_1_1postcondition__contract__violation" ],
+        [ "precondition_contract_violation", "classfloppy_1_1contracts_1_1precondition__contract__violation.html", "classfloppy_1_1contracts_1_1precondition__contract__violation" ]
       ] ],
       [ "detail", "namespacefloppy_1_1detail.html", [
         [ "formattable_base", "structfloppy_1_1detail_1_1formattable__base.html", "structfloppy_1_1detail_1_1formattable__base" ]

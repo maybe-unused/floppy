@@ -30,7 +30,12 @@ var hierarchy =
       [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", null ],
       [ "logic_error", null, [
         [ "invalid_argument", null, [
-          [ "contract_violation", "classfloppy_1_1contracts_1_1contract__violation.html", null ]
+          [ "contract_violation", "classfloppy_1_1contracts_1_1contract__violation.html", [
+            [ "assertion_contract_violation", "classfloppy_1_1contracts_1_1assertion__contract__violation.html", null ],
+            [ "invariant_contract_violation", "classfloppy_1_1contracts_1_1invariant__contract__violation.html", null ],
+            [ "postcondition_contract_violation", "classfloppy_1_1contracts_1_1postcondition__contract__violation.html", null ],
+            [ "precondition_contract_violation", "classfloppy_1_1contracts_1_1precondition__contract__violation.html", null ]
+          ] ]
         ] ]
       ] ],
       [ "runtime_error", null, [
