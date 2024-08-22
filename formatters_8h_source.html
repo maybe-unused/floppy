@@ -147,7 +147,7 @@ $(function(){initNavTree('formatters_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> OutputIt&gt;</div>
 <div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structfloppy_1_1ostream__formatter.html#a584238951fc0b892a57710ff668824b0">   32</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="structfloppy_1_1ostream__formatter.html#a584238951fc0b892a57710ff668824b0">format</a>(T <span class="keyword">const</span>&amp; value, fmt::basic_format_context&lt;OutputIt, C&gt;&amp; ctx) <span class="keyword">const</span> -&gt; OutputIt {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structfloppy_1_1ostream__formatter.html#a530ff3c61e787d95ed7ee018d3a26ca2">   32</a></span>    OutputIt <a class="code hl_function" href="structfloppy_1_1ostream__formatter.html#a530ff3c61e787d95ed7ee018d3a26ca2">format</a>(T <span class="keyword">const</span>&amp; value, fmt::basic_format_context&lt;OutputIt, C&gt;&amp; ctx)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keyword">auto</span> ss = std::basic_stringstream&lt;C&gt;();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      ss &lt;&lt; value;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keywordflow">return</span> <a class="code hl_struct" href="structfmt_1_1formatter.html">fmt::formatter&lt;std::basic_string_view&lt;C&gt;</a>, C&gt;::format(ss.str(), ctx);</div>
@@ -158,7 +158,7 @@ $(function(){initNavTree('formatters_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>} <span class="comment">// namespace floppy</span></div>
 <div class="ttc" id="anamespacefloppy_html"><div class="ttname"><a href="namespacefloppy.html">floppy</a></div><div class="ttdoc">Main namespace for the library.</div><div class="ttdef"><b>Definition</b> <a href="demangle_8h_source.html#l00009">demangle.h:10</a></div></div>
 <div class="ttc" id="astructfloppy_1_1ostream__formatter_html"><div class="ttname"><a href="structfloppy_1_1ostream__formatter.html">floppy::ostream_formatter</a></div><div class="ttdoc">Formatter for types which support stream output.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">formatters.h:29</a></div></div>
-<div class="ttc" id="astructfloppy_1_1ostream__formatter_html_a584238951fc0b892a57710ff668824b0"><div class="ttname"><a href="structfloppy_1_1ostream__formatter.html#a584238951fc0b892a57710ff668824b0">floppy::ostream_formatter::format</a></div><div class="ttdeci">auto format(T const &amp;value, fmt::basic_format_context&lt; OutputIt, C &gt; &amp;ctx) const -&gt; OutputIt</div><div class="ttdoc">Required by fmt.</div><div class="ttdef"><b>Definition</b> <a href="#l00032">formatters.h:32</a></div></div>
+<div class="ttc" id="astructfloppy_1_1ostream__formatter_html_a530ff3c61e787d95ed7ee018d3a26ca2"><div class="ttname"><a href="structfloppy_1_1ostream__formatter.html#a530ff3c61e787d95ed7ee018d3a26ca2">floppy::ostream_formatter::format</a></div><div class="ttdeci">OutputIt format(T const &amp;value, fmt::basic_format_context&lt; OutputIt, C &gt; &amp;ctx) const</div><div class="ttdoc">Required by fmt.</div><div class="ttdef"><b>Definition</b> <a href="#l00032">formatters.h:32</a></div></div>
 <div class="ttc" id="astructfmt_1_1formatter_html"><div class="ttname"><a href="structfmt_1_1formatter.html">formatter</a></div><div class="ttdoc">Formatter for types which can be easily converted to string.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -166,7 +166,7 @@ $(function(){initNavTree('formatters_8h_source.html',''); initResizable(); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><a class="el" href="dir_a70aa49210f20f6d80e3cfefc70580f7.html">detail</a></li><li class="navelem"><b>formatters.h</b></li>
-    <li class="footer">Generated on Sun Aug 11 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Aug 22 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

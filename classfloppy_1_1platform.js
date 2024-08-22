@@ -93,9 +93,9 @@ var classfloppy_1_1platform =
       [ "unknown", "classfloppy_1_1platform.html#a92727584f703997f692dff944d34d4c2aad921d60486366258809553a3db49a4a", null ]
     ] ],
     [ "platform", "classfloppy_1_1platform.html#a0c323d436664f73248d9eea34061bf4b", null ],
-    [ "current", "classfloppy_1_1platform.html#af83827a7823a37fac4c17066a082696d", null ],
-    [ "as_target_triple", "classfloppy_1_1platform.html#ab6b6118f6e44d82260fbabd42bfe8a75", null ],
-    [ "swap_endian", "classfloppy_1_1platform.html#a2d604dd25620d1a785a91a3725a59c32", null ],
+    [ "current", "classfloppy_1_1platform.html#a4a123235810dabd7d5456d8cf7daf8c5", null ],
+    [ "as_target_triple", "classfloppy_1_1platform.html#a2f278d682e1f2066bf95e3aaec2327cc", null ],
+    [ "swap_endian", "classfloppy_1_1platform.html#abbd09b803559dfeb5904486503a5c6a2", null ],
     [ "operating_system", "classfloppy_1_1platform.html#a82e09c39009db86033c546727eb900b8", null ],
     [ "architecture", "classfloppy_1_1platform.html#a492279dec1a2fb493bfd9fb82076f90d", null ],
     [ "compiler", "classfloppy_1_1platform.html#aeec140132148d32f6a3881b7958019d7", null ],

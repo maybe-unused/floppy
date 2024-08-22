@@ -356,7 +356,7 @@ class floppy::math::point2d&lt; U, T &gt;</div><p>A two-dimensional point tagged
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">U</td><td>Associated unit of measurement. Default is <a class="el" href="namespacefloppy_1_1math.html">default_unit</a>. </td></tr>
-    <tr><td class="paramname">T</td><td>Number type. Must satisfy concept <code>floppy::concepts::num</code>. Default is <code>f32</code>. </td></tr>
+    <tr><td class="paramname">T</td><td>Number type. Must satisfy concept <code><a class="el" href="conceptfloppy_1_1concepts_1_1num.html" title="Number concept.">floppy::concepts::num</a></code>. Default is <code>f32</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -454,7 +454,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1481,7 +1481,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="classfloppy_1_1math_1_1poin
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The quotient. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__calc.html#gadd770f95287eea461bee0dea63476fb2" title="Calculates the least nonnegative remainder of self (mod rhs).">floppy::math::rem_euclid</a>, <a class="el" href="group__calc.html#ga751139c04bc5de9f5873901e61a031ed" title="Calculates Euclidean division, the matching method for rem_euclid.">floppy::math::div_euclid</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__calc.html#ga5b1478fcb3077cbcc8e75b02798290b7" title="Calculates the least nonnegative remainder of self (mod rhs).">floppy::math::rem_euclid</a>, <a class="el" href="group__calc.html#ga5c1633983a511840acdda94dd1cb25b0" title="Calculates Euclidean division, the matching method for rem_euclid.">floppy::math::div_euclid</a> </dd>
 <dd>
 <a class="el" href="#af755f083e286f81fe8cfe00e8d76ab35" title="Calculates the least nonnegative remainder of self (mod other).">rem_euclid</a> </dd></dl>
 
@@ -1530,7 +1530,7 @@ template&lt;concepts::any_of&lt; <a class="el" href="classfloppy_1_1math_1_1poin
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The remainder. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__calc.html#gadd770f95287eea461bee0dea63476fb2" title="Calculates the least nonnegative remainder of self (mod rhs).">floppy::math::rem_euclid</a>, <a class="el" href="group__calc.html#ga751139c04bc5de9f5873901e61a031ed" title="Calculates Euclidean division, the matching method for rem_euclid.">floppy::math::div_euclid</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__calc.html#ga5b1478fcb3077cbcc8e75b02798290b7" title="Calculates the least nonnegative remainder of self (mod rhs).">floppy::math::rem_euclid</a>, <a class="el" href="group__calc.html#ga5c1633983a511840acdda94dd1cb25b0" title="Calculates Euclidean division, the matching method for rem_euclid.">floppy::math::div_euclid</a> </dd>
 <dd>
 <a class="el" href="#a2e36f43b15dd31047fab42d0f48009ec" title="Calculates Euclidean division, the matching method for rem_euclid.">div_euclid</a> </dd></dl>
 
@@ -2254,7 +2254,7 @@ template&lt;typename U  = default_unit, concepts::num T = f32&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2287,7 +2287,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2320,7 +2320,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2352,7 +2352,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2384,7 +2384,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2416,7 +2416,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2448,7 +2448,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2480,7 +2480,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2512,7 +2512,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2547,7 +2547,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2578,7 +2578,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2609,7 +2609,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2640,7 +2640,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2672,7 +2672,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2704,7 +2704,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2736,7 +2736,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2792,7 +2792,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2830,7 +2830,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2868,7 +2868,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2911,7 +2911,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2943,7 +2943,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2981,7 +2981,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3019,7 +3019,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3050,7 +3050,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3081,7 +3081,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3112,7 +3112,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3154,7 +3154,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3191,7 +3191,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <div class="memtemplate">
 template&lt;typename... Args&gt; <br />
 requires (std::tuple_size_v&lt;std::tuple&lt;Args...&gt;&gt; == 2)</div>
@@ -3221,7 +3221,7 @@ requires (std::tuple_size_v&lt;std::tuple&lt;Args...&gt;&gt; == 2)</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00233">233</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00231">231</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>
@@ -3231,7 +3231,7 @@ requires (std::tuple_size_v&lt;std::tuple&lt;Args...&gt;&gt; == 2)</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <div class="memtemplate">
 template&lt;std::size_t N2&gt; <br />
 requires (N2 == 2)</div>
@@ -3261,7 +3261,7 @@ requires (N2 == 2)</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00241">241</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00239">239</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>
@@ -3271,7 +3271,7 @@ requires (N2 == 2)</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3298,7 +3298,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00247">247</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00245">245</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>
@@ -3308,7 +3308,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3330,7 +3330,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <p>Returns <code>true</code> if underlying values is both not <code>0</code> and not <code>NaN</code> or <code>Infinity</code> in case of floating point. </p>
 <dl class="section note"><dt>Note</dt><dd>Also returns <code>false</code> if underlying values is <code>NaN</code> or <code>Infinity</code> in case of floating point. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00253">253</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00251">251</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>
@@ -3340,7 +3340,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3361,7 +3361,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 
 <p>Returns <code>false</code> if underlying values is both not <code>0</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00264">264</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00262">262</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>
@@ -3405,7 +3405,7 @@ template&lt;typename C &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3423,7 +3423,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 
 <p>The underlying x-coordinate. </p>
 
-<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00267">267</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00265">265</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>
@@ -3433,7 +3433,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </div>
+template&lt;typename T , typename U , concepts::num N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3451,7 +3451,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 
 <p>The underlying y-coordinate. </p>
 
-<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00268">268</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="nt__traits2d_8h_source.html#l00266">266</a> of file <a class="el" href="nt__traits2d_8h_source.html">nt_traits2d.h</a>.</p>
 
 </div>
 </div>
@@ -3464,7 +3464,7 @@ template&lt;typename T , typename U , __wrap_concept__(concepts::num) N&gt; </di
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefloppy.html">floppy</a></li><li class="navelem"><a class="el" href="namespacefloppy_1_1math.html">math</a></li><li class="navelem"><a class="el" href="classfloppy_1_1math_1_1point2d.html">point2d</a></li>
-    <li class="footer">Generated on Sun Aug 11 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Aug 22 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

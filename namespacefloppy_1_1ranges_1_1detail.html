@@ -138,10 +138,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a84a9fb9af37d19bcb9ed7898151cf7bd" id="r_a84a9fb9af37d19bcb9ed7898151cf7bd"><td class="memTemplParams" colspan="2">template&lt;typename C , range R&gt; <br />
+<tr class="memitem:ac221e2965c78d35321e94db722b72674" id="r_ac221e2965c78d35321e94db722b72674"><td class="memTemplParams" colspan="2">template&lt;typename C , range R&gt; <br />
 requires std::convertible_to&lt;range_value_t&lt;R&gt;, typename C::value_type&gt;</td></tr>
-<tr class="memitem:a84a9fb9af37d19bcb9ed7898151cf7bd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a84a9fb9af37d19bcb9ed7898151cf7bd">operator|</a> (R &amp;&amp;r, <a class="el" href="#structfloppy_1_1ranges_1_1detail_1_1to__helper">to_helper</a>&lt; C &gt; _) -&gt; C</td></tr>
-<tr class="separator:a84a9fb9af37d19bcb9ed7898151cf7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac221e2965c78d35321e94db722b72674"><td class="memTemplItemLeft" align="right" valign="top">C&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac221e2965c78d35321e94db722b72674">operator|</a> (R &amp;&amp;r, <a class="el" href="#structfloppy_1_1ranges_1_1detail_1_1to__helper">to_helper</a>&lt; C &gt; _)</td></tr>
+<tr class="separator:ac221e2965c78d35321e94db722b72674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation details for the ranges backports. </p>
@@ -160,13 +160,13 @@ requires std::convertible_to&lt;range_value_t&lt;R&gt;, typename C::value_type&g
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename C&gt;<br />
 struct floppy::ranges::detail::to_helper&lt; C &gt;</div><p>Converts a source range to a non-view object. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00024">24</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00028">28</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 </div>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a84a9fb9af37d19bcb9ed7898151cf7bd" name="a84a9fb9af37d19bcb9ed7898151cf7bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84a9fb9af37d19bcb9ed7898151cf7bd">&#9670;&#160;</a></span>operator|()</h2>
+<a id="ac221e2965c78d35321e94db722b72674" name="ac221e2965c78d35321e94db722b72674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac221e2965c78d35321e94db722b72674">&#9670;&#160;</a></span>operator|()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,22 +175,21 @@ template&lt;typename C , range R&gt; <br />
 requires std::convertible_to&lt;range_value_t&lt;R&gt;, typename C::value_type&gt;</div>
       <table class="memname">
         <tr>
-          <td class="memname">auto operator| </td>
+          <td class="memname">C operator| </td>
           <td>(</td>
           <td class="paramtype">R &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>r</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#structfloppy_1_1ranges_1_1detail_1_1to__helper">to_helper</a>&lt; C &gt;</td>          <td class="paramname"><span class="paramname"><em>_</em></span>&#160;) -&gt; C 
-      </td>
+          <td class="paramtype"><a class="el" href="#structfloppy_1_1ranges_1_1detail_1_1to__helper">to_helper</a>&lt; C &gt;</td>          <td class="paramname"><span class="paramname"><em>_</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Propagates conversion to a non-view object. </p>
 
-<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00029">29</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backports_8h_source.html#l00033">33</a> of file <a class="el" href="backports_8h_source.html">backports.h</a>.</p>
 
 </div>
 </div>
@@ -200,7 +199,7 @@ requires std::convertible_to&lt;range_value_t&lt;R&gt;, typename C::value_type&g
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefloppy.html">floppy</a></li><li class="navelem"><a class="el" href="namespacefloppy_1_1ranges.html">ranges</a></li><li class="navelem"><a class="el" href="namespacefloppy_1_1ranges_1_1detail.html">detail</a></li>
-    <li class="footer">Generated on Sun Aug 11 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Aug 22 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

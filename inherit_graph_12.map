@@ -4,10 +4,12 @@
 <area shape="poly" id="edge41_Node000000_Node000001" title=" " alt="" coords="102,48,163,29,164,34,104,53"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="163,55,253,80"/>
 <area shape="poly" id="edge42_Node000000_Node000002" title=" " alt="" coords="103,65,163,65,163,70,103,70"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="154,105,262,131"/>
-<area shape="poly" id="edge44_Node000000_Node000004" title=" " alt="" coords="103,82,165,102,164,107,102,88"/>
-<area shape="rect" id="Node000003" href="$classfloppy_1_1invalid__smart__pointer__access.html" title="Exception thrown when trying to access invalid smart pointer." alt="" coords="328,45,485,85"/>
-<area shape="poly" id="edge43_Node000002_Node000003" title=" " alt="" coords="268,64,328,63,328,69,268,69"/>
-<area shape="rect" id="Node000005" href="$classfloppy_1_1serialization_1_1serialization__error.html" title="Exception thrown during serialization or deserialization." alt="" coords="339,109,474,135"/>
-<area shape="poly" id="edge45_Node000004_Node000005" title=" " alt="" coords="277,117,339,118,338,123,277,122"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="154,104,262,130"/>
+<area shape="poly" id="edge45_Node000000_Node000005" title=" " alt="" coords="104,82,164,101,163,106,102,87"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="331,55,461,80"/>
+<area shape="poly" id="edge43_Node000002_Node000003" title=" " alt="" coords="268,65,330,65,330,70,268,70"/>
+<area shape="rect" id="Node000004" href="$classfloppy_1_1contracts_1_1contract__violation.html" title=" " alt="" coords="511,55,644,80"/>
+<area shape="poly" id="edge44_Node000003_Node000004" title=" " alt="" coords="476,65,511,65,511,70,476,70"/>
+<area shape="rect" id="Node000006" href="$classfloppy_1_1serialization_1_1serialization__error.html" title="Exception thrown during serialization or deserialization." alt="" coords="328,104,463,130"/>
+<area shape="poly" id="edge46_Node000005_Node000006" title=" " alt="" coords="277,114,327,114,327,120,277,120"/>
 </map>

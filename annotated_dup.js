@@ -1,6 +1,9 @@
 var annotated_dup =
 [
     [ "floppy", "namespacefloppy.html", [
+      [ "contracts", null, [
+        [ "contract_violation", "classfloppy_1_1contracts_1_1contract__violation.html", null ]
+      ] ],
       [ "detail", "namespacefloppy_1_1detail.html", [
         [ "formattable_base", "structfloppy_1_1detail_1_1formattable__base.html", "structfloppy_1_1detail_1_1formattable__base" ]
       ] ],
@@ -79,7 +82,6 @@ var annotated_dup =
       [ "default_delete", "structfloppy_1_1default__delete.html", null ],
       [ "deleter", "structfloppy_1_1deleter.html", null ],
       [ "formattable", "structfloppy_1_1formattable.html", "structfloppy_1_1formattable" ],
-      [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ],
       [ "non_copyable", "structfloppy_1_1non__copyable.html", null ],
       [ "non_movable", "structfloppy_1_1non__movable.html", null ],
       [ "one_of", "structfloppy_1_1one__of.html", "structfloppy_1_1one__of" ],

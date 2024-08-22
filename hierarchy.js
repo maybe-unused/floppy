@@ -29,7 +29,9 @@ var hierarchy =
     [ "exception", null, [
       [ "compile_time_error", "classfloppy_1_1exceptions_1_1compile__time__error.html", null ],
       [ "logic_error", null, [
-        [ "invalid_smart_pointer_access", "classfloppy_1_1invalid__smart__pointer__access.html", null ]
+        [ "invalid_argument", null, [
+          [ "contract_violation", "classfloppy_1_1contracts_1_1contract__violation.html", null ]
+        ] ]
       ] ],
       [ "runtime_error", null, [
         [ "serialization_error", "classfloppy_1_1serialization_1_1serialization__error.html", null ]

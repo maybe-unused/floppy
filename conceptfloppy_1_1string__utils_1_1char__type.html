@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Documentation for the Floppy library" />
 <meta name="twitter:description" content="https://whs31.github.io/floppy" />
 <!-- END twitter metadata -->
-<title>Floppy: cxx_ver.h Source File</title>
+<title>Floppy: floppy::string_utils::char_type Concept Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -85,11 +85,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -103,7 +98,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('cxx__ver_8h_source.html',''); initResizable(); });
+$(function(){initNavTree('conceptfloppy_1_1string__utils_1_1char__type.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -129,39 +124,28 @@ $(function(){initNavTree('cxx__ver_8h_source.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">cxx_ver.h</div></div>
+  <div class="headertitle"><div class="title">floppy::string_utils::char_type Concept Reference<div class="ingroups"><a class="el" href="group__foundation.html">Foundation</a> &raquo; <a class="el" href="group__string__utils.html">String utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#if defined(__cplusplus) &amp;&amp; __cplusplus &gt; 201703L</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor"># define FL_CXX20</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#elif defined(__cplusplus) &amp;&amp; __cplusplus &gt; 201402L</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor"># define FL_CXX17</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor"># error &quot;Unsupported C++ version&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#endif </span><span class="comment">// __cplusplus</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#if defined(FL_CXX20)</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//NOLINTNEXTLINE(*-reserved-identifier, *-identifier-naming, *-macro-usage)</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor"># define __wrap_concept__(c) c</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//NOLINTNEXTLINE(*-reserved-identifier, *-identifier-naming, *-macro-usage)</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor"># define __cxx20_or_cxx17__(a, b) a</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#else </span><span class="comment">// FL_CXX20</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//NOLINTNEXTLINE(*-reserved-identifier, *-identifier-naming, *-macro-usage)</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor"># define __wrap_concept__(c) typename</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//NOLINTNEXTLINE(*-reserved-identifier, *-identifier-naming, *-macro-usage)</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor"># define __cxx20_or_cxx17__(a, b) b</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">// FL_CXX20</span></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="floppy_8h_source.html">floppy/floppy.h</a>&gt;</code></p>
+<h2 class="groupheader">Concept definition</h2>
+<div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptfloppy_1_1string__utils_1_1char__type.html">floppy::string_utils::char_type</a> =  std::is_same_v&lt;T, char&gt;</div>
+<div class="line">      or std::is_same_v&lt;T, unsigned char&gt;</div>
+<div class="line">      or std::is_same_v&lt;T, wchar_t&gt;</div>
+<div class="ttc" id="aconceptfloppy_1_1string__utils_1_1char__type_html"><div class="ttname"><a href="conceptfloppy_1_1string__utils_1_1char__type.html">floppy::string_utils::char_type</a></div><div class="ttdoc">Satisfied if the given type is a character type, except for char8_t, char16_t and char32_t.</div><div class="ttdef"><b>Definition</b> <a href="string__utils_8h_source.html#l00017">string_utils.h:17</a></div></div>
+</div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Satisfied if the given type is a character type, except for <code>char8_t</code>, <code>char16_t</code> and <code>char32_t</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="string__utils_8h_source.html#l00017">17</a> of file <a class="el" href="string__utils_8h_source.html">string_utils.h</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ae0cb1af05f1ebdc47ed7b5efe67b30c.html">floppy</a></li><li class="navelem"><a class="el" href="dir_a70aa49210f20f6d80e3cfefc70580f7.html">detail</a></li><li class="navelem"><b>cxx_ver.h</b></li>
-    <li class="footer">Generated on Sun Aug 11 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="navelem"><a class="el" href="namespacefloppy.html">floppy</a></li><li class="navelem"><a class="el" href="namespacefloppy_1_1string__utils.html">string_utils</a></li><li class="navelem"><a class="el" href="conceptfloppy_1_1string__utils_1_1char__type.html">char_type</a></li>
+    <li class="footer">Generated on Thu Aug 22 2024 for Floppy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>
