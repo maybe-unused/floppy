@@ -15,6 +15,7 @@ Checks:
   llvm-namespace-comment,
   misc-*,
   readability-*,
+  fuchsia-trailing-return,
   -readability-identifier-length,
   -readability-implicit-bool-conversion,
   -readability-braces-around-statements,
@@ -23,7 +24,8 @@ Checks:
   -cppcoreguidelines-explicit-virtual-functions,
   -cppcoreguidelines-avoid-magic-numbers,
   -misc-non-private-member-variables-in-classes,
-  -misc-include-cleaner
+  -misc-include-cleaner,
+  -modernize-use-trailing-return-type
 
 # Turn all the warnings from the checks above into errors.
 WarningsAsErrors: "*"

@@ -6,6 +6,7 @@
 [[maybe_unused]] auto sw = fl::stacktrace::signal_watcher<fl::stacktrace::crash_behavior::print_all>();
 
 auto bad_boy() -> void {
+  fl::contracts::expects(false);
   char* x = nullptr;
   *x = 42;
 }

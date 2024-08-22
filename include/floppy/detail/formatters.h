@@ -29,7 +29,7 @@ namespace floppy
   {
     /// \brief Required by <tt>fmt</tt>.
     template <typename T, typename OutputIt>
-    auto format(T const& value, fmt::basic_format_context<OutputIt, C>& ctx) const -> OutputIt {
+    OutputIt format(T const& value, fmt::basic_format_context<OutputIt, C>& ctx) const {
       auto ss = std::basic_stringstream<C>();
       ss << value;
       return fmt::formatter<std::basic_string_view<C>, C>::format(ss.str(), ctx);

@@ -11,30 +11,30 @@
 namespace floppy::math
 {
   template <std::floating_point T>
-  [[nodiscard]] constexpr inline auto floor(T val) -> T {
+  [[nodiscard]] constexpr inline T floor(T val) {
     auto const val_int = static_cast<i64>(val);
     auto const fval_int = static_cast<T>(val_int);
     return (val >= T(0) ? fval_int : (val == fval_int ? val : fval_int - T(1)));
   }
 
-  template <typename T> constexpr auto min(T&& v) -> T { return std::forward<T>(v); }
+  template <typename T> constexpr T min(T&& v) { return std::forward<T>(v); }
   template <typename T, typename... Args>
-  constexpr auto min(T const& v1, T const& v2, Args const&... args) -> T {
+  constexpr T min(T const& v1, T const& v2, Args const&... args) {
     return v2 < v1 ? min(v2, args...) : min(v1, args...);
   }
 
   template <typename T>
-  [[maybe_unused]] constexpr auto max(T&& v) -> T { return std::forward<T>(v); }
+  [[maybe_unused]] constexpr T max(T&& v) { return std::forward<T>(v); }
 
   template <typename T, typename... Args>
-  constexpr auto max(T const& v1, T const& v2, Args const&... args) -> T {
+  constexpr T max(T const& v1, T const& v2, Args const&... args) {
     return v2 > v1 ? max(v2, args...) : max(v1, args...);
   }
 
   template <typename T>
-  constexpr auto abs(T const& v) -> T { return v < T(0) ? -v : v; }
+  constexpr T abs(T const& v) { return v < T(0) ? -v : v; }
 
-  constexpr auto fmod(f32 const x, f32 const y) -> f32 { return x - y * math::floor(x / y); }
+  constexpr f32 fmod(f32 const x, f32 const y) { return x - y * math::floor(x / y); }
 
   /// \brief Returns true if numbers are equal.
   /// \headerfile floppy/floppy.h
@@ -46,7 +46,7 @@ namespace floppy::math
   /// \return True if numbers are equal
   /// \see is_null, approx_eq, strong_compare
   template <typename T>
-  [[nodiscard]] constexpr auto eq(T a, T b) -> bool {
+  [[nodiscard]] constexpr bool eq(T a, T b) {
     if constexpr(std::is_floating_point_v<T>)
       return std::abs(a - b) <= std::numeric_limits<T>::epsilon();
     else
@@ -64,7 +64,7 @@ namespace floppy::math
   /// \return True if numbers are approximately equal
   /// \see is_null, eq, strong_compare
   template <typename T>
-  [[nodiscard]] constexpr auto approx_eq(T a, T b, T epsilon_factor) -> bool {
+  [[nodiscard]] constexpr bool approx_eq(T a, T b, T epsilon_factor) {
     if constexpr(std::is_floating_point_v<T>)
       return std::abs(a - b) <= std::numeric_limits<T>::epsilon() * epsilon_factor;
     else
@@ -79,7 +79,7 @@ namespace floppy::math
   /// \return True if number is equal to zero
   /// \see eq, approx_eq, strong_compare
   template <concepts::num T>
-  [[nodiscard]] constexpr auto is_null(T num) -> bool { return eq(num, T(0.0)); }
+  [[nodiscard]] constexpr bool is_null(T num) { return eq(num, T(0.0)); }
 
   /// \brief Three-ways compare two numbers, forcing them to <i>strong_order</i>.
   /// \headerfile floppy/floppy.h
@@ -91,7 +91,7 @@ namespace floppy::math
   /// \see eq, approx_eq, is_null
   /// \return Comparison result
   template <concepts::num T>
-  [[nodiscard]] constexpr auto strong_compare(T a, T b) -> std::strong_ordering {
+  [[nodiscard]] constexpr std::strong_ordering strong_compare(T a, T b) {
     if constexpr(std::is_floating_point_v<T>) {
       if(std::isinf(a) and std::isinf(b))
         return std::strong_ordering::equal;
@@ -121,7 +121,7 @@ namespace floppy::math
   /// \return Radians
   /// \see to_degrees
   template <concepts::num T>
-  [[nodiscard]] constexpr auto to_radians(T deg) -> T {
+  [[nodiscard]] constexpr T to_radians(T deg) {
     return static_cast<T>(deg * std::numbers::pi_v<T> / 180.F);
   }
 
@@ -133,7 +133,7 @@ namespace floppy::math
   /// \return Degrees
   /// \see to_radians
   template <concepts::num T>
-  [[nodiscard]] constexpr auto to_degrees(T rad) -> T {
+  [[nodiscard]] constexpr T to_degrees(T rad) {
     return static_cast<T>(rad * 180.F / std::numbers::pi);
   }
 
@@ -145,7 +145,7 @@ namespace floppy::math
   /// \tparam T Number type
   /// \return Logarithm of the number in the given base
   template <std::floating_point T>
-  [[nodiscard]] constexpr auto log(T base, T num) -> T { return std::log(num) / std::log(base); }
+  [[nodiscard]] constexpr T log(T base, T num) { return std::log(num) / std::log(base); }
 
   /// \brief Returns natural logarithm of a number.
   /// \headerfile floppy/floppy.h
@@ -154,7 +154,7 @@ namespace floppy::math
   /// \tparam T Number type
   /// \return Natural logarithm of the number
   template <concepts::num T>
-  [[nodiscard]] constexpr auto log(T num) -> T { return std::log(num); }
+  [[nodiscard]] constexpr T log(T num) { return std::log(num); }
 
   /// \brief Calculates Euclidean division, the matching method for <b>rem_euclid</b>.
   /// \headerfile floppy/floppy.h
@@ -162,7 +162,7 @@ namespace floppy::math
   /// \param a Dividend
   /// \param b Divisor
   template <concepts::num T>
-  [[nodiscard]] auto div_euclid(T a, T b) -> T {
+  [[nodiscard]] T div_euclid(T a, T b) {
     auto const q = std::trunc(a / b);
     if constexpr(std::is_floating_point_v<T>) {
       if(std::fmod(a, b) < 0.0)
@@ -180,7 +180,7 @@ namespace floppy::math
   /// \param a Dividend
   /// \param b Divisor
   template <concepts::num T>
-  [[nodiscard]] auto rem_euclid(T a, T b) -> T {
+  [[nodiscard]] T rem_euclid(T a, T b) {
     if constexpr(std::is_floating_point_v<T>) {
       auto const r = std::fmod(a, b);
       return r < 0.0 ? r + std::abs(b) : r;

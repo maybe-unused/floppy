@@ -6,6 +6,7 @@
 #include <floppy/detail/export.h>
 #include <floppy/detail/formatters.h>
 #include <floppy/detail/concepts.h>
+#include <floppy/detail/contracts.h>
 
 namespace floppy
 {
@@ -13,7 +14,7 @@ namespace floppy
   struct deleter
   {
     template <typename U>
-    auto operator()(U &ptr) const -> void {
+    void operator()(U &ptr) const {
       (*F)(ptr);
     }
   };
@@ -21,19 +22,9 @@ namespace floppy
   template <typename T>
   struct default_delete
   {
-    auto operator()(T &ptr) const -> void {
+    void operator()(T &ptr) const {
       delete ptr;
     }
-  };
-
-  /// \brief Exception thrown when trying to access invalid smart pointer.
-  /// \details Can be thrown when accessing a <tt>box</tt> that has been moved from or is leaked/consumed.
-  /// \headerfile floppy/floppy.h
-  /// \ingroup memory
-  class invalid_smart_pointer_access : public std::logic_error
-  {
-    using std::logic_error::logic_error;
-    using std::logic_error::what;
   };
 
   /// \brief GSL-like owning raw pointer typedef.
@@ -91,105 +82,81 @@ namespace floppy
 
     /// \brief Returns a mutable pointer to the underlying object.
     /// \returns A mutable pointer to the underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
-    [[nodiscard]] auto get() -> T* {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::get: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] T* get() {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return this->ptr_.get();
     }
 
     /// \brief Returns a mutable pointer to the underlying object.
     /// \returns A mutable pointer to the underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
-    [[nodiscard]] auto get() const -> T* {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::get: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] T* get() const {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return this->ptr_.get();
     }
 
     /// \brief Returns a mutable pointer to the underlying object.
     /// \returns A mutable pointer to the underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
-    [[nodiscard]] auto ptr_mut() -> T* {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::ptr_mut: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] T* ptr_mut() {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return this->ptr_.get();
     }
 
     /// \brief Returns an immutable pointer to the underlying object.
     /// \returns An immutable pointer to the underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
-    [[nodiscard]] auto ptr() const -> T const* {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::ptr: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] T const* ptr() const {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return this->ptr_.get();
     }
 
     /// \brief Returns a mutable reference to the underlying object.
     /// \returns A mutable reference to the underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
-    [[nodiscard]] auto ref_mut() -> T& {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::ref_mut: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] T& ref_mut() {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return *this->ptr_;
     }
 
     /// \brief Returns an immutable reference to the underlying object.
     /// \returns An immutable reference to the underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
-    [[nodiscard]] auto ref() const -> T const& {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::ref: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] T const& ref() const {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return *this->ptr_;
     }
 
     /// \brief Returns a mutable reference to the underlying object.
     /// \returns A mutable reference to the underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
-    [[nodiscard]] auto operator*() -> T& {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator*: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] T& operator*() {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return *this->ptr_;
     }
 
     /// \brief Returns an immutable reference to the underlying object.
     /// \returns An immutable reference to the underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
-    [[nodiscard]] auto operator*() const -> T const& {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator*: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] T const& operator*() const {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return *this->ptr_;
     }
 
     /// \brief Copy assignment operator (deleted).
-    auto operator=(box<T> const& other) -> box<T>& = delete;
+    box<T>& operator=(box<T> const& other) = delete;
 
     /// \brief Move assignment operator.
-    auto operator=(box<T>&& other) noexcept -> box<T>& = default;
+    box<T>& operator=(box<T>&& other) noexcept = default;
 
     /// \brief Move assignment operator.
     /// \details Takes ownership of <tt>other</tt>
@@ -197,7 +164,7 @@ namespace floppy
     /// \param other <tt>box</tt> to move from.
     /// \returns A reference to <tt>*this</tt>.
     template <typename U>
-    auto operator=(box<U>&& other) noexcept -> box<T>& // NOLINT(*-rvalue-reference-param-not-moved)
+    box<T>& operator=(box<U>&& other) noexcept // NOLINT(*-rvalue-reference-param-not-moved)
     {
       this->ptr_ = std::forward<std::unique_ptr<U>>(other.as_unique_ptr());
       return *this;
@@ -205,58 +172,49 @@ namespace floppy
 
     /// \brief Returns the underlying object.
     /// \returns The underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
-    [[nodiscard]] auto operator->() -> T* {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] T* operator->() {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return this->ptr_.get();
     }
 
     /// \brief Returns the underlying object.
     /// \returns The underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
-    [[nodiscard]] auto operator->() const -> T* {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::operator->: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] T* operator->() const {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return this->ptr_.get();
     }
 
     /// \brief Returns the underlying unique pointer.
     /// \returns The underlying unique pointer.
-    [[nodiscard]] auto as_unique_ptr() noexcept -> std::unique_ptr<T>& { return this->ptr_; }
+    [[nodiscard]] std::unique_ptr<T>& as_unique_ptr() noexcept { return this->ptr_; }
 
     /// \brief Returns the constant underlying unique pointer.
     /// \returns The underlying unique pointer.
-    [[nodiscard]] auto as_unique_ptr() const noexcept -> std::unique_ptr<T> const& { return this->ptr_; }
+    [[nodiscard]] std::unique_ptr<T> const& as_unique_ptr() const noexcept { return this->ptr_; }
 
     /// \brief Consumes and leaks the box, returning a mutable pointer to the underlying object.
     /// \details The caller is responsible for deleting the returned pointer.
     /// Calling this function leaves the <tt>box</tt> in an invalid state.
     /// \returns A mutable unmanaged pointer to the underlying object.
-    [[nodiscard]] auto leak() noexcept -> T* {
+    [[nodiscard]] T* leak() noexcept {
       return this->ptr_.release();
     }
 
     /// \brief Attempt to downcast the box to a concrete type.
     /// \tparam U Type to downcast to.
     /// \returns An mutable reference to the casted underlying object if successful, <tt>none</tt> otherwise.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     template <typename U>
-    [[nodiscard]] auto downcast() -> option<fl::types::ref<U>> {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::downcast: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] option<std::reference_wrapper<U>> downcast() {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       try {
         auto& r = dynamic_cast<U&>(this->ref_mut());
-        return option<fl::types::ref<U>>{r};
+        return std::make_optional(std::ref(r));
       } catch(std::bad_cast const&) {
         return none;
       } catch(...) {
@@ -267,28 +225,22 @@ namespace floppy
     /// \brief Casts the underlying pointer to given type.
     /// \tparam U Type to cast to.
     /// \returns An mutable pointer to the casted underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     template <typename U>
-    [[nodiscard]] auto as() -> U* {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::as: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] U* as() {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return static_cast<U*>(this->ptr_mut());
     }
 
     /// \brief Casts the underlying pointer to constant given type.
     /// \tparam U Type to cast to.
     /// \returns An constant pointer to the casted underlying object.
-    /// \throws invalid_smart_pointer_access If the box has been moved from or is leaked/consumed.
+    /// \throws contracts::contract_violation If the box has been moved from or is leaked/consumed.
     /// \warning This function is non-throwing in release mode. Exception is only thrown in debug mode.
     template <typename U>
-    [[nodiscard]] auto as() const -> U const* {
-      #ifdef FL_DEBUG
-      if(not this->ptr_)
-        throw invalid_smart_pointer_access("box::as: use after consume");
-      #endif // FL_DEBUG
+    [[nodiscard]] U const* as() const {
+      contracts::expects(this->ptr_ != nullptr, "use after consume");
       return static_cast<U*>(this->ptr());
     }
 
@@ -296,23 +248,21 @@ namespace floppy
     /// \param Args Constructor arguments type.
     /// \param args Constructor arguments.
     template <typename... Args>
-    [[nodiscard]] static auto make(Args&&... args) -> box<T> {
+    [[nodiscard]] static box<T> make(Args&&... args) {
       return box<T>(std::make_unique<T>(std::forward<Args>(args)...));
     }
 
     /// \brief Tries to construct new box from <tt>std::unique_ptr</tt>.
     /// \param ptr <tt>std::unique_ptr</tt> to construct from.
-    /// \throws std::invalid_argument if <tt>ptr</tt> is not set.
-    [[nodiscard]] static auto make(std::unique_ptr<T> ptr) noexcept(false) -> box<T> {
-       if(not ptr)
-         throw std::invalid_argument("box::make: ptr is not set");
-       return box<T>(std::move(ptr));
+    /// \throws contracts::contract_violation if <tt>ptr</tt> is not set.
+    [[nodiscard]] static box<T> make(std::unique_ptr<T> ptr) noexcept(false) {
+      contracts::expects(ptr != nullptr, "ptr must not be null");
+      return box<T>(std::move(ptr));
     }
 
    private:
     explicit box(std::unique_ptr<T>&& _ptr) noexcept : ptr_(std::move(_ptr)) {}
 
-   private:
     std::unique_ptr<T> ptr_;
   };
 
@@ -320,7 +270,7 @@ namespace floppy
   /// \headerfile floppy/floppy.h
   /// \ingroup memory
   template <typename T, typename... Args>
-  [[nodiscard]] auto make_box(Args&&... args) -> box<T> {
+  [[nodiscard]] box<T> make_box(Args&&... args) {
     return box<T>::make(std::forward<Args>(args)...);
   }
 
@@ -341,7 +291,7 @@ namespace floppy
   /// \param os Output stream.
   /// \param b <tt>box</tt> to print.
   template <typename C, typename Traits, typename T>
-  auto operator<<(std::basic_ostream<C, Traits>& os, box<T> const& b) -> std::basic_ostream<C, Traits>& {
+  std::basic_ostream<C, Traits>& operator<<(std::basic_ostream<C, Traits>& os, box<T> const& b) {
     return os << *b;
   }
 } // namespace floppy
@@ -352,14 +302,14 @@ namespace std
   template <typename T>
   struct [[maybe_unused]] hash<floppy::box<T>>
   {
-    [[nodiscard]] auto operator()(floppy::box<T> const& b) const -> std::size_t {
+    [[nodiscard]] std::size_t operator()(floppy::box<T> const& b) const {
       return std::hash<std::unique_ptr<T>>()(b.as_unique_ptr());
     }
   };
 
   /// \brief Swaps two boxes.
   template <typename T>
-  [[maybe_unused]] auto swap(floppy::box<T>& a, floppy::box<T>& b) noexcept -> void {
+  [[maybe_unused]] void swap(floppy::box<T>& a, floppy::box<T>& b) noexcept {
     return std::swap(a.as_unique_ptr(), b.as_unique_ptr());
   }
 } // namespace std

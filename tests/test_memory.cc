@@ -89,7 +89,7 @@ TEST(Memory, BoxLeak)
 {
   auto b = floppy::box<B>();
   auto* pointer = b.leak();
-  EXPECT_THROW(std::ignore = b.ref(), floppy::invalid_smart_pointer_access);
+  EXPECT_THROW(std::ignore = b.ref(), floppy::contracts::contract_violation);
   EXPECT_EQ(pointer->name(), "B");
   delete pointer; // NOLINT(*-owning-memory)
 }

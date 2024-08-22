@@ -5,6 +5,10 @@
 #include <floppy/detail/types.h>
 #include <floppy/detail/predefs.h>
 
+#ifdef __cpp_lib_endian
+# include <bit>
+#endif
+
 namespace floppy
 {
   namespace system_tag
@@ -186,7 +190,7 @@ namespace floppy
 
     /// \brief Returns platform information for the current platform at compile-time.
     /// \see floppy::current_platform
-    [[nodiscard]] static constexpr auto current() noexcept -> platform
+    [[nodiscard]] static constexpr platform current() noexcept
     {
       return platform {
         platform::current_system(),
@@ -210,7 +214,7 @@ namespace floppy
     /// functions.
     /// \sa https://www.flother.is/til/llvm-target-triple/
     template <typename C>
-    [[nodiscard]] auto as_target_triple() const noexcept -> std::basic_string<C> {
+    [[nodiscard]] std::basic_string<C> as_target_triple() const noexcept {
       return fmt::format(
         "{}-{}-{}{}",
         (std::basic_stringstream<C>() << this->architecture).str(),
@@ -229,7 +233,7 @@ namespace floppy
     /// \param u Value.
     /// \return Value with swapped endianness.
     template <typename T>
-    [[nodiscard]] static constexpr auto swap_endian(T u) noexcept -> T {
+    [[nodiscard]] static constexpr T swap_endian(T u) noexcept {
       static_assert(std::numeric_limits<unsigned char>::digits == 8, "unsigned char is not 8 bits"); // NOLINT(*-magic-numbers)
       union {
         T u;
@@ -243,7 +247,7 @@ namespace floppy
 
    private:
     /// \brief Returns constant-evaluated current operating system enumeration.
-    [[nodiscard]] static constexpr auto current_system() noexcept -> enum operating_system
+    [[nodiscard]] static constexpr enum operating_system current_system() noexcept
     {
       #if defined(FLOPPY_OS_WINDOWS)
             return operating_system::windows;
@@ -271,7 +275,7 @@ namespace floppy
     }
 
     /// \brief Returns constant-evaluated current architecture enumeration.
-    [[nodiscard]] static constexpr auto current_architecture() noexcept -> enum arch
+    [[nodiscard]] static constexpr enum arch current_architecture() noexcept
     {
       #if defined(FLOPPY_ARCH_X86_32)
             return arch::x86_32;
@@ -323,7 +327,7 @@ namespace floppy
     };
 
     /// \brief Returns constant-evaluated current compiler enumeration.
-    [[nodiscard]] static constexpr auto current_compiler() noexcept -> enum compiler
+    [[nodiscard]] static constexpr enum compiler current_compiler() noexcept
     {
       #if defined(FLOPPY_COMPILER_BORLAND)
             return compiler::borland;
@@ -389,19 +393,26 @@ namespace floppy
     }
 
     /// \brief Returns constant-evaluated current endianness enumeration.
-    [[nodiscard]] static constexpr auto current_endianness() noexcept -> enum endianness
+    [[nodiscard]] static constexpr enum endianness current_endianness() noexcept
     {
-      #if defined(FLOPPY_ENDIAN_LITTLE)
-            return endianness::little;
-      #elif defined(FLOPPY_ENDIAN_BIG)
-            return endianness::big;
-      #else
-            return endianness::unknown;
-      #endif
+      #if defined(__cpp_lib_endian)
+        if constexpr(std::endian::native == std::endian::big)
+          return endianness::big;
+        else
+          return endianness::little;
+      #else // __cpp_lib_endian
+        #if defined(FLOPPY_ENDIAN_LITTLE)
+          return endianness::little;
+        #elif defined(FLOPPY_ENDIAN_BIG)
+          return endianness::big;
+        #else // defined(FLOPPY_ENDIAN_BIG)
+          return endianness::unknown;
+        #endif // defined(FLOPPY_ENDIAN_LITTLE)
+      #endif // __cpp_lib_endian
     }
 
     /// \brief Returns constant-evaluated current language standard.
-    [[nodiscard]] static constexpr auto current_standard() noexcept -> i16
+    [[nodiscard]] static constexpr i16 current_standard() noexcept
     {
       #if defined(FLOPPY_LANGUAGE_C)
             return std::numeric_limits<i16>::min();
@@ -429,14 +440,14 @@ namespace floppy
     /// \brief Returns constant-evaluated file system path separator character on the current platform.
     /// \details Returns <tt>'/'</tt> for POSIX and <tt>'\\'</tt> for Windows.
     /// \return File system path separator character.
-    [[nodiscard]] static constexpr auto current_path_separator() noexcept -> char {
+    [[nodiscard]] static constexpr char current_path_separator() noexcept {
       if constexpr(platform::current_system() == operating_system::windows)
         return '\\';
       else
         return '/';
     }
 
-    [[nodiscard]] static constexpr auto current_backward_path_delimiter() noexcept -> char {
+    [[nodiscard]] static constexpr char current_backward_path_delimiter() noexcept {
       if constexpr(platform::current_system() == operating_system::windows)
         return ';';
       else
@@ -445,7 +456,7 @@ namespace floppy
 
     /// \brief Tries to guess a vendor from operating system name.
     /// \note This function is not 100% reliable.
-    [[nodiscard]] static constexpr auto guess_vendor(enum operating_system const os) noexcept -> enum vendor {
+    [[nodiscard]] static constexpr enum vendor guess_vendor(enum operating_system const os) noexcept {
       switch(os) {
         case operating_system::windows: return vendor::pc;
         case operating_system::darwin: return vendor::apple;
@@ -456,7 +467,7 @@ namespace floppy
 
   /// \brief Stream adaptor for floppy::platform::operating_system
   template <class E, class T>
-  auto operator<<(std::basic_ostream<E, T>& os, enum platform::operating_system const& d) -> std::basic_ostream<E, T>& {
+  std::basic_ostream<E, T>& operator<<(std::basic_ostream<E, T>& os, enum platform::operating_system const& d) {
     switch(d) {
       case platform::operating_system::windows: os << "windows"; break;
       case platform::operating_system::gnu_linux: os << "linux"; break;
@@ -543,7 +554,7 @@ namespace floppy
 
   /// \brief Stream adaptor for floppy::platform::endianness
   template <class E, class T>
-  auto operator<<(std::basic_ostream<E, T>& os, enum platform::endianness const& d) -> std::basic_ostream<E, T>& {
+  std::basic_ostream<E, T>& operator<<(std::basic_ostream<E, T>& os, enum platform::endianness const& d) {
     switch(d) {
       case platform::endianness::big: os << "big"; break;
       case platform::endianness::little: os << "little"; break;
@@ -554,7 +565,7 @@ namespace floppy
 
   /// \brief Stream adaptor for floppy::platform::vendor
   template <class E, class T>
-  auto operator<<(std::basic_ostream<E, T>& os, enum platform::vendor const& d) -> std::basic_ostream<E, T>& {
+  std::basic_ostream<E, T>& operator<<(std::basic_ostream<E, T>& os, enum platform::vendor const& d) {
     switch(d) {
       case platform::vendor::apple: os << "apple"; break;
       case platform::vendor::pc: os << "pc"; break;
@@ -576,7 +587,7 @@ namespace floppy
 
   /// \brief Stream adaptor for floppy::platform
   template <class E, class T>
-  auto operator<<(std::basic_ostream<E, T>& os, platform const& d) -> std::basic_ostream<E, T>& {
+  std::basic_ostream<E, T>& operator<<(std::basic_ostream<E, T>& os, platform const& d) {
     os << d.as_target_triple<char>();
     return os;
   }

@@ -30,7 +30,7 @@ namespace floppy
       /// \brief Propagates conversion to a non-view object.
       template <typename C, range R>
         requires std::convertible_to<range_value_t<R>, typename C::value_type>
-      auto operator|(R&& r, [[maybe_unused]] to_helper<C> _) -> C // NOLINT(*-missing-std-forward)
+      C operator|(R&& r, [[maybe_unused]] to_helper<C> _) // NOLINT(*-missing-std-forward)
       {
         return C { r.begin(), r.end() };
       }
@@ -81,7 +81,7 @@ namespace floppy
   /// }
   /// \endcode
   /// \sa https://en.cppreference.com/w/cpp/utility/unreachable
-  [[noreturn]] inline auto unreachable() -> void {
+  [[noreturn]] inline void unreachable() {
     #if defined(FLOPPY_COMPILER_MSVC) && !defined(FLOPPY_COMPILER_CLANG)
         __assume(false);
     #else
@@ -117,7 +117,7 @@ namespace floppy
   /// \return Underlying value of the enum
   /// \sa https://en.cppreference.com/w/cpp/utility/to_underlying
   template <concepts::enum_ T>
-  constexpr auto to_underlying(T t) noexcept -> std::underlying_type_t<T> {
+  constexpr std::underlying_type_t<T> to_underlying(T t) noexcept {
     return static_cast<std::underlying_type_t<T>>(t);
   }
 
@@ -157,7 +157,7 @@ namespace floppy
      public:
       /// \brief Returns current source location.
       /// \note Returns actual current source location only if called with default arguments.
-      static constexpr auto current(
+      static constexpr source_location current(
   #if not defined(__apple_build_version__) and defined(__clang__) and (__clang_major__ >= 9)
         char const* file = __builtin_FILE(),
         char const* function = __builtin_FUNCTION(),
@@ -174,7 +174,7 @@ namespace floppy
         uint_least32_t line = 0,
         uint_least32_t column = 0
   #endif // compiler
-      ) noexcept -> source_location {
+      ) noexcept {
         return { file, line, function, column };
       }
 
@@ -211,33 +211,33 @@ namespace floppy
       {}
 
       /// \brief Returns the file name.
-      [[nodiscard]] constexpr auto file_name() const noexcept -> std::string_view { return this->file_; }
+      [[nodiscard]] constexpr std::string_view file_name() const noexcept { return this->file_; }
 
       /// \brief Returns a mutable reference to the file name.
-      [[nodiscard]] [[maybe_unused]]constexpr auto file_name_mut() noexcept -> std::string& { return this->file_; }
+      [[nodiscard]] [[maybe_unused]] constexpr std::string& file_name_mut() noexcept { return this->file_; }
 
       /// \brief Returns the function name. NULL if unknown or not available on compiler
-      [[nodiscard]] constexpr auto function_name() const noexcept -> std::string_view { return this->function_; }
+      [[nodiscard]] constexpr std::string_view function_name() const noexcept { return this->function_; }
 
       /// \brief Returns a mutable reference to the function name.
-      [[nodiscard]] [[maybe_unused]] constexpr auto function_name_mut() noexcept -> std::string& { return this->function_; }
+      [[nodiscard]] [[maybe_unused]] constexpr std::string& function_name_mut() noexcept { return this->function_; }
 
       /// \brief Returns the line number. 0 if unknown or not available on compiler
-      [[nodiscard]] constexpr auto line() const noexcept -> uint_least32_t { return this->line_; }
+      [[nodiscard]] constexpr uint_least32_t line() const noexcept { return this->line_; }
 
       /// \brief Returns a mutable reference to the line number.
-      [[nodiscard]] [[maybe_unused]] constexpr auto line_mut() noexcept -> uint_least32_t& { return this->line_; }
+      [[nodiscard]] [[maybe_unused]] constexpr uint_least32_t& line_mut() noexcept { return this->line_; }
 
       /// \brief Returns the column number. 0 if unknown or not available on compiler
-      [[nodiscard]] constexpr auto column() const noexcept -> uint_least32_t { return this->column_; }
+      [[nodiscard]] constexpr uint_least32_t column() const noexcept { return this->column_; }
 
       /// \brief Returns a mutable reference to the column number.
-      [[nodiscard]] [[maybe_unused]] constexpr auto column_mut() noexcept -> uint_least32_t& { return this->column_; }
+      [[nodiscard]] [[maybe_unused]] constexpr uint_least32_t& column_mut() noexcept { return this->column_; }
     };
 
     /// \brief Stream adaptor for source_location
     template <class E, class T>
-    auto operator<<(std::basic_ostream<E, T>& os, source_location const& loc) -> std::basic_ostream<E, T>&
+    std::basic_ostream<E, T>& operator<<(std::basic_ostream<E, T>& os, source_location const& loc)
     {
       os.width(0);
       if(loc.line() == 0)
@@ -252,14 +252,14 @@ namespace floppy
     }
   #endif // __cpp_lib_source_location
 
-  inline auto operator==(source_location const& lhs, source_location const& rhs) noexcept -> bool {
+  inline bool operator==(source_location const& lhs, source_location const& rhs) noexcept {
     return lhs.file_name() == rhs.file_name()
       and lhs.line() == rhs.line()
       and lhs.function_name() == rhs.function_name()
       and lhs.column() == rhs.column();
   }
 
-  inline auto operator!=(source_location const& lhs, source_location const& rhs) noexcept -> bool {
+  inline bool operator!=(source_location const& lhs, source_location const& rhs) noexcept {
     return not (lhs == rhs);
   }
 } // namespace floppy

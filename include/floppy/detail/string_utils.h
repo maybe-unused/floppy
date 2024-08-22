@@ -25,7 +25,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \param c The character to check.
     /// \returns <code>true</code> if the character is a digit, <code>false</code> otherwise.
     template <char_type C>
-    [[nodiscard]] constexpr auto is_digit(C c) -> bool {
+    [[nodiscard]] constexpr bool is_digit(C c) {
       if constexpr(std::is_same_v<C, wchar_t>)
         return c >= L'0' and c <= L'9';
       else {
@@ -41,7 +41,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \param c The character to convert.
     /// \returns The uppercase character.
     template <char_type C>
-    [[nodiscard]] constexpr auto to_uppercase(C c) -> C {
+    [[nodiscard]] constexpr C to_uppercase(C c) {
       if constexpr(std::is_same_v<C, wchar_t>)
         return c >= L'a' and c <= L'z' ? static_cast<wchar_t>(c - L'a' + L'A') : c;
       else
@@ -55,7 +55,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \param str The string to convert.
     /// \returns The uppercase string.
     template <char_type C>
-    [[nodiscard]] auto to_uppercase(std::basic_string_view<C> str) -> std::basic_string<C> {
+    [[nodiscard]] std::basic_string<C> to_uppercase(std::basic_string_view<C> str) {
       auto result = std::basic_string<C>();
       std::transform(str.begin(), str.end(), std::back_inserter(result), to_uppercase<C>);
       return result;
@@ -68,7 +68,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \param c The character to convert.
     /// \returns The lowercase character.
     template <char_type C>
-    [[nodiscard]] constexpr auto to_lowercase(C c) -> C {
+    [[nodiscard]] constexpr C to_lowercase(C c) {
       if constexpr(std::is_same_v<C, wchar_t>)
         return c >= L'A' and c <= L'Z' ? static_cast<wchar_t>(c - L'A' + L'a') : c;
       else
@@ -82,7 +82,7 @@ namespace floppy // NOLINT(*-concat-nested-namespaces)
     /// \param str The string to convert.
     /// \returns The lowercase string.
     template <char_type C>
-    [[nodiscard]] auto to_lowercase(std::basic_string_view<C> str) -> std::basic_string<C> {
+    [[nodiscard]] std::basic_string<C> to_lowercase(std::basic_string_view<C> str) {
       auto result = std::basic_string<C>();
       std::transform(str.begin(), str.end(), std::back_inserter(result), to_lowercase<C>);
       return result;

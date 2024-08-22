@@ -15,7 +15,7 @@ namespace floppy::print_helpers
     /// \param args The format arguments.
     /// \tparam Args The format arguments types (inferred from the format string and args).
     template <typename... Args>
-    auto google_test_print(fmt::format_string<Args...> format, Args&&... args) -> void {
+    void google_test_print(fmt::format_string<Args...> format, Args&&... args) {
       fmt::println("\u001b[32m[          ] \u001b[33m{}\u001b[0m", fmt::format(format, std::forward<Args>(args)...));
     }
   } // namespace detail
@@ -27,7 +27,7 @@ namespace floppy::print_helpers
   /// \param args The format arguments.
   /// \tparam Args The format arguments types (inferred from the format string and args).
   template <typename... Args>
-  auto critical_message(std::string_view format, Args&&... args) -> void {
+  void critical_message(std::string_view format, Args&&... args) {
     fmt::print(
       stderr,
       fmt::emphasis::bold | fg(fmt::color::red),
@@ -36,12 +36,12 @@ namespace floppy::print_helpers
     );
   }
 
-  [[nodiscard]] inline auto truncate(
+  [[nodiscard]] inline std::string truncate(
     std::string_view str,
     std::size_t max_width,
     direction dir = direction::forward,
     bool show_ellipsis = true
-  ) -> std::string {
+  ) {
     if(str.size() <= max_width)
       return std::string(str);
     if(dir == direction::forward)
@@ -71,6 +71,6 @@ namespace floppy::print_helpers
 /// \note Since version <b>1.2.2</b>, this macro is replaced with template constexpr function. This is
 /// the reason it has all upper case name.
 template <typename... Args>
-[[maybe_unused]] constexpr auto GTEST_PRINT(fmt::format_string<Args...> format, Args&&... args) -> void { // NOLINT(*-identifier-naming)
+[[maybe_unused]] constexpr void GTEST_PRINT(fmt::format_string<Args...> format, Args&&... args) { // NOLINT(*-identifier-naming)
   ::floppy::print_helpers::detail::google_test_print(format, std::forward<Args>(args)...);
 }

@@ -28,7 +28,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
   namespace meta {
     namespace detail {
       /// \internal
-      constexpr auto stoi_impl(char const* str, int value = 0) -> int {
+      constexpr int stoi_impl(char const* str, int value = 0) {
         return *str
           ? string_utils::is_digit(*str)
             ? stoi_impl(str + 1, (*str - '0') + value * 10)
@@ -37,7 +37,7 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       }
 
       /// \internal
-      constexpr auto stoi(char const* str) -> int { return stoi_impl(str); }
+      constexpr int stoi(char const* str) { return stoi_impl(str); }
     } // namespace detail
 
     /// \brief Version number structure.
@@ -72,23 +72,23 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       /// \brief Returns constant expression version number major as an integer.
       /// \see minor
       /// \see patch
-      [[nodiscard]] constexpr auto major() const noexcept -> int { return this->major_; }
+      [[nodiscard]] constexpr int major() const noexcept { return this->major_; }
 
       /// \brief Returns constant expression version number minor as an integer.
       /// \see major
       /// \see patch
-      [[nodiscard]] constexpr auto minor() const noexcept -> int { return this->minor_; }
+      [[nodiscard]] constexpr int minor() const noexcept { return this->minor_; }
 
       /// \brief Returns constant expression version number patch as an integer.
       /// \see major
       /// \see minor
-      [[nodiscard]] constexpr auto patch() const noexcept -> int { return this->patch_; }
+      [[nodiscard]] constexpr int patch() const noexcept { return this->patch_; }
 
       /// \brief Returns version as a string.
       /// \see major
       /// \see minor
       /// \see patch
-      [[nodiscard]] auto as_str() const noexcept -> std::string {
+      [[nodiscard]] std::string as_str() const noexcept {
         return std::to_string(this->major_) + "." + std::to_string(this->minor_) + "." + std::to_string(this->patch_);
       }
 
@@ -123,16 +123,16 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
       {}
 
       /// \brief Returns constant expression project version.
-      [[nodiscard]] constexpr auto version() const noexcept -> version { return this->version_; }
+      [[nodiscard]] constexpr version version() const noexcept { return this->version_; }
 
       /// \brief Returns constant expression project name.
-      [[nodiscard]] constexpr auto name() const noexcept -> std::string_view { return this->name_; }
+      [[nodiscard]] constexpr std::string_view name() const noexcept { return this->name_; }
 
       /// \brief Returns constant expression project domain.
-      [[nodiscard]] constexpr auto domain() const noexcept -> std::string_view { return this->domain_; }
+      [[nodiscard]] constexpr std::string_view domain() const noexcept { return this->domain_; }
 
       /// \brief Returns constant expression project organization.
-      [[nodiscard]] constexpr auto organization() const noexcept -> std::string_view { return this->organization_; }
+      [[nodiscard]] constexpr std::string_view organization() const noexcept { return this->organization_; }
 
      private:
       class version version_;        ///< Version number.
@@ -168,14 +168,14 @@ namespace floppy { // NOLINT(*-concat-nested-namespaces)
 
     /// \brief Stream adaptor for floppy::meta::version
     template <class E, class T>
-    auto operator<<(std::basic_ostream<E, T>& os, version const& d) -> std::basic_ostream<E, T>& {
+    std::basic_ostream<E, T>& operator<<(std::basic_ostream<E, T>& os, version const& d) {
       os << fmt::format("{}.{}.{}", d.major(), d.minor(), d.patch());
       return os;
     }
 
     /// \brief Stream adaptor for floppy::meta::project_meta
     template <class E, class T>
-    auto operator<<(std::basic_ostream<E, T>& os, project_meta const& d) -> std::basic_ostream<E, T>& {
+    std::basic_ostream<E, T>& operator<<(std::basic_ostream<E, T>& os, project_meta const& d) {
       os << fmt::format("{} v. {}.{}.{} (c) {} <{}>",
         d.name(),
         d.version().major(),
@@ -232,9 +232,19 @@ namespace fl = floppy; // NOLINT(*-unused-alias-decls)
 #endif // defined(NDEBUG)  || defined(QT_NO_DEBUG)
 
 #ifndef _MSC_VER
-# define __noinline__ __attribute__((noinline))
+# define __noinline__ __attribute__((noinline)) // NOLINT(*-reserved-identifier, *-identifier-naming
 #else // !_MSC_VER
-# define __noinline__ __declspec(noinline)
+# define __noinline__ __declspec(noinline) // NOLINT(*-reserved-identifier, *-identifier-naming)
+#endif // !_MSC_VER
+
+#if defined(__GNUC__)
+# define __forceinline__ [[gnu::always_inline]] // NOLINT(*-reserved-identifier, *-identifier-naming
+#elif defined(_MSC_VER)
+# define __forceinline__ __forceinline // NOLINT(*-reserved-identifier, *-identifier-naming
+#elif defined(__clang__)
+# define __forceinline__ __attribute__((always_inline)) // NOLINT(*-reserved-identifier, *-identifier-naming
+#else
+# define __forceinline__ // NOLINT(*-reserved-identifier, *-identifier-naming
 #endif // !_MSC_VER
 
 /// \def FL_NO_DEBUG
