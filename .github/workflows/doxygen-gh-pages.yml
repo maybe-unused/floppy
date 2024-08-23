@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - '**'
+      - never
 permissions:
   contents: write
 

@@ -48,7 +48,7 @@ namespace floppy::math
     /// \brief Returns this angle as number in degrees.
     [[nodiscard]] constexpr auto degrees() const -> T { return to_degrees(this->m_); }
 
-    /// \brief Returns this angle as number in range \f$[0, 2\pi)\f$.
+    /// \brief Returns this angle as number in range <code>[0, 2\pi)</code>.
     [[nodiscard]] constexpr auto positive() const -> angle {
       auto const tp = std::numbers::pi * T(2);
       auto a = math::fmod(this->m_, tp);
@@ -59,7 +59,7 @@ namespace floppy::math
       return angle::from_radians(a);
     }
 
-    /// \brief Returns this angle as number in range \f$[-\pi, \pi)\f$.
+    /// \brief Returns this angle as number in range <code>[-\pi, \pi)</code>.
     [[nodiscard]] constexpr auto signed_() const -> angle {
       auto const ret = angle::pi() - (angle::pi() - *this).positive();
       if(std::abs(ret.m_) <= 2.0F * std::numeric_limits<T>::epsilon())
@@ -88,7 +88,7 @@ namespace floppy::math
         return res;
     }
 
-    /// \brief Return \f$(sin(x), cos(x))\f$.
+    /// \brief Return <code>(sin(x), cos(x))</code>.
     [[nodiscard]] constexpr auto sin_cos() const -> std::pair<T, T> {
       return std::make_pair(std::sin(this->m_), std::cos(this->m_));
     }
@@ -112,19 +112,19 @@ namespace floppy::math
     /// \brief Constructs an zero angle.
     [[nodiscard]] static constexpr auto zero() -> angle { return angle(static_cast<T>(0.0)); }
 
-    /// \brief Constructs an angle with value \f$\pi\f$.
+    /// \brief Constructs an angle with value <code>pi</code>.
     [[nodiscard]] static constexpr auto pi() -> angle { return angle(std::numbers::pi); }
 
-    /// \brief Constructs an angle with value \f$2\pi\f$.
+    /// \brief Constructs an angle with value <code>2pi</code>.
     [[nodiscard]] static constexpr auto two_pi() -> angle { return angle(T(2) * std::numbers::pi); }
 
-    /// \brief Constructs an angle with value \f$\frac{\pi}{2}\f$.
+    /// \brief Constructs an angle with value <code>1/2pi</code>.
     [[nodiscard]] static constexpr auto half_pi() -> angle { return angle(T(0.5) * std::numbers::pi); }
 
-    /// \brief Constructs an angle with value \f$\frac{\pi}{3}\f$.
+    /// \brief Constructs an angle with value <code>1/3pi</code>.
     [[nodiscard]] static constexpr auto third_pi() -> angle { return angle(std::numbers::pi / T(3)); }
 
-    /// \brief Constructs an angle with value \f$\frac{\pi}{4}\f$.
+    /// \brief Constructs an angle with value <code>1/4pi</code>.
     [[nodiscard]] static constexpr auto quarter_pi() -> angle { return angle(T(0.25) * std::numbers::pi); }
   };
 } // namespace floppy::math
