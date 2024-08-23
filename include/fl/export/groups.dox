@@ -11,6 +11,12 @@
  * @defgroup helpers Helpers
  * @ingroup core
  * @todo Add detailed description.
+ *
+ * @defgroup meta Library metadata
+ * @ingroup core
+ * @brief Library meta information.
+ * @details Contains library meta information.
+ * Represented in both macros and constexpr classes.
 */
 
 /**

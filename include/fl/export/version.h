@@ -130,7 +130,7 @@ namespace fl::inline v2
      * @brief Adds two versions.
      */
     friend version operator+(version const& v1, version const& v2) {
-      return version(v1.major_ + v2.major_, v1.minor_ + v2.minor_, v1.patch_ + v2.patch_);
+      return {v1.major_ + v2.major_, v1.minor_ + v2.minor_, v1.patch_ + v2.patch_};
     }
 
     /**
@@ -138,7 +138,7 @@ namespace fl::inline v2
      * @warning Version subtraction can result in overflow of unsigned integer type. Use with care.
      */
     friend version operator-(version const& v1, version const& v2) {
-      return version(v1.major_ - v2.major_, v1.minor_ - v2.minor_, v1.patch_ - v2.patch_);
+      return {v1.major_ - v2.major_, v1.minor_ - v2.minor_, v1.patch_ - v2.patch_};
     }
 
     /**
@@ -174,6 +174,8 @@ namespace fl::inline v2
   {
     /**
      * @brief Immutable constant expression structure, holding project meta-information.
+     * @details See @ref library_metadata global variable for current <b>floppy</b> project meta-information.
+     * @ingroup meta
      * @see version
      */
     class [[maybe_unused]] project_meta
@@ -226,6 +228,7 @@ namespace fl::inline v2
     };
 
     /**
+     * @ingroup meta
      * @brief Constant expression, containing library meta-information.
      * @details This constant expression is evaluated at compile time.
      * Example content of this variable:
@@ -242,9 +245,9 @@ namespace fl::inline v2
      */
     [[maybe_unused]] constexpr inline auto library_metadata = project_meta(
       version(
-        FLOPPY_PROJECT_VERSION_MAJOR,
-        FLOPPY_PROJECT_VERSION_MINOR,
-        FLOPPY_PROJECT_VERSION_PATCH
+        FL_VERSION_MAJOR,
+        FL_VERSION_MINOR,
+        FL_VERSION_PATCH
       ),
       "floppy",
       "github.com/whs31/floppy",
@@ -283,6 +286,6 @@ struct [[maybe_unused]] std::formatter<fl::version, wchar_t>
   }
 };
 
-static_assert(fl::meta::library_metadata.version().major() == FLOPPY_PROJECT_VERSION_MAJOR);
-static_assert(fl::meta::library_metadata.version().minor() == FLOPPY_PROJECT_VERSION_MINOR);
-static_assert(fl::meta::library_metadata.version().patch() == FLOPPY_PROJECT_VERSION_PATCH);
+static_assert(fl::meta::library_metadata.version().major() == FL_VERSION_MAJOR);
+static_assert(fl::meta::library_metadata.version().minor() == FL_VERSION_MINOR);
+static_assert(fl::meta::library_metadata.version().patch() == FL_VERSION_PATCH);
