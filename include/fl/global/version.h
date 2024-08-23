@@ -8,7 +8,7 @@
 #include <stdexcept>
 #include "version_definition.h"
 
-namespace fl::inline v2
+namespace fl
 {
   /**
    * @brief Version number structure.
@@ -254,7 +254,7 @@ namespace fl::inline v2
       "maybe-unused"
     );
   } // namespace meta
-} // namespace fl::inline v2
+} // namespace fl
 
 /**
  * @brief Specialization of std::formatter for the version class.

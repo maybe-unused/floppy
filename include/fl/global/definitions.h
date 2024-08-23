@@ -108,8 +108,3 @@
 # define ___fl_stringify___(x) ___fl_stringify_impl___(x)
 // NOLINTEND(*-reserved-identifier, *-identifier-naming, *-macro-usage)
 #endif // FL_DOC
-
-//namespace fl::inline v2
-//{
-//
-//} // namespace fl::inline v2

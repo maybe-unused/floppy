@@ -17,10 +17,4 @@
 /**
  * @brief Main namespace for the <b>floppy</b> library.
  */
-namespace fl { // NOLINT(*-concat-nested-namespaces)
-  /**
-   * @brief Version switch namespace for the <b>floppy</b> library.
-   * @note This namespace is not part of the public API.
-   */
-  inline namespace v2 {} // namespace v2
-} // namespace fl
+namespace fl {} // namespace fl
