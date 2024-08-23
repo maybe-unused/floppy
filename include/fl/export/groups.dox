@@ -1,0 +1,17 @@
+/**
+ * @defgroup core Core
+ * @brief The core classes, functions and definitions of the library.
+ * @todo Add detailed description.
+ *
+ * @defgroup macros Definitions and macros
+ * @ingroup core
+ * @brief Library definitions and macros.
+*/
+
+/**
+ * @dir include
+ * @brief Top-level include directory.
+ *
+ * @dir include/fl
+ * @brief <b>Floppy</b> include directory.
+ */

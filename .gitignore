@@ -38,6 +38,7 @@ target
 # DLL exports
 .export
 
+# Misc
+__pycache__
 .idea/QtSettings.xml
-
 .idea/.name
