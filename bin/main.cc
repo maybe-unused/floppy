@@ -3,8 +3,7 @@
 #include <floppy/stacktrace.h>
 #include "obj.hh"
 
-#include <fl/export/macro.h>
-#include <fl/export/version.h>
+#include <fl/global.h>
 
 [[maybe_unused]] auto sw = fl::stacktrace::signal_watcher<fl::stacktrace::crash_behavior::print_all>();
 
