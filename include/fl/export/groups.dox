@@ -6,6 +6,11 @@
  * @defgroup macros Definitions and macros
  * @ingroup core
  * @brief Library definitions and macros.
+ * @todo Add detailed description.
+ *
+ * @defgroup helpers Helpers
+ * @ingroup core
+ * @todo Add detailed description.
 */
 
 /**
