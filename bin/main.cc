@@ -1,20 +1,10 @@
-#include <floppy/floppy.h>
-#include <floppy/logging.h>
-#include <floppy/stacktrace.h>
-#include "obj.hh"
+#include <memory>
 
 #include <fl/global.h>
-
-[[maybe_unused]] auto sw = fl::stacktrace::signal_watcher<fl::stacktrace::crash_behavior::print_all>();
-
-auto bad_boy() -> void {
-  fl::contracts::expects(false);
-  char* x = nullptr;
-  *x = 42;
-}
+#include <fl/contracts.h>
 
 auto main(int argc, char** argv) -> int {
-  bad_boy();
-  throw_it_like_its_hot();
+  fl::contracts::broken_postcondition();
+  fl::contracts::invariant(false, "Hello, world!");
   return 0;
 }

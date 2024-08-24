@@ -1,3 +1,8 @@
+/**
+ * @file fl/global/export.h
+ * @brief Export macros for the <b>floppy</b> library.
+ */
+
 #pragma once
 
 // NOLINTBEGIN(*-reserved-identifier, *-identifier-naming, *-macro-usage)

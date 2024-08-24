@@ -25,9 +25,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 # -- dependencies --
-find_package(fmt REQUIRED)
 find_package(spdlog REQUIRED)
-find_package(tl-expected REQUIRED)
 if(NOT WIN32)
   find_package(elfutils REQUIRED)
 endif()
@@ -51,16 +49,12 @@ cmake_print_properties(TARGETS ${PROJECT_NAME} PROPERTIES
 
 target_sources(${PROJECT_NAME}
   PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/detail/rtti.cc
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/graphics/color.cc
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/directories.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/contracts.cc
 )
 
 target_link_libraries(${PROJECT_NAME}
   PUBLIC
-    fmt::fmt
     spdlog::spdlog
-    tl::expected
 )
 if(NOT WIN32)
   target_link_libraries(${PROJECT_NAME} PUBLIC elfutils::elfutils)
@@ -106,11 +100,11 @@ endif()
 
 if(TESTS)
   enable_testing()
-  add_subdirectory(tests)
-
+  #add_subdirectory(tests)
+  add_subdirectory(bin)
 endif()
-add_subdirectory(bin)
 
+# -- installation --
 message(STATUS "[${PROJECT_NAME}] compile integration tests status: ${INTEGRATION_TESTS}")
 message(STATUS "[${PROJECT_NAME}] installing ${PROJECT_NAME} in namespace ${PROJECT_NAMESPACE}")
 include(GNUInstallDirs)

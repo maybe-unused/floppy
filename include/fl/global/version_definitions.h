@@ -1,3 +1,8 @@
+/**
+ * @file fl/global/version_definitions.h
+ * @brief Version number macro definitions, used by <i>meta::library_metadata</i> global constant.
+ */
+
 #pragma once
 
 // NOLINTBEGIN(*-macro-to-enum, *-macro-usage)

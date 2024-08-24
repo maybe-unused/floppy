@@ -19,6 +19,7 @@
  * Represented in both macros and constexpr classes.
  *
  * @defgroup platform Platform
+ * @ingroup core
  * @brief Platform information
  * @details Contains information about the operating system, architecture, language version and etc.
  * @todo Add reference to global constant and suggest to use it.

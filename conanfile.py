@@ -34,9 +34,7 @@ class FloppyRecipe(ConanFile):
         return "20" 
 
     def requirements(self):
-        self.requires("fmt/[^10.1.0]", transitive_headers=True, transitive_libs=True)
         self.requires("spdlog/1.13.0", transitive_headers=True, transitive_libs=True)
-        self.requires("tl-expected/20190710", transitive_headers=True, transitive_libs=True)
         if self.settings.os != "Windows":
             self.requires("elfutils/0.190", transitive_headers=True, transitive_libs=True)
         if self.options.test:
@@ -79,7 +77,7 @@ class FloppyRecipe(ConanFile):
         self.cpp_info.set_property("cmake_file_name", "floppy")
         self.cpp_info.set_property("cmake_target_name", "floppy::floppy")
         self.cpp_info.libs = ["floppy"]
-        self.cpp_info.requires = ["fmt::fmt", "spdlog::spdlog", "tl-expected::tl-expected"]
+        self.cpp_info.requires = ["spdlog::spdlog"]
         self.cpp_info.defines.append(f"FLOPPY_TARGET_NAME={self.name}")
         self.cpp_info.defines.append(f"FLOPPY_PROJECT_VERSION_MAJOR={self.version.split('.')[0]}")
         self.cpp_info.defines.append(f"FLOPPY_PROJECT_VERSION_MINOR={self.version.split('.')[1]}")
