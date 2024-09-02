@@ -34,12 +34,12 @@ namespace fl
         , f_(std::move(m.f_))
       {}
 
-      result_type const& operator()() const {
+      [[nodiscard]] result_type const& operator()() const {
         this->eval();
         return *this->value_;
       }
 
-      result_type& operator()() {
+      [[nodiscard]] result_type& operator()() {
         this->eval();
         return *this->value_;
       }
@@ -56,7 +56,7 @@ namespace fl
   } // namespace detail
 
   template <typename F>
-  auto lazy(F&& f) {
+  [[nodiscard]] auto lazy(F&& f) {
     return detail::lazy<std::remove_cvref_t<F>>(std::forward<F>(f));
   }
 } // namespace fl
