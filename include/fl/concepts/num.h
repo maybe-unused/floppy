@@ -3,9 +3,14 @@
 #include <concepts>
 #include "../type_traits.h"
 
-/**
- * @brief Concepts namespace.
- */
+namespace fl
+{
+  /**
+   * @brief Concepts namespace.
+   */
+  namespace concepts {} // namespace concepts
+} // namespace fl
+
 namespace fl::concepts
 {
   /**
